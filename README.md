@@ -22,7 +22,8 @@ gcc
 
 WINDOWS ONLY STEP:
 
-- Launch msys2(Provided by devkitPro) and run the command pacman -S gcc.
+- Launch msys2(Provided by devkitPro) and run the command 
+```pacman -S gcc.```
 
 ---
 OPTIONAL:
