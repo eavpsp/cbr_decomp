@@ -23,7 +23,11 @@ gcc
 WINDOWS ONLY STEP:
 
 - Launch msys2(Provided by devkitPro) and run the command 
-```pacman -S gcc.```
+```
+   pacman -S gcc
+   pacman -S msys2-keyring
+   pacman -S gcc git python
+```
 
 ---
 OPTIONAL:
