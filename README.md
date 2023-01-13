@@ -1,5 +1,5 @@
 # CBR_Decomp
-Chibi-Robo: PIA Decompilation
+Chibi-Robo: PIA disassembly/decompilation to C++/C
 
 
 It builds the following DOL: cbr.usa.dol: sha1: 103c68e107b691d905306ecb6bbc43ea44893157
