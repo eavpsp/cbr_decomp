@@ -33,3 +33,6 @@ Obtain a clean DOL of Chibi-Robo:PIA and place it in the base working directory 
 Download GC_WII_COMPILERS.zip from (https://cdn.discordapp.com/attachments/727918646525165659/917185027656286218/GC_WII_COMPILERS.zip) and extract it to tools/mwcc_compiler/.
 
 Run the make command.
+
+
+credits to : https://github.com/projectPiki/pikmin
