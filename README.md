@@ -1,6 +1,12 @@
 # CBR_Decomp
 Chibi-Robo: PIA disassembly/decompilation to C++/C
 
+---
+Goal
+---
+ The goal of this project is to get a PC, Switch, PS4, and PS Vita port of Chibi-Robo PIA.
+ As you all know, Nintendo has probably buried this game, but developers like myself will make sure that Chibi is rebooted. Thanks again for stopping by.
+
 This is currently a solo project. I work a lot and barely have time to code or be with my cats. Please feel free to support this project:
 https://www.buymeacoffee.com/itsemistro
 
