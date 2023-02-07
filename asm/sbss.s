@@ -51,8 +51,8 @@ lbl_8065B174:
 lbl_8065B178:
 	.skip 0x8
 
-.global lbl_8065B180
-lbl_8065B180:
+.global FLOAT_8065b180
+FLOAT_8065b180:
 	.skip 0x4
 
 .global lbl_8065B184
@@ -91,8 +91,8 @@ lbl_8065B194:
 lbl_8065B198:
 	.skip 0x8
 
-.global lbl_8065B1A0
-lbl_8065B1A0:
+.global FLOAT_8065b1a0
+FLOAT_8065b1a0:
 	.skip 0x4
 
 .global lbl_8065B1A4
@@ -119,12 +119,12 @@ lbl_8065B1B4:
 lbl_8065B1B8:
 	.skip 0x4
 
-.global lbl_8065B1BC
-lbl_8065B1BC:
+.global FLOAT_8065b1bc
+FLOAT_8065b1bc:
 	.skip 0x4
 
-.global lbl_8065B1C0
-lbl_8065B1C0:
+.global FLOAT_8065b1c0
+FLOAT_8065b1c0:
 	.skip 0x4
 
 .global lbl_8065B1C4
@@ -175,24 +175,24 @@ lbl_8065B1EC:
 lbl_8065B1F0:
 	.skip 0x4
 
-.global lbl_8065B1F4
-lbl_8065B1F4:
+.global FLOAT_8065b1f4
+FLOAT_8065b1f4:
 	.skip 0x4
 
-.global lbl_8065B1F8
-lbl_8065B1F8:
+.global FLOAT_8065b1f8
+FLOAT_8065b1f8:
 	.skip 0x4
 
-.global lbl_8065B1FC
-lbl_8065B1FC:
+.global FLOAT_8065b1fc
+FLOAT_8065b1fc:
 	.skip 0x4
 
 .global lbl_8065B200
 lbl_8065B200:
 	.skip 0x4
 
-.global lbl_8065B204
-lbl_8065B204:
+.global FLOAT_8065b204
+FLOAT_8065b204:
 	.skip 0x4
 
 .global lbl_8065B208
@@ -215,8 +215,8 @@ lbl_8065B214:
 lbl_8065B218:
 	.skip 0x8
 
-.global lbl_8065B220
-lbl_8065B220:
+.global FLOAT_8065b220
+FLOAT_8065b220:
 	.skip 0x4
 
 .global lbl_8065B224
@@ -239,8 +239,8 @@ lbl_8065B230:
 lbl_8065B234:
 	.skip 0x4
 
-.global lbl_8065B238
-lbl_8065B238:
+.global FLOAT_8065b238
+FLOAT_8065b238:
 	.skip 0x4
 
 .global lbl_8065B23C
@@ -283,8 +283,8 @@ lbl_8065B258:
 lbl_8065B260:
 	.skip 0x4
 
-.global lbl_8065B264
-lbl_8065B264:
+.global FLOAT_8065b264
+FLOAT_8065b264:
 	.skip 0x4
 
 .global lbl_8065B268
@@ -323,12 +323,12 @@ lbl_8065B280:
 lbl_8065B288:
 	.skip 0x4
 
-.global lbl_8065B28C
-lbl_8065B28C:
+.global FLOAT_8065b28c
+FLOAT_8065b28c:
 	.skip 0x4
 
-.global lbl_8065B290
-lbl_8065B290:
+.global FLOAT_8065b290
+FLOAT_8065b290:
 	.skip 0x4
 
 .global lbl_8065B294
@@ -339,8 +339,8 @@ lbl_8065B294:
 lbl_8065B295:
 	.skip 0x3
 
-.global lbl_8065B298
-lbl_8065B298:
+.global FLOAT_8065b298
+FLOAT_8065b298:
 	.skip 0x4
 
 .global lbl_8065B29C
@@ -411,8 +411,8 @@ lbl_8065B2E0:
 lbl_8065B2E8:
 	.skip 0x4
 
-.global lbl_8065B2EC
-lbl_8065B2EC:
+.global FLOAT_8065b2ec
+FLOAT_8065b2ec:
 	.skip 0x4
 
 .global lbl_8065B2F0
@@ -423,16 +423,16 @@ lbl_8065B2F0:
 lbl_8065B2F4:
 	.skip 0x4
 
-.global lbl_8065B2F8
-lbl_8065B2F8:
+.global FLOAT_8065b2f8
+FLOAT_8065b2f8:
 	.skip 0x4
 
 .global lbl_8065B2FC
 lbl_8065B2FC:
 	.skip 0x4
 
-.global lbl_8065B300
-lbl_8065B300:
+.global FLOAT_8065b300
+FLOAT_8065b300:
 	.skip 0x4
 
 .global lbl_8065B304
@@ -579,20 +579,20 @@ lbl_8065B344:
 lbl_8065B348:
 	.skip 0x4
 
-.global lbl_8065B34C
-lbl_8065B34C:
+.global FLOAT_8065b34c
+FLOAT_8065b34c:
 	.skip 0x4
 
 .global lbl_8065B350
 lbl_8065B350:
 	.skip 0x4
 
-.global lbl_8065B354
-lbl_8065B354:
+.global FLOAT_8065b354
+FLOAT_8065b354:
 	.skip 0x4
 
-.global lbl_8065B358
-lbl_8065B358:
+.global FLOAT_8065b358
+FLOAT_8065b358:
 	.skip 0x8
 
 .global lbl_8065B360
@@ -607,8 +607,8 @@ lbl_8065B364:
 lbl_8065B368:
 	.skip 0x8
 
-.global lbl_8065B370
-lbl_8065B370:
+.global FLOAT_8065b370
+FLOAT_8065b370:
 	.skip 0x4
 
 .global lbl_8065B374
@@ -659,8 +659,8 @@ lbl_8065B3B0:
 lbl_8065B3B8:
 	.skip 0x8
 
-.global lbl_8065B3C0
-lbl_8065B3C0:
+.global DOUBLE_8065b3c0
+DOUBLE_8065b3c0:
 	.skip 0x8
 
 .global lbl_8065B3C8
@@ -747,8 +747,8 @@ lbl_8065B420:
 lbl_8065B424:
 	.skip 0x4
 
-.global lbl_8065B428
-lbl_8065B428:
+.global DOUBLE_8065b428
+DOUBLE_8065b428:
 	.skip 0x8
 
 .global lbl_8065B430
@@ -883,16 +883,18 @@ lbl_8065B4D0:
 lbl_8065B4D4:
 	.skip 0x4
 
-.global lbl_8065B4D8
-lbl_8065B4D8:
+/*8065b4d8*/
+.global systemLoopReset
+systemLoopReset:
 	.skip 0x4
 
+/*intro button prompt check*/
 .global lbl_8065B4DC
 lbl_8065B4DC:
 	.skip 0x4
-
-.global lbl_8065B4E0
-lbl_8065B4E0:
+/* 8065B4E0*/
+.global gameTimeOn
+gameTimeOn:
 	.skip 0x10
 
 .global lbl_8065B4F0
@@ -1699,8 +1701,8 @@ lbl_8065B86C:
 lbl_8065B878:
 	.skip 0x8
 
-.global lbl_8065B880
-lbl_8065B880:
+.global FLOAT_8065b880
+FLOAT_8065b880:
 	.skip 0x4
 
 .global lbl_8065B884
@@ -1871,28 +1873,28 @@ lbl_8065B914:
 lbl_8065B918:
 	.skip 0x4
 
-.global lbl_8065B91C
-lbl_8065B91C:
+.global FLOAT_8065b91c
+FLOAT_8065b91c:
 	.skip 0x4
 
-.global lbl_8065B920
-lbl_8065B920:
+.global FLOAT_8065b920
+FLOAT_8065b920:
 	.skip 0x4
 
-.global lbl_8065B924
-lbl_8065B924:
+.global FLOAT_8065b924
+FLOAT_8065b924:
 	.skip 0x4
 
-.global lbl_8065B928
-lbl_8065B928:
+.global FLOAT_8065b928
+FLOAT_8065b928:
 	.skip 0x4
 
-.global lbl_8065B92C
-lbl_8065B92C:
+.global FLOAT_8065b92c
+FLOAT_8065b92c:
 	.skip 0x4
 
-.global lbl_8065B930
-lbl_8065B930:
+.global FLOAT_8065b930
+FLOAT_8065b930:
 	.skip 0x4
 
 .global lbl_8065B934

@@ -7,25 +7,25 @@
 lbl_801FD660:
 
 	# ROM: 0x1FA660
-	.4byte lbl_80151BE0
-	.4byte lbl_8001933C
-	.4byte lbl_80031004
-	.4byte lbl_80062B6C
-	.4byte lbl_8006DAF4
-	.4byte lbl_8006F94C
-	.4byte lbl_8007F664
-	.4byte lbl_8008A314
-	.4byte lbl_800E2520
-	.4byte lbl_800E68D8
-	.4byte lbl_800EA2C0
-	.4byte lbl_800F48C0
-	.4byte lbl_800FFFA0
-	.4byte lbl_8010697C
-	.4byte lbl_801152A0
-	.4byte lbl_80135010
-	.4byte lbl_80138154
-	.4byte lbl_8014232C
-	.4byte lbl_8014AA6C
+	.4byte __init_cpp_exceptions
+	.4byte zz_8001933c_
+	.4byte zz_80031004_
+	.4byte zz_80062b6c_
+	.4byte zz_8006daf4_
+	.4byte zz_8006f94c_
+	.4byte zz_8007f664_
+	.4byte zz_8008a314_
+	.4byte zz_800e2520_
+	.4byte zz_800e68d8_
+	.4byte zz_800ea2c0_
+	.4byte zz_800f48c0_
+	.4byte zz_800fffa0_
+	.4byte zz_8010697c_
+	.4byte zz_801152a0_
+	.4byte zz_80135010_
+	.4byte zz_80138154_
+	.4byte zz_8014232c_
+	.4byte __sinit_GameTweaks_cpp
 	.4byte 0
 	.4byte 0
 	.4byte 0

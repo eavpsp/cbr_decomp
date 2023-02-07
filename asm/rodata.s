@@ -245,23 +245,23 @@ lbl_801FDA20:
 	.4byte 0x43D18000
 	.4byte 0
 
-.global lbl_801FDA80
-lbl_801FDA80:
+.global s_game_cpp_801fda80
+s_game_cpp_801fda80:
 
 	# ROM: 0x1FAA80
 	.asciz "game.cpp"
 	.balign 4
 
-.global lbl_801FDA8C
-lbl_801FDA8C:
+.global s_error_on_play_movie_____d_801fda8c
+s_error_on_play_movie_____d_801fda8c:
 
 	# ROM: 0x1FAA8C
 	.asciz "error on play movie! - %d\n"
 	.balign 4
 	.asciz "xxx/bgm1_marker.hps"
 
-.global lbl_801FDABC
-lbl_801FDABC:
+.global s__mirror__801fdabc
+s__mirror__801fdabc:
 
 	# ROM: 0x1FAABC
 	.asciz "(mirror)"
@@ -280,137 +280,137 @@ lbl_801FDABC:
 	.asciz "__$draw$  "
 	.balign 4
 
-.global lbl_801FDB28
-lbl_801FDB28:
+.global s__subwin__801fdb28
+s__subwin__801fdb28:
 
 	# ROM: 0x1FAB28
 	.asciz "(subwin)"
 	.balign 4
 
-.global lbl_801FDB34
-lbl_801FDB34:
+.global s_CInterpolationNone_801fdb34
+s_CInterpolationNone_801fdb34:
 
 	# ROM: 0x1FAB34
 	.asciz "CInterpolationNone"
 	.balign 4
 
-.global lbl_801FDB48
-lbl_801FDB48:
+.global s_CInterfaceInterpolation_801fdb48
+s_CInterfaceInterpolation_801fdb48:
 
 	# ROM: 0x1FAB48
 	.asciz "CInterfaceInterpolation"
 
-.global lbl_801FDB60
-lbl_801FDB60:
+.global s_CVectorNoneInterpolation_801fdb60
+s_CVectorNoneInterpolation_801fdb60:
 
 	# ROM: 0x1FAB60
 	.asciz "CVectorNoneInterpolation"
 	.balign 4
 
-.global lbl_801FDB7C
-lbl_801FDB7C:
+.global s_CInterfaceVectorInterpolation_801fdb7c
+s_CInterfaceVectorInterpolation_801fdb7c:
 
 	# ROM: 0x1FAB7C
 	.asciz "CInterfaceVectorInterpolation"
 	.balign 4
 
-.global lbl_801FDB9C
-lbl_801FDB9C:
+.global s_CCameraActionAreaExM_801fdb9c
+s_CCameraActionAreaExM_801fdb9c:
 
 	# ROM: 0x1FAB9C
 	.asciz "CCameraActionAreaExM"
 	.balign 4
 
-.global lbl_801FDBB4
-lbl_801FDBB4:
+.global s_CInterfaceCameraAction_801fdbb4
+s_CInterfaceCameraAction_801fdbb4:
 
 	# ROM: 0x1FABB4
 	.asciz "CInterfaceCameraAction"
 	.balign 4
 
-.global lbl_801FDBCC
-lbl_801FDBCC:
+.global s_CamAreaInfo_801fdbcc
+s_CamAreaInfo_801fdbcc:
 
 	# ROM: 0x1FABCC
 	.asciz "CamAreaInfo"
 
-.global lbl_801FDBD8
-lbl_801FDBD8:
+.global s_CVectorLinearInterpolation_801fdbd8
+s_CVectorLinearInterpolation_801fdbd8:
 
 	# ROM: 0x1FABD8
 	.asciz "CVectorLinearInterpolation"
 	.balign 4
 
-.global lbl_801FDBF4
-lbl_801FDBF4:
+.global s_CVectorEaseInOutInterpolation_801fdbf4
+s_CVectorEaseInOutInterpolation_801fdbf4:
 
 	# ROM: 0x1FABF4
 	.asciz "CVectorEaseInOutInterpolation"
 	.balign 4
 
-.global lbl_801FDC14
-lbl_801FDC14:
+.global s_CVectorEaseOutInterpolation_801fdc14
+s_CVectorEaseOutInterpolation_801fdc14:
 
 	# ROM: 0x1FAC14
 	.asciz "CVectorEaseOutInterpolation"
 
-.global lbl_801FDC30
-lbl_801FDC30:
+.global s_CVectorEaseOutDivideInterpolatio_801fdc30
+s_CVectorEaseOutDivideInterpolatio_801fdc30:
 
 	# ROM: 0x1FAC30
 	.asciz "CVectorEaseOutDivideInterpolation"
 	.balign 4
 
-.global lbl_801FDC54
-lbl_801FDC54:
+.global s_CInterpolationLinear_801fdc54
+s_CInterpolationLinear_801fdc54:
 
 	# ROM: 0x1FAC54
 	.asciz "CInterpolationLinear"
 	.balign 4
 
-.global lbl_801FDC6C
-lbl_801FDC6C:
+.global s_CInterpolationEaseOutDivide_801fdc6c
+s_CInterpolationEaseOutDivide_801fdc6c:
 
 	# ROM: 0x1FAC6C
 	.asciz "CInterpolationEaseOutDivide"
 
-.global lbl_801FDC88
-lbl_801FDC88:
+.global s_CCameraActions_801fdc88
+s_CCameraActions_801fdc88:
 
 	# ROM: 0x1FAC88
 	.asciz "CCameraActions"
 	.balign 4
 
-.global lbl_801FDC98
-lbl_801FDC98:
+.global s_CCameraMemento_801fdc98
+s_CCameraMemento_801fdc98:
 
 	# ROM: 0x1FAC98
 	.asciz "CCameraMemento"
 	.balign 4
 
-.global lbl_801FDCA8
-lbl_801FDCA8:
+.global s_CMotionControlCamera_801fdca8
+s_CMotionControlCamera_801fdca8:
 
 	# ROM: 0x1FACA8
 	.asciz "CMotionControlCamera"
 	.balign 4
 
-.global lbl_801FDCC0
-lbl_801FDCC0:
+.global s_CMsgData_801fdcc0
+s_CMsgData_801fdcc0:
 
 	# ROM: 0x1FACC0
 	.asciz "CMsgData"
 	.balign 4
 
-.global lbl_801FDCCC
-lbl_801FDCCC:
+.global s_CMsgFont_801fdccc
+s_CMsgFont_801fdccc:
 
 	# ROM: 0x1FACCC
 	.asciz "CMsgFont"
 	.balign 4
 
-.global lbl_801FDCD8
-lbl_801FDCD8:
+.global s_CObjArchive_801fdcd8
+s_CObjArchive_801fdcd8:
 
 	# ROM: 0x1FACD8
 	.asciz "CObjArchive"
@@ -421,50 +421,50 @@ lbl_801FDCE4:
 	# ROM: 0x1FACE4
 	.asciz "HSD_Archive"
 
-.global lbl_801FDCF0
-lbl_801FDCF0:
+.global s_CGenerator_801fdcf0
+s_CGenerator_801fdcf0:
 
 	# ROM: 0x1FACF0
 	.asciz "CGenerator"
 	.balign 4
 
-.global lbl_801FDCFC
-lbl_801FDCFC:
+.global s___jobj__flags___JOBJ_USE_QUATERN_801fdcfc
+s___jobj__flags___JOBJ_USE_QUATERN_801fdcfc:
 
 	# ROM: 0x1FACFC
 	.asciz "!(jobj->flags & JOBJ_USE_QUATERNION)"
 	.balign 4
 
-.global lbl_801FDD24
-lbl_801FDD24:
+.global s_translate_801fdd24
+s_translate_801fdd24:
 
 	# ROM: 0x1FAD24
 	.asciz "translate"
 	.balign 4
 
-.global lbl_801FDD30
-lbl_801FDD30:
+.global s_CoordInfo_801fdd30
+s_CoordInfo_801fdd30:
 
 	# ROM: 0x1FAD30
 	.asciz "CoordInfo"
 	.balign 4
 
-.global lbl_801FDD3C
-lbl_801FDD3C:
+.global s_AttrInfo_801fdd3c
+s_AttrInfo_801fdd3c:
 
 	# ROM: 0x1FAD3C
 	.asciz "AttrInfo"
 	.balign 4
 
-.global lbl_801FDD48
-lbl_801FDD48:
+.global s_CAnmQueue_801fdd48
+s_CAnmQueue_801fdd48:
 
 	# ROM: 0x1FAD48
 	.asciz "CAnmQueue"
 	.balign 4
 
-.global lbl_801FDD54
-lbl_801FDD54:
+.global s_CStopwatch_801fdd54
+s_CStopwatch_801fdd54:
 
 	# ROM: 0x1FAD54
 	.asciz "CStopwatch"
@@ -483,8 +483,8 @@ lbl_801FDD6C:
 	.asciz "_GXColor"
 	.balign 4
 
-.global lbl_801FDD78
-lbl_801FDD78:
+.global s_CGsChannel_801fdd78
+s_CGsChannel_801fdd78:
 
 	# ROM: 0x1FAD78
 	.asciz "CGsChannel"
@@ -497,8 +497,8 @@ lbl_801FDD84:
 	.asciz "_HSD_Chan"
 	.balign 4
 
-.global lbl_801FDD90
-lbl_801FDD90:
+.global s_CGsTevStage_801fdd90
+s_CGsTevStage_801fdd90:
 
 	# ROM: 0x1FAD90
 	.asciz "CGsTevStage"
@@ -510,8 +510,8 @@ lbl_801FDD9C:
 	.asciz "_HSD_TevDesc"
 	.balign 4
 
-.global lbl_801FDDAC
-lbl_801FDDAC:
+.global s_CGsScreen_801fddac
+s_CGsScreen_801fddac:
 
 	# ROM: 0x1FADAC
 	.asciz "CGsScreen"
@@ -524,8 +524,8 @@ lbl_801FDDB8:
 	.asciz "_GXRenderModeObj"
 	.balign 4
 
-.global lbl_801FDDCC
-lbl_801FDDCC:
+.global s_CGsRenderMode_801fddcc
+s_CGsRenderMode_801fddcc:
 
 	# ROM: 0x1FADCC
 	.asciz "CGsRenderMode"
@@ -544,48 +544,48 @@ lbl_801FDDE8:
 	.asciz "CPrimitive"
 	.balign 4
 
-.global lbl_801FDDF4
-lbl_801FDDF4:
+.global s_CTriangle_801fddf4
+s_CTriangle_801fddf4:
 
 	# ROM: 0x1FADF4
 	.asciz "CTriangle"
 	.balign 4
 
-.global lbl_801FDE00
-lbl_801FDE00:
+.global s_COctahedron_801fde00
+s_COctahedron_801fde00:
 
 	# ROM: 0x1FAE00
 	.asciz "COctahedron"
 
-.global lbl_801FDE0C
-lbl_801FDE0C:
+.global s_CIcosahedron_801fde0c
+s_CIcosahedron_801fde0c:
 
 	# ROM: 0x1FAE0C
 	.asciz "CIcosahedron"
 	.balign 4
 
-.global lbl_801FDE1C
-lbl_801FDE1C:
+.global s_CCylinder_801fde1c
+s_CCylinder_801fde1c:
 
 	# ROM: 0x1FAE1C
 	.asciz "CCylinder"
 	.balign 4
 
-.global lbl_801FDE28
-lbl_801FDE28:
+.global s_CStatus64_801fde28
+s_CStatus64_801fde28:
 
 	# ROM: 0x1FAE28
 	.asciz "CStatus64"
 	.balign 4
 
-.global lbl_801FDE34
-lbl_801FDE34:
+.global s_CScrnWipeCircle_801fde34
+s_CScrnWipeCircle_801fde34:
 
 	# ROM: 0x1FAE34
 	.asciz "CScrnWipeCircle"
 
-.global lbl_801FDE44
-lbl_801FDE44:
+.global s_CScrnColor_801fde44
+s_CScrnColor_801fde44:
 
 	# ROM: 0x1FAE44
 	.asciz "CScrnColor"
@@ -598,15 +598,15 @@ lbl_801FDE50:
 	.asciz "CScrnWipe"
 	.balign 4
 
-.global lbl_801FDE5C
-lbl_801FDE5C:
+.global s_CFbOutline_801fde5c
+s_CFbOutline_801fde5c:
 
 	# ROM: 0x1FAE5C
 	.asciz "CFbOutline"
 	.balign 4
 
-.global lbl_801FDE68
-lbl_801FDE68:
+.global s_CFbTexEff_801fde68
+s_CFbTexEff_801fde68:
 
 	# ROM: 0x1FAE68
 	.asciz "CFbTexEff"
@@ -619,50 +619,50 @@ lbl_801FDE74:
 	.asciz "_GXTexObj"
 	.balign 4
 
-.global lbl_801FDE80
-lbl_801FDE80:
+.global s_CScrnFade_801fde80
+s_CScrnFade_801fde80:
 
 	# ROM: 0x1FAE80
 	.asciz "CScrnFade"
 	.balign 4
 
-.global lbl_801FDE8C
-lbl_801FDE8C:
+.global s_InfoScrn_801fde8c
+s_InfoScrn_801fde8c:
 
 	# ROM: 0x1FAE8C
 	.asciz "InfoScrn"
 	.balign 4
 
-.global lbl_801FDE98
-lbl_801FDE98:
+.global s_CParticle_801fde98
+s_CParticle_801fde98:
 
 	# ROM: 0x1FAE98
 	.asciz "CParticle"
 	.balign 4
 
-.global lbl_801FDEA4
-lbl_801FDEA4:
+.global s_CScrnQuake_801fdea4
+s_CScrnQuake_801fdea4:
 
 	# ROM: 0x1FAEA4
 	.asciz "CScrnQuake"
 	.balign 4
 
-.global lbl_801FDEB0
-lbl_801FDEB0:
+.global s_CEvtData_801fdeb0
+s_CEvtData_801fdeb0:
 
 	# ROM: 0x1FAEB0
 	.asciz "CEvtData"
 	.balign 4
 
-.global lbl_801FDEBC
-lbl_801FDEBC:
+.global s_FbSubwin_801fdebc
+s_FbSubwin_801fdebc:
 
 	# ROM: 0x1FAEBC
 	.asciz "FbSubwin"
 	.balign 4
 
-.global lbl_801FDEC8
-lbl_801FDEC8:
+.global s_FbMirror_801fdec8
+s_FbMirror_801fdec8:
 
 	# ROM: 0x1FAEC8
 	.asciz "FbMirror"
@@ -670,22 +670,22 @@ lbl_801FDEC8:
 	.asciz "FbFlooref"
 	.balign 4
 
-.global lbl_801FDEE0
-lbl_801FDEE0:
+.global s_FbMirrorEx_801fdee0
+s_FbMirrorEx_801fdee0:
 
 	# ROM: 0x1FAEE0
 	.asciz "FbMirrorEx"
 	.balign 4
 
-.global lbl_801FDEEC
-lbl_801FDEEC:
+.global s_ARPreCache_801fdeec
+s_ARPreCache_801fdeec:
 
 	# ROM: 0x1FAEEC
 	.asciz "ARPreCache"
 	.balign 4
 
-.global lbl_801FDEF8
-lbl_801FDEF8:
+.global s_ARCacheInfo_801fdef8
+s_ARCacheInfo_801fdef8:
 
 	# ROM: 0x1FAEF8
 	.asciz "ARCacheInfo"
@@ -759,15 +759,15 @@ lbl_801FDF08:
 	.4byte 0
 	.4byte 0x00000002
 
-.global lbl_801FE004
-lbl_801FE004:
+.global s_STAGE_NO_801fe004
+s_STAGE_NO_801fe004:
 
 	# ROM: 0x1FB004
 	.asciz "STAGE_NO"
 	.balign 4
 
-.global lbl_801FE010
-lbl_801FE010:
+.global s_DRAW_XZGRID_801fe010
+s_DRAW_XZGRID_801fe010:
 
 	# ROM: 0x1FB010
 	.asciz "DRAW_XZGRID"
@@ -1007,8 +1007,8 @@ lbl_801FE230:
 	.asciz "\\B00000000"
 	.balign 4
 
-.global lbl_801FE294
-lbl_801FE294:
+.global s_CFileText_801fe294
+s_CFileText_801fe294:
 
 	# ROM: 0x1FB294
 	.asciz "CFileText"
@@ -1044,47 +1044,47 @@ lbl_801FE2B0:
 	.4byte 0
 	.4byte 0
 
-.global lbl_801FE2F8
-lbl_801FE2F8:
+.global s_sfx_kitchen_ssm_801fe2f8
+s_sfx_kitchen_ssm_801fe2f8:
 
 	# ROM: 0x1FB2F8
 	.asciz "sfx_kitchen.ssm"
 
-.global lbl_801FE308
-lbl_801FE308:
+.global s_sfx_stage02_ssm_801fe308
+s_sfx_stage02_ssm_801fe308:
 
 	# ROM: 0x1FB308
 	.asciz "sfx_stage02.ssm"
 
-.global lbl_801FE318
-lbl_801FE318:
+.global s_sfx_souko_ssm_801fe318
+s_sfx_souko_ssm_801fe318:
 
 	# ROM: 0x1FB318
 	.asciz "sfx_souko.ssm"
 	.balign 4
 
-.global lbl_801FE328
-lbl_801FE328:
+.global s_sfx_jennyroom_ssm_801fe328
+s_sfx_jennyroom_ssm_801fe328:
 
 	# ROM: 0x1FB328
 	.asciz "sfx_jennyroom.ssm"
 	.balign 4
 
-.global lbl_801FE33C
-lbl_801FE33C:
+.global s_sfx_stage05_ssm_801fe33c
+s_sfx_stage05_ssm_801fe33c:
 
 	# ROM: 0x1FB33C
 	.asciz "sfx_stage05.ssm"
 
-.global lbl_801FE34C
-lbl_801FE34C:
+.global s_sfx_papamama_ssm_801fe34c
+s_sfx_papamama_ssm_801fe34c:
 
 	# ROM: 0x1FB34C
 	.asciz "sfx_papamama.ssm"
 	.balign 4
 
-.global lbl_801FE360
-lbl_801FE360:
+.global s_sfx_stage07_ssm_801fe360
+s_sfx_stage07_ssm_801fe360:
 
 	# ROM: 0x1FB360
 	.asciz "sfx_stage07.ssm"
@@ -1121,8 +1121,8 @@ lbl_801FE3AC:
 	# ROM: 0x1FB3AC
 	.asciz "sfx_martial.ssm"
 
-.global lbl_801FE3BC
-lbl_801FE3BC:
+.global s_streaming_sample_hps_801fe3bc
+s_streaming_sample_hps_801fe3bc:
 
 	# ROM: 0x1FB3BC
 	.asciz "streaming/sample.hps"
@@ -1851,22 +1851,22 @@ lbl_801FED6C:
 	.asciz "streaming/entrance.hps"
 	.balign 4
 
-.global lbl_801FED84
-lbl_801FED84:
+.global s_Register__s_801fed84
+s_Register__s_801fed84:
 
 	# ROM: 0x1FBD84
 	.asciz "Register:%s\n"
 	.balign 4
 
-.global lbl_801FED94
-lbl_801FED94:
+.global s_Ssm__Load_xxxxxxxxxxxxxxxxxxxxxx_801fed94
+s_Ssm__Load_xxxxxxxxxxxxxxxxxxxxxx_801fed94:
 
 	# ROM: 0x1FBD94
 	.asciz "Ssm::Load xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
 	.balign 4
 
-.global lbl_801FEDD0
-lbl_801FEDD0:
+.global s_HSD_AudioSFXLoad___s_801fedd0
+s_HSD_AudioSFXLoad___s_801fedd0:
 
 	# ROM: 0x1FBDD0
 	.asciz "HSD_AudioSFXLoad::%s\n"
@@ -2134,22 +2134,22 @@ lbl_801FF1CC:
 	.4byte 0
 	.4byte 0
 
-.global lbl_801FF1D8
-lbl_801FF1D8:
+.global s_CScrnRoboeyes_801ff1d8
+s_CScrnRoboeyes_801ff1d8:
 
 	# ROM: 0x1FC1D8
 	.asciz "CScrnRoboeyes"
 	.balign 4
 
-.global lbl_801FF1E8
-lbl_801FF1E8:
+.global s_CScrnColor_801ff1e8
+s_CScrnColor_801ff1e8:
 
 	# ROM: 0x1FC1E8
 	.asciz "CScrnColor"
 	.balign 4
 
-.global lbl_801FF1F4
-lbl_801FF1F4:
+.global s_CScrnWipe_801ff1f4
+s_CScrnWipe_801ff1f4:
 
 	# ROM: 0x1FC1F4
 	.asciz "CScrnWipe"
@@ -2157,21 +2157,21 @@ lbl_801FF1F4:
 	.asciz "_GXTexObj"
 	.balign 4
 
-.global lbl_801FF20C
-lbl_801FF20C:
+.global s_CScrnWipeCustom_801ff20c
+s_CScrnWipeCustom_801ff20c:
 
 	# ROM: 0x1FC20C
 	.asciz "CScrnWipeCustom"
 
-.global lbl_801FF21C
-lbl_801FF21C:
+.global s_CScrnWipeTex_801ff21c
+s_CScrnWipeTex_801ff21c:
 
 	# ROM: 0x1FC21C
 	.asciz "CScrnWipeTex"
 	.balign 4
 
-.global lbl_801FF22C
-lbl_801FF22C:
+.global s_CScrnWipeTile_801ff22c
+s_CScrnWipeTile_801ff22c:
 
 	# ROM: 0x1FC22C
 	.asciz "CScrnWipeTile"
@@ -2232,22 +2232,22 @@ lbl_801FF2D0:
 	.4byte 0
 	.4byte 0
 
-.global lbl_801FF2DC
-lbl_801FF2DC:
+.global s_CPtclDust3_801ff2dc
+s_CPtclDust3_801ff2dc:
 
 	# ROM: 0x1FC2DC
 	.asciz "CPtclDust3"
 	.balign 4
 
-.global lbl_801FF2E8
-lbl_801FF2E8:
+.global s_CPtclOne_801ff2e8
+s_CPtclOne_801ff2e8:
 
 	# ROM: 0x1FC2E8
 	.asciz "CPtclOne"
 	.balign 4
 
-.global lbl_801FF2F4
-lbl_801FF2F4:
+.global s_CPtclDust2_801ff2f4
+s_CPtclDust2_801ff2f4:
 
 	# ROM: 0x1FC2F4
 	.asciz "CPtclDust2"
@@ -2256,29 +2256,29 @@ lbl_801FF2F4:
 	.byte 0x30, 0x30
 	.4byte 0x30303030
 
-.global lbl_801FF310
-lbl_801FF310:
+.global s_CXObjIntp_801ff310
+s_CXObjIntp_801ff310:
 
 	# ROM: 0x1FC310
 	.asciz "CXObjIntp"
 	.byte 0x30, 0x30
 
-.global lbl_801FF31C
-lbl_801FF31C:
+.global s___jobj__flags___JOBJ_USE_QUATERN_801ff31c
+s___jobj__flags___JOBJ_USE_QUATERN_801ff31c:
 
 	# ROM: 0x1FC31C
 	.asciz "!(jobj->flags & JOBJ_USE_QUATERNION)"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_801FF344
-lbl_801FF344:
+.global s_translate_801ff344
+s_translate_801ff344:
 
 	# ROM: 0x1FC344
 	.asciz "translate"
 	.byte 0x30, 0x30
 
-.global lbl_801FF350
-lbl_801FF350:
+.global s_tpl_logo_s_tpl_801ff350
+s_tpl_logo_s_tpl_801ff350:
 
 	# ROM: 0x1FC350
 	.asciz "tpl/logo%s.tpl"
@@ -2341,15 +2341,15 @@ lbl_801FF3F0:
 	.4byte 0x41000000
 	.4byte 0
 
-.global lbl_801FF408
-lbl_801FF408:
+.global s_XObjDemo_801ff408
+s_XObjDemo_801ff408:
 
 	# ROM: 0x1FC408
 	.asciz "XObjDemo"
 	.balign 4
 
-.global lbl_801FF414
-lbl_801FF414:
+.global s_CXObjIntp_801ff414
+s_CXObjIntp_801ff414:
 
 	# ROM: 0x1FC414
 	.asciz "CXObjIntp"
@@ -2554,8 +2554,8 @@ lbl_801FF4B8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_801FF74C
-lbl_801FF74C:
+.global s_StatusMenu_801ff74c
+s_StatusMenu_801ff74c:
 
 	# ROM: 0x1FC74C
 	.asciz "StatusMenu"
@@ -4432,8 +4432,8 @@ lbl_80200F38:
 	.4byte 0
 	.4byte 0
 
-.global lbl_80201388
-lbl_80201388:
+.global s_MenuMCTestSub_80201388
+s_MenuMCTestSub_80201388:
 
 	# ROM: 0x1FE388
 	.asciz "MenuMCTestSub"
@@ -4450,8 +4450,8 @@ lbl_80201388:
 	.asciz "SLOT: %c   FREE BLOCKS: %d   FREE ENTRIES: %d"
 	.balign 4
 
-.global lbl_8020144C
-lbl_8020144C:
+.global s_SLOT___c_8020144c
+s_SLOT___c_8020144c:
 
 	# ROM: 0x1FE44C
 	.asciz "SLOT: %c"
@@ -4497,56 +4497,56 @@ lbl_80201500:
 	.asciz "CoordInfo"
 	.balign 4
 
-.global lbl_80201518
-lbl_80201518:
+.global s_MenuMCTest_80201518
+s_MenuMCTest_80201518:
 
 	# ROM: 0x1FE518
 	.asciz "MenuMCTest"
 	.balign 4
 
-.global lbl_80201524
-lbl_80201524:
+.global s_MenuStageSelect_80201524
+s_MenuStageSelect_80201524:
 
 	# ROM: 0x1FE524
 	.asciz "MenuStageSelect"
 
-.global lbl_80201534
-lbl_80201534:
+.global s_MenuSave_80201534
+s_MenuSave_80201534:
 
 	# ROM: 0x1FE534
 	.asciz "MenuSave"
 	.balign 4
 
-.global lbl_80201540
-lbl_80201540:
+.global s_MenuStatus_80201540
+s_MenuStatus_80201540:
 
 	# ROM: 0x1FE540
 	.asciz "MenuStatus"
 	.balign 4
 
-.global lbl_8020154C
-lbl_8020154C:
+.global s_MenuItem_8020154c
+s_MenuItem_8020154c:
 
 	# ROM: 0x1FE54C
 	.asciz "MenuItem"
 	.balign 4
 
-.global lbl_80201558
-lbl_80201558:
+.global s_MenuMain_80201558
+s_MenuMain_80201558:
 
 	# ROM: 0x1FE558
 	.asciz "MenuMain"
 	.balign 4
 
-.global lbl_80201564
-lbl_80201564:
+.global s_MenuCursor_80201564
+s_MenuCursor_80201564:
 
 	# ROM: 0x1FE564
 	.asciz "MenuCursor"
 	.balign 4
 
-.global lbl_80201570
-lbl_80201570:
+.global s_CXObjIntp_80201570
+s_CXObjIntp_80201570:
 
 	# ROM: 0x1FE570
 	.asciz "CXObjIntp"
@@ -4872,8 +4872,8 @@ lbl_80201790:
 	.asciz "translate"
 	.balign 4
 
-.global lbl_80201A98
-lbl_80201A98:
+.global s__B00000080_PAUSE_80201a98
+s__B00000080_PAUSE_80201a98:
 
 	# ROM: 0x1FEA98
 	.asciz "\\B00000080 PAUSE "
@@ -4883,678 +4883,678 @@ lbl_80201A98:
 	.asciz "_GXTexObj"
 	.balign 4
 
-.global lbl_80201AE0
-lbl_80201AE0:
+.global s_InfoPoint_80201ae0
+s_InfoPoint_80201ae0:
 
 	# ROM: 0x1FEAE0
 	.asciz "InfoPoint"
 	.byte 0x30, 0x30
 	.4byte 0x30303030
 
-.global lbl_80201AF0
-lbl_80201AF0:
+.global s_Do_you_want_to_display_80201af0
+s_Do_you_want_to_display_80201af0:
 
 	# ROM: 0x1FEAF0
 	.asciz "Do you want to display"
 	.byte 0x30
 
-.global lbl_80201B08
-lbl_80201B08:
+.global s_the_game_in_Progressive_Mode__80201b08
+s_the_game_in_Progressive_Mode__80201b08:
 
 	# ROM: 0x1FEB08
 	.asciz "the game in Progressive Mode?"
 	.byte 0x30, 0x30
 
-.global lbl_80201B28
-lbl_80201B28:
+.global s__s_02XYes_s__s_02XNo_s_80201b28
+s__s_02XYes_s__s_02XNo_s_80201b28:
 
 	# ROM: 0x1FEB28
 	.asciz "%s%02XYes%s  %s%02XNo%s"
 
-.global lbl_80201B40
-lbl_80201B40:
+.global s_Progressive_Mode_has_80201b40
+s_Progressive_Mode_has_80201b40:
 
 	# ROM: 0x1FEB40
 	.asciz "Progressive Mode has"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80201B58
-lbl_80201B58:
+.global s_been_turned_on__80201b58
+s_been_turned_on__80201b58:
 
 	# ROM: 0x1FEB58
 	.asciz "been turned on."
 
-.global lbl_80201B68
-lbl_80201B68:
+.global s_been_turned_off__80201b68
+s_been_turned_off__80201b68:
 
 	# ROM: 0x1FEB68
 	.asciz "been turned off."
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80201B7C
-lbl_80201B7C:
+.global s_Store_Item_80201b7c
+s_Store_Item_80201b7c:
 
 	# ROM: 0x1FEB7C
 	.asciz "Store Item"
 	.byte 0x30
 
-.global lbl_80201B88
-lbl_80201B88:
+.global s_Remove_Suit_80201b88
+s_Remove_Suit_80201b88:
 
 	# ROM: 0x1FEB88
 	.asciz "Remove Suit"
 
-.global lbl_80201B94
-lbl_80201B94:
+.global s_Controller_80201b94
+s_Controller_80201b94:
 
 	# ROM: 0x1FEB94
 	.asciz "Controller"
 	.byte 0x30
 
-.global lbl_80201BA0
-lbl_80201BA0:
+.global s_Stickers_80201ba0
+s_Stickers_80201ba0:
 
 	# ROM: 0x1FEBA0
 	.asciz "Stickers"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80201BAC
-lbl_80201BAC:
+.global s_Rotate_Camera_80201bac
+s_Rotate_Camera_80201bac:
 
 	# ROM: 0x1FEBAC
 	.asciz "Rotate Camera"
 	.byte 0x30, 0x30
 
-.global lbl_80201BBC
-lbl_80201BBC:
+.global s_Equip_Screen_80201bbc
+s_Equip_Screen_80201bbc:
 
 	# ROM: 0x1FEBBC
 	.asciz "Equip Screen"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80201BCC
-lbl_80201BCC:
+.global s_Chibi_Vision_80201bcc
+s_Chibi_Vision_80201bcc:
 
 	# ROM: 0x1FEBCC
 	.asciz "Chibi-Vision"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80201BDC
-lbl_80201BDC:
+.global s_Center_Camera_80201bdc
+s_Center_Camera_80201bdc:
 
 	# ROM: 0x1FEBDC
 	.asciz "Center Camera"
 	.byte 0x30, 0x30
 
-.global lbl_80201BEC
-lbl_80201BEC:
+.global s_Control_Chibi___Select_80201bec
+s_Control_Chibi___Select_80201bec:
 
 	# ROM: 0x1FEBEC
 	.asciz "Control Chibi / Select"
 	.byte 0x30
 
-.global lbl_80201C04
-lbl_80201C04:
+.global s_Chibi_Ranking_80201c04
+s_Chibi_Ranking_80201c04:
 
 	# ROM: 0x1FEC04
 	.asciz "Chibi-Ranking"
 	.byte 0x30, 0x30
 
-.global lbl_80201C14
-lbl_80201C14:
+.global s_Chibi_Doors_Completed_80201c14
+s_Chibi_Doors_Completed_80201c14:
 
 	# ROM: 0x1FEC14
 	.asciz "Chibi-Doors Completed"
 	.byte 0x30, 0x30
 
-.global lbl_80201C2C
-lbl_80201C2C:
+.global s_Happy_Points_80201c2c
+s_Happy_Points_80201c2c:
 
 	# ROM: 0x1FEC2C
 	.asciz "Happy Points"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80201C3C
-lbl_80201C3C:
+.global s_Chibi_PC_Menu_80201c3c
+s_Chibi_PC_Menu_80201c3c:
 
 	# ROM: 0x1FEC3C
 	.asciz "Chibi-PC Menu"
 	.byte 0x30, 0x30
 
-.global lbl_80201C4C
-lbl_80201C4C:
+.global s_Online_Shop_80201c4c
+s_Online_Shop_80201c4c:
 
 	# ROM: 0x1FEC4C
 	.asciz "Online Shop"
 
-.global lbl_80201C58
-lbl_80201C58:
+.global s_Recyclotron_80201c58
+s_Recyclotron_80201c58:
 
 	# ROM: 0x1FEC58
 	.asciz "Recyclotron"
 
-.global lbl_80201C64
-lbl_80201C64:
+.global s_Exchanged_80201c64
+s_Exchanged_80201c64:
 
 	# ROM: 0x1FEC64
 	.asciz "Exchanged"
 	.byte 0x30, 0x30
 
-.global lbl_80201C70
-lbl_80201C70:
+.global s_Exchange__80201c70
+s_Exchange__80201c70:
 
 	# ROM: 0x1FEC70
 	.asciz "Exchange?"
 	.byte 0x30, 0x30
 
-.global lbl_80201C7C
-lbl_80201C7C:
+.global s_Scrap_Trade_80201c7c
+s_Scrap_Trade_80201c7c:
 
 	# ROM: 0x1FEC7C
 	.asciz "Scrap Trade"
 
-.global lbl_80201C88
-lbl_80201C88:
+.global s_Exchange_rate_80201c88
+s_Exchange_rate_80201c88:
 
 	# ROM: 0x1FEC88
 	.asciz "Exchange rate"
 	.byte 0x30, 0x30
 
-.global lbl_80201C98
-lbl_80201C98:
+.global s_Exchange_how_many__80201c98
+s_Exchange_how_many__80201c98:
 
 	# ROM: 0x1FEC98
 	.asciz "Exchange how many?"
 	.byte 0x30
 
-.global lbl_80201CAC
-lbl_80201CAC:
+.global s_You_don_t_have_enough_Scrap__80201cac
+s_You_don_t_have_enough_Scrap__80201cac:
 
 	# ROM: 0x1FECAC
 	.asciz "You don't have enough Scrap."
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80201CCC
-lbl_80201CCC:
+.global s_OK__stand_by__80201ccc
+s_OK__stand_by__80201ccc:
 
 	# ROM: 0x1FECCC
 	.asciz "OK, stand by."
 	.byte 0x30, 0x30
 
-.global lbl_80201CDC
-lbl_80201CDC:
+.global s_Exchange_80201cdc
+s_Exchange_80201cdc:
 
 	# ROM: 0x1FECDC
 	.asciz "Exchange"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80201CE8
-lbl_80201CE8:
+.global s_The_Disc_Cover_is_open__Please_c_80201ce8
+s_The_Disc_Cover_is_open__Please_c_80201ce8:
 
 	# ROM: 0x1FECE8
 	.asciz "The Disc Cover is open.\nPlease close the Disc Cover\nto continue playing."
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80201D34
-lbl_80201D34:
+.global s_Please_insert_the_Chibi_Robo_Gam_80201d34
+s_Please_insert_the_Chibi_Robo_Gam_80201d34:
 
 	# ROM: 0x1FED34
 	.asciz "Please insert the Chibi-Robo Game Disc."
 
-.global lbl_80201D5C
-lbl_80201D5C:
+.global s_The_Game_Disc_could_not_be_read__80201d5c
+s_The_Game_Disc_could_not_be_read__80201d5c:
 
 	# ROM: 0x1FED5C
 	.asciz "The Game Disc could not be read.\nPlease read the Nintendo GameCube\nInstruction Booklet for details."
 
-.global lbl_80201DC0
-lbl_80201DC0:
+.global s_New_Game_80201dc0
+s_New_Game_80201dc0:
 
 	# ROM: 0x1FEDC0
 	.asciz "New Game"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80201DCC
-lbl_80201DCC:
+.global s_Load_Game_80201dcc
+s_Load_Game_80201dcc:
 
 	# ROM: 0x1FEDCC
 	.asciz "Load Game"
 	.byte 0x30, 0x30
 
-.global lbl_80201DD8
-lbl_80201DD8:
+.global s_Settings_80201dd8
+s_Settings_80201dd8:
 
 	# ROM: 0x1FEDD8
 	.asciz "Settings"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80201DE4
-lbl_80201DE4:
+.global s_There_is_no_Memory_Card_80201de4
+s_There_is_no_Memory_Card_80201de4:
 
 	# ROM: 0x1FEDE4
 	.asciz "There is no Memory Card"
 
-.global lbl_80201DFC
-lbl_80201DFC:
+.global s_in_Slot_A__Insert_a_Memory_Card_80201dfc
+s_in_Slot_A__Insert_a_Memory_Card_80201dfc:
 
 	# ROM: 0x1FEDFC
 	.asciz "in Slot A. Insert a Memory Card"
 
-.global lbl_80201E1C
-lbl_80201E1C:
+.global s_or_press_the_A_Button_to_80201e1c
+s_or_press_the_A_Button_to_80201e1c:
 
 	# ROM: 0x1FEE1C
 	.asciz "or press the A Button to"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80201E38
-lbl_80201E38:
+.global s_continue_without_saving__80201e38
+s_continue_without_saving__80201e38:
 
 	# ROM: 0x1FEE38
 	.asciz "continue without saving."
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80201E54
-lbl_80201E54:
+.global s_Wrong_device_in_Slot_A__80201e54
+s_Wrong_device_in_Slot_A__80201e54:
 
 	# ROM: 0x1FEE54
 	.asciz "Wrong device in Slot A."
 
-.global lbl_80201E6C
-lbl_80201E6C:
+.global s_Please_insert_a_different_Memory_80201e6c
+s_Please_insert_a_different_Memory_80201e6c:
 
 	# ROM: 0x1FEE6C
 	.asciz "Please insert a different Memory Card or"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80201E98
-lbl_80201E98:
+.global s_press_the_A_Button_to_continue_80201e98
+s_press_the_A_Button_to_continue_80201e98:
 
 	# ROM: 0x1FEE98
 	.asciz "press the A Button to continue"
 	.byte 0x30
 
-.global lbl_80201EB8
-lbl_80201EB8:
+.global s_without_saving__80201eb8
+s_without_saving__80201eb8:
 
 	# ROM: 0x1FEEB8
 	.asciz "without saving."
 
-.global lbl_80201EC8
-lbl_80201EC8:
+.global s_The_Memory_Card_in_Slot_A_80201ec8
+s_The_Memory_Card_in_Slot_A_80201ec8:
 
 	# ROM: 0x1FEEC8
 	.asciz "The Memory Card in Slot A"
 	.byte 0x30, 0x30
 
-.global lbl_80201EE4
-lbl_80201EE4:
+.global s_cannot_be_used__80201ee4
+s_cannot_be_used__80201ee4:
 
 	# ROM: 0x1FEEE4
 	.asciz "cannot be used."
 
-.global lbl_80201EF4
-lbl_80201EF4:
+.global s_The_Memory_Card_in_Slot_A_is_80201ef4
+s_The_Memory_Card_in_Slot_A_is_80201ef4:
 
 	# ROM: 0x1FEEF4
 	.asciz "The Memory Card in Slot A is"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80201F14
-lbl_80201F14:
+.global s_corrupted_and_needs_to_be_80201f14
+s_corrupted_and_needs_to_be_80201f14:
 
 	# ROM: 0x1FEF14
 	.asciz "corrupted and needs to be"
 	.byte 0x30, 0x30
 
-.global lbl_80201F30
-lbl_80201F30:
+.global s_formatted__Format_now__80201f30
+s_formatted__Format_now__80201f30:
 
 	# ROM: 0x1FEF30
 	.asciz "formatted. Format now?"
 	.byte 0x30
 
-.global lbl_80201F48
-lbl_80201F48:
+.global s_Formatting_the_Memory_Card_in_Sl_80201f48
+s_Formatting_the_Memory_Card_in_Sl_80201f48:
 
 	# ROM: 0x1FEF48
 	.asciz "Formatting the Memory Card in Slot A"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80201F70
-lbl_80201F70:
+.global s_will_erase_all_save_data__Contin_80201f70
+s_will_erase_all_save_data__Contin_80201f70:
 
 	# ROM: 0x1FEF70
 	.asciz "will erase all save data. Continue?"
 
-.global lbl_80201F94
-lbl_80201F94:
+.global s_Formatting____Do_not_touch_the_80201f94
+s_Formatting____Do_not_touch_the_80201f94:
 
 	# ROM: 0x1FEF94
 	.asciz "Formatting... Do not touch the"
 	.byte 0x30
 
-.global lbl_80201FB4
-lbl_80201FB4:
+.global s_Memory_Card_in_Slot_A_80201fb4
+s_Memory_Card_in_Slot_A_80201fb4:
 
 	# ROM: 0x1FEFB4
 	.asciz "Memory Card in Slot A"
 	.byte 0x30, 0x30
 
-.global lbl_80201FCC
-lbl_80201FCC:
+.global s_or_the_POWER_Button__80201fcc
+s_or_the_POWER_Button__80201fcc:
 
 	# ROM: 0x1FEFCC
 	.asciz "or the POWER Button."
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80201FE4
-lbl_80201FE4:
+.global s_could_not_be_formatted__80201fe4
+s_could_not_be_formatted__80201fe4:
 
 	# ROM: 0x1FEFE4
 	.asciz "could not be formatted."
 
-.global lbl_80201FFC
-lbl_80201FFC:
+.global s_has_been_formatted__80201ffc
+s_has_been_formatted__80201ffc:
 
 	# ROM: 0x1FEFFC
 	.asciz "has been formatted."
 
-.global lbl_80202010
-lbl_80202010:
+.global s_Continue_without_saving__80202010
+s_Continue_without_saving__80202010:
 
 	# ROM: 0x1FF010
 	.asciz "Continue without saving?"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_8020202C
-lbl_8020202C:
+.global s_To_create_new_game_data__8020202c
+s_To_create_new_game_data__8020202c:
 
 	# ROM: 0x1FF02C
 	.asciz "To create new game data,"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80202048
-lbl_80202048:
+.global s_please_select_a_file__80202048
+s_please_select_a_file__80202048:
 
 	# ROM: 0x1FF048
 	.asciz "please select a file."
 	.byte 0x30, 0x30
 
-.global lbl_80202060
-lbl_80202060:
+.global s_There_is_not_80202060
+s_There_is_not_80202060:
 
 	# ROM: 0x1FF060
 	.asciz "There is not"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80202070
-lbl_80202070:
+.global s_enough_free_space__80202070
+s_enough_free_space__80202070:
 
 	# ROM: 0x1FF070
 	.asciz "enough free space."
 	.byte 0x30
 
-.global lbl_80202084
-lbl_80202084:
+.global s_This_data_80202084
+s_This_data_80202084:
 
 	# ROM: 0x1FF084
 	.asciz "This data"
 	.byte 0x30, 0x30
 
-.global lbl_80202090
-lbl_80202090:
+.global s_is_corrupted__80202090
+s_is_corrupted__80202090:
 
 	# ROM: 0x1FF090
 	.asciz "is corrupted."
 	.byte 0x30, 0x30
 
-.global lbl_802020A0
-lbl_802020A0:
+.global s_does_not_have_enough_space__802020a0
+s_does_not_have_enough_space__802020a0:
 
 	# ROM: 0x1FF0A0
 	.asciz "does not have enough space."
 
-.global lbl_802020BC
-lbl_802020BC:
+.global s_Chibi_Robo_requires_1_file_and_802020bc
+s_Chibi_Robo_requires_1_file_and_802020bc:
 
 	# ROM: 0x1FF0BC
 	.asciz "Chibi-Robo requires 1 file and"
 	.byte 0x30
 
-.global lbl_802020DC
-lbl_802020DC:
+.global s_6_blocks_to_save__802020dc
+s_6_blocks_to_save__802020dc:
 
 	# ROM: 0x1FF0DC
 	.asciz "6 blocks to save."
 	.byte 0x30, 0x30
 
-.global lbl_802020F0
-lbl_802020F0:
+.global s_Overwrite_existing_file__802020f0
+s_Overwrite_existing_file__802020f0:
 
 	# ROM: 0x1FF0F0
 	.asciz "Overwrite existing file?"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_8020210C
-lbl_8020210C:
+.global s_To_manage_the_contents_of_your_M_8020210c
+s_To_manage_the_contents_of_your_M_8020210c:
 
 	# ROM: 0x1FF10C
 	.asciz "To manage the contents of your Memory"
 	.byte 0x30, 0x30
 
-.global lbl_80202134
-lbl_80202134:
+.global s_Card__use_the_Memory_Card_screen_80202134
+s_Card__use_the_Memory_Card_screen_80202134:
 
 	# ROM: 0x1FF134
 	.asciz "Card, use the Memory Card screen."
 	.byte 0x30, 0x30
 
-.global lbl_80202158
-lbl_80202158:
+.global s_Now_saving____80202158
+s_Now_saving____80202158:
 
 	# ROM: 0x1FF158
 	.asciz "Now saving..."
 	.byte 0x30, 0x30
 
-.global lbl_80202168
-lbl_80202168:
+.global s_Do_not_touch_the_Memory_Card_80202168
+s_Do_not_touch_the_Memory_Card_80202168:
 
 	# ROM: 0x1FF168
 	.asciz "Do not touch the Memory Card"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80202188
-lbl_80202188:
+.global s_in_Slot_A_or_the_POWER_Button__80202188
+s_in_Slot_A_or_the_POWER_Button__80202188:
 
 	# ROM: 0x1FF188
 	.asciz "in Slot A or the POWER Button."
 	.byte 0x30
 
-.global lbl_802021A8
-lbl_802021A8:
+.global s_An_error_has_occurred_during_sav_802021a8
+s_An_error_has_occurred_during_sav_802021a8:
 
 	# ROM: 0x1FF1A8
 	.asciz "An error has occurred during saving."
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_802021D0
-lbl_802021D0:
+.global s_Select_a_file_to_load__802021d0
+s_Select_a_file_to_load__802021d0:
 
 	# ROM: 0x1FF1D0
 	.asciz "Select a file to load."
 	.byte 0x30
 
-.global lbl_802021E8
-lbl_802021E8:
+.global s_Loading____802021e8
+s_Loading____802021e8:
 
 	# ROM: 0x1FF1E8
 	.asciz "Loading..."
 	.byte 0x30
 
-.global lbl_802021F4
-lbl_802021F4:
+.global s_The_Chibi_Robo_file_on_the_802021f4
+s_The_Chibi_Robo_file_on_the_802021f4:
 
 	# ROM: 0x1FF1F4
 	.asciz "The Chibi-Robo file on the"
 	.byte 0x30
 
-.global lbl_80202210
-lbl_80202210:
+.global s_Memory_Card_in_Slot_A_is_80202210
+s_Memory_Card_in_Slot_A_is_80202210:
 
 	# ROM: 0x1FF210
 	.asciz "Memory Card in Slot A is"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_8020222C
-lbl_8020222C:
+.global s_corrupted_and_must_be_erased__8020222c
+s_corrupted_and_must_be_erased__8020222c:
 
 	# ROM: 0x1FF22C
 	.asciz "corrupted and must be erased."
 	.byte 0x30, 0x30
 
-.global lbl_8020224C
-lbl_8020224C:
+.global s_Create_new_8020224c
+s_Create_new_8020224c:
 
 	# ROM: 0x1FF24C
 	.asciz "Create new"
 	.byte 0x30
 
-.global lbl_80202258
-lbl_80202258:
+.global s_game_data__80202258
+s_game_data__80202258:
 
 	# ROM: 0x1FF258
 	.asciz "game data?"
 	.byte 0x30
 
-.global lbl_80202264
-lbl_80202264:
+.global s_damaged_and_cannot_be_used__80202264
+s_damaged_and_cannot_be_used__80202264:
 
 	# ROM: 0x1FF264
 	.asciz "damaged and cannot be used."
 
-.global lbl_80202280
-lbl_80202280:
+.global s_Insert_another_Memory_Card_80202280
+s_Insert_another_Memory_Card_80202280:
 
 	# ROM: 0x1FF280
 	.asciz "Insert another Memory Card"
 	.byte 0x30
 
-.global lbl_8020229C
-lbl_8020229C:
+.global s_Please_insert_a_different_Memory_8020229c
+s_Please_insert_a_different_Memory_8020229c:
 
 	# ROM: 0x1FF29C
 	.asciz "Please insert a different Memory Card"
 	.byte 0x30, 0x30
 
-.global lbl_802022C4
-lbl_802022C4:
+.global s_or_press_the_A_Button_to_continu_802022c4
+s_or_press_the_A_Button_to_continu_802022c4:
 
 	# ROM: 0x1FF2C4
 	.asciz "or press the A Button to continue without saving."
 	.byte 0x30, 0x30
 
-.global lbl_802022F8
-lbl_802022F8:
+.global s_Save_completed__802022f8
+s_Save_completed__802022f8:
 
 	# ROM: 0x1FF2F8
 	.asciz "Save completed."
 
-.global lbl_80202308
-lbl_80202308:
+.global s_Select_a_file__80202308
+s_Select_a_file__80202308:
 
 	# ROM: 0x1FF308
 	.asciz "Select a file."
 	.byte 0x30
 
-.global lbl_80202318
-lbl_80202318:
+.global s_The_save_data_could_not_be_loade_80202318
+s_The_save_data_could_not_be_loade_80202318:
 
 	# ROM: 0x1FF318
 	.asciz "The save data could not be loaded."
 	.byte 0x30
 
-.global lbl_8020233C
-lbl_8020233C:
+.global s_is_no_longer_available__8020233c
+s_is_no_longer_available__8020233c:
 
 	# ROM: 0x1FF33C
 	.asciz "is no longer available."
 
-.global lbl_80202354
-lbl_80202354:
+.global s_Insert_a_different_Memory_Card_o_80202354
+s_Insert_a_different_Memory_Card_o_80202354:
 
 	# ROM: 0x1FF354
 	.asciz "Insert a different Memory Card or press the"
 
-.global lbl_80202380
-lbl_80202380:
+.global s_A_Button_to_continue_without_sav_80202380
+s_A_Button_to_continue_without_sav_80202380:
 
 	# ROM: 0x1FF380
 	.asciz "A Button to continue without saving."
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_802023A8
-lbl_802023A8:
+.global s_press_the_A_Button_to_continue_w_802023a8
+s_press_the_A_Button_to_continue_w_802023a8:
 
 	# ROM: 0x1FF3A8
 	.asciz "press the A Button to continue without saving."
 	.byte 0x30
 
-.global lbl_802023D8
-lbl_802023D8:
+.global s_Chibi_Robo__802023d8
+s_Chibi_Robo__802023d8:
 
 	# ROM: 0x1FF3D8
 	.asciz "Chibi-Robo!"
 
-.global lbl_802023E4
-lbl_802023E4:
+.global s_Time_Played__802023e4
+s_Time_Played__802023e4:
 
 	# ROM: 0x1FF3E4
 	.asciz "Time Played:"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_802023F4
-lbl_802023F4:
+.global s_And_now__for_the_weather__A_powe_802023f4
+s_And_now__for_the_weather__A_powe_802023f4:
 
 	# ROM: 0x1FF3F4
 	.asciz "And now, for the weather. A powerful typhoon is approaching, so watch out for strong wind and HUGE waves! And remember, autumn is just around the corner!           "
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_8020249C
-lbl_8020249C:
+.global s_And_now__for_sports__I_hope_you__8020249c
+s_And_now__for_sports__I_hope_you__8020249c:
 
 	# ROM: 0x1FF49C
 	.asciz "And now, for sports! I hope you've rested up, because the Chibilympics are just around the corner! That's right! Citrusoft presents the single greatest test of robo-athletics known to man! It's time for every Chibi-Robo everywhere to come together and see who's the best helper! You know what I'm looking forward to? The trash-can free throws! I can't get enough of those little guys! The competition begins in one week! Don't miss out! Back to you, Ron!           "
 	.byte 0x30, 0x30
 
-.global lbl_80202670
-lbl_80202670:
+.global s__80202670
+s__80202670:
 
 	# ROM: 0x1FF670
 	.asciz "           "
 
-.global lbl_8020267C
-lbl_8020267C:
+.global s_Shopping_time__shopping_time__Wh_8020267c
+s_Shopping_time__shopping_time__Wh_8020267c:
 
 	# ROM: 0x1FF67C
 	.asciz "Shopping time, shopping time! What will I buy today?           "
 
-.global lbl_802026BC
-lbl_802026BC:
+.global s_Collect_Scrap_to_build_Utilibots_802026bc
+s_Collect_Scrap_to_build_Utilibots_802026bc:
 
 	# ROM: 0x1FF6BC
 	.asciz "Collect Scrap to build Utilibots!           "
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_802026EC
-lbl_802026EC:
+.global s_Swap_your_spare_Scrap_for_Moolah_802026ec
+s_Swap_your_spare_Scrap_for_Moolah_802026ec:
 
 	# ROM: 0x1FF6EC
 	.asciz "Swap your spare Scrap for Moolah and help build a better world!           "
 	.byte 0x30
 
-.global lbl_80202738
-lbl_80202738:
+.global s_Hello__and_thank_you_for_accessi_80202738
+s_Hello__and_thank_you_for_accessi_80202738:
 
 	# ROM: 0x1FF738
 	.asciz "Hello, and thank you for accessing the Chibi-PC. Citrusoft Robotics is proud to present you with this unique shopping experience: a home PC that delivers you any item within seconds of ordering! A wide world of shopping awaits you. And if you're eco-friendly, you'll love the Recyclotron, where your detritus is our delight! So, what do you want to make today? Please select from the menu.           "
@@ -5571,466 +5571,466 @@ lbl_802028CC:
 	.asciz "s%02XNO%s"
 	.byte 0x30, 0x30
 
-.global lbl_802028E8
-lbl_802028E8:
+.global s_Screen_has_802028e8
+s_Screen_has_802028e8:
 
 	# ROM: 0x1FF8E8
 	.asciz "Screen has"
 	.byte 0x30
 
-.global lbl_802028F4
-lbl_802028F4:
+.global s_been_set_to_802028f4
+s_been_set_to_802028f4:
 
 	# ROM: 0x1FF8F4
 	.asciz "been set to"
 
-.global lbl_80202900
-lbl_80202900:
+.global s_Progressive_Mode_80202900
+s_Progressive_Mode_80202900:
 
 	# ROM: 0x1FF900
 	.asciz "Progressive Mode"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80202914
-lbl_80202914:
+.global s_has_been_80202914
+s_has_been_80202914:
 
 	# ROM: 0x1FF914
 	.asciz "has been"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80202920
-lbl_80202920:
+.global s_turned_off_80202920
+s_turned_off_80202920:
 
 	# ROM: 0x1FF920
 	.asciz "turned off"
 	.byte 0x30
 
-.global lbl_8020292C
-lbl_8020292C:
+.global s__store_item__8020292c
+s__store_item__8020292c:
 
 	# ROM: 0x1FF92C
 	.asciz "(store item)"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_8020293C
-lbl_8020293C:
+.global s__remove_suit__8020293c
+s__remove_suit__8020293c:
 
 	# ROM: 0x1FF93C
 	.asciz "(remove suit)"
 	.byte 0x30, 0x30
 
-.global lbl_8020294C
-lbl_8020294C:
+.global s_Vibration_8020294c
+s_Vibration_8020294c:
 
 	# ROM: 0x1FF94C
 	.asciz "Vibration"
 	.byte 0x30, 0x30
 
-.global lbl_80202958
-lbl_80202958:
+.global s_Monaural_80202958
+s_Monaural_80202958:
 
 	# ROM: 0x1FF958
 	.asciz "Monaural"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80202964
-lbl_80202964:
+.global s_Happy_Stickers_80202964
+s_Happy_Stickers_80202964:
 
 	# ROM: 0x1FF964
 	.asciz "Happy Stickers"
 	.byte 0x30
 
-.global lbl_80202974
-lbl_80202974:
+.global s_Camera_control_80202974
+s_Camera_control_80202974:
 
 	# ROM: 0x1FF974
 	.asciz "Camera control"
 	.byte 0x30
 
-.global lbl_80202984
-lbl_80202984:
+.global s_Item_menu_80202984
+s_Item_menu_80202984:
 
 	# ROM: 0x1FF984
 	.asciz "Item menu"
 	.byte 0x30, 0x30
 
-.global lbl_80202990
-lbl_80202990:
+.global s_Chibi_Eye_80202990
+s_Chibi_Eye_80202990:
 
 	# ROM: 0x1FF990
 	.asciz "Chibi-Eye"
 	.byte 0x30, 0x30
 
-.global lbl_8020299C
-lbl_8020299C:
+.global s_Z_action_8020299c
+s_Z_action_8020299c:
 
 	# ROM: 0x1FF99C
 	.asciz "Z action"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_802029A8
-lbl_802029A8:
+.global s_Behind_camera_802029a8
+s_Behind_camera_802029a8:
 
 	# ROM: 0x1FF9A8
 	.asciz "Behind camera"
 	.byte 0x30, 0x30
 
-.global lbl_802029B8
-lbl_802029B8:
+.global s_Menu_select_802029b8
+s_Menu_select_802029b8:
 
 	# ROM: 0x1FF9B8
 	.asciz "Menu select"
 
-.global lbl_802029C4
-lbl_802029C4:
+.global s_Control_of_ChibiRobo_Menu_select_802029c4
+s_Control_of_ChibiRobo_Menu_select_802029c4:
 
 	# ROM: 0x1FF9C4
 	.asciz "Control of ChibiRobo/Menu select"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_802029E8
-lbl_802029E8:
+.global s_ChibiRobo_Ranking_802029e8
+s_ChibiRobo_Ranking_802029e8:
 
 	# ROM: 0x1FF9E8
 	.asciz "ChibiRobo Ranking"
 	.byte 0x30, 0x30
 
-.global lbl_802029FC
-lbl_802029FC:
+.global s_Chibi_Doors_completed_802029fc
+s_Chibi_Doors_completed_802029fc:
 
 	# ROM: 0x1FF9FC
 	.asciz "Chibi-Doors completed"
 	.byte 0x30, 0x30
 
-.global lbl_80202A14
-lbl_80202A14:
+.global s_Happy_points_80202a14
+s_Happy_points_80202a14:
 
 	# ROM: 0x1FFA14
 	.asciz "Happy points"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80202A24
-lbl_80202A24:
+.global s_ChibiCom_Menu_80202a24
+s_ChibiCom_Menu_80202a24:
 
 	# ROM: 0x1FFA24
 	.asciz "ChibiCom Menu"
 	.byte 0x30, 0x30
 
-.global lbl_80202A34
-lbl_80202A34:
+.global s_Junk_Machine_80202a34
+s_Junk_Machine_80202a34:
 
 	# ROM: 0x1FFA34
 	.asciz "Junk Machine"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80202A44
-lbl_80202A44:
+.global s_Junk_trade_80202a44
+s_Junk_trade_80202a44:
 
 	# ROM: 0x1FFA44
 	.asciz "Junk trade"
 	.byte 0x30
 
-.global lbl_80202A50
-lbl_80202A50:
+.global s_Current_exchange_rate_80202a50
+s_Current_exchange_rate_80202a50:
 
 	# ROM: 0x1FFA50
 	.asciz "Current exchange rate"
 	.byte 0x30, 0x30
 
-.global lbl_80202A68
-lbl_80202A68:
+.global s_Exchange_how_much__80202a68
+s_Exchange_how_much__80202a68:
 
 	# ROM: 0x1FFA68
 	.asciz "Exchange how much?"
 	.byte 0x30
 
-.global lbl_80202A7C
-lbl_80202A7C:
+.global s_There_is_no_enough_junks_80202a7c
+s_There_is_no_enough_junks_80202a7c:
 
 	# ROM: 0x1FFA7C
 	.asciz "There is no enough junks"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80202A98
-lbl_80202A98:
+.global s_Stamby_ok_80202a98
+s_Stamby_ok_80202a98:
 
 	# ROM: 0x1FFA98
 	.asciz "Stamby ok"
 	.byte 0x30, 0x30
 
-.global lbl_80202AA4
-lbl_80202AA4:
+.global s_The_Disc_Cover_is_open__If_you_w_80202aa4
+s_The_Disc_Cover_is_open__If_you_w_80202aa4:
 
 	# ROM: 0x1FFAA4
 	.asciz "The Disc Cover is open. \nIf you want to continue the game, please close the Disc Cover."
 
-.global lbl_80202AFC
-lbl_80202AFC:
+.global s_Please_insert_the_ChibiRobo__Gam_80202afc
+s_Please_insert_the_ChibiRobo__Gam_80202afc:
 
 	# ROM: 0x1FFAFC
 	.asciz "Please insert the ChibiRobo! Game Disc."
 
-.global lbl_80202B24
-lbl_80202B24:
+.global s_The_Game_Disc_could_not_be_read__80202b24
+s_The_Game_Disc_could_not_be_read__80202b24:
 
 	# ROM: 0x1FFB24
 	.asciz "The Game Disc could not be read.\nPlease read the \nNintendo GameCube Instruction\nBooklet for more information."
 	.byte 0x30, 0x30
 
-.global lbl_80202B94
-lbl_80202B94:
+.global s_No_Memory_Card_80202b94
+s_No_Memory_Card_80202b94:
 
 	# ROM: 0x1FFB94
 	.asciz "No Memory Card"
 	.byte 0x30
 
-.global lbl_80202BA4
-lbl_80202BA4:
+.global s_found_in_Slot_A__80202ba4
+s_found_in_Slot_A__80202ba4:
 
 	# ROM: 0x1FFBA4
 	.asciz "found in Slot A."
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80202BB8
-lbl_80202BB8:
+.global s_Please_check__80202bb8
+s_Please_check__80202bb8:
 
 	# ROM: 0x1FFBB8
 	.asciz "Please check."
 	.byte 0x30, 0x30
 
-.global lbl_80202BC8
-lbl_80202BC8:
+.global s_Wrong_device_in_Slot_A__Please_i_80202bc8
+s_Wrong_device_in_Slot_A__Please_i_80202bc8:
 
 	# ROM: 0x1FFBC8
 	.asciz "Wrong device in Slot A. Please insert a Memory Card."
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80202C00
-lbl_80202C00:
+.global s_damaged_and_can_not_be_used__80202c00
+s_damaged_and_can_not_be_used__80202c00:
 
 	# ROM: 0x1FFC00
 	.asciz "damaged and can not be used."
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80202C20
-lbl_80202C20:
+.global s_The_Memory_Card_in_Slot_A_is_cor_80202c20
+s_The_Memory_Card_in_Slot_A_is_cor_80202c20:
 
 	# ROM: 0x1FFC20
 	.asciz "The Memory Card in Slot A is corrupted"
 	.byte 0x30
 
-.global lbl_80202C48
-lbl_80202C48:
+.global s_and_needs_to_be_formatted__80202c48
+s_and_needs_to_be_formatted__80202c48:
 
 	# ROM: 0x1FFC48
 	.asciz "and needs to be formatted."
 	.byte 0x30
 
-.global lbl_80202C64
-lbl_80202C64:
+.global s_Do_you_want_to_format__80202c64
+s_Do_you_want_to_format__80202c64:
 
 	# ROM: 0x1FFC64
 	.asciz "Do you want to format?"
 	.byte 0x30
 
-.global lbl_80202C7C
-lbl_80202C7C:
+.global s_Formatting_the_Memory_Card_will_e_80202c7c
+s_Formatting_the_Memory_Card_will_e_80202c7c:
 
 	# ROM: 0x1FFC7C
 	.asciz "Formatting the Memory Card will erase"
 	.byte 0x30, 0x30
 
-.global lbl_80202CA4
-lbl_80202CA4:
+.global s_all_previously_saved_data__Conti_80202ca4
+s_all_previously_saved_data__Conti_80202ca4:
 
 	# ROM: 0x1FFCA4
 	.asciz "all previously saved data. Continue?"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80202CCC
-lbl_80202CCC:
+.global s_Saving_to_the_Memory_Card__80202ccc
+s_Saving_to_the_Memory_Card__80202ccc:
 
 	# ROM: 0x1FFCCC
 	.asciz "Saving to the Memory Card."
 	.byte 0x30
 
-.global lbl_80202CE8
-lbl_80202CE8:
+.global s_Do_not_touch_the_Memory_80202ce8
+s_Do_not_touch_the_Memory_80202ce8:
 
 	# ROM: 0x1FFCE8
 	.asciz "Do not touch the Memory"
 
-.global lbl_80202D00
-lbl_80202D00:
+.global s_Card_or_the_POWER_Button__80202d00
+s_Card_or_the_POWER_Button__80202d00:
 
 	# ROM: 0x1FFD00
 	.asciz "Card or the POWER Button."
 	.byte 0x30, 0x30
 
-.global lbl_80202D1C
-lbl_80202D1C:
+.global s_An_error_may_occurred_during_for_80202d1c
+s_An_error_may_occurred_during_for_80202d1c:
 
 	# ROM: 0x1FFD1C
 	.asciz "An error may occurred during formatting"
 
-.global lbl_80202D44
-lbl_80202D44:
+.global s_The_Memory_Card_has_been_formatt_80202d44
+s_The_Memory_Card_has_been_formatt_80202d44:
 
 	# ROM: 0x1FFD44
 	.asciz "The Memory Card has been formatted"
 	.byte 0x30
 
-.global lbl_80202D68
-lbl_80202D68:
+.global s_Continue_without_80202d68
+s_Continue_without_80202d68:
 
 	# ROM: 0x1FFD68
 	.asciz "Continue without"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80202D7C
-lbl_80202D7C:
+.global s_Create_a_new_game_data__80202d7c
+s_Create_a_new_game_data__80202d7c:
 
 	# ROM: 0x1FFD7C
 	.asciz "Create a new game data."
 
-.global lbl_80202D94
-lbl_80202D94:
+.global s_Please_select_a_file__80202d94
+s_Please_select_a_file__80202d94:
 
 	# ROM: 0x1FFD94
 	.asciz "Please select a file."
 	.byte 0x30, 0x30
 
-.global lbl_80202DAC
-lbl_80202DAC:
+.global s_There_is_not_enough_free_space_80202dac
+s_There_is_not_enough_free_space_80202dac:
 
 	# ROM: 0x1FFDAC
 	.asciz "There is not enough free space"
 	.byte 0x30
 
-.global lbl_80202DCC
-lbl_80202DCC:
+.global s_The_save_data_80202dcc
+s_The_save_data_80202dcc:
 
 	# ROM: 0x1FFDCC
 	.asciz "The save data"
 	.byte 0x30, 0x30
 
-.global lbl_80202DDC
-lbl_80202DDC:
+.global s_is_broken_80202ddc
+s_is_broken_80202ddc:
 
 	# ROM: 0x1FFDDC
 	.asciz "is broken"
 	.byte 0x30, 0x30
 
-.global lbl_80202DE8
-lbl_80202DE8:
+.global s_on_the_Memory_Card_in_Slot_A__80202de8
+s_on_the_Memory_Card_in_Slot_A__80202de8:
 
 	# ROM: 0x1FFDE8
 	.asciz "on the Memory Card in Slot A."
 	.byte 0x30, 0x30
 
-.global lbl_80202E08
-lbl_80202E08:
+.global s_ChibiRobo__requires_1_file_and_80202e08
+s_ChibiRobo__requires_1_file_and_80202e08:
 
 	# ROM: 0x1FFE08
 	.asciz "ChibiRobo! requires 1 file and"
 	.byte 0x30
 
-.global lbl_80202E28
-lbl_80202E28:
+.global s_Card__use_the_Memory_Card_Screen_80202e28
+s_Card__use_the_Memory_Card_Screen_80202e28:
 
 	# ROM: 0x1FFE28
 	.asciz "Card, use the Memory Card Screen."
 	.byte 0x30, 0x30
 
-.global lbl_80202E4C
-lbl_80202E4C:
+.global s_An_error_may_occurred_during_sav_80202e4c
+s_An_error_may_occurred_during_sav_80202e4c:
 
 	# ROM: 0x1FFE4C
 	.asciz "An error may occurred during saving"
 
-.global lbl_80202E70
-lbl_80202E70:
+.global s_Select_the_file_to_load_80202e70
+s_Select_the_file_to_load_80202e70:
 
 	# ROM: 0x1FFE70
 	.asciz "Select the file to load"
 
-.global lbl_80202E88
-lbl_80202E88:
+.global s_The_ChibiRobo__file_on_Memory_Ca_80202e88
+s_The_ChibiRobo__file_on_Memory_Ca_80202e88:
 
 	# ROM: 0x1FFE88
 	.asciz "The ChibiRobo! file on Memory Card in Slot A is corrupted. This file needs to be deleted."
 	.byte 0x30, 0x30
 
-.global lbl_80202EE4
-lbl_80202EE4:
+.global s_Restart_with_a_80202ee4
+s_Restart_with_a_80202ee4:
 
 	# ROM: 0x1FFEE4
 	.asciz "Restart with a"
 	.byte 0x30
 
-.global lbl_80202EF4
-lbl_80202EF4:
+.global s_new_save_data__80202ef4
+s_new_save_data__80202ef4:
 
 	# ROM: 0x1FFEF4
 	.asciz "new save data?"
 	.byte 0x30
 
-.global lbl_80202F04
-lbl_80202F04:
+.global s_Wrong_device_80202f04
+s_Wrong_device_80202f04:
 
 	# ROM: 0x1FFF04
 	.asciz "Wrong device"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80202F14
-lbl_80202F14:
+.global s_in_Slot_A__80202f14
+s_in_Slot_A__80202f14:
 
 	# ROM: 0x1FFF14
 	.asciz "in Slot A."
 	.byte 0x30
 
-.global lbl_80202F20
-lbl_80202F20:
+.global s_Please_insert_a_80202f20
+s_Please_insert_a_80202f20:
 
 	# ROM: 0x1FFF20
 	.asciz "Please insert a"
 
-.global lbl_80202F30
-lbl_80202F30:
+.global s_Memory_Card__80202f30
+s_Memory_Card__80202f30:
 
 	# ROM: 0x1FFF30
 	.asciz "Memory Card."
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80202F40
-lbl_80202F40:
+.global s_Please_insert_a_Memory_Card_80202f40
+s_Please_insert_a_Memory_Card_80202f40:
 
 	# ROM: 0x1FFF40
 	.asciz "Please insert a Memory Card"
 
-.global lbl_80202F5C
-lbl_80202F5C:
+.global s_Save_completed_80202f5c
+s_Save_completed_80202f5c:
 
 	# ROM: 0x1FFF5C
 	.asciz "Save completed"
 	.byte 0x30
 
-.global lbl_80202F6C
-lbl_80202F6C:
+.global s_Select_a_file_80202f6c
+s_Select_a_file_80202f6c:
 
 	# ROM: 0x1FFF6C
 	.asciz "Select a file"
 	.byte 0x30, 0x30
 
-.global lbl_80202F7C
-lbl_80202F7C:
+.global s_The_data_could_not_be_loaded_80202f7c
+s_The_data_could_not_be_loaded_80202f7c:
 
 	# ROM: 0x1FFF7C
 	.asciz "The data could not be loaded"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80202F9C
-lbl_80202F9C:
+.global s_The_Memory_Card_80202f9c
+s_The_Memory_Card_80202f9c:
 
 	# ROM: 0x1FFF9C
 	.asciz "The Memory Card"
@@ -14026,22 +14026,22 @@ lbl_80207F58:
 	.asciz "takanabe"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80207F64
-lbl_80207F64:
+.global s_bin_s__s_80207f64
+s_bin_s__s_80207f64:
 
 	# ROM: 0x204F64
 	.asciz "bin%s/%s"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80207F70
-lbl_80207F70:
+.global s_bin_s__s_bin_80207f70
+s_bin_s__s_bin_80207f70:
 
 	# ROM: 0x204F70
 	.asciz "bin%s/%s.bin"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_80207F80
-lbl_80207F80:
+.global s_rel__s_s_rel_80207f80
+s_rel__s_s_rel_80207f80:
 
 	# ROM: 0x204F80
 	.asciz "rel/%s%s.rel"
@@ -14160,8 +14160,8 @@ lbl_80207FA0:
 	.4byte 0x01000000
 	.4byte 0x00000001
 
-.global lbl_80208134
-lbl_80208134:
+.global s_win__OBJ___d_______obj__d__kille_80208134
+s_win__OBJ___d_______obj__d__kille_80208134:
 
 	# ROM: 0x205134
 	.asciz "win(@OBJ, %d, ...) obj(%d) killed!"
@@ -14195,8 +14195,8 @@ lbl_80208134:
 	.asciz "check(%d,...) - unresolved!\n"
 	.balign 4
 
-.global lbl_802083A8
-lbl_802083A8:
+.global s_sfx__d__d____unresolved__802083a8
+s_sfx__d__d____unresolved__802083a8:
 
 	# ROM: 0x2053A8
 	.asciz "sfx(%d,%d) - unresolved!\n"
@@ -14221,8 +14221,8 @@ lbl_802083A8:
 	.balign 4
 	.asciz "ptcl(...) - invalid type - %d!\n"
 
-.global lbl_80208598
-lbl_80208598:
+.global s_pos__d_______obj__d__killed__80208598
+s_pos__d_______obj__d__killed__80208598:
 
 	# ROM: 0x205598
 	.asciz "pos(%d, ...) obj(%d) killed!"
@@ -14230,58 +14230,58 @@ lbl_80208598:
 	.asciz "translate"
 	.balign 4
 
-.global lbl_802085C4
-lbl_802085C4:
+.global s_moveto__d___d__d__d___d___d___d__802085c4
+s_moveto__d___d__d__d___d___d___d__802085c4:
 
 	# ROM: 0x2055C4
 	.asciz "moveto(%d, %d,%d,%d, %d, %d, %d) ... obj(%d) is collision!"
 	.balign 4
 
-.global lbl_80208600
-lbl_80208600:
+.global s_moveto__d_______obj__d__killed__80208600
+s_moveto__d_______obj__d__killed__80208600:
 
 	# ROM: 0x205600
 	.asciz "moveto(%d, ...) obj(%d) killed!"
 	.asciz "!(jobj->flags & JOBJ_USE_QUATERNION)"
 	.balign 4
 
-.global lbl_80208648
-lbl_80208648:
+.global s_move__d___d___d___d___d______obj_80208648
+s_move__d___d___d___d___d______obj_80208648:
 
 	# ROM: 0x205648
 	.asciz "move(%d, %d, %d, %d, %d) ... obj(%d) is collision!"
 	.balign 4
 
-.global lbl_8020867C
-lbl_8020867C:
+.global s_move__d_______obj__d__killed__8020867c
+s_move__d_______obj__d__killed__8020867c:
 
 	# ROM: 0x20567C
 	.asciz "move(%d, ...) obj(%d) killed!"
 	.balign 4
 
-.global lbl_8020869C
-lbl_8020869C:
+.global s_light__d___d________unresolved__8020869c
+s_light__d___d________unresolved__8020869c:
 
 	# ROM: 0x20569C
 	.asciz "light(%d, %d,...) - unresolved!\n"
 	.balign 4
 
-.global lbl_802086C0
-lbl_802086C0:
+.global s_kill__d______obj__d__lifted__802086c0
+s_kill__d______obj__d__lifted__802086c0:
 
 	# ROM: 0x2056C0
 	.asciz "kill(%d) ... obj(%d) lifted!"
 	.balign 4
 
-.global lbl_802086E0
-lbl_802086E0:
+.global s_disp__d___d______obj__d__lifted__802086e0
+s_disp__d___d______obj__d__lifted__802086e0:
 
 	# ROM: 0x2056E0
 	.asciz "disp(%d, %d) ... obj(%d) lifted!"
 	.balign 4
 
-.global lbl_80208704
-lbl_80208704:
+.global s_disp__d___d______obj__d__killed__80208704
+s_disp__d___d______obj__d__killed__80208704:
 
 	# ROM: 0x205704
 	.asciz "disp(%d, %d) ... obj(%d) killed!"
@@ -14318,56 +14318,56 @@ lbl_80208704:
 	.asciz "SYSCALL_STGFUNC, noargs\n"
 	.balign 4
 
-.global lbl_80208A30
-lbl_80208A30:
+.global s_No_more_space_for_born__d______c_80208a30
+s_No_more_space_for_born__d______c_80208a30:
 
 	# ROM: 0x205A30
 	.asciz "No more space for born(%d,...)-command!\n"
 	.balign 4
 
-.global lbl_80208A5C
-lbl_80208A5C:
+.global s_attach__d________obj__d__killed__80208a5c
+s_attach__d________obj__d__killed__80208a5c:
 
 	# ROM: 0x205A5C
 	.asciz "attach(%d, ...): obj(%d) killed!"
 	.balign 4
 
-.global lbl_80208A80
-lbl_80208A80:
+.global s_detach__d________obj__d__killed__80208a80
+s_detach__d________obj__d__killed__80208a80:
 
 	# ROM: 0x205A80
 	.asciz "detach(%d, ...): obj(%d) killed!"
 	.balign 4
 
-.global lbl_80208AA4
-lbl_80208AA4:
+.global s_anim2__d___d__d__d______obj__d__i_80208aa4
+s_anim2__d___d__d__d______obj__d__i_80208aa4:
 
 	# ROM: 0x205AA4
 	.asciz "anim2(%d, %d,%d,%d) ... obj(%d) is collision!"
 	.balign 4
 
-.global lbl_80208AD4
-lbl_80208AD4:
+.global s_anim2__d___d__d__d______obj__d__k_80208ad4
+s_anim2__d___d__d__d______obj__d__k_80208ad4:
 
 	# ROM: 0x205AD4
 	.asciz "anim2(%d, %d,%d,%d) ... obj(%d) killed!"
 
-.global lbl_80208AFC
-lbl_80208AFC:
+.global s_anim__d___d______obj__d__is_coll_80208afc
+s_anim__d___d______obj__d__is_coll_80208afc:
 
 	# ROM: 0x205AFC
 	.asciz "anim(%d, %d) ... obj(%d) is collision!"
 	.balign 4
 
-.global lbl_80208B24
-lbl_80208B24:
+.global s_anim__d___d______obj__d__killed__80208b24
+s_anim__d___d______obj__d__killed__80208b24:
 
 	# ROM: 0x205B24
 	.asciz "anim(%d, %d) ... obj(%d) killed!"
 	.balign 4
 
-.global lbl_80208B48
-lbl_80208B48:
+.global s_Unknown_EvalCmp_op____d_80208b48
+s_Unknown_EvalCmp_op____d_80208b48:
 
 	# ROM: 0x205B48
 	.asciz "Unknown EvalCmp op - %d\n"
@@ -14403,8 +14403,8 @@ lbl_80208B48:
 	.asciz "Unknown Evaluate op - %d\n"
 	.balign 4
 
-.global lbl_80208DC0
-lbl_80208DC0:
+.global s_Unknown_event_cmd____d_80208dc0
+s_Unknown_event_cmd____d_80208dc0:
 
 	# ROM: 0x205DC0
 	.asciz "Unknown event cmd - %d\n"
@@ -14412,8 +14412,8 @@ lbl_80208DC0:
 	.asciz "CoordInfo"
 	.balign 4
 
-.global lbl_80208DF0
-lbl_80208DF0:
+.global s_CEvtTimer_80208df0
+s_CEvtTimer_80208df0:
 
 	# ROM: 0x205DF0
 	.asciz "CEvtTimer"
@@ -14429,21 +14429,21 @@ lbl_80208DF0:
 	.asciz "CCameraMemento"
 	.balign 4
 
-.global lbl_80208E3C
-lbl_80208E3C:
+.global s_CEvtQueueEx_80208e3c
+s_CEvtQueueEx_80208e3c:
 
 	# ROM: 0x205E3C
 	.asciz "CEvtQueueEx"
 
-.global lbl_80208E48
-lbl_80208E48:
+.global s_CEvtQueue_80208e48
+s_CEvtQueue_80208e48:
 
 	# ROM: 0x205E48
 	.asciz "CEvtQueue"
 	.balign 4
 
-.global lbl_80208E54
-lbl_80208E54:
+.global s_CEvtVars_80208e54
+s_CEvtVars_80208e54:
 
 	# ROM: 0x205E54
 	.asciz "CEvtVars"
@@ -14456,8 +14456,8 @@ lbl_80208E60:
 	.asciz "EVT_VARS"
 	.balign 4
 
-.global lbl_80208E6C
-lbl_80208E6C:
+.global s_CEvtFlags_80208e6c
+s_CEvtFlags_80208e6c:
 
 	# ROM: 0x205E6C
 	.asciz "CEvtFlags"
@@ -14664,15 +14664,15 @@ lbl_80209144:
 	.4byte 0
 	.4byte 0
 
-.global lbl_80209150
-lbl_80209150:
+.global s_Unknown_msg_setfont_cmd____d_80209150
+s_Unknown_msg_setfont_cmd____d_80209150:
 
 	# ROM: 0x206150
 	.asciz "Unknown msg-setfont cmd - %d\n"
 	.balign 4
 
-.global lbl_80209170
-lbl_80209170:
+.global s_translate_80209170
+s_translate_80209170:
 
 	# ROM: 0x206170
 	.asciz "translate"
@@ -14685,15 +14685,15 @@ lbl_80209170:
 	.byte 0x30, 0x30
 	.4byte 0x30303030
 
-.global lbl_802091C0
-lbl_802091C0:
+.global s___d___s__2d__02d__02d_802091c0
+s___d___s__2d__02d__02d_802091c0:
 
 	# ROM: 0x2061C0
 	.asciz "(%d) %s %2d:%02d:%02d"
 	.byte 0x30, 0x30
 
-.global lbl_802091D8
-lbl_802091D8:
+.global s_CHIBIROBO__d__802091d8
+s_CHIBIROBO__d__802091d8:
 
 	# ROM: 0x2061D8
 	.asciz "CHIBIROBO(%d)"
@@ -14779,8 +14779,8 @@ lbl_80209298:
 	.asciz "translate"
 	.balign 4
 
-.global lbl_802092D8
-lbl_802092D8:
+.global s_CXObjIntp_802092d8
+s_CXObjIntp_802092d8:
 
 	# ROM: 0x2062D8
 	.asciz "CXObjIntp"
@@ -14796,36 +14796,36 @@ lbl_802092D8:
 	.asciz "CAnmQueue"
 	.byte 0x30, 0x30
 
-.global lbl_80209320
-lbl_80209320:
+.global s_XObjCamera_80209320
+s_XObjCamera_80209320:
 
 	# ROM: 0x206320
 	.asciz "XObjCamera"
 	.byte 0x30
 
-.global lbl_8020932C
-lbl_8020932C:
+.global s_CXObjIntp_8020932c
+s_CXObjIntp_8020932c:
 
 	# ROM: 0x20632C
 	.asciz "CXObjIntp"
 	.byte 0x30, 0x30
 
-.global lbl_80209338
-lbl_80209338:
+.global s_XObjLight_80209338
+s_XObjLight_80209338:
 
 	# ROM: 0x206338
 	.asciz "XObjLight"
 	.byte 0x30, 0x30
 
-.global lbl_80209344
-lbl_80209344:
+.global s_CXObjIntp_80209344
+s_CXObjIntp_80209344:
 
 	# ROM: 0x206344
 	.asciz "CXObjIntp"
 	.byte 0x30, 0x30
 
-.global lbl_80209350
-lbl_80209350:
+.global s_CXObjIntp_80209350
+s_CXObjIntp_80209350:
 
 	# ROM: 0x206350
 	.asciz "CXObjIntp"
@@ -14975,78 +14975,78 @@ lbl_80209360:
 	.4byte 0
 	.4byte 0x00000004
 
-.global lbl_80209588
-lbl_80209588:
+.global s_cb_robo_6_dat_80209588
+s_cb_robo_6_dat_80209588:
 
 	# ROM: 0x206588
 	.asciz "cb_robo_6.dat"
 	.balign 4
 
-.global lbl_80209598
-lbl_80209598:
+.global s_cb_robo_7_dat_80209598
+s_cb_robo_7_dat_80209598:
 
 	# ROM: 0x206598
 	.asciz "cb_robo_7.dat"
 	.balign 4
 
-.global lbl_802095A8
-lbl_802095A8:
+.global s_cb_robo_8_dat_802095a8
+s_cb_robo_8_dat_802095a8:
 
 	# ROM: 0x2065A8
 	.asciz "cb_robo_8.dat"
 	.balign 4
 
-.global lbl_802095B8
-lbl_802095B8:
+.global s_cb_robo_9_dat_802095b8
+s_cb_robo_9_dat_802095b8:
 
 	# ROM: 0x2065B8
 	.asciz "cb_robo_9.dat"
 	.balign 4
 
-.global lbl_802095C8
-lbl_802095C8:
+.global s_cb_robo_10_dat_802095c8
+s_cb_robo_10_dat_802095c8:
 
 	# ROM: 0x2065C8
 	.asciz "cb_robo_10.dat"
 	.balign 4
 
-.global lbl_802095D8
-lbl_802095D8:
+.global s_cb_robo_11_dat_802095d8
+s_cb_robo_11_dat_802095d8:
 
 	# ROM: 0x2065D8
 	.asciz "cb_robo_11.dat"
 	.balign 4
 
-.global lbl_802095E8
-lbl_802095E8:
+.global s_cb_robo_12_dat_802095e8
+s_cb_robo_12_dat_802095e8:
 
 	# ROM: 0x2065E8
 	.asciz "cb_robo_12.dat"
 	.balign 4
 
-.global lbl_802095F8
-lbl_802095F8:
+.global s_cb_robo_13_dat_802095f8
+s_cb_robo_13_dat_802095f8:
 
 	# ROM: 0x2065F8
 	.asciz "cb_robo_13.dat"
 	.balign 4
 
-.global lbl_80209608
-lbl_80209608:
+.global s_cb_robo_15_dat_80209608
+s_cb_robo_15_dat_80209608:
 
 	# ROM: 0x206608
 	.asciz "cb_robo_15.dat"
 	.balign 4
 
-.global lbl_80209618
-lbl_80209618:
+.global s_cb_robo_14_dat_80209618
+s_cb_robo_14_dat_80209618:
 
 	# ROM: 0x206618
 	.asciz "cb_robo_14.dat"
 	.balign 4
 
-.global lbl_80209628
-lbl_80209628:
+.global s_cb_robo_25_dat_80209628
+s_cb_robo_25_dat_80209628:
 
 	# ROM: 0x206628
 	.asciz "cb_robo_25.dat"
@@ -15963,22 +15963,22 @@ lbl_8020A298:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8020A2D4
-lbl_8020A2D4:
+.global s_OctaMenu_8020a2d4
+s_OctaMenu_8020a2d4:
 
 	# ROM: 0x2072D4
 	.asciz "OctaMenu"
 	.balign 4
 
-.global lbl_8020A2E0
-lbl_8020A2E0:
+.global s___jobj__flags___JOBJ_USE_QUATERN_8020a2e0
+s___jobj__flags___JOBJ_USE_QUATERN_8020a2e0:
 
 	# ROM: 0x2072E0
 	.asciz "!(jobj->flags & JOBJ_USE_QUATERNION)"
 	.balign 4
 
-.global lbl_8020A308
-lbl_8020A308:
+.global s_translate_8020a308
+s_translate_8020a308:
 
 	# ROM: 0x207308
 	.asciz "translate"
@@ -15989,8 +15989,8 @@ lbl_8020A308:
 	.asciz "\\B00008080 %s<%d:%d> \\B00000080 def<%d> atr<%d> obj<%d> \n"
 	.balign 4
 
-.global lbl_8020A36C
-lbl_8020A36C:
+.global s__B00000080POS__6_2f__6_2f__6_2f__8020a36c
+s__B00000080POS__6_2f__6_2f__6_2f__8020a36c:
 
 	# ROM: 0x20736C
 	.asciz "\\B00000080POS(%6.2f,%6.2f,%6.2f) %3d %6.3f %6.3f\n%3d(%6.2f/%6.2f), %d\n\nNEAR:%3d(%6.2f)\nHIT :%3d(%02X)\n    :%3d(%.2f)\nRIDE:%3d\nEVT :%3d\n\nACT :%2d\nLIFT:%2d(%d)\nHANG:%2d(%d)\nJUMP:%2d(%d)\nLADR:%2d(%d)\nROPE:%2d(%d)\nPUSH:%2d(%d)\nTMBL:%2d\nCOPT:%2d\nPOPP:%2d\nRADR:%2d\n"
@@ -16004,8 +16004,8 @@ lbl_8020A47C:
 	.asciz "_GXTexObj"
 	.balign 4
 
-.global lbl_8020A488
-lbl_8020A488:
+.global s_CXObjIntp_8020a488
+s_CXObjIntp_8020a488:
 
 	# ROM: 0x207488
 	.asciz "CXObjIntp"
@@ -16024,78 +16024,78 @@ lbl_8020A488:
 	.asciz "CPtclOne"
 	.balign 4
 
-.global lbl_8020A4F4
-lbl_8020A4F4:
+.global s_XActLift_8020a4f4
+s_XActLift_8020a4f4:
 
 	# ROM: 0x2074F4
 	.asciz "XActLift"
 	.balign 4
 
-.global lbl_8020A500
-lbl_8020A500:
+.global s_XActHang_8020a500
+s_XActHang_8020a500:
 
 	# ROM: 0x207500
 	.asciz "XActHang"
 	.balign 4
 
-.global lbl_8020A50C
-lbl_8020A50C:
+.global s_XActJump_8020a50c
+s_XActJump_8020a50c:
 
 	# ROM: 0x20750C
 	.asciz "XActJump"
 	.balign 4
 
-.global lbl_8020A518
-lbl_8020A518:
+.global s_XActLadder_8020a518
+s_XActLadder_8020a518:
 
 	# ROM: 0x207518
 	.asciz "XActLadder"
 	.balign 4
 
-.global lbl_8020A524
-lbl_8020A524:
+.global s_XActRope_8020a524
+s_XActRope_8020a524:
 
 	# ROM: 0x207524
 	.asciz "XActRope"
 	.balign 4
 
-.global lbl_8020A530
-lbl_8020A530:
+.global s_XActPush_8020a530
+s_XActPush_8020a530:
 
 	# ROM: 0x207530
 	.asciz "XActPush"
 	.balign 4
 
-.global lbl_8020A53C
-lbl_8020A53C:
+.global s_XActTumble_8020a53c
+s_XActTumble_8020a53c:
 
 	# ROM: 0x20753C
 	.asciz "XActTumble"
 	.balign 4
 
-.global lbl_8020A548
-lbl_8020A548:
+.global s_XActCopter_8020a548
+s_XActCopter_8020a548:
 
 	# ROM: 0x207548
 	.asciz "XActCopter"
 	.balign 4
 
-.global lbl_8020A554
-lbl_8020A554:
+.global s_XActPopper_8020a554
+s_XActPopper_8020a554:
 
 	# ROM: 0x207554
 	.asciz "XActPopper"
 	.balign 4
 
-.global lbl_8020A560
-lbl_8020A560:
+.global s_XActRadar_8020a560
+s_XActRadar_8020a560:
 
 	# ROM: 0x207560
 	.asciz "XActRadar"
 	.balign 4
 
-.global lbl_8020A56C
-lbl_8020A56C:
+.global s_CJointRot_8020a56c
+s_CJointRot_8020a56c:
 
 	# ROM: 0x20756C
 	.asciz "CJointRot"
@@ -16288,15 +16288,15 @@ lbl_8020A71C:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8020A728
-lbl_8020A728:
+.global s_translate_8020a728
+s_translate_8020a728:
 
 	# ROM: 0x207728
 	.asciz "translate"
 	.balign 4
 
-.global lbl_8020A734
-lbl_8020A734:
+.global s___jobj__flags___JOBJ_USE_QUATERN_8020a734
+s___jobj__flags___JOBJ_USE_QUATERN_8020a734:
 
 	# ROM: 0x207734
 	.asciz "!(jobj->flags & JOBJ_USE_QUATERNION)"
@@ -16353,29 +16353,29 @@ lbl_8020A7D0:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8020A7F0
-lbl_8020A7F0:
+.global s_CXObjIntp_8020a7f0
+s_CXObjIntp_8020a7f0:
 
 	# ROM: 0x2077F0
 	.asciz "CXObjIntp"
 	.balign 4
 
-.global lbl_8020A7FC
-lbl_8020A7FC:
+.global s_XObjAttachment_8020a7fc
+s_XObjAttachment_8020a7fc:
 
 	# ROM: 0x2077FC
 	.asciz "XObjAttachment"
 	.balign 4
 
-.global lbl_8020A80C
-lbl_8020A80C:
+.global s___jobj__flags___JOBJ_USE_QUATERN_8020a80c
+s___jobj__flags___JOBJ_USE_QUATERN_8020a80c:
 
 	# ROM: 0x20780C
 	.asciz "!(jobj->flags & JOBJ_USE_QUATERNION)"
 	.balign 4
 
-.global lbl_8020A834
-lbl_8020A834:
+.global s_translate_8020a834
+s_translate_8020a834:
 
 	# ROM: 0x207834
 	.asciz "translate"
@@ -16391,22 +16391,22 @@ lbl_8020A834:
 	.asciz "CAnmQueue"
 	.balign 4
 
-.global lbl_8020A87C
-lbl_8020A87C:
+.global s_XObjRadar_8020a87c
+s_XObjRadar_8020a87c:
 
 	# ROM: 0x20787C
 	.asciz "XObjRadar"
 	.balign 4
 
-.global lbl_8020A888
-lbl_8020A888:
+.global s_XObjPopper_8020a888
+s_XObjPopper_8020a888:
 
 	# ROM: 0x207888
 	.asciz "XObjPopper"
 	.balign 4
 
-.global lbl_8020A894
-lbl_8020A894:
+.global s_XObjCopter_8020a894
+s_XObjCopter_8020a894:
 
 	# ROM: 0x207894
 	.asciz "XObjCopter"
@@ -16430,49 +16430,49 @@ lbl_8020A8AC:
 	.4byte 0x00000001
 	.4byte 0x00000001
 
-.global lbl_8020A8C0
-lbl_8020A8C0:
+.global s_XObjWireEff_8020a8c0
+s_XObjWireEff_8020a8c0:
 
 	# ROM: 0x2078C0
 	.asciz "XObjWireEff"
 
-.global lbl_8020A8CC
-lbl_8020A8CC:
+.global s_CXObjIntp_8020a8cc
+s_CXObjIntp_8020a8cc:
 
 	# ROM: 0x2078CC
 	.asciz "CXObjIntp"
 	.byte 0x30, 0x30
 
-.global lbl_8020A8D8
-lbl_8020A8D8:
+.global s___jobj__flags___JOBJ_USE_QUATERN_8020a8d8
+s___jobj__flags___JOBJ_USE_QUATERN_8020a8d8:
 
 	# ROM: 0x2078D8
 	.asciz "!(jobj->flags & JOBJ_USE_QUATERNION)"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_8020A900
-lbl_8020A900:
+.global s_translate_8020a900
+s_translate_8020a900:
 
 	# ROM: 0x207900
 	.asciz "translate"
 	.byte 0x30, 0x30
 
-.global lbl_8020A90C
-lbl_8020A90C:
+.global s_XObjPlug_8020a90c
+s_XObjPlug_8020a90c:
 
 	# ROM: 0x20790C
 	.asciz "XObjPlug"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_8020A918
-lbl_8020A918:
+.global s_XObjSound_8020a918
+s_XObjSound_8020a918:
 
 	# ROM: 0x207918
 	.asciz "XObjSound"
 	.byte 0x30, 0x30
 
-.global lbl_8020A924
-lbl_8020A924:
+.global s_CXObjIntp_8020a924
+s_CXObjIntp_8020a924:
 
 	# ROM: 0x207924
 	.asciz "CXObjIntp"
@@ -16534,57 +16534,57 @@ lbl_8020A978:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8020A984
-lbl_8020A984:
+.global s_XObjFree_8020a984
+s_XObjFree_8020a984:
 
 	# ROM: 0x207984
 	.asciz "XObjFree"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_8020A990
-lbl_8020A990:
+.global s_CXObjIntp_8020a990
+s_CXObjIntp_8020a990:
 
 	# ROM: 0x207990
 	.asciz "CXObjIntp"
 	.byte 0x30, 0x30
 
-.global lbl_8020A99C
-lbl_8020A99C:
+.global s_translate_8020a99c
+s_translate_8020a99c:
 
 	# ROM: 0x20799C
 	.asciz "translate"
 	.byte 0x30, 0x30
 
-.global lbl_8020A9A8
-lbl_8020A9A8:
+.global s_XObjDust_8020a9a8
+s_XObjDust_8020a9a8:
 
 	# ROM: 0x2079A8
 	.asciz "XObjDust"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_8020A9B4
-lbl_8020A9B4:
+.global s_XObjFlags_8020a9b4
+s_XObjFlags_8020a9b4:
 
 	# ROM: 0x2079B4
 	.asciz "XObjFlags"
 	.byte 0x30, 0x30
 
-.global lbl_8020A9C0
-lbl_8020A9C0:
+.global s_XObjHBox_8020a9c0
+s_XObjHBox_8020a9c0:
 
 	# ROM: 0x2079C0
 	.asciz "XObjHBox"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_8020A9CC
-lbl_8020A9CC:
+.global s_XObjCoin_8020a9cc
+s_XObjCoin_8020a9cc:
 
 	# ROM: 0x2079CC
 	.asciz "XObjCoin"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_8020A9D8
-lbl_8020A9D8:
+.global s_XObjItem_8020a9d8
+s_XObjItem_8020a9d8:
 
 	# ROM: 0x2079D8
 	.asciz "XObjItem"
@@ -16626,36 +16626,36 @@ lbl_8020AA14:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8020AA38
-lbl_8020AA38:
+.global s_XObjLeticker_8020aa38
+s_XObjLeticker_8020aa38:
 
 	# ROM: 0x207A38
 	.asciz "XObjLeticker"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_8020AA48
-lbl_8020AA48:
+.global s_CXObjIntp_8020aa48
+s_CXObjIntp_8020aa48:
 
 	# ROM: 0x207A48
 	.asciz "CXObjIntp"
 	.byte 0x30, 0x30
 
-.global lbl_8020AA54
-lbl_8020AA54:
+.global s___jobj__flags___JOBJ_USE_QUATERN_8020aa54
+s___jobj__flags___JOBJ_USE_QUATERN_8020aa54:
 
 	# ROM: 0x207A54
 	.asciz "!(jobj->flags & JOBJ_USE_QUATERNION)"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_8020AA7C
-lbl_8020AA7C:
+.global s__4_2f__4_2f_8020aa7c
+s__4_2f__4_2f_8020aa7c:
 
 	# ROM: 0x207A7C
 	.asciz "%4.2f %4.2f\n"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_8020AA8C
-lbl_8020AA8C:
+.global s_CCameraActionLeticker__Update__4_8020aa8c
+s_CCameraActionLeticker__Update__4_8020aa8c:
 
 	# ROM: 0x207A8C
 	.asciz "CCameraActionLeticker::Update %4.2f %4.2f %d\n"
@@ -16675,22 +16675,22 @@ lbl_8020AABC:
 	.4byte 0x82B982F1
 	.4byte 0x0A003030
 
-.global lbl_8020AAE0
-lbl_8020AAE0:
+.global s_m_level_table__d___d_8020aae0
+s_m_level_table__d___d_8020aae0:
 
 	# ROM: 0x207AE0
 	.asciz "m_level_table[%d]=%d\n"
 	.byte 0x30, 0x30
 
-.global lbl_8020AAF8
-lbl_8020AAF8:
+.global s_CCameraActionLeticker__Reset_8020aaf8
+s_CCameraActionLeticker__Reset_8020aaf8:
 
 	# ROM: 0x207AF8
 	.asciz "CCameraActionLeticker::Reset\n"
 	.byte 0x30, 0x30
 
-.global lbl_8020AB18
-lbl_8020AB18:
+.global s_CCameraActionLeticker_8020ab18
+s_CCameraActionLeticker_8020ab18:
 
 	# ROM: 0x207B18
 	.asciz "CCameraActionLeticker"
@@ -16738,15 +16738,15 @@ lbl_8020AB84:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8020AB90
-lbl_8020AB90:
+.global s_XObjArmy_8020ab90
+s_XObjArmy_8020ab90:
 
 	# ROM: 0x207B90
 	.asciz "XObjArmy"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_8020AB9C
-lbl_8020AB9C:
+.global s_CXObjIntp_8020ab9c
+s_CXObjIntp_8020ab9c:
 
 	# ROM: 0x207B9C
 	.asciz "CXObjIntp"
@@ -16860,43 +16860,43 @@ lbl_8020AC68:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8020AD08
-lbl_8020AD08:
+.global s_XObjSpider_8020ad08
+s_XObjSpider_8020ad08:
 
 	# ROM: 0x207D08
 	.asciz "XObjSpider"
 	.balign 4
 
-.global lbl_8020AD14
-lbl_8020AD14:
+.global s_CXObjIntp_8020ad14
+s_CXObjIntp_8020ad14:
 
 	# ROM: 0x207D14
 	.asciz "CXObjIntp"
 	.balign 4
 
-.global lbl_8020AD20
-lbl_8020AD20:
+.global s___jobj__flags___JOBJ_USE_QUATERN_8020ad20
+s___jobj__flags___JOBJ_USE_QUATERN_8020ad20:
 
 	# ROM: 0x207D20
 	.asciz "!(jobj->flags & JOBJ_USE_QUATERNION)"
 	.balign 4
 
-.global lbl_8020AD48
-lbl_8020AD48:
+.global s_translate_8020ad48
+s_translate_8020ad48:
 
 	# ROM: 0x207D48
 	.asciz "translate"
 	.balign 4
 
-.global lbl_8020AD54
-lbl_8020AD54:
+.global s_id____d__argv_1___d_8020ad54
+s_id____d__argv_1___d_8020ad54:
 
 	# ROM: 0x207D54
 	.asciz "id = %d, argv[1]=%d\n"
 	.balign 4
 
-.global lbl_8020AD6C
-lbl_8020AD6C:
+.global s_NULL________________8020ad6c
+s_NULL________________8020ad6c:
 
 	# ROM: 0x207D6C
 	.asciz "NULL===============\n"
@@ -16972,21 +16972,21 @@ lbl_8020AE68:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8020AE74
-lbl_8020AE74:
+.global s_XObjSpiderSmall_8020ae74
+s_XObjSpiderSmall_8020ae74:
 
 	# ROM: 0x207E74
 	.asciz "XObjSpiderSmall"
 
-.global lbl_8020AE84
-lbl_8020AE84:
+.global s_CXObjIntp_8020ae84
+s_CXObjIntp_8020ae84:
 
 	# ROM: 0x207E84
 	.asciz "CXObjIntp"
 	.balign 4
 
-.global lbl_8020AE90
-lbl_8020AE90:
+.global s___jobj__flags___JOBJ_USE_QUATERN_8020ae90
+s___jobj__flags___JOBJ_USE_QUATERN_8020ae90:
 
 	# ROM: 0x207E90
 	.asciz "!(jobj->flags & JOBJ_USE_QUATERNION)"
@@ -17176,15 +17176,15 @@ lbl_8020AFC0:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8020B188
-lbl_8020B188:
+.global s_XObjSpiderBoss_8020b188
+s_XObjSpiderBoss_8020b188:
 
 	# ROM: 0x208188
 	.asciz "XObjSpiderBoss"
 	.balign 4
 
-.global lbl_8020B198
-lbl_8020B198:
+.global s_CXObjIntp_8020b198
+s_CXObjIntp_8020b198:
 
 	# ROM: 0x208198
 	.asciz "CXObjIntp"
@@ -17192,22 +17192,22 @@ lbl_8020B198:
 	.asciz "!(jobj->flags & JOBJ_USE_QUATERNION)"
 	.balign 4
 
-.global lbl_8020B1CC
-lbl_8020B1CC:
+.global s_translate_8020b1cc
+s_translate_8020b1cc:
 
 	# ROM: 0x2081CC
 	.asciz "translate"
 	.balign 4
 
-.global lbl_8020B1D8
-lbl_8020B1D8:
+.global s_id____d__argv_1___d_8020b1d8
+s_id____d__argv_1___d_8020b1d8:
 
 	# ROM: 0x2081D8
 	.asciz "id = %d, argv[1]=%d\n"
 	.balign 4
 
-.global lbl_8020B1F0
-lbl_8020B1F0:
+.global s_NULL________________8020b1f0
+s_NULL________________8020b1f0:
 
 	# ROM: 0x2081F0
 	.asciz "NULL===============\n"
@@ -17295,15 +17295,15 @@ lbl_8020B308:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8020B314
-lbl_8020B314:
+.global s_XObjActor_8020b314
+s_XObjActor_8020b314:
 
 	# ROM: 0x208314
 	.asciz "XObjActor"
 	.balign 4
 
-.global lbl_8020B320
-lbl_8020B320:
+.global s_CXObjIntp_8020b320
+s_CXObjIntp_8020b320:
 
 	# ROM: 0x208320
 	.asciz "CXObjIntp"
@@ -17313,15 +17313,15 @@ lbl_8020B320:
 	.asciz "translate"
 	.balign 4
 
-.global lbl_8020B360
-lbl_8020B360:
+.global s_id____d__argv_1___d_8020b360
+s_id____d__argv_1___d_8020b360:
 
 	# ROM: 0x208360
 	.asciz "id = %d, argv[1]=%d\n"
 	.balign 4
 
-.global lbl_8020B378
-lbl_8020B378:
+.global s_NULL________________8020b378
+s_NULL________________8020b378:
 
 	# ROM: 0x208378
 	.asciz "NULL===============\n"
@@ -17501,15 +17501,15 @@ lbl_8020B5CC:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8020B5E4
-lbl_8020B5E4:
+.global s_XObjActor3_8020b5e4
+s_XObjActor3_8020b5e4:
 
 	# ROM: 0x2085E4
 	.asciz "XObjActor3"
 	.balign 4
 
-.global lbl_8020B5F0
-lbl_8020B5F0:
+.global s_CXObjIntp_8020b5f0
+s_CXObjIntp_8020b5f0:
 
 	# ROM: 0x2085F0
 	.asciz "CXObjIntp"
@@ -17517,29 +17517,29 @@ lbl_8020B5F0:
 	.asciz "!(jobj->flags & JOBJ_USE_QUATERNION)"
 	.balign 4
 
-.global lbl_8020B624
-lbl_8020B624:
+.global s_translate_8020b624
+s_translate_8020b624:
 
 	# ROM: 0x208624
 	.asciz "translate"
 	.balign 4
 
-.global lbl_8020B630
-lbl_8020B630:
+.global s_id____d__argv_1___d_8020b630
+s_id____d__argv_1___d_8020b630:
 
 	# ROM: 0x208630
 	.asciz "id = %d, argv[1]=%d\n"
 	.balign 4
 
-.global lbl_8020B648
-lbl_8020B648:
+.global s_NULL________________8020b648
+s_NULL________________8020b648:
 
 	# ROM: 0x208648
 	.asciz "NULL===============\n"
 	.balign 4
 
-.global lbl_8020B660
-lbl_8020B660:
+.global s_tpl_stage02_tpl_8020b660
+s_tpl_stage02_tpl_8020b660:
 
 	# ROM: 0x208660
 	.asciz "tpl/stage02.tpl"
@@ -17861,36 +17861,36 @@ lbl_8020BB10:
 	.4byte 0x00000002
 	.4byte 0
 
-.global lbl_8020BB1C
-lbl_8020BB1C:
+.global s_XObjActorToy_8020bb1c
+s_XObjActorToy_8020bb1c:
 
 	# ROM: 0x208B1C
 	.asciz "XObjActorToy"
 	.balign 4
 
-.global lbl_8020BB2C
-lbl_8020BB2C:
+.global s_CXObjIntp_8020bb2c
+s_CXObjIntp_8020bb2c:
 
 	# ROM: 0x208B2C
 	.asciz "CXObjIntp"
 	.balign 4
 
-.global lbl_8020BB38
-lbl_8020BB38:
+.global s_XObjActor_8020bb38
+s_XObjActor_8020bb38:
 
 	# ROM: 0x208B38
 	.asciz "XObjActor"
 	.balign 4
 
-.global lbl_8020BB44
-lbl_8020BB44:
+.global s___jobj__flags___JOBJ_USE_QUATERN_8020bb44
+s___jobj__flags___JOBJ_USE_QUATERN_8020bb44:
 
 	# ROM: 0x208B44
 	.asciz "!(jobj->flags & JOBJ_USE_QUATERNION)"
 	.balign 4
 
-.global lbl_8020BB6C
-lbl_8020BB6C:
+.global s_translate_8020bb6c
+s_translate_8020bb6c:
 
 	# ROM: 0x208B6C
 	.asciz "translate"
@@ -18022,22 +18022,22 @@ lbl_8020BBB8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8020BD70
-lbl_8020BD70:
+.global s_XObjActorJenny_8020bd70
+s_XObjActorJenny_8020bd70:
 
 	# ROM: 0x208D70
 	.asciz "XObjActorJenny"
 	.balign 4
 
-.global lbl_8020BD80
-lbl_8020BD80:
+.global s_CXObjIntp_8020bd80
+s_CXObjIntp_8020bd80:
 
 	# ROM: 0x208D80
 	.asciz "CXObjIntp"
 	.balign 4
 
-.global lbl_8020BD8C
-lbl_8020BD8C:
+.global s_XObjActor_8020bd8c
+s_XObjActor_8020bd8c:
 
 	# ROM: 0x208D8C
 	.asciz "XObjActor"
@@ -18120,22 +18120,22 @@ lbl_8020BE08:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8020BEF0
-lbl_8020BEF0:
+.global s_XObjActorMama_8020bef0
+s_XObjActorMama_8020bef0:
 
 	# ROM: 0x208EF0
 	.asciz "XObjActorMama"
 	.balign 4
 
-.global lbl_8020BF00
-lbl_8020BF00:
+.global s_CXObjIntp_8020bf00
+s_CXObjIntp_8020bf00:
 
 	# ROM: 0x208F00
 	.asciz "CXObjIntp"
 	.balign 4
 
-.global lbl_8020BF0C
-lbl_8020BF0C:
+.global s_XObjActor_8020bf0c
+s_XObjActor_8020bf0c:
 
 	# ROM: 0x208F0C
 	.asciz "XObjActor"
@@ -18256,22 +18256,22 @@ lbl_8020C0C8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8020C0E0
-lbl_8020C0E0:
+.global s_XObjActorPapa_8020c0e0
+s_XObjActorPapa_8020c0e0:
 
 	# ROM: 0x2090E0
 	.asciz "XObjActorPapa"
 	.balign 4
 
-.global lbl_8020C0F0
-lbl_8020C0F0:
+.global s_CXObjIntp_8020c0f0
+s_CXObjIntp_8020c0f0:
 
 	# ROM: 0x2090F0
 	.asciz "CXObjIntp"
 	.balign 4
 
-.global lbl_8020C0FC
-lbl_8020C0FC:
+.global s_XObjActor_8020c0fc
+s_XObjActor_8020c0fc:
 
 	# ROM: 0x2090FC
 	.asciz "XObjActor"
@@ -18279,8 +18279,8 @@ lbl_8020C0FC:
 	.asciz "!(jobj->flags & JOBJ_USE_QUATERNION)"
 	.balign 4
 
-.global lbl_8020C130
-lbl_8020C130:
+.global s_translate_8020c130
+s_translate_8020c130:
 
 	# ROM: 0x209130
 	.asciz "translate"
@@ -18347,22 +18347,22 @@ lbl_8020C204:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8020C21C
-lbl_8020C21C:
+.global s_XObjActorTao_8020c21c
+s_XObjActorTao_8020c21c:
 
 	# ROM: 0x20921C
 	.asciz "XObjActorTao"
 	.balign 4
 
-.global lbl_8020C22C
-lbl_8020C22C:
+.global s_CXObjIntp_8020c22c
+s_CXObjIntp_8020c22c:
 
 	# ROM: 0x20922C
 	.asciz "CXObjIntp"
 	.balign 4
 
-.global lbl_8020C238
-lbl_8020C238:
+.global s_XObjActor_8020c238
+s_XObjActor_8020c238:
 
 	# ROM: 0x209238
 	.asciz "XObjActor"
@@ -18370,8 +18370,8 @@ lbl_8020C238:
 	.asciz "!(jobj->flags & JOBJ_USE_QUATERNION)"
 	.balign 4
 
-.global lbl_8020C26C
-lbl_8020C26C:
+.global s_translate_8020c26c
+s_translate_8020c26c:
 
 	# ROM: 0x20926C
 	.asciz "translate"
@@ -18440,22 +18440,22 @@ lbl_8020C34C:
 	.4byte 0
 	.4byte 0x00000001
 
-.global lbl_8020C360
-lbl_8020C360:
+.global s_XObjActorDeca_8020c360
+s_XObjActorDeca_8020c360:
 
 	# ROM: 0x209360
 	.asciz "XObjActorDeca"
 	.balign 4
 
-.global lbl_8020C370
-lbl_8020C370:
+.global s_CXObjIntp_8020c370
+s_CXObjIntp_8020c370:
 
 	# ROM: 0x209370
 	.asciz "CXObjIntp"
 	.balign 4
 
-.global lbl_8020C37C
-lbl_8020C37C:
+.global s_XObjActor_8020c37c
+s_XObjActor_8020c37c:
 
 	# ROM: 0x20937C
 	.asciz "XObjActor"
@@ -18463,8 +18463,8 @@ lbl_8020C37C:
 	.asciz "!(jobj->flags & JOBJ_USE_QUATERNION)"
 	.balign 4
 
-.global lbl_8020C3B0
-lbl_8020C3B0:
+.global s_translate_8020c3b0
+s_translate_8020c3b0:
 
 	# ROM: 0x2093B0
 	.asciz "translate"
@@ -18503,34 +18503,34 @@ lbl_8020C3F8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8020C440
-lbl_8020C440:
+.global s_XObjReadAnm_8020c440
+s_XObjReadAnm_8020c440:
 
 	# ROM: 0x209440
 	.asciz "XObjReadAnm"
 
-.global lbl_8020C44C
-lbl_8020C44C:
+.global s_XObjRead_8020c44c
+s_XObjRead_8020c44c:
 
 	# ROM: 0x20944C
 	.asciz "XObjRead"
 	.balign 4
 
-.global lbl_8020C458
-lbl_8020C458:
+.global s_xobjs_cpp_8020c458
+s_xobjs_cpp_8020c458:
 
 	# ROM: 0x209458
 	.asciz "xobjs.cpp"
 	.balign 4
 
-.global lbl_8020C464
-lbl_8020C464:
+.global s_no_more_space_for_XObjRead_threa_8020c464
+s_no_more_space_for_XObjRead_threa_8020c464:
 
 	# ROM: 0x209464
 	.asciz "no more space for XObjRead thread!\n"
 
-.global lbl_8020C488
-lbl_8020C488:
+.global s__s___cnt__d__max__d_8020c488
+s__s___cnt__d__max__d_8020c488:
 
 	# ROM: 0x209488
 	.asciz "%s:: cnt=%d, max=%d\n"
@@ -18612,8 +18612,8 @@ lbl_8020C634:
 	.asciz "XObjFlags"
 	.balign 4
 
-.global lbl_8020C64C
-lbl_8020C64C:
+.global s_CXObjIntp_8020c64c
+s_CXObjIntp_8020c64c:
 
 	# ROM: 0x20964C
 	.asciz "CXObjIntp"
@@ -18623,41 +18623,41 @@ lbl_8020C64C:
 	.asciz "CoordInfo"
 	.balign 4
 
-.global lbl_8020C670
-lbl_8020C670:
+.global s_CMsgQueue_8020c670
+s_CMsgQueue_8020c670:
 
 	# ROM: 0x209670
 	.asciz "CMsgQueue"
 	.balign 4
 
-.global lbl_8020C67C
-lbl_8020C67C:
+.global s_XObjReadOne_8020c67c
+s_XObjReadOne_8020c67c:
 
 	# ROM: 0x20967C
 	.asciz "XObjReadOne"
 
-.global lbl_8020C688
-lbl_8020C688:
+.global s_XObjReadAll_8020c688
+s_XObjReadAll_8020c688:
 
 	# ROM: 0x209688
 	.asciz "XObjReadAll"
 	.4byte 0x30303030
 
-.global lbl_8020C698
-lbl_8020C698:
+.global s_CInterpolationEaseOut_8020c698
+s_CInterpolationEaseOut_8020c698:
 
 	# ROM: 0x209698
 	.asciz "CInterpolationEaseOut"
 	.byte 0x30, 0x30
 
-.global lbl_8020C6B0
-lbl_8020C6B0:
+.global s_CInterfaceInterpolation_8020c6b0
+s_CInterfaceInterpolation_8020c6b0:
 
 	# ROM: 0x2096B0
 	.asciz "CInterfaceInterpolation"
 
-.global lbl_8020C6C8
-lbl_8020C6C8:
+.global s_CInterpolationEaseInOut_8020c6c8
+s_CInterpolationEaseInOut_8020c6c8:
 
 	# ROM: 0x2096C8
 	.asciz "CInterpolationEaseInOut"
@@ -18706,35 +18706,35 @@ lbl_8020C718:
 	.4byte 0xC582B781
 	.4byte 0x420A0030
 
-.global lbl_8020C754
-lbl_8020C754:
+.global s_reset_zoom_lv___CAM_AREA_ZOOM_LV_8020c754
+s_reset_zoom_lv___CAM_AREA_ZOOM_LV_8020c754:
 
 	# ROM: 0x209754
 	.asciz "reset zoom lv = CAM_AREA_ZOOM_LV1\n"
 	.byte 0x30
 
-.global lbl_8020C778
-lbl_8020C778:
+.global s_DEBUG_CCameraActionAreaEx__DrawD_8020c778
+s_DEBUG_CCameraActionAreaEx__DrawD_8020c778:
 
 	# ROM: 0x209778
 	.asciz "DEBUG:CCameraActionAreaEx::DrawDebug3d():%d\n"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_8020C7A8
-lbl_8020C7A8:
+.global s_DEBUG_CCameraActionMap__DrawDebu_8020c7a8
+s_DEBUG_CCameraActionMap__DrawDebu_8020c7a8:
 
 	# ROM: 0x2097A8
 	.asciz "DEBUG:CCameraActionMap::DrawDebug3d():%d\n"
 	.byte 0x30, 0x30
 
-.global lbl_8020C7D4
-lbl_8020C7D4:
+.global s_CCameraActionAreaEx_8020c7d4
+s_CCameraActionAreaEx_8020c7d4:
 
 	# ROM: 0x2097D4
 	.asciz "CCameraActionAreaEx"
 
-.global lbl_8020C7E8
-lbl_8020C7E8:
+.global s_CCameraActionArea_8020c7e8
+s_CCameraActionArea_8020c7e8:
 
 	# ROM: 0x2097E8
 	.asciz "CCameraActionArea"
@@ -18754,36 +18754,36 @@ lbl_8020C814:
 	.asciz "CCameraActionAreaExM"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_8020C82C
-lbl_8020C82C:
+.global s_ccameraactionarea_cpp_8020c82c
+s_ccameraactionarea_cpp_8020c82c:
 
 	# ROM: 0x20982C
 	.asciz "ccameraactionarea.cpp"
 	.byte 0x30, 0x30
 
-.global lbl_8020C844
-lbl_8020C844:
+.global s_error_____CCameraActionArea__Set_8020c844
+s_error_____CCameraActionArea__Set_8020c844:
 
 	# ROM: 0x209844
 	.asciz "error ! : CCameraActionArea::SetEye_I()\n"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_8020C870
-lbl_8020C870:
+.global s_SetInte_I__unknown_data___8020c870
+s_SetInte_I__unknown_data___8020c870:
 
 	# ROM: 0x209870
 	.asciz "SetInte_I( unknown data )\n"
 	.byte 0x30
 
-.global lbl_8020C88C
-lbl_8020C88C:
+.global s__B000000A0AREA__3d__3d___3d__8020c88c
+s__B000000A0AREA__3d__3d___3d__8020c88c:
 
 	# ROM: 0x20988C
 	.asciz "\\B000000A0AREA(%3d,%3d)(%3d)\n"
 	.byte 0x30, 0x30
 
-.global lbl_8020C8AC
-lbl_8020C8AC:
+.global s__B000000A0ACAREA_8020c8ac
+s__B000000A0ACAREA_8020c8ac:
 
 	# ROM: 0x2098AC
 	.asciz "\\B000000A0ACAREA\n"
@@ -18859,8 +18859,8 @@ lbl_8020C990:
 	.4byte 0xBF800000
 	.4byte 0
 
-.global lbl_8020C99C
-lbl_8020C99C:
+.global s_CCameraActionMap_8020c99c
+s_CCameraActionMap_8020c99c:
 
 	# ROM: 0x20999C
 	.asciz "CCameraActionMap"
@@ -18880,15 +18880,15 @@ lbl_8020C9C8:
 	.asciz "CCameraActionAreaExM"
 	.balign 4
 
-.global lbl_8020C9E0
-lbl_8020C9E0:
+.global s_ccameraactionmap2_cpp_8020c9e0
+s_ccameraactionmap2_cpp_8020c9e0:
 
 	# ROM: 0x2099E0
 	.asciz "ccameraactionmap2.cpp"
 	.balign 4
 
-.global lbl_8020C9F8
-lbl_8020C9F8:
+.global s_EYE__f___f___f_ANG__f___f___f_DI_8020c9f8
+s_EYE__f___f___f_ANG__f___f___f_DI_8020c9f8:
 
 	# ROM: 0x2099F8
 	.asciz "EYE(%f, %f, %f)ANG(%f, %f, %f)DIST(%f)CAMSTAT(%8X)CAMSTATPRE(%8X)UNDER OP(%d)HANG(%d(%d))TGTEYE(%f, %f, %f)TGTEYE_PRE(%f, %f, %f)INTERP CAM(0x%x)INTERP TURN(0x%x)POS_CAMMODE(%f, %f, %f)ANG_CAMMODE(%f, %f, %f)ANG_CAMMODE_PRE(%f, %f, %f)FIX(%d)\n"
@@ -18911,8 +18911,8 @@ lbl_8020C9F8:
 	.balign 4
 	.asciz "CCameraActionMap ... GetCrossPoint\np1(%f, %f, %f) p2(%f, %f, %f)\nvs(%f, %f, %f) ve(%f, %f, %f)\n(1)\n"
 
-.global lbl_8020CCD8
-lbl_8020CCD8:
+.global s_actionMap__reset_8020ccd8
+s_actionMap__reset_8020ccd8:
 
 	# ROM: 0x209CD8
 	.asciz "actionMap::reset\n"
@@ -18932,8 +18932,8 @@ lbl_8020CCD8:
 	.byte 0x30, 0x30
 	.4byte 0x30303030
 
-.global lbl_8020CDF0
-lbl_8020CDF0:
+.global s_CCameraActionChase_8020cdf0
+s_CCameraActionChase_8020cdf0:
 
 	# ROM: 0x209DF0
 	.asciz "CCameraActionChase"
@@ -18947,8 +18947,8 @@ lbl_8020CE04:
 	.byte 0x30
 	.4byte 0x30303030
 
-.global lbl_8020CE20
-lbl_8020CE20:
+.global s_CCameraActionEvt_8020ce20
+s_CCameraActionEvt_8020ce20:
 
 	# ROM: 0x209E20
 	.asciz "CCameraActionEvt"
@@ -18961,8 +18961,8 @@ lbl_8020CE34:
 	.asciz "CInterfaceCameraAction"
 	.byte 0x30
 
-.global lbl_8020CE4C
-lbl_8020CE4C:
+.global s_SetInterest_Interp__unknown_data_8020ce4c
+s_SetInterest_Interp__unknown_data_8020ce4c:
 
 	# ROM: 0x209E4C
 	.asciz "SetInterest_Interp( unknown data )\n"
@@ -19033,8 +19033,8 @@ lbl_8020CE70:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8020CF64
-lbl_8020CF64:
+.global s_CCameraActionScroll2_8020cf64
+s_CCameraActionScroll2_8020cf64:
 
 	# ROM: 0x209F64
 	.asciz "CCameraActionScroll2"
@@ -19065,8 +19065,8 @@ lbl_8020CFAC:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8020CFB8
-lbl_8020CFB8:
+.global s_CCameraActionEye_8020cfb8
+s_CCameraActionEye_8020cfb8:
 
 	# ROM: 0x209FB8
 	.asciz "CCameraActionEye"
@@ -19080,23 +19080,23 @@ lbl_8020CFCC:
 	.byte 0x30
 	.4byte 0x30303030
 
-.global lbl_8020CFE8
-lbl_8020CFE8:
+.global s_CCameraActionAnim_8020cfe8
+s_CCameraActionAnim_8020cfe8:
 
 	# ROM: 0x209FE8
 	.asciz "CCameraActionAnim"
 	.byte 0x30, 0x30
 
-.global lbl_8020CFFC
-lbl_8020CFFC:
+.global s_CInterfaceCameraAction_8020cffc
+s_CInterfaceCameraAction_8020cffc:
 
 	# ROM: 0x209FFC
 	.asciz "CInterfaceCameraAction"
 	.byte 0x30
 	.4byte 0x30303030
 
-.global lbl_8020D018
-lbl_8020D018:
+.global s_CCameraActionReset_8020d018
+s_CCameraActionReset_8020d018:
 
 	# ROM: 0x20A018
 	.asciz "CCameraActionReset"
@@ -19116,91 +19116,91 @@ lbl_8020D044:
 	.asciz "CCameraActionAreaExM"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_8020D05C
-lbl_8020D05C:
+.global s_ccameraactionreset_cpp_8020d05c
+s_ccameraactionreset_cpp_8020d05c:
 
 	# ROM: 0x20A05C
 	.asciz "ccameraactionreset.cpp"
 	.byte 0x30
 
-.global lbl_8020D074
-lbl_8020D074:
+.global s_CCameraActionReset_____Eye__f____8020d074
+s_CCameraActionReset_____Eye__f____8020d074:
 
 	# ROM: 0x20A074
 	.asciz "CCameraActionReset ...\nEye(%f, %f, %f)\nInt(%f, %f, %f)\n"
 	.4byte 0x30303030
 
-.global lbl_8020D0B0
-lbl_8020D0B0:
+.global s_CCameraActionScroll_8020d0b0
+s_CCameraActionScroll_8020d0b0:
 
 	# ROM: 0x20A0B0
 	.asciz "CCameraActionScroll"
 
-.global lbl_8020D0C4
-lbl_8020D0C4:
+.global s_CInterfaceCameraAction_8020d0c4
+s_CInterfaceCameraAction_8020d0c4:
 
 	# ROM: 0x20A0C4
 	.asciz "CInterfaceCameraAction"
 	.byte 0x30
 
-.global lbl_8020D0DC
-lbl_8020D0DC:
+.global s_CCameraActionLadr_8020d0dc
+s_CCameraActionLadr_8020d0dc:
 
 	# ROM: 0x20A0DC
 	.asciz "CCameraActionLadr"
 	.byte 0x30, 0x30
 
-.global lbl_8020D0F0
-lbl_8020D0F0:
+.global s_CCameraActionDefault_8020d0f0
+s_CCameraActionDefault_8020d0f0:
 
 	# ROM: 0x20A0F0
 	.asciz "CCameraActionDefault"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_8020D108
-lbl_8020D108:
+.global s_cmotioncontrolcamera_cpp_8020d108
+s_cmotioncontrolcamera_cpp_8020d108:
 
 	# ROM: 0x20A108
 	.asciz "cmotioncontrolcamera.cpp"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_8020D124
-lbl_8020D124:
+.global s_CMotionControlCamera_____8020d124
+s_CMotionControlCamera_____8020d124:
 
 	# ROM: 0x20A124
 	.asciz "CMotionControlCamera ... \n"
 	.byte 0x30
 
-.global lbl_8020D140
-lbl_8020D140:
+.global s_MetroTRK_for_GAMECUBE_v2_6_8020d140
+s_MetroTRK_for_GAMECUBE_v2_6_8020d140:
 
 	# ROM: 0x20A140
 	.asciz "MetroTRK for GAMECUBE v2.6"
 	.byte 0x30
 
-.global lbl_8020D15C
-lbl_8020D15C:
+.global s_Initialize_NUB_8020d15c
+s_Initialize_NUB_8020d15c:
 
 	# ROM: 0x20A15C
 	.asciz "Initialize NUB\n"
 	.4byte 0x30303030
 
-.global lbl_8020D170
-lbl_8020D170:
+.global s_MessageSend___cc_write_returned___8020d170
+s_MessageSend___cc_write_returned___8020d170:
 
 	# ROM: 0x20A170
 	.asciz "MessageSend : cc_write returned %ld\n"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_8020D198
-lbl_8020D198:
+.global s_ERROR___No_buffer_available_8020d198
+s_ERROR___No_buffer_available_8020d198:
 
 	# ROM: 0x20A198
 	.asciz "ERROR : No buffer available\n"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_8020D1B8
-lbl_8020D1B8:
+.global s_TRK_Packet_Header__ld_bytes_8020d1b8
+s_TRK_Packet_Header__ld_bytes_8020d1b8:
 
 	# ROM: 0x20A1B8
 	.asciz "TRK_Packet_Header \t    %ld bytes\n"
@@ -19223,23 +19223,23 @@ lbl_8020D1B8:
 	.byte 0x30, 0x30, 0x30
 	.4byte 0x30303030
 
-.global lbl_8020D348
-lbl_8020D348:
+.global s_Dispatch_command_0x_08x_8020d348
+s_Dispatch_command_0x_08x_8020d348:
 
 	# ROM: 0x20A348
 	.asciz "Dispatch command 0x%08x\n"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_8020D364
-lbl_8020D364:
+.global s_Dispatch_complete_err____ld_8020d364
+s_Dispatch_complete_err____ld_8020d364:
 
 	# ROM: 0x20A364
 	.asciz "Dispatch complete err = %ld\n"
 	.byte 0x30, 0x30, 0x30
 	.4byte 0x30303030
 
-.global lbl_8020D388
-lbl_8020D388:
+.global s__MetroTRK_Option___SerialIO___8020d388
+s__MetroTRK_Option___SerialIO___8020d388:
 
 	# ROM: 0x20A388
 	.asciz "\nMetroTRK Option : SerialIO - "
@@ -19248,23 +19248,23 @@ lbl_8020D388:
 	.asciz "Disable\n"
 	.balign 4
 
-.global lbl_8020D3BC
-lbl_8020D3BC:
+.global s_DoContinue_8020d3bc
+s_DoContinue_8020d3bc:
 
 	# ROM: 0x20A3BC
 	.asciz "DoContinue\n"
 	.asciz "DoFlushCache unimplemented!!!\n"
 	.balign 4
 
-.global lbl_8020D3E8
-lbl_8020D3E8:
+.global s_SendACK___Calling_MessageSend_8020d3e8
+s_SendACK___Calling_MessageSend_8020d3e8:
 
 	# ROM: 0x20A3E8
 	.asciz "SendACK : Calling MessageSend\n"
 	.balign 4
 
-.global lbl_8020D408
-lbl_8020D408:
+.global s_MessageSend_err____ld_8020d408
+s_MessageSend_err____ld_8020d408:
 
 	# ROM: 0x20A408
 	.asciz "MessageSend err : %ld\n"
@@ -19281,8 +19281,8 @@ lbl_8020D408:
 	.balign 4
 	.asciz "ReadMemory (0x%02x) : 0x%08x 0x%08x 0x%08x\n"
 
-.global lbl_8020D564
-lbl_8020D564:
+.global s__02x_8020d564
+s__02x_8020d564:
 
 	# ROM: 0x20A564
 	.asciz "%02x "
@@ -19294,8 +19294,8 @@ lbl_8020D56C:
 	# ROM: 0x20A56C
 	.4byte 0x0A003030
 
-.global lbl_8020D570
-lbl_8020D570:
+.global s_Calling_MessageSend_8020d570
+s_Calling_MessageSend_8020d570:
 
 	# ROM: 0x20A570
 	.asciz "Calling MessageSend\n"
@@ -19359,14 +19359,14 @@ lbl_8020D678:
 	.4byte 0x60000000
 	.4byte 0x60000000
 
-.global lbl_8020D6A0
-lbl_8020D6A0:
+.global s_TargetDoStep___8020d6a0
+s_TargetDoStep___8020d6a0:
 
 	# ROM: 0x20A6A0
 	.asciz "TargetDoStep()\n"
 
-.global lbl_8020D6B0
-lbl_8020D6B0:
+.global s_TRK_Main_8020d6b0
+s_TRK_Main_8020d6b0:
 
 	# ROM: 0x20A6B0
 	.asciz "TRK_Main \n"
@@ -19398,8 +19398,8 @@ lbl_8020D6C4:
 	.asciz "MetroTRK : Defaulting to GDEV Hardware\n"
 	.4byte 0x30303030
 
-.global lbl_8020D7C8
-lbl_8020D7C8:
+.global s_cc_not_initialized_8020d7c8
+s_cc_not_initialized_8020d7c8:
 
 	# ROM: 0x20A7C8
 	.asciz "cc not initialized\n"
@@ -19407,35 +19407,35 @@ lbl_8020D7C8:
 	.balign 4
 	.asciz "cc_write sending %ld bytes\n"
 
-.global lbl_8020D824
-lbl_8020D824:
+.global s_Expected_packet_size___0x_08x____8020d824
+s_Expected_packet_size___0x_08x____8020d824:
 
 	# ROM: 0x20A824
 	.asciz "Expected packet size : 0x%08x (%ld)\n"
 	.balign 4
 
-.global lbl_8020D84C
-lbl_8020D84C:
+.global s_cc_read___error_reading_bytes_fr_8020d84c
+s_cc_read___error_reading_bytes_fr_8020d84c:
 
 	# ROM: 0x20A84C
 	.asciz "cc_read : error reading bytes from EXI2 %ld\n"
 	.balign 4
 
-.global lbl_8020D87C
-lbl_8020D87C:
+.global s_CALLING_EXI2_Init_8020d87c
+s_CALLING_EXI2_Init_8020d87c:
 
 	# ROM: 0x20A87C
 	.asciz "CALLING EXI2_Init\n"
 	.balign 4
 
-.global lbl_8020D890
-lbl_8020D890:
+.global s_DONE_CALLING_EXI2_Init_8020d890
+s_DONE_CALLING_EXI2_Init_8020d890:
 
 	# ROM: 0x20A890
 	.asciz "DONE CALLING EXI2_Init\n"
 
-.global lbl_8020D8A8
-lbl_8020D8A8:
+.global s_cc_not_initialized_8020d8a8
+s_cc_not_initialized_8020d8a8:
 
 	# ROM: 0x20A8A8
 	.asciz "cc not initialized\n"
@@ -19443,42 +19443,42 @@ lbl_8020D8A8:
 	.balign 4
 	.asciz "cc_write sending %ld bytes\n"
 
-.global lbl_8020D904
-lbl_8020D904:
+.global s_Expected_packet_size___0x_08x____8020d904
+s_Expected_packet_size___0x_08x____8020d904:
 
 	# ROM: 0x20A904
 	.asciz "Expected packet size : 0x%08x (%ld)\n"
 	.balign 4
 
-.global lbl_8020D92C
-lbl_8020D92C:
+.global s_cc_read___error_reading_bytes_fr_8020d92c
+s_cc_read___error_reading_bytes_fr_8020d92c:
 
 	# ROM: 0x20A92C
 	.asciz "cc_read : error reading bytes from EXI2 %ld\n"
 	.balign 4
 
-.global lbl_8020D95C
-lbl_8020D95C:
+.global s_CALLING_EXI2_Init_8020d95c
+s_CALLING_EXI2_Init_8020d95c:
 
 	# ROM: 0x20A95C
 	.asciz "CALLING EXI2_Init\n"
 	.balign 4
 
-.global lbl_8020D970
-lbl_8020D970:
+.global s_DONE_CALLING_EXI2_Init_8020d970
+s_DONE_CALLING_EXI2_Init_8020d970:
 
 	# ROM: 0x20A970
 	.asciz "DONE CALLING EXI2_Init\n"
 
-.global lbl_8020D988
-lbl_8020D988:
+.global s_std__exception_8020d988
+s_std__exception_8020d988:
 
 	# ROM: 0x20A988
 	.asciz "std::exception"
 	.byte 0x30
 
-.global lbl_8020D998
-lbl_8020D998:
+.global s_exception_8020d998
+s_exception_8020d998:
 
 	# ROM: 0x20A998
 	.asciz "exception"
@@ -19516,22 +19516,22 @@ lbl_8020D9D0:
 	.asciz "!std::bad_exception!!"
 	.balign 4
 
-.global lbl_8020DA24
-lbl_8020DA24:
+.global s_std__bad_exception_8020da24
+s_std__bad_exception_8020da24:
 
 	# ROM: 0x20AA24
 	.asciz "std::bad_exception"
 	.balign 4
 
-.global lbl_8020DA38
-lbl_8020DA38:
+.global s_std__exception_8020da38
+s_std__exception_8020da38:
 
 	# ROM: 0x20AA38
 	.asciz "std::exception"
 	.balign 4
 
-.global lbl_8020DA48
-lbl_8020DA48:
+.global s_bad_exception_8020da48
+s_bad_exception_8020da48:
 
 	# ROM: 0x20AA48
 	.asciz "bad_exception"
@@ -19540,15 +19540,15 @@ lbl_8020DA48:
 	.byte 0x30, 0x30
 	.4byte 0x30303030
 
-.global lbl_8020DA68
-lbl_8020DA68:
+.global s_GCN_Mem_Alloc_c___InitDefaultHea_8020da68
+s_GCN_Mem_Alloc_c___InitDefaultHea_8020da68:
 
 	# ROM: 0x20AA68
 	.asciz "GCN_Mem_Alloc.c : InitDefaultHeap. No Heap Available\n"
 	.byte 0x30, 0x30
 
-.global lbl_8020DAA0
-lbl_8020DAA0:
+.global s_Metrowerks_CW_runtime_library_in_8020daa0
+s_Metrowerks_CW_runtime_library_in_8020daa0:
 
 	# ROM: 0x20AAA0
 	.asciz "Metrowerks CW runtime library initializing default heap\n"
@@ -19965,12 +19965,12 @@ lbl_8020E240:
 lbl_8020E2D8:
 
 	# ROM: 0x20B2D8
-	.4byte lbl_80231700
-	.4byte lbl_80231780
+	.4byte s__An_error_has_occurred__Turn_the_80231700
+	.4byte s__Ein_Fehler_ist_aufgetreten__Bit_80231780
 	.4byte lbl_8023181C
 	.4byte lbl_802318AC
 	.4byte lbl_80231934
-	.4byte lbl_802319B4
+	.4byte s__Er_is_een_fout_opgetreden__Zet_d_802319b4
 
 .global lbl_8020E2F0
 lbl_8020E2F0:
@@ -20162,8 +20162,8 @@ lbl_8020E508:
 	.asciz "FreeHeap  :%9d(%7.1fK)(%6.3fM)\n"
 	.asciz "RemainHeap:%9d(%7.1fK)(%6.3fM)\n"
 
-.global lbl_8020E6E4
-lbl_8020E6E4:
+.global s_mm__Alloc___alloc_size_must_be_3_8020e6e4
+s_mm__Alloc___alloc_size_must_be_3_8020e6e4:
 
 	# ROM: 0x20B6E4
 	.asciz "mm::Alloc>> alloc size must be 32byte alignment -- %s(%d)!\n"
@@ -20254,8 +20254,8 @@ lbl_8020E7F8:
 	.byte 0x30, 0x30
 	.4byte 0x30303030
 
-.global lbl_8020E808
-lbl_8020E808:
+.global s_shadow_h_8020e808
+s_shadow_h_8020e808:
 
 	# ROM: 0x20B808
 	.asciz "shadow.h"
@@ -20589,8 +20589,8 @@ lbl_8020EC80:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8020EC8C
-lbl_8020EC8C:
+.global s_CPrimitive_8020ec8c
+s_CPrimitive_8020ec8c:
 
 	# ROM: 0x20BC8C
 	.asciz "CPrimitive"
@@ -20654,35 +20654,35 @@ lbl_8020ECA8:
 	.asciz "internal error on OSInitFont()\n"
 	.4byte 0x30303030
 
-.global lbl_8020EE38
-lbl_8020EE38:
+.global s_CFileArchive_8020ee38
+s_CFileArchive_8020ee38:
 
 	# ROM: 0x20BE38
 	.asciz "CFileArchive"
 	.balign 4
 
-.global lbl_8020EE48
-lbl_8020EE48:
+.global s_DVDFileInfo_8020ee48
+s_DVDFileInfo_8020ee48:
 
 	# ROM: 0x20BE48
 	.asciz "DVDFileInfo"
 
-.global lbl_8020EE54
-lbl_8020EE54:
+.global s_cannot_open_____s___8020ee54
+s_cannot_open_____s___8020ee54:
 
 	# ROM: 0x20BE54
 	.asciz "cannot open - '%s'!\n"
 	.balign 4
 
-.global lbl_8020EE6C
-lbl_8020EE6C:
+.global s_____HALT____8020ee6c
+s_____HALT____8020ee6c:
 
 	# ROM: 0x20BE6C
 	.asciz "\n!!!HALT!!!\n"
 	.balign 4
 
-.global lbl_8020EE7C
-lbl_8020EE7C:
+.global s_cfile_cpp_8020ee7c
+s_cfile_cpp_8020ee7c:
 
 	# ROM: 0x20BE7C
 	.asciz "cfile.cpp"
@@ -20794,43 +20794,43 @@ lbl_8020F030:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8020F054
-lbl_8020F054:
+.global s_CXObjIntp_8020f054
+s_CXObjIntp_8020f054:
 
 	# ROM: 0x20C054
 	.asciz "CXObjIntp"
 	.balign 4
 
-.global lbl_8020F060
-lbl_8020F060:
+.global s___jobj__flags___JOBJ_USE_QUATERN_8020f060
+s___jobj__flags___JOBJ_USE_QUATERN_8020f060:
 
 	# ROM: 0x20C060
 	.asciz "!(jobj->flags & JOBJ_USE_QUATERNION)"
 	.balign 4
 
-.global lbl_8020F088
-lbl_8020F088:
+.global s_translate_8020f088
+s_translate_8020f088:
 
 	# ROM: 0x20C088
 	.asciz "translate"
 	.balign 4
 
-.global lbl_8020F094
-lbl_8020F094:
+.global s_____HALT____8020f094
+s_____HALT____8020f094:
 
 	# ROM: 0x20C094
 	.asciz "\n!!!HALT!!!\n"
 	.balign 4
 
-.global lbl_8020F0A4
-lbl_8020F0A4:
+.global s_cobj_cpp_8020f0a4
+s_cobj_cpp_8020f0a4:
 
 	# ROM: 0x20C0A4
 	.asciz "cobj.cpp"
 	.balign 4
 
-.global lbl_8020F0B0
-lbl_8020F0B0:
+.global s_x_cobj_class_8020f0b0
+s_x_cobj_class_8020f0b0:
 
 	# ROM: 0x20C0B0
 	.asciz "x_cobj_class"
@@ -20838,21 +20838,21 @@ lbl_8020F0B0:
 	.asciz "ObjArchive::%s() ... error on ArchiveParse - %s\n"
 	.balign 4
 
-.global lbl_8020F0F4
-lbl_8020F0F4:
+.global s_CJArchive_8020f0f4
+s_CJArchive_8020f0f4:
 
 	# ROM: 0x20C0F4
 	.asciz "CJArchive"
 	.byte 0x30, 0x30
 
-.global lbl_8020F100
-lbl_8020F100:
+.global s__tri__4d____2d__8020f100
+s__tri__4d____2d__8020f100:
 
 	# ROM: 0x20C100
 	.asciz "(tri:%4d * %2d)"
 
-.global lbl_8020F110
-lbl_8020F110:
+.global s__trigonChecker_8020f110
+s__trigonChecker_8020f110:
 
 	# ROM: 0x20C110
 	.asciz "_trigonChecker"
@@ -20878,8 +20878,8 @@ lbl_8020F130:
 	.4byte 0xC0400000
 	.4byte 0x40400000
 
-.global lbl_8020F150
-lbl_8020F150:
+.global s__outline__8020f150
+s__outline__8020f150:
 
 	# ROM: 0x20C150
 	.asciz "(outline)"
@@ -20905,8 +20905,8 @@ lbl_8020F160:
 	.asciz "unmatch versions between system(%d) and ptcl-file(%d)"
 	.byte 0x30, 0x30
 
-.global lbl_8020F1D8
-lbl_8020F1D8:
+.global s________________________8020f1d8
+s________________________8020f1d8:
 
 	# ROM: 0x20C1D8
 	.asciz "----------------------\n"
@@ -20948,8 +20948,8 @@ lbl_8020F1D8:
 	.byte 0x30, 0x30, 0x30
 	.4byte 0x30303030
 
-.global lbl_8020F3C0
-lbl_8020F3C0:
+.global s_CARD_RESULT_UNLOCKED_8020f3c0
+s_CARD_RESULT_UNLOCKED_8020f3c0:
 
 	# ROM: 0x20C3C0
 	.asciz "CARD_RESULT_UNLOCKED"
@@ -20983,8 +20983,8 @@ lbl_8020F3C0:
 	.balign 4
 	.asciz "CARD_RESULT_FATAL_ERROR"
 
-.global lbl_8020F530
-lbl_8020F530:
+.global s_file_not_found____s_8020f530
+s_file_not_found____s_8020f530:
 
 	# ROM: 0x20C530
 	.asciz "file not found - %s\n"
@@ -20995,15 +20995,15 @@ lbl_8020F530:
 	.byte 0x30, 0x30, 0x30
 	.4byte 0x30303030
 
-.global lbl_8020F5A0
-lbl_8020F5A0:
+.global s_shadow_c_8020f5a0
+s_shadow_c_8020f5a0:
 
 	# ROM: 0x20C5A0
 	.asciz "shadow.c"
 	.balign 4
 
-.global lbl_8020F5AC
-lbl_8020F5AC:
+.global s_position_8020f5ac
+s_position_8020f5ac:
 
 	# ROM: 0x20C5AC
 	.asciz "position"
@@ -21011,15 +21011,15 @@ lbl_8020F5AC:
 	.asciz "a > 0.0F"
 	.balign 4
 
-.global lbl_8020F5C4
-lbl_8020F5C4:
+.global s_object_h_8020f5c4
+s_object_h_8020f5c4:
 
 	# ROM: 0x20C5C4
 	.asciz "object.h"
 	.balign 4
 
-.global lbl_8020F5D0
-lbl_8020F5D0:
+.global s_HSD_OBJ_o___ref_count____HSD_OBJ_8020f5d0
+s_HSD_OBJ_o___ref_count____HSD_OBJ_8020f5d0:
 
 	# ROM: 0x20C5D0
 	.asciz "HSD_OBJ(o)->ref_count != HSD_OBJ_NOREF"
@@ -21036,21 +21036,21 @@ lbl_8020F5D0:
 	.asciz "shadow->texture->imagedesc"
 	.byte 0x30
 
-.global lbl_8020F658
-lbl_8020F658:
+.global s_sysdolphin_base_library_8020f658
+s_sysdolphin_base_library_8020f658:
 
 	# ROM: 0x20C658
 	.asciz "sysdolphin_base_library"
 
-.global lbl_8020F670
-lbl_8020F670:
+.global s_hsd_pobj_8020f670
+s_hsd_pobj_8020f670:
 
 	# ROM: 0x20C670
 	.asciz "hsd_pobj"
 	.balign 4
 
-.global lbl_8020F67C
-lbl_8020F67C:
+.global s_pobj__u_shape_set_8020f67c
+s_pobj__u_shape_set_8020f67c:
 
 	# ROM: 0x20C67C
 	.asciz "pobj->u.shape_set"
@@ -21067,8 +21067,8 @@ lbl_8020F67C:
 	.asciz "normal_buffer_size >= shape_set->nb_normal_index * 3"
 	.balign 4
 
-.global lbl_8020F75C
-lbl_8020F75C:
+.global s_attr__d__is_not_supported_by_sys_8020f75c
+s_attr__d__is_not_supported_by_sys_8020f75c:
 
 	# ROM: 0x20C75C
 	.asciz "attr(%d) is not supported by sysdolphin\n"
@@ -21076,28 +21076,28 @@ lbl_8020F75C:
 	.asciz "shape_set->normal_desc->attr == GX_VA_NBT"
 	.balign 4
 
-.global lbl_8020F7B4
-lbl_8020F7B4:
+.global s_shape_set__normal_desc__comp_cnt_8020f7b4
+s_shape_set__normal_desc__comp_cnt_8020f7b4:
 
 	# ROM: 0x20C7B4
 	.asciz "shape_set->normal_desc->comp_cnt == GX_NRM_XYZ"
 	.balign 4
 
-.global lbl_8020F7E4
-lbl_8020F7E4:
+.global s_unexpected_normal_type__8020f7e4
+s_unexpected_normal_type__8020f7e4:
 
 	# ROM: 0x20C7E4
 	.asciz "unexpected normal type."
 
-.global lbl_8020F7FC
-lbl_8020F7FC:
+.global s_shape_set__vertex_desc__comp_cnt_8020f7fc
+s_shape_set__vertex_desc__comp_cnt_8020f7fc:
 
 	# ROM: 0x20C7FC
 	.asciz "shape_set->vertex_desc->comp_cnt == GX_POS_XYZ"
 	.balign 4
 
-.global lbl_8020F82C
-lbl_8020F82C:
+.global s_unexpected_vertex_type__8020f82c
+s_unexpected_vertex_type__8020f82c:
 
 	# ROM: 0x20C82C
 	.asciz "unexpected vertex type.\n"
@@ -21117,56 +21117,56 @@ lbl_8020F82C:
 	.asciz "pobj: unexected type.\n"
 	.byte 0x30
 
-.global lbl_8020F8E0
-lbl_8020F8E0:
+.global s_sysdolphin_base_library_8020f8e0
+s_sysdolphin_base_library_8020f8e0:
 
 	# ROM: 0x20C8E0
 	.asciz "sysdolphin_base_library"
 
-.global lbl_8020F8F8
-lbl_8020F8F8:
+.global s_hsd_tobj_8020f8f8
+s_hsd_tobj_8020f8f8:
 
 	# ROM: 0x20C8F8
 	.asciz "hsd_tobj"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_8020F904
-lbl_8020F904:
+.global s_texmtx_index_exceed_hardware_lim_8020f904
+s_texmtx_index_exceed_hardware_lim_8020f904:
 
 	# ROM: 0x20C904
 	.asciz "texmtx index exceed hardware limit (%d).\n"
 	.byte 0x30, 0x30
 
-.global lbl_8020F930
-lbl_8020F930:
+.global s_imagedesc_8020f930
+s_imagedesc_8020f930:
 
 	# ROM: 0x20C930
 	.asciz "imagedesc"
 	.byte 0x30, 0x30
 
-.global lbl_8020F93C
-lbl_8020F93C:
+.global s_imagedesc__image_ptr_8020f93c
+s_imagedesc__image_ptr_8020f93c:
 
 	# ROM: 0x20C93C
 	.asciz "imagedesc->image_ptr"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_8020F954
-lbl_8020F954:
+.global s_unexpected_texmap_id__8020f954
+s_unexpected_texmap_id__8020f954:
 
 	# ROM: 0x20C954
 	.asciz "unexpected texmap id.\n"
 	.byte 0x30
 
-.global lbl_8020F96C
-lbl_8020F96C:
+.global s_tobj__repeat_s____tobj__repeat_t_8020f96c
+s_tobj__repeat_s____tobj__repeat_t_8020f96c:
 
 	# ROM: 0x20C96C
 	.asciz "tobj->repeat_s && tobj->repeat_t"
 	.byte 0x30, 0x30, 0x30
 
-.global lbl_8020F990
-lbl_8020F990:
+.global s_tobj__imagetbl_8020f990
+s_tobj__imagetbl_8020f990:
 
 	# ROM: 0x20C990
 	.asciz "tobj->imagetbl"

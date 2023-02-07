@@ -7,9 +7,9 @@
 lbl_801FD6C0:
 
 	# ROM: 0x1FA6C0
-	.4byte func_80150E18
-	.4byte lbl_80151BAC
-	.4byte func_80150E18
+	.4byte __destroy_global_chain
+	.4byte __fini_cpp_exceptions
+	.4byte __destroy_global_chain
 	.4byte 0
 	.4byte 0
 	.4byte 0

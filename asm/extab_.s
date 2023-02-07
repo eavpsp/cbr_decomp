@@ -49,7 +49,7 @@ lbl_80005658:
 	.4byte 0x00000010
 	.4byte 0
 	.4byte 0x82000008
-	.4byte lbl_801510B8
+	.4byte __partial_array_destructor____dt_void_
 
 .global lbl_80005670
 lbl_80005670:
@@ -263,125 +263,125 @@ lbl_8000570C:
 	.4byte 0x00160234
 	.4byte 0
 	.4byte 0x02000590
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x0200069C
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x820006AC
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x02000574
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x010001B8
 	.4byte 0x02000558
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x0200065C
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x0200066C
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x0200067C
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x0200068C
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x010001B8
 	.4byte 0x0200052C
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x0200064C
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x010001DC
 	.4byte 0x02000500
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x0200060C
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x0200061C
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x0200062C
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x0200063C
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x01000208
 	.4byte 0x020004D0
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x020004E0
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x0100021C
 	.4byte 0x020004A4
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x01000224
 	.4byte 0x02000450
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x02000478
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x02000488
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x01000224
 	.4byte 0x0380001E
 	.4byte 0x0414A206
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x03800019
 	.4byte 0x0424A206
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x01000224
 	.4byte 0x020003F8
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x01000224
 	.4byte 0x020003A4
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x020003CC
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x020003DC
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x01000224
 	.4byte 0x03800018
 	.4byte 0x0368A206
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x03800019
 	.4byte 0x0378A206
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x01000224
 	.4byte 0x0200034C
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x01000224
 	.4byte 0x02000320
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x02000330
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x01000224
 	.4byte 0x02000300
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x01000224
 	.4byte 0x020002D4
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x01000224
 	.4byte 0x02000270
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x020005DC
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x020005EC
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x020005FC
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x01000224
 	.4byte 0x02000244
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x01000224
 	.4byte 0x02000218
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x02000228
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x01000224
 	.4byte 0x020001F8
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x01000224
 	.4byte 0x020001CC
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x01000224
 	.4byte 0x02000168
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x020005AC
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x020005BC
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x020005CC
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 	.4byte 0x01000224
 
 .global lbl_80005AA0
@@ -883,7 +883,7 @@ lbl_80005CD0:
 	.4byte 0x00700010
 	.4byte 0
 	.4byte 0x82000034
-	.4byte lbl_8000B334
+	.4byte zz_8000b334_
 
 .global lbl_80005CE8
 lbl_80005CE8:
@@ -929,7 +929,7 @@ lbl_80005D10:
 	.4byte 0x00700010
 	.4byte 0
 	.4byte 0x82000020
-	.4byte lbl_8000B334
+	.4byte zz_8000b334_
 
 .global lbl_80005D28
 lbl_80005D28:
@@ -1493,7 +1493,7 @@ lbl_80005FA0:
 	.4byte 0x00000010
 	.4byte 0
 	.4byte 0x8200000C
-	.4byte lbl_8000B334
+	.4byte zz_8000b334_
 
 .global lbl_80005FB8
 lbl_80005FB8:
@@ -1644,7 +1644,7 @@ lbl_80006058:
 	.4byte 0x001B0010
 	.4byte 0
 	.4byte 0x82000034
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 
 .global lbl_80006070
 lbl_80006070:
@@ -1802,7 +1802,7 @@ lbl_80006118:
 	.4byte 0x00000010
 	.4byte 0
 	.4byte 0x82000008
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 
 .global lbl_80006130
 lbl_80006130:
@@ -1850,12 +1850,12 @@ lbl_80006158:
 lbl_80006160:
 
 	# ROM: 0x1F8F40
-	.4byte func_800A0000
+	.4byte zz_800a0000_
 	.4byte 0x0000029C
 	.4byte 0x00F60010
 	.4byte 0
 	.4byte 0x8200000C
-	.4byte lbl_801A5AE4
+	.4byte cHeadTrack____dt_void__N47
 
 .global lbl_80006178
 lbl_80006178:
@@ -1866,7 +1866,7 @@ lbl_80006178:
 	.4byte 0x00740010
 	.4byte 0
 	.4byte 0x82000010
-	.4byte func_80008DC8
+	.4byte cHeadTrack____dt_void__N8
 
 .global lbl_80006190
 lbl_80006190:
