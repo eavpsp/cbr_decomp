@@ -7,10 +7,10 @@
 lbl_80006680:
 
 	# ROM: 0x1F9460
-	.4byte zz_80150e78_
+	.4byte freeStdException
 	.4byte 0x00000074
 	.4byte lbl_80005600
-	.4byte zz_80150eec_
+	.4byte FreeDataAtPointer
 	.4byte 0x0000004C
 	.4byte lbl_80005628
 	.4byte __destroy_arr
@@ -73,7 +73,7 @@ lbl_80006680:
 	.4byte zz_8018ec6c_
 	.4byte 0x000001C0
 	.4byte lbl_80005AC0
-	.4byte zz_8018ee60_
+	.4byte calculateCrossProduct3D
 	.4byte 0x00000068
 	.4byte lbl_80005AC8
 	.4byte zz_8018eec8_
@@ -112,28 +112,28 @@ lbl_80006680:
 	.4byte zz_801902c4_
 	.4byte 0x000002E0
 	.4byte lbl_80005B28
-	.4byte zz_801905d4_
+	.4byte getCameraValue
 	.4byte 0x0000030C
 	.4byte lbl_80005B30
-	.4byte zz_801908f8_
+	.4byte searchLinkedListForValue
 	.4byte 0x000001B8
 	.4byte lbl_80005B38
 	.4byte zz_80190ab0_
 	.4byte 0x00000040
 	.4byte lbl_80005B40
-	.4byte zz_80190af0_
+	.4byte ComputeVectorLengths
 	.4byte 0x00000370
 	.4byte lbl_80005B48
-	.4byte zz_80190e60_
+	.4byte normalizeVectors
 	.4byte 0x00000354
 	.4byte lbl_80005B50
-	.4byte zz_801911b4_
+	.4byte WriteStringToBuffer
 	.4byte 0x000000B4
 	.4byte lbl_80005B58
-	.4byte zz_80191310_
+	.4byte ParseHexString
 	.4byte 0x000000C8
 	.4byte lbl_80005B60
-	.4byte zz_801913d8_
+	.4byte ReportMemoryUsage
 	.4byte 0x000004EC
 	.4byte lbl_80005B68
 	.4byte zz_801918c4_
@@ -142,13 +142,13 @@ lbl_80006680:
 	.4byte zz_80191974_
 	.4byte 0x00000094
 	.4byte lbl_80005B78
-	.4byte zz_80191a08_
+	.4byte MergeMemoryChunks
 	.4byte 0x000002F8
 	.4byte lbl_80005B80
-	.4byte zz_80191d00_
+	.4byte FreeMemoryChunk
 	.4byte 0x00000104
 	.4byte lbl_80005B88
-	.4byte zz_80191e04_
+	.4byte AllocateAndStoreMemoryInfo
 	.4byte 0x00000324
 	.4byte lbl_80005B90
 	.4byte zz_80192128_
@@ -268,25 +268,25 @@ lbl_80006680:
 	.4byte zz_80194fd4_
 	.4byte 0x000000F4
 	.4byte lbl_80005CC8
-	.4byte zz_801950c8_
+	.4byte SetMsgData
 	.4byte 0x0000133C
 	.4byte lbl_80005CD0
 	.4byte __arraydtor_381_N21
 	.4byte 0x00000038
 	.4byte lbl_80005CE8
-	.4byte zz_8019643c_
+	.4byte SetTextObjData
 	.4byte 0x000000A4
 	.4byte lbl_80005CF0
-	.4byte zz_80196518_
+	.4byte writeStringToBufferAndSetMessageData
 	.4byte 0x000000F8
 	.4byte lbl_80005CF8
-	.4byte zz_80196610_
+	.4byte processMessageData
 	.4byte 0x000000F8
 	.4byte lbl_80005D00
 	.4byte zz_80196708_
 	.4byte 0x000001B4
 	.4byte lbl_80005D08
-	.4byte zz_801968bc_
+	.4byte ParseTextStream
 	.4byte 0x00000350
 	.4byte lbl_80005D10
 	.4byte zz_80196c28_
@@ -304,16 +304,16 @@ lbl_80006680:
 	.4byte zz_80197538_
 	.4byte 0x000002C8
 	.4byte lbl_80005D48
-	.4byte zz_80197800_
+	.4byte ProcessMatrixTransformations
 	.4byte 0x00000690
 	.4byte lbl_80005D50
-	.4byte zz_80197e90_
+	.4byte UpdateGraphicsSettingsAndRegisters
 	.4byte 0x000003C8
 	.4byte lbl_80005D58
-	.4byte zz_80198258_
+	.4byte StoreFloatingPointRegistersAndUpdateSettings
 	.4byte 0x000003BC
 	.4byte lbl_80005D60
-	.4byte zz_80198614_
+	.4byte UpdateRenderingSettings
 	.4byte 0x000002D8
 	.4byte lbl_80005D68
 	.4byte zz_801988ec_
@@ -322,22 +322,22 @@ lbl_80006680:
 	.4byte zz_80198af4_
 	.4byte 0x00000214
 	.4byte lbl_80005D78
-	.4byte zz_80198d08_
+	.4byte processSceneRender
 	.4byte 0x00000214
 	.4byte lbl_80005D80
 	.4byte zz_80198f1c_
 	.4byte 0x000001D0
 	.4byte lbl_80005D88
-	.4byte zz_801990ec_
+	.4byte ProcessRenderingData
 	.4byte 0x000001D0
 	.4byte lbl_80005D90
-	.4byte zz_801992bc_
+	.4byte UpdateGraphicsSettings
 	.4byte 0x000002C0
 	.4byte lbl_80005D98
-	.4byte zz_8019957c_
+	.4byte UpdateColorVariables
 	.4byte 0x000003C8
 	.4byte lbl_80005DA0
-	.4byte zz_80199944_
+	.4byte post_physics_update
 	.4byte 0x00000038
 	.4byte lbl_80005DA8
 	.4byte zz_8019997c_
@@ -358,22 +358,22 @@ lbl_80006680:
 	.4byte zz_8019addc_
 	.4byte 0x000000B8
 	.4byte lbl_80005DD8
-	.4byte zz_8019ae94_
+	.4byte process_and_update_params_on_condition
 	.4byte 0x0000003C
 	.4byte lbl_80005DE0
-	.4byte zz_8019aed0_
+	.4byte updateTevStagesAndTexCoords
 	.4byte 0x000000D0
 	.4byte lbl_80005DE8
 	.4byte zz_8019b128_
 	.4byte 0x00000150
 	.4byte lbl_80005DF0
-	.4byte zz_8019b278_
+	.4byte handleGraphicsSettingsUpdates
 	.4byte 0x000000D4
 	.4byte lbl_80005DF8
 	.4byte zz_8019b6c0_
 	.4byte 0x00000190
 	.4byte lbl_80005E00
-	.4byte zz_8019b850_
+	.4byte SetDisplayConfig
 	.4byte 0x000000A0
 	.4byte lbl_80005E08
 	.4byte zz_8019b8f0_
@@ -385,19 +385,19 @@ lbl_80006680:
 	.4byte zz_8019b9a8_
 	.4byte 0x00000044
 	.4byte lbl_80005E20
-	.4byte zz_8019b9ec_
+	.4byte processTexturedRectangle
 	.4byte 0x0000009C
 	.4byte lbl_80005E28
-	.4byte zz_8019ba88_
+	.4byte renderTextureWithMatrixIfNotNull
 	.4byte 0x0000007C
 	.4byte lbl_80005E30
 	.4byte zz_8019bb04_
 	.4byte 0x0000015C
 	.4byte lbl_80005E38
-	.4byte zz_8019bc60_
+	.4byte processMatrix
 	.4byte 0x000002A4
 	.4byte lbl_80005E40
-	.4byte zz_8019bf04_
+	.4byte renderQuad
 	.4byte 0x000001FC
 	.4byte lbl_80005E48
 	.4byte zz_8019c100_
@@ -406,16 +406,16 @@ lbl_80006680:
 	.4byte zz_8019c258_
 	.4byte 0x000002F4
 	.4byte lbl_80005E58
-	.4byte zz_8019c54c_
+	.4byte ProcessMatrixAndRenderGraphics
 	.4byte 0x00000200
 	.4byte lbl_80005E60
 	.4byte zz_8019c74c_
 	.4byte 0x00000158
 	.4byte lbl_80005E68
-	.4byte zz_8019c8a4_
+	.4byte DrawTrianglesWithNormalVectors
 	.4byte 0x00000294
 	.4byte lbl_80005E70
-	.4byte zz_8019cb38_
+	.4byte draw_vertices
 	.4byte 0x00000284
 	.4byte lbl_80005E78
 	.4byte zz_8019cdbc_
@@ -424,25 +424,25 @@ lbl_80006680:
 	.4byte zz_8019d060_
 	.4byte 0x0000029C
 	.4byte lbl_80005E88
-	.4byte zz_8019d2fc_
+	.4byte drawTrianglesWithNormals
 	.4byte 0x00000284
 	.4byte lbl_80005E90
-	.4byte zz_8019d580_
+	.4byte processVertexData
 	.4byte 0x00000264
 	.4byte lbl_80005E98
-	.4byte zz_8019d7e4_
+	.4byte processMatrixData
 	.4byte 0x00000280
 	.4byte lbl_80005EA0
 	.4byte zz_8019da64_
 	.4byte 0x00000298
 	.4byte lbl_80005EA8
-	.4byte zz_8019dcfc_
+	.4byte processMatrixData_N2
 	.4byte 0x00000260
 	.4byte lbl_80005EB0
-	.4byte zz_8019df5c_
+	.4byte concatenateAndTransformMatrices
 	.4byte 0x0000022C
 	.4byte lbl_80005EB8
-	.4byte zz_8019e188_
+	.4byte ProcessMatrix
 	.4byte 0x00000120
 	.4byte lbl_80005EC0
 	.4byte zz_8019e2a8_
@@ -466,10 +466,10 @@ lbl_80006680:
 	.4byte zz_8019e8bc_
 	.4byte 0x00000038
 	.4byte lbl_80005EF8
-	.4byte zz_8019e8f4_
+	.4byte GetFontInformation
 	.4byte 0x0000034C
 	.4byte lbl_80005F00
-	.4byte zz_8019ec40_
+	.4byte LoadROMFont
 	.4byte 0x00000738
 	.4byte lbl_80005F08
 	.4byte zz_8019f40c_
@@ -484,16 +484,16 @@ lbl_80006680:
 	.4byte zz_8019f6ec_
 	.4byte 0x00000118
 	.4byte lbl_80005F28
-	.4byte zz_8019f804_
+	.4byte CloseDevice
 	.4byte 0x00000074
 	.4byte lbl_80005F30
-	.4byte zz_8019f878_
+	.4byte OpenFileStream
 	.4byte 0x00000060
 	.4byte lbl_80005F38
 	.4byte zz_8019f8d8_
 	.4byte 0x00000044
 	.4byte lbl_80005F40
-	.4byte zz_8019f91c_
+	.4byte ReadCFile
 	.4byte 0x00000334
 	.4byte lbl_80005F48
 	.4byte zz_8019fc50_
@@ -520,22 +520,22 @@ lbl_80006680:
 	.4byte zz_8019fe3c_
 	.4byte 0x000000EC
 	.4byte lbl_80005F88
-	.4byte zz_8019ff28_
+	.4byte DrawTexturedRectangle
 	.4byte 0x000001B8
 	.4byte lbl_80005F90
-	.4byte zz_801a00e0_
+	.4byte renderTextureWithMatrix
 	.4byte 0x00000224
 	.4byte lbl_80005F98
-	.4byte zz_801a0304_
+	.4byte GetFontInfoForTexObj
 	.4byte 0x0000010C
 	.4byte lbl_80005FA0
-	.4byte zz_801a0410_
+	.4byte CopyObjectData
 	.4byte 0x000000C4
 	.4byte lbl_80005FB8
 	.4byte zz_801a04d4_
 	.4byte 0x00000080
 	.4byte lbl_80005FC0
-	.4byte zz_801a0554_
+	.4byte InitTextureObjectWithTLUT
 	.4byte 0x00000164
 	.4byte lbl_80005FC8
 	.4byte zz_801a06b8_
@@ -571,7 +571,7 @@ lbl_80006680:
 	.4byte zz_801a138c_
 	.4byte 0x00000064
 	.4byte lbl_80006020
-	.4byte zz_801a13f0_
+	.4byte cleanupFielderAction
 	.4byte 0x000000A8
 	.4byte lbl_80006028
 	.4byte zz_801a1498_
@@ -733,7 +733,7 @@ lbl_80006680:
 	.4byte zz_801a8a10_
 	.4byte 0x00000074
 	.4byte lbl_80006210
-	.4byte zz_801a8a84_
+	.4byte CreateObjectAndInitialize
 	.4byte 0x0000012C
 	.4byte lbl_80006218
 	.4byte zz_801a8bb0_
@@ -754,61 +754,61 @@ lbl_80006680:
 	.4byte zz_801a9050_
 	.4byte 0x000001EC
 	.4byte lbl_80006248
-	.4byte zz_801a923c_
+	.4byte closeAndCleanupDataStructures
 	.4byte 0x00000088
 	.4byte lbl_80006250
 	.4byte zz_801a92c4_
 	.4byte 0x00000104
 	.4byte lbl_80006258
-	.4byte zz_801a94e4_
+	.4byte UpdateCardStatus
 	.4byte 0x00000054
 	.4byte lbl_80006260
-	.4byte zz_801a9538_
+	.4byte CardStatus
 	.4byte 0x00000054
 	.4byte lbl_80006268
-	.4byte zz_801a958c_
+	.4byte GetFreeCardBlocks
 	.4byte 0x000000B0
 	.4byte lbl_80006270
-	.4byte zz_801a963c_
+	.4byte WriteToCardAsync
 	.4byte 0x00000070
 	.4byte lbl_80006278
-	.4byte zz_801a96ac_
+	.4byte HandleCardReadAsync
 	.4byte 0x0000007C
 	.4byte lbl_80006280
-	.4byte zz_801a9728_
+	.4byte DeleteCardData
 	.4byte 0x00000050
 	.4byte lbl_80006288
-	.4byte zz_801a9778_
+	.4byte CloseCard
 	.4byte 0x00000038
 	.4byte lbl_80006290
-	.4byte zz_801a97b0_
+	.4byte CloseCard_N2
 	.4byte 0x00000040
 	.4byte lbl_80006298
-	.4byte zz_801a97f0_
+	.4byte OpenCard
 	.4byte 0x00000054
 	.4byte lbl_800062A0
-	.4byte zz_801a9844_
+	.4byte CreateData
 	.4byte 0x00000064
 	.4byte lbl_800062A8
-	.4byte zz_801a98a8_
+	.4byte formatCardRegionAndReturnStatus
 	.4byte 0x00000040
 	.4byte lbl_800062B0
-	.4byte zz_801a98e8_
+	.4byte GetCard
 	.4byte 0x00000040
 	.4byte lbl_800062B8
-	.4byte zz_801a9928_
+	.4byte UnMount
 	.4byte 0x00000038
 	.4byte lbl_800062C0
-	.4byte zz_801a9960_
+	.4byte UnMountCard
 	.4byte 0x00000040
 	.4byte lbl_800062C8
-	.4byte zz_801a99a0_
+	.4byte MountCardAndGetParameterValue
 	.4byte 0x00000058
 	.4byte lbl_800062D0
 	.4byte zz_801a99f8_
 	.4byte 0x0000003C
 	.4byte lbl_800062D8
-	.4byte zz_801a9a34_
+	.4byte ProbeCard
 	.4byte 0x0000006C
 	.4byte lbl_800062E0
 	.4byte zz_801a9aa0_
@@ -823,22 +823,22 @@ lbl_80006680:
 	.4byte zz_801a9b40_
 	.4byte 0x0000005C
 	.4byte lbl_80006300
-	.4byte zz_801a9b9c_
+	.4byte InitializeAndDrawRectangleWrapper
 	.4byte 0x0000007C
 	.4byte lbl_80006308
-	.4byte zz_801a9c18_
+	.4byte ProcessMediaAndHandleErrors
 	.4byte 0x00000264
 	.4byte lbl_80006310
-	.4byte zz_801a9e7c_
+	.4byte stopAudioAndResetDvdDataAndCloseDvdIfNeeded
 	.4byte 0x00000058
 	.4byte lbl_80006318
-	.4byte zz_801a9ed4_
+	.4byte initializeDataAndStoreResult
 	.4byte 0x0000005C
 	.4byte lbl_80006320
 	.4byte zz_801a9f30_
 	.4byte 0x0000004C
 	.4byte lbl_80006328
-	.4byte zz_801a9f7c_
+	.4byte execute_registered_callbacks
 	.4byte 0x00000060
 	.4byte lbl_80006330
 	.4byte cPlayer__PostPhysicsUpdate_void__N42
@@ -850,16 +850,16 @@ lbl_80006680:
 	.4byte zz_801aa0b8_
 	.4byte 0x00000048
 	.4byte lbl_80006348
-	.4byte zz_801aa100_
+	.4byte SetLineWidthWithParams
 	.4byte 0x00000064
 	.4byte lbl_80006350
 	.4byte zz_801aa164_
 	.4byte 0x00000090
 	.4byte lbl_80006358
-	.4byte zz_801aa1f4_
+	.4byte updateCullMode
 	.4byte 0x0000003C
 	.4byte lbl_80006360
-	.4byte zz_801aa230_
+	.4byte SetLineWidthIfNeeded
 	.4byte 0x00000064
 	.4byte lbl_80006368
 	.4byte zz_801aa2a4_
@@ -868,13 +868,13 @@ lbl_80006680:
 	.4byte zz_801aa318_
 	.4byte 0x00000090
 	.4byte lbl_80006378
-	.4byte zz_801aa3a8_
+	.4byte updateGraphicsSettings
 	.4byte 0x000004E0
 	.4byte lbl_80006380
 	.4byte zz_801aa888_
 	.4byte 0x00000234
 	.4byte lbl_80006388
-	.4byte zz_801aaabc_
+	.4byte TransformVectorWithMatrixAndQuaternion
 	.4byte 0x00000210
 	.4byte lbl_80006390
 	.4byte zz_801aaccc_
@@ -892,7 +892,7 @@ lbl_80006680:
 	.4byte zz_801ab1b4_
 	.4byte 0x000000AC
 	.4byte lbl_800063B8
-	.4byte zz_801ab260_
+	.4byte updateNodeSurface
 	.4byte 0x000001C0
 	.4byte lbl_800063C0
 	.4byte zz_801ab420_
@@ -958,7 +958,7 @@ lbl_80006680:
 	.4byte zz_801ae0fc_
 	.4byte 0x0000028C
 	.4byte lbl_80006468
-	.4byte zz_801ae388_
+	.4byte process_parameters
 	.4byte 0x000001CC
 	.4byte lbl_80006470
 	.4byte zz_801ae554_
@@ -1015,7 +1015,7 @@ lbl_80006680:
 	.4byte zz_801af00c_
 	.4byte 0x00000348
 	.4byte lbl_80006500
-	.4byte zz_801af354_
+	.4byte ProcessTextureMap
 	.4byte 0x00000560
 	.4byte lbl_80006508
 	.4byte zz_801af8b4_
@@ -1096,7 +1096,7 @@ lbl_80006680:
 	.4byte zz_801b6104_
 	.4byte 0x00000030
 	.4byte lbl_800065D8
-	.4byte zz_801b6134_
+	.4byte InitializeAndDrawRectangle
 	.4byte 0x000000A4
 	.4byte lbl_800065E0
 	.4byte cPlayer__PostPhysicsUpdate_void__N43
@@ -1105,46 +1105,46 @@ lbl_80006680:
 	.4byte zz_801b61f8_
 	.4byte 0x00000074
 	.4byte lbl_800065F0
-	.4byte zz_801b626c_
+	.4byte ProcessMediaData
 	.4byte 0x00000378
 	.4byte lbl_800065F8
-	.4byte zz_801b65e4_
+	.4byte Reset_DVD_Data
 	.4byte 0x00000108
 	.4byte lbl_80006600
-	.4byte zz_801b6714_
+	.4byte ProcessReadAsync
 	.4byte 0x0000017C
 	.4byte lbl_80006608
 	.4byte zz_801b68ec_
 	.4byte 0x0000017C
 	.4byte lbl_80006610
-	.4byte zz_801b6a68_
+	.4byte initializeMemory
 	.4byte 0x000001D0
 	.4byte lbl_80006618
-	.4byte zz_801b6cbc_
+	.4byte close_DVD_if_needed
 	.4byte 0x00000090
 	.4byte lbl_80006620
-	.4byte zz_801b6d4c_
+	.4byte ProcessDataFromDVD
 	.4byte 0x0000028C
 	.4byte lbl_80006628
-	.4byte zz_801b6ff0_
+	.4byte OpenDVDFile
 	.4byte 0x000000C4
 	.4byte lbl_80006630
 	.4byte zz_801b70b4_
 	.4byte 0x00000114
 	.4byte lbl_80006638
-	.4byte zz_801b71d8_
+	.4byte DrawRectangle
 	.4byte 0x000000D0
 	.4byte lbl_80006640
-	.4byte zz_801b72a8_
+	.4byte ConfigureVertexDescriptors
 	.4byte 0x00000068
 	.4byte lbl_80006648
-	.4byte zz_801b7310_
+	.4byte UpdateGXLOD
 	.4byte 0x00000164
 	.4byte lbl_80006650
-	.4byte zz_801b7474_
+	.4byte initializeGXGraphics
 	.4byte 0x000003FC
 	.4byte lbl_80006658
-	.4byte zz_801b7870_
+	.4byte ResetGXData
 	.4byte 0x00000118
 	.4byte lbl_80006660
 
@@ -1154,7 +1154,7 @@ lbl_80007850:
 	# ROM: 0x1FA630
 	.4byte lbl_80006680
 	.4byte lbl_80007850
-	.4byte zz_80150e78_
+	.4byte freeStdException
 	.4byte 0x00066B10
 	.4byte 0
 	.4byte 0

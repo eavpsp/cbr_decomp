@@ -3526,8 +3526,8 @@ lbl_8065ADF8:
 	.4byte 0x000000FF
 	.4byte 0x30303030
 
-.global lbl_8065AE00
-lbl_8065AE00:
+.global s_0000000_8065ae00
+s_0000000_8065ae00:
 
 	# ROM: 0x25A140
 	.4byte 0x7B303030

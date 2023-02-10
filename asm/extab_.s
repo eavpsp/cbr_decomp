@@ -883,7 +883,7 @@ lbl_80005CD0:
 	.4byte 0x00700010
 	.4byte 0
 	.4byte 0x82000034
-	.4byte zz_8000b334_
+	.4byte InitCFont
 
 .global lbl_80005CE8
 lbl_80005CE8:
@@ -929,7 +929,7 @@ lbl_80005D10:
 	.4byte 0x00700010
 	.4byte 0
 	.4byte 0x82000020
-	.4byte zz_8000b334_
+	.4byte InitCFont
 
 .global lbl_80005D28
 lbl_80005D28:
@@ -1493,7 +1493,7 @@ lbl_80005FA0:
 	.4byte 0x00000010
 	.4byte 0
 	.4byte 0x8200000C
-	.4byte zz_8000b334_
+	.4byte InitCFont
 
 .global lbl_80005FB8
 lbl_80005FB8:

@@ -8,23 +8,23 @@ lbl_801FD660:
 
 	# ROM: 0x1FA660
 	.4byte __init_cpp_exceptions
-	.4byte zz_8001933c_
-	.4byte zz_80031004_
-	.4byte zz_80062b6c_
-	.4byte zz_8006daf4_
-	.4byte zz_8006f94c_
-	.4byte zz_8007f664_
-	.4byte zz_8008a314_
-	.4byte zz_800e2520_
-	.4byte zz_800e68d8_
-	.4byte zz_800ea2c0_
-	.4byte zz_800f48c0_
-	.4byte zz_800fffa0_
-	.4byte zz_8010697c_
-	.4byte zz_801152a0_
-	.4byte zz_80135010_
-	.4byte zz_80138154_
-	.4byte zz_8014232c_
+	.4byte initCGame
+	.4byte InitializeData
+	.4byte initMenuMain
+	.4byte initInfoPointData
+	.4byte initStageData
+	.4byte initEventFlags
+	.4byte InitThreads
+	.4byte SetSceneFlags
+	.4byte InitCCamerActionLeticker
+	.4byte InitCStatus
+	.4byte initPointers
+	.4byte InitSlideMenu
+	.4byte InitMorePointers
+	.4byte SetIntroPointers
+	.4byte SetEventMSG
+	.4byte InitCCamActionAreaEX
+	.4byte initCHeadTrack
 	.4byte __sinit_GameTweaks_cpp
 	.4byte 0
 	.4byte 0

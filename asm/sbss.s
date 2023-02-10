@@ -883,18 +883,16 @@ lbl_8065B4D0:
 lbl_8065B4D4:
 	.skip 0x4
 
-/*8065b4d8*/
-.global systemLoopReset
-systemLoopReset:
+.global lbl_8065B4D8
+lbl_8065B4D8:
 	.skip 0x4
 
-/*intro button prompt check*/
 .global lbl_8065B4DC
 lbl_8065B4DC:
 	.skip 0x4
-/* 8065B4E0*/
-.global gameTimeOn
-gameTimeOn:
+
+.global lbl_8065B4E0
+lbl_8065B4E0:
 	.skip 0x10
 
 .global lbl_8065B4F0

@@ -100,23 +100,23 @@ lbl_8020FC80:
 	# ROM: 0x20CC80
 	.4byte lbl_80659ED8
 	.4byte 0
-	.4byte FUN_80007880
-	.4byte zz_80013580_
+	.4byte GetObjToRegister
+	.4byte ParseStageData
 	.4byte zz_80012a8c_
 	.4byte zz_80011bd8_
 	.4byte zz_8000facc_
-	.4byte zz_8000dfa8_
+	.4byte CGameMain
 	.4byte zz_8000cda0_
 	.4byte zz_8000c398_
-	.4byte zz_8000a4b8_
+	.4byte checkRangeAndReturnValue
 	.4byte CBGetBytesAvailableForRead
 	.4byte J3DTexGenBlock4__getNBTScale_void_
 	.4byte J3DTexGenBlock4__getNBTScale_void__N2
-	.4byte zz_8000a520_
+	.4byte add_constant_e5d38
 	.4byte J3DTexGenBlock4__getNBTScale_void__N3
 	.4byte J3DTexGenBlock4__getNBTScale_void__N4
-	.4byte zz_8000a52c_
-	.4byte zz_8000fa40_
+	.4byte add_constant_e7e20
+	.4byte GameReset
 
 .global switchdataD_8020fccc
 switchdataD_8020fccc:
@@ -186,7 +186,7 @@ lbl_8020FD74:
 	# ROM: 0x20CD74
 	.4byte lbl_80659EF8
 	.4byte 0
-	.4byte zz_80015b38_
+	.4byte SetCVectIntp
 	.4byte zz_800158d0_
 	.4byte zz_8001599c_
 	.4byte NSNMessengerScene__SceneCreated_void__N4
@@ -206,7 +206,7 @@ lbl_8020FD9C:
 	# ROM: 0x20CD9C
 	.4byte lbl_80659F08
 	.4byte 0
-	.4byte zz_80015bbc_
+	.4byte SetCCamActionArea
 	.4byte DBClose_N10
 	.4byte 0
 	.4byte DBClose_N3
@@ -230,9 +230,9 @@ lbl_8020FD9C:
 	.4byte gdev_cc_shutdown_N4
 	.4byte gdev_cc_shutdown_N5
 	.4byte TRKNubWelcome
-	.4byte zz_80015c54_
+	.4byte GetDAT_805a055c
 	.4byte THPSimpleGetCurrentFrame
-	.4byte zz_80015c74_
+	.4byte updateGlobalVariable_805a0560
 	.4byte zz_80015c84_
 	.4byte zz_80015cc8_
 	.4byte zz_80015d74_
@@ -259,7 +259,7 @@ lbl_8020FE34:
 	# ROM: 0x20CE34
 	.4byte lbl_80659F18
 	.4byte 0
-	.4byte zz_800161e0_
+	.4byte initVecInterp
 	.4byte zz_80015f08_
 	.4byte zz_80016004_
 	.4byte NSNMessengerScene__SceneCreated_void__N5
@@ -279,7 +279,7 @@ lbl_8020FE5C:
 	# ROM: 0x20CE5C
 	.4byte lbl_80659F20
 	.4byte 0
-	.4byte zz_8001658c_
+	.4byte SetCVectEaseInOutLerp
 	.4byte zz_80016264_
 	.4byte zz_8001641c_
 	.4byte zz_8001633c_
@@ -299,7 +299,7 @@ lbl_8020FE84:
 	# ROM: 0x20CE84
 	.4byte lbl_80659F28
 	.4byte 0
-	.4byte zz_80016918_
+	.4byte SetCVectEaseOutLerp
 	.4byte zz_80016610_
 	.4byte zz_800167a8_
 	.4byte zz_800166e0_
@@ -331,7 +331,7 @@ lbl_8020FEC8:
 	# ROM: 0x20CEC8
 	.4byte lbl_80659F30
 	.4byte 0
-	.4byte zz_80016e1c_
+	.4byte SetCVectEasOutDivideLerp
 	.4byte zz_800169e4_
 	.4byte zz_80016ca4_
 	.4byte zz_80016ae8_
@@ -363,7 +363,7 @@ lbl_8020FF0C:
 	# ROM: 0x20CF0C
 	.4byte lbl_80659F00
 	.4byte 0
-	.4byte zz_80016ecc_
+	.4byte SetCInterfaceCamActions
 	.4byte DBClose_N10
 	.4byte 0
 	.4byte DBClose_N3
@@ -425,7 +425,7 @@ lbl_8020FFB4:
 	# ROM: 0x20CFB4
 	.4byte lbl_80659F48
 	.4byte 0
-	.4byte zz_800091cc_
+	.4byte initCameraActions
 
 .global lbl_8020FFC0
 lbl_8020FFC0:
@@ -433,7 +433,7 @@ lbl_8020FFC0:
 	# ROM: 0x20CFC0
 	.4byte lbl_80659F50
 	.4byte 0
-	.4byte zz_80016f9c_
+	.4byte GetCameraMomento
 
 .global lbl_8020FFCC
 lbl_8020FFCC:
@@ -441,7 +441,7 @@ lbl_8020FFCC:
 	# ROM: 0x20CFCC
 	.4byte lbl_80659F58
 	.4byte 0
-	.4byte zz_8000902c_
+	.4byte initCameraControls
 
 .global lbl_8020FFD8
 lbl_8020FFD8:
@@ -457,7 +457,7 @@ lbl_8020FFE4:
 	# ROM: 0x20CFE4
 	.4byte lbl_80659F68
 	.4byte 0
-	.4byte zz_8001706c_
+	.4byte SetMsgFont
 
 .global lbl_8020FFF0
 lbl_8020FFF0:
@@ -465,7 +465,7 @@ lbl_8020FFF0:
 	# ROM: 0x20CFF0
 	.4byte lbl_80659F70
 	.4byte 0
-	.4byte zz_80008e70_
+	.4byte SetMSGFont
 
 .global lbl_8020FFFC
 lbl_8020FFFC:
@@ -501,7 +501,7 @@ lbl_8021000C:
 lbl_80210010:
 
 	# ROM: 0x20D010
-	.4byte zz_80008e10_
+	.4byte initCobjArchive
 
 .global lbl_80210014
 lbl_80210014:
@@ -537,7 +537,7 @@ lbl_80210024:
 lbl_80210028:
 
 	# ROM: 0x20D028
-	.4byte zz_80008c74_
+	.4byte GetMenuEX
 
 .global lbl_8021002C
 lbl_8021002C:
@@ -603,7 +603,7 @@ lbl_80210050:
 lbl_80210054:
 
 	# ROM: 0x20D054
-	.4byte zz_80017134_
+	.4byte SetCObjVec
 
 .global lbl_80210058
 lbl_80210058:
@@ -621,7 +621,7 @@ lbl_8021005C:
 lbl_80210060:
 
 	# ROM: 0x20D060
-	.4byte zz_800171bc_
+	.4byte SetCJObj
 
 .global lbl_80210064
 lbl_80210064:
@@ -672,7 +672,7 @@ lbl_80210084:
 	.4byte zz_80017e68_
 	.4byte zz_80018334_
 	.4byte zz_80018118_
-	.4byte zz_80018530_
+	.4byte ProcessObject
 
 .global lbl_802100A4
 lbl_802100A4:
@@ -729,7 +729,7 @@ lbl_802100C8:
 	# ROM: 0x20D0C8
 	.4byte lbl_80659FD0
 	.4byte 0
-	.4byte zz_80008650_
+	.4byte GetTitle
 
 .global lbl_802100D4
 lbl_802100D4:
@@ -789,7 +789,7 @@ lbl_80210108:
 lbl_8021010C:
 
 	# ROM: 0x20D10C
-	.4byte zz_80018688_
+	.4byte SetCShadows
 
 .global lbl_80210110
 lbl_80210110:
@@ -1085,7 +1085,7 @@ lbl_80210270:
 
 	# ROM: 0x20D270
 	.4byte 0
-	.4byte zz_80008050_
+	.4byte GetGXData
 
 .global lbl_80210278
 lbl_80210278:
@@ -1098,7 +1098,7 @@ lbl_80210278:
 lbl_80210280:
 
 	# ROM: 0x20D280
-	.4byte zz_8000b334_
+	.4byte InitCFont
 
 .global lbl_80210284
 lbl_80210284:
@@ -1141,7 +1141,7 @@ lbl_802102BC:
 	.4byte lbl_8065A0C0
 	.4byte 0
 	.4byte InGameTextOverlay____dt_void_
-	.4byte zz_800238a4_
+	.4byte UpdateDataWith_8065c0e8
 	.4byte zz_80023030_
 	.4byte zz_8002289c_
 
@@ -1211,7 +1211,7 @@ lbl_80210338:
 	# ROM: 0x20D338
 	.4byte lbl_8065A0F8
 	.4byte 0
-	.4byte zz_80018d28_
+	.4byte SetCTexObj
 
 .global lbl_80210344
 lbl_80210344:
@@ -1244,7 +1244,7 @@ lbl_8021036C:
 	# ROM: 0x20D36C
 	.4byte lbl_8065A108
 	.4byte 0
-	.4byte zz_80018e5c_
+	.4byte SetScreenFuncs
 
 .global lbl_80210378
 lbl_80210378:
@@ -1252,7 +1252,7 @@ lbl_80210378:
 	# ROM: 0x20D378
 	.4byte lbl_8065A110
 	.4byte 0
-	.4byte zz_80018ef4_
+	.4byte SetCParticle
 
 .global lbl_80210384
 lbl_80210384:
@@ -1260,7 +1260,7 @@ lbl_80210384:
 	# ROM: 0x20D384
 	.4byte lbl_8065A118
 	.4byte 0
-	.4byte zz_80018f7c_
+	.4byte SetCScrnQuake
 
 .global lbl_80210390
 lbl_80210390:
@@ -1292,7 +1292,7 @@ lbl_802103B4:
 	# ROM: 0x20D3B4
 	.4byte lbl_8065A138
 	.4byte 0
-	.4byte zz_800190c0_
+	.4byte SetCStack
 
 .global lbl_802103C0
 lbl_802103C0:
@@ -1316,7 +1316,7 @@ lbl_802103D8:
 	# ROM: 0x20D3D8
 	.4byte lbl_8065A148
 	.4byte 0
-	.4byte zz_800191a4_
+	.4byte InitXSound
 
 .global lbl_802103E4
 lbl_802103E4:
@@ -1324,7 +1324,7 @@ lbl_802103E4:
 	# ROM: 0x20D3E4
 	.4byte lbl_8065A150
 	.4byte 0
-	.4byte zz_80019218_
+	.4byte SetCCard
 
 .global lbl_802103F0
 lbl_802103F0:
@@ -1332,7 +1332,7 @@ lbl_802103F0:
 	# ROM: 0x20D3F0
 	.4byte lbl_8065A158
 	.4byte 0
-	.4byte zz_80019264_
+	.4byte SetMemCard
 
 .global lbl_802103FC
 lbl_802103FC:
@@ -1388,9 +1388,9 @@ lbl_80210458:
 	# ROM: 0x20D458
 	.4byte lbl_80659ED0
 	.4byte 0
-	.4byte zz_80007f3c_
+	.4byte SetCBase
 	.4byte DBClose_N8
-	.4byte zz_80015534_
+	.4byte initCBase
 	.4byte gdev_cc_shutdown
 	.4byte zz_800153bc_
 	.4byte DBClose_N9
@@ -1404,7 +1404,7 @@ lbl_80210458:
 	.4byte J3DTexGenBlock4__getNBTScale_void__N3
 	.4byte J3DTexGenBlock4__getNBTScale_void__N4
 	.4byte NSNMessengerScene__SceneCreated_void__N7
-	.4byte zz_800152a0_
+	.4byte KillCBase
 
 .global lbl_802104A4
 lbl_802104A4:
@@ -1443,7 +1443,7 @@ lbl_802104E4:
 	# ROM: 0x20D4E4
 	.4byte lbl_8065A188
 	.4byte 0
-	.4byte zz_80019554_
+	.4byte GetFileToRegister
 
 .global lbl_802104F0
 lbl_802104F0:
@@ -1647,15 +1647,15 @@ lbl_80210768:
 	.4byte FormationOffensive____dt_void__N22
 	.4byte zz_8019fd4c_
 	.4byte OverlayManager__DestroyMessengerManager_void_
-	.4byte zz_8019f91c_
+	.4byte ReadCFile
 	.4byte zz_8019f8d8_
 
 .global lbl_80210784
 lbl_80210784:
 
 	# ROM: 0x20D784
-	.4byte zz_8019f878_
-	.4byte zz_8019f804_
+	.4byte OpenFileStream
+	.4byte CloseDevice
 	.4byte zz_8019f6ec_
 
 .global lbl_80210790
@@ -2661,7 +2661,7 @@ lbl_8021139C:
 	.4byte lbl_8065A218
 	.4byte 0
 	.4byte InGameTextOverlay____dt_void__N4
-	.4byte zz_800238a4_
+	.4byte UpdateDataWith_8065c0e8
 	.4byte zz_80023030_
 	.4byte zz_80021570_
 
@@ -2681,8 +2681,8 @@ lbl_802113C8:
 	# ROM: 0x20E3C8
 	.4byte lbl_8065A220
 	.4byte 0
-	.4byte zz_8001b6e8_
-	.4byte zz_800238a4_
+	.4byte SetCScrnWipeTex
+	.4byte UpdateDataWith_8065c0e8
 	.4byte zz_80023030_
 	.4byte zz_80021a98_
 
@@ -2703,7 +2703,7 @@ lbl_802113F4:
 	.4byte lbl_8065A228
 	.4byte 0
 	.4byte InGameTextOverlay____dt_void__N3
-	.4byte zz_800238a4_
+	.4byte UpdateDataWith_8065c0e8
 	.4byte zz_80023030_
 	.4byte zz_800220dc_
 
@@ -2714,7 +2714,7 @@ lbl_8021140C:
 	.4byte lbl_8065A208
 	.4byte 0
 	.4byte FormationOffensive____dt_void__N18
-	.4byte zz_800238a4_
+	.4byte UpdateDataWith_8065c0e8
 	.4byte zz_80023030_
 	.4byte zz_8002289c_
 	.4byte 0x30303030
@@ -2733,7 +2733,7 @@ lbl_80211434:
 	# ROM: 0x20E434
 	.4byte lbl_8065A238
 	.4byte 0
-	.4byte zz_80024558_
+	.4byte SetCPtclDust3
 	.4byte nlListContainer_P8SaveData_____ct_void__N2
 	.4byte zz_800247d8_
 	.4byte zz_80024600_
@@ -2744,7 +2744,7 @@ lbl_8021144C:
 	# ROM: 0x20E44C
 	.4byte lbl_8065A230
 	.4byte 0
-	.4byte zz_80025030_
+	.4byte SetCPtclOne
 	.4byte nlListContainer_P8SaveData_____ct_void__N2
 	.4byte DBClose_N23
 	.4byte DBClose_N22
@@ -2763,7 +2763,7 @@ lbl_80211470:
 	# ROM: 0x20E470
 	.4byte lbl_8065A240
 	.4byte 0
-	.4byte zz_800250b8_
+	.4byte SetCPtclDust2
 	.4byte nlListContainer_P8SaveData_____ct_void__N2
 	.4byte zz_80024b1c_
 	.4byte zz_80024934_
@@ -2819,12 +2819,12 @@ lbl_802114E8:
 	.4byte lbl_8065A268
 	.4byte 0
 	.4byte PhysicsSphere____dt_void_
-	.4byte zz_80025aa4_
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80025150_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -2837,12 +2837,12 @@ lbl_802114E8:
 	.4byte zz_801a1dd0_
 	.4byte zz_801a306c_
 	.4byte zz_801a1498_
-	.4byte zz_800911c0_
+	.4byte cleanupObject
 	.4byte zz_801a138c_
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80025228_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -3223,13 +3223,13 @@ lbl_802119FC:
 	# ROM: 0x20E9FC
 	.4byte lbl_8065A29C
 	.4byte 0
-	.4byte zz_80008b38_
-	.4byte zz_80025aa4_
+	.4byte UpdateScene
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -3247,7 +3247,7 @@ lbl_802119FC:
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -4070,15 +4070,15 @@ lbl_80212490:
 	# ROM: 0x20F490
 	.4byte lbl_8065A2DC
 	.4byte 0
-	.4byte zz_80031f1c_
-	.4byte zz_80061ae8_
-	.4byte zz_80061abc_
-	.4byte zz_80031ad8_
+	.4byte calculateGraphMetrics
+	.4byte InitTextureWithTLUTAndTransform
+	.4byte initializeArrayWithGlobalVariables
+	.4byte gameDataHandler
 	.4byte zz_80031740_
 	.4byte zz_80031ecc_
 	.4byte zz_8003135c_
 	.4byte zz_800313a4_
-	.4byte zz_800313c8_
+	.4byte setFlagAndValue
 	.4byte nlListContainer_P8SaveData_____ct_void_
 
 .global switchdataD_802124c0
@@ -4389,14 +4389,14 @@ lbl_80212834:
 	.4byte lbl_8065A2FC
 	.4byte 0
 	.4byte zz_80032efc_
-	.4byte zz_80061ae8_
-	.4byte zz_80061abc_
+	.4byte InitTextureWithTLUTAndTransform
+	.4byte initializeArrayWithGlobalVariables
 	.4byte zz_8003255c_
 	.4byte zz_80032098_
 	.4byte zz_80032e24_
 	.4byte zz_8003135c_
 	.4byte zz_800313a4_
-	.4byte zz_800313c8_
+	.4byte setFlagAndValue
 	.4byte nlListContainer_P8SaveData_____ct_void_
 
 .global lbl_80212864
@@ -4416,14 +4416,14 @@ lbl_80212878:
 	.4byte lbl_8065A304
 	.4byte 0
 	.4byte zz_800341ec_
-	.4byte zz_80061ae8_
-	.4byte zz_80061abc_
+	.4byte InitTextureWithTLUTAndTransform
+	.4byte initializeArrayWithGlobalVariables
 	.4byte zz_800336dc_
 	.4byte zz_800330e4_
 	.4byte zz_80034108_
 	.4byte zz_8003135c_
 	.4byte zz_800313a4_
-	.4byte zz_800313c8_
+	.4byte setFlagAndValue
 	.4byte nlListContainer_P8SaveData_____ct_void_
 
 .global lbl_802128A8
@@ -4443,14 +4443,14 @@ lbl_802128BC:
 	.4byte lbl_8065A30C
 	.4byte 0
 	.4byte zz_8003d730_
-	.4byte zz_80061ae8_
+	.4byte InitTextureWithTLUTAndTransform
 	.4byte zz_8003d6fc_
 	.4byte zz_8003ce18_
-	.4byte zz_80039fbc_
+	.4byte SaveGameMenuHandler
 	.4byte zz_8003d350_
 	.4byte zz_8003135c_
 	.4byte zz_800313a4_
-	.4byte zz_800313c8_
+	.4byte setFlagAndValue
 	.4byte nlListContainer_P8SaveData_____ct_void_
 
 .global lbl_802128EC
@@ -4470,14 +4470,14 @@ lbl_80212900:
 	.4byte lbl_8065A314
 	.4byte 0
 	.4byte zz_8004ed74_
-	.4byte zz_80061ae8_
-	.4byte zz_80061abc_
+	.4byte InitTextureWithTLUTAndTransform
+	.4byte initializeArrayWithGlobalVariables
 	.4byte zz_8004dd1c_
 	.4byte zz_80044c74_
 	.4byte zz_8004e54c_
 	.4byte zz_8003135c_
 	.4byte zz_800313a4_
-	.4byte zz_800313c8_
+	.4byte setFlagAndValue
 	.4byte nlListContainer_P8SaveData_____ct_void_
 
 .global lbl_80212930
@@ -4497,14 +4497,14 @@ lbl_80212944:
 	.4byte lbl_8065A31C
 	.4byte 0
 	.4byte zz_8005c728_
-	.4byte zz_80061ae8_
-	.4byte zz_80061abc_
+	.4byte InitTextureWithTLUTAndTransform
+	.4byte initializeArrayWithGlobalVariables
 	.4byte zz_8005b438_
 	.4byte zz_8005773c_
 	.4byte zz_8005be74_
 	.4byte zz_8003135c_
 	.4byte zz_800313a4_
-	.4byte zz_800313c8_
+	.4byte setFlagAndValue
 	.4byte nlListContainer_P8SaveData_____ct_void_
 
 .global lbl_80212974
@@ -4524,14 +4524,14 @@ lbl_80212988:
 	.4byte lbl_8065A324
 	.4byte 0
 	.4byte zz_80060768_
-	.4byte zz_80061ae8_
-	.4byte zz_80061abc_
+	.4byte InitTextureWithTLUTAndTransform
+	.4byte initializeArrayWithGlobalVariables
 	.4byte zz_8005f378_
 	.4byte zz_8005ec48_
 	.4byte zz_80060118_
 	.4byte zz_8003135c_
 	.4byte zz_800313a4_
-	.4byte zz_800313c8_
+	.4byte setFlagAndValue
 	.4byte nlListContainer_P8SaveData_____ct_void_
 
 .global lbl_802129B8
@@ -4551,14 +4551,14 @@ lbl_802129CC:
 	.4byte lbl_8065A32C
 	.4byte 0
 	.4byte zz_80061424_
-	.4byte zz_80061ae8_
+	.4byte InitTextureWithTLUTAndTransform
 	.4byte zz_800613b0_
 	.4byte zz_80060cdc_
-	.4byte zz_800607d8_
+	.4byte store_and_restore_floating_point_registers
 	.4byte zz_80061290_
 	.4byte zz_80061204_
 	.4byte zz_800313a4_
-	.4byte zz_800313c8_
+	.4byte setFlagAndValue
 	.4byte zz_800611d4_
 
 .global lbl_802129FC
@@ -4568,14 +4568,14 @@ lbl_802129FC:
 	.4byte lbl_8065A2CC
 	.4byte 0
 	.4byte zz_80061c74_
-	.4byte zz_80061ae8_
-	.4byte zz_80061abc_
-	.4byte zz_800617dc_
-	.4byte zz_80061738_
+	.4byte InitTextureWithTLUTAndTransform
+	.4byte initializeArrayWithGlobalVariables
+	.4byte update_float_parameters
+	.4byte updateAndDrawSceneIfNeeded
 	.4byte zz_80010cd0_
 	.4byte zz_8003135c_
 	.4byte zz_800313a4_
-	.4byte zz_800313c8_
+	.4byte setFlagAndValue
 	.4byte nlListContainer_P8SaveData_____ct_void_
 
 .global lbl_80212A2C
@@ -4645,12 +4645,12 @@ lbl_80212AB8:
 	.4byte lbl_8065A35C
 	.4byte 0
 	.4byte PhysicsSphere____dt_void__N2
-	.4byte zz_80025aa4_
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80025150_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -4663,12 +4663,12 @@ lbl_80212AB8:
 	.4byte zz_801a1dd0_
 	.4byte zz_801a306c_
 	.4byte zz_801a1498_
-	.4byte zz_800911c0_
+	.4byte cleanupObject
 	.4byte zz_801a138c_
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80025228_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -4777,14 +4777,14 @@ lbl_80212CB4:
 	.4byte lbl_8065A2D4
 	.4byte 0
 	.4byte zz_80061c74_
-	.4byte zz_80061ae8_
-	.4byte zz_80061abc_
-	.4byte zz_800617dc_
-	.4byte zz_80061738_
+	.4byte InitTextureWithTLUTAndTransform
+	.4byte initializeArrayWithGlobalVariables
+	.4byte update_float_parameters
+	.4byte updateAndDrawSceneIfNeeded
 	.4byte zz_80010cd0_
 	.4byte zz_8003135c_
 	.4byte zz_800313a4_
-	.4byte zz_800313c8_
+	.4byte setFlagAndValue
 	.4byte nlListContainer_P8SaveData_____ct_void_
 	.4byte 0
 	.4byte 0
@@ -28867,7 +28867,7 @@ lbl_80224720:
 	# ROM: 0x221720
 	.4byte lbl_8065A3A4
 	.4byte 0
-	.4byte zz_8006fb94_
+	.4byte InitModule
 
 .global lbl_8022472C
 lbl_8022472C:
@@ -28883,7 +28883,7 @@ lbl_80224738:
 	# ROM: 0x221738
 	.4byte lbl_8065A3B4
 	.4byte 0
-	.4byte zz_8006fad0_
+	.4byte GetStageData
 	.4byte 0x30303030
 
 .global lbl_80224748
@@ -29112,28 +29112,28 @@ lbl_802247B0:
 	.4byte zz_8007a950_
 	.4byte 0
 	.4byte 0xFFFFFFFF
-	.4byte zz_8007a48c_
+	.4byte SpawnObjs
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte zz_80078754_
 	.4byte 0
 	.4byte 0xFFFFFFFF
-	.4byte zz_80077858_
+	.4byte CamMessageHandler
 	.4byte 0
 	.4byte 0xFFFFFFFF
-	.4byte zz_80070304_
+	.4byte HandleWaitMSG
 	.4byte 0
 	.4byte 0xFFFFFFFF
-	.4byte zz_8007720c_
+	.4byte HandleColorMSG
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte zz_8007a950_
 	.4byte 0
 	.4byte 0xFFFFFFFF
-	.4byte zz_80076604_
+	.4byte HandleObjMSG
 	.4byte 0
 	.4byte 0xFFFFFFFF
-	.4byte zz_80076604_
+	.4byte HandleObjMSG
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte zz_800762ac_
@@ -29142,7 +29142,7 @@ lbl_802247B0:
 	.4byte zz_80075eac_
 	.4byte 0
 	.4byte 0xFFFFFFFF
-	.4byte zz_80075c1c_
+	.4byte HandleLightMSG
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte zz_80075a80_
@@ -29151,7 +29151,7 @@ lbl_802247B0:
 	.4byte zz_80075454_
 	.4byte 0
 	.4byte 0xFFFFFFFF
-	.4byte zz_80074cf4_
+	.4byte StartInteraction
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte zz_80074bc4_
@@ -29169,28 +29169,28 @@ lbl_802247B0:
 	.4byte zz_80073c38_
 	.4byte 0
 	.4byte 0xFFFFFFFF
-	.4byte zz_80073768_
+	.4byte HandleAnimMSG
 	.4byte 0
 	.4byte 0xFFFFFFFF
-	.4byte zz_8007311c_
+	.4byte HandleScaleMSG
 	.4byte 0
 	.4byte 0xFFFFFFFF
-	.4byte zz_8007311c_
+	.4byte HandleScaleMSG
 	.4byte 0
 	.4byte 0xFFFFFFFF
-	.4byte zz_80072224_
+	.4byte HandleScreenMSG
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte zz_800749dc_
 	.4byte 0
 	.4byte 0xFFFFFFFF
-	.4byte zz_80071f38_
+	.4byte HandleSFXMSG
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte zz_80071ea0_
 	.4byte 0
 	.4byte 0xFFFFFFFF
-	.4byte zz_80070304_
+	.4byte HandleWaitMSG
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte zz_80070218_
@@ -30300,13 +30300,13 @@ lbl_80225984:
 	# ROM: 0x222984
 	.4byte lbl_8065A468
 	.4byte 0
-	.4byte zz_8000877c_
-	.4byte zz_80025aa4_
+	.4byte GetEventData
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -30319,12 +30319,12 @@ lbl_80225984:
 	.4byte zz_801a1dd0_
 	.4byte zz_801a306c_
 	.4byte zz_801a1498_
-	.4byte zz_800911c0_
+	.4byte cleanupObject
 	.4byte zz_801a138c_
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -30480,13 +30480,13 @@ lbl_80225BF0:
 	# ROM: 0x222BF0
 	.4byte lbl_8065A490
 	.4byte 0
-	.4byte zz_80092aa4_
-	.4byte zz_80025aa4_
+	.4byte InitCamera
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -30504,7 +30504,7 @@ lbl_80225BF0:
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -30611,13 +30611,13 @@ lbl_80225D98:
 	# ROM: 0x222D98
 	.4byte lbl_8065A4B8
 	.4byte 0
-	.4byte zz_80092dbc_
-	.4byte zz_80025aa4_
+	.4byte IniSceneLights
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -30635,7 +30635,7 @@ lbl_80225D98:
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -30760,13 +30760,13 @@ lbl_80225F74:
 	# ROM: 0x222F74
 	.4byte lbl_8065A4E0
 	.4byte 0
-	.4byte zz_80093134_
-	.4byte zz_80025aa4_
+	.4byte GetGameMap
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -30784,7 +30784,7 @@ lbl_80225F74:
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -32894,7 +32894,7 @@ lbl_80227E58:
 	.4byte cAIPad____ct_void__N2
 	.4byte DBClose_N45
 	.4byte gdev_cc_shutdown_N11
-	.4byte zz_8009afd4_
+	.4byte GetDAT_8065d4ac
 	.4byte zz_8009afec_
 	.4byte gdev_cc_shutdown_N10
 
@@ -32948,13 +32948,13 @@ lbl_80227EE8:
 	# ROM: 0x224EE8
 	.4byte lbl_8065A548
 	.4byte 0
-	.4byte zz_800bc524_
-	.4byte zz_80025aa4_
+	.4byte ChibiActions
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -32972,7 +32972,7 @@ lbl_80227EE8:
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -32985,7 +32985,7 @@ lbl_80227EE8:
 	.4byte zz_800bc0e4_
 	.4byte zz_800bbdac_
 	.4byte zz_800bb77c_
-	.4byte zz_800b97fc_
+	.4byte LoadScene
 	.4byte CommonDesireData__CalcBoolChance_float_
 	.4byte zz_800b5e34_
 	.4byte zz_80090c84_
@@ -33015,7 +33015,7 @@ lbl_80227EE8:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_800bd01c_
+	.4byte calculateParamValue
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_800b5ab8_
@@ -33607,12 +33607,12 @@ lbl_802285AC:
 	.4byte lbl_8065A608
 	.4byte 0
 	.4byte PhysicsSphere____dt_void__N8
-	.4byte zz_80025aa4_
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -33630,7 +33630,7 @@ lbl_802285AC:
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -33713,12 +33713,12 @@ lbl_8022872C:
 	.4byte lbl_8065A610
 	.4byte 0
 	.4byte PhysicsSphere____dt_void__N7
-	.4byte zz_80025aa4_
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -33736,7 +33736,7 @@ lbl_8022872C:
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -33819,12 +33819,12 @@ lbl_802288AC:
 	.4byte lbl_8065A618
 	.4byte 0
 	.4byte PhysicsSphere____dt_void__N6
-	.4byte zz_80025aa4_
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -33842,7 +33842,7 @@ lbl_802288AC:
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -33925,12 +33925,12 @@ lbl_80228A2C:
 	.4byte lbl_8065A620
 	.4byte 0
 	.4byte PhysicsSphere____dt_void__N4
-	.4byte zz_80025aa4_
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -33948,7 +33948,7 @@ lbl_80228A2C:
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -34015,12 +34015,12 @@ lbl_80228B80:
 	.4byte lbl_8065A600
 	.4byte 0
 	.4byte PhysicsSphere____dt_void__N5
-	.4byte zz_80025aa4_
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -34038,7 +34038,7 @@ lbl_80228B80:
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -34158,12 +34158,12 @@ lbl_80228D44:
 	.4byte lbl_8065A648
 	.4byte 0
 	.4byte PhysicsSphere____dt_void__N3
-	.4byte zz_80025aa4_
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -34181,7 +34181,7 @@ lbl_80228D44:
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -34259,12 +34259,12 @@ lbl_80228EB0:
 	.4byte lbl_8065A650
 	.4byte 0
 	.4byte zz_800bcc4c_
-	.4byte zz_80025aa4_
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -34282,7 +34282,7 @@ lbl_80228EB0:
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -34413,12 +34413,12 @@ lbl_802290A0:
 	.4byte lbl_8065A678
 	.4byte 0
 	.4byte PhysicsSphere____dt_void__N9
-	.4byte zz_80025aa4_
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -34431,12 +34431,12 @@ lbl_802290A0:
 	.4byte zz_801a1dd0_
 	.4byte zz_801a306c_
 	.4byte zz_801a1498_
-	.4byte zz_800911c0_
+	.4byte cleanupObject
 	.4byte zz_801a138c_
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -34546,12 +34546,12 @@ lbl_80229250:
 	.4byte lbl_8065A6A0
 	.4byte 0
 	.4byte PhysicsSphere____dt_void__N10
-	.4byte zz_80025aa4_
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -34569,7 +34569,7 @@ lbl_80229250:
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -34663,12 +34663,12 @@ lbl_802293E8:
 	.4byte lbl_8065A6B0
 	.4byte 0
 	.4byte PhysicsSphere____dt_void__N11
-	.4byte zz_80025aa4_
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -34686,7 +34686,7 @@ lbl_802293E8:
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -34708,7 +34708,7 @@ lbl_802293E8:
 	.4byte NSNMessengerScene__SceneCreated_void__N2
 	.4byte zz_80090864_
 	.4byte zz_8009056c_
-	.4byte zz_800deaa0_
+	.4byte handleSpecialCase
 	.4byte DBClose_N44
 	.4byte zz_8009047c_
 	.4byte DBClose_N25
@@ -34751,12 +34751,12 @@ lbl_80229534:
 	.4byte lbl_8065A6A8
 	.4byte 0
 	.4byte PhysicsSphere____dt_void__N12
-	.4byte zz_80025aa4_
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -34769,12 +34769,12 @@ lbl_80229534:
 	.4byte zz_801a1dd0_
 	.4byte zz_801a306c_
 	.4byte zz_801a1498_
-	.4byte zz_800911c0_
+	.4byte cleanupObject
 	.4byte zz_801a138c_
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -34853,12 +34853,12 @@ lbl_802296A4:
 	.4byte lbl_8065A6B8
 	.4byte 0
 	.4byte zz_800e239c_
-	.4byte zz_80025aa4_
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -34876,7 +34876,7 @@ lbl_802296A4:
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -34956,12 +34956,12 @@ lbl_80229818:
 	.4byte lbl_8065A6C0
 	.4byte 0
 	.4byte PhysicsSphere____dt_void__N13
-	.4byte zz_80025aa4_
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -34974,12 +34974,12 @@ lbl_80229818:
 	.4byte zz_801a1dd0_
 	.4byte zz_801a306c_
 	.4byte zz_801a1498_
-	.4byte zz_800911c0_
+	.4byte cleanupObject
 	.4byte zz_801a138c_
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -35060,12 +35060,12 @@ lbl_80229990:
 	.4byte lbl_8065A6C8
 	.4byte 0
 	.4byte PhysicsSphere____dt_void__N14
-	.4byte zz_80025aa4_
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -35078,12 +35078,12 @@ lbl_80229990:
 	.4byte zz_801a1dd0_
 	.4byte zz_801a306c_
 	.4byte zz_801a1498_
-	.4byte zz_800911c0_
+	.4byte cleanupObject
 	.4byte zz_801a138c_
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -35635,12 +35635,12 @@ lbl_8022A0E8:
 	.4byte lbl_8065A6F8
 	.4byte 0
 	.4byte PhysicsSphere____dt_void__N15
-	.4byte zz_80025aa4_
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -35653,12 +35653,12 @@ lbl_8022A0E8:
 	.4byte zz_801a1dd0_
 	.4byte zz_801a306c_
 	.4byte zz_801a1498_
-	.4byte zz_800911c0_
+	.4byte cleanupObject
 	.4byte zz_801a138c_
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -36134,12 +36134,12 @@ lbl_8022A74C:
 	.4byte lbl_8065A748
 	.4byte 0
 	.4byte zz_800e6950_
-	.4byte zz_80025aa4_
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -36152,12 +36152,12 @@ lbl_8022A74C:
 	.4byte zz_801a1dd0_
 	.4byte zz_801a306c_
 	.4byte zz_801a1498_
-	.4byte zz_800911c0_
+	.4byte cleanupObject
 	.4byte zz_801a138c_
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -36459,7 +36459,7 @@ lbl_8022AB90:
 	.4byte 0
 	.4byte 0
 	.4byte 0xFFFFFFFF
-	.4byte zz_800f0058_
+	.4byte clearDataWhenConditionMet
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte zz_800efdb0_
@@ -36574,12 +36574,12 @@ lbl_8022AD28:
 	.4byte lbl_8065A780
 	.4byte 0
 	.4byte zz_800ea30c_
-	.4byte zz_80025aa4_
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -36592,12 +36592,12 @@ lbl_8022AD28:
 	.4byte zz_801a1dd0_
 	.4byte zz_801a306c_
 	.4byte zz_801a1498_
-	.4byte zz_800911c0_
+	.4byte cleanupObject
 	.4byte zz_801a138c_
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -37020,12 +37020,12 @@ lbl_8022B308:
 	.4byte lbl_8065A7C0
 	.4byte 0
 	.4byte zz_800f49f0_
-	.4byte zz_80025aa4_
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -37043,7 +37043,7 @@ lbl_8022B308:
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -37695,12 +37695,12 @@ lbl_8022BC18:
 	.4byte lbl_8065A7F8
 	.4byte 0
 	.4byte zz_80100264_
-	.4byte zz_80025aa4_
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -37713,12 +37713,12 @@ lbl_8022BC18:
 	.4byte zz_801a1dd0_
 	.4byte zz_801a306c_
 	.4byte zz_801a1498_
-	.4byte zz_800911c0_
+	.4byte cleanupObject
 	.4byte zz_801a138c_
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -37956,13 +37956,13 @@ lbl_8022BF90:
 	# ROM: 0x228F90
 	.4byte lbl_8065A830
 	.4byte 0
-	.4byte zz_80106a14_
-	.4byte zz_80025aa4_
+	.4byte InitActor
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -37975,12 +37975,12 @@ lbl_8022BF90:
 	.4byte zz_801a1dd0_
 	.4byte zz_801a306c_
 	.4byte zz_801a1498_
-	.4byte zz_800911c0_
+	.4byte cleanupObject
 	.4byte zz_801a138c_
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -38323,12 +38323,12 @@ lbl_8022C480:
 	.4byte lbl_8065A858
 	.4byte 0
 	.4byte zz_80108424_
-	.4byte zz_80025aa4_
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -38341,12 +38341,12 @@ lbl_8022C480:
 	.4byte zz_801a1dd0_
 	.4byte zz_801a306c_
 	.4byte zz_801a1498_
-	.4byte zz_8010a500_
+	.4byte cleanupObjectAndHandleSpecialCase
 	.4byte zz_801a138c_
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -38363,14 +38363,14 @@ lbl_8022C480:
 	.4byte CommonDesireData__CalcBoolChance_float_
 	.4byte zz_80109e80_
 	.4byte zz_80090c84_
-	.4byte zz_80109e44_
+	.4byte ProcessObjectWithFlagCheck
 	.4byte zz_800908c0_
 	.4byte NSNMessengerScene__SceneCreated_void__N2
 	.4byte zz_80090864_
 	.4byte zz_8009056c_
 	.4byte zz_80109008_
 	.4byte DBClose_N44
-	.4byte zz_80109dd8_
+	.4byte processTextureWithTLUTAndObject
 	.4byte DBClose_N67
 	.4byte zz_8000cbc8_
 	.4byte zz_8000cb4c_
@@ -39205,12 +39205,12 @@ lbl_8022D090:
 	.4byte lbl_8065A8A0
 	.4byte 0
 	.4byte zz_801155b4_
-	.4byte zz_80025aa4_
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -39228,7 +39228,7 @@ lbl_8022D090:
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -39492,13 +39492,13 @@ lbl_8022D420:
 	# ROM: 0x22A420
 	.4byte lbl_8065A8E0
 	.4byte 0
-	.4byte zz_80122e88_
-	.4byte zz_80025aa4_
+	.4byte InitJennyActor
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -39511,12 +39511,12 @@ lbl_8022D420:
 	.4byte zz_801a1dd0_
 	.4byte zz_801a306c_
 	.4byte zz_801a1498_
-	.4byte zz_800911c0_
+	.4byte cleanupObject
 	.4byte zz_801a138c_
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -39694,13 +39694,13 @@ lbl_8022D680:
 	# ROM: 0x22A680
 	.4byte lbl_8065A910
 	.4byte 0
-	.4byte zz_80126498_
-	.4byte zz_80025aa4_
+	.4byte InitActorMama
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -39713,12 +39713,12 @@ lbl_8022D680:
 	.4byte zz_801a1dd0_
 	.4byte zz_801a306c_
 	.4byte zz_801a1498_
-	.4byte zz_800911c0_
+	.4byte cleanupObject
 	.4byte zz_801a138c_
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -39887,13 +39887,13 @@ lbl_8022D8BC:
 	# ROM: 0x22A8BC
 	.4byte lbl_8065A940
 	.4byte 0
-	.4byte zz_80129398_
-	.4byte zz_80025aa4_
+	.4byte InitActorPapa
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -39906,12 +39906,12 @@ lbl_8022D8BC:
 	.4byte zz_801a1dd0_
 	.4byte zz_801a306c_
 	.4byte zz_801a1498_
-	.4byte zz_800911c0_
+	.4byte cleanupObject
 	.4byte zz_801a138c_
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -40078,13 +40078,13 @@ lbl_8022DB04:
 	# ROM: 0x22AB04
 	.4byte lbl_8065A970
 	.4byte 0
-	.4byte zz_8012c8d4_
-	.4byte zz_80025aa4_
+	.4byte InitTaoActor
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -40097,12 +40097,12 @@ lbl_8022DB04:
 	.4byte zz_801a1dd0_
 	.4byte zz_801a306c_
 	.4byte zz_801a1498_
-	.4byte zz_800911c0_
+	.4byte cleanupObject
 	.4byte zz_801a138c_
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -40281,12 +40281,12 @@ lbl_8022DD50:
 	.4byte lbl_8065A9A0
 	.4byte 0
 	.4byte zz_8012f4a4_
-	.4byte zz_80025aa4_
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -40299,12 +40299,12 @@ lbl_8022DD50:
 	.4byte zz_801a1dd0_
 	.4byte zz_801a306c_
 	.4byte zz_801a1498_
-	.4byte zz_800911c0_
+	.4byte cleanupObject
 	.4byte zz_801a138c_
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -40452,7 +40452,7 @@ lbl_8022DF8C:
 	# ROM: 0x22AF8C
 	.4byte lbl_8065A9C0
 	.4byte 0
-	.4byte zz_80131be8_
+	.4byte GetEventMSGAnim
 	.4byte zz_80132504_
 	.4byte zz_80132040_
 	.4byte lbl_80132428
@@ -40804,7 +40804,7 @@ lbl_8022E480:
 	# ROM: 0x22B480
 	.4byte lbl_8065AA28
 	.4byte 0
-	.4byte zz_80134e94_
+	.4byte GetEventMessageReadOne
 	.4byte zz_80132504_
 	.4byte zz_801322a4_
 	.4byte lbl_80132428
@@ -40827,7 +40827,7 @@ lbl_8022E4B4:
 	# ROM: 0x22B4B4
 	.4byte lbl_8065AA30
 	.4byte 0
-	.4byte zz_80134f18_
+	.4byte GetEventMSGALL
 	.4byte zz_80132504_
 	.4byte lbl_80132468
 	.4byte lbl_80132428
@@ -40840,7 +40840,7 @@ lbl_8022E4D4:
 	# ROM: 0x22B4D4
 	.4byte lbl_8065A9B8
 	.4byte 0
-	.4byte zz_80134f9c_
+	.4byte GetEventMessageRead
 	.4byte zz_80132504_
 	.4byte lbl_80132468
 	.4byte lbl_80132428
@@ -40935,7 +40935,7 @@ lbl_8022E58C:
 	# ROM: 0x22B58C
 	.4byte lbl_8065AA70
 	.4byte 0
-	.4byte zz_800095c0_
+	.4byte initCameraZoom
 	.4byte zz_80139b90_
 	.4byte zz_8013964c_
 	.4byte zz_80139c98_
@@ -40959,9 +40959,9 @@ lbl_8022E58C:
 	.4byte gdev_cc_shutdown_N25
 	.4byte CBGetBytesAvailableForRead_N18
 	.4byte TRKNubWelcome
-	.4byte zz_80015c54_
+	.4byte GetDAT_805a055c
 	.4byte THPSimpleGetCurrentFrame
-	.4byte zz_80015c74_
+	.4byte updateGlobalVariable_805a0560
 	.4byte zz_80015c84_
 	.4byte zz_80015cc8_
 	.4byte zz_80015d74_
@@ -41020,7 +41020,7 @@ lbl_8022E668:
 	# ROM: 0x22B668
 	.4byte lbl_8065AAA8
 	.4byte 0
-	.4byte zz_80009f20_
+	.4byte GetCameraActionData
 	.4byte zz_80141084_
 	.4byte zz_8013fa38_
 	.4byte zz_80141c50_
@@ -41044,9 +41044,9 @@ lbl_8022E668:
 	.4byte CBGetBytesAvailableForRead_N19
 	.4byte CBGetBytesAvailableForRead_N3
 	.4byte TRKNubWelcome
-	.4byte zz_80015c54_
+	.4byte GetDAT_805a055c
 	.4byte THPSimpleGetCurrentFrame
-	.4byte zz_80015c74_
+	.4byte updateGlobalVariable_805a0560
 	.4byte zz_80015c84_
 	.4byte zz_80015cc8_
 	.4byte zz_80015d74_
@@ -41073,7 +41073,7 @@ lbl_8022E700:
 	# ROM: 0x22B700
 	.4byte lbl_8065AAB8
 	.4byte 0
-	.4byte zz_8001aba0_
+	.4byte SetCCameraActionChase
 	.4byte DBClose_N10
 	.4byte zz_80142440_
 	.4byte zz_8014295c_
@@ -41112,7 +41112,7 @@ lbl_8022E774:
 	# ROM: 0x22B774
 	.4byte lbl_8065AAC8
 	.4byte 0
-	.4byte zz_800099c8_
+	.4byte initCameraActionEvents
 	.4byte DBClose_N10
 	.4byte zz_801435e8_
 	.4byte DBClose_N3
@@ -41321,7 +41321,7 @@ lbl_8022E9B4:
 	# ROM: 0x22B9B4
 	.4byte lbl_8065AAD8
 	.4byte 0
-	.4byte zz_8001a784_
+	.4byte SetCCameraActionScroll_N2
 	.4byte DBClose_N10
 	.4byte zz_8014567c_
 	.4byte zz_80145fe8_
@@ -41374,7 +41374,7 @@ lbl_8022EA4C:
 	# ROM: 0x22BA4C
 	.4byte lbl_8065AAE8
 	.4byte 0
-	.4byte zz_8001a684_
+	.4byte SetCCameraActionEye
 	.4byte DBClose_N10
 	.4byte zz_801469ec_
 	.4byte zz_80147358_
@@ -41412,7 +41412,7 @@ lbl_8022EABC:
 	# ROM: 0x22BABC
 	.4byte lbl_8065AAF8
 	.4byte 0
-	.4byte zz_8001a5ec_
+	.4byte SetCCamActionAnim
 	.4byte DBClose_N10
 	.4byte zz_80147464_
 	.4byte DBClose_N3
@@ -41467,7 +41467,7 @@ lbl_8022EB50:
 	# ROM: 0x22BB50
 	.4byte lbl_8065AB10
 	.4byte 0
-	.4byte zz_8000a260_
+	.4byte initCameraActionReset
 	.4byte zz_80147794_
 	.4byte zz_80147648_
 	.4byte DBClose_N3
@@ -41491,9 +41491,9 @@ lbl_8022EB50:
 	.4byte CBGetBytesAvailableForRead_N21
 	.4byte CBGetBytesAvailableForRead_N22
 	.4byte TRKNubWelcome
-	.4byte zz_80015c54_
+	.4byte GetDAT_805a055c
 	.4byte THPSimpleGetCurrentFrame
-	.4byte zz_80015c74_
+	.4byte updateGlobalVariable_805a0560
 	.4byte zz_80015c84_
 	.4byte zz_80015cc8_
 	.4byte zz_80015d74_
@@ -41512,7 +41512,7 @@ lbl_8022EBDC:
 	# ROM: 0x22BBDC
 	.4byte lbl_8065AB20
 	.4byte 0
-	.4byte zz_8001a2e4_
+	.4byte SetCCameraActionScroll
 	.4byte DBClose_N10
 	.4byte zz_80147ec0_
 	.4byte zz_80148280_
@@ -41550,7 +41550,7 @@ lbl_8022EC4C:
 	# ROM: 0x22BC4C
 	.4byte lbl_8065AB28
 	.4byte 0
-	.4byte zz_8001a3c4_
+	.4byte SetCCameaActionLadder
 	.4byte DBClose_N10
 	.4byte zz_801483c0_
 	.4byte ColourBlendScreenTransition__Reset_void_
@@ -41589,7 +41589,7 @@ lbl_8022ECC0:
 	# ROM: 0x22BCC0
 	.4byte lbl_8065AB30
 	.4byte 0
-	.4byte zz_8001acd4_
+	.4byte SetCCameraActionDefault
 	.4byte DBClose_N10
 	.4byte zz_801485a4_
 	.4byte DBClose_N3
@@ -41740,7 +41740,7 @@ lbl_8022EE68:
 	# ROM: 0x22BE68
 	.4byte lbl_8065AB40
 	.4byte 0
-	.4byte zz_80150e78_
+	.4byte freeStdException
 	.4byte GetOneTimerLeadGroundContactAnims_void__N3
 
 .global switchdataD_8022ee78
@@ -49822,7 +49822,7 @@ lbl_80237644:
 	# ROM: 0x234644
 	.4byte lbl_8065AD28
 	.4byte 0
-	.4byte zz_8000841c_
+	.4byte GetSceneCamera
 	.4byte zz_80193468_
 	.4byte zz_801932f4_
 	.4byte zz_80193190_
@@ -49878,7 +49878,7 @@ lbl_802376FC:
 	# ROM: 0x2346FC
 	.4byte lbl_8065AD38
 	.4byte 0
-	.4byte zz_800084cc_
+	.4byte GetSceneLighting
 	.4byte zz_801936c0_
 	.4byte zz_800282f8_
 	.4byte zz_80193670_
@@ -83771,8 +83771,8 @@ lbl_80258728:
 	.4byte OverlayManager__DestroyMessengerManager_void_
 	.4byte zz_8019f668_
 	.4byte zz_8019f594_
-	.4byte zz_8019f878_
-	.4byte zz_8019f804_
+	.4byte OpenFileStream
+	.4byte CloseDevice
 	.4byte zz_8019f40c_
 
 .global lbl_80258750
@@ -83794,10 +83794,10 @@ lbl_80258764:
 	.4byte FormationOffensive____dt_void__N24
 	.4byte SidelineExplodableManager__GetNumExplodables_void_
 	.4byte StatsTracker__DestroyEventHandler_void_
-	.4byte zz_8019f91c_
+	.4byte ReadCFile
 	.4byte zz_8019f8d8_
-	.4byte zz_8019f878_
-	.4byte zz_8019f804_
+	.4byte OpenFileStream
+	.4byte CloseDevice
 	.4byte zz_8019f6ec_
 
 .global lbl_8025878C
@@ -83809,10 +83809,10 @@ lbl_8025878C:
 	.4byte cHeadTrack____dt_void__N6
 	.4byte zz_8019fd4c_
 	.4byte OverlayManager__DestroyMessengerManager_void_
-	.4byte zz_8019f91c_
+	.4byte ReadCFile
 	.4byte zz_8019f8d8_
-	.4byte zz_8019f878_
-	.4byte zz_8019f804_
+	.4byte OpenFileStream
+	.4byte CloseDevice
 	.4byte zz_8019f6ec_
 	.4byte 0x30303030
 
@@ -83840,12 +83840,12 @@ lbl_802587D8:
 	# ROM: 0x2557D8
 	.4byte lbl_8065ADA8
 	.4byte 0
-	.4byte zz_8001b7c8_
+	.4byte SetCTexObj_N2
 	.4byte zz_8019fd4c_
 	.4byte OverlayManager__DestroyMessengerManager_void_
-	.4byte zz_8019f91c_
+	.4byte ReadCFile
 	.4byte zz_8019fe3c_
-	.4byte zz_8019f878_
+	.4byte OpenFileStream
 	.4byte zz_8019fe08_
 	.4byte zz_8019f6ec_
 
@@ -83913,13 +83913,13 @@ lbl_8025888C:
 	# ROM: 0x25588C
 	.4byte lbl_8065ADD0
 	.4byte 0
-	.4byte zz_800088e4_
-	.4byte zz_80025aa4_
+	.4byte GetCObjData
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -83932,12 +83932,12 @@ lbl_8025888C:
 	.4byte zz_801a1dd0_
 	.4byte zz_801a306c_
 	.4byte zz_801a1498_
-	.4byte zz_801a13f0_
+	.4byte cleanupFielderAction
 	.4byte zz_801a138c_
 	.4byte zz_801a1328_
 	.4byte zz_801a12c4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_
@@ -83954,13 +83954,13 @@ lbl_8025891C:
 	# ROM: 0x25591C
 	.4byte lbl_8065ADC8
 	.4byte 0
-	.4byte zz_80008998_
-	.4byte zz_80025aa4_
+	.4byte GetCObj
+	.4byte ChibiJumpHandler
 	.4byte zz_80025b7c_
 	.4byte zz_80025c54_
 	.4byte zz_80025d2c_
 	.4byte zz_80027a98_
-	.4byte zz_80025e04_
+	.4byte update_parameter_value
 	.4byte zz_80025edc_
 	.4byte zz_8002608c_
 	.4byte zz_8002623c_
@@ -83978,7 +83978,7 @@ lbl_8025891C:
 	.4byte zz_801a25dc_
 	.4byte zz_801a22a4_
 	.4byte zz_8002657c_
-	.4byte zz_800263ec_
+	.4byte UpdateObjPos
 	.4byte zz_80027b70_
 	.4byte zz_80026938_
 	.4byte zz_800266f8_

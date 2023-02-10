@@ -74,8 +74,8 @@ FLOAT_8065bd7c:
 	# ROM: 0x25A4BC
 	.4byte 0x3F333333
 
-.global FLOAT_8065bd80
-FLOAT_8065bd80:
+.global _Pi
+_Pi:
 
 	# ROM: 0x25A4C0
 	.4byte 0x40490FDB
