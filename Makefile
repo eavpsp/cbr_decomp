@@ -18,9 +18,10 @@ TARGET_COL := gc
 OBJ_DIR := obj
 
 SRC_DIRS := src             
+DOLPHIN_DIRS := dolphin             
             
 
-ASM_DIRS := asm             
+ASM_DIRS := asm
             
 
 # Inputs
@@ -36,7 +37,7 @@ MAP     := cbr.map
 
 include obj_files.mk
 
-O_FILES := $(INIT_O_FILES) $(EXTAB_O_FILES) $(EXTABINDEX_O_FILES) $(TEXT_O_FILES) \
+O_FILES :=  $(INIT_O_FILES) $(TEXT_O_FILES) $(EXTAB_O_FILES) $(EXTABINDEX_O_FILES)   \
            $(CTORS_O_FILES) $(DTORS_O_FILES) $(RODATA_O_FILES) $(DATA_O_FILES)    \
            $(SBSS_O_FILES) $(SBSS2_O_FILES) $(BSS_O_FILES) $(SDATA_O_FILES) $(SDATA2_O_FILES)
 #-------------------------------------------------------------------------------
@@ -70,7 +71,7 @@ LDFLAGS := -map $(MAP) -w off -maxerrors 1 -nostdlib
            -str reuse,pool,readonly -char unsigned -enum int -use_lmw_stmw on -inline off -nostdinc -i- $(INCLUDES)
 PPROCFLAGS := -fsymbol-fixup
 
-
+$(TRK_MINNOW_DOLPHIN): CFLAGS += -common off
 # elf2dol needs to know these in order to calculate sbss correctly.
 SDATA_PDHR := 9
 SBSS_PDHR := 10
@@ -87,7 +88,7 @@ default: all
 
 all: $(DOL)
 
-ALL_DIRS := $(OBJ_DIR) $(addprefix $(OBJ_DIR)/,$(SRC_DIRS) $(ASM_DIRS))
+ALL_DIRS := $(sort $(dir $(O_FILES)))
 
 # Make sure build directory exists before compiling anything
 DUMMY != mkdir -p $(ALL_DIRS)

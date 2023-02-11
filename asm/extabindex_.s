@@ -829,7 +829,7 @@ lbl_80006680:
 	.4byte ProcessMediaAndHandleErrors
 	.4byte 0x00000264
 	.4byte lbl_80006310
-	.4byte stopAudioAndResetDvdDataAndCloseDvdIfNeeded
+	.4byte stopAudioAndinitDVDDataAndCloseDvdIfNeeded
 	.4byte 0x00000058
 	.4byte lbl_80006318
 	.4byte initializeDataAndStoreResult

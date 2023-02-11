@@ -3,8 +3,8 @@
 .section .ctors, "wa"  # 0x801FD660 - 0x801FD6C0 ; 0x00000060
 
 
-.global lbl_801FD660
-lbl_801FD660:
+.global __init_cpp_exceptions_reference
+__init_cpp_exceptions_reference:
 
 	# ROM: 0x1FA660
 	.4byte __init_cpp_exceptions

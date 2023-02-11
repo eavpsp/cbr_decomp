@@ -106,8 +106,8 @@ lbl_8020FC80:
 	.4byte zz_80011bd8_
 	.4byte zz_8000facc_
 	.4byte CGameMain
-	.4byte zz_8000cda0_
-	.4byte zz_8000c398_
+	.4byte UpdateWorld
+	.4byte processGlobalArrayElements
 	.4byte checkRangeAndReturnValue
 	.4byte CBGetBytesAvailableForRead
 	.4byte J3DTexGenBlock4__getNBTScale_void_
@@ -2868,8 +2868,8 @@ lbl_802114E8:
 	.4byte DBClose_N44
 	.4byte zz_8009047c_
 	.4byte DBClose_N25
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -2885,7 +2885,7 @@ lbl_802114E8:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -3273,8 +3273,8 @@ lbl_802119FC:
 	.4byte DBClose_N44
 	.4byte zz_8009047c_
 	.4byte DBClose_N25
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -3290,7 +3290,7 @@ lbl_802119FC:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -4694,8 +4694,8 @@ lbl_80212AB8:
 	.4byte DBClose_N44
 	.4byte zz_8009047c_
 	.4byte DBClose_N25
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -4711,7 +4711,7 @@ lbl_80212AB8:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -30350,8 +30350,8 @@ lbl_80225984:
 	.4byte DBClose_N44
 	.4byte zz_8009047c_
 	.4byte DBClose_N25
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -30367,7 +30367,7 @@ lbl_80225984:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -30530,8 +30530,8 @@ lbl_80225BF0:
 	.4byte DBClose_N44
 	.4byte zz_8009047c_
 	.4byte DBClose_N25
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -30547,7 +30547,7 @@ lbl_80225BF0:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -30661,8 +30661,8 @@ lbl_80225D98:
 	.4byte DBClose_N44
 	.4byte zz_8009047c_
 	.4byte DBClose_N25
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -30678,7 +30678,7 @@ lbl_80225D98:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -30810,8 +30810,8 @@ lbl_80225F74:
 	.4byte DBClose_N44
 	.4byte zz_8009047c_
 	.4byte DBClose_N25
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -30827,7 +30827,7 @@ lbl_80225F74:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -32999,7 +32999,7 @@ lbl_80227EE8:
 	.4byte zz_800a551c_
 	.4byte zz_800a4678_
 	.4byte zz_800a45b8_
-	.4byte zz_8000cb4c_
+	.4byte CalculateDesireChance
 	.4byte zz_800b5974_
 	.4byte zz_800b580c_
 	.4byte DBClose_N47
@@ -33656,8 +33656,8 @@ lbl_802285AC:
 	.4byte DBClose_N44
 	.4byte zz_8009047c_
 	.4byte DBClose_N25
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -33673,7 +33673,7 @@ lbl_802285AC:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -33762,8 +33762,8 @@ lbl_8022872C:
 	.4byte DBClose_N44
 	.4byte zz_8009047c_
 	.4byte DBClose_N25
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -33779,7 +33779,7 @@ lbl_8022872C:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -33868,8 +33868,8 @@ lbl_802288AC:
 	.4byte DBClose_N44
 	.4byte zz_8009047c_
 	.4byte DBClose_N25
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -33885,7 +33885,7 @@ lbl_802288AC:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -33974,8 +33974,8 @@ lbl_80228A2C:
 	.4byte DBClose_N44
 	.4byte zz_8009047c_
 	.4byte DBClose_N25
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -33991,7 +33991,7 @@ lbl_80228A2C:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -34064,8 +34064,8 @@ lbl_80228B80:
 	.4byte DBClose_N44
 	.4byte zz_8009047c_
 	.4byte DBClose_N25
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -34081,7 +34081,7 @@ lbl_80228B80:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -34207,8 +34207,8 @@ lbl_80228D44:
 	.4byte DBClose_N44
 	.4byte zz_8009047c_
 	.4byte DBClose_N25
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -34224,7 +34224,7 @@ lbl_80228D44:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -34308,8 +34308,8 @@ lbl_80228EB0:
 	.4byte DBClose_N44
 	.4byte zz_8009047c_
 	.4byte DBClose_N25
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_800d80e4_
 	.4byte zz_8009172c_
@@ -34325,7 +34325,7 @@ lbl_80228EB0:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -34462,8 +34462,8 @@ lbl_802290A0:
 	.4byte DBClose_N44
 	.4byte zz_8009047c_
 	.4byte DBClose_N25
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -34479,7 +34479,7 @@ lbl_802290A0:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -34595,8 +34595,8 @@ lbl_80229250:
 	.4byte DBClose_N44
 	.4byte zz_800dd96c_
 	.4byte DBClose_N25
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -34612,7 +34612,7 @@ lbl_80229250:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -34712,8 +34712,8 @@ lbl_802293E8:
 	.4byte DBClose_N44
 	.4byte zz_8009047c_
 	.4byte DBClose_N25
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -34729,7 +34729,7 @@ lbl_802293E8:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -34800,8 +34800,8 @@ lbl_80229534:
 	.4byte DBClose_N44
 	.4byte zz_8009047c_
 	.4byte DBClose_N25
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -34817,7 +34817,7 @@ lbl_80229534:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -34902,8 +34902,8 @@ lbl_802296A4:
 	.4byte DBClose_N44
 	.4byte zz_800dfd24_
 	.4byte DBClose_N25
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -34919,7 +34919,7 @@ lbl_802296A4:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -35005,8 +35005,8 @@ lbl_80229818:
 	.4byte DBClose_N44
 	.4byte zz_8009047c_
 	.4byte DBClose_N25
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -35022,7 +35022,7 @@ lbl_80229818:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -35109,8 +35109,8 @@ lbl_80229990:
 	.4byte DBClose_N44
 	.4byte zz_8009047c_
 	.4byte DBClose_N25
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -35126,7 +35126,7 @@ lbl_80229990:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -35684,8 +35684,8 @@ lbl_8022A0E8:
 	.4byte DBClose_N44
 	.4byte zz_8009047c_
 	.4byte DBClose_N25
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -35701,7 +35701,7 @@ lbl_8022A0E8:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -36183,8 +36183,8 @@ lbl_8022A74C:
 	.4byte DBClose_N44
 	.4byte zz_8009047c_
 	.4byte DBClose_N25
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -36200,7 +36200,7 @@ lbl_8022A74C:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -36623,8 +36623,8 @@ lbl_8022AD28:
 	.4byte DBClose_N44
 	.4byte DBClose_N54
 	.4byte DBClose_N53
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -36640,7 +36640,7 @@ lbl_8022AD28:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -37069,8 +37069,8 @@ lbl_8022B308:
 	.4byte DBClose_N44
 	.4byte DBClose_N59
 	.4byte DBClose_N58
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -37086,7 +37086,7 @@ lbl_8022B308:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -37744,8 +37744,8 @@ lbl_8022BC18:
 	.4byte DBClose_N44
 	.4byte DBClose_N63
 	.4byte DBClose_N62
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -37761,7 +37761,7 @@ lbl_8022BC18:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -38006,8 +38006,8 @@ lbl_8022BF90:
 	.4byte DBClose_N44
 	.4byte cPlayer__PostPhysicsUpdate_void__N20
 	.4byte DBClose_N66
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -38023,7 +38023,7 @@ lbl_8022BF90:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -38372,8 +38372,8 @@ lbl_8022C480:
 	.4byte DBClose_N44
 	.4byte processTextureWithTLUTAndObject
 	.4byte DBClose_N67
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -38389,7 +38389,7 @@ lbl_8022C480:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -39254,8 +39254,8 @@ lbl_8022D090:
 	.4byte DBClose_N44
 	.4byte zz_801220a8_
 	.4byte DBClose_N66
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -39271,7 +39271,7 @@ lbl_8022D090:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -39542,8 +39542,8 @@ lbl_8022D420:
 	.4byte DBClose_N44
 	.4byte cPlayer__PostPhysicsUpdate_void__N20
 	.4byte DBClose_N66
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -39559,7 +39559,7 @@ lbl_8022D420:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -39744,8 +39744,8 @@ lbl_8022D680:
 	.4byte DBClose_N44
 	.4byte cPlayer__PostPhysicsUpdate_void__N20
 	.4byte DBClose_N66
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -39761,7 +39761,7 @@ lbl_8022D680:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -39937,8 +39937,8 @@ lbl_8022D8BC:
 	.4byte DBClose_N44
 	.4byte cPlayer__PostPhysicsUpdate_void__N20
 	.4byte DBClose_N66
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -39954,7 +39954,7 @@ lbl_8022D8BC:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -40128,8 +40128,8 @@ lbl_8022DB04:
 	.4byte DBClose_N44
 	.4byte cPlayer__PostPhysicsUpdate_void__N20
 	.4byte DBClose_N66
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -40145,7 +40145,7 @@ lbl_8022DB04:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -40330,8 +40330,8 @@ lbl_8022DD50:
 	.4byte DBClose_N44
 	.4byte cPlayer__PostPhysicsUpdate_void__N20
 	.4byte DBClose_N66
-	.4byte zz_8000cbc8_
-	.4byte zz_8000cb4c_
+	.4byte AddToLinkedListIfNotPresent
+	.4byte CalculateDesireChance
 	.4byte zz_80091c44_
 	.4byte zz_80091834_
 	.4byte zz_8009172c_
@@ -40347,7 +40347,7 @@ lbl_8022DD50:
 	.4byte J3DAnmCluster__getWeight_unsigned
 	.4byte zz_8008b5d4_
 	.4byte nw4hbm__ut__TextWriterBase_w___GetCharSpace_void_
-	.4byte zz_8000d088_
+	.4byte HandleSpecialFloatValues
 	.4byte zz_8008b338_
 	.4byte zz_8008b224_
 	.4byte zz_8008b0d8_
@@ -49848,7 +49848,7 @@ lbl_80237644:
 	.4byte nlVector3__Set_float__N10
 	.4byte nw4hbm__ut__TextWriterBase_w___SetCharSpace_float_
 	.4byte zz_800150d8_
-	.4byte zz_8000f8f4_
+	.4byte set_triple_position
 	.4byte zz_80087c88_
 	.4byte zz_801922f0_
 	.4byte nw4hbm__ut__TextWriterBase_w___SetCharSpace_float__N3
@@ -49882,7 +49882,7 @@ lbl_802376FC:
 	.4byte zz_801936c0_
 	.4byte zz_800282f8_
 	.4byte zz_80193670_
-	.4byte zz_8000df78_
+	.4byte setPositionOfObject
 	.4byte zz_801935c4_
 	.4byte zz_8001d1a0_
 	.4byte zz_801935fc_
