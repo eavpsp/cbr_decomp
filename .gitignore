@@ -3,3 +3,9 @@
 ################################################################################
 
 /.vs
+obj/
+.gitignore
+tools/mwcc_compiler
+cbr.map
+main.dol
+main.elf
