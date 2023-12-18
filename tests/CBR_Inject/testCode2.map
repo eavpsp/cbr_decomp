@@ -1,0 +1,128 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+                0x0000000080156888                _sprintf = 0x80156888
+                0x00000000800054ec                __init_hardware = 0x800054ec
+                0x00000000803f0280                . = 0x803f0280
+
+.text           0x00000000803f0280      0x278
+ *(.text)
+ .text          0x00000000803f0280      0x278 testCode2.o
+                0x00000000803f0280                RunMessageHack
+                0x00000000803f02a0                SetDebugText
+                0x00000000803f02fc                SetDebugFloat
+                0x00000000803f0370                OnLoad
+                0x00000000803f03ac                DebugDisplayMessage
+                0x00000000803f03d4                CopyChibiObj
+                0x00000000803f0470                DebugInitObj
+                0x00000000803f04c0                DebugMalloc
+
+.glink          0x00000000803f04f8        0x0
+ .glink         0x00000000803f04f8        0x0 testCode2.o
+
+.rodata
+ *(.rodata*)
+
+.eh_frame       0x00000000803f04f8      0x114
+ .eh_frame      0x00000000803f04f8      0x114 testCode2.o
+
+.eh_frame       0x00000000803f060c        0x0
+ .eh_frame      0x00000000803f060c        0x0 testCode2.o
+
+.sdata2         0x00000000803f060c        0x0
+ .sdata2        0x00000000803f060c        0x0 testCode2.o
+
+.rela.dyn       0x00000000803f060c        0x0
+ .rela.iplt     0x00000000803f060c        0x0 testCode2.o
+ .rela.text     0x00000000803f060c        0x0 testCode2.o
+
+.bss            0x00000000803f060c        0x0
+ .bss           0x00000000803f060c        0x0 testCode2.o
+
+.sbss           0x00000000803f060c        0x9
+ .sbss          0x00000000803f060c        0x9 testCode2.o
+                0x00000000803f060c                i
+                0x00000000803f0610                newChibi
+                0x00000000803f0614                started
+
+.iplt           0x00000000803f0620        0x0
+ .iplt          0x00000000803f0620        0x0 testCode2.o
+
+.data           0x00000000803f0615        0x0
+ *(.data)
+ .data          0x00000000803f0615        0x0 testCode2.o
+
+.branch_lt      0x00000000803f0618        0x0
+ .branch_lt     0x00000000803f0618        0x0 testCode2.o
+                0x00000000803f0620                . = (. + 0x8)
+
+.sdata          0x00000000803f0620        0x4
+ *(.sdata)
+ .sdata         0x00000000803f0620        0x4 testCode2.o
+                0x00000000803f0620                chibiSceneData
+                0x00000000803f8620                _SDA_BASE_
+ .sdata         0x00000000803f0624        0x0 testCode2.o
+                0x000000008000facc                UpdateGameState = 0x8000facc
+                0x000000008001c8c4                LoadSceneData = 0x8001c8c4
+                0x000000008000dfa8                CGameMain = 0x8000dfa8
+                0x0000000080196610                DisplayMessage = 0x80196610
+                0x00000000801cbe60                setParamToGlobalVar = 0x801cbe60
+                0x0000000080134a1c                GameSceneManager = 0x80134a1c
+                0x0000000080199944                post_physics_update = 0x80199944
+                0x000000008000d704                RenderAndUpdateGraphics = 0x8000d704
+                0x00000000800095c0                initCameraZoom = 0x800095c0
+                0x0000000080085444                SetDialogueText = 0x80085444
+                0x0000000080149754                OnActivate = 0x80149754
+                0x00000000801619bc                OSExecp = 0x801619bc
+                0x0000000080158f54                strlen = 0x80158f54
+                0x00000000800b2284                GetPlayer = 0x800b2284
+                0x000000008000c450                RenderScene = 0x8000c450
+                0x00000000800197a4                CGameCreateScene = 0x800197a4
+                0x000000008016dae8                DVDClose = 0x8016dae8
+                0x0000000080162f7c                DCInvalidateRange = 0x80162f7c
+                0x0000000080132d9c                InitSceneActor = 0x80132d9c
+                0x00000000801968bc                ParseTextStream = 0x801968bc
+                0x000000008018d0d0                ReadArchive = 0x8018d0d0
+                0x00000000800c21a0                HandleCollisionAndParticleGeneration = 0x800c21a0
+                0x00000000800c2a14                InitializeObjectAndHandleCollision = 0x800c2a14
+                0x00000000800d3f14                HandleCJObjVecData = 0x800d3f14
+                0x0000000080187164                GXSetTexCoordGen2 = 0x80187164
+                0x000000008007e97c                ProcessEventCommand = 0x8007e97c
+                0x00000000800a0bd8                moveChibiRobo = 0x800a0bd8
+                0x0000000080081c74                InitTextBox = 0x80081c74
+                0x00000000800749dc                zz_800749dc_ = 0x800749dc
+                0x000000008007caac                GetFlag = 0x8007caac
+                0x000000008000facc                UpdateGameState = 0x8000facc
+                0x0000000080072224                HandleScreenMSG = 0x80072224
+                0x000000008001ae74                SetMsgWindow = 0x8001ae74
+                0x0000000080158e9c                strcpy = 0x80158e9c
+                0x00000000801d5f80                malloc = 0x801d5f80
+                0x000000008000519c                memcpy = 0x8000519c
+                0x0000000080086484                processTextCacheData = 0x80086484
+                0x0000000080099224                initGameString = 0x80099224
+                0x000000008002ac68                RenderVisual = 0x8002ac68
+                0x00000000800b5e34                OverwriteCollision = 0x800b5e34
+                0x00000000800929c4                initializeObjectDataAndResetValues_800929c4_ = 0x800929c4
+                0x00000000801d5f80                allocate_mem = 0x801d5f80
+                0x00000000800bb77c                initXobjChrObjectVectors = 0x800bb77c
+                0x00000000800a30ec                process_matrices_and_objects = 0x800a30ec
+                0x00000000800bb77c                initXobjChrObjectVectors = 0x800bb77c
+                0x0000000080150e60                __register_global_object = 0x80150e60
+                0x0000000080134694                SetStageData = 0x80134694
+                0x00000000800bc524                initChibiRobo = 0x800bc524
+LOAD testCode2.o
+OUTPUT(obj_testCode2.o elf32-powerpc)
+
+.comment        0x0000000000000000       0x23
+ .comment       0x0000000000000000       0x23 testCode2.o
+                                         0x24 (size before relaxing)
+
+.gnu.attributes
+                0x0000000000000000       0x10
+ .gnu.attributes
+                0x0000000000000000       0x10 testCode2.o
