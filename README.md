@@ -47,5 +47,19 @@ Download GC_WII_COMPILERS.zip from (https://cdn.discordapp.com/attachments/72791
 
 Run the make command.
 
-
 credits to : https://github.com/projectPiki/pikmin
+
+---
+Test Folder:
+---
+
+Contains tools used in the Super Mario Sunshine C Kit
+Used to inject code into CBR for debugging and testing
+
+Includes header files and functions that can be changed! 
+happy modding :)
+
+Usage:
+buildCBR.bat nameOfScript.c
+
+
