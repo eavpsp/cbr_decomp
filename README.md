@@ -61,5 +61,7 @@ happy modding :)
 
 Usage:
 buildCBR.bat nameOfScript.c
+After compiling and linking, the gecko code with be added to your clipboard. 
+Paste the code into dolphin!
 
 
