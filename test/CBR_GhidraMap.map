@@ -30,19 +30,19 @@
   8000542c 0000c0 8000542c  4 __init_data 	Global
   800054ec 000024 800054ec  4 __init_hardware 	Global
   80005510 000034 80005510  4 __flush_cache 	Global
-  80007880 0006bc 80007880  4 GetObjToRegister 	Global
-  80007f3c 000114 80007f3c  4 SetCBase 	Global
-  80008050 0002f4 80008050  4 GetGXData 	Global
-  80008344 000048 80008344  4 cHeadTrack::__dt(void) 	Global
+  80007880 0006bc 80007880  4 CGameScene__dt 	Global
+  80007f3c 000114 80007f3c  4 CBase__dt 	Global
+  80008050 0002f4 80008050  4 CGS__dt 	Global
+  80008344 000048 80008344  4 CDSTevStage__dt 	Global
   8000838c 000048 8000838c  4 cHeadTrack::__dt(void) 	Global
   800083d4 000048 800083d4  4 cHeadTrack::__dt(void) 	Global
-  8000841c 0000b0 8000841c  4 GetSceneCamera 	Global
-  800084cc 00013c 800084cc  4 GetSceneLighting 	Global
+  8000841c 0000b0 8000841c  4 SceneCamera__dt 	Global
+  800084cc 00013c 800084cc  4 SceneLighting__dt 	Global
   80008608 000048 80008608  4 cHeadTrack::__dt(void) 	Global
-  80008650 0000cc 80008650  4 GetTitle 	Global
+  80008650 0000cc 80008650  4 TitleObject__dt 	Global
   8000871c 000060 8000871c  4 PhysicsSphere::__dt(void) 	Global
-  8000877c 000168 8000877c  4 GetEventData 	Global
-  800088e4 0000b4 800088e4  4 GetCObjData 	Global
+  8000877c 000168 8000877c  4 XOBj__dt 	Global
+  800088e4 0000b4 800088e4  4 CObj__dt 	Global
   80008998 0001a0 80008998  4 GetCObj 	Global
   80008b38 0000f4 80008b38  4 UpdateScene 	Global
   80008c2c 000048 80008c2c  4 cHeadTrack::__dt(void) 	Global
@@ -52,11 +52,11 @@
   80008d80 000048 80008d80  4 cHeadTrack::__dt(void) 	Global
   80008dc8 000048 80008dc8  4 cHeadTrack::__dt(void) 	Global
   80008e10 000060 80008e10  4 initCobjArchive 	Global
-  80008e70 0000ec 80008e70  4 SetMSGFont 	Global
+  80008e70 0000ec 80008e70  4 CMSG__dt 	Global
   80008f5c 000054 80008f5c  4 ClearCollider 	Global
   80008fb0 00007c 80008fb0  4 GetSceneTextures 	Global
-  8000902c 0001a0 8000902c  4 initCameraControls 	Global
-  800091cc 0003f4 800091cc  4 initCameraActions 	Global
+  8000902c 0001a0 8000902c  4 CCCamMotion__dt 	Global
+  800091cc 0003f4 800091cc  4 CCamera__dt 	Global
   800095c0 000298 800095c0  4 initCameraZoom 	Global
   80009858 00005c 80009858  4 FormationOffensive::__dt(void) 	Global
   800098b4 00005c 800098b4  4 FormationOffensive::__dt(void) 	Global
@@ -65,7 +65,7 @@
   800099c8 0004fc 800099c8  4 initCameraActionEvents 	Global
   80009ec4 00005c 80009ec4  4 FormationOffensive::__dt(void) 	Global
   80009f20 000340 80009f20  4 GetCameraActionData 	Global
-  8000a260 000258 8000a260  4 initCameraActionReset 	Global
+  8000a260 000258 8000a260  4 CCamControls__dt 	Global
   8000a4b8 000068 8000a4b8  4 checkRangeAndReturnValue 	Global
   8000a520 00000c 8000a520  4 add_constant_e5d38 	Global
   8000a52c 00000c 8000a52c  4 add_constant_e7e20 	Global
@@ -234,7 +234,7 @@
   80016f9c 000088 80016f9c  4 GetCameraMomento 	Global
   80017024 000048 80017024  4 cHeadTrack::__dt(void) 	Global
   8001706c 0000c8 8001706c  4 SetMsgFont 	Global
-  80017134 000088 80017134  4 SetCObjVec 	Global
+  80017134 000088 80017134  4 CObjVec__dt 	Global
   800171bc 000088 800171bc  4 SetCJObj 	Global
   80017244 0000c4 80017244  4 processTreeSetYPosition 	Global
   80017308 0000c4 80017308  4 updateZCoordinate 	Global
@@ -255,7 +255,7 @@
   800185b0 000048 800185b0  4 cHeadTrack::__dt(void) 	Global
   800185f8 000048 800185f8  4 cHeadTrack::__dt(void) 	Global
   80018640 000048 80018640  4 cHeadTrack::__dt(void) 	Global
-  80018688 0000c4 80018688  4 SetCShadows 	Global
+  80018688 0000c4 80018688  4 CShadow__dt 	Global
   8001874c 000048 8001874c  4 cHeadTrack::__dt(void) 	Global
   80018794 000048 80018794  4 cHeadTrack::__dt(void) 	Global
   800187dc 00005c 800187dc  4 FormationOffensive::__dt(void) 	Global
@@ -278,10 +278,10 @@
   80018cd8 000004 80018cd8  4 DBClose 	NdevExi2A
   80018cdc 000004 80018cdc  4 DBClose 	NdevExi2A
   80018ce0 000048 80018ce0  4 cHeadTrack::__dt(void) 	Global
-  80018d28 000090 80018d28  4 SetCTexObj 	Global
+  80018d28 000090 80018d28  4 Logo__dt 	Global
   80018db8 00005c 80018db8  4 FormationOffensive::__dt(void) 	Global
   80018e14 000048 80018e14  4 cHeadTrack::__dt(void) 	Global
-  80018e5c 000098 80018e5c  4 SetScreenFuncs 	Global
+  80018e5c 000098 80018e5c  4 InfoScreen__dt 	Global
   80018ef4 000088 80018ef4  4 SetCParticle 	Global
   80018f7c 00006c 80018f7c  4 SetCScrnQuake 	Global
   80018fe8 000048 80018fe8  4 cHeadTrack::__dt(void) 	Global
@@ -291,18 +291,18 @@
   8001915c 000048 8001915c  4 cHeadTrack::__dt(void) 	Global
   800191a4 000074 800191a4  4 InitXSound 	Global
   80019218 00004c 80019218  4 SetCCard 	Global
-  80019264 000064 80019264  4 SetMemCard 	Global
+  80019264 000064 80019264  4 MemCard__dt 	Global
   800192c8 000048 800192c8  4 cHeadTrack::__dt(void) 	Global
   80019310 00002c 80019310  4 NSNMessengerScene::SceneCreated(void) 	Global
   8001933c 000144 8001933c  4 initCGame 	Global
   80019480 00008c 80019480  4 isInstanceInitialized 	Global
-  8001950c 000048 8001950c  4 initCThread 	Global
-  80019554 000074 80019554  4 GetFileToRegister 	Global
+  8001950c 000048 8001950c  4 CThread__dt 	Global
+  80019554 000074 80019554  4 CGameFile__dt 	Global
   800195c8 000038 800195c8  4 __arraydtor$381 	Global
-  80019600 000100 80019600  4 initCGameScene 	Global
-  80019700 00005c 80019700  4 SetCGameData 	Global
+  80019600 000100 80019600  4 FBMirror__dt 	Global
+  80019700 00005c 80019700  4 FBMirror__ct 	Global
   8001975c 000048 8001975c  4 initARCacheInfo 	Global
-  800197a4 0006b8 800197a4  4 CGameCreateScene 	Global
+  800197a4 0006b8 800197a4  4 CGameScene__ct 	Global
   80019e5c 000488 80019e5c  4 SetCamActions 	Global
   8001a2e4 0000c4 8001a2e4  4 SetCCameraActionScroll 	Global
   8001a3a8 00001c 8001a3a8  4 FEResourceManager::__ct(void) 	Global
@@ -318,9 +318,9 @@
   8001ac9c 00001c 8001ac9c  4 FEResourceManager::__ct(void) 	Global
   8001acb8 00001c 8001acb8  4 FEResourceManager::__ct(void) 	Global
   8001acd4 000098 8001acd4  4 SetCCameraActionDefault 	Global
-  8001ad6c 0000f8 8001ad6c  4 SetMessage 	Global
-  8001ae64 000010 8001ae64  4 BIRDOSoundPropAccessor::ResetSoundPropTable(void) 	Global
-  8001ae74 000028 8001ae74  4 SetMsgWindow 	Global
+  8001ad6c 0000f8 8001ad6c  4 CMSG__ct 	Global
+  8001ae64 000010 8001ae64  4 CTexObj__ct 	Global
+  8001ae74 000028 8001ae74  4 CWindow__ct 	Global
   8001ae9c 00005c 8001ae9c  4 FormationOffensive::__dt(void) 	Global
   8001aef8 000048 8001aef8  4 cHeadTrack::__dt(void) 	Global
   8001af40 000030 8001af40  4 TRK_memset 	Global
@@ -338,18 +338,18 @@
   8001b3cc 00003c 8001b3cc  4 GameSceneManager::__ct(void) 	Global
   8001b408 0000ac 8001b408  4 SetCFile 	Global
   8001b4b4 000084 8001b4b4  4 SetObjDemo 	Global
-  8001b538 00006c 8001b538  4 SetScene 	Global
+  8001b538 00006c 8001b538  4 SceneLighting__ct 	Global
   8001b5a4 00006c 8001b5a4  4 InGameTextOverlay::__dt(void) 	Global
   8001b610 00006c 8001b610  4 InGameTextOverlay::__dt(void) 	Global
   8001b67c 00006c 8001b67c  4 InGameTextOverlay::__dt(void) 	Global
   8001b6e8 000084 8001b6e8  4 SetCScrnWipeTex 	Global
   8001b76c 00005c 8001b76c  4 FormationOffensive::__dt(void) 	Global
-  8001b7c8 00007c 8001b7c8  4 SetCTexObj 	Global
+  8001b7c8 00007c 8001b7c8  4 CTPL__dt 	Global
   8001b844 00005c 8001b844  4 FormationOffensive::__dt(void) 	Global
-  8001b8a0 0000dc 8001b8a0  4 SetUI 	Global
+  8001b8a0 0000dc 8001b8a0  4 SetCam&Lights 	Global
   8001b97c 000010 8001b97c  4 BIRDOSoundPropAccessor::ResetSoundPropTable(void) 	Global
-  8001b98c 00002c 8001b98c  4 SetCCamera 	Global
-  8001b9b8 0001a4 8001b9b8  4 InitGX 	Global
+  8001b98c 00002c 8001b98c  4 SceneCamera__ct 	Global
+  8001b9b8 0001a4 8001b9b8  4 CGS__ct 	Global
   8001bb5c 00005c 8001bb5c  4 FormationOffensive::__dt(void) 	Global
   8001bbb8 00005c 8001bbb8  4 FormationOffensive::__dt(void) 	Global
   8001bc14 000010 8001bc14  4 BIRDOSoundPropAccessor::ResetSoundPropTable(void) 	Global
@@ -423,7 +423,7 @@
   8002442c 000074 8002442c  4 scale_vector_by_scalar 	Global
   800244a0 000084 800244a0  4 SubtractVectors 	Global
   80024524 000034 80024524  4 initializeMatrixWithIdentity_ 	Global
-  80024558 000098 80024558  4 SetCPtclDust3 	Global
+  80024558 000098 80024558  4 DestroyCPtclDust3 	Global
   800245f0 000010 800245f0  4 nlListContainer<P8SaveData>::__ct(void) 	Global
   80024600 0001d8 80024600  4 zz_80024600_ 	Global
   800247d8 00015c 800247d8  4 zz_800247d8_ 	Global
@@ -456,7 +456,7 @@
   80025aa0 000004 80025aa0  4 DBClose 	NdevExi2A
   80025aa4 0000d8 80025aa4  4 ChibiJumpHandler 	Global
   80025b7c 0000d8 80025b7c  4 process_tree_with_param 	Global
-  80025c54 0000d8 80025c54  4 SetLineHeightForText 	Global
+  80025c54 0000d8 80025c54  4 GetHeightOfJump 	Global
   80025d2c 0000d8 80025d2c  4 SetLineHeightForText 	Global
   80025e04 0000d8 80025e04  4 update_parameter_value 	Global
   80025edc 0001b0 80025edc  4 updateJobjWithQuaternion_80025edc 	Global
@@ -476,7 +476,7 @@
   80027a98 0000d8 80027a98  4 zz_80027a98_ 	Global
   80027b70 00018c 80027b70  4 zz_80027b70_ 	Global
   80027cfc 00018c 80027cfc  4 zz_80027cfc_ 	Global
-  80027e88 000178 80027e88  4 zz_80027e88_ 	Global
+  80027e88 000178 80027e88  4 SceneTransitionTrigger 	Global
   80028000 0000b4 80028000  4 zz_80028000_ 	Global
   800280b4 000244 800280b4  4 zz_800280b4_ 	Global
   800282f8 000038 800282f8  4 zz_800282f8_ 	Global
@@ -992,11 +992,11 @@
   80091540 0001ec 80091540  4 processObjectsInTree 	Global
   8009172c 000058 8009172c  4 UpdateChildObjTree 	Global
   80091784 0000b0 80091784  4 zz_80091784_ 	Global
-  80091834 000054 80091834  4 zz_80091834_ 	Global
+  80091834 000054 80091834  4 RenderObstructionTexture 	Global
   80091888 0003bc 80091888  4 zz_80091888_ 	Global
-  80091c44 00003c 80091c44  4 zz_80091c44_ 	Global
+  80091c44 00003c 80091c44  4 RenderDepthFX 	Global
   80091c80 000c68 80091c80  4 zz_80091c80_ 	Global
-  800928e8 0000dc 800928e8  4 zz_800928e8_ 	Global
+  800928e8 0000dc 800928e8  4 initGraphicSettings 	Global
   800929c4 0000e0 800929c4  4 initializeObjectDataAndResetValues_800929c4_ 	Global
   80092aa4 0000dc 80092aa4  4 InitCamera 	Global
   80092b80 000010 80092b80  4 cFielder::IsPlayingPowerupAnim(void) 	Global
@@ -1087,7 +1087,7 @@
   800a0894 0000e4 800a0894  4 zz_800a0894_ 	Global
   800a0978 000044 800a0978  4 zz_800a0978_ 	Global
   800a09bc 00021c 800a09bc  4 zz_800a09bc_ 	Global
-  800a0bd8 001ff8 800a0bd8  4 moveChibiRobo 	Global
+  800a0bd8 001ff8 800a0bd8  4 CamLookAtChibi 	Global
   800a2bd0 000064 800a2bd0  4 __fpclassifyf 	MSL_C.PPCEABI.bare.H
   800a2c34 000014 800a2c34  4 getLeadingZerosCount 	Global
   800a2c48 000028 800a2c48  4 zz_800a2c48_ 	Global
@@ -1322,20 +1322,20 @@
   800bb3d0 000338 800bb3d0  4 zz_800bb3d0_ 	Global
   800bb708 000018 800bb708  4 cPlayer::ClearSwapControllerTimer(void) 	Global
   800bb720 000008 800bb720  4 CBGetBytesAvailableForRead 	TRK_Hollywood_Revolution
-  800bb728 000054 800bb728  4 zz_800bb728_ 	Global
+  800bb728 000054 800bb728  4 SetChibiHeadObjectInv 	Global
   800bb77c 000600 800bb77c  4 initXobjChrObjectVectors 	Global
   800bbd7c 000030 800bbd7c  4 UpdatePtrExe0x2 	Global
   800bbdac 000338 800bbdac  4 zz_800bbdac_ 	Global
   800bc0e4 00039c 800bc0e4  4 InitFXData 	Global
   800bc480 00005c 800bc480  4 FormationOffensive::__dt(void) 	Global
   800bc4dc 000048 800bc4dc  4 cHeadTrack::__dt(void) 	Global
-  800bc524 000694 800bc524  4 initChibiRobo 	Global
-  800bcbb8 000094 800bcbb8  4 zz_800bcbb8_ 	Global
+  800bc524 000694 800bc524  4 ChibiRobo__dt 	Global
+  800bcbb8 000094 800bcbb8  4 Dust2__dt 	Global
   800bcc4c 0000a8 800bcc4c  4 initXObjPlug 	Global
   800bccf4 000090 800bccf4  4 InitInterpolation 	Global
   800bcd84 000060 800bcd84  4 PhysicsSphere::__dt(void) 	Global
-  800bcde4 000060 800bcde4  4 initChibiCopter 	Global
-  800bce44 000060 800bce44  4 initXobjAttachment 	Global
+  800bcde4 000060 800bcde4  4 ChibiCopter__dt 	Global
+  800bce44 000060 800bce44  4 XObjAttachment__dt 	Global
   800bcea4 000060 800bcea4  4 initPopper 	Global
   800bcf04 000060 800bcf04  4 initRadar 	Global
   800bcf64 000060 800bcf64  4 initXobox 	Global
@@ -1436,7 +1436,7 @@
   800d5034 0000a0 800d5034  4 CleanUpAndDeallocateMemoryForNode 	Global
   800d50d4 0000bc 800d50d4  4 zz_800d50d4_ 	Global
   800d5190 00039c 800d5190  4 zz_800d5190_ 	Global
-  800d552c 000054 800d552c  4 zz_800d552c_ 	Global
+  800d552c 000054 800d552c  4 SetChibiHeadObject 	Global
   800d5580 00003c 800d5580  4 zz_800d5580_ 	Global
   800d55bc 000248 800d55bc  4 zz_800d55bc_ 	Global
   800d5804 000070 800d5804  4 draw_image_with_transparency 	Global
@@ -1614,7 +1614,7 @@
   800e9b7c 000600 800e9b7c  4 zz_800e9b7c_ 	Global
   800ea17c 000144 800ea17c  4 zz_800ea17c_ 	Global
   800ea2c0 00004c 800ea2c0  4 InitCStatus 	Global
-  800ea30c 000100 800ea30c  4 initActorSpider 	Global
+  800ea30c 000100 800ea30c  4 ActorSpider__dt 	Global
   800ea40c 000148 800ea40c  4 zz_800ea40c_ 	Global
   800ea554 00022c 800ea554  4 zz_800ea554_ 	Global
   800ea780 00021c 800ea780  4 zz_800ea780_ 	Global
@@ -1659,7 +1659,7 @@
   800f4818 000050 800f4818  4 zz_800f4818_ 	Global
   800f4868 000058 800f4868  4 zz_800f4868_ 	Global
   800f48c0 000130 800f48c0  4 initPointers 	Global
-  800f49f0 0000bc 800f49f0  4 initActorSmallSpider 	Global
+  800f49f0 0000bc 800f49f0  4 ObjSpiderSmall__dt 	Global
   800f4aac 000164 800f4aac  4 zz_800f4aac_ 	Global
   800f4c10 0001a8 800f4c10  4 zz_800f4c10_ 	Global
   800f4db8 000190 800f4db8  4 zz_800f4db8_ 	Global
@@ -1735,7 +1735,7 @@
   801068d4 000050 801068d4  4 zz_801068d4_ 	Global
   80106924 000058 80106924  4 zz_80106924_ 	Global
   8010697c 000098 8010697c  4 InitMorePointers 	Global
-  80106a14 000078 80106a14  4 InitActor 	Global
+  80106a14 000078 80106a14  4 XObjActor__dt 	Global
   80106a8c 000004 80106a8c  4 DBClose 	NdevExi2A
   80106a90 000008 80106a90  4 CBGetBytesAvailableForRead 	TRK_Hollywood_Revolution
   80106a98 000028 80106a98  4 zz_80106a98_ 	Global
@@ -1864,7 +1864,7 @@
   80122d98 000074 80122d98  4 zz_80122d98_ 	Global
   80122e0c 000024 80122e0c  4 zz_80122e0c_ 	Global
   80122e30 000058 80122e30  4 zz_80122e30_ 	Global
-  80122e88 00008c 80122e88  4 InitJennyActor 	Global
+  80122e88 00008c 80122e88  4 JennyActor__dt 	Global
   80122f14 0000a4 80122f14  4 zz_80122f14_ 	Global
   80122fb8 000054 80122fb8  4 zz_80122fb8_ 	Global
   8012300c 000028 8012300c  4 zz_8012300c_ 	Global
@@ -1879,7 +1879,7 @@
   801262f0 00012c 801262f0  4 zz_801262f0_ 	Global
   8012641c 000024 8012641c  4 zz_8012641c_ 	Global
   80126440 000058 80126440  4 zz_80126440_ 	Global
-  80126498 000078 80126498  4 InitActorMama 	Global
+  80126498 000078 80126498  4 ActorMama__dt 	Global
   80126510 0000ac 80126510  4 zz_80126510_ 	Global
   801265bc 00005c 801265bc  4 zz_801265bc_ 	Global
   80126618 000008 80126618  4 J3DAnmCluster::getWeight(unsigned 	short)
@@ -1895,7 +1895,7 @@
   8012926c 0000b0 8012926c  4 zz_8012926c_ 	Global
   8012931c 000024 8012931c  4 SetStartPos 	Global
   80129340 000058 80129340  4 unk_80129340 	Global
-  80129398 000078 80129398  4 InitActorPapa 	Global
+  80129398 000078 80129398  4 ActorPapa__dt 	Global
   80129410 0000a4 80129410  4 TraverseLinkedList 	Global
   801294b4 000054 801294b4  4 lexicalCastWithStrings 	Global
   80129508 000044 80129508  4 zz_80129508_ 	Global
@@ -1910,7 +1910,7 @@
   8012c7a0 0000b8 8012c7a0  4 initializeObjectTransform 	Global
   8012c858 000024 8012c858  4 zz_8012c858_ 	Global
   8012c87c 000058 8012c87c  4 zz_8012c87c_ 	Global
-  8012c8d4 000078 8012c8d4  4 InitTaoActor 	Global
+  8012c8d4 000078 8012c8d4  4 TaoActor__dt 	Global
   8012c94c 0000ac 8012c94c  4 zz_8012c94c_ 	Global
   8012c9f8 00005c 8012c9f8  4 zz_8012c9f8_ 	Global
   8012ca54 000044 8012ca54  4 zz_8012ca54_ 	Global
@@ -1991,7 +1991,7 @@
   801344b8 000048 801344b8  4 SetXobjSound 	Global
   80134500 000038 80134500  4 __arraydtor$381 	Global
   80134538 0000f4 80134538  4 SetXObjActor 	Global
-  8013462c 000030 8013462c  4 zz_8013462c_ 	Global
+  8013462c 000030 8013462c  4 newDust3 	Global
   8013465c 000038 8013465c  4 __arraydtor$381 	Global
   80134694 000354 80134694  4 SetStageData 	Global
   801349e8 000034 801349e8  4 zz_801349e8_ 	Global
@@ -2110,7 +2110,7 @@
   80141c50 000178 80141c50  4 zz_80141c50_ 	Global
   80141dc8 00004c 80141dc8  4 zz_80141dc8_ 	Global
   80141e14 000518 80141e14  4 zz_80141e14_ 	Global
-  8014232c 00010c 8014232c  4 initCHeadTrack 	Global
+  8014232c 00010c 8014232c  4 InitCVecGlobal 	Global
   80142438 000008 80142438  4 CBGetBytesAvailableForRead 	TRK_Hollywood_Revolution
   80142440 000478 80142440  4 zz_80142440_ 	Global
   801428b8 0000a4 801428b8  4 zz_801428b8_ 	Global
@@ -3754,7 +3754,7 @@
   801ac8ec 000278 801ac8ec  4 zz_801ac8ec_ 	Global
   801acb64 000018 801acb64  4 zz_801acb64_ 	Global
   801acb7c 000720 801acb7c  4 zz_801acb7c_ 	Global
-  801ad29c 00031c 801ad29c  4 zz_801ad29c_ 	Global
+  801ad29c 00031c 801ad29c  4 unkGXFunc 	Global
   801ad5b8 000400 801ad5b8  4 zz_801ad5b8_ 	Global
   801ad9b8 00038c 801ad9b8  4 zz_801ad9b8_ 	Global
   801add44 00038c 801add44  4 zz_801add44_ 	Global
@@ -4021,7 +4021,7 @@
   801c1aec 000074 801c1aec  4 zz_801c1aec_ 	Global
   801c1b60 000184 801c1b60  4 zz_801c1b60_ 	Global
   801c1ce4 000060 801c1ce4  4 zz_801c1ce4_ 	Global
-  801c1d44 00008c 801c1d44  4 zz_801c1d44_ 	Global
+  801c1d44 00008c 801c1d44  4 initSysDolphinClass 	Global
   801c1dd0 000030 801c1dd0  4 initMem_8064aea0 	Global
   801c1e00 000028 801c1e00  4 zz_801c1e00_ 	Global
   801c1e28 000124 801c1e28  4 updateLinkedList 	Global
@@ -4852,6 +4852,8 @@
   801ff464 000001 801ff464  1 s__GXTexObj_801ff464 	Global
   801ff470 000001 801ff470  1 s__GXColor_801ff470 	Global
   801ff74c 000001 801ff74c  1 s_StatusMenu_801ff74c 	Global
+  801ff758 000001 801ff758  1 s_MemCard(?)_801ff758 	Global
+  801ff764 000001 801ff764  1 s_SelectStage_801ff764 	Global
   80201388 000001 80201388  1 s_MenuMCTestSub_80201388 	Global
   80201398 000001 80201398  1 s_(%d)_saving..._80201398 	Global
   802013a8 000001 802013a8  1 s_(%d)_loading..._802013a8 	Global
@@ -4934,116 +4936,117 @@
   80201ffc 000001 80201ffc  1 s_has_been_formatted._80201ffc 	Global
   80202010 000001 80202010  1 s_Continue_without_saving?_80202010 	Global
   8020202c 000001 8020202c  1 s_To_create_new_game_data,_8020202c 	Global
-  80202048 000001 80202048  8 s_please_select_a_file._80202048 	Global
-  80202060 000001 80202060  8 s_There_is_not_80202060 	Global
-  80202070 000001 80202070  8 s_enough_free_space._80202070 	Global
-  80202084 000001 80202084  8 s_This_data_80202084 	Global
-  80202090 000001 80202090  8 s_is_corrupted._80202090 	Global
-  802020a0 000001 802020a0  8 s_does_not_have_enough_space._802020a0 	Global
+  80202048 000001 80202048  1 s_please_select_a_file._80202048 	Global
+  80202060 000001 80202060  1 s_There_is_not_80202060 	Global
+  80202070 000001 80202070  1 s_enough_free_space._80202070 	Global
+  80202084 000001 80202084  1 s_This_data_80202084 	Global
+  80202090 000001 80202090  1 s_is_corrupted._80202090 	Global
+  802020a0 000001 802020a0  1 s_does_not_have_enough_space._802020a0 	Global
   802020bc 000001 802020bc  1 s_Chibi-Robo_requires_1_file_and_802020bc 	Global
-  802020dc 000001 802020dc  8 s_6_blocks_to_save._802020dc 	Global
-  802020f0 000001 802020f0  8 s_Overwrite_existing_file?_802020f0 	Global
-  8020210c 000001 8020210c  8 s_To_manage_the_contents_of_your_M_8020210c 	Global
-  80202134 000001 80202134  8 s_Card,_use_the_Memory_Card_screen_80202134 	Global
-  80202158 000001 80202158  8 s_Now_saving..._80202158 	Global
-  80202168 000001 80202168  8 s_Do_not_touch_the_Memory_Card_80202168 	Global
-  80202188 000001 80202188  8 s_in_Slot_A_or_the_POWER_Button._80202188 	Global
-  802021a8 000001 802021a8  8 s_An_error_has_occurred_during_sav_802021a8 	Global
-  802021d0 000001 802021d0  8 s_Select_a_file_to_load._802021d0 	Global
-  802021e8 000001 802021e8  8 s_Loading..._802021e8 	Global
-  802021f4 000001 802021f4  8 s_The_Chibi-Robo_file_on_the_802021f4 	Global
-  80202210 000001 80202210  8 s_Memory_Card_in_Slot_A_is_80202210 	Global
-  8020222c 000001 8020222c  8 s_corrupted_and_must_be_erased._8020222c 	Global
-  8020224c 000001 8020224c  8 s_Create_new_8020224c 	Global
-  80202258 000001 80202258  8 s_game_data?_80202258 	Global
-  80202264 000001 80202264  8 s_damaged_and_cannot_be_used._80202264 	Global
+  802020dc 000001 802020dc  1 s_6_blocks_to_save._802020dc 	Global
+  802020f0 000001 802020f0  1 s_Overwrite_existing_file?_802020f0 	Global
+  8020210c 000001 8020210c  1 s_To_manage_the_contents_of_your_M_8020210c 	Global
+  80202134 000001 80202134  1 s_Card,_use_the_Memory_Card_screen_80202134 	Global
+  80202158 000001 80202158  1 s_Now_saving..._80202158 	Global
+  80202168 000001 80202168  1 s_Do_not_touch_the_Memory_Card_80202168 	Global
+  80202188 000001 80202188  1 s_in_Slot_A_or_the_POWER_Button._80202188 	Global
+  802021a8 000001 802021a8  1 s_An_error_has_occurred_during_sav_802021a8 	Global
+  802021d0 000001 802021d0  1 s_Select_a_file_to_load._802021d0 	Global
+  802021e8 000001 802021e8  1 s_Loading..._802021e8 	Global
+  802021f4 000001 802021f4  1 s_The_Chibi-Robo_file_on_the_802021f4 	Global
+  80202210 000001 80202210  1 s_Memory_Card_in_Slot_A_is_80202210 	Global
+  8020222c 000001 8020222c  1 s_corrupted_and_must_be_erased._8020222c 	Global
+  8020224c 000001 8020224c  1 s_Create_new_8020224c 	Global
+  80202258 000001 80202258  1 s_game_data?_80202258 	Global
+  80202264 000001 80202264  1 s_damaged_and_cannot_be_used._80202264 	Global
   80202280 000001 80202280  1 s_Insert_another_Memory_Card_80202280 	Global
-  8020229c 000001 8020229c  8 s_Please_insert_a_different_Memory_8020229c 	Global
-  802022c4 000001 802022c4  8 s_or_press_the_A_Button_to_continu_802022c4 	Global
-  802022f8 000001 802022f8  8 s_Save_completed._802022f8 	Global
+  8020229c 000001 8020229c  1 s_Please_insert_a_different_Memory_8020229c 	Global
+  802022c4 000001 802022c4  1 s_or_press_the_A_Button_to_continu_802022c4 	Global
+  802022f8 000001 802022f8  1 s_Save_completed._802022f8 	Global
   80202308 000001 80202308  1 s_Select_a_file._80202308 	Global
-  80202318 000001 80202318  8 s_The_save_data_could_not_be_loade_80202318 	Global
-  8020233c 000001 8020233c  8 s_is_no_longer_available._8020233c 	Global
+  80202318 000001 80202318  1 s_The_save_data_could_not_be_loade_80202318 	Global
+  8020233c 000001 8020233c  1 s_is_no_longer_available._8020233c 	Global
   80202354 000001 80202354  1 s_Insert_a_different_Memory_Card_o_80202354 	Global
   80202380 000001 80202380  1 s_A_Button_to_continue_without_sav_80202380 	Global
-  802023a8 000001 802023a8  8 s_press_the_A_Button_to_continue_w_802023a8 	Global
-  802023d8 000001 802023d8  8 s_Chibi-Robo!_802023d8 	Global
+  802023a8 000001 802023a8  1 s_press_the_A_Button_to_continue_w_802023a8 	Global
+  802023d8 000001 802023d8  1 s_Chibi-Robo!_802023d8 	Global
   802023e4 000001 802023e4  1 s_Time_Played:_802023e4 	Global
-  802023f4 000001 802023f4  8 s_And_now,_for_the_weather._A_powe_802023f4 	Global
-  8020249c 000001 8020249c  8 s_And_now,_for_sports!_I_hope_you'_8020249c 	Global
+  802023f4 000001 802023f4  1 s_And_now,_for_the_weather._A_powe_802023f4 	Global
+  8020249c 000001 8020249c  1 s_And_now,_for_sports!_I_hope_you'_8020249c 	Global
   80202670 000001 80202670  1 s__80202670 	Global
   8020267c 000001 8020267c  1 s_Shopping_time,_shopping_time!_Wh_8020267c 	Global
   802026bc 000001 802026bc  1 s_Collect_Scrap_to_build_Utilibots_802026bc 	Global
-  802026ec 000001 802026ec  8 s_Swap_your_spare_Scrap_for_Moolah_802026ec 	Global
-  80202738 000001 80202738  8 s_Hello,_and_thank_you_for_accessi_80202738 	Global
-  802028e8 000001 802028e8  8 s_Screen_has_802028e8 	Global
-  802028f4 000001 802028f4  8 s_been_set_to_802028f4 	Global
+  802026ec 000001 802026ec  1 s_Swap_your_spare_Scrap_for_Moolah_802026ec 	Global
+  80202738 000001 80202738  1 s_Hello,_and_thank_you_for_accessi_80202738 	Global
+  802028cc 000001 802028cc  1 s_%s%02XYES%s_@_@%s%02XNO%s_802028cc 	Global
+  802028e8 000001 802028e8  1 s_Screen_has_802028e8 	Global
+  802028f4 000001 802028f4  1 s_been_set_to_802028f4 	Global
   80202900 000001 80202900  1 s_Progressive_Mode_80202900 	Global
-  80202914 000001 80202914  8 s_has_been_80202914 	Global
-  80202920 000001 80202920  8 s_turned_off_80202920 	Global
-  8020292c 000001 8020292c  8 s_(store_item)_8020292c 	Global
-  8020293c 000001 8020293c  8 s_(remove_suit)_8020293c 	Global
-  8020294c 000001 8020294c  8 s_Vibration_8020294c 	Global
-  80202958 000001 80202958  8 s_Monaural_80202958 	Global
-  80202964 000001 80202964  8 s_Happy_Stickers_80202964 	Global
-  80202974 000001 80202974  8 s_Camera_control_80202974 	Global
-  80202984 000001 80202984  8 s_Item_menu_80202984 	Global
-  80202990 000001 80202990  8 s_Chibi-Eye_80202990 	Global
-  8020299c 000001 8020299c  8 s_Z_action_8020299c 	Global
-  802029a8 000001 802029a8  8 s_Behind_camera_802029a8 	Global
-  802029b8 000001 802029b8  8 s_Menu_select_802029b8 	Global
+  80202914 000001 80202914  1 s_has_been_80202914 	Global
+  80202920 000001 80202920  1 s_turned_off_80202920 	Global
+  8020292c 000001 8020292c  1 s_(store_item)_8020292c 	Global
+  8020293c 000001 8020293c  1 s_(remove_suit)_8020293c 	Global
+  8020294c 000001 8020294c  1 s_Vibration_8020294c 	Global
+  80202958 000001 80202958  1 s_Monaural_80202958 	Global
+  80202964 000001 80202964  1 s_Happy_Stickers_80202964 	Global
+  80202974 000001 80202974  1 s_Camera_control_80202974 	Global
+  80202984 000001 80202984  1 s_Item_menu_80202984 	Global
+  80202990 000001 80202990  1 s_Chibi-Eye_80202990 	Global
+  8020299c 000001 8020299c  1 s_Z_action_8020299c 	Global
+  802029a8 000001 802029a8  1 s_Behind_camera_802029a8 	Global
+  802029b8 000001 802029b8  1 s_Menu_select_802029b8 	Global
   802029c4 000001 802029c4  1 s_Control_of_ChibiRobo/Menu_select_802029c4 	Global
-  802029e8 000001 802029e8  8 s_ChibiRobo_Ranking_802029e8 	Global
-  802029fc 000001 802029fc  8 s_Chibi-Doors_completed_802029fc 	Global
-  80202a14 000001 80202a14  8 s_Happy_points_80202a14 	Global
-  80202a24 000001 80202a24  8 s_ChibiCom_Menu_80202a24 	Global
-  80202a34 000001 80202a34  8 s_Junk_Machine_80202a34 	Global
-  80202a44 000001 80202a44  8 s_Junk_trade_80202a44 	Global
-  80202a50 000001 80202a50  8 s_Current_exchange_rate_80202a50 	Global
-  80202a68 000001 80202a68  8 s_Exchange_how_much?_80202a68 	Global
-  80202a7c 000001 80202a7c  8 s_There_is_no_enough_junks_80202a7c 	Global
-  80202a98 000001 80202a98  8 s_Stamby_ok_80202a98 	Global
-  80202aa4 000001 80202aa4  8 s_The_Disc_Cover_is_open._If_you_w_80202aa4 	Global
+  802029e8 000001 802029e8  1 s_ChibiRobo_Ranking_802029e8 	Global
+  802029fc 000001 802029fc  1 s_Chibi-Doors_completed_802029fc 	Global
+  80202a14 000001 80202a14  1 s_Happy_points_80202a14 	Global
+  80202a24 000001 80202a24  1 s_ChibiCom_Menu_80202a24 	Global
+  80202a34 000001 80202a34  1 s_Junk_Machine_80202a34 	Global
+  80202a44 000001 80202a44  1 s_Junk_trade_80202a44 	Global
+  80202a50 000001 80202a50  1 s_Current_exchange_rate_80202a50 	Global
+  80202a68 000001 80202a68  1 s_Exchange_how_much?_80202a68 	Global
+  80202a7c 000001 80202a7c  1 s_There_is_no_enough_junks_80202a7c 	Global
+  80202a98 000001 80202a98  1 s_Stamby_ok_80202a98 	Global
+  80202aa4 000001 80202aa4  1 s_The_Disc_Cover_is_open._If_you_w_80202aa4 	Global
   80202afc 000001 80202afc  1 s_Please_insert_the_ChibiRobo!_Gam_80202afc 	Global
   80202b24 000001 80202b24  1 s_The_Game_Disc_could_not_be_read._80202b24 	Global
-  80202b94 000001 80202b94  8 s_No_Memory_Card_80202b94 	Global
-  80202ba4 000001 80202ba4  8 s_found_in_Slot_A._80202ba4 	Global
-  80202bb8 000001 80202bb8  8 s_Please_check._80202bb8 	Global
-  80202bc8 000001 80202bc8  8 s_Wrong_device_in_Slot_A._Please_i_80202bc8 	Global
-  80202c00 000001 80202c00  8 s_damaged_and_can_not_be_used._80202c00 	Global
-  80202c20 000001 80202c20  8 s_The_Memory_Card_in_Slot_A_is_cor_80202c20 	Global
-  80202c48 000001 80202c48  8 s_and_needs_to_be_formatted._80202c48 	Global
-  80202c64 000001 80202c64  8 s_Do_you_want_to_format?_80202c64 	Global
-  80202c7c 000001 80202c7c  8 s_Formatting_the_Memory_Card_will_e_80202c7c 	Global
-  80202ca4 000001 80202ca4  8 s_all_previously_saved_data._Conti_80202ca4 	Global
-  80202ccc 000001 80202ccc  8 s_Saving_to_the_Memory_Card._80202ccc 	Global
-  80202ce8 000001 80202ce8  8 s_Do_not_touch_the_Memory_80202ce8 	Global
+  80202b94 000001 80202b94  1 s_No_Memory_Card_80202b94 	Global
+  80202ba4 000001 80202ba4  1 s_found_in_Slot_A._80202ba4 	Global
+  80202bb8 000001 80202bb8  1 s_Please_check._80202bb8 	Global
+  80202bc8 000001 80202bc8  1 s_Wrong_device_in_Slot_A._Please_i_80202bc8 	Global
+  80202c00 000001 80202c00  1 s_damaged_and_can_not_be_used._80202c00 	Global
+  80202c20 000001 80202c20  1 s_The_Memory_Card_in_Slot_A_is_cor_80202c20 	Global
+  80202c48 000001 80202c48  1 s_and_needs_to_be_formatted._80202c48 	Global
+  80202c64 000001 80202c64  1 s_Do_you_want_to_format?_80202c64 	Global
+  80202c7c 000001 80202c7c  1 s_Formatting_the_Memory_Card_will_e_80202c7c 	Global
+  80202ca4 000001 80202ca4  1 s_all_previously_saved_data._Conti_80202ca4 	Global
+  80202ccc 000001 80202ccc  1 s_Saving_to_the_Memory_Card._80202ccc 	Global
+  80202ce8 000001 80202ce8  1 s_Do_not_touch_the_Memory_80202ce8 	Global
   80202d00 000001 80202d00  1 s_Card_or_the_POWER_Button._80202d00 	Global
-  80202d1c 000001 80202d1c  8 s_An_error_may_occurred_during_for_80202d1c 	Global
+  80202d1c 000001 80202d1c  1 s_An_error_may_occurred_during_for_80202d1c 	Global
   80202d44 000001 80202d44  1 s_The_Memory_Card_has_been_formatt_80202d44 	Global
-  80202d68 000001 80202d68  8 s_Continue_without_80202d68 	Global
-  80202d7c 000001 80202d7c  8 s_Create_a_new_game_data._80202d7c 	Global
+  80202d68 000001 80202d68  1 s_Continue_without_80202d68 	Global
+  80202d7c 000001 80202d7c  1 s_Create_a_new_game_data._80202d7c 	Global
   80202d94 000001 80202d94  1 s_Please_select_a_file._80202d94 	Global
-  80202dac 000001 80202dac  8 s_There_is_not_enough_free_space_80202dac 	Global
-  80202dcc 000001 80202dcc  8 s_The_save_data_80202dcc 	Global
-  80202ddc 000001 80202ddc  8 s_is_broken_80202ddc 	Global
-  80202de8 000001 80202de8  8 s_on_the_Memory_Card_in_Slot_A._80202de8 	Global
-  80202e08 000001 80202e08  8 s_ChibiRobo!_requires_1_file_and_80202e08 	Global
-  80202e28 000001 80202e28  8 s_Card,_use_the_Memory_Card_Screen_80202e28 	Global
-  80202e4c 000001 80202e4c  8 s_An_error_may_occurred_during_sav_80202e4c 	Global
+  80202dac 000001 80202dac  1 s_There_is_not_enough_free_space_80202dac 	Global
+  80202dcc 000001 80202dcc  1 s_The_save_data_80202dcc 	Global
+  80202ddc 000001 80202ddc  1 s_is_broken_80202ddc 	Global
+  80202de8 000001 80202de8  1 s_on_the_Memory_Card_in_Slot_A._80202de8 	Global
+  80202e08 000001 80202e08  1 s_ChibiRobo!_requires_1_file_and_80202e08 	Global
+  80202e28 000001 80202e28  1 s_Card,_use_the_Memory_Card_Screen_80202e28 	Global
+  80202e4c 000001 80202e4c  1 s_An_error_may_occurred_during_sav_80202e4c 	Global
   80202e70 000001 80202e70  1 s_Select_the_file_to_load_80202e70 	Global
   80202e88 000001 80202e88  1 s_The_ChibiRobo!_file_on_Memory_Ca_80202e88 	Global
-  80202ee4 000001 80202ee4  8 s_Restart_with_a_80202ee4 	Global
-  80202ef4 000001 80202ef4  8 s_new_save_data?_80202ef4 	Global
-  80202f04 000001 80202f04  8 s_Wrong_device_80202f04 	Global
-  80202f14 000001 80202f14  8 s_in_Slot_A._80202f14 	Global
-  80202f20 000001 80202f20  8 s_Please_insert_a_80202f20 	Global
+  80202ee4 000001 80202ee4  1 s_Restart_with_a_80202ee4 	Global
+  80202ef4 000001 80202ef4  1 s_new_save_data?_80202ef4 	Global
+  80202f04 000001 80202f04  1 s_Wrong_device_80202f04 	Global
+  80202f14 000001 80202f14  1 s_in_Slot_A._80202f14 	Global
+  80202f20 000001 80202f20  1 s_Please_insert_a_80202f20 	Global
   80202f30 000001 80202f30  1 s_Memory_Card._80202f30 	Global
-  80202f40 000001 80202f40  8 s_Please_insert_a_Memory_Card_80202f40 	Global
+  80202f40 000001 80202f40  1 s_Please_insert_a_Memory_Card_80202f40 	Global
   80202f5c 000001 80202f5c  1 s_Save_completed_80202f5c 	Global
-  80202f6c 000001 80202f6c  8 s_Select_a_file_80202f6c 	Global
-  80202f7c 000001 80202f7c  8 s_The_data_could_not_be_loaded_80202f7c 	Global
-  80202f9c 000001 80202f9c  8 s_The_Memory_Card_80202f9c 	Global
+  80202f6c 000001 80202f6c  1 s_Select_a_file_80202f6c 	Global
+  80202f7c 000001 80202f7c  1 s_The_data_could_not_be_loaded_80202f7c 	Global
+  80202f9c 000001 80202f9c  1 s_The_Memory_Card_80202f9c 	Global
   80203e94 000001 80203e94  8 gameModels 	Global
   80203ea0 000001 80203ea0  8 s_kitchen/map_80203ea0 	Global
   80203eac 000001 80203eac  1 s_kitchen/reizouko_80203eac 	Global
@@ -5088,6 +5091,10 @@
   80204128 000001 80204128  8 s_rouka/wall_2f_80204128 	Global
   80204138 000001 80204138  1 s_pushobj3_80204138 	Global
   80204144 000001 80204144  8 s_backyard/map_80204144 	Global
+  80204d50 000001 80204d50  1 s_item/bara_80204d50 	Global
+  80204d5c 000001 80204d5c  1 s_living/orange_glass_80204d5c 	Global
+  80204d70 000001 80204d70  1 s_living/orange_bin_80204d70 	Global
+  80204d84 000001 80204d84  1 s_living/cham_glass_80204d84 	Global
   80205d54 000001 80205d54  8 s_npc/peets_80205d54 	Global
   80205d60 000001 80205d60  8 s_jenny/heitai_taiko_80205d60 	Global
   80205d74 000001 80205d74  8 s_jenny/heitai_rappa_80205d74 	Global
@@ -5145,14 +5152,13 @@
   80206534 000001 80206534  8 s_rouka/taki_hashi_b_80206534 	Global
   80206548 000001 80206548  8 s_jenny/kenban1_80206548 	Global
   80206558 000001 80206558  8 s_jenny/kenban2_80206558 	Global
-  802068fc 000001 802068fc  8 s_u_802068fc 	Global
   80207cc4 000001 80207cc4  1 s_parent/tp_stage_80207cc4 	Global
   80207cd4 000001 80207cd4  1 s_jenny/zobin_dai_80207cd4 	Global
   80207f58 000001 80207f58  1 s_takanabe_80207f58 	Global
-  80207f64 000001 80207f64  8 s_bin%s/%s_80207f64 	Global
-  80207f70 000001 80207f70  8 s_bin%s/%s.bin_80207f70 	Global
-  80207f80 000001 80207f80  8 s_rel/%s%s.rel_80207f80 	Global
-  80207f90 000001 80207f90  8 s_OSModuleHeader_80207f90 	Global
+  80207f64 000001 80207f64  1 s_bin%s/%s_80207f64 	Global
+  80207f70 000001 80207f70  1 s_bin%s/%s.bin_80207f70 	Global
+  80207f80 000001 80207f80  1 s_rel/%s%s.rel_80207f80 	Global
+  80207f90 000001 80207f90  1 s_OSModuleHeader_80207f90 	Global
   80208134 000001 80208134  1 s_win(@OBJ,_%d,_...)_obj(%d)_kille_80208134 	Global
   80208158 000001 80208158  1 s_wait(@ANIM,_%d)_..._obj(%d)_is_c_80208158 	Global
   80208184 000001 80208184  1 s_wait(@ANIM,_%d,_...)_obj(%d)_kil_80208184 	Global
@@ -5244,13 +5250,13 @@
   80208e78 000001 80208e78  1 s_EVT_FLAGS_80208e78 	Global
   80209150 000001 80209150  1 s_Unknown_msg-setfont_cmd_-_%d_80209150 	Global
   80209170 000001 80209170  1 s_translate_80209170 	Global
-  802091c0 000001 802091c0  8 s_(%d)_%s_%2d:%02d:%02d_802091c0 	Global
-  802091d8 000001 802091d8  8 s_CHIBIROBO(%d)_802091d8 	Global
+  802091c0 000001 802091c0  1 s_(%d)_%s_%2d:%02d:%02d_802091c0 	Global
+  802091d8 000001 802091d8  1 s_CHIBIROBO(%d)_802091d8 	Global
   80209298 000001 80209298  1 s_CJArchive_80209298 	Global
   802092d8 000001 802092d8  1 s_CXObjIntp_802092d8 	Global
-  80209320 000001 80209320  8 s_XObjCamera_80209320 	Global
+  80209320 000001 80209320  1 s_XObjCamera_80209320 	Global
   8020932c 000001 8020932c  1 s_CXObjIntp_8020932c 	Global
-  80209338 000001 80209338  8 s_XObjLight_80209338 	Global
+  80209338 000001 80209338  1 s_XObjLight_80209338 	Global
   80209344 000001 80209344  1 s_CXObjIntp_80209344 	Global
   80209350 000001 80209350  1 s_CXObjIntp_80209350 	Global
   80209588 000001 80209588  1 s_cb_robo_6.dat_80209588 	Global
@@ -5274,6 +5280,7 @@
   8020a2e0 000001 8020a2e0  1 s_!(jobj->flags_&_JOBJ_USE_QUATERN_8020a2e0 	Global
   8020a308 000001 8020a308  1 s_translate_8020a308 	Global
   8020a36c 000001 8020a36c  1 s_\B00000080POS(%6.2f,%6.2f,%6.2f)_8020a36c 	Global
+  8020a47c 000001 8020a47c  1 s__GXTexObj_8020a47c 	Global
   8020a488 000001 8020a488  1 s_CXObjIntp_8020a488 	Global
   8020a4f4 000001 8020a4f4  1 s_XActLift_8020a4f4 	Global
   8020a500 000001 8020a500  1 s_XActHang_8020a500 	Global
@@ -5286,6 +5293,7 @@
   8020a554 000001 8020a554  1 s_XActPopper_8020a554 	Global
   8020a560 000001 8020a560  1 s_XActRadar_8020a560 	Global
   8020a56c 000001 8020a56c  1 s_CJointRot_8020a56c 	Global
+  8020a578 000001 8020a578  1 s_PARAM_CHR_8020a578 	Global
   8020a728 000001 8020a728  1 s_translate_8020a728 	Global
   8020a734 000001 8020a734  1 s_!(jobj->flags_&_JOBJ_USE_QUATERN_8020a734 	Global
   8020a7f0 000001 8020a7f0  1 s_CXObjIntp_8020a7f0 	Global
@@ -5297,10 +5305,10 @@
   8020a894 000001 8020a894  1 s_XObjCopter_8020a894 	Global
   8020a8c0 000001 8020a8c0  1 s_XObjWireEff_8020a8c0 	Global
   8020a8cc 000001 8020a8cc  1 s_CXObjIntp_8020a8cc 	Global
-  8020a8d8 000001 8020a8d8  8 s_!(jobj->flags_&_JOBJ_USE_QUATERN_8020a8d8 	Global
-  8020a900 000001 8020a900  8 s_translate_8020a900 	Global
+  8020a8d8 000001 8020a8d8  1 s_!(jobj->flags_&_JOBJ_USE_QUATERN_8020a8d8 	Global
+  8020a900 000001 8020a900  1 s_translate_8020a900 	Global
   8020a90c 000001 8020a90c  1 s_XObjPlug_8020a90c 	Global
-  8020a918 000001 8020a918  8 s_XObjSound_8020a918 	Global
+  8020a918 000001 8020a918  1 s_XObjSound_8020a918 	Global
   8020a924 000001 8020a924  1 s_CXObjIntp_8020a924 	Global
   8020a984 000001 8020a984  1 s_XObjFree_8020a984 	Global
   8020a990 000001 8020a990  1 s_CXObjIntp_8020a990 	Global
@@ -5391,19 +5399,21 @@
   8020c670 000001 8020c670  1 s_CMsgQueue_8020c670 	Global
   8020c67c 000001 8020c67c  1 s_XObjReadOne_8020c67c 	Global
   8020c688 000001 8020c688  1 s_XObjReadAll_8020c688 	Global
-  8020c698 000001 8020c698  8 s_CInterpolationEaseOut_8020c698 	Global
-  8020c6b0 000001 8020c6b0  8 s_CInterfaceInterpolation_8020c6b0 	Global
+  8020c698 000001 8020c698  1 s_CInterpolationEaseOut_8020c698 	Global
+  8020c6b0 000001 8020c6b0  1 s_CInterfaceInterpolation_8020c6b0 	Global
   8020c6c8 000001 8020c6c8  1 s_CInterpolationEaseInOut_8020c6c8 	Global
-  8020c754 000001 8020c754  8 s_reset_zoom_lv_=_CAM_AREA_ZOOM_LV_8020c754 	Global
-  8020c778 000001 8020c778  8 s_DEBUG:CCameraActionAreaEx::DrawD_8020c778 	Global
-  8020c7a8 000001 8020c7a8  8 s_DEBUG:CCameraActionMap::DrawDebu_8020c7a8 	Global
-  8020c7d4 000001 8020c7d4  8 s_CCameraActionAreaEx_8020c7d4 	Global
+  8020c718 000001 8020c718  1 s_CCameraActionAreaEx_::_J_f_[_^_A_8020c718 	Global
+  8020c754 000001 8020c754  1 s_reset_zoom_lv_=_CAM_AREA_ZOOM_LV_8020c754 	Global
+  8020c778 000001 8020c778  1 s_DEBUG:CCameraActionAreaEx::DrawD_8020c778 	Global
+  8020c7a8 000001 8020c7a8  1 s_DEBUG:CCameraActionMap::DrawDebu_8020c7a8 	Global
+  8020c7d4 000001 8020c7d4  1 s_CCameraActionAreaEx_8020c7d4 	Global
   8020c7e8 000001 8020c7e8  1 s_CCameraActionArea_8020c7e8 	Global
-  8020c82c 000001 8020c82c  8 s_ccameraactionarea.cpp_8020c82c 	Global
-  8020c844 000001 8020c844  8 s_error_!_:_CCameraActionArea::Set_8020c844 	Global
-  8020c870 000001 8020c870  8 s_SetInte_I(_unknown_data_)_8020c870 	Global
-  8020c88c 000001 8020c88c  8 s_\B000000A0AREA(%3d,%3d)(%3d)_8020c88c 	Global
-  8020c8ac 000001 8020c8ac  8 s_\B000000A0ACAREA_8020c8ac 	Global
+  8020c7fc 000001 8020c7fc  1 s_CInterfaceCameraAction_8020c7fc 	Global
+  8020c82c 000001 8020c82c  1 s_ccameraactionarea.cpp_8020c82c 	Global
+  8020c844 000001 8020c844  1 s_error_!_:_CCameraActionArea::Set_8020c844 	Global
+  8020c870 000001 8020c870  1 s_SetInte_I(_unknown_data_)_8020c870 	Global
+  8020c88c 000001 8020c88c  1 s_\B000000A0AREA(%3d,%3d)(%3d)_8020c88c 	Global
+  8020c8ac 000001 8020c8ac  1 s_\B000000A0ACAREA_8020c8ac 	Global
   8020c99c 000001 8020c99c  1 s_CCameraActionMap_8020c99c 	Global
   8020c9b0 000001 8020c9b0  1 s_CInterfaceCameraAction_8020c9b0 	Global
   8020c9c8 000001 8020c9c8  1 s_CCameraActionAreaExM_8020c9c8 	Global
@@ -5420,9 +5430,10 @@
   8020ccd8 000001 8020ccd8  1 s_actionMap::reset_8020ccd8 	Global
   8020ccec 000001 8020ccec  1 s_CCameraActionMap_..._disp(%f,_%f_8020ccec 	Global
   8020cd14 000001 8020cd14  1 s_CCameraActionMap_..._(%f,_%f,_%f_8020cd14 	Global
-  8020cdf0 000001 8020cdf0  8 s_CCameraActionChase_8020cdf0 	Global
-  8020ce20 000001 8020ce20  8 s_CCameraActionEvt_8020ce20 	Global
-  8020ce4c 000001 8020ce4c  8 s_SetInterest_Interp(_unknown_data_8020ce4c 	Global
+  8020cdf0 000001 8020cdf0  1 s_CCameraActionChase_8020cdf0 	Global
+  8020ce20 000001 8020ce20  1 s_CCameraActionEvt_8020ce20 	Global
+  8020ce34 000001 8020ce34  1 s_CInterfaceCameraAction_8020ce34 	Global
+  8020ce4c 000001 8020ce4c  1 s_SetInterest_Interp(_unknown_data_8020ce4c 	Global
   8020cf64 000001 8020cf64  1 s_CCameraActionScroll2_8020cf64 	Global
   8020cf7c 000001 8020cf7c  1 s_CInterfaceCameraAction_8020cf7c 	Global
   8020cfb8 000001 8020cfb8  1 s_CCameraActionEye_8020cfb8 	Global
@@ -5762,7 +5773,6 @@
   80211b44 000004 80211b44  4 switchdataD_80211b44 	switchD_80029f7c
   80211bac 000004 80211bac  4 switchdataD_80211bac 	switchD_80029e68
   80211c10 000004 80211c10  4 switchdataD_80211c10 	switchD_8002eed4
-  8021240c 000004 8021240c  4 INT_8021240c 	Global
   802124c0 000004 802124c0  4 switchdataD_802124c0 	switchD_80031d64
   802124dc 000004 802124dc  4 switchdataD_802124dc 	switchD_800325e4
   802124fc 000004 802124fc  4 switchdataD_802124fc 	switchD_80032ce4
@@ -5778,6 +5788,8 @@
   80212cfc 000004 80212cfc  4 switchdataD_80212cfc 	switchD_80064a5c
   80212d38 000004 80212d38  4 switchdataD_80212d38 	switchD_8006b974
   80212d5c 000004 80212d5c  4 switchdataD_80212d5c 	switchD_8006b5cc
+  802246d0 00001c 802246d0  1 DisplayPromptvTable_802246d0 	Global
+  802246ec 00001c 802246ec  1 WeatherPromptvTable_802246ec 	Global
   80224720 00000c 80224720  1 CModule_80224720 	Global
   8022472c 00000c 8022472c  1 EnvInfo_8022472c 	Global
   80224738 00000c 80224738  1 Stage_80224738 	Global
@@ -5868,7 +5880,6 @@
   8022bd64 000004 8022bd64  4 switchdataD_8022bd64 	switchD_80100578
   8022bde0 000004 8022bde0  4 switchdataD_8022bde0 	switchD_80105860
   8022bf90 000181 8022bf90  1 XObjActor_8022bf90 	Global
-  8022c474 000004 8022c474  4 FUN_8022c474 	Global
   8022c5cc 000004 8022c5cc  4 switchdataD_8022c5cc 	switchD_8010b3c8
   8022c5ec 000004 8022c5ec  4 switchdataD_8022c5ec 	switchD_8010d6cc
   8022c648 000004 8022c648  4 switchdataD_8022c648 	switchD_80110964
@@ -5883,11 +5894,10 @@
   8022dd50 000180 8022dd50  1 XObjActorDeca_8022dd50 	Global
   8022ded0 000004 8022ded0  4 switchdataD_8022ded0 	switchD_8012fc34
   8022df60 000001 8022df60  1 s_ReadStart_8022df60 	Global
-  8022e324 000001 8022e324  4 FUN_8022e324 	Global
   8022e560 000001 8022e560  1 s_SetEye_I_8022e560 	Global
   8022e610 000001 8022e610  1 s_SpringDamp_8022e610 	Global
   8022e628 000001 8022e628  1 s_CalcIntersectVec_8022e628 	Global
-  8022e63c 000001 8022e63c  8 s_UpdateTurn_8022e63c 	Global
+  8022e63c 000001 8022e63c  1 s_UpdateTurn_8022e63c 	Global
   8022ea18 000004 8022ea18  4 switchdataD_8022ea18 	switchD_801445b4
   8022eb20 000001 8022eb20  1 s_PreviousUpdate_8022eb20 	Global
   8022ed28 000004 8022ed28  4 switchdataD_8022ed28 	switchD_8014bbd4
@@ -6012,6 +6022,11 @@
   80231e28 000001 80231e28  1 s_VIConfigure():_Tried_to_change_m_80231e28 	Global
   80231e74 000004 80231e74  4 switchdataD_80231e74 	switchD_80172ac0
   80231e98 000001 80231e98  8 s_<<_Dolphin_SDK_-_PAD_release_bui_80231e98 	Global
+  80231ef0 000001 80231ef0  1 s_<<_Dolphin_SDK_-_AI_release_buil_80231ef0 	Global
+  80231f38 000001 80231f38  8 s_<<_Dolphin_SDK_-_AR_release_buil_80231f38 	Global
+  80231f80 000001 80231f80  8 s_<<_Dolphin_SDK_-_ARQ_release_bui_80231f80 	Global
+  80231fc8 000001 80231fc8  8 s_<<_Dolphin_SDK_-_AX_release_buil_80231fc8 	Global
+  80236270 000001 80236270  1 s_<<_Dolphin_SDK_-_DSP_release_bui_80236270 	Global
   802362b8 000001 802362b8  1 s_DSPInit():_Build_Date:_%s_%s_802362b8 	Global
   802362d8 000001 802362d8  1 s_Apr_5_2004_802362d8 	Global
   802362e4 000001 802362e4  1 s_04:15:32_802362e4 	Global
@@ -6021,6 +6036,8 @@
   80236370 000001 80236370  1 s___DSP_boot_task()_:_IRAM_LENGTH_:_80236370 	Global
   802363a0 000001 802363a0  1 s___DSP_boot_task()_:_DRAM_MMEM_AD_802363a0 	Global
   802363d0 000001 802363d0  1 s___DSP_boot_task()_:_Start_Vector_802363d0 	Global
+  80236430 000001 80236430  8 s_<<_Dolphin_SDK_-_CARD_release_bu_80236430 	Global
+  80236640 000001 80236640  1 s_<<_Dolphin_SDK_-_GX_release_buil_80236640 	Global
   80236880 000004 80236880  4 switchdataD_80236880 	switchD_80185f84
   802368e8 000004 802368e8  4 switchdataD_802368e8 	switchD_801861fc
   80236950 000004 80236950  4 switchdataD_80236950 	switchD_80186658
@@ -6035,12 +6052,11 @@
   80237448 000004 80237448  4 switchdataD_80237448 	switchD_80189448
   80237520 000004 80237520  4 switchdataD_80237520 	switchD_8018cddc
   8023757c 000004 8023757c  4 switchdataD_8023757c 	switchD_8018c9b0
-  80237610 000001 80237610  8 s_ARCInitHandle:_bad_archive_forma_80237610 	Global
+  80237610 000001 80237610  1 s_ARCInitHandle:_bad_archive_forma_80237610 	Global
   80237638 00000c 80237638  1 HSD_CObj_Struct_80237638 	Global
   80237644 000098 80237644  1 CCamera_80237644 	Global
   802376fc 00002c 802376fc  1 CLight_802376fc 	Global
   80237aa0 000001 80237aa0  8 s__80237aa0 	Global
-  8023d994 000001 8023d994  4 FUN_8023d994 	Global
   80258708 00000c 80258708  1 DVDFileInfo_struct_80258708 	Global
   80258728 000028 80258728  1 CFileArchive_80258728 	Global
   80258750 00000c 80258750  1 DVDFileInfo_struct_80258750 	Global
@@ -6072,7 +6088,6 @@
   80259020 000004 80259020  4 switchdataD_80259020 	switchD_801aff90
   80259044 000004 80259044  4 switchdataD_80259044 	switchD_801b0a80
   80259064 000004 80259064  4 switchdataD_80259064 	switchD_801b1494
-  802590e0 000001 802590e0  8 s__802590e0 	Global
   80259248 000001 80259248  1 s_mobj_has_unexpected_blending_fla_80259248 	Global
   802592fc 000001 802592fc  1 s_sysdolphin_base_library_802592fc 	Global
   80259314 000001 80259314  1 s_hsd_dobj_80259314 	Global
@@ -6085,8 +6100,8 @@
   8025968c 000001 8025968c  1 s_tobj_toon_8025968c 	Global
   80259698 000001 80259698  1 s_sysdolphin_base_library_80259698 	Global
   802596b0 000001 802596b0  1 s_hsd_mobj_802596b0 	Global
-  802596c0 000001 802596c0  8 s_object.h_802596c0 	Global
-  802596cc 000001 802596cc  8 s_HSD_OBJ(o)->ref_count_!=_HSD_OBJ_802596cc 	Global
+  802596c0 000001 802596c0  1 s_object.h_802596c0 	Global
+  802596cc 000001 802596cc  1 s_HSD_OBJ(o)->ref_count_!=_HSD_OBJ_802596cc 	Global
   802596f4 000004 802596f4  4 switchdataD_802596f4 	switchD_801bb270
   80259724 000004 80259724  4 switchdataD_80259724 	switchD_801bb120
   80259754 000004 80259754  4 switchdataD_80259754 	switchD_801bafc4
@@ -6104,7 +6119,7 @@
   80259994 000004 80259994  4 switchdataD_80259994 	switchD_801bc21c
   802599c4 000004 802599c4  4 switchdataD_802599c4 	switchD_801bc0a0
   802599f4 000001 802599f4  1 s_unexpected_argument_format._802599f4 	Global
-  80259a14 000001 80259a14  8 s_unexpected_type_of_object._80259a14 	Global
+  80259a14 000001 80259a14  1 s_unexpected_type_of_object._80259a14 	Global
   80259a30 000004 80259a30  4 switchdataD_80259a30 	switchD_801bcecc
   80259a60 000004 80259a60  4 switchdataD_80259a60 	switchD_801bcd70
   80259a90 000004 80259a90  4 switchdataD_80259a90 	switchD_801bcc20
@@ -6133,8 +6148,8 @@
   80259e68 000001 80259e68  1 s_illegal_up_vector._80259e68 	Global
   80259eac 000001 80259eac  1 s_sysdolphin_base_library_80259eac 	Global
   80259ec4 000001 80259ec4  1 s_hsd_cobj_80259ec4 	Global
-  80259ed0 000001 80259ed0  8 s_st_==_FOBJ_LOAD_WAIT_80259ed0 	Global
-  80259ee8 000001 80259ee8  8 s_st_==_FOBJ_LOAD_DATA0_||_st_==_F_80259ee8 	Global
+  80259ed0 000001 80259ed0  1 s_st_==_FOBJ_LOAD_WAIT_80259ed0 	Global
+  80259ee8 000001 80259ee8  1 s_st_==_FOBJ_LOAD_DATA0_||_st_==_F_80259ee8 	Global
   80259f44 000004 80259f44  4 ProcessNodeAndGetResultPtr 	Global
   80259f58 000004 80259f58  4 ProcessNodePtr 	Global
   80259f6c 000001 80259f6c  1 s_jobj->parent_80259f6c 	Global
@@ -6155,9 +6170,9 @@
   8025a1ec 000001 8025a1ec  1 s_can_not_find_specified_jobj._may_8025a1ec 	Global
   8025a2b4 000001 8025a2b4  1 s_sysdolphin_base_library_8025a2b4 	Global
   8025a2cc 000001 8025a2cc  1 s_hsd_jobj_8025a2cc 	Global
-  8025a2e0 000001 8025a2e0  8 s_displayfunc.c_8025a2e0 	Global
-  8025a2f0 000001 8025a2f0  8 s_unkown_type_of_billboard._8025a2f0 	Global
-  8025a310 000001 8025a310  8 s_initialize.c_8025a310 	Global
+  8025a2e0 000001 8025a2e0  1 s_displayfunc.c_8025a2e0 	Global
+  8025a2f0 000001 8025a2f0  1 s_unkown_type_of_billboard._8025a2f0 	Global
+  8025a310 000001 8025a310  1 s_initialize.c_8025a310 	Global
   8025a320 000001 8025a320  1 s_No_memory_space_remains_for_XFB._8025a320 	Global
   8025a344 000001 8025a344  1 s_no_space_remains_for_gx_fifo._8025a344 	Global
   8025a364 000001 8025a364  1 s_!iparam_memory_callbacks_8025a364 	Global
@@ -6169,14 +6184,14 @@
   8025a4d0 000001 8025a4d0  1 s__HSD_INIT_AUDIO_HEAP_SIZE_is_obs_8025a4d0 	Global
   8025a508 000004 8025a508  4 switchdataD_8025a508 	switchD_801cb144
   8025a528 000001 8025a528  1 s_idx_!=_-1_8025a528 	Global
-  8025a534 000001 8025a534  8 s_unexpected_type_of_render_pass._8025a534 	Global
-  8025a558 000001 8025a558  8 s__p->xfb[idx].status_==_HSD_VI_XF_8025a558 	Global
-  8025a584 000001 8025a584  8 s__p->xfb[idx].status_==_HSD_VI_XF_8025a584 	Global
+  8025a534 000001 8025a534  1 s_unexpected_type_of_render_pass._8025a534 	Global
+  8025a558 000001 8025a558  1 s__p->xfb[idx].status_==_HSD_VI_XF_8025a558 	Global
+  8025a584 000001 8025a584  1 s__p->xfb[idx].status_==_HSD_VI_XF_8025a584 	Global
   8025a668 000004 8025a668  4 switchdataD_8025a668 	switchD_801d060c
   8025a6a0 000001 8025a6a0  1 s_objalloc.c_8025a6a0 	Global
   8025a6ac 000001 8025a6ac  1 s_align_<=_32_8025a6ac 	Global
   8025a6b8 000001 8025a6b8  1 s_HSD_GetNbBits(align)_==_1_8025a6b8 	Global
-  8025a6d8 000001 8025a6d8  8 s_rp->u.jobj_8025a6d8 	Global
+  8025a6d8 000001 8025a6d8  1 s_rp->u.jobj_8025a6d8 	Global
   8025a6f0 000004 8025a6f0  4 switchdataD_8025a6f0 	switchD_801d1814
   8025a724 000001 8025a724  1 s_robj->u.jobj_8025a724 	Global
   8025a734 000001 8025a734  1 s_object.h_8025a734 	Global
@@ -6188,12 +6203,12 @@
   8025a890 000001 8025a890  1 s_jp->u.spline_8025a890 	Global
   8025a8c4 000001 8025a8c4  1 s_sysdolphin_base_library_8025a8c4 	Global
   8025a8dc 000001 8025a8dc  1 s_had_wobj_8025a8dc 	Global
-  8025a8e8 000001 8025a8e8  8 s_You_must_specify_CObj_first._8025a8e8 	Global
+  8025a8e8 000001 8025a8e8  1 s_You_must_specify_CObj_first._8025a8e8 	Global
   8025a9d4 000001 8025a9d4  1 s_sysdolphin_base_library_8025a9d4 	Global
-  8025a9f0 000001 8025a9f0  8 s_memory.c_8025a9f0 	Global
-  8025a9fc 000001 8025a9fc  8 s_size_==_sizeof(__mem_cb)_8025a9fc 	Global
-  8025aa18 000001 8025aa18  8 s_HSD_ArchiveParse:_byte-order_mis_8025aa18 	Global
-  8025aa60 000001 8025aa60  8 s_bytecode.c_8025aa60 	Global
+  8025a9f0 000001 8025a9f0  1 s_memory.c_8025a9f0 	Global
+  8025a9fc 000001 8025a9fc  1 s_size_==_sizeof(__mem_cb)_8025a9fc 	Global
+  8025aa18 000001 8025aa18  1 s_HSD_ArchiveParse:_byte-order_mis_8025aa18 	Global
+  8025aa60 000001 8025aa60  1 s_bytecode.c_8025aa60 	Global
   8025aa6c 000001 8025aa6c  1 s_operand_<_nb_args_8025aa6c 	Global
   8025aa80 000001 8025aa80  1 s_specified_stack_doesn't_exist_(%_8025aa80 	Global
   8025aaa8 000001 8025aaa8  1 s_not_yet_implemented._8025aaa8 	Global
@@ -6207,8 +6222,8 @@
   8025ac08 000001 8025ac08  1 s_idx_>=_0_8025ac08 	Global
   8025ac14 000001 8025ac14  1 s_sysdolphin_base_library_8025ac14 	Global
   8025ac2c 000001 8025ac2c  1 s_hsd_class_8025ac2c 	Global
-  8025ac90 000001 8025ac90  8 s_idx_<_hash->table_size_8025ac90 	Global
-  8025aca8 000001 8025aca8  8 s_texp_list_8025aca8 	Global
+  8025ac90 000001 8025ac90  1 s_idx_<_hash->table_size_8025ac90 	Global
+  8025aca8 000001 8025aca8  1 s_texp_list_8025aca8 	Global
   8025acb4 000001 8025acb4  1 s_texp->cnst.ctype_==_type_8025acb4 	Global
   8025acd0 000001 8025acd0  1 s_HSD_TExpGetType(texp)_==_HSD_TE__8025acd0 	Global
   8025acf4 000001 8025acf4  1 s_tev_can't_select_multiple_konst_i_8025acf4 	Global
@@ -6228,29 +6243,29 @@
   8025afa0 000001 8025afa0  1 s_tev->c_dst_!=_HSD_TE_UNDEF_8025afa0 	Global
   8025afbc 000001 8025afbc  1 s_tev->a_dst_!=_HSD_TE_UNDEF_8025afbc 	Global
   8025aff4 000001 8025aff4  1 s_clist->type_==_HSD_TE_CNST_8025aff4 	Global
-  8025b010 000001 8025b010  8 s_texpdag.c_8025b010 	Global
+  8025b010 000001 8025b010  1 s_texpdag.c_8025b010 	Global
   8025b01c 000001 8025b01c  1 s_HSD_TExpGetType(root)_==_HSD_TE__8025b01c 	Global
   8025b040 000001 8025b040  1 s_j<HSD_TEXP_MAX_NUM_8025b040 	Global
   8025b088 000004 8025b088  4 switchdataD_8025b088 	switchD_801dae40
   8025b0c8 000001 8025b0c8  1 s_assertion_"%s"_failed_8025b0c8 	Global
-  8025b0e0 000001 8025b0e0  8 s_%s_in_%s_on_line_%d._8025b0e0 	Global
-  8025b0f8 000001 8025b0f8  8 s_particle.c_8025b0f8 	Global
+  8025b0e0 000001 8025b0e0  1 s_%s_in_%s_on_line_%d._8025b0e0 	Global
+  8025b0f8 000001 8025b0f8  1 s_particle.c_8025b0f8 	Global
   8025b104 000001 8025b104  1 s_illigal_form_data_(strange_numbe_8025b104 	Global
   8025b134 000001 8025b134  1 s_psInitDataBanks:_unknown_version_8025b134 	Global
   8025b158 000001 8025b158  1 s_object.h_8025b158 	Global
   8025b164 000001 8025b164  1 s_HSD_OBJ(o)->ref_count_!=_HSD_OBJ_8025b164 	Global
   8025b190 000004 8025b190  4 switchdataD_8025b190 	switchD_801df49c
   8025b390 000001 8025b390  1 s_object.h_8025b390 	Global
-  8025b39c 000001 8025b39c  8 s_HSD_OBJ(o)->ref_count_!=_HSD_OBJ_8025b39c 	Global
-  8025b3c4 000001 8025b3c4  8 s_psinterpret.c_8025b3c4 	Global
-  8025b3d8 000001 8025b3d8  8 s_generator.c_8025b3d8 	Global
+  8025b39c 000001 8025b39c  1 s_HSD_OBJ(o)->ref_count_!=_HSD_OBJ_8025b39c 	Global
+  8025b3c4 000001 8025b3c4  1 s_psinterpret.c_8025b3c4 	Global
+  8025b3d8 000001 8025b3d8  1 s_generator.c_8025b3d8 	Global
   8025b3e4 000001 8025b3e4  1 s_psCamera_8025b3e4 	Global
   8025b3f0 000004 8025b3f0  4 switchdataD_8025b3f0 	switchD_801e3918
   8025b410 000004 8025b410  4 switchdataD_8025b410 	switchD_801e32e8
   8025b434 000001 8025b434  1 s_object.h_8025b434 	Global
-  8025b440 000001 8025b440  8 s_HSD_OBJ(o)->ref_count_!=_HSD_OBJ_8025b440 	Global
+  8025b440 000001 8025b440  1 s_HSD_OBJ(o)->ref_count_!=_HSD_OBJ_8025b440 	Global
   8025b468 000004 8025b468  4 switchdataD_8025b468 	switchD_801e4764
-  8025b490 000001 8025b490  8 s_pslist.c_8025b490 	Global
+  8025b490 000001 8025b490  1 s_pslist.c_8025b490 	Global
   8025b49c 000001 8025b49c  1 s_activeParticle[pp->linkNo]_==_pp_8025b49c 	Global
   8025b4c0 000001 8025b4c0  1 s_parent->next_==_pp_8025b4c0 	Global
   8025b4d4 000001 8025b4d4  1 s_linkNo_>=_0_&&_linkNo_<_PS_NUM_L_8025b4d4 	Global
@@ -6266,7 +6281,7 @@
   8025b684 000001 8025b684  1 s_channel_==_0_||_channel_==_1_8025b684 	Global
   8025b6a4 000001 8025b6a4  1 s_0_<=_type_&&_type_<=_4_8025b6a4 	Global
   8025b6bc 000001 8025b6bc  1 s_type_==_0_||_param_!=_NULL_8025b6bc 	Global
-  8025b6f0 000001 8025b6f0  8 s_devcom.c_8025b6f0 	Global
+  8025b6f0 000001 8025b6f0  1 s_devcom.c_8025b6f0 	Global
   8025b6fc 000001 8025b6fc  1 s_dvdDC->size_<=_DEVCOM_BUF_SIZE_8025b6fc 	Global
   8025b71c 000001 8025b71c  1 s_dvdDC->callback_8025b71c 	Global
   8025b72c 000001 8025b72c  1 s_!(HSD_DevComGetDestType(type)_==_8025b72c 	Global
@@ -6274,14 +6289,14 @@
   8025b788 000001 8025b788  1 s_dest_%_32_==_0_8025b788 	Global
   8025b798 000001 8025b798  1 s_size_%_32_==_0_8025b798 	Global
   8025b7a8 000001 8025b7a8  1 s_size_!=_0_8025b7a8 	Global
-  8025b7b8 000001 8025b7b8  8 s_assertion_%s_failed._8025b7b8 	Global
+  8025b7b8 000001 8025b7b8  1 s_assertion_%s_failed._8025b7b8 	Global
   8025b7d0 000001 8025b7d0  1 s_newid_!=_-1_8025b7d0 	Global
   8025b7dc 000001 8025b7dc  1 s_dvdsche.c_8025b7dc 	Global
   8025b7e8 000001 8025b7e8  1 s_orderix_!=_-1_8025b7e8 	Global
   8025b7f8 000001 8025b7f8  1 s_hsd_DVDScheStreamingFlag_&_(1_<<_8025b7f8 	Global
   8025b820 000001 8025b820  1 s_hsd_DVDScheNStreaming_8025b820 	Global
   8025b838 000001 8025b838  1 s_id_>=_0_&&_id_<_hsd_DVDScheNStre_8025b838 	Global
-  8025b868 000001 8025b868  8 s_audio_heap_overflow._size_=_%u_8025b868 	Global
+  8025b868 000001 8025b868  1 s_audio_heap_overflow._size_=_%u_8025b868 	Global
   8025b888 000001 8025b888  1 s_Can't_load_SFX_file;_bank(id=%d)_8025b888 	Global
   8025b8bc 000001 8025b8bc  1 s_hsd_SynthSFXBankHead[bankID_+_1]_8025b8bc 	Global
   8025b914 000001 8025b914  1 s_invalid_bankID_=_%d_filename_=_%_8025b914 	Global
@@ -6305,10 +6320,13 @@
   8025c120 000001 8025c120  1 s_HSD_AudioInit*:_pstBufNum_out_of_8025c120 	Global
   8025c14c 000001 8025c14c  1 s_pstBufNum_>=_1_&&_pstBufNum_<=_3_8025c14c 	Global
   8025c1b0 000001 8025c1b0  1 s_<<_Dolphin_SDK_-_THP_release_bui_8025c1b0 	Global
+  8025c200 000001 8025c200  1 StartOfGameMem 	Global
   8025c400 000004 8025c400  4 sceneObjData_8025c400 	Global
   8025f734 000004 8025f734  4 CGameType_8025f734 	Global
   8026014c 000004 8026014c  4 textureDataPtr 	Global
   8026016c 000001 8026016c  1 CTexObjPtr 	Global
+  80260574 000004 80260574  4 400 	Global
+  8026057c 000004 8026057c  4 448 	Global
   80264980 000004 80264980  4 isPaused 	Global
   80265a94 000004 80265a94  4 SceneData 	Global
   80265abc 0003d8 80265abc  1 ChrObject_80265abc 	Global
@@ -6318,6 +6336,7 @@
   8034218c 000001 8034218c  1 CameraData 	Global
   80344800 000001 80344800  1 saveDataVar 	Global
   8035fa24 000004 8035fa24  4 INT_8035fa24 	Global
+  803608f4 000004 803608f4  4 CGameFilePointer 	Global
   803622b4 000004 803622b4  4 INT_803622b4 	Global
   803622c0 000004 803622c0  4 INT_803622c0 	Global
   80362478 000004 80362478  4 saveDatafilePath 	Global
@@ -6374,7 +6393,6 @@
   8039bae0 000001 8039bae0  1 EventDataObj 	Global
   8039cdf0 000001 8039cdf0  1 XObjActorObject 	Global
   80400a00 000001 80400a00  1 XSoundObj 	Global
-  804dd84c 000001 804dd84c  4 FUN_804dd84c 	Global
   805cb130 000004 805cb130  4 UINT_805cb130 	Global
   805cb134 000004 805cb134  4 UINT_805cb134 	Global
   805cb138 000004 805cb138  4 UINT_805cb138 	Global
@@ -6401,7 +6419,7 @@
   8065a2c8 000004 8065a2c8  4 FLOAT_8065a2c8 	Global
   8065a368 000004 8065a368  4 FLOAT_8065a368 	Global
   8065a3c4 000001 8065a3c4  1 s_Update_8065a3c4 	Global
-  8065a3cc 000001 8065a3cc  8 s_EvalSet_8065a3cc 	Global
+  8065a3cc 000001 8065a3cc  1 s_EvalSet_8065a3cc 	Global
   8065a3d4 000001 8065a3d4  1 s_EvalCmp_8065a3d4 	Global
   8065a4e0 000004 8065a4e0  4 XObjMap 	Global
   8065a9a8 000001 8065a9a8  8 s_ReadAll_8065a9a8 	Global
@@ -6411,6 +6429,11 @@
   8065ab38 000001 8065ab38  1 s_Update_8065ab38 	Global
   8065ab70 000004 8065ab70  4 UINT_8065ab70 	Global
   8065ab80 000004 8065ab80  4 MaxIntVal 	Global
+  8065ac00 000001 8065ac00  1 s_dvdfs.c_8065ac00 	Global
+  8065ac14 000001 8065ac14  1 s_dvd.c_8065ac14 	Global
+  8065ac2c 000001 8065ac2c  1 s_OFF_8065ac2c 	Global
+  8065ac30 000001 8065ac30  1 s_ON_8065ac30 	Global
+  8065ac3c 000001 8065ac3c  1 s_vi.c_8065ac3c 	Global
   8065ad18 000004 8065ad18  4 SpecialChars 	Global
   8065ad20 000004 8065ad20  4 HSD_CObj_Type_8065ad20 	Global
   8065ad28 000008 8065ad28  1 CCamera_Struct_8065ad28 	Global
@@ -6489,7 +6512,7 @@
   8065b040 000001 8065b040  1 s_texp_8065b040 	Global
   8065b04c 000001 8065b04c  1 s_desc_8065b04c 	Global
   8065b054 000001 8065b054  1 s_tevdesc_8065b054 	Global
-  8065b060 000001 8065b060  8 s_l_<_num_8065b060 	Global
+  8065b060 000001 8065b060  1 s_l_<_num_8065b060 	Global
   8065b078 000001 8065b078  1 s_jobj.h_8065b078 	Global
   8065b080 000001 8065b080  1 s_jobj_8065b080 	Global
   8065b088 000001 8065b088  1 s_lastPP_8065b088 	Global
@@ -6620,7 +6643,6 @@
   8065bea4 000004 8065bea4  4 FLOAT_8065bea4 	Global
   8065bea8 000004 8065bea8  4 FLOAT_8065bea8 	Global
   8065beac 000001 8065beac  1 s_CMsg_8065beac 	Global
-  8065beb0 000001 8065beb0  8 s__8065beb0 	Global
   8065beb4 000001 8065beb4  1 s_MenuEx_8065beb4 	Global
   8065bebc 000001 8065bebc  1 s_CObjVec_8065bebc 	Global
   8065bec4 000001 8065bec4  1 s_Vec_8065bec4 	Global
@@ -6692,6 +6714,7 @@
   8065c0b8 000004 8065c0b8  4 FLOAT_8065c0b8 	Global
   8065c0bc 000004 8065c0bc  4 FLOAT_8065c0bc 	Global
   8065c0c0 000004 8065c0c0  4 FLOAT_8065c0c0 	Global
+  8065c0d0 000001 8065c0d0  1 s_>>>%s_8065c0d0 	Global
   8065c0d8 000004 8065c0d8  4 FLOAT_8065c0d8 	Global
   8065c0dc 000004 8065c0dc  4 FLOAT_8065c0dc 	Global
   8065c0e0 000004 8065c0e0  4 FLOAT_8065c0e0 	Global
@@ -6766,6 +6789,7 @@
   8065c25c 000004 8065c25c  4 FLOAT_8065c25c 	Global
   8065c260 000004 8065c260  4 FLOAT_8065c260 	Global
   8065c268 000008 8065c268  4 DOUBLE_8065c268 	Global
+  8065c270 000001 8065c270  1 s__us_8065c270 	Global
   8065c274 000004 8065c274  4 FLOAT_8065c274 	Global
   8065c278 000004 8065c278  4 FLOAT_8065c278 	Global
   8065c27c 000004 8065c27c  4 FLOAT_8065c27c 	Global
@@ -7137,7 +7161,7 @@
   8065c8d4 000004 8065c8d4  4 FLOAT_8065c8d4 	Global
   8065c8d8 000004 8065c8d8  4 FLOAT_8065c8d8 	Global
   8065c8dc 000004 8065c8dc  4 FLOAT_8065c8dc 	Global
-  8065c8e0 000004 8065c8e0  4 FLOAT_8065c8e0 	Global
+  8065c8e0 000004 8065c8e0  4 9 	Global
   8065c8e4 000004 8065c8e4  4 FLOAT_8065c8e4 	Global
   8065c8e8 000004 8065c8e8  4 FLOAT_8065c8e8 	Global
   8065c8ec 000004 8065c8ec  4 FLOAT_8065c8ec 	Global
@@ -7148,11 +7172,11 @@
   8065c908 000008 8065c908  4 DOUBLE_8065c908 	Global
   8065c910 000004 8065c910  4 FLOAT_8065c910 	Global
   8065c914 000004 8065c914  4 FLOAT_8065c914 	Global
-  8065c918 000004 8065c918  4 FLOAT_8065c918 	Global
-  8065c91c 000004 8065c91c  4 FLOAT_8065c91c 	Global
-  8065c920 000004 8065c920  4 FLOAT_8065c920 	Global
-  8065c924 000004 8065c924  4 FLOAT_8065c924 	Global
-  8065c928 000004 8065c928  4 FLOAT_8065c928 	Global
+  8065c918 000004 8065c918  4 418 	Global
+  8065c91c 000004 8065c91c  4 0.5 	Global
+  8065c920 000004 8065c920  4 64 	Global
+  8065c924 000004 8065c924  4 40 	Global
+  8065c928 000004 8065c928  4 60 	Global
   8065c92c 000004 8065c92c  4 FLOAT_8065c92c 	Global
   8065c930 000004 8065c930  4 FLOAT_8065c930 	Global
   8065c934 000004 8065c934  4 FLOAT_8065c934 	Global
@@ -7474,7 +7498,7 @@
   8065d160 000001 8065d160  1 s_CJAnim_8065d160 	Global
   8065d168 000004 8065d168  4 FLOAT_8065d168 	Global
   8065d170 000008 8065d170  4 DOUBLE_8065d170 	Global
-  8065d178 000004 8065d178  4 FLOAT_8065d178 	Global
+  8065d178 000004 8065d178  4 0 	Global
   8065d17c 000004 8065d17c  4 FLOAT_8065d17c 	Global
   8065d180 000008 8065d180  4 DOUBLE_8065d180 	Global
   8065d188 000004 8065d188  4 FLOAT_8065d188 	Global
@@ -7504,7 +7528,7 @@
   8065d204 000004 8065d204  4 FLOAT_8065d204 	Global
   8065d208 000001 8065d208  1 s_%s.dat_8065d208 	Global
   8065d218 000004 8065d218  4 FLOAT_8065d218 	Global
-  8065d21c 000004 8065d21c  4 FLOAT_8065d21c 	Global
+  8065d21c 000004 8065d21c  4 255 	Global
   8065d220 000001 8065d220  1 s_CVec_8065d220 	Global
   8065d228 000001 8065d228  1 s_Vec_8065d228 	Global
   8065d22c 000001 8065d22c  1 s_XObj_8065d22c 	Global
@@ -7694,6 +7718,8 @@
   8065d628 000004 8065d628  4 FLOAT_8065d628 	Global
   8065d62c 000004 8065d62c  4 FLOAT_8065d62c 	Global
   8065d630 000001 8065d630  1 s_CJObj_8065d630 	Global
+  8065d638 000001 8065d638  1 s_CVec_8065d638 	Global
+  8065d640 000001 8065d640  1 s_Vec_8065d640 	Global
   8065d644 000001 8065d644  1 s_AtcMenu_8065d644 	Global
   8065d64c 000001 8065d64c  1 s_XObjChr_8065d64c 	Global
   8065d654 000001 8065d654  1 s_CXObj_8065d654 	Global
@@ -7865,8 +7891,9 @@
   8065d9d8 000004 8065d9d8  4 FLOAT_8065d9d8 	Global
   8065d9dc 000001 8065d9dc  1 s_aobj.h_8065d9dc 	Global
   8065d9e4 000001 8065d9e4  1 s_aobj_8065d9e4 	Global
-  8065d9f0 000001 8065d9f0  8 s_CJObj_8065d9f0 	Global
+  8065d9f0 000001 8065d9f0  1 s_CJObj_8065d9f0 	Global
   8065d9f8 000001 8065d9f8  1 s_CXObj_8065d9f8 	Global
+  8065da00 000001 8065da00  1 s_XObj_8065da00 	Global
   8065da08 000004 8065da08  4 FLOAT_8065da08 	Global
   8065da0c 000001 8065da0c  1 s_jobj.h_8065da0c 	Global
   8065da14 000001 8065da14  1 s_jobj_8065da14 	Global
@@ -7915,6 +7942,8 @@
   8065db28 000001 8065db28  1 s_CXObj_8065db28 	Global
   8065db30 000001 8065db30  1 s_XObj_8065db30 	Global
   8065db38 000004 8065db38  4 FLOAT_8065db38 	Global
+  8065db3c 000001 8065db3c  1 s_jobj.h_8065db3c 	Global
+  8065db44 000001 8065db44  1 s_jobj_8065db44 	Global
   8065db50 000008 8065db50  4 DOUBLE_8065db50 	Global
   8065db58 000008 8065db58  4 DOUBLE_8065db58 	Global
   8065db60 000008 8065db60  4 DOUBLE_8065db60 	Global
@@ -7958,8 +7987,9 @@
   8065dc18 000008 8065dc18  4 DOUBLE_8065dc18 	Global
   8065dc20 000004 8065dc20  4 FLOAT_8065dc20 	Global
   8065dc24 000004 8065dc24  4 FLOAT_8065dc24 	Global
-  8065dc38 000001 8065dc38  8 s_CJObj_8065dc38 	Global
+  8065dc38 000001 8065dc38  1 s_CJObj_8065dc38 	Global
   8065dc40 000001 8065dc40  1 s_CXObj_8065dc40 	Global
+  8065dc48 000001 8065dc48  1 s_XObj_8065dc48 	Global
   8065dc50 000004 8065dc50  4 FLOAT_8065dc50 	Global
   8065dc54 000004 8065dc54  4 FLOAT_8065dc54 	Global
   8065dc68 000008 8065dc68  4 DOUBLE_8065dc68 	Global
@@ -8325,6 +8355,7 @@
   8065e534 000004 8065e534  4 FLOAT_8065e534 	Global
   8065e538 000004 8065e538  4 FLOAT_8065e538 	Global
   8065e53c 000001 8065e53c  1 s_Vec_8065e53c 	Global
+  8065e540 000001 8065e540  1 s_CVec_8065e540 	Global
   8065e548 000001 8065e548  1 s_CJObj_8065e548 	Global
   8065e550 000001 8065e550  1 s_CXObj_8065e550 	Global
   8065e558 000001 8065e558  1 s_XObj_8065e558 	Global
@@ -8960,7 +8991,6 @@
   8065f4b0 000008 8065f4b0  4 DOUBLE_8065f4b0 	Global
   8065f4b8 000008 8065f4b8  4 DOUBLE_8065f4b8 	Global
   8065f4c0 000008 8065f4c0  4 DOUBLE_8065f4c0 	Global
-  8065f4c1 000001 8065f4c1  8 DOUBLE_8065f4c0+1 	Global
   8065f4c8 000004 8065f4c8  4 FLOAT_8065f4c8 	Global
   8065f4d0 000004 8065f4d0  4 FLOAT_8065f4d0 	Global
   8065f4d8 000008 8065f4d8  4 DOUBLE_8065f4d8 	Global
@@ -9075,7 +9105,16 @@
   8065f81c 000004 8065f81c  4 FLOAT_8065f81c 	Global
   8065f820 000004 8065f820  4 FLOAT_8065f820 	Global
   8065f824 000004 8065f824  4 FLOAT_8065f824 	Global
-  8065f860 000001 8065f860  8 s_Illegal_8065f860 	Global
+  8065f828 000001 8065f828  1 s_(blur)_8065f828 	Global
+  8065f830 000001 8065f830  1 s_ptl_8065f830 	Global
+  8065f834 000001 8065f834  1 s_txg_8065f834 	Global
+  8065f838 000001 8065f838  1 s_ref_8065f838 	Global
+  8065f83c 000001 8065f83c  1 s_txf_8065f83c 	Global
+  8065f840 000001 8065f840  1 s_%s.%s_8065f840 	Global
+  8065f848 000001 8065f848  1 s_%s%s_8065f848 	Global
+  8065f854 000001 8065f854  1 s_(bss)_8065f854 	Global
+  8065f860 000001 8065f860  1 s_Illegal_8065f860 	Global
+  8065f868 000001 8065f868  1 s_(movie)_8065f868 	Global
   8065f870 000004 8065f870  4 FLOAT_8065f870 	Global
   8065f874 000004 8065f874  4 FLOAT_8065f874 	Global
   8065f878 000008 8065f878  4 DOUBLE_8065f878 	Global
@@ -9350,4 +9389,3 @@
   8065ff38 000004 8065ff38  4 FLOAT_8065ff38 	Global
   8065ff3c 000004 8065ff3c  4 THP_-2.613 	Global
   8065ff40 000004 8065ff40  4 THP_1024 	Global
-  8145d844 000001 8145d844  8 SUB_8145d844 	Global

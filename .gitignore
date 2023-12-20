@@ -9,3 +9,4 @@ tools/mwcc_compiler
 cbr.map
 main.dol
 main.elf
+tools/elf2dol.exe

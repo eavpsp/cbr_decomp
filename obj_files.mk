@@ -1,7 +1,7 @@
 INIT_O_FILES :=                                     \
     $(OBJ_DIR)/asm/TRK/initTRK.o \
     $(OBJ_DIR)/asm/dolphin/pad/initPad.o \
-    $(OBJ_DIR)/asm/CGame/_startGame.o \
+    $(OBJ_DIR)/asm/dolphin/runtime/_startGame.o \
     
 
 EXTAB_O_FILES :=                                    \
