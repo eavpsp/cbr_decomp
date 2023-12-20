@@ -43,32 +43,32 @@
   8000871c 000060 8000871c  4 PhysicsSphere::__dt(void) 	Global
   8000877c 000168 8000877c  4 XOBj__dt 	Global
   800088e4 0000b4 800088e4  4 CObj__dt 	Global
-  80008998 0001a0 80008998  4 GetCObj 	Global
-  80008b38 0000f4 80008b38  4 UpdateScene 	Global
+  80008998 0001a0 80008998  4 CXObj__dt 	Global
+  80008b38 0000f4 80008b38  4 XObjDemo__dt 	Global
   80008c2c 000048 80008c2c  4 cHeadTrack::__dt(void) 	Global
-  80008c74 000064 80008c74  4 GetMenuEX 	Global
+  80008c74 000064 80008c74  4 MenuEx__dt 	Global
   80008cd8 000060 80008cd8  4 PhysicsSphere::__dt(void) 	Global
   80008d38 000048 80008d38  4 cHeadTrack::__dt(void) 	Global
   80008d80 000048 80008d80  4 cHeadTrack::__dt(void) 	Global
   80008dc8 000048 80008dc8  4 cHeadTrack::__dt(void) 	Global
-  80008e10 000060 80008e10  4 initCobjArchive 	Global
+  80008e10 000060 80008e10  4 CObjArchive__dt 	Global
   80008e70 0000ec 80008e70  4 CMSG__dt 	Global
-  80008f5c 000054 80008f5c  4 ClearCollider 	Global
-  80008fb0 00007c 80008fb0  4 GetSceneTextures 	Global
+  80008f5c 000054 80008f5c  4 PhysicsSphere__dt 	Global
+  80008fb0 00007c 80008fb0  4 CTex__dt 	Global
   8000902c 0001a0 8000902c  4 CCCamMotion__dt 	Global
   800091cc 0003f4 800091cc  4 CCamera__dt 	Global
-  800095c0 000298 800095c0  4 initCameraZoom 	Global
+  800095c0 000298 800095c0  4 CCameraActionArea__dt 	Global
   80009858 00005c 80009858  4 FormationOffensive::__dt(void) 	Global
   800098b4 00005c 800098b4  4 FormationOffensive::__dt(void) 	Global
   80009910 00005c 80009910  4 FormationOffensive::__dt(void) 	Global
   8000996c 00005c 8000996c  4 FormationOffensive::__dt(void) 	Global
-  800099c8 0004fc 800099c8  4 initCameraActionEvents 	Global
+  800099c8 0004fc 800099c8  4 CCameraActionEvt__dt 	Global
   80009ec4 00005c 80009ec4  4 FormationOffensive::__dt(void) 	Global
-  80009f20 000340 80009f20  4 GetCameraActionData 	Global
+  80009f20 000340 80009f20  4 CCameraActionMap__dt 	Global
   8000a260 000258 8000a260  4 CCamControls__dt 	Global
   8000a4b8 000068 8000a4b8  4 checkRangeAndReturnValue 	Global
-  8000a520 00000c 8000a520  4 add_constant_e5d38 	Global
-  8000a52c 00000c 8000a52c  4 add_constant_e7e20 	Global
+  8000a520 00000c 8000a520  4 ReturnValue(0xe5d38) 	Global
+  8000a52c 00000c 8000a52c  4 ReturnValue(0xe7e20) 	Global
   8000a538 000008 8000a538  4 CBGetBytesAvailableForRead 	TRK_Hollywood_Revolution
   8000a540 000008 8000a540  4 J3DTexGenBlock4::getNBTScale(void) 	J3DGraphBase
   8000a548 000008 8000a548  4 J3DTexGenBlock4::getNBTScale(void) 	J3DGraphBase
@@ -84,7 +84,7 @@
   8000abb8 0000ac 8000abb8  4 MovieHandler 	Global
   8000ac64 0000d0 8000ac64  4 UpdateMovie 	Global
   8000ad34 000600 8000ad34  4 InitMsgWindow 	Global
-  8000b334 000060 8000b334  4 InitCFont 	Global
+  8000b334 000060 8000b334  4 CFont__dt 	Global
   8000b394 000aa4 8000b394  4 InitializeGameData 	Global
   8000be38 000560 8000be38  4 DrawRectangleWithVertexData 	Global
   8000c398 0000b8 8000c398  4 processGlobalArrayElements 	Global
@@ -171,11 +171,11 @@
   8001599c 0000b4 8001599c  4 IsModelViewProjectionValid 	Global
   80015a50 00002c 80015a50  4 NSNMessengerScene::SceneCreated(void) 	Global
   80015a7c 0000bc 80015a7c  4 GetObjectPosition 	Global
-  80015b38 000084 80015b38  4 SetCVectIntp 	Global
-  80015bbc 000098 80015bbc  4 SetCCamActionArea 	Global
+  80015b38 000084 80015b38  4 CVectorNoneInterpolation__dt 	Global
+  80015bbc 000098 80015bbc  4 CCameraActionAreaExM__dt 	Global
   80015c54 000010 80015c54  4 GetDAT_805a055c 	Global
   80015c64 000010 80015c64  4 THPSimpleGetCurrentFrame 	Global
-  80015c74 000010 80015c74  4 updateGlobalVariable_805a0560 	Global
+  80015c74 000010 80015c74  4 SetCurrentFrame 	Global
   80015c84 000044 80015c84  4 GetTriangleIntersectionIndexWithTriangle 	Global
   80015cc8 000064 80015cc8  4 isTriangleHasQuadFlag 	Global
   80015d2c 000048 80015d2c  4 cHeadTrack::__dt(void) 	Global
@@ -207,17 +207,17 @@
   800160f0 00002c 800160f0  4 NSNMessengerScene::SceneCreated(void) 	Global
   8001611c 0000bc 8001611c  4 GetTriangleIntersectionCoordinates 	Global
   800161d8 000008 800161d8  4 nw4hbm::ut::TextWriterBase<w>::GetCharSpace(void) 	const
-  800161e0 000084 800161e0  4 initVecInterp 	Global
+  800161e0 000084 800161e0  4 CVectorLinearInterpolation__dt 	Global
   80016264 0000d8 80016264  4 UpdateTriangleVerticesWithTime_ 	Global
   8001633c 0000e0 8001633c  4 CheckTriangleIntersection__8001633c_ 	Global
   8001641c 0000b4 8001641c  4 IsTriangleIntersectionValid 	Global
   800164d0 0000bc 800164d0  4 GetTriangleVertexValues 	Global
-  8001658c 000084 8001658c  4 SetCVectEaseInOutLerp 	Global
+  8001658c 000084 8001658c  4 CVectorEaseInOutInterpolation__dt 	Global
   80016610 0000d0 80016610  4 updateTriangles_80016610_ 	Global
   800166e0 0000c8 800166e0  4 CheckCollisionsWithTrianglePlanes 	Global
   800167a8 0000b4 800167a8  4 CheckTriangleIntegrity 	Global
   8001685c 0000bc 8001685c  4 CopyVectorComponents 	Global
-  80016918 000084 80016918  4 SetCVectEaseOutLerp 	Global
+  80016918 000084 80016918  4 CVectorEaseOutInterpolation__dt 	Global
   8001699c 000048 8001699c  4 cHeadTrack::__dt(void) 	Global
   800169e4 0000d8 800169e4  4 update_3d_matrix_components_below_threshold 	Global
   80016abc 00002c 80016abc  4 set_vector3_components 	Global
@@ -227,24 +227,24 @@
   80016ca4 0000b4 80016ca4  4 ProcessVectorOrMatrixElements 	Global
   80016d58 0000bc 80016d58  4 ExtractVectorComponents 	Global
   80016e14 000008 80016e14  4 nw4hbm::ut::TextWriterBase<w>::GetCharSpace(void) 	const
-  80016e1c 000084 80016e1c  4 SetCVectEasOutDivideLerp 	Global
+  80016e1c 000084 80016e1c  4 CVectorEaseOutDivideInterpolation__dt 	Global
   80016ea0 00002c 80016ea0  4 NSNMessengerScene::SceneCreated(void) 	Global
-  80016ecc 000088 80016ecc  4 SetCInterfaceCamActions 	Global
+  80016ecc 000088 80016ecc  4 CInterfaceCameraAction__dt 	Global
   80016f54 000048 80016f54  4 cHeadTrack::__dt(void) 	Global
-  80016f9c 000088 80016f9c  4 GetCameraMomento 	Global
+  80016f9c 000088 80016f9c  4 CCameraMemento__dt 	Global
   80017024 000048 80017024  4 cHeadTrack::__dt(void) 	Global
-  8001706c 0000c8 8001706c  4 SetMsgFont 	Global
+  8001706c 0000c8 8001706c  4 CMsgFont__dt 	Global
   80017134 000088 80017134  4 CObjVec__dt 	Global
-  800171bc 000088 800171bc  4 SetCJObj 	Global
+  800171bc 000088 800171bc  4 CJObj__dt 	Global
   80017244 0000c4 80017244  4 processTreeSetYPosition 	Global
   80017308 0000c4 80017308  4 updateZCoordinate 	Global
   800173cc 0000c4 800173cc  4 UpdateObjectTransform 	Global
   80017490 0000c4 80017490  4 UpdateNodeFieldValue 	Global
   80017554 0000c4 80017554  4 assertJobj_80017554_ 	Global
-  80017618 0000c4 80017618  4 zz_80017618_ 	Global
-  800176dc 00019c 800176dc  4 zz_800176dc_ 	Global
+  80017618 0000c4 80017618  4 HSD_JObjSetScaleItem_ 	Global
+  800176dc 00019c 800176dc  4 HSD_JObjSetScaleItem__ 	Global
   80017878 00019c 80017878  4 setRotationAngleForObject 	Global
-  80017a14 00019c 80017a14  4 zz_80017a14_ 	Global
+  80017a14 00019c 80017a14  4 HSD_JObjSetScaleItem____ 	Global
   80017bb0 00016c 80017bb0  4 updateTranslation_ 	Global
   80017d1c 00014c 80017d1c  4 translateObject 	Global
   80017e68 000168 80017e68  4 setScaleTransform 	Global
@@ -282,15 +282,15 @@
   80018db8 00005c 80018db8  4 FormationOffensive::__dt(void) 	Global
   80018e14 000048 80018e14  4 cHeadTrack::__dt(void) 	Global
   80018e5c 000098 80018e5c  4 InfoScreen__dt 	Global
-  80018ef4 000088 80018ef4  4 SetCParticle 	Global
-  80018f7c 00006c 80018f7c  4 SetCScrnQuake 	Global
+  80018ef4 000088 80018ef4  4 CParticle__dt 	Global
+  80018f7c 00006c 80018f7c  4 CScrnQuake__dt 	Global
   80018fe8 000048 80018fe8  4 cHeadTrack::__dt(void) 	Global
   80019030 000048 80019030  4 cHeadTrack::__dt(void) 	Global
   80019078 000048 80019078  4 cHeadTrack::__dt(void) 	Global
-  800190c0 00009c 800190c0  4 SetCStack 	Global
+  800190c0 00009c 800190c0  4 CEvt__dt 	Global
   8001915c 000048 8001915c  4 cHeadTrack::__dt(void) 	Global
-  800191a4 000074 800191a4  4 InitXSound 	Global
-  80019218 00004c 80019218  4 SetCCard 	Global
+  800191a4 000074 800191a4  4 CSound__dt 	Global
+  80019218 00004c 80019218  4 CCard__dt 	Global
   80019264 000064 80019264  4 MemCard__dt 	Global
   800192c8 000048 800192c8  4 cHeadTrack::__dt(void) 	Global
   80019310 00002c 80019310  4 NSNMessengerScene::SceneCreated(void) 	Global
@@ -304,20 +304,20 @@
   8001975c 000048 8001975c  4 initARCacheInfo 	Global
   800197a4 0006b8 800197a4  4 CGameScene__ct 	Global
   80019e5c 000488 80019e5c  4 SetCamActions 	Global
-  8001a2e4 0000c4 8001a2e4  4 SetCCameraActionScroll 	Global
+  8001a2e4 0000c4 8001a2e4  4 CCameraActionScroll__dt 	Global
   8001a3a8 00001c 8001a3a8  4 FEResourceManager::__ct(void) 	Global
-  8001a3c4 000098 8001a3c4  4 SetCCameaActionLadder 	Global
+  8001a3c4 000098 8001a3c4  4 CCameraActionLadr__dt 	Global
   8001a45c 000190 8001a45c  4 initCameraActions 	Global
-  8001a5ec 000098 8001a5ec  4 SetCCamActionAnim 	Global
-  8001a684 000100 8001a684  4 SetCCameraActionEye 	Global
-  8001a784 000098 8001a784  4 SetCCameraActionScroll 	Global
+  8001a5ec 000098 8001a5ec  4 CCameraActionAnim__dt 	Global
+  8001a684 000100 8001a684  4 CCameraActionEye__dt 	Global
+  8001a784 000098 8001a784  4 CCameraActionScroll__dt 	Global
   8001a81c 000384 8001a81c  4 SetCamPointers 	Global
-  8001aba0 0000c4 8001aba0  4 SetCCameraActionChase 	Global
+  8001aba0 0000c4 8001aba0  4 CCameraActionChase__dt 	Global
   8001ac64 00001c 8001ac64  4 FEResourceManager::__ct(void) 	Global
   8001ac80 00001c 8001ac80  4 FEResourceManager::__ct(void) 	Global
   8001ac9c 00001c 8001ac9c  4 FEResourceManager::__ct(void) 	Global
   8001acb8 00001c 8001acb8  4 FEResourceManager::__ct(void) 	Global
-  8001acd4 000098 8001acd4  4 SetCCameraActionDefault 	Global
+  8001acd4 000098 8001acd4  4 CCameraActionDefault__dt 	Global
   8001ad6c 0000f8 8001ad6c  4 CMSG__ct 	Global
   8001ae64 000010 8001ae64  4 CTexObj__ct 	Global
   8001ae74 000028 8001ae74  4 CWindow__ct 	Global
@@ -325,28 +325,28 @@
   8001aef8 000048 8001aef8  4 cHeadTrack::__dt(void) 	Global
   8001af40 000030 8001af40  4 TRK_memset 	Global
   8001af70 00003c 8001af70  4 GameSceneManager::__ct(void) 	Global
-  8001afac 000100 8001afac  4 SetEventData 	Global
+  8001afac 000100 8001afac  4 CreateCJobj 	Global
   8001b0ac 00005c 8001b0ac  4 FormationOffensive::__dt(void) 	Global
   8001b108 000048 8001b108  4 cHeadTrack::__dt(void) 	Global
   8001b150 00008c 8001b150  4 initCJObj 	Global
-  8001b1dc 000110 8001b1dc  4 SetCobjTable 	Global
-  8001b2ec 000040 8001b2ec  4 SetArchive 	Global
+  8001b1dc 000110 8001b1dc  4 initCJobjVectors 	Global
+  8001b2ec 000040 8001b2ec  4 CObjArchive__ct 	Global
   8001b32c 000010 8001b32c  4 BIRDOSoundPropAccessor::ResetSoundPropTable(void) 	Global
   8001b33c 000020 8001b33c  4 JStudio_JStage::TAdaptor_light::TVVOutput_direction_::TVVOutput_direction_(void) 	JStudio_JStage
-  8001b35c 000030 8001b35c  4 SetCFile 	Global
-  8001b38c 000040 8001b38c  4 SetMenuEx 	Global
+  8001b35c 000030 8001b35c  4 initCFile 	Global
+  8001b38c 000040 8001b38c  4 initMenuEx 	Global
   8001b3cc 00003c 8001b3cc  4 GameSceneManager::__ct(void) 	Global
-  8001b408 0000ac 8001b408  4 SetCFile 	Global
-  8001b4b4 000084 8001b4b4  4 SetObjDemo 	Global
+  8001b408 0000ac 8001b408  4 InitTitleObject 	Global
+  8001b4b4 000084 8001b4b4  4 initXobjDemo 	Global
   8001b538 00006c 8001b538  4 SceneLighting__ct 	Global
   8001b5a4 00006c 8001b5a4  4 InGameTextOverlay::__dt(void) 	Global
   8001b610 00006c 8001b610  4 InGameTextOverlay::__dt(void) 	Global
   8001b67c 00006c 8001b67c  4 InGameTextOverlay::__dt(void) 	Global
-  8001b6e8 000084 8001b6e8  4 SetCScrnWipeTex 	Global
+  8001b6e8 000084 8001b6e8  4 CScrnWipeTex__dt 	Global
   8001b76c 00005c 8001b76c  4 FormationOffensive::__dt(void) 	Global
   8001b7c8 00007c 8001b7c8  4 CTPL__dt 	Global
   8001b844 00005c 8001b844  4 FormationOffensive::__dt(void) 	Global
-  8001b8a0 0000dc 8001b8a0  4 SetCam&Lights 	Global
+  8001b8a0 0000dc 8001b8a0  4 initCBase 	Global
   8001b97c 000010 8001b97c  4 BIRDOSoundPropAccessor::ResetSoundPropTable(void) 	Global
   8001b98c 00002c 8001b98c  4 SceneCamera__ct 	Global
   8001b9b8 0001a4 8001b9b8  4 CGS__ct 	Global
@@ -403,17 +403,17 @@
   8001fc54 000068 8001fc54  4 InitializeAudioAndFXSystemWithStreams 	Global
   8001fcbc 000038 8001fcbc  4 HandleStreamAudioData 	Global
   8001fcf4 000ad4 8001fcf4  4 zz_8001fcf4_ 	Global
-  800207c8 000cac 800207c8  4 zz_800207c8_ 	Global
-  80021474 00008c 80021474  4 zz_80021474_ 	Global
-  80021500 000070 80021500  4 zz_80021500_ 	Global
-  80021570 000528 80021570  4 zz_80021570_ 	Global
+  800207c8 000cac 800207c8  4 RenderOverlay 	Global
+  80021474 00008c 80021474  4 CheckOverlayEnabledSignal 	Global
+  80021500 000070 80021500  4 ScreenOverlay__ct 	Global
+  80021570 000528 80021570  4 CheckScreenWipeSignal 	Global
   80021a98 000644 80021a98  4 zz_80021a98_ 	Global
   800220dc 0007c0 800220dc  4 runActionFunc 	Global
-  8002289c 000794 8002289c  4 zz_8002289c_ 	Global
+  8002289c 000794 8002289c  4 RunScreenWipe 	Global
   80023030 000408 80023030  4 CheckIfStartedDialogue 	Global
   80023438 0002b4 80023438  4 InitializeTransformationMatrix 	Global
   800236ec 0001b8 800236ec  4 InitializeSpriteData_800236ec_ 	Global
-  800238a4 000068 800238a4  4 UpdateDataWith_8065c0e8 	Global
+  800238a4 000068 800238a4  4 ScreenWipe__ct 	Global
   8002390c 00022c 8002390c  4 updateRenderingData 	Global
   80023b38 00023c 80023b38  4 update_coordinates_with_velocities 	Global
   80023d74 00016c 80023d74  4 zz_80023d74_ 	Global
@@ -425,10 +425,10 @@
   80024524 000034 80024524  4 initializeMatrixWithIdentity_ 	Global
   80024558 000098 80024558  4 DestroyCPtclDust3 	Global
   800245f0 000010 800245f0  4 nlListContainer<P8SaveData>::__ct(void) 	Global
-  80024600 0001d8 80024600  4 zz_80024600_ 	Global
-  800247d8 00015c 800247d8  4 zz_800247d8_ 	Global
-  80024934 0001e8 80024934  4 zz_80024934_ 	Global
-  80024b1c 000184 80024b1c  4 zz_80024b1c_ 	Global
+  80024600 0001d8 80024600  4 ShowParticle 	Global
+  800247d8 00015c 800247d8  4 AnimateParticleScale 	Global
+  80024934 0001e8 80024934  4 ShowParticle 	Global
+  80024b1c 000184 80024b1c  4 AnimateParticleScale 	Global
   80024ca0 0000e0 80024ca0  4 zz_80024ca0_ 	Global
   80024d80 000004 80024d80  4 DBClose 	NdevExi2A
   80024d84 000084 80024d84  4 zz_80024d84_ 	Global
@@ -436,8 +436,8 @@
   80024e0c 000044 80024e0c  4 resetArrayElements_80024e0c 	Global
   80024e50 00015c 80024e50  4 allocateParticle 	Global
   80024fac 000084 80024fac  4 zz_80024fac_ 	Global
-  80025030 000088 80025030  4 SetCPtclOne 	Global
-  800250b8 000098 800250b8  4 SetCPtclDust2 	Global
+  80025030 000088 80025030  4 CPtclOne__dt 	Global
+  800250b8 000098 800250b8  4 CPtclDust3__dt 	Global
   80025150 0000d8 80025150  4 zz_80025150_ 	Global
   80025228 000190 80025228  4 zz_80025228_ 	Global
   800253b8 000190 800253b8  4 zz_800253b8_ 	Global
@@ -519,7 +519,7 @@
   8002e8d0 002418 8002e8d0  4 HandleMainMenu 	Global
   80030ce8 0001fc 80030ce8  4 InitializeRenderState 	Global
   80030ee4 000120 80030ee4  4 initializeRenderState_80030ee4 	Global
-  80031004 000358 80031004  4 InitializeData 	Global
+  80031004 000358 80031004  4 InitializeGameMemoryHandlers 	Global
   8003135c 000048 8003135c  4 zz_8003135c_ 	Global
   800313a4 000024 800313a4  4 lessThanSix 	Global
   800313c8 000010 800313c8  4 setFlagAndValue 	Global
@@ -595,7 +595,7 @@
   800428e4 001060 800428e4  4 zz_800428e4_ 	Global
   80043944 0006d8 80043944  4 SetWindow 	Global
   8004401c 000c58 8004401c  4 zz_8004401c_ 	Global
-  80044c74 00423c 80044c74  4 zz_80044c74_ 	Global
+  80044c74 00423c 80044c74  4 HandleChibiPCMenu 	Global
   80048eb0 000008 80048eb0  4 CBGetBytesAvailableForRead 	TRK_Hollywood_Revolution
   80048eb8 000020 80048eb8  4 ReturnValFromSceneObj_0x96bc 	Global
   80048ed8 00002c 80048ed8  4 zz_80048ed8_ 	Global
@@ -694,13 +694,13 @@
   800622b8 0000d8 800622b8  4 compute_transform 	Global
   80062390 000048 80062390  4 zz_80062390_ 	Global
   800623d8 000020 800623d8  4 cPlayer::PostPhysicsUpdate(void) 	Global
-  800623f8 000774 800623f8  4 DrawScene 	Global
+  800623f8 000774 800623f8  4 DrawMenuBG 	Global
   80062b6c 0007b0 80062b6c  4 initMenuMain 	Global
   8006331c 000094 8006331c  4 DestroyCStatus 	Global
   800633b0 000054 800633b0  4 SetCStatus 	Global
   80063404 000018 80063404  4 cPoseNode::__ct(void) 	Global
   8006341c 000090 8006341c  4 SetMenuMCTestSub 	Global
-  800634ac 000090 800634ac  4 SetMenuMCTest 	Global
+  800634ac 000090 800634ac  4 MenuMCTest__dt 	Global
   8006353c 000090 8006353c  4 SetMenuStageSelect 	Global
   800635cc 000090 800635cc  4 GetSaveMenu 	Global
   8006365c 000090 8006365c  4 GetPCMenu 	Global
@@ -835,8 +835,8 @@
   8006f924 000028 8006f924  4 getStageCount 	Global
   8006f94c 000128 8006f94c  4 initStageData 	Global
   8006fa74 00005c 8006fa74  4 FormationOffensive::__dt(void) 	Global
-  8006fad0 0000c4 8006fad0  4 GetStageData 	Global
-  8006fb94 000074 8006fb94  4 InitModule 	Global
+  8006fad0 0000c4 8006fad0  4 Stage__dt 	Global
+  8006fb94 000074 8006fb94  4 CModule__dt 	Global
   8006fc08 00005c 8006fc08  4 FormationOffensive::__dt(void) 	Global
   8006fc64 000048 8006fc64  4 cHeadTrack::__dt(void) 	Global
   8006fcac 0000e0 8006fcac  4 registerShortcutWithValue 	Global
@@ -933,9 +933,9 @@
   800888a0 000278 800888a0  4 Process_Card_Delete 	Global
   80088b18 000034 80088b18  4 CardDeleteProcess 	Global
   80088b4c 0000ac 80088b4c  4 CardDeleteHandler 	Global
-  80088bf8 000250 80088bf8  4 zz_80088bf8_ 	Global
-  80088e48 000030 80088e48  4 zz_80088e48_ 	Global
-  80088e78 0000a8 80088e78  4 zz_80088e78_ 	Global
+  80088bf8 000250 80088bf8  4 CheckCardExists 	Global
+  80088e48 000030 80088e48  4 ReturnCardState 	Global
+  80088e78 0000a8 80088e78  4 InitCardHandler 	Global
   80088f20 000338 80088f20  4 CheckAndOpenCard 	Global
   80089258 000030 80089258  4 GetCardStatus 	Global
   80089288 0000b4 80089288  4 InitializeCard 	Global
@@ -998,7 +998,7 @@
   80091c80 000c68 80091c80  4 zz_80091c80_ 	Global
   800928e8 0000dc 800928e8  4 initGraphicSettings 	Global
   800929c4 0000e0 800929c4  4 initializeObjectDataAndResetValues_800929c4_ 	Global
-  80092aa4 0000dc 80092aa4  4 InitCamera 	Global
+  80092aa4 0000dc 80092aa4  4 XObjCamera__dt 	Global
   80092b80 000010 80092b80  4 cFielder::IsPlayingPowerupAnim(void) 	Global
   80092b90 0000f8 80092b90  4 zz_80092b90_ 	Global
   80092c88 000068 80092c88  4 zz_80092c88_ 	Global
@@ -1006,13 +1006,13 @@
   80092d34 00005c 80092d34  4 zz_80092d34_ 	Global
   80092d90 00000c 80092d90  4 cAIPad::__ct(void) 	Global
   80092d9c 000020 80092d9c  4 cPlayer::PostPhysicsUpdate(void) 	Global
-  80092dbc 00007c 80092dbc  4 IniSceneLights 	Global
+  80092dbc 00007c 80092dbc  4 XObjLight_dt 	Global
   80092e38 0000c8 80092e38  4 zz_80092e38_ 	Global
   80092f00 000098 80092f00  4 zz_80092f00_ 	Global
   80092f98 00014c 80092f98  4 zz_80092f98_ 	Global
   800930e4 000030 800930e4  4 zz_800930e4_ 	Global
   80093114 000020 80093114  4 cPlayer::PostPhysicsUpdate(void) 	Global
-  80093134 000094 80093134  4 GetGameMap 	Global
+  80093134 000094 80093134  4 XObjMap__dt 	Global
   800931c8 000048 800931c8  4 cHeadTrack::__dt(void) 	Global
   80093210 00048c 80093210  4 FindColorIndex 	Global
   8009369c 0000cc 8009369c  4 zz_8009369c_ 	Global
@@ -1331,14 +1331,14 @@
   800bc4dc 000048 800bc4dc  4 cHeadTrack::__dt(void) 	Global
   800bc524 000694 800bc524  4 ChibiRobo__dt 	Global
   800bcbb8 000094 800bcbb8  4 Dust2__dt 	Global
-  800bcc4c 0000a8 800bcc4c  4 initXObjPlug 	Global
+  800bcc4c 0000a8 800bcc4c  4 XObjPlug__dt 	Global
   800bccf4 000090 800bccf4  4 InitInterpolation 	Global
   800bcd84 000060 800bcd84  4 PhysicsSphere::__dt(void) 	Global
   800bcde4 000060 800bcde4  4 ChibiCopter__dt 	Global
   800bce44 000060 800bce44  4 XObjAttachment__dt 	Global
   800bcea4 000060 800bcea4  4 initPopper 	Global
   800bcf04 000060 800bcf04  4 initRadar 	Global
-  800bcf64 000060 800bcf64  4 initXobox 	Global
+  800bcf64 000060 800bcf64  4 XObjOX__dt 	Global
   800bcfc4 000058 800bcfc4  4 IChooseSide::__dt(void) 	Global
   800bd01c 000160 800bd01c  4 calculateParamValue 	Global
   800bd17c 000048 800bd17c  4 cHeadTrack::__dt(void) 	Global
@@ -1402,7 +1402,7 @@
   800d0d3c 000090 800d0d3c  4 zz_800d0d3c_ 	Global
   800d0dcc 0000c0 800d0dcc  4 zz_800d0dcc_ 	Global
   800d0e8c 0000c0 800d0e8c  4 zz_800d0e8c_ 	Global
-  800d0f4c 002b10 800d0f4c  4 zz_800d0f4c_ 	Global
+  800d0f4c 002b10 800d0f4c  4 HandleChibiPCEndInteraction 	Global
   800d3a5c 000094 800d3a5c  4 zz_800d3a5c_ 	Global
   800d3af0 0000b4 800d3af0  4 zz_800d3af0_ 	Global
   800d3ba4 00005c 800d3ba4  4 zz_800d3ba4_ 	Global
@@ -1598,7 +1598,7 @@
   800e68c8 000008 800e68c8  4 gdev_cc_shutdown 	TRK_Hollywood_Revolution
   800e68d0 000008 800e68d0  4 J3DAnmCluster::getWeight(unsigned 	short)
   800e68d8 000078 800e68d8  4 InitCCamerActionLeticker 	Global
-  800e6950 0000a4 800e6950  4 InitActorArmy 	Global
+  800e6950 0000a4 800e6950  4 XObjArmy__dt 	Global
   800e69f4 000068 800e69f4  4 zz_800e69f4_ 	Global
   800e6a5c 000114 800e6a5c  4 zz_800e6a5c_ 	Global
   800e6b70 000308 800e6b70  4 zz_800e6b70_ 	Global
@@ -1974,13 +1974,13 @@
   80134000 000014 80134000  4 zz_80134000_ 	Global
   80134014 000038 80134014  4 __arraydtor$381 	Global
   8013404c 000058 8013404c  4 InitActorDeca 	Global
-  801340a4 00005c 801340a4  4 SetActorData 	Global
-  80134100 000050 80134100  4 zz_80134100_ 	Global
+  801340a4 00005c 801340a4  4 InitXObjActor 	Global
+  80134100 000050 80134100  4 InitActorTao 	Global
   80134150 000050 80134150  4 InitActorPapa 	Global
-  801341a0 000050 801341a0  4 SetActorMama 	Global
-  801341f0 000058 801341f0  4 zz_801341f0_ 	Global
+  801341a0 000050 801341a0  4 InitActorMama 	Global
+  801341f0 000058 801341f0  4 InitActorJenny 	Global
   80134248 000038 80134248  4 __arraydtor$381 	Global
-  80134280 000080 80134280  4 zz_80134280_ 	Global
+  80134280 000080 80134280  4 InitActorToy 	Global
   80134300 000038 80134300  4 __arraydtor$381 	Global
   80134338 000048 80134338  4 SetXObjLeticker 	Global
   80134380 000038 80134380  4 __arraydtor$381 	Global
@@ -2027,7 +2027,7 @@
   80135434 0007e0 80135434  4 zz_80135434_ 	Global
   80135c14 000048 80135c14  4 cHeadTrack::__dt(void) 	Global
   80135c5c 000038 80135c5c  4 __arraydtor$381 	Global
-  80135c94 00007c 80135c94  4 zz_80135c94_ 	Global
+  80135c94 00007c 80135c94  4 3CVec__dt 	Global
   80135d10 000018 80135d10  4 zz_80135d10_ 	Global
   80135d28 00010c 80135d28  4 zz_80135d28_ 	Global
   80135e34 000390 80135e34  4 zz_80135e34_ 	Global
@@ -3487,7 +3487,7 @@
   80194fd4 0000f4 80194fd4  4 zz_80194fd4_ 	Global
   801950c8 00133c 801950c8  4 SetMsgData 	Global
   80196404 000038 80196404  4 __arraydtor$381 	Global
-  8019643c 0000a4 8019643c  4 SetTextObjData 	Global
+  8019643c 0000a4 8019643c  4 CTile__dt 	Global
   801964e0 000038 801964e0  4 InitTextObjData 	Global
   80196518 0000f8 80196518  4 writeStringToBufferAndSetMessageData 	Global
   80196610 0000f8 80196610  4 DisplayMessage 	Global
@@ -3559,7 +3559,7 @@
   8019df5c 00022c 8019df5c  4 concatenateAndTransformMatrices 	Global
   8019e188 000120 8019e188  4 ProcessMatrix 	Global
   8019e2a8 000120 8019e2a8  4 zz_8019e2a8_ 	Global
-  8019e3c8 000028 8019e3c8  4 initialize_param_1 	Global
+  8019e3c8 000028 8019e3c8  4 CPad__ct 	Global
   8019e3f0 000020 8019e3f0  4 cPlayer::PostPhysicsUpdate(void) 	Global
   8019e410 000080 8019e410  4 zz_8019e410_ 	Global
   8019e490 0000e0 8019e490  4 InitializePlayerDataAndUpdate 	Global
@@ -3640,7 +3640,7 @@
   801a3f18 000244 801a3f18  4 zz_801a3f18_ 	Global
   801a415c 0001ac 801a415c  4 zz_801a415c_ 	Global
   801a4308 000010 801a4308  4 increment_pointer_value 	Global
-  801a4318 00009c 801a4318  4 ClearArchive 	Global
+  801a4318 00009c 801a4318  4 InitArchive 	Global
   801a43b4 000004 801a43b4  4 DBClose 	NdevExi2A
   801a43b8 000070 801a43b8  4 zz_801a43b8_ 	Global
   801a4428 0001d0 801a4428  4 zz_801a4428_ 	Global
@@ -4080,7 +4080,7 @@
   801c79e4 0007f0 801c79e4  4 ProcessUnreachableBlocks 	Global
   801c81d4 00055c 801c81d4  4 ProcessChunk 	Global
   801c8730 000278 801c8730  4 ProcessWorldState 	Global
-  801c89a8 000334 801c89a8  4 processTree 	Global
+  801c89a8 000334 801c89a8  4 HSD_JObjSetMtxDirtySub(); 	Global
   801c8cdc 000008 801c8cdc  4 IPCSetBufferLo 	ipc
   801c8ce4 000008 801c8ce4  4 IPCSetBufferLo 	ipc
   801c8cec 000008 801c8cec  4 IPCSetBufferLo 	ipc
@@ -4094,7 +4094,7 @@
   801c96f0 000344 801c96f0  4 zz_801c96f0_ 	Global
   801c9a34 000398 801c9a34  4 zz_801c9a34_ 	Global
   801c9dcc 0001e8 801c9dcc  4 zz_801c9dcc_ 	Global
-  801c9fb4 000100 801c9fb4  4 zz_801c9fb4_ 	Global
+  801c9fb4 000100 801c9fb4  4 ImageBilloardFX 	Global
   801ca0b4 00010c 801ca0b4  4 zz_801ca0b4_ 	Global
   801ca1c0 0000d0 801ca1c0  4 zz_801ca1c0_ 	Global
   801ca290 000208 801ca290  4 setRenderProperties 	Global
@@ -4233,7 +4233,7 @@
   801d3668 00005c 801d3668  4 allocateAndInitializeObject 	Global
   801d36c4 000054 801d36c4  4 nodeSet_801d36c4_ 	Global
   801d3718 000048 801d3718  4 CheckNullParam 	Global
-  801d3760 000080 801d3760  4 zz_801d3760_ 	Global
+  801d3760 000080 801d3760  4 InitClassWobj 	Global
   801d37e0 0002bc 801d37e0  4 HandleGameFog 	Global
   801d3a9c 000018 801d3a9c  4 zz_801d3a9c_ 	Global
   801d3ab4 00005c 801d3ab4  4 zz_801d3ab4_ 	Global
@@ -4332,7 +4332,7 @@
   801de9e4 0002f8 801de9e4  4 rotate_3d_vector 	Global
   801decdc 0002a8 801decdc  4 updateDistanceBetweenObjects 	Global
   801def84 000144 801def84  4 updatePositionFromObject 	Global
-  801df0c8 002f30 801df0c8  4 ProcessObjectTransformationCommand 	Global
+  801df0c8 002f30 801df0c8  4 ProcessGameBillboardFX 	Global
   801e1ff8 0000b0 801e1ff8  4 updateWorldPosition 	Global
   801e20a8 0000b0 801e20a8  4 updateObjectYCoordinate 	Global
   801e2158 0000b0 801e2158  4 updateObjectRotation_ 	Global
@@ -5047,7 +5047,7 @@
   80202f6c 000001 80202f6c  1 s_Select_a_file_80202f6c 	Global
   80202f7c 000001 80202f7c  1 s_The_data_could_not_be_loaded_80202f7c 	Global
   80202f9c 000001 80202f9c  1 s_The_Memory_Card_80202f9c 	Global
-  80203e94 000001 80203e94  8 gameModels 	Global
+  80203e94 000001 80203e94  1 gameModels 	Global
   80203ea0 000001 80203ea0  8 s_kitchen/map_80203ea0 	Global
   80203eac 000001 80203eac  1 s_kitchen/reizouko_80203eac 	Global
   80203ec0 000001 80203ec0  8 s_kitchen/gas_dai_80203ec0 	Global
@@ -5091,16 +5091,398 @@
   80204128 000001 80204128  8 s_rouka/wall_2f_80204128 	Global
   80204138 000001 80204138  1 s_pushobj3_80204138 	Global
   80204144 000001 80204144  8 s_backyard/map_80204144 	Global
+  8020431c 000001 8020431c  8 s_jenny/window2_8020431c 	Global
+  8020432c 000001 8020432c  8 s_parent/map_8020432c 	Global
+  80204338 000001 80204338  8 s_parent/barwall_l_80204338 	Global
+  8020434c 000001 8020434c  8 s_parent/barwall_m_8020434c 	Global
+  80204360 000001 80204360  8 s_parent/barwall_r_80204360 	Global
+  80204374 000001 80204374  8 s_parent/bed_80204374 	Global
+  80204380 000001 80204380  8 s_parent/chair_80204380 	Global
+  80204390 000001 80204390  8 s_parent/closet_80204390 	Global
+  802043a0 000001 802043a0  8 s_parent/cornershelf_802043a0 	Global
+  802043b4 000001 802043b4  8 s_parent/dresser_802043b4 	Global
+  802043c4 000001 802043c4  8 s_parent/sofa_802043c4 	Global
+  802043d0 000001 802043d0  1 s_parent/table_802043d0 	Global
+  802043e0 000001 802043e0  8 s_map_jump_box_802043e0 	Global
+  802043f0 000001 802043f0  8 s_parent/wall_802043f0 	Global
+  802043fc 000001 802043fc  1 s_parent/wallshelf_802043fc 	Global
+  80204410 000001 80204410  8 s_parent/window_80204410 	Global
+  80204420 000001 80204420  8 s_npc/hock_80204420 	Global
+  8020442c 000001 8020442c  8 s_souko/kaidan_8020442c 	Global
+  8020443c 000001 8020443c  8 s_souko/dc_dai_8020443c 	Global
+  8020444c 000001 8020444c  8 s_living/shelf_dan_box_8020444c 	Global
+  80204464 000001 80204464  8 s_living/shelf_dan_dai_80204464 	Global
+  8020447c 000001 8020447c  8 s_living/door_8020447c 	Global
+  80204488 000001 80204488  1 s_rouka/door_l_80204488 	Global
+  80204498 000001 80204498  8 s_rouka/door_l_dami_80204498 	Global
+  802044ac 000001 802044ac  8 s_chibihouse/cus_cb_pr_lv1_802044ac 	Global
+  802044c8 000001 802044c8  8 s_chibihouse/gacha_pon1_802044c8 	Global
+  802044e0 000001 802044e0  8 s_living/wall_shelf1_802044e0 	Global
+  802044f4 000001 802044f4  8 s_living/tel_802044f4 	Global
+  80204500 000001 80204500  8 s_living/tel_counter_80204500 	Global
+  80204514 000001 80204514  8 s_living/tel_j_80204514 	Global
+  80204524 000001 80204524  8 s_living/wall_counter_80204524 	Global
+  80204538 000001 80204538  1 s_living/shelf_w_80204538 	Global
+  80204548 000001 80204548  8 s_living/wall_up_80204548 	Global
+  80204558 000001 80204558  8 s_living/shelf_slope_80204558 	Global
+  8020456c 000001 8020456c  8 s_living/flowerclock_8020456c 	Global
+  80204580 000001 80204580  8 s_souko/hasira_80204580 	Global
+  80204590 000001 80204590  8 s_living/living_sky_80204590 	Global
+  802045a4 000001 802045a4  8 s_living/butterfly_802045a4 	Global
+  802045b8 000001 802045b8  8 s_living/flower_bed_802045b8 	Global
+  802045cc 000001 802045cc  8 s_rouka/kaidan_2h_802045cc 	Global
+  802045dc 000001 802045dc  1 s_rouka/kaidan_3h_802045dc 	Global
+  802045ec 000001 802045ec  1 s_souko/wine_bottle_802045ec 	Global
+  80204600 000001 80204600  8 s_rouka/hashira_t_80204600 	Global
+  80204610 000001 80204610  1 s_rouka/hashira_e_80204610 	Global
+  80204620 000001 80204620  1 s_rouka/wall_under_80204620 	Global
+  80204634 000001 80204634  8 s_rouka/floor_2f_80204634 	Global
+  80204644 000001 80204644  8 s_chibihouse/map_80204644 	Global
+  80204654 000001 80204654  8 s_chibihouse/wall_80204654 	Global
+  80204664 000001 80204664  1 s_chibihouse/chi_pc_80204664 	Global
+  80204678 000001 80204678  8 s_chibihouse/chi_socket_80204678 	Global
+  80204690 000001 80204690  8 s_chibihouse/chi_e_80204690 	Global
+  802046a4 000001 802046a4  8 s_rouka/door_e_802046a4 	Global
+  802046b4 000001 802046b4  8 s_rouka/wall_2f_under_802046b4 	Global
+  802046c8 000001 802046c8  1 s_chibi_house_802046c8 	Global
+  802046d4 000001 802046d4  1 s_rouka/window_802046d4 	Global
+  802046e4 000001 802046e4  8 s_Item/frog_ring_802046e4 	Global
+  802046f4 000001 802046f4  8 s_chibi_jump_802046f4 	Global
+  80204700 000001 80204700  8 s_npc/jenny_80204700 	Global
+  8020470c 000001 8020470c  8 s_living/map_8020470c 	Global
+  80204718 000001 80204718  8 s_living/danro_80204718 	Global
+  80204728 000001 80204728  8 s_living/shelf_b_80204728 	Global
+  80204738 000001 80204738  8 s_living/shelf_dan_80204738 	Global
+  8020474c 000001 8020474c  8 s_living/sidetable_8020474c 	Global
+  80204760 000001 80204760  8 s_living/sofa1_80204760 	Global
+  80204770 000001 80204770  8 s_living/sofa2_80204770 	Global
+  80204780 000001 80204780  8 s_living/standlight_80204780 	Global
+  80204794 000001 80204794  8 s_living/table_80204794 	Global
+  802047a4 000001 802047a4  8 s_living/tv_802047a4 	Global
+  802047b0 000001 802047b0  8 s_living/wall_802047b0 	Global
+  802047bc 000001 802047bc  1 s_living/window_802047bc 	Global
+  802047cc 000001 802047cc  8 s_house_r/chibi_h_main_802047cc 	Global
+  802047e4 000001 802047e4  8 s_house_r/chibi_h_dai_802047e4 	Global
+  802047f8 000001 802047f8  1 s_npc/mama_802047f8 	Global
+  80204804 000001 80204804  8 s_living/sofa_hashigo_80204804 	Global
+  80204818 000001 80204818  1 s_living/books1_80204818 	Global
+  80204828 000001 80204828  8 s_living/books2_80204828 	Global
+  80204838 000001 80204838  8 s_living/sofa_cu1_80204838 	Global
+  80204848 000001 80204848  1 s_living/sofa_cu2_80204848 	Global
+  80204858 000001 80204858  1 s_living/flowerpot2_80204858 	Global
+  8020486c 000001 8020486c  8 s_living/shelf_dan_book_8020486c 	Global
+  80204884 000001 80204884  8 s_living/tako_80204884 	Global
+  80204890 000001 80204890  1 s_living/oekaki_80204890 	Global
+  802048a0 000001 802048a0  8 s_house_r/chibi_h_hasigo_802048a0 	Global
+  802048b8 000001 802048b8  8 s_npc/army1_802048b8 	Global
+  802048c4 000001 802048c4  8 s_npc/army2_802048c4 	Global
+  802048d0 000001 802048d0  8 s_house_r/chibi_h_door1_802048d0 	Global
+  802048e8 000001 802048e8  8 s_house_r/chibi_h_door2_802048e8 	Global
+  80204900 000001 80204900  8 s_doorroom_80204900 	Global
+  8020490c 000001 8020490c  8 s_doorroom_dokan_8020490c 	Global
+  8020491c 000001 8020491c  8 s_item/snack_bone_8020491c 	Global
+  8020492c 000001 8020492c  1 s_item/junk_unko_8020492c 	Global
+  8020493c 000001 8020493c  8 s_item/junk_a_8020493c 	Global
+  80204948 000001 80204948  1 s_test/test_ring_80204948 	Global
+  80204958 000001 80204958  8 s_living/table_foot_80204958 	Global
+  8020496c 000001 8020496c  8 s_living/mat_8020496c 	Global
+  80204978 000001 80204978  8 s_living/tub_80204978 	Global
+  80204984 000001 80204984  8 s_plug_start_80204984 	Global
+  80204990 000001 80204990  8 s_npc/deca_robo_80204990 	Global
+  802049a0 000001 802049a0  8 s_npc/keath_802049a0 	Global
+  802049ac 000001 802049ac  8 s_chibihouse/denti1_802049ac 	Global
+  802049c0 000001 802049c0  8 s_chibihouse/denti2_802049c0 	Global
+  802049d4 000001 802049d4  8 s_npc/papa_802049d4 	Global
+  802049e0 000001 802049e0  8 s_house_r/chibi_h_hasi_802049e0 	Global
+  802049f8 000001 802049f8  8 s_house_r/chibi_h_warp_802049f8 	Global
+  80204a10 000001 80204a10  8 s_npc/fafa_80204a10 	Global
+  80204a1c 000001 80204a1c  8 s_npc/spider1_80204a1c 	Global
+  80204a28 000001 80204a28  1 s_item/brush_80204a28 	Global
+  80204a34 000001 80204a34  8 s_living/sakana_80204a34 	Global
+  80204a44 000001 80204a44  8 s_living/kaiga_j_80204a44 	Global
+  80204a54 000001 80204a54  8 s_item/capsule_80204a54 	Global
+  80204a64 000001 80204a64  8 s_backyard/ari_80204a64 	Global
+  80204a74 000001 80204a74  8 s_living/bg_80204a74 	Global
+  80204a80 000001 80204a80  8 s_backyard/ari_daidai_80204a80 	Global
+  80204a94 000001 80204a94  1 s_backyard/tree_b_80204a94 	Global
+  80204aa4 000001 80204aa4  1 s_backyard/kadan_80204aa4 	Global
+  80204ab4 000001 80204ab4  8 s_plug_dokodakadoor_80204ab4 	Global
+  80204ac8 000001 80204ac8  8 s_living/bb_dan_80204ac8 	Global
+  80204ad8 000001 80204ad8  8 s_living/trashbox_80204ad8 	Global
+  80204ae8 000001 80204ae8  1 s_living/tao_dish_80204ae8 	Global
+  80204af8 000001 80204af8  1 s_souko/spider_su_b_80204af8 	Global
+  80204b0c 000001 80204b0c  8 s_living/suisou_r2_80204b0c 	Global
+  80204b20 000001 80204b20  8 s_living/sakana_awa_80204b20 	Global
+  80204b34 000001 80204b34  8 s_souko/kumo_himo_80204b34 	Global
+  80204b44 000001 80204b44  1 s_item/kami_kuzu_80204b44 	Global
+  80204b54 000001 80204b54  8 s_item/cookie_kakera_80204b54 	Global
+  80204b68 000001 80204b68  8 s_living/tv_keath_80204b68 	Global
+  80204b78 000001 80204b78  1 s_test/dust0_80204b78 	Global
+  80204b84 000001 80204b84  8 s_test/dust1_80204b84 	Global
+  80204b90 000001 80204b90  8 s_living/sakana_esa_80204b90 	Global
+  80204ba4 000001 80204ba4  8 s_living/tana_ana_80204ba4 	Global
+  80204bb4 000001 80204bb4  1 s_test/sp_ito_80204bb4 	Global
+  80204bc0 000001 80204bc0  1 s_living/wall_corner_80204bc0 	Global
+  80204bd4 000001 80204bd4  8 s_living/co_under_80204bd4 	Global
+  80204be4 000001 80204be4  1 s_test/jenny_hand_80204be4 	Global
+  80204bf4 000001 80204bf4  1 s_living/window_kazari_80204bf4 	Global
+  80204c0c 000001 80204c0c  8 s_item/junk_b_80204c0c 	Global
+  80204c18 000001 80204c18  1 s_item/junk_c_80204c18 	Global
+  80204c24 000001 80204c24  1 s_living/gabyou_80204c24 	Global
+  80204c34 000001 80204c34  8 s_backyard/sky_80204c34 	Global
+  80204c44 000001 80204c44  8 s_test/fly_root1_80204c44 	Global
+  80204c54 000001 80204c54  8 s_npc/army3_80204c54 	Global
+  80204c60 000001 80204c60  8 s_npc/n_wing1_80204c60 	Global
+  80204c6c 000001 80204c6c  1 s_npc/n_wing2_80204c6c 	Global
+  80204c78 000001 80204c78  1 s_rouka/planter_80204c78 	Global
+  80204c88 000001 80204c88  8 s_item/spoon_80204c88 	Global
+  80204c94 000001 80204c94  8 s_test/n_mato_80204c94 	Global
+  80204ca0 000001 80204ca0  1 s_jenny/cube_box_80204ca0 	Global
+  80204cb0 000001 80204cb0  8 s_jenny/cube_l_80204cb0 	Global
+  80204cc0 000001 80204cc0  8 s_jenny/cube_o_80204cc0 	Global
+  80204cd0 000001 80204cd0  8 s_jenny/cube_v_80204cd0 	Global
+  80204ce0 000001 80204ce0  8 s_jenny/cube_e_80204ce0 	Global
+  80204cf0 000001 80204cf0  8 s_jenny/cu_animal1_80204cf0 	Global
+  80204d04 000001 80204d04  8 s_jenny/cu_animal2_80204d04 	Global
+  80204d18 000001 80204d18  8 s_item/mag_cup_80204d18 	Global
+  80204d28 000001 80204d28  8 s_npc/sun_mida_80204d28 	Global
+  80204d38 000001 80204d38  8 s_npc/sun_dai_80204d38 	Global
+  80204d44 000001 80204d44  1 s_living/cake_80204d44 	Global
   80204d50 000001 80204d50  1 s_item/bara_80204d50 	Global
   80204d5c 000001 80204d5c  1 s_living/orange_glass_80204d5c 	Global
   80204d70 000001 80204d70  1 s_living/orange_bin_80204d70 	Global
   80204d84 000001 80204d84  1 s_living/cham_glass_80204d84 	Global
+  80204d98 000001 80204d98  1 s_living/cham_bin_80204d98 	Global
+  80204da8 000001 80204da8  1 s_living/vase_80204da8 	Global
+  80204db4 000001 80204db4  1 s_living/chicken_80204db4 	Global
+  80204dc4 000001 80204dc4  8 s_living/living_cam_80204dc4 	Global
+  80204dd8 000001 80204dd8  8 s_npc/spider2_80204dd8 	Global
+  80204de4 000001 80204de4  1 s_living/cake_dish_80204de4 	Global
+  80204df8 000001 80204df8  1 s_living/kazari_t_80204df8 	Global
+  80204e08 000001 80204e08  1 s_kitchen/door_r_80204e08 	Global
+  80204e18 000001 80204e18  1 s_living/asiato_80204e18 	Global
+  80204e28 000001 80204e28  1 s_living/hat_80204e28 	Global
+  80204e34 000001 80204e34  1 s_living/kazari_w_80204e34 	Global
+  80204e44 000001 80204e44  1 s_living/birthday_c_80204e44 	Global
+  80204e58 000001 80204e58  1 s_living/bone_r_80204e58 	Global
+  80204e68 000001 80204e68  1 s_kitchen/door_dami_80204e68 	Global
+  80204e7c 000001 80204e7c  1 s_item/cos_obake_80204e7c 	Global
+  80204e8c 000001 80204e8c  1 s_kitchen/tuti_huta_80204e8c 	Global
+  80204ea0 000001 80204ea0  8 s_kitchen/sink_hi_80204ea0 	Global
+  80204eb0 000001 80204eb0  1 s_kitchen/sink_hi_under_80204eb0 	Global
+  80204ec8 000001 80204ec8  8 s_kitchen/trashbox_80204ec8 	Global
+  80204edc 000001 80204edc  8 s_kitchen/hammock_80204edc 	Global
+  80204eec 000001 80204eec  1 s_rouka/shoes_80204eec 	Global
+  80204ef8 000001 80204ef8  1 s_kitchen/sink_2hi_80204ef8 	Global
+  80204f0c 000001 80204f0c  8 s_rouka/s_rope_80204f0c 	Global
+  80204f1c 000001 80204f1c  8 s_living/happy_box_80204f1c 	Global
+  80204f30 000001 80204f30  8 s_living/consentman_atari_80204f30 	Global
+  80204f48 000001 80204f48  1 s_item/tonpy_item_a_80204f48 	Global
+  80204f5c 000001 80204f5c  8 s_item/tonpy_item_b_80204f5c 	Global
+  80204f70 000001 80204f70  8 s_item/tonpy_item_c_80204f70 	Global
+  80204f84 000001 80204f84  8 s_item/hock_tizu_80204f84 	Global
+  80204f94 000001 80204f94  8 s_how_to_chibirobo/cb_book_80204f94 	Global
+  80204fb0 000001 80204fb0  8 s_fx_cb_house01_80204fb0 	Global
+  80204fc0 000001 80204fc0  8 s_living/cb_cover_80204fc0 	Global
+  80204fd0 000001 80204fd0  1 s_living/happy_heart_80204fd0 	Global
+  80204fe4 000001 80204fe4  8 s_all/yogore_cook_o_80204fe4 	Global
+  80204ff8 000001 80204ff8  8 s_all/yogore_water_80204ff8 	Global
+  8020500c 000001 8020500c  8 s_all/yogore_oil_8020500c 	Global
+  8020501c 000001 8020501c  8 s_living/cam_living_8020501c 	Global
+  80205030 000001 80205030  8 s_house_r/chibi_h_maku_80205030 	Global
+  80205048 000001 80205048  8 s_kitchen/yakan_80205048 	Global
+  80205058 000001 80205058  8 s_kitchen/teacup_80205058 	Global
+  80205068 000001 80205068  8 s_kitchen/teapot_80205068 	Global
+  80205078 000001 80205078  8 s_kitchen/milk_bin_80205078 	Global
+  8020508c 000001 8020508c  8 s_kitchen/sugar_bin_8020508c 	Global
+  802050a0 000001 802050a0  8 s_kitchen/cookie_dish_802050a0 	Global
+  802050b4 000001 802050b4  1 s_kitchen/cb_teaset_802050b4 	Global
+  802050c8 000001 802050c8  8 s_item/block_sugar_802050c8 	Global
+  802050dc 000001 802050dc  8 s_item/flower_cookie_802050dc 	Global
+  802050f0 000001 802050f0  8 s_kitchen/sink_s_shelf_802050f0 	Global
+  80205108 000001 80205108  8 s_all/spider_kage_80205108 	Global
+  80205118 000001 80205118  1 s_kitchen/sink_dish_80205118 	Global
+  8020512c 000001 8020512c  8 s_kitchen/hukin_8020512c 	Global
+  8020513c 000001 8020513c  8 s_kitchen/sink_kago_8020513c 	Global
+  80205150 000001 80205150  8 s_living/tv_switch_80205150 	Global
+  80205164 000001 80205164  8 s_kitchen/teacup_s_80205164 	Global
+  80205178 000001 80205178  8 s_living/cracker_80205178 	Global
+  80205188 000001 80205188  8 s_fx_deca_spark01_80205188 	Global
+  80205198 000001 80205198  1 s_living/tv_news_80205198 	Global
+  802051a8 000001 802051a8  8 s_living/tv_kage_802051a8 	Global
+  802051b8 000001 802051b8  8 s_living/cb_book2_802051b8 	Global
+  802051c8 000001 802051c8  1 s_fx_tomp_cry01_802051c8 	Global
+  802051d8 000001 802051d8  8 s_living/sw_1planter_802051d8 	Global
+  802051ec 000001 802051ec  8 s_living/sw_2planter_802051ec 	Global
+  80205200 000001 80205200  8 s_kitchen/bb_nikki_80205200 	Global
+  80205214 000001 80205214  8 s_kitchen/bb_pen_80205214 	Global
+  80205224 000001 80205224  8 s_living/wall_under_80205224 	Global
+  80205238 000001 80205238  8 s_how_to_chibirobo/map_80205238 	Global
+  80205250 000001 80205250  8 s_fx_tomp_scare01_80205250 	Global
+  80205260 000001 80205260  1 s_living/door_k_80205260 	Global
+  80205270 000001 80205270  8 s_item/cracker_80205270 	Global
+  80205280 000001 80205280  8 s_living/cracker_gomi_80205280 	Global
+  80205294 000001 80205294  1 s_living/f_clock_hb_80205294 	Global
+  802052a8 000001 802052a8  8 s_living/f_clock_hs_802052a8 	Global
+  802052bc 000001 802052bc  8 s_living/f_clock_f_802052bc 	Global
+  802052d0 000001 802052d0  8 s_living/present_box_802052d0 	Global
+  802052e4 000001 802052e4  8 s_living/bg_tree_802052e4 	Global
+  802052f4 000001 802052f4  8 s_fx_spider01_802052f4 	Global
+  80205300 000001 80205300  1 s_living/chicken_bone_80205300 	Global
+  80205314 000001 80205314  1 s_living/cake_ato_80205314 	Global
+  80205324 000001 80205324  1 s_rouka/cup_army_80205324 	Global
+  80205334 000001 80205334  8 s_souko/wine_bottle_a_80205334 	Global
+  80205348 000001 80205348  1 s_souko/wine_bottle_b_80205348 	Global
+  8020535c 000001 8020535c  1 s_kitchen/sink_3hi_8020535c 	Global
+  80205370 000001 80205370  8 s_jenny/tana1_80205370 	Global
+  8020537c 000001 8020537c  1 s_item/chip_8020537c 	Global
+  80205388 000001 80205388  8 s_living/window_ware_80205388 	Global
+  8020539c 000001 8020539c  8 s_living/window_hiraku_8020539c 	Global
+  802053c0 000001 802053c0  8 s_npc/primo_802053c0 	Global
+  802053cc 000001 802053cc  8 s_parent/partition_802053cc 	Global
+  802053e0 000001 802053e0  8 s_parent/partition2_802053e0 	Global
+  802053f4 000001 802053f4  8 s_parent/partition3_802053f4 	Global
+  80205408 000001 80205408  8 s_parent/partition5_80205408 	Global
+  8020541c 000001 8020541c  8 s_parent/wallshelf2_8020541c 	Global
+  80205430 000001 80205430  8 s_parent/wallshelf3_80205430 	Global
+  80205444 000001 80205444  8 s_parent/wallshelf4_80205444 	Global
+  80205458 000001 80205458  8 s_parent/wallshelf5_80205458 	Global
+  8020546c 000001 8020546c  8 s_parent/wallshelf6_8020546c 	Global
+  80205480 000001 80205480  8 s_parent/switch_80205480 	Global
+  80205490 000001 80205490  8 s_house_r/dream1_80205490 	Global
+  802054a0 000001 802054a0  8 s_parent/sidetable_802054a0 	Global
+  802054b4 000001 802054b4  8 s_parent/ladder_802054b4 	Global
+  802054c4 000001 802054c4  8 s_parent/closet2_802054c4 	Global
+  802054d4 000001 802054d4  8 s_parent/door_802054d4 	Global
+  802054e0 000001 802054e0  1 s_parent/table2_802054e0 	Global
+  802054f0 000001 802054f0  8 s_parent/chest_802054f0 	Global
+  80205500 000001 80205500  8 s_parent/chest2_80205500 	Global
+  80205510 000001 80205510  8 s_parent/blind_r_80205510 	Global
+  80205520 000001 80205520  8 s_parent/blind_l_80205520 	Global
+  80205530 000001 80205530  8 s_parent/blindhandle_r_80205530 	Global
+  80205548 000001 80205548  8 s_parent/blindhandle_l_80205548 	Global
+  80205560 000001 80205560  8 s_parent/sewingmachine_80205560 	Global
+  80205578 000001 80205578  8 s_jenny/flower_lamp_80205578 	Global
+  8020558c 000001 8020558c  8 s_item/receipt_8020558c 	Global
+  8020559c 000001 8020559c  8 s_parent/mama_pen_8020559c 	Global
+  802055ac 000001 802055ac  1 s_parent/mama_calculator_802055ac 	Global
+  802055c4 000001 802055c4  8 s_parent/bills_802055c4 	Global
+  802055d4 000001 802055d4  8 s_parent/receipt_802055d4 	Global
+  802055e4 000001 802055e4  8 s_parent/account_book_802055e4 	Global
+  802055f8 000001 802055f8  1 s_ufo/wall_802055f8 	Global
+  80205604 000001 80205604  8 s_item/tyuusyaki_80205604 	Global
+  80205614 000001 80205614  8 s_kitchen/hamburg_80205614 	Global
+  80205624 000001 80205624  1 s_jenny/jenny_tv_80205624 	Global
+  80205634 000001 80205634  8 s_npc/funky_f_80205634 	Global
+  80205640 000001 80205640  1 s_npc/t_rex_80205640 	Global
+  8020564c 000001 8020564c  8 s_all/ufo_warp_8020564c 	Global
+  8020565c 000001 8020565c  8 s_all/cll_papa_8020565c 	Global
+  8020566c 000001 8020566c  8 s_all/cll_mama_8020566c 	Global
+  8020567c 000001 8020567c  8 s_kitchen/gas_plate_8020567c 	Global
+  80205690 000001 80205690  8 s_parent/doorbell_80205690 	Global
+  802056a0 000001 802056a0  1 s_parent/doorwindow_802056a0 	Global
+  802056b4 000001 802056b4  8 s_parent/doorwindow2_802056b4 	Global
+  802056c8 000001 802056c8  8 s_parent/planter_802056c8 	Global
+  802056d8 000001 802056d8  8 s_parent/planter2_802056d8 	Global
+  802056e8 000001 802056e8  1 s_parent/pole_802056e8 	Global
+  802056f4 000001 802056f4  1 s_parent/pole2_802056f4 	Global
+  80205704 000001 80205704  8 s_parent/pole3_80205704 	Global
+  80205714 000001 80205714  8 s_parent/pole4_80205714 	Global
+  80205724 000001 80205724  8 s_parent/pole5_80205724 	Global
+  80205734 000001 80205734  8 s_parent/pole6_80205734 	Global
+  80205744 000001 80205744  8 s_parent/pole7_80205744 	Global
+  80205754 000001 80205754  8 s_parent/pole8_80205754 	Global
+  80205764 000001 80205764  8 s_parent/recplayer_80205764 	Global
+  80205778 000001 80205778  8 s_parent/recspeaker_l_80205778 	Global
+  8020578c 000001 8020578c  1 s_parent/recspeaker_r_8020578c 	Global
+  802057a0 000001 802057a0  1 s_parent/stpole_802057a0 	Global
+  802057b0 000001 802057b0  8 s_parent/stpole2_802057b0 	Global
+  802057c0 000001 802057c0  8 s_item/tonpy_item_e_802057c0 	Global
+  802057d4 000001 802057d4  8 s_item/tonpy_item_f_802057d4 	Global
+  802057e8 000001 802057e8  8 s_item/tonpy_item_g_802057e8 	Global
+  802057fc 000001 802057fc  8 s_item/tonpy_item_h_802057fc 	Global
+  80205810 000001 80205810  8 s_item/tonpy_item_i_80205810 	Global
+  80205824 000001 80205824  8 s_item/tonpy_item_j_80205824 	Global
+  80205838 000001 80205838  8 s_item/tonpy_item_k_80205838 	Global
+  8020584c 000001 8020584c  8 s_item/tonpy_item_l_8020584c 	Global
+  80205860 000001 80205860  8 s_item/tonpy_item_m_80205860 	Global
+  80205874 000001 80205874  8 s_item/tonpy_item_n_80205874 	Global
+  80205888 000001 80205888  8 s_item/tonpy_item_o_80205888 	Global
+  8020589c 000001 8020589c  8 s_item/tonpy_item_p_8020589c 	Global
+  802058b0 000001 802058b0  8 s_item/tonpy_item_q_802058b0 	Global
+  802058c4 000001 802058c4  8 s_item/tonpy_item_r_802058c4 	Global
+  802058d8 000001 802058d8  8 s_item/tonpy_item_s_802058d8 	Global
+  802058ec 000001 802058ec  8 s_item/tonpy_item_t_802058ec 	Global
+  80205900 000001 80205900  8 s_item/tonpy_item_u_80205900 	Global
+  80205914 000001 80205914  8 s_backyard/window_1l_80205914 	Global
+  80205928 000001 80205928  8 s_backyard/window_2l_80205928 	Global
+  8020593c 000001 8020593c  8 s_item/letter_8020593c 	Global
+  80205948 000001 80205948  1 s_parent/doorswitch_80205948 	Global
+  8020595c 000001 8020595c  8 s_jenny/asiba1_8020595c 	Global
+  8020596c 000001 8020596c  8 s_jenny/asiba2_8020596c 	Global
+  8020597c 000001 8020597c  8 s_jenny/asiba3_8020597c 	Global
+  8020598c 000001 8020598c  8 s_jenny/castle_door_8020598c 	Global
+  802059a0 000001 802059a0  8 s_jenny/heitai1_802059a0 	Global
+  802059b0 000001 802059b0  8 s_jenny/kaidan_802059b0 	Global
+  802059c0 000001 802059c0  8 s_jenny/hikidasi_close_802059c0 	Global
+  802059d8 000001 802059d8  8 s_jenny/hikidasi_open_802059d8 	Global
+  802059ec 000001 802059ec  1 s_rouka/door_pama_h_802059ec 	Global
+  80205a00 000001 80205a00  8 s_rouka/rope_door_80205a00 	Global
+  80205a10 000001 80205a10  1 s_rouka/rope_nobu_80205a10 	Global
+  80205a20 000001 80205a20  1 s_jenny/asiba_s1_80205a20 	Global
+  80205a30 000001 80205a30  8 s_jenny/castle_hasigo_80205a30 	Global
+  80205a44 000001 80205a44  1 s_jenny/hari_l_80205a44 	Global
+  80205a54 000001 80205a54  8 s_jenny/hari_s_80205a54 	Global
+  80205a64 000001 80205a64  8 s_jenny/heitai2_80205a64 	Global
+  80205a74 000001 80205a74  8 s_jenny/heitai3_80205a74 	Global
+  80205a84 000001 80205a84  8 s_jenny/heitai4_80205a84 	Global
+  80205a94 000001 80205a94  8 s_item/denchi1_80205a94 	Global
+  80205aa4 000001 80205aa4  8 s_item/denchi2_80205aa4 	Global
+  80205ab4 000001 80205ab4  8 s_item/denchi3_80205ab4 	Global
+  80205ac4 000001 80205ac4  8 s_item/peets_kutu_80205ac4 	Global
+  80205ad4 000001 80205ad4  1 s_item/hocyouki_80205ad4 	Global
+  80205ae4 000001 80205ae4  8 s_jenny/asiba_kado1_80205ae4 	Global
+  80205af8 000001 80205af8  8 s_jenny/asiba4_80205af8 	Global
+  80205b08 000001 80205b08  8 s_living/mitu_flower_80205b08 	Global
+  80205b1c 000001 80205b1c  8 s_jenny/hari_l2_80205b1c 	Global
+  80205b2c 000001 80205b2c  8 s_npc/papa_sleep_80205b2c 	Global
+  80205b3c 000001 80205b3c  8 s_npc/mama_sleep_80205b3c 	Global
+  80205b4c 000001 80205b4c  8 s_npc/jenny_sleep_80205b4c 	Global
+  80205b5c 000001 80205b5c  1 s_all/sa_seal_80205b5c 	Global
+  80205b68 000001 80205b68  1 s_parent/skirting_board_80205b68 	Global
+  80205b80 000001 80205b80  8 s_parent/skirting_board2_80205b80 	Global
+  80205b98 000001 80205b98  8 s_parent/skirting_boardp_80205b98 	Global
+  80205bb0 000001 80205bb0  8 s_parent/recplayer_cable_80205bb0 	Global
+  80205bc8 000001 80205bc8  8 s_parent/bed2_80205bc8 	Global
+  80205bd4 000001 80205bd4  1 s_rouka/taki_obj_80205bd4 	Global
+  80205be4 000001 80205be4  8 s_rouka/ceiling_80205be4 	Global
+  80205bf4 000001 80205bf4  8 s_jenny/tv_gamen_80205bf4 	Global
+  80205c04 000001 80205c04  8 s_parent/bed_stay_80205c04 	Global
+  80205c14 000001 80205c14  1 s_all/yogore_taiya_80205c14 	Global
+  80205c28 000001 80205c28  8 s_all/yogore_kureyon_80205c28 	Global
+  80205c3c 000001 80205c3c  8 s_all/yogore_toy_80205c3c 	Global
+  80205c4c 000001 80205c4c  8 s_npc/frog_80205c4c 	Global
+  80205c58 000001 80205c58  8 s_parent/cornershelf_ladder_80205c58 	Global
+  80205c74 000001 80205c74  8 s_backyard/window_ware_80205c74 	Global
+  80205c8c 000001 80205c8c  8 s_backyard/jaguti_80205c8c 	Global
+  80205c9c 000001 80205c9c  1 s_jenny/hasi_80205c9c 	Global
+  80205ca8 000001 80205ca8  8 s_kitchen/ham_pan_up_80205ca8 	Global
+  80205cbc 000001 80205cbc  8 s_kitchen/ham_pan_down_80205cbc 	Global
+  80205cd4 000001 80205cd4  8 s_jenny/heitai5_80205cd4 	Global
+  80205ce4 000001 80205ce4  8 s_fx_leticwarp01_80205ce4 	Global
+  80205cf4 000001 80205cf4  8 s_backyard/hose_80205cf4 	Global
+  80205d04 000001 80205d04  8 s_rouka/nebukuro_80205d04 	Global
+  80205d14 000001 80205d14  8 s_parent/cam_papamama_80205d14 	Global
+  80205d28 000001 80205d28  1 s_jenny/cam_jenny_80205d28 	Global
+  80205d38 000001 80205d38  1 s_all/enjoy_light_80205d38 	Global
+  80205d48 000001 80205d48  1 s_npc/zobin_80205d48 	Global
   80205d54 000001 80205d54  8 s_npc/peets_80205d54 	Global
   80205d60 000001 80205d60  8 s_jenny/heitai_taiko_80205d60 	Global
   80205d74 000001 80205d74  8 s_jenny/heitai_rappa_80205d74 	Global
   80205d88 000001 80205d88  8 s_jenny/jenny_himo_80205d88 	Global
   80205d9c 000001 80205d9c  8 s_jenny/jenny_bag_80205d9c 	Global
   80205dac 000001 80205dac  1 s_fx_zact_gicco_80205dac 	Global
+  80205dbc 000001 80205dbc  8 s_fx_zact_tao_80205dbc 	Global
   80205dc8 000001 80205dc8  1 s_fx_zact_frog_80205dc8 	Global
   80205dd8 000001 80205dd8  8 s_fx_zact_injured_80205dd8 	Global
   80205de8 000001 80205de8  1 s_fx_zact_pajamas_80205de8 	Global
@@ -5113,6 +5495,75 @@
   80205e64 000001 80205e64  1 s_item/rex_tooth_80205e64 	Global
   80205e74 000001 80205e74  8 s_jenny/zobin_box_80205e74 	Global
   80205e84 000001 80205e84  1 s_rouka/kaidan_atama_80205e84 	Global
+  80205e98 000001 80205e98  8 s_all/leaf_80205e98 	Global
+  80205ea4 000001 80205ea4  8 s_rouka/door_kazari_80205ea4 	Global
+  80205eb8 000001 80205eb8  8 s_jenny/heitai_guitar_80205eb8 	Global
+  80205ecc 000001 80205ecc  1 s_npc/zobin_bm1_80205ecc 	Global
+  80205edc 000001 80205edc  8 s_item/tane_a_80205edc 	Global
+  80205ee8 000001 80205ee8  1 s_item/bb_pen_80205ee8 	Global
+  80205ef4 000001 80205ef4  1 s_item/ink_80205ef4 	Global
+  80205f00 000001 80205f00  8 s_item/kare_flower_80205f00 	Global
+  80205f14 000001 80205f14  8 s_jenny/present_hana_80205f14 	Global
+  80205f28 000001 80205f28  8 s_living/sunmidasky_80205f28 	Global
+  80205f3c 000001 80205f3c  8 s_item/kayaku_80205f3c 	Global
+  80205f48 000001 80205f48  1 s_item/goggle_80205f48 	Global
+  80205f54 000001 80205f54  1 s_item/love_letter_80205f54 	Global
+  80205f68 000001 80205f68  8 s_item/tug_80205f68 	Global
+  80205f74 000001 80205f74  8 s_item/ticket_80205f74 	Global
+  80205f80 000001 80205f80  1 s_item/houtai_80205f80 	Global
+  80205f8c 000001 80205f8c  1 s_item/block_80205f8c 	Global
+  80205f98 000001 80205f98  8 s_item/record_giccio_80205f98 	Global
+  80205fac 000001 80205fac  8 s_item/record_ff_80205fac 	Global
+  80205fbc 000001 80205fbc  8 s_living/wall_c_h_80205fbc 	Global
+  80205fcc 000001 80205fcc  1 s_item/nwing_item_80205fcc 	Global
+  80205fdc 000001 80205fdc  1 s_item/army_photo_80205fdc 	Global
+  80205fec 000001 80205fec  1 s_rouka/counter_h_80205fec 	Global
+  80205ffc 000001 80205ffc  1 s_test/fly_root2_80205ffc 	Global
+  8020600c 000001 8020600c  8 s_npc/car1_8020600c 	Global
+  80206018 000001 80206018  8 s_npc/car2_80206018 	Global
+  80206024 000001 80206024  8 s_npc/funky_f2_80206024 	Global
+  80206034 000001 80206034  8 s_souko/shelf_80206034 	Global
+  80206040 000001 80206040  1 s_souko/chest_80206040 	Global
+  8020604c 000001 8020604c  1 s_souko/renga_8020604c 	Global
+  80206058 000001 80206058  1 s_kitchen/kamare_bb_80206058 	Global
+  8020606c 000001 8020606c  8 s_souko/shelf_dami_8020606c 	Global
+  80206080 000001 80206080  8 s_kitchen/tuti_ana_80206080 	Global
+  80206094 000001 80206094  8 s_npc/hock_ship_80206094 	Global
+  802060a4 000001 802060a4  8 s_item/left_foot_802060a4 	Global
+  802060b4 000001 802060b4  8 s_parent/suit_case_802060b4 	Global
+  802060c8 000001 802060c8  8 s_item/kairozu_802060c8 	Global
+  802060d8 000001 802060d8  8 s_item/deka_denchi_full_802060d8 	Global
+  802060f0 000001 802060f0  8 s_jenny/haguruma_802060f0 	Global
+  80206100 000001 80206100  8 s_jenny/planter_zobin_80206100 	Global
+  80206114 000001 80206114  1 s_jenny/planter_jenny1_80206114 	Global
+  8020612c 000001 8020612c  8 s_jenny/planter_jenny2_8020612c 	Global
+  80206144 000001 80206144  8 s_ufo/ufo_ball_80206144 	Global
+  80206154 000001 80206154  8 s_ufo/time_mc_80206154 	Global
+  80206160 000001 80206160  1 s_item/pajama_kiji_80206160 	Global
+  80206174 000001 80206174  8 s_jenny/present_hana_zobin_80206174 	Global
+  80206190 000001 80206190  8 s_all/flower1_80206190 	Global
+  8020619c 000001 8020619c  1 s_all/flower2_8020619c 	Global
+  802061a8 000001 802061a8  1 s_all/flower3_802061a8 	Global
+  802061b4 000001 802061b4  1 s_all/junk_tree_802061b4 	Global
+  802061c4 000001 802061c4  8 s_all/coin_tree_802061c4 	Global
+  802061d4 000001 802061d4  8 s_all/happy_tree_802061d4 	Global
+  802061e4 000001 802061e4  8 s_all/mame_tree_802061e4 	Global
+  802061f4 000001 802061f4  8 s_jenny/sanpu_house_802061f4 	Global
+  80206208 000001 80206208  8 s_item/kare_flower_mitu_80206208 	Global
+  80206220 000001 80206220  8 s_item/saki_flower1_80206220 	Global
+  80206234 000001 80206234  8 s_kitchen/jaguchi_h_80206234 	Global
+  80206248 000001 80206248  8 s_kitchen/tuti_huta_d_80206248 	Global
+  8020625c 000001 8020625c  1 s_npc/t_track_8020625c 	Global
+  80206268 000001 80206268  1 s_npc/army5_80206268 	Global
+  80206274 000001 80206274  1 s_ufo/wall2_80206274 	Global
+  80206280 000001 80206280  8 s_kitchen/wall_tonneru_80206280 	Global
+  80206298 000001 80206298  8 s_kitchen/wall_t_ware_80206298 	Global
+  802062ac 000001 802062ac  1 s_jenny/toy_denwa_802062ac 	Global
+  802062bc 000001 802062bc  1 s_jenny/toy_piano_802062bc 	Global
+  802062cc 000001 802062cc  1 s_ufo/exit_802062cc 	Global
+  802062d8 000001 802062d8  8 s_living/densetu_hana_802062d8 	Global
+  802062ec 000001 802062ec  1 s_haisui/map_802062ec 	Global
+  802062f8 000001 802062f8  8 s_haisui/pipe_a_802062f8 	Global
   80206308 000001 80206308  8 s_haisui/hashigo_b_80206308 	Global
   8020631c 000001 8020631c  8 s_haisui/hashigo_c_8020631c 	Global
   80206330 000001 80206330  8 s_haisui/hashigo_d_80206330 	Global
@@ -5152,6 +5603,88 @@
   80206534 000001 80206534  8 s_rouka/taki_hashi_b_80206534 	Global
   80206548 000001 80206548  8 s_jenny/kenban1_80206548 	Global
   80206558 000001 80206558  8 s_jenny/kenban2_80206558 	Global
+  80206568 000001 80206568  8 s_parent/tp_mike1_80206568 	Global
+  80206578 000001 80206578  1 s_parent/tp_mike2_80206578 	Global
+  80206588 000001 80206588  1 s_jenny/house_himo_80206588 	Global
+  8020659c 000001 8020659c  8 s_jenny/bag_himo_8020659c 	Global
+  802065ac 000001 802065ac  8 s_rouka/taki_kakoi_802065ac 	Global
+  802065c0 000001 802065c0  8 s_rouka/army_ita1_802065c0 	Global
+  802065d0 000001 802065d0  1 s_rouka/army_ita2_802065d0 	Global
+  802065e0 000001 802065e0  1 s_rouka/army_heri1_802065e0 	Global
+  802065f4 000001 802065f4  1 s_ufo/ufo_bed_802065f4 	Global
+  80206600 000001 80206600  1 s_jenny/jenny_dress_80206600 	Global
+  80206614 000001 80206614  8 s_fx_kitchenburner_80206614 	Global
+  80206628 000001 80206628  8 s_fx_warpzone_80206628 	Global
+  80206634 000001 80206634  1 s_ufo/ufo_bed2_80206634 	Global
+  80206644 000001 80206644  1 s_ufo/ufo_bed3_80206644 	Global
+  80206654 000001 80206654  1 s_ufo/ufo_bed4_80206654 	Global
+  80206664 000001 80206664  8 s_npc/nasubi_80206664 	Global
+  80206670 000001 80206670  8 s_all/tonpy_item_kage_80206670 	Global
+  80206684 000001 80206684  1 s_rouka/race_ita_80206684 	Global
+  80206694 000001 80206694  8 s_haisui/soto_80206694 	Global
+  802066a0 000001 802066a0  1 s_haisui/nezumi_802066a0 	Global
+  802066b0 000001 802066b0  8 s_haisui/hashigo_f_802066b0 	Global
+  802066c4 000001 802066c4  8 s_haisui/rope_802066c4 	Global
+  802066d0 000001 802066d0  1 s_haisui/pipe_b_802066d0 	Global
+  802066e0 000001 802066e0  8 s_jenny/jenny_dress2_802066e0 	Global
+  802066f4 000001 802066f4  8 s_jenny/jenny_dress3_802066f4 	Global
+  80206708 000001 80206708  8 s_haisui/kabe_80206708 	Global
+  80206714 000001 80206714  1 s_souko/birdcage_80206714 	Global
+  80206724 000001 80206724  8 s_souko/board_80206724 	Global
+  80206730 000001 80206730  1 s_souko/nail_80206730 	Global
+  8020673c 000001 8020673c  8 s_souko/v_rope_8020673c 	Global
+  8020674c 000001 8020674c  8 s_haisui/water_8020674c 	Global
+  8020675c 000001 8020675c  8 s_item/pajama_kiji2_8020675c 	Global
+  80206770 000001 80206770  8 s_item/pajama_kiji3_80206770 	Global
+  80206784 000001 80206784  8 s_parent/t_kazan1_80206784 	Global
+  80206794 000001 80206794  1 s_parent/t_kazan2_80206794 	Global
+  802067a4 000001 802067a4  1 s_parent/t_kazan3_802067a4 	Global
+  802067b4 000001 802067b4  1 s_parent/t_kazan4_802067b4 	Global
+  802067c4 000001 802067c4  1 s_parent/t_kazan5_802067c4 	Global
+  802067d4 000001 802067d4  1 s_parent/t_kazan6_802067d4 	Global
+  802067e4 000001 802067e4  1 s_item/t_block1_802067e4 	Global
+  802067f4 000001 802067f4  8 s_item/t_block2_802067f4 	Global
+  80206804 000001 80206804  8 s_item/t_block3_80206804 	Global
+  80206814 000001 80206814  8 s_item/t_block4_80206814 	Global
+  80206824 000001 80206824  8 s_item/t_block5_80206824 	Global
+  80206834 000001 80206834  8 s_item/t_block6_80206834 	Global
+  80206844 000001 80206844  8 s_item/car_item_80206844 	Global
+  80206854 000001 80206854  8 s_backyard/t_hashigo_80206854 	Global
+  80206868 000001 80206868  8 s_backyard/branko_80206868 	Global
+  80206878 000001 80206878  1 s_backyard/b_rope_80206878 	Global
+  80206888 000001 80206888  1 s_item/papa_yubiwa_80206888 	Global
+  8020689c 000001 8020689c  8 s_parent/t_kage_8020689c 	Global
+  802068ac 000001 802068ac  8 s_fx_zact_ghost_802068ac 	Global
+  802068bc 000001 802068bc  8 s_parent/frog_hagata_802068bc 	Global
+  802068d0 000001 802068d0  1 s_item/kusa_802068d0 	Global
+  802068dc 000001 802068dc  8 s_rouka/bebe_binsen_802068dc 	Global
+  802068f0 000001 802068f0  8 s_item/sekkeizu_802068f0 	Global
+  80206900 000001 80206900  8 s_item/item_frog_80206900 	Global
+  80206910 000001 80206910  1 s_fx_pc_buy01_80206910 	Global
+  8020691c 000001 8020691c  1 s_jenny/jenny_book_8020691c 	Global
+  80206930 000001 80206930  8 s_jenny/planter_hachi_80206930 	Global
+  80206944 000001 80206944  1 s_jenny/kureyon_80206944 	Global
+  80206954 000001 80206954  1 s_fx_cbdoor01_80206954 	Global
+  80206960 000001 80206960  1 s_fx_tm_barrier_80206960 	Global
+  80206970 000001 80206970  8 s_jenny/suberidai1_80206970 	Global
+  80206984 000001 80206984  8 s_jenny/suberidai2_80206984 	Global
+  80206998 000001 80206998  8 s_living/album_t_80206998 	Global
+  802069a8 000001 802069a8  8 s_living/album_y_802069a8 	Global
+  802069b8 000001 802069b8  8 s_living/table_stand_802069b8 	Global
+  802069cc 000001 802069cc  8 s_living/kaizou_poper_802069cc 	Global
+  802069e0 000001 802069e0  1 s_parent/welding_maskp_802069e0 	Global
+  802069f8 000001 802069f8  8 s_parent/welding_maskm_802069f8 	Global
+  80206a10 000001 80206a10  8 s_parent/welding_maskj_80206a10 	Global
+  80206a28 000001 80206a28  8 s_parent/welding_maskt_80206a28 	Global
+  80206a40 000001 80206a40  8 s_parent/welding_torch_80206a40 	Global
+  80206a58 000001 80206a58  8 s_parent/welding_toolbox_80206a58 	Global
+  80206a70 000001 80206a70  8 s_parent/welding_tools_80206a70 	Global
+  80206a88 000001 80206a88  8 s_parent/drafter_80206a88 	Global
+  80206a98 000001 80206a98  8 s_kitchen/gas_hashigo_80206a98 	Global
+  80206aac 000001 80206aac  1 s_kitchen/gas_rope_80206aac 	Global
+  80206ac0 000001 80206ac0  8 s_parent/case_janks_80206ac0 	Global
+  80206ad4 000001 80206ad4  8 s_yane/torinosu_80206ad4 	Global
+  80206ae4 000001 80206ae4  1 s_backyard/kusa_tuti_80206ae4 	Global
   80207cc4 000001 80207cc4  1 s_parent/tp_stage_80207cc4 	Global
   80207cd4 000001 80207cd4  1 s_jenny/zobin_dai_80207cd4 	Global
   80207f58 000001 80207f58  1 s_takanabe_80207f58 	Global
@@ -6393,6 +6926,7 @@
   8039bae0 000001 8039bae0  1 EventDataObj 	Global
   8039cdf0 000001 8039cdf0  1 XObjActorObject 	Global
   80400a00 000001 80400a00  1 XSoundObj 	Global
+  805a0560 000004 805a0560  4 CurrentFrame 	Global
   805cb130 000004 805cb130  4 UINT_805cb130 	Global
   805cb134 000004 805cb134  4 UINT_805cb134 	Global
   805cb138 000004 805cb138  4 UINT_805cb138 	Global
@@ -6677,17 +7211,13 @@
   8065bfd8 000004 8065bfd8  4 FLOAT_8065bfd8 	Global
   8065bfdc 000004 8065bfdc  4 FLOAT_8065bfdc 	Global
   8065bfe0 000004 8065bfe0  4 FLOAT_8065bfe0 	Global
-  8065bfe2 000001 8065bfe2  8 FLOAT_8065bfe0+2 	Global
   8065bfe4 000004 8065bfe4  4 FLOAT_8065bfe4 	Global
   8065bfe8 000004 8065bfe8  4 FLOAT_8065bfe8 	Global
-  8065bfe9 000001 8065bfe9  8 FLOAT_8065bfe8+1 	Global
   8065bfec 000004 8065bfec  4 FLOAT_8065bfec 	Global
   8065bff8 000004 8065bff8  4 FLOAT_8065bff8 	Global
   8065bffc 000004 8065bffc  4 FLOAT_8065bffc 	Global
   8065c010 000008 8065c010  4 DOUBLE_8065c010 	Global
   8065c018 000001 8065c018  1 s_/qp.ini_8065c018 	Global
-  8065c01c 000001 8065c01c  8 s_ini_8065c01c 	Global
-  8065c01f 000001 8065c01f  8 s__8065c01f 	Global
   8065c02c 000004 8065c02c  4 FLOAT_8065c02c 	Global
   8065c030 000004 8065c030  4 FLOAT_8065c030 	Global
   8065c034 000004 8065c034  4 FLOAT_8065c034 	Global
@@ -6719,7 +7249,7 @@
   8065c0dc 000004 8065c0dc  4 FLOAT_8065c0dc 	Global
   8065c0e0 000004 8065c0e0  4 FLOAT_8065c0e0 	Global
   8065c0e4 000004 8065c0e4  4 FLOAT_8065c0e4 	Global
-  8065c0e8 000004 8065c0e8  4 FLOAT_8065c0e8 	Global
+  8065c0e8 000004 8065c0e8  4 0.0 	Global
   8065c0f0 000008 8065c0f0  4 DOUBLE_8065c0f0 	Global
   8065c0f8 000008 8065c0f8  4 DOUBLE_8065c0f8 	Global
   8065c100 000008 8065c100  4 DOUBLE_8065c100 	Global
@@ -7303,6 +7833,12 @@
   8065cc4c 000001 8065cc4c  1 s_cb_robo_8065cc4c 	Global
   8065cc54 000001 8065cc54  1 s_cb_plug_8065cc54 	Global
   8065cc5c 000001 8065cc5c  1 s_coin_c_8065cc5c 	Global
+  8065cc7c 000001 8065cc7c  1 s_npc/tao_8065cc7c 	Global
+  8065cc84 000001 8065cc84  1 s_energyb_8065cc84 	Global
+  8065cc8c 000001 8065cc8c  1 s_npc/ufo_8065cc8c 	Global
+  8065cc94 000001 8065cc94  1 s_npc/et1_8065cc94 	Global
+  8065cc9c 000001 8065cc9c  1 s_npc/bb_8065cc9c 	Global
+  8065cca4 000001 8065cca4  1 s_ufo/map_8065cca4 	Global
   8065ccac 000001 8065ccac  1 s_/e_8065ccac 	Global
   8065ccb0 000001 8065ccb0  1 s_/g_8065ccb0 	Global
   8065ccb4 000001 8065ccb4  1 s_/f_8065ccb4 	Global
@@ -8196,11 +8732,14 @@
   8065e108 000001 8065e108  1 s_CJObj_8065e108 	Global
   8065e110 000001 8065e110  1 s_CXObj_8065e110 	Global
   8065e120 000004 8065e120  4 FLOAT_8065e120 	Global
+  8065e124 000001 8065e124  1 s_jobj.h_8065e124 	Global
+  8065e12c 000001 8065e12c  1 s_jobj_8065e12c 	Global
   8065e134 000004 8065e134  4 FLOAT_8065e134 	Global
   8065e138 000004 8065e138  4 FLOAT_8065e138 	Global
   8065e140 000008 8065e140  4 DOUBLE_8065e140 	Global
   8065e148 000004 8065e148  4 FLOAT_8065e148 	Global
   8065e14c 000004 8065e14c  4 FLOAT_8065e14c 	Global
+  8065e150 000001 8065e150  1 s_mtx_8065e150 	Global
   8065e154 000004 8065e154  4 FLOAT_8065e154 	Global
   8065e158 000004 8065e158  4 FLOAT_8065e158 	Global
   8065e15c 000004 8065e15c  4 FLOAT_8065e15c 	Global
@@ -8210,6 +8749,8 @@
   8065e170 000008 8065e170  4 DOUBLE_8065e170 	Global
   8065e178 000008 8065e178  4 DOUBLE_8065e178 	Global
   8065e180 000004 8065e180  4 FLOAT_8065e180 	Global
+  8065e184 000001 8065e184  1 s_aobj.h_8065e184 	Global
+  8065e18c 000001 8065e18c  1 s_aobj_8065e18c 	Global
   8065e194 000004 8065e194  4 FLOAT_8065e194 	Global
   8065e198 000004 8065e198  4 FLOAT_8065e198 	Global
   8065e1b0 000001 8065e1b0  1 s_CJObj_8065e1b0 	Global
@@ -8601,7 +9142,6 @@
   8065eab4 000004 8065eab4  4 FLOAT_8065eab4 	Global
   8065eab8 000008 8065eab8  4 DOUBLE_8065eab8 	Global
   8065eac0 000004 8065eac0  4 FLOAT_8065eac0 	Global
-  8065eac2 000001 8065eac2  8 FLOAT_8065eac0+2 	Global
   8065eac4 000004 8065eac4  4 FLOAT_8065eac4 	Global
   8065eac8 000004 8065eac8  4 FLOAT_8065eac8 	Global
   8065ead0 000008 8065ead0  4 DOUBLE_8065ead0 	Global
@@ -8700,7 +9240,6 @@
   8065eca0 000004 8065eca0  4 FLOAT_8065eca0 	Global
   8065ecb0 000008 8065ecb0  4 DOUBLE_8065ecb0 	Global
   8065ecc0 000008 8065ecc0  4 DOUBLE_8065ecc0 	Global
-  8065ecc2 000001 8065ecc2  8 DOUBLE_8065ecc0+2 	Global
   8065ecc8 000008 8065ecc8  4 DOUBLE_8065ecc8 	Global
   8065ecd0 000008 8065ecd0  4 DOUBLE_8065ecd0 	Global
   8065ecd8 000008 8065ecd8  4 DOUBLE_8065ecd8 	Global
@@ -8829,7 +9368,6 @@
   8065f0b0 000008 8065f0b0  4 DOUBLE_8065f0b0 	Global
   8065f0b8 000008 8065f0b8  4 DOUBLE_8065f0b8 	Global
   8065f0c0 000008 8065f0c0  4 DOUBLE_8065f0c0 	Global
-  8065f0c2 000001 8065f0c2  8 DOUBLE_8065f0c0+2 	Global
   8065f0c8 000008 8065f0c8  4 DOUBLE_8065f0c8 	Global
   8065f0d0 000008 8065f0d0  4 DOUBLE_8065f0d0 	Global
   8065f0d8 000008 8065f0d8  4 DOUBLE_8065f0d8 	Global
