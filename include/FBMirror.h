@@ -12,7 +12,7 @@ class Class_FBMirror {
 public:
     // Public member functions
     // Constructor
-    explicit Class_FBMirror(int32 fbmirrorObject);
+    explicit Class_FBMirror(int param);
   
 };
 

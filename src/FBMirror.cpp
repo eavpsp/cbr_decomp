@@ -31,18 +31,19 @@
     extern CTexObj lbl_8021032C;
     extern CVec lbl_80210314;
     extern FBMirrorEX lbl_802104C8;
-Class_FBMirror::Class_FBMirror(int fbmirrorObject)
+Class_FBMirror::Class_FBMirror(int param)
 {
-    *(CFbTexEff **)(fbmirrorObject + 0x120) = &CFbTexEff_struct;
-    *(CTexObj **)(fbmirrorObject + 0x118) = &lbl_8021032C;
-    *(FBMirror **)(fbmirrorObject + 0x120) = &FBMirror_struct;
-    *(CCamera **)(fbmirrorObject + 0x2b8)  = &lbl_80237644;
-    *(CVec **)(fbmirrorObject + 0x1c8)  = &lbl_80210314;
-    *(CVec **)(fbmirrorObject + 0x1d8)  = &lbl_80210314;
-    *(CVec **)(fbmirrorObject + 0x1e8)  = &lbl_80210314;
-    *(CVec **)(fbmirrorObject + 0x1f8)  = &lbl_80210314;
-    *(CVec **)(fbmirrorObject + 0x24c)  = &lbl_80210314;
-    *(FBMirrorEX **)(fbmirrorObject + 0x120) = &lbl_802104C8;
+    
+    *(CFbTexEff **)(this + 0x120) = &CFbTexEff_struct;
+    *(CTexObj **)(this + 0x118) = &lbl_8021032C;
+    *(FBMirror **)(this + 0x120) = &FBMirror_struct;
+    *(CCamera **)(this + 0x2b8)  = &lbl_80237644;
+    *(CVec **)(this + 0x1c8)  = &lbl_80210314;
+    *(CVec **)(this + 0x1d8)  = &lbl_80210314;
+    *(CVec **)(this + 0x1e8)  = &lbl_80210314;
+    *(CVec **)(this + 0x1f8)  = &lbl_80210314;
+    *(CVec **)(this + 0x24c)  = &lbl_80210314;
+    *(FBMirrorEX **)(this + 0x120) = &lbl_802104C8;
 
 }
 
