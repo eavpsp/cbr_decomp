@@ -915,9 +915,5 @@ struct XObjChr {
     undefined * field84_0x144;
 };
 
-struct CVec {
-    pointer field0_0x0;
-    pointer field1_0x4;
-    pointer field2_0x8;
-};
+
 

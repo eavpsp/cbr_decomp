@@ -1,4 +1,4 @@
-/*/EBUGS
+/*/DEBUGS
 //-c OnLoad:0x8000ee84 -c OnUpdate:0x8000e318 -c DebugPlayer:0x800afcc4 
 -c DebugRenderScene:0x8000e14c -c DebugCreateGameScene:0x80019364
  -c DebugInitActor:0x80012efc -c DebugReadArchive:0x8019f5d8 
@@ -6,7 +6,7 @@
 -c DebugProcessCommands:0x800102ec -c DebugTextBox:0x80074acc
 -c DebugProcessText:0x80081fc0 -c DebugInitGameString:0x800973f4
 -c DebugDisplayMessage:0x8002b668 -c OnRenderVisual:0x8000eaec 
--c DebugGetFlag:0x80072270 -c DebugGameState:0x8001577c -c DebugScreenMsg:0x8007ea08
+-c DebugGetFlag:0x80072270 -c DebugGameState:0x8001577c -c DebugScreenMsg:0x8007ea08 
 -c DebugInitObj:0x80026c8c -c DebugDisplayMessage:0x8002b668 -c DebugMalloc:0x801b1390  -c CopyChibiObj:0x800bb7ac
 //*/
 
@@ -17,7 +17,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdbool.h>
-#include "structs.h"
+#include "structs2.h"
 #include "sceneObj.h"
 
 //ACCESS GAME VARS
@@ -124,3 +124,5 @@ int GetFlag(int param_1);
 int HandleScreenMSG(int param_1);
 void SetMsgWindow(int param_1);
 int allocate_mem(int param_1_ptr);
+int InitActorToy(int param_1);
+void * XOBjActorToy__dt(void *param_1,short param_2);

@@ -10,3 +10,10 @@ cbr.map
 main.dol
 main.elf
 tools/elf2dol.exe
+test/buildCBR.bat
+*.o
+*.bin
+*.elf
+*.dol
+test/testCode2.s
+test/testCode2.map

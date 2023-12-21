@@ -46,3 +46,6 @@ initXobjChrObjectVectors = 0x800bb77c;
 __register_global_object = 0x80150e60;
 SetStageData = 0x80134694;
 initChibiRobo = 0x800bc524;
+InitActorToy = 0x80134280;
+XOBjActorToy__dt = 0x801155b4;
+Class_FBMirror__ct = 0x80019700;

@@ -63,6 +63,12 @@ void OnRenderVisual(int*val)
 
 }
 */
+void TestCJobj(int ptr)
+{
+    int data = InitActorToy(ptr);
+    __register_global_object(data, XOBjActorToy__dt, 0x8048e518);
+    //__register_global_object(uVar1,JennyActor__dt,&DAT_8048e518);
+}
 void OnLoad(int val) 
 {
     //use BaseSceneHandlerOnActivate
@@ -71,7 +77,7 @@ void OnLoad(int val)
     OnActivate(val);
     if(!started){
         
-
+        TestCJobj(0x80317800);
         started = true;
         //CopyChibiObj();
     }
