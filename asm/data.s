@@ -1161,8 +1161,8 @@ lbl_802102E0:
 	.4byte 0
 	.4byte cHeadTrack____dt_void__N21
 
-.global lbl_802102EC
-lbl_802102EC:
+.global CFbTexEff_struct
+CFbTexEff_struct:
 
 	# ROM: 0x20D2EC
 	.4byte lbl_8065A0D8
@@ -1370,8 +1370,8 @@ lbl_80210430:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8021043C
-lbl_8021043C:
+.global FBMirror_struct
+FBMirror_struct:
 
 	# ROM: 0x20D43C
 	.4byte lbl_8065A170
@@ -49822,7 +49822,7 @@ lbl_80237644:
 	# ROM: 0x234644
 	.4byte lbl_8065AD28
 	.4byte 0
-	.4byte GetSceneCamera
+	.4byte SceneCamera__dt
 	.4byte zz_80193468_
 	.4byte zz_801932f4_
 	.4byte zz_80193190_

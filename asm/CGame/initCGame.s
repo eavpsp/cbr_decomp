@@ -294,9 +294,9 @@ lbl_80007C88:
 lbl_80007C9C:
 /* 80007C9C 00002A1C  34 1E 42 AC */	addic. r0, r30, 0x42ac
 /* 80007CA0 00002A20  41 82 00 2C */	beq lbl_80007CCC
-/* 80007CA4 00002A24  3C 60 80 21 */	lis r3, lbl_802102EC@ha
+/* 80007CA4 00002A24  3C 60 80 21 */	lis r3, CFbTexEff_struct@ha
 /* 80007CA8 00002A28  34 1E 42 AC */	addic. r0, r30, 0x42ac
-/* 80007CAC 00002A2C  38 03 02 EC */	addi r0, r3, lbl_802102EC@l
+/* 80007CAC 00002A2C  38 03 02 EC */	addi r0, r3, CFbTexEff_struct@l
 /* 80007CB0 00002A30  90 1E 43 CC */	stw r0, 0x43cc(r30)
 /* 80007CB4 00002A34  41 82 00 18 */	beq lbl_80007CCC
 /* 80007CB8 00002A38  34 1E 42 C8 */	addic. r0, r30, 0x42c8
@@ -501,9 +501,9 @@ SetCBase:
 /* 80007F8C 00002D0C  38 A0 03 58 */	li r5, 0x358
 /* 80007F90 00002D10  38 C0 00 06 */	li r6, 0x6
 /* 80007F94 00002D14  48 14 8F B1 */	bl __destroy_arr
-/* 80007F98 00002D18  3C 80 80 01 */	lis r4, GetSceneCamera@ha
+/* 80007F98 00002D18  3C 80 80 01 */	lis r4, SceneCamera__dt@ha
 /* 80007F9C 00002D1C  38 7E 1B 20 */	addi r3, r30, 0x1b20
-/* 80007FA0 00002D20  38 84 84 1C */	addi r4, r4, GetSceneCamera@l
+/* 80007FA0 00002D20  38 84 84 1C */	addi r4, r4, SceneCamera__dt@l
 /* 80007FA4 00002D24  38 A0 01 94 */	li r5, 0x194
 /* 80007FA8 00002D28  38 C0 00 02 */	li r6, 0x2
 /* 80007FAC 00002D2C  48 14 8F 99 */	bl __destroy_arr
@@ -827,8 +827,8 @@ lbl_80008404:
 /* 80008414 00003194  38 21 00 10 */	addi r1, r1, 0x10
 /* 80008418 00003198  4E 80 00 20 */	blr
 
-.global GetSceneCamera
-GetSceneCamera:
+.global SceneCamera__dt
+SceneCamera__dt:
 /* 8000841C 0000319C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80008420 000031A0  7C 08 02 A6 */	mflr r0
 /* 80008424 000031A4  90 01 00 14 */	stw r0, 0x14(r1)

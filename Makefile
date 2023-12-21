@@ -64,14 +64,14 @@ ASMDIFF := ./asmdiff.sh
 # Options
 #INCLUDES := -ir src -ir include -Iinclude -Iinclude/dolphin -Iinclude/CodeWarrior -Iinclude/rwsdk
 
-ASFLAGS := -mgekko -I include
+ASFLAGS := -mgekko -I include 
 LDFLAGS := -map $(MAP) -w off -maxerrors 1 -nostdlib
 #CFLAGS  := -g -DGAMECUBE -Cpp_exceptions off -proc gekko -fp hard -fp_contract on -O4,p -msgstyle gcc -maxerrors 1 \
            -pragma "check_header_flags off" -RTTI off -pragma "force_active on" \
            -str reuse,pool,readonly -char unsigned -enum int -use_lmw_stmw on -inline off -nostdinc -i- $(INCLUDES)
 PPROCFLAGS := -fsymbol-fixup
 
-$(TRK_MINNOW_DOLPHIN): CFLAGS += -common off
+$(TRK_MINNOW_DOLPHIN): CFLAGS += -common off -O2
 # elf2dol needs to know these in order to calculate sbss correctly.
 SDATA_PDHR := 9
 SBSS_PDHR := 10
@@ -141,5 +141,5 @@ $(OBJ_DIR)/%.o: %.c
 $(OBJ_DIR)/%.o: %.cpp
 	@echo " CXX     "$<
 	$S$(GLBLASM) -s $< $(OBJ_DIR)/$*.cpp 1>&2
-	$S$(CC) $(CFLAGS) -c -o $@ $(OBJ_DIR)/$*.cpp 1>&2
+	$S$(CC) $(CFLAGS) -c -o $@ $(OBJ_DIR)/$*.cpp 1>&2 -O4,s -inline auto
 	$S$(PPROC) $(PPROCFLAGS) $@

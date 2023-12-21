@@ -126,3 +126,5 @@ void SetMsgWindow(int param_1);
 int allocate_mem(int param_1_ptr);
 int InitActorToy(int param_1);
 void * XOBjActorToy__dt(void *param_1,short param_2);
+void FBMirror__ct(int param_1);
+

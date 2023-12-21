@@ -6,7 +6,7 @@
 typedef struct CVec CVec, *PCVec;
 struct CVec {
     ptr super;
-    int buffer;
+    char buffer[4];
     funcPtr DestructorFunc;
-};
+}__attribute__((aligned(4)));
 #endif

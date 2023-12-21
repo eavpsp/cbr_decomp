@@ -17,3 +17,8 @@ test/buildCBR.bat
 *.dol
 test/testCode2.s
 test/testCode2.map
+.pragma/cb1da508de97c2070fb61ff6cc7070d733e008e6.json
+.vscode/settings.json
+*.dump
+tools/inlineasm/__pycache__/cache.cpython-37.pyc
+tools/inlineasm/__pycache__/helpers.cpython-37.pyc
