@@ -26,8 +26,17 @@
 ///* 80019754 000144D4  90 03 01 20 */	stw r0, 0x120(r3)
 ///* 80019758 000144D8  4E 80 00 20 */	blr
 
-void Class_FBMirror__ct(int pointerIndex)
+void Class_FBMirror__ct(Class_FBMirror fbmirrorObject)
 {
-    Class_FBMirror* newFBMirror = (Class_FBMirror*)pointerIndex;
+    *(CFbTexEff**)(fbmirrorObject + 0x120) = (CFbTexEff*)0x802102ec;
+    *(CTexObj**)(fbmirrorObject + 0x118) =   (CTexObj*)0x8021032c;
+    *(FBMirror**)(fbmirrorObject + 0x120) = (FBMirror*)0x8021043c;
+    *(CCamera**)(fbmirrorObject + 0x2b8) = (CCamera*)0x80237644;
+    *(CVec**)(fbmirrorObject + 0x1c8) = (CVec*)0x80210314;
+    *(CVec**)(fbmirrorObject + 0x1d8) = (CVec*)0x80210314;
+    *(CVec**)(fbmirrorObject + 0x1e8) = (CVec*)0x80210314;
+    *(CVec**)(fbmirrorObject + 0x1f8) = (CVec*)0x80210314;
+    *(CVec**)(fbmirrorObject + 0x24c) = (CVec*)0x80210314;
+    *(FBMirrorEX**)(fbmirrorObject + 0x120) = (FBMirrorEX*)0x802104c8;
     return;
 }
