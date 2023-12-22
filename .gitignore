@@ -22,3 +22,7 @@ test/testCode2.map
 *.dump
 tools/inlineasm/__pycache__/cache.cpython-37.pyc
 tools/inlineasm/__pycache__/helpers.cpython-37.pyc
+.pragma/935c9a7075d7cc8f2e79626ebeabba6594182ab1.json
+Makefile
+moveDol.bat
+Makefile
