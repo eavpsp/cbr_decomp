@@ -1,4 +1,4 @@
-#include "include/FBMirror.h"
+#include "include/GX/FBMirror.h"
 
 
 //Class_FBMirror:
@@ -44,6 +44,6 @@ Class_FBMirror::Class_FBMirror(int param)
     *(CVec **)(this + 0x1f8)  = &lbl_80210314;
     *(CVec **)(this + 0x24c)  = &lbl_80210314;
     *(FBMirrorEX **)(this + 0x120) = &lbl_802104C8;
-
+    return;
 }
 

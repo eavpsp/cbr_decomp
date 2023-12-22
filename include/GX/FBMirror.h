@@ -2,7 +2,7 @@
 #define FBMIRROR_H
 #include "include/types.h"
 #include "include/CVec.h"
-#include "include/CTexObject.h"
+#include "include/GX/CTexObject.h"
 #include "include/CCamera.h"
 class Class_FBMirror {
 public:

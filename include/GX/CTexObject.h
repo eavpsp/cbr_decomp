@@ -19,6 +19,7 @@ class CTexObjBase {
 };
 
 class CTexObj: public CTexObjBase {
+public:
     char buffer[4];
     CTexObj(int param1);
     ~CTexObj();

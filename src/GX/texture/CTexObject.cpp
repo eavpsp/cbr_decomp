@@ -1,4 +1,4 @@
-#include "include/CTexObject.h"
+#include "include/GX/CTexObject.h"
 //.global __ct__7CTexObjFi
 //__ct__7CTexObjFi:
 //* 8001AE64 00015BE4  3C 80 80 21 */	lis r4, lbl_8021032C@ha

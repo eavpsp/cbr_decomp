@@ -26,7 +26,10 @@ gcc
 --
 
 - Make sure to select GC in the devkitpro installer. 
-
+Note that the compiler needs these optimization flags
+```
+-O4,s -inline auto -Cpp_exceptions off
+```
 
 WINDOWS ONLY STEP:
 
