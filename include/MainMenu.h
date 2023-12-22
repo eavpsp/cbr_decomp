@@ -5,6 +5,7 @@
 #include "include/IO/CFile.h"
 #include "include/GX/CTexObject.h"
 #include "include/GX/CTpl.h"
+#include "include/GameObjects/JObject/XObjectDemo.h"
 
 class TitleObjectBase
 {
