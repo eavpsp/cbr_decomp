@@ -1,8 +1,8 @@
 #ifndef XOBJECTDEMO_H
 #define XOBJECTDEMO_H
 #include "include/GameObjects/JObject/JObjects.h"
-#include "include/CVec.h"
-#include "include/CCamera.h"
+#include "include/GameObjects/CVec.h"
+#include "include/GameObjects/CCamera.h"
 class XObjectDemo
 {
 	public:

@@ -1,4 +1,4 @@
-#include "include/MainMenu.h"
+#include "include/CGame/MainMenu.h"
 //.global SetCFile_N2
 //SetCFile_N2:
 //* 8001B408 00016188  94 21 FF F0 */	stwu r1, -0x10(r1)

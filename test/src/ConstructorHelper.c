@@ -1,5 +1,11 @@
 #include "FunctionHelper.h"
 
+void TestClassInMemory() 
+{
+
+}
+
+
 //Call Location: 0x8001b434
 void TestXobjConstructor(int param)
 {

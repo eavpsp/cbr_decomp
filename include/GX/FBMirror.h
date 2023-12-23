@@ -1,9 +1,9 @@
 #ifndef FBMIRROR_H
 #define FBMIRROR_H
 #include "include/types.h"
-#include "include/CVec.h"
+#include "include/GameObjects/CVec.h"
 #include "include/GX/CTexObject.h"
-#include "include/CCamera.h"
+#include "include/GameObjects/CCamera.h"
 //Partly finished class
 //May need pointer variables
 class Class_FBMirror {
