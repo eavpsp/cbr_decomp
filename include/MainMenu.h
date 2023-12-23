@@ -18,13 +18,13 @@ class TitleObject : public TitleObjectBase
 {
 	public:
 		char buffer[4];
-		~TitleObject();
+		//~TitleObject();
 };
 class MainMenu
 {
 	public:
 		MainMenu(int param_1);
-		~MainMenu();
+		//~MainMenu();
 };
 
 

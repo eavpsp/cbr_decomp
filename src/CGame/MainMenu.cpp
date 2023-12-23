@@ -55,17 +55,16 @@ extern "C" int BIRDOSoundPropAccessor__ResetSoundPropTable_void_(int param_1);
 extern "C" int cHeadTrack____dt_void__N5(int param_1);
 extern "C" void __construct_array(void* param_1, void* param_2, void* param_3, int param_4, unsigned int param_5);
 //(MainMenu)0x80260D30 -> ref'd by 0x8067028C
-//** - hack to save elf memory works with hacks
  MainMenu::MainMenu(int param_1)
 {
 	*(TitleObject**)(this + 0x3c48) = &lbl_802100C8;
 	GameSceneManager____ct_void_(this + 0x28);
-	XObjectDemo::XObjectDemo();
+	SetObjDemo(this + 0x9b0);
 	*(CFile**)(this + 0x30a0) = &lbl_8025878C;
-	//*(int*)(this + 0x308c) = 0; //**
+	*(int*)(this + 0x308c) = 0; 
 	*(int*)(this + 0x3078) = 0xffffffff;
-	//*(int*)(this + 0x3084) = 0;//**
-	//*(int*)(this + 0x3088) = 0;
+	*(int*)(this + 0x3084) = 0;
+	*(int*)(this + 0x3088) = 0;
 	*(int*)(this + 0x309c) = 1;
 	*(CTpl**)(this + 0x30a0) = &lbl_802587D8;
 	*(CTexObj**)(this + 0x31a0) = &lbl_8021032C;
