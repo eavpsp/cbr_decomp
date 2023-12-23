@@ -1,6 +1,6 @@
 #include "include/GameObjects/JObject/XObjectDemo.h"
 
-/*Done with Hacks*/
+/*WIP with Hacks*/
 
 //.global SetObjDemo
 //SetObjDemo :

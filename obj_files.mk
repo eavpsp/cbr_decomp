@@ -36,7 +36,6 @@ TEXT_O_FILES :=                                     \
     $(OBJ_DIR)/src/GX/mirror/FBMirror.o \
     $(OBJ_DIR)/asm/text_00.o \
     $(OBJ_DIR)/src/CGame/MainMenu.o \
-    $(OBJ_DIR)/src/XObject/XObjectDemo.o \
     $(OBJ_DIR)/asm/text_1.o \
     
 
