@@ -49,3 +49,14 @@ initChibiRobo = 0x800bc524;
 InitActorToy = 0x80134280;
 XOBjActorToy__dt = 0x801155b4;
 Class_FBMirror = 0x80019700;
+XObj__ct = 0xC8001B4B4;
+
+
+
+
+
+
+
+
+
+

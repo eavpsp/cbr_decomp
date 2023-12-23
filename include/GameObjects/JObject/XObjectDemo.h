@@ -3,11 +3,10 @@
 #include "include/GameObjects/JObject/JObjects.h"
 #include "include/CVec.h"
 #include "include/CCamera.h"
-
 class XObjectDemo
 {
 	public:
-		XObjectDemo(void * param);
+		XObjectDemo();
 		//~XObjectDemo();
 };
 /*.global lbl_802119FC

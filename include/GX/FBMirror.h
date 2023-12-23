@@ -4,19 +4,21 @@
 #include "include/CVec.h"
 #include "include/GX/CTexObject.h"
 #include "include/CCamera.h"
+//Partly finished class
+//May need pointer variables
 class Class_FBMirror {
 public:
 
     Class_FBMirror(int param);
-  
 };
+//8065a0d8
 class CFbTexEffBase
 {
     public:
         char* objType;
         char buffer[4];
 };
-
+//802102ec
 class CFbTexEff : public CFbTexEffBase
 {
     public:
@@ -27,12 +29,14 @@ class CFbTexEff : public CFbTexEffBase
         funcPtr DBClose3;
         funcPtr DBClose4;
 };
+//80210430
 class CFbTexEffMin : public CFbTexEffBase
 {
     public:
         char buffer[8];
   
 };
+//8065a170
 class FBMirrorBase {
     public:
         char* objType;

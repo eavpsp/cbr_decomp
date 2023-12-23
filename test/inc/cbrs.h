@@ -19,7 +19,7 @@
 #include <stdbool.h>
 #include "structs2.h"
 #include "sceneObj.h"
-
+#include "debug.h"
 //ACCESS GAME VARS
 //Base Scene Object for game
 #define SCENE_OBJ          0x8025C400
@@ -35,22 +35,7 @@ typedef struct
     char data[75];
 
 } CGameMainObj;
-typedef struct 
-{
-    /* data */
-    int a;
-    int b;
-    int c;
-    int d;
-    int e;
 
-} FloatData;
-typedef struct 
-{
-    /* data */
-    char intro[5];//= 0x23 00 00 00 05;
-    char text[];
-} TextObject;
 typedef struct 
 {
     char text;
@@ -90,7 +75,7 @@ void DisplayMessage(double param_1,double param_2,double param_3,double param_4,
 void OSExecp();
 int GetPlayer(int param_1,int param_2);
 void initializeObjectDataAndResetValues_800929c4_(int param_1);
-static FloatData* debugFloat = (int*)0x80317800;
+
 static char* control = (void*)0x80260D33;
 static char* mode = (void*)0x80260D37;
 static TextObject* texObj = (int*)0x80317900;
@@ -98,8 +83,7 @@ void __register_global_object(undefined4 param_1,undefined4 param_2,int objPtr);
 ChrObject * SetStageData(ChrObject *chrObj);
 ChrObject * initChibiRobo(ChrObject *chrObj_803860f0,short param_2);
 //static int* debugFloat = (int*)0x80317800; //0x80317800;
-static bool* runSecondFloat = (int*)0x80317804; //0x80317804s;
-static char* debugString = (void*)0x80317900;//0x80317900
+
 void RenderScene(int param_1);
 int CGameCreateScene(int param_1);
 int DVDClose(int val);

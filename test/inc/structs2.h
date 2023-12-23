@@ -64,4 +64,4 @@ struct Class_FBMirror {
     CVec* vec5;                  // Offset 0x24c
     FBMirrorEX* fbMirrorEx;      // Offset 0x120
 };
-void Class_FBMirror(ptr object);
+

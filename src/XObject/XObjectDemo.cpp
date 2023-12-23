@@ -1,6 +1,6 @@
 #include "include/GameObjects/JObject/XObjectDemo.h"
 
-/*WIP*/
+/*Done with Hacks*/
 
 //.global SetObjDemo
 //SetObjDemo :
@@ -40,20 +40,23 @@
 extern CVec lbl_80210314;
 extern XOBJDEMO lbl_802119FC;
 extern CCamera lbl_80237644;
-extern "C" int SetEventData(XObjectDemo *param);
-extern "C" void __construct_array(void* param_1, void* param_2, void* param_3, int param_4, unsigned int param_5);
+extern "C" int SetEventData(int param);
+extern "C" void __construct_array(int param_1, void* param_2, void* param_3, int param_4, unsigned int param_5);
 extern "C" int SetScene(int param_1);
 extern "C" int GetSceneLighting(int param_1);
- XObjectDemo::XObjectDemo(void * param)
+//DEBUGGING
+//    $(OBJ_DIR)/src/XObject/XObjectDemo.o 
+//0x802616E0<-right input value works with hacks
+ XObjectDemo::XObjectDemo()
 {
-	 SetEventData(this);
-	*(XOBJDEMO**)(this + 0x34) = &lbl_802119FC;
-	*(CCamera**)(this + 0xb18) = &lbl_80237644;
-	*(CVec**)(this + 0xa28) = &lbl_80210314;
-	*(CVec**)(this + 0xa38) = &lbl_80210314;
-	*(CVec**)(this + 0xa48) = &lbl_80210314;
-	*(CVec**)(this + 0xa58) = &lbl_80210314;
-	*(CVec**)(this + 0xaac) = &lbl_80210314;
-	__construct_array(this + 0xb24, SetScene, GetSceneLighting, 0x358, 8);
+	 SetEventData(0x802616E0);
+	*(XOBJDEMO**)(0x802616E0 + 0x34) = &lbl_802119FC;
+	*(CCamera**)(0x802616E0 + 0xb18) = &lbl_80237644;
+	*(CVec**)(0x802616E0 + 0xa28) = &lbl_80210314;
+	*(CVec**)(0x802616E0 + 0xa38) = &lbl_80210314;
+	*(CVec**)(0x802616E0 + 0xa48) = &lbl_80210314;
+	*(CVec**)(0x802616E0 + 0xa58) = &lbl_80210314;
+	*(CVec**)(0x802616E0 + 0xaac) = &lbl_80210314;
+	__construct_array(0x802616E0 + 0xb24, SetScene, GetSceneLighting, 0x358, 8);
 	return;
 }

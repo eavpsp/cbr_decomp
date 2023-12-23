@@ -143,5 +143,4 @@ $(OBJ_DIR)/%.o: %.c
 $(OBJ_DIR)/%.o: %.cpp
 	@echo " CXX     "$<
 	$S$(GLBLASM) -s $< $(OBJ_DIR)/$*.cpp 1>&2
-	$S$(CC) $(CFLAGS) -c -o $@ $(OBJ_DIR)/$*.cpp 1>&2 -O4,s -inline auto -Cpp_exceptions off
-	$S$(PPROC) $(PPROCFLAGS) $@
+	$S$(CC) $(CFLAGS) -c -o $@ $(OBJ_DIR)/$*.cpp 1>&2 -O4,p -inline auto -Cpp_exceptions off

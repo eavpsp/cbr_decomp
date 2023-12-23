@@ -1,5 +1,5 @@
 #include "include/GX/FBMirror.h"
-
+/*Done*/
 
 //Class_FBMirror:
 ///* 80019700 00014480  3C A0 80 21 */	lis r5, CFbTexEff_struct@ha
@@ -25,6 +25,8 @@
 ///* 80019750 000144D0  90 A3 02 4C */	stw r5, 0x24c(r3)
 ///* 80019754 000144D4  90 03 01 20 */	stw r0, 0x120(r3)
 ///* 80019758 000144D8  4E 80 00 20 */	blr
+/// This Code will always work if object ref is the proper obejct in .data
+/// real test of class accuracy is when the class instantiated
     extern CFbTexEff CFbTexEff_struct;
     extern CCamera lbl_80237644;
     extern FBMirror FBMirror_struct;
@@ -33,7 +35,7 @@
     extern FBMirrorEX lbl_802104C8;
 Class_FBMirror::Class_FBMirror(int param)
 {
-    
+    //These arent variable fields but set offsets 
     *(CFbTexEff **)(this + 0x120) = &CFbTexEff_struct;
     *(CTexObj **)(this + 0x118) = &lbl_8021032C;
     *(FBMirror **)(this + 0x120) = &FBMirror_struct;
