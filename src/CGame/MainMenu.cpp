@@ -45,7 +45,8 @@
 //* 8001B4AC 0001622C  38 21 00 10 */	addi r1, r1, 0x10
 //* 8001B4B0 00016230  4E 80 00 20 */	blr
 /*Done*/
-extern TitleObject lbl_802100C8;
+//Needs to be optimized
+//extern TitleObject lbl_802100C8;
 extern CTpl lbl_802587D8;
 extern CTexObj lbl_8021032C;
 extern CFile lbl_8025878C;
@@ -55,17 +56,17 @@ extern "C" int BIRDOSoundPropAccessor__ResetSoundPropTable_void_(int param_1);
 extern "C" int cHeadTrack____dt_void__N5(int param_1);
 extern "C" void __construct_array(void* param_1, void* param_2, void* param_3, int param_4, unsigned int param_5);
 //(MainMenu)0x80260D30 -> ref'd by 0x8067028C
- MainMenu::MainMenu(int param_1)
+MainMenu::MainMenu(int param_1)
 {
-	*(TitleObject**)(this + 0x3c48) = &lbl_802100C8;
+	*(TitleObject**)(this + 0x3c48) = (TitleObject*)0x802100C8;
 	GameSceneManager____ct_void_(this + 0x28);
 	SetObjDemo(this + 0x9b0);
 	*(CFile**)(this + 0x30a0) = &lbl_8025878C;
-	*(int*)(this + 0x308c) = 0; 
-	*(int*)(this + 0x3078) = 0xffffffff;
-	*(int*)(this + 0x3084) = 0;
-	*(int*)(this + 0x3088) = 0;
-	*(int*)(this + 0x309c) = 1;
+	*(u8*)(this + 0x308c) = 0;
+	*(u8*)(this + 0x3078) = 0xffffffff;
+	*(u8*)(this + 0x3084) = 0;
+	*(u8*)(this + 0x3088) = 0;
+	*(u8*)(this + 0x309c) = 1;
 	*(CTpl**)(this + 0x30a0) = &lbl_802587D8;
 	*(CTexObj**)(this + 0x31a0) = &lbl_8021032C;
 	__construct_array(this + 0x31a8, BIRDOSoundPropAccessor__ResetSoundPropTable_void_, cHeadTrack____dt_void__N5, 0x100, 6);

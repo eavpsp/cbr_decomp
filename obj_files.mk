@@ -33,10 +33,9 @@ TEXT_O_FILES :=                                     \
     $(OBJ_DIR)/asm/mtx/mtx.o \
     $(OBJ_DIR)/asm/CGame/resetGame.o \
     $(OBJ_DIR)/asm/text_0.o \
-    $(OBJ_DIR)/src/GX/mirror/FBMirror.o \
     $(OBJ_DIR)/asm/text_00.o \
-    $(OBJ_DIR)/src/CGame/MainMenu.o \
     $(OBJ_DIR)/asm/text_1.o \
+    $(OBJ_DIR)/asm/text_2.o \
     
 
 CTORS_O_FILES :=                                    \

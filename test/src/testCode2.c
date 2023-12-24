@@ -23,10 +23,7 @@ void OnRenderVisual(int*val)
 
 }
 */
-void TestFBMirrorAddress(int param)
-{
-    FBMirror__ct(param);
-}
+
 void OnLoad(int val) 
 {
     //use BaseSceneHandlerOnActivate

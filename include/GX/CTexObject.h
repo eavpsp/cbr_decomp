@@ -3,25 +3,29 @@
 //Handles the game textures
 
 #include "include/types.h"
-typedef struct CTexObj CTexObj, *PCTexObj;
+typedef struct CTexObj CTexObj;
+typedef struct GXTexObjBase GXTexObjBase;
+typedef struct GXTexObj GXTexObj;
+typedef struct CTexObjBase CTexObjBase;
+typedef struct CTexObj CTexObj;
 
-class GXTexObjBase {
+struct GXTexObjBase {
     char* objType;
-    char buffer[4];
+    char* buffer;
 };
 
-class GXTexObj: public GXTexObjBase {
-    char buffer[8];
+struct GXTexObj: public GXTexObjBase {
+    char* buffer;
 };
-class CTexObjBase {
+struct CTexObjBase {
     char* objType;
     GXTexObj* gxObj;
 };
 
-class CTexObj: public CTexObjBase {
-public:
-    char buffer[4];
-    CTexObj();
+struct CTexObj: public CTexObjBase {
+
+    char* buffer;
+    //CTexObj();
     ~CTexObj();
 };
 

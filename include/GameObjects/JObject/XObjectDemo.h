@@ -3,9 +3,8 @@
 #include "include/GameObjects/JObject/JObjects.h"
 #include "include/GameObjects/CVec.h"
 #include "include/GameObjects/CCamera.h"
-class XObjectDemo
+struct XObjectDemo
 {
-	public:
 		XObjectDemo();
 		//~XObjectDemo();
 };

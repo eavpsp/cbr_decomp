@@ -1,6 +1,13 @@
 #ifndef CFILEBASE_H
 #define CFILEBASE_H
-class FileHandler
+typedef struct FileHandler FileHandler;
+typedef struct DVDFileInfoBase DVDFileInfoBase;
+typedef struct DVDFileInfo DVDFileInfo;
+typedef struct DVDFileInfo DVDFileInfo;
+typedef struct DVDFileInfoHandler DVDFileInfoHandler;
+typedef struct CFile CFile;
+
+struct FileHandler
 {
 public:
 	virtual ~FileHandler();
@@ -12,20 +19,20 @@ public:
 	virtual void CloseStream(int param_1);
 	virtual int  FileExceptionHandler(int param_1);
 };
-class DVDFileInfoBase
+struct DVDFileInfoBase
 {
 	char* objType;
-	char buffer[4];
+	char* buffer;
 };
 
-class DVDFileInfo : public DVDFileInfoBase
+struct DVDFileInfo : public DVDFileInfoBase
 {
-	char buffer[8];
+	char* buffer;
 
 };
-class CFileBase
+struct CFileBase
 {
-	public:
+	
 		char* objType;
 		DVDFileInfo* dvdInfo;
 };
@@ -45,17 +52,18 @@ lbl_8025878C:
 	.4byte zz_8019f6ec_
 	.4byte 0x30303030
 */
-class CFile : public CFileBase, public FileHandler
+struct CFile : public CFileBase, public FileHandler
 {
 	public:
-		
 		~CFile();
 		
 };
-class DVDFileInfoHandler : public DVDFileInfoBase
+struct DVDFileInfoHandler : public DVDFileInfoBase
 {
-public:
-	char buffer[4];
+
+	char* buffer;
 	CFileBase* cFile;
 };
+
+
 #endif

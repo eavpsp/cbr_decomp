@@ -63,7 +63,7 @@ SHA1SUM := sha1sum
 ASMDIFF := ./asmdiff.sh
 
 # Options
-#INCLUDES := -ir src -ir include -Iinclude -Iinclude/dolphin -Iinclude/CodeWarrior -Iinclude/rwsdk
+INCLUDES := -ir src -ir include -Iinclude
 
 ASFLAGS := -mgekko -I include 
 LDFLAGS := -map $(MAP) -w off -maxerrors 1 -nostdlib
@@ -106,9 +106,9 @@ DUMMY != mkdir -p $(ALL_DIRS)
 $(DOL): $(ELF) | tools
 	@echo " ELF2DOL "$@
 	$S$(ELF2DOL) $< $@ $(SDATA_PDHR) $(SBSS_PDHR) $(TARGET_COL)
-	$S$(SHA1SUM) -c cbr.sha1 || ( rm -f main.dump; $(ASMDIFF) )
+#	$S$(SHA1SUM) -c cbr.sha1 || ( rm -f main.dump; $(ASMDIFF) )
 	$S$(MOVEDOL)
-	$Scp cbr.map main.elf obj/ # needed for diff.py
+#	$Scp cbr.map main.elf obj/ # needed for diff.py
 clean:
 	rm -f $(DOL) $(ELF) $(MAP) baserom.dump main.dump
 	rm -rf .pragma obj
@@ -127,7 +127,7 @@ endif
 
 $(ELF): $(O_FILES) $(LDSCRIPT)
 	@echo " LINK    "$@
-	$S$(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT) $(O_FILES) 1>&2
+	$S$(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT) $(O_FILES) 1>&2 #-l /lib_ex/TRK_GCN_Stub.a
 # The Metrowerks linker doesn't generate physical addresses in the ELF program headers. This fixes it somehow.
 # $S$(OBJCOPY) $@ $@
 
@@ -138,9 +138,9 @@ $(OBJ_DIR)/%.o: %.s
 
 $(OBJ_DIR)/%.o: %.c
 	@echo " CC      "$<
-	$S$(CC) $(CFLAGS) -c -o $@ $< 1>&2
+	$S$(CC) $(CFLAGS) -c -o $@ $< 1>&2 -Cpp_exceptions off -O3,s $(INCLUDES)
 
 $(OBJ_DIR)/%.o: %.cpp
 	@echo " CXX     "$<
 	$S$(GLBLASM) -s $< $(OBJ_DIR)/$*.cpp 1>&2
-	$S$(CC) $(CFLAGS) -c -o $@ $(OBJ_DIR)/$*.cpp 1>&2 -O4,p -inline auto -Cpp_exceptions off
+	$S$(CC) $(CFLAGS) -c -o $@ $(OBJ_DIR)/$*.cpp 1>&2 -Cpp_exceptions off -O2,s $(INCLUDES)

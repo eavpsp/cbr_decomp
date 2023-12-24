@@ -2,28 +2,28 @@
 #define CVEC_H
 
 #include "include/types.h"
-class VecBase
+struct VecBase
 {
-    public:
+  
         char* objName;
-        char buffer[4];
+        char* buffer;
 };  
-class Vec : public VecBase 
+struct Vec : public VecBase
 {
-    public:
-        char buffer[8];
+  
+        char* buffer;
 };
 
-class CVecBase 
+struct CVecBase
 {
-    public:
+  
         char* objName;
         Vec* vec;
 };
 
-class CVec : public CVecBase {
-    public:
-        char buffer[4];
-        ~CVec();
+struct CVec : public CVecBase {
+    
+        char* buffer;
+        //~CVec();
 };
 #endif

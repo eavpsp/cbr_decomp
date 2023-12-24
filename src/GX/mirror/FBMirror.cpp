@@ -33,6 +33,7 @@
     extern CTexObj lbl_8021032C;
     extern CVec lbl_80210314;
     extern FBMirrorEX lbl_802104C8;
+#pragma dont_inline on
 Class_FBMirror::Class_FBMirror(int param)
 {
     //These arent variable fields but set offsets 

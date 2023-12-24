@@ -6,23 +6,32 @@
 #include "include/GameObjects/CCamera.h"
 //Partly finished class
 //May need pointer variables
-class Class_FBMirror {
-public:
+typedef struct CFbTexEffBase CFbTexEffBase;
+typedef struct CFbTexEff CFbTexEff;
+typedef struct CFbTexEffMin CFbTexEffMin;
+typedef struct Class_FBMirror Class_FBMirror;
+typedef struct FBMirrorBase FBMirrorBase;
+typedef struct CFbTexEffMir CFbTexEffMir;
+typedef struct FBMirror FBMirror;
+typedef struct FBMirrorEXBase FBMirrorEXBase;
+typedef struct FBMirrorEX FBMirrorEX;
+struct Class_FBMirror {
+
 
     Class_FBMirror(int param);
 };
 //8065a0d8
-class CFbTexEffBase
+struct CFbTexEffBase
 {
-    public:
+    
         char* objType;
-        char buffer[4];
+        char* buffer;
 };
 //802102ec
-class CFbTexEff : public CFbTexEffBase
+struct CFbTexEff : public CFbTexEffBase
 {
-    public:
-        char buffer[4];
+    
+        char* buffer;
         funcPtr DBClos0;
         funcPtr DBClose1;
         funcPtr DBClose2;
@@ -30,30 +39,30 @@ class CFbTexEff : public CFbTexEffBase
         funcPtr DBClose4;
 };
 //80210430
-class CFbTexEffMin : public CFbTexEffBase
+struct CFbTexEffMin : public CFbTexEffBase
 {
-    public:
-        char buffer[8];
+
+        char* buffer;
   
 };
 //8065a170
-class FBMirrorBase {
-    public:
+struct FBMirrorBase {
+    
         char* objType;
         CFbTexEffMin* texEffHelper;
         
 };
-class CFbTexEffMir : public CFbTexEffBase
+struct CFbTexEffMir : public CFbTexEffBase
 {
-    public:
-        char buffer[4];
+    
+        char* buffer;
         FBMirrorBase* mirrorBase;
-        char bufferEnd[8];
+        char* bufferEnd;
 
 };
-class FBMirror: public FBMirrorBase {
-    public:
-        char buffer[4];
+struct FBMirror: public FBMirrorBase {
+  
+        char* buffer;
         funcPtr SetTextWriterProperties;
         funcPtr DBClose;
         funcPtr UpdateAndDisplayTexture;
@@ -61,15 +70,15 @@ class FBMirror: public FBMirrorBase {
         funcPtr handle_graphics_update;
     
 };
-class FBMirrorEXBase {
-    public:
+struct FBMirrorEXBase {
+
         char* objType;
         CFbTexEffMir* texEffHelper;
         
 };
-class FBMirrorEX: FBMirrorEXBase {
-    public:
-        char buffer[4];
+struct FBMirrorEX: FBMirrorEXBase {
+    
+        char* buffer;
         funcPtr UpdateVectorComponents;
         funcPtr DBClose;
         funcPtr UpdateAndDisplayTexture;

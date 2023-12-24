@@ -3,97 +3,106 @@
 #include "include/types.h"
 
 
+typedef struct CJObjBase CJObjBase;
+typedef struct CJObj CJObj;
+typedef struct CXObjBase CXObjBase;
+typedef struct CJObjExtended_2 CJObjExtended_2;
+typedef struct CXObjIntp CXObjIntp;
+typedef struct CJObjExtended CJObjExtended;
+typedef struct XObjBase XObjBase;
+typedef struct CJObjExtended_3 CJObjExtended_3;
+typedef struct XObjDemoBase XObjDemoBase;
+typedef struct JObjectHandler JObjectHandler;
+typedef struct XOBJDEMO XOBJDEMO;
 
 //8065a27c
-class CJObjBase
+struct CJObjBase
 {
-public:
+
 	char* objType;
-	char buffer[4];
+	char* buffer;
 
 };
 //8021199c
-class CJObj : public CJObjBase
+struct CJObj : public CJObjBase
 {
-public:
-	char buffer[8];
+
+	char* buffer;
 
 
 };
 //8065a284
-class CXObjBase
+struct CXObjBase
 {
-public:
 	char* objType;
 	CJObj* cjObj;
 
 };
 //802119a8
-class CJObjExtended_2 : public CJObjBase
+struct CJObjExtended_2 : public CJObjBase
 {
-public:
-	char buffer[4];
+	char* buffer;
 	CXObjBase* cxObj;
-	char endBuffer[8];
+	char* endBuffer;
 
 
 };
 //8065a28c
-class CXObjIntp{
-public:
+struct CXObjIntp{
+
 	char* objType;
 	CJObjExtended_2* cjObj;
 
 };
 //802119bc
-class CJObjExtended : public CJObjBase
+struct CJObjExtended : public CJObjBase
 {
-public:
-	char buffer[4];
+
+	char buffer;
 	CXObjBase* cxObj;
-	char midBuffer[4];
+	char midBuffer;
 	CXObjIntp* objInt;
-	char endBuffer[8];
+	char endBuffer;
 
 
 };
 //8065a294
-class XObjBase
+struct XObjBase
 {
-public:
+
 	char* objType;
 	CJObjExtended* cjObj;
 
 };
 //802119d8
-class CJObjExtended_3 : public CJObjBase
+struct CJObjExtended_3 : public CJObjBase
 {
-public:
-	char buffer[4];
+
+	char* buffer;
 	CXObjBase* cxObj;
-	char midBuffer[4];
+	char* midBuffer;
 	CXObjIntp* objInt;
-	char midBuffer2[4];
+	char* midBuffer2;
 	XObjBase* xObj;
-	char endBuffer[8];
+	char* endBuffer;
 
 
 };
-class XObjDemoBase
+struct XObjDemoBase
 {
-	public:
+	
 		char* objType;
 		CJObjExtended_3* cjObj;
 		char* gxTexObj;
-		char buffer[4];
+		char* buffer;
 		char* gxColor;
 
 };
 
 //WAYYY TOOO BIGGGG
-class JObjectHandler
+struct JObjectHandler
 {
-public:
+
 	virtual void ChibiJumpHandler(double param_1, int* param_2, int param_3);
 	virtual void process_tree_with_param(double param_1, int* param_2, int param_3);
 	virtual void GetHeightOfJump(double param_1, int* param_2, int param_3);
@@ -176,10 +185,10 @@ public:
 
 };
 //802119fc
-class XOBJDEMO : public XObjDemoBase, public JObjectHandler
+struct XOBJDEMO : public XObjDemoBase, public JObjectHandler
 {
-	public:
-		char buffer[4];
-		~XOBJDEMO();
+	
+		char* buffer;
+		//~XOBJDEMO();
 };
 #endif

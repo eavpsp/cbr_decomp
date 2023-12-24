@@ -25,5 +25,9 @@ tools/inlineasm/__pycache__/helpers.cpython-37.pyc
 .pragma/935c9a7075d7cc8f2e79626ebeabba6594182ab1.json
 Makefile
 moveDol.bat
-Makefile
-/.pragma
+/.pragm
+/lib_ex
+/test/lib_ex
+/src/TRK/TRK_memory.c
+/src/TRK/TRK_mem.s
+/src/TRK/TRK_header.s

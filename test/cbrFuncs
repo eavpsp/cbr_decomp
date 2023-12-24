@@ -1,13 +1,4 @@
-UpdateGameState = 0x8000facc;
-LoadSceneData = 0x8001c8c4;
-CGameMain = 0x8000dfa8;
-DisplayMessage = 0x80196610;
-setParamToGlobalVar = 0x801cbe60;
-GameSceneManager = 0x80134a1c;
-post_physics_update = 0x80199944;
-RenderAndUpdateGraphics = 0x8000d704;
-initCameraZoom = 0x800095c0;
-SetDialogueText = 0x80085444;
+
 OnActivate = 0x80149754;
 OSExecp = 0x801619bc;
 strlen = 0x80158f54;
@@ -50,7 +41,7 @@ InitActorToy = 0x80134280;
 XOBjActorToy__dt = 0x801155b4;
 Class_FBMirror = 0x80019700;
 XObj__ct = 0xC8001B4B4;
-
+OSReport = 0x8001580c;
 
 
 

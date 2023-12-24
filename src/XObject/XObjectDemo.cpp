@@ -1,7 +1,7 @@
 #include "include/GameObjects/JObject/XObjectDemo.h"
 
-/*WIP with Hacks*/
-
+/*Currenlty Breaks*/
+/*Not In Build*/
 //.global SetObjDemo
 //SetObjDemo :
 //* 8001B4B4 00016234  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -47,7 +47,7 @@ extern "C" int GetSceneLighting(int param_1);
 //DEBUGGING
 //    $(OBJ_DIR)/src/XObject/XObjectDemo.o 
 //0x802616E0<-right input value works with hacks
- XObjectDemo::XObjectDemo()
+ XObjectDemo()
 {
 	 SetEventData(this);
 	*(XOBJDEMO**)(this + 0x34) = &lbl_802119FC;

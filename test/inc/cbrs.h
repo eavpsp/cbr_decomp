@@ -67,7 +67,6 @@ void post_physics_update(int param_1);
 void RenderAndUpdateGraphics(int param_1);
 void * initCameraZoom(void *param_1,short param_2);
 void SetDialogueText(int *param_1,char *param_2);
-void OnActivate(int param_1);
 void DisplayMessage(double param_1,double param_2,double param_3,double param_4,
                    double param_5,double param_6,double param_7,double param_8,
                    int param_9,int param_10,char *text,int param_12,

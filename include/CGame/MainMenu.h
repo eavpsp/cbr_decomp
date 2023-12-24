@@ -6,24 +6,23 @@
 #include "include/GX/CTexObject.h"
 #include "include/GX/CTpl.h"
 #include "include/GameObjects/JObject/XObjectDemo.h"
-
-class TitleObjectBase
+typedef struct TitleObjectBase TitleObjectBase;
+typedef struct TitleObject TitleObject;
+typedef struct MainMenu MainMenu;
+struct TitleObjectBase
 {
-	public:
 		char* objType;
-		char buffer[4];
+		char* buffer;
 };
 
-class TitleObject : public TitleObjectBase
+struct TitleObject : public TitleObjectBase
 {
-	public:
-		char buffer[4];
+		char* buffer;
 		//~TitleObject();
 };
-class MainMenu
+struct MainMenu
 {
-	public:
-		MainMenu(int param_1);
+		MainMenu(int param_1); //<-- Custom constructor will add proper fields
 		//~MainMenu();
 };
 
