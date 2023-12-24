@@ -1,23 +1,5 @@
-#include <types.h>
 #include <stddef.h>
-
-
-void* TRK_memcpy(void* dst, const void* src, size_t n)
-{
-	const u8* s = (const u8*)src - 1;
-	u8* d = (u8*)dst - 1;
-	n++;
-	while (--n > 0)
-		*++d = *++s;
-	return dst;
-}
-
-void* TRK_memset(void* dst, uint val, uint n)
-{
-	TRK_fill_mem(dst, val, n);
-	return dst;
-}
-DECL_SECT(".init") void __TRK_reset() { OSResetSystem(FALSE, 0, FALSE); }
+#include <types.h>
 //.global __fill_mem
 //__fill_mem:
 //* 800050E4 000020E4  28 05 00 20 */	cmplwi r5, 0x20
@@ -76,7 +58,7 @@ DECL_SECT(".init") void __TRK_reset() { OSResetSystem(FALSE, 0, FALSE); }
 //* 80005194 00002194  40 82 FF F8 */	bne lbl_8000518C
 //* 80005198 00002198  4E 80 00 20 */	blr
 
-DECL_SECT(".init")  void __fill_mem(void* dst, int val, u32 n)
+DECL_SECT(".init")  void __fill_mem(void* dst, int val, u32 n)//Done with Optimizations (-2 lines)
 {
 	u32 v = (u8)val;
 	u32 i;
@@ -90,62 +72,96 @@ DECL_SECT(".init")  void __fill_mem(void* dst, int val, u32 n)
 			n -= i;
 
 			do
-				*((((u8*)dst)) +1)= v;
+				*((((u8*)dst)) + 1) = v;
 			while (--i);
 		}
 
 		if (v)
 			v |= v << 24 | v << 16 | v << 8;
 
-		*(u32*)dst = ((u32*)dst++)-1;
+		*(u32*)dst = ((u32*)dst++) - 1;
 
 		i = n >> 5;
 
 		if (i)
 			do {
-				*((((u32*)dst)) +1)= v;
-				*((((u32*)dst)) +1)= v;
-				*((((u32*)dst)) +1)= v;
-				*((((u32*)dst)) +1)= v;
-				*((((u32*)dst)) +1)= v;
-				*((((u32*)dst)) +1)= v;
-				*((((u32*)dst)) +1)= v;
-				*((((u32*)dst)) +1)= v;
+				*((((u32*)dst)) + 1) = v;
+				*((((u32*)dst)) + 1) = v;
+				*((((u32*)dst)) + 1) = v;
+				*((((u32*)dst)) + 1) = v;
+				*((((u32*)dst)) + 1) = v;
+				*((((u32*)dst)) + 1) = v;
+				*((((u32*)dst)) + 1) = v;
+				*((((u32*)dst)) + 1) = v;
 			} while (--i);
 
-		i = (n & 31) >> 2;
+			i = (n & 31) >> 2;
 
-		if (i)
-			do
-				*(((u32*)dst)) = v;
+			if (i)
+				do
+					*(((u32*)dst)) = v;
 			while (--i);
 
-			*(u32*)dst = ((u32*)dst++)-1;
+			*(u32*)dst = ((u32*)dst++) - 1;
 
 
-		n &= 3;
+			n &= 3;
 	}
 
 	if (n)
 		do
-			*((((u8*)dst)) +1) = v;
-		while (--n);
+			*((((u8*)dst)) + 1) = v;
+	while (--n);
 
 	return;
 }
 
 
-//
-//.global __TRK_reset
-//__TRK_reset :
-//* 80005088 00002088  94 21 FF F0 */	stwu r1, -0x10(r1)
-//* 8000508C 0000208C  7C 08 02 A6 */	mflr r0
-//* 80005090 00002090  38 60 00 00 */	li r3, 0x0
-//* 80005094 00002094  38 80 00 00 */	li r4, 0x0
-//* 80005098 00002098  90 01 00 14 */	stw r0, 0x14(r1)
-//* 8000509C 0000209C  38 A0 00 00 */	li r5, 0x0
-//* 800050A0 000020A0  48 16 38 3D */	bl OSReset
-//* 800050A4 000020A4  80 01 00 14 */	lwz r0, 0x14(r1)
-//* 800050A8 000020A8  7C 08 03 A6 */	mtlr r0
-//* 800050AC 000020AC  38 21 00 10 */	addi r1, r1, 0x10
-//* 800050B0 000020B0  4E 80 00 20 */	blr
+DECL_SECT(".init") void* memcpy(void* dest, const void* src, size_t n);
+void* memcpy(void* dst, const void* src, size_t n) //Done
+{
+	const char* p;
+	char* q;
+	int rev = ((u32)src < (u32)dst);
+
+	if (!rev) {
+
+		for (p = (const char*)src - 1, q = (char*)dst - 1, n++; --n;)
+			*++q = *++p;
+
+	} else {
+		for (p = (const char*)src + n, q = (char*)dst + n, n++; --n;)
+			*--q = *--p;
+	}
+	return (dst);
+}
+//.global memcpy
+//memcpy:
+//* 8000519C 0000219C  7C 04 18 40 */	cmplw r4, r3
+//* 800051A0 000021A0  41 80 00 28 */	blt lbl_800051C8
+//* 800051A4 000021A4  38 84 FF FF */	addi r4, r4, -0x1
+//* 800051A8 000021A8  38 C3 FF FF */	addi r6, r3, -0x1
+//* 800051AC 000021AC  38 A5 00 01 */	addi r5, r5, 0x1
+//* 800051B0 000021B0  48 00 00 0C */	b func_800051BC
+//lbl_800051B4:
+//* 800051B4 000021B4  8C 04 00 01 */	lbzu r0, 0x1(r4)
+//* 800051B8 000021B8  9C 06 00 01 */	stbu r0, 0x1(r6)
+//.global func_800051BC
+//func_800051BC:
+//* 800051BC 000021BC  34 A5 FF FF */	addic. r5, r5, -0x1
+//* 800051C0 000021C0  40 82 FF F4 */	bne lbl_800051B4
+//* 800051C4 000021C4  4E 80 00 20 */	blr
+//lbl_800051C8:
+//* 800051C8 000021C8  7C 84 2A 14 */	add r4, r4, r5
+//* 800051CC 000021CC  7C C3 2A 14 */	add r6, r3, r5
+//* 800051D0 000021D0  38 A5 00 01 */	addi r5, r5, 0x1
+//* 800051D4 000021D4  48 00 00 0C */	b func_800051E0
+//lbl_800051D8:
+//* 800051D8 000021D8  8C 04 FF FF */	lbzu r0, -0x1(r4)
+//* 800051DC 000021DC  9C 06 FF FF */	stbu r0, -0x1(r6)
+
+//.global func_800051E0
+//func_800051E0:
+//* 800051E0 000021E0  34 A5 FF FF */	addic. r5, r5, -0x1
+//* 800051E4 000021E4  40 82 FF F4 */	bne lbl_800051D8
+//* 800051E8 000021E8  4E 80 00 20 */	blr

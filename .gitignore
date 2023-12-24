@@ -33,3 +33,6 @@ moveDol.bat
 /src/TRK/TRK_header.s
 *.rar
 /test/.vscode
+/outhelp.txt
+/test/memfuncs.map
+/a.out

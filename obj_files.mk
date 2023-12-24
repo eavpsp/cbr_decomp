@@ -2,6 +2,7 @@ INIT_O_FILES :=                                     \
     $(OBJ_DIR)/src/TRK/TRK_memset.o \
     $(OBJ_DIR)/src/TRK/TRK_memcpy.o \
     $(OBJ_DIR)/asm/TRK/initTRK.o \
+    $(OBJ_DIR)/src/TRK/TRK_memfuncs.o \
     $(OBJ_DIR)/asm/dolphin/pad/initPad.o \
     $(OBJ_DIR)/asm/dolphin/runtime/_startGame.o \
     

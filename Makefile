@@ -65,7 +65,7 @@ ASMDIFF := ./asmdiff.sh
 # Options
 INCLUDES := -ir src -ir include -Iinclude -Iext/inc
 
-ASFLAGS := -mgekko -I include 
+ASFLAGS := -mgekko -I include -mbig-endian --strip-local-absolute   -no-pad-sections -a32
 LDFLAGS := -map $(MAP) -w off -maxerrors 1 -nostdlib
 #CFLAGS  := -g -DGAMECUBE -Cpp_exceptions off -proc gekko -fp hard -fp_contract on -O4,p -msgstyle gcc -maxerrors 1 \
            -pragma "check_header_flags off" -RTTI off -pragma "force_active on" \
@@ -138,9 +138,9 @@ $(OBJ_DIR)/%.o: %.s
 
 $(OBJ_DIR)/%.o: %.c
 	@echo " CC      "$<
-	$S$(CC) $(CFLAGS) -c -o $@ $< 1>&2 -Cpp_exceptions off -O4,p $(INCLUDES)
+	$S$(CC) $(CFLAGS) -c -o $@ $< 1>&2 -Cpp_exceptions off -O2,s $(INCLUDES)
 
 $(OBJ_DIR)/%.o: %.cpp
 	@echo " CXX     "$<
 	$S$(GLBLASM) -s $< $(OBJ_DIR)/$*.cpp 1>&2
-	$S$(CC) $(CFLAGS) -c -o $@ $(OBJ_DIR)/$*.cpp 1>&2 -Cpp_exceptions off -O4,p $(INCLUDES)
+	$S$(CC) $(CFLAGS) -c -o $@ $(OBJ_DIR)/$*.cpp 1>&2 -Cpp_exceptions off -O2,s $(INCLUDES)
