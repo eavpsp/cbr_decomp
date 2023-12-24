@@ -63,7 +63,7 @@ SHA1SUM := sha1sum
 ASMDIFF := ./asmdiff.sh
 
 # Options
-INCLUDES := -ir src -ir include -Iinclude
+INCLUDES := -ir src -ir include -Iinclude -Iext/inc
 
 ASFLAGS := -mgekko -I include 
 LDFLAGS := -map $(MAP) -w off -maxerrors 1 -nostdlib
@@ -133,14 +133,14 @@ $(ELF): $(O_FILES) $(LDSCRIPT)
 
 $(OBJ_DIR)/%.o: %.s
 	@echo " AS      "$<
-	$S$(AS) $(ASFLAGS) -o $@ $<
+	$S$(AS) $(ASFLAGS) -o $@ $< 
 	$S$(PPROC) $(PPROCFLAGS) $@
 
 $(OBJ_DIR)/%.o: %.c
 	@echo " CC      "$<
-	$S$(CC) $(CFLAGS) -c -o $@ $< 1>&2 -Cpp_exceptions off -O3,s $(INCLUDES)
+	$S$(CC) $(CFLAGS) -c -o $@ $< 1>&2 -Cpp_exceptions off -O4,p $(INCLUDES)
 
 $(OBJ_DIR)/%.o: %.cpp
 	@echo " CXX     "$<
 	$S$(GLBLASM) -s $< $(OBJ_DIR)/$*.cpp 1>&2
-	$S$(CC) $(CFLAGS) -c -o $@ $(OBJ_DIR)/$*.cpp 1>&2 -Cpp_exceptions off -O2,s $(INCLUDES)
+	$S$(CC) $(CFLAGS) -c -o $@ $(OBJ_DIR)/$*.cpp 1>&2 -Cpp_exceptions off -O4,p $(INCLUDES)

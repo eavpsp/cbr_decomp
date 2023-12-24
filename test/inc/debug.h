@@ -1,9 +1,13 @@
+#ifndef DEBUG_H
+#define DEBUG_H
 #include <stdlib.h>
 #include <stdint.h>
 #include <stdarg.h>
 #include <string.h>
-#include <stdio.h>
 #include <stdbool.h>
+#include <types.h>
+#include <PowerPC_EABI_Support/MSL_C/MSL_Common/printf.h>
+
 typedef struct
 {
     /* data */
@@ -22,7 +26,6 @@ typedef struct
     char text[];
 } TextObject;
 
-
 void SetDebugFloat(int val, int index);
 void SetDebugText(char* inputString);
 static FloatData* debugFloat = (FloatData*)0x80317800;
@@ -30,8 +33,8 @@ static bool* runSecondFloat = (bool*)0x80317804; //0x80317804s;
 static char* debugString = (char*)0x80317900;//0x80317900
 extern void* malloc (size_t size);
 extern void OnActivate(int param_1);
-
-void SetDebugText(char* inputString) {
+void SetDebugText(char* inputString) 
+{
     // Base memory address to start from
     char* baseAddress = (char*)0x80317900;
     int stringLength = strlen(inputString);
@@ -48,8 +51,6 @@ void SetDebugFloat(int val, int index)
 {
     switch (index)
     {
-
-
     case 4:/* constant-expression */
     /* code */
         debugFloat->e = val;
@@ -69,7 +70,7 @@ void SetDebugFloat(int val, int index)
 
     default:
         debugFloat->a = val;
-
         break;
     }
 }
+#endif

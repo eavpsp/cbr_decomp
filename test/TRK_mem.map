@@ -1,0 +1,62 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+                0x00000000803f0280                . = 0x803f0280
+
+.text           0x00000000803f0280       0x58
+ *(.text)
+ .text          0x00000000803f0280       0x58 TRK_mem.o
+                0x00000000803f0280                TRK_memcpy
+                0x00000000803f02a8                TRK_memset
+
+.glink          0x00000000803f02d8        0x0
+ .glink         0x00000000803f02d8        0x0 TRK_mem.o
+
+.rodata
+ *(.rodata*)
+
+.eh_frame       0x00000000803f02d8       0x4c
+ .eh_frame      0x00000000803f02d8       0x4c TRK_mem.o
+
+.eh_frame       0x00000000803f0324        0x0
+ .eh_frame      0x00000000803f0324        0x0 TRK_mem.o
+
+.sdata2         0x00000000803f0324        0x0
+ .sdata2        0x00000000803f0324        0x0 TRK_mem.o
+
+.rela.dyn       0x00000000803f0324        0x0
+ .rela.iplt     0x00000000803f0324        0x0 TRK_mem.o
+
+.bss            0x00000000803f0324        0x0
+ .bss           0x00000000803f0324        0x0 TRK_mem.o
+
+.iplt           0x00000000803f0330        0x0
+ .iplt          0x00000000803f0330        0x0 TRK_mem.o
+
+.data           0x00000000803f0324        0x0
+ *(.data)
+ .data          0x00000000803f0324        0x0 TRK_mem.o
+
+.branch_lt      0x00000000803f0324        0x0
+ .branch_lt     0x00000000803f0324        0x0 TRK_mem.o
+                0x00000000803f032c                . = (. + 0x8)
+
+.sdata          0x00000000803f032c        0x0
+ *(.sdata)
+ .sdata         0x00000000803f032c        0x0 TRK_mem.o
+                0x0000000080149754                OnActivate = 0x80149754
+                0x0000000080158f54                strlen = 0x80158f54
+                0x0000000080158e9c                strcpy = 0x80158e9c
+                0x00000000801d5f80                malloc = 0x801d5f80
+                0x00000000801569e0                vprintf = 0x801569e0
+LOAD TRK_mem.o
+OUTPUT(obj_TRK_mem.o elf32-powerpc)
+
+.comment        0x0000000000000000       0x23
+ .comment       0x0000000000000000       0x23 TRK_mem.o
+                                         0x24 (size before relaxing)

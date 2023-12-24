@@ -6,57 +6,55 @@ Name             Origin             Length             Attributes
 
 Linker script and memory map
 
-                0x0000000080156888                _sprintf = 0x80156888
-                0x00000000800054ec                __init_hardware = 0x800054ec
                 0x00000000803f0280                . = 0x803f0280
 
-.text           0x00000000803f0280      0x110
+.text           0x00000000803f0280      0x134
  *(.text)
- .text          0x00000000803f0280      0x110 ConstructorHelper.o
+ .text          0x00000000803f0280      0x134 ConstructorHelper.o
                 0x00000000803f0280                SetDebugText
                 0x00000000803f02dc                SetDebugFloat
-                0x00000000803f0350                TestClassInMemory
-                0x00000000803f0354                OnLoad
+                0x00000000803f0350                TRK_memcpy
+                0x00000000803f0378                OnLoad
 
-.glink          0x00000000803f0390        0x0
- .glink         0x00000000803f0390        0x0 ConstructorHelper.o
+.glink          0x00000000803f03b4        0x0
+ .glink         0x00000000803f03b4        0x0 ConstructorHelper.o
 
 .rodata
  *(.rodata*)
 
-.eh_frame       0x00000000803f0390       0x80
- .eh_frame      0x00000000803f0390       0x80 ConstructorHelper.o
+.eh_frame       0x00000000803f03b4       0x80
+ .eh_frame      0x00000000803f03b4       0x80 ConstructorHelper.o
 
-.eh_frame       0x00000000803f0410        0x0
- .eh_frame      0x00000000803f0410        0x0 ConstructorHelper.o
+.eh_frame       0x00000000803f0434        0x0
+ .eh_frame      0x00000000803f0434        0x0 ConstructorHelper.o
 
-.sdata2         0x00000000803f0410        0x0
- .sdata2        0x00000000803f0410        0x0 ConstructorHelper.o
+.sdata2         0x00000000803f0434        0x0
+ .sdata2        0x00000000803f0434        0x0 ConstructorHelper.o
 
-.rela.dyn       0x00000000803f0410        0x0
- .rela.iplt     0x00000000803f0410        0x0 ConstructorHelper.o
+.rela.dyn       0x00000000803f0434        0x0
+ .rela.iplt     0x00000000803f0434        0x0 ConstructorHelper.o
 
-.bss            0x00000000803f0410        0x0
- .bss           0x00000000803f0410        0x0 ConstructorHelper.o
+.bss            0x00000000803f0434        0x0
+ .bss           0x00000000803f0434        0x0 ConstructorHelper.o
 
-.sbss           0x00000000803f0410        0x1
- .sbss          0x00000000803f0410        0x1 ConstructorHelper.o
-                0x00000000803f0410                started
+.sbss           0x00000000803f0434        0x1
+ .sbss          0x00000000803f0434        0x1 ConstructorHelper.o
+                0x00000000803f0434                started
 
-.iplt           0x00000000803f0420        0x0
- .iplt          0x00000000803f0420        0x0 ConstructorHelper.o
+.iplt           0x00000000803f0440        0x0
+ .iplt          0x00000000803f0440        0x0 ConstructorHelper.o
 
-.data           0x00000000803f0411        0x0
+.data           0x00000000803f0435        0x0
  *(.data)
- .data          0x00000000803f0411        0x0 ConstructorHelper.o
+ .data          0x00000000803f0435        0x0 ConstructorHelper.o
 
-.branch_lt      0x00000000803f0414        0x0
- .branch_lt     0x00000000803f0414        0x0 ConstructorHelper.o
-                0x00000000803f041c                . = (. + 0x8)
+.branch_lt      0x00000000803f0438        0x0
+ .branch_lt     0x00000000803f0438        0x0 ConstructorHelper.o
+                0x00000000803f0440                . = (. + 0x8)
 
-.sdata          0x00000000803f0419        0x0
+.sdata          0x00000000803f043d        0x0
  *(.sdata)
- .sdata         0x00000000803f0419        0x0 ConstructorHelper.o
+ .sdata         0x00000000803f043d        0x0 ConstructorHelper.o
                 0x0000000080149754                OnActivate = 0x80149754
                 0x0000000080158f54                strlen = 0x80158f54
                 0x0000000080158e9c                strcpy = 0x80158e9c

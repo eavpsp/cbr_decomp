@@ -2,38 +2,6 @@
 
 .section .init, "ax"  # 0x80003100 - 0x80005600 ; 0x00002500
 
-
-.global TRK_memset
-TRK_memset:
-/* 80003100 00000100  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 80003104 00000104  7C 08 02 A6 */	mflr r0
-/* 80003108 00000108  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8000310C 0000010C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80003110 00000110  7C 7F 1B 78 */	mr r31, r3
-/* 80003114 00000114  48 14 A4 49 */	bl TRK_fill_mem
-/* 80003118 00000118  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 8000311C 0000011C  7F E3 FB 78 */	mr r3, r31
-/* 80003120 00000120  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 80003124 00000124  7C 08 03 A6 */	mtlr r0
-/* 80003128 00000128  38 21 00 10 */	addi r1, r1, 0x10
-/* 8000312C 0000012C  4E 80 00 20 */	blr
-
-.global TRK_memcpy
-TRK_memcpy:
-/* 80003130 00000130  38 84 FF FF */	addi r4, r4, -0x1
-/* 80003134 00000134  38 C3 FF FF */	addi r6, r3, -0x1
-/* 80003138 00000138  38 A5 00 01 */	addi r5, r5, 0x1
-/* 8000313C 0000013C  48 00 00 0C */	b gTRKInterruptVectorTableFunc
-lbl_80003140:
-/* 80003140 00000140  8C 04 00 01 */	lbzu r0, 0x1(r4)
-/* 80003144 00000144  9C 06 00 01 */	stbu r0, 0x1(r6)
-
-.global gTRKInterruptVectorTableFunc
-gTRKInterruptVectorTableFunc:
-/* 80003148 00000148  34 A5 FF FF */	addic. r5, r5, -0x1
-/* 8000314C 0000014C  40 82 FF F4 */	bne lbl_80003140
-/* 80003150 00000150  4E 80 00 20 */	blr
-
 .global gTRKInterruptVectorTable
 gTRKInterruptVectorTable:
 /* 80003154 00000154  4D 65 74 72 */	.4byte 0x4D657472  /* <illegal> */

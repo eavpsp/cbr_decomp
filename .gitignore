@@ -31,3 +31,5 @@ moveDol.bat
 /src/TRK/TRK_memory.c
 /src/TRK/TRK_mem.s
 /src/TRK/TRK_header.s
+*.rar
+/test/.vscode

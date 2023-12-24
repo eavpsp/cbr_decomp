@@ -1,5 +1,3 @@
-_sprintf = 0x80156888;
-__init_hardware = 0x800054ec;
 
 SECTIONS
 {
