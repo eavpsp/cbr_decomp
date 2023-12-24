@@ -23,13 +23,14 @@ typedef struct
 } TextObject;
 
 
-extern void SetDebugFloat(int val, int index);
-extern void SetDebugText(char* inputString);
+void SetDebugFloat(int val, int index);
+void SetDebugText(char* inputString);
 static FloatData* debugFloat = (FloatData*)0x80317800;
 static bool* runSecondFloat = (bool*)0x80317804; //0x80317804s;
 static char* debugString = (char*)0x80317900;//0x80317900
+extern void* malloc (size_t size);
 extern void OnActivate(int param_1);
-extern void OSReport(const char* fmt, ...);
+
 void SetDebugText(char* inputString) {
     // Base memory address to start from
     char* baseAddress = (char*)0x80317900;

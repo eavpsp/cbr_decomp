@@ -1,53 +1,5 @@
-
 OnActivate = 0x80149754;
-OSExecp = 0x801619bc;
 strlen = 0x80158f54;
-GetPlayer = 0x800b2284;
-RenderScene = 0x8000c450;
-CGameCreateScene = 0x800197a4;
-DVDClose = 0x8016dae8;
-DCInvalidateRange = 0x80162f7c;
-InitSceneActor = 0x80132d9c;
-ParseTextStream = 0x801968bc;
-ReadArchive = 0x8018d0d0;
-HandleCollisionAndParticleGeneration = 0x800c21a0;
-InitializeObjectAndHandleCollision = 0x800c2a14;
-HandleCJObjVecData = 0x800d3f14;
-GXSetTexCoordGen2 = 0x80187164;
-ProcessEventCommand = 0x8007e97c;
-moveChibiRobo = 0x800a0bd8;
-InitTextBox = 0x80081c74;
-zz_800749dc_ = 0x800749dc;
-GetFlag = 0x8007caac;
-UpdateGameState = 0x8000facc;
-HandleScreenMSG = 0x80072224;
-SetMsgWindow = 0x8001ae74;
 strcpy = 0x80158e9c;
 malloc = 0x801d5f80;
-memcpy = 0x8000519C;
-processTextCacheData = 0x80086484;
-initGameString = 0x80099224;
-RenderVisual = 0x8002ac68;
-OverwriteCollision = 0x800b5e34;
-initializeObjectDataAndResetValues_800929c4_ = 0x800929c4;
-allocate_mem = 0x801d5f80;
-initXobjChrObjectVectors = 0x800bb77c;
-process_matrices_and_objects = 0x800a30ec;
-initXobjChrObjectVectors = 0x800bb77c;
-__register_global_object = 0x80150e60;
-SetStageData = 0x80134694;
-initChibiRobo = 0x800bc524;
-InitActorToy = 0x80134280;
-XOBjActorToy__dt = 0x801155b4;
-Class_FBMirror = 0x80019700;
-XObj__ct = 0xC8001B4B4;
-OSReport = 0x8001580c;
-
-
-
-
-
-
-
-
-
+vprintf = 0x801569e0;
