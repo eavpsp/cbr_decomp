@@ -57,6 +57,7 @@ LD      := $(WINE) tools/mwcc_compiler/1.1/mwldeppc.exe
 PPROC   := py tools/postprocess.py
 GLBLASM := py tools/inlineasm/globalasm.py
 MOVEDOL := ./moveDol.bat
+CHECKDOL := ./CheckDOLSize.exe main.dol
 ELF2DOL := tools/elf2dol
 #ELF2DOL := ./elf-dol_converter.bat
 SHA1SUM := sha1sum
@@ -65,7 +66,7 @@ ASMDIFF := ./asmdiff.sh
 # Options
 INCLUDES := -ir src -ir include -Iinclude -Iext/inc
 
-ASFLAGS := -mgekko -I include -mbig-endian --strip-local-absolute   -no-pad-sections -a32
+ASFLAGS := -mgekko -I include -mbig-endian --strip-local-absolute -no-pad-sections -a32
 LDFLAGS := -map $(MAP) -w off -maxerrors 1 -nostdlib
 #CFLAGS  := -g -DGAMECUBE -Cpp_exceptions off -proc gekko -fp hard -fp_contract on -O4,p -msgstyle gcc -maxerrors 1 \
            -pragma "check_header_flags off" -RTTI off -pragma "force_active on" \
@@ -108,6 +109,7 @@ $(DOL): $(ELF) | tools
 	$S$(ELF2DOL) $< $@ $(SDATA_PDHR) $(SBSS_PDHR) $(TARGET_COL)
 #	$S$(SHA1SUM) -c cbr.sha1 || ( rm -f main.dump; $(ASMDIFF) )
 	$S$(MOVEDOL)
+	$S$(CHECKDOL)
 #	$Scp cbr.map main.elf obj/ # needed for diff.py
 clean:
 	rm -f $(DOL) $(ELF) $(MAP) baserom.dump main.dump
