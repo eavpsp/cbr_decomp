@@ -1,5 +1,6 @@
-#include <Dolphin/os.h>
-static u8 Debug_BBA = 0;
+#include <types.h>
+extern void OSReset(int param_1,int param_2,int param_3);
+u8* Debug_BBA = (u8*)0x8065b4e8;
 //.global __check_pad3
 //__check_pad3 :
 //* 800051EC 000021EC  7C 08 02 A6 */	mflr r0
@@ -19,6 +20,7 @@ static u8 Debug_BBA = 0;
 //* 80005220 00002220  38 21 00 08 */	addi r1, r1, 0x8
 //* 80005224 00002224  7C 08 03 A6 */	mtlr r0
 //* 80005228 00002228  4E 80 00 20 */	blr
+//0x80005238
 void __check_pad3(void)
 {
   if ((*(int*)0x800030E4 & 0xeef) == 0xeef)
@@ -32,7 +34,7 @@ void __check_pad3(void)
 //* 8000522C 0000222C  38 00 00 01 */	li r0, 0x1
 //* 80005230 00002230  98 0D 96 28 */	stb r0, -0x69d8(r13)
 //* 80005234 00002234  4E 80 00 20 */	blr
-void __set_debug_bba(void) { Debug_BBA = 1; }
+void __set_debug_bba(void) {Debug_BBA  = 1; }
 
 
 

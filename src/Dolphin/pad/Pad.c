@@ -1,6 +1,5 @@
 #include <Dolphin/os.h>
-extern int DAT_800030e4;
-
+extern u8 DAT_8065b4e8;
 //.global __check_pad3
 //__check_pad3 :
 //* 800051EC 000021EC  7C 08 02 A6 */	mflr r0
@@ -20,14 +19,27 @@ extern int DAT_800030e4;
 //* 80005220 00002220  38 21 00 08 */	addi r1, r1, 0x8
 //* 80005224 00002224  7C 08 03 A6 */	mtlr r0
 //* 80005228 00002228  4E 80 00 20 */	blr
-
-
-
+//0x80005238
 void __check_pad3(void)
-
 {
-  if ((DAT_800030e4 & 0xeef) == 0xeef) {
-    OSReset(0,0,0);
-  }
-  return;
+    if ((*(int*)0x800030E4 & 0xeef) == 0xeef)
+    {
+        OSReset(0, 0, 0);
+    }
+    return;
 }
+//.global __set_debug_bba
+//__set_debug_bba :
+//* 8000522C 0000222C  38 00 00 01 */	li r0, 0x1
+//* 80005230 00002230  98 0D 96 28 */	stb r0, -0x69d8(r13)
+//* 80005234 00002234  4E 80 00 20 */	blr
+void __set_debug_bba(void) { DAT_8065b4e8 = 1; }
+
+
+
+//.global WPADGetDpdSensitivity
+//WPADGetDpdSensitivity :
+//* 80005238 00002238  88 6D 96 28 */	lbz r3, -0x69d8(r13)
+//* 8000523C 0000223C  4E 80 00 20 */	blr
+
+u8 __get_debug_bba(void) { return DAT_8065b4e8; }

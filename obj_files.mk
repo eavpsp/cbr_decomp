@@ -1,10 +1,11 @@
 INIT_O_FILES :=                                     \
-    $(OBJ_DIR)/src/TRK/TRK_memset.o \
-    $(OBJ_DIR)/src/TRK/TRK_memcpy.o \
-    $(OBJ_DIR)/asm/TRK/initTRK.o \
-    $(OBJ_DIR)/src/TRK/TRK_memfuncs.o \
-    $(OBJ_DIR)/asm/dolphin/pad/initPad.o \
-    $(OBJ_DIR)/asm/dolphin/runtime/_startGame.o \
+    $(OBJ_DIR)/src/TRK/mem/TRK_memset.o \
+    $(OBJ_DIR)/src/TRK/mem/TRK_memcpy.o \
+    $(OBJ_DIR)/src/TRK/initTRK.o \
+    $(OBJ_DIR)/src/TRK/mem/TRK_memfuncs.o \
+    $(OBJ_DIR)/src/Dolphin/pad/initPad.o \
+    $(OBJ_DIR)/src/Dolphin/runtime/_startGame.o \
+    $(OBJ_DIR)/src/Dolphin/runtime/__ppc_eabi_init.o \
     
 
 EXTAB_O_FILES :=                                    \
@@ -15,8 +16,8 @@ EXTABINDEX_O_FILES :=                               \
 
 TEXT_O_FILES :=                                     \
     $(OBJ_DIR)/asm/CGame/initCGame.o \
-    $(OBJ_DIR)/asm/TRK/TRK_getBytes.o \
-    $(OBJ_DIR)/asm/jsystem/J3D/J3DTex.o \
+    $(OBJ_DIR)/src/TRK/custconn/CircleBuffer.o \
+    $(OBJ_DIR)/src/unk_uns/J3DTex.o \
     $(OBJ_DIR)/asm/TRK/TRK_updateData.o \
     $(OBJ_DIR)/asm/dolphin/os/OSExi.o \
     $(OBJ_DIR)/asm/dolphin/dvd/dvd.o \
@@ -76,4 +77,3 @@ SDATA2_O_FILES :=                                   \
 	$(BUILD_DIR)/asm/sdata.o\
 	$(BUILD_DIR)/asm/sbss.o\
 	$(BUILD_DIR)/asm/sdata2.o\
-#

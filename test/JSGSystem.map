@@ -1,0 +1,98 @@
+
+Discarded input sections
+
+ .group         0x0000000000000000        0x8 JSGSystem.o
+ .group         0x0000000000000000        0xc JSGSystem.o
+ .group         0x0000000000000000        0xc JSGSystem.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+                0x00000000803f0280                . = 0x803f0280
+
+.text           0x00000000803f0280       0x78
+ *(.text)
+ .text          0x00000000803f0280       0x78 JSGSystem.o
+                0x00000000803f0280                JStage::TSystem::JSGFGetType() const
+                0x00000000803f0288                JStage::TSystem::JSGFindObject(JStage::TObject**, char const*, JStage::TEObject) const
+                0x00000000803f0290                JStage::TSystem::JSGCreateObject(char const*, JStage::TEObject, unsigned long)
+                0x00000000803f0298                JStage::TSystem::JSGDestroyObject(JStage::TObject*)
+                0x00000000803f029c                JStage::TSystem::JSGGetSystemData(unsigned long)
+                0x00000000803f02a4                JStage::TSystem::JSGSetSystemData(unsigned long, unsigned long)
+                0x00000000803f02a8                JStage::TSystem::~TSystem()
+                0x00000000803f02a8                JStage::TSystem::~TSystem()
+                0x00000000803f02b8                JStage::TSystem::~TSystem()
+
+.glink          0x00000000803f02f8        0x0
+ .glink         0x00000000803f02f8        0x0 JSGSystem.o
+
+.rodata         0x00000000803f02f8       0x74
+ *(.rodata*)
+ .rodata._ZTSN6JStage7TSystemE
+                0x00000000803f02f8       0x12 JSGSystem.o
+                0x00000000803f02f8                typeinfo name for JStage::TSystem
+ *fill*         0x00000000803f030a        0x2 
+ .rodata._ZTIN6JStage7TSystemE
+                0x00000000803f030c        0xc JSGSystem.o
+                0x00000000803f030c                typeinfo for JStage::TSystem
+ .rodata._ZTVN6JStage7TSystemE
+                0x00000000803f0318       0x54 JSGSystem.o
+                0x00000000803f0318                vtable for JStage::TSystem
+
+.eh_frame       0x00000000803f036c       0xc8
+ .eh_frame      0x00000000803f036c       0xc8 JSGSystem.o
+
+.eh_frame       0x00000000803f0434        0x0
+ .eh_frame      0x00000000803f0434        0x0 JSGSystem.o
+
+.sdata2         0x00000000803f0434        0x0
+ .sdata2        0x00000000803f0434        0x0 JSGSystem.o
+
+.rela.dyn       0x00000000803f0434        0x0
+ .rela.iplt     0x00000000803f0434        0x0 JSGSystem.o
+ .rela.text     0x00000000803f0434        0x0 JSGSystem.o
+ .rela.rodata._ZTIN6JStage7TSystemE
+                0x00000000803f0434        0x0 JSGSystem.o
+ .rela.rodata._ZTVN6JStage7TSystemE
+                0x00000000803f0434        0x0 JSGSystem.o
+
+.data           0x00000000803f0434        0x0
+ *(.data)
+ .data          0x00000000803f0434        0x0 JSGSystem.o
+
+.branch_lt      0x00000000803f0434        0x0
+ .branch_lt     0x00000000803f0434        0x0 JSGSystem.o
+                0x00000000803f043c                . = (. + 0x8)
+
+.sdata          0x00000000803f043c        0x0
+ *(.sdata)
+ .sdata         0x00000000803f043c        0x0 JSGSystem.o
+                0x0000000080149754                OnActivate = 0x80149754
+                0x0000000080158f54                strlen = 0x80158f54
+                0x0000000080158e9c                strcpy = 0x80158e9c
+                0x00000000801d5f80                malloc = 0x801d5f80
+                0x00000000801569e0                vprintf = 0x801569e0
+LOAD JSGSystem.o
+OUTPUT(obj_JSGSystem.o elf32-powerpc)
+
+.bss            0x00000000803f043c        0x0
+ .bss           0x00000000803f043c        0x0 JSGSystem.o
+
+.sbss           0x00000000803f043c       0x14
+ .sbss          0x00000000803f043c       0x14 JSGSystem.o
+                0x00000000803f043c                __OSCurrentInterruptMask
+                0x00000000803f0440                __OSPriorInterruptMask
+                0x00000000803f0444                __OSDeviceCode
+                0x00000000803f0448                __OSCoreClock
+                0x00000000803f044c                __OSBusClock
+
+.iplt           0x00000000803f0450        0x0
+ .iplt          0x00000000803f0450        0x0 JSGSystem.o
+
+.comment        0x0000000000000000       0x23
+ .comment       0x0000000000000000       0x23 JSGSystem.o
+                                         0x24 (size before relaxing)

@@ -8,12 +8,27 @@ Linker script and memory map
 
                 0x00000000803f0280                . = 0x803f0280
 
-.text           0x00000000803f0280       0x48
+.text           0x00000000803f0280        0x0
  *(.text)
- .text          0x00000000803f0280       0x48 Pad.o
+ .text          0x00000000803f0280        0x0 Pad.o
+
+.text.__check_pad3
+                0x00000000803f0280       0x28
+ .text.__check_pad3
+                0x00000000803f0280       0x28 Pad.o
                 0x00000000803f0280                __check_pad3
-                0x00000000803f02ac                __set_debug_bba
-                0x00000000803f02bc                __get_debug_bba
+
+.text.__set_debug_bba
+                0x00000000803f02a8       0x10
+ .text.__set_debug_bba
+                0x00000000803f02a8       0x10 Pad.o
+                0x00000000803f02a8                __set_debug_bba
+
+.text.__get_debug_bba
+                0x00000000803f02b8       0x10
+ .text.__get_debug_bba
+                0x00000000803f02b8       0x10 Pad.o
+                0x00000000803f02b8                __get_debug_bba
 
 .glink          0x00000000803f02c8        0x0
  .glink         0x00000000803f02c8        0x0 Pad.o
@@ -33,38 +48,29 @@ Linker script and memory map
 .rela.dyn       0x00000000803f0318        0x0
  .rela.iplt     0x00000000803f0318        0x0 Pad.o
 
-.bss            0x00000000803f0318        0x1
- .bss           0x00000000803f0318        0x1 Pad.o
+.bss            0x00000000803f0318        0x0
+ .bss           0x00000000803f0318        0x0 Pad.o
 
-.sbss           0x00000000803f031c       0x30
- .sbss          0x00000000803f031c       0x30 Pad.o
-                0x00000000803f031c                __OSTVMode
-                0x00000000803f0320                GameChoice
-                0x00000000803f0322                __OSWirelessPadFixMode
-                0x00000000803f0324                __OSCurrentInterruptMask
-                0x00000000803f0328                __OSPriorInterruptMask
-                0x00000000803f032c                __OSCurrentThread
-                0x00000000803f0330                __OSActiveThreadQueue
-                0x00000000803f0338                __OSFPUContext
-                0x00000000803f033c                __OSCurrentContext
-                0x00000000803f0340                __OSDeviceCode
-                0x00000000803f0344                __OSCoreClock
-                0x00000000803f0348                __OSBusClock
+.iplt           0x00000000803f0320        0x0
+ .iplt          0x00000000803f0320        0x0 Pad.o
 
-.iplt           0x00000000803f0350        0x0
- .iplt          0x00000000803f0350        0x0 Pad.o
-
-.data           0x00000000803f034c        0x0
+.data           0x00000000803f0318        0x0
  *(.data)
- .data          0x00000000803f034c        0x0 Pad.o
+ .data          0x00000000803f0318        0x0 Pad.o
 
-.branch_lt      0x00000000803f034c        0x0
- .branch_lt     0x00000000803f034c        0x0 Pad.o
-                0x00000000803f0354                . = (. + 0x8)
+.sdata.Debug_BBA
+                0x00000000803f0318        0x4
+ .sdata.Debug_BBA
+                0x00000000803f0318        0x4 Pad.o
+                0x00000000803f0318                Debug_BBA
 
-.sdata          0x00000000803f0354        0x0
+.branch_lt      0x00000000803f031c        0x0
+ .branch_lt     0x00000000803f031c        0x0 Pad.o
+                0x00000000803f0324                . = (. + 0x8)
+
+.sdata          0x00000000803f0324        0x0
  *(.sdata)
- .sdata         0x00000000803f0354        0x0 Pad.o
+ .sdata         0x00000000803f0324        0x0 Pad.o
                 0x0000000080149754                OnActivate = 0x80149754
                 0x0000000080158f54                strlen = 0x80158f54
                 0x0000000080158e9c                strcpy = 0x80158e9c

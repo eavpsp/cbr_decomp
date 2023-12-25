@@ -56,8 +56,8 @@ CC      := $(WINE) tools/mwcc_compiler/1.2.5/mwcceppc.exe
 LD      := $(WINE) tools/mwcc_compiler/1.1/mwldeppc.exe
 PPROC   := py tools/postprocess.py
 GLBLASM := py tools/inlineasm/globalasm.py
-MOVEDOL := ./moveDol.bat
-CHECKDOL := ./CheckDOLSize.exe main.dol
+MOVEDOL := tools/moveDol.bat
+CHECKDOL := tools/CheckDOLSize.exe main.dol
 ELF2DOL := tools/elf2dol
 #ELF2DOL := ./elf-dol_converter.bat
 SHA1SUM := sha1sum
@@ -108,9 +108,10 @@ $(DOL): $(ELF) | tools
 	@echo " ELF2DOL "$@
 	$S$(ELF2DOL) $< $@ $(SDATA_PDHR) $(SBSS_PDHR) $(TARGET_COL)
 #	$S$(SHA1SUM) -c cbr.sha1 || ( rm -f main.dump; $(ASMDIFF) )
-	$S$(MOVEDOL)
 	$S$(CHECKDOL)
 #	$Scp cbr.map main.elf obj/ # needed for diff.py
+move:
+	$S$(MOVEDOL)
 clean:
 	rm -f $(DOL) $(ELF) $(MAP) baserom.dump main.dump
 	rm -rf .pragma obj
