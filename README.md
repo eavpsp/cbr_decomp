@@ -10,7 +10,9 @@ Goal
 This is currently a solo project. I work a lot and barely have time to code or be with my cats. Please feel free to support this project:
 https://www.buymeacoffee.com/itsemistro
 
-It builds the following DOL: cbr.usa.dol: sha1: 103c68e107b691d905306ecb6bbc43ea44893157
+It builds an NON matching dol file.
+
+If your goal is to compile a complete matching rom fork this from the initial upload.
 
 ---
 Building
