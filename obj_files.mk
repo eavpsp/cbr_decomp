@@ -17,7 +17,7 @@ EXTABINDEX_O_FILES :=                               \
 TEXT_O_FILES :=                                     \
     $(OBJ_DIR)/asm/CGame/initCGame.o \
     $(OBJ_DIR)/src/TRK/custconn/CircleBuffer.o \
-    $(OBJ_DIR)/src/unk_uns/J3DTex.o \
+    $(OBJ_DIR)/src/unk_uns/J3DGraphBase/J3DTex.o \
     $(OBJ_DIR)/asm/TRK/TRK_updateData.o \
     $(OBJ_DIR)/asm/dolphin/os/OSExi.o \
     $(OBJ_DIR)/asm/dolphin/dvd/dvd.o \
