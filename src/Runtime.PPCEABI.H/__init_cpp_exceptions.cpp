@@ -5,7 +5,7 @@ extern void suspend(void);
 static int fragmentID = -2;		
 extern void __exception_info_constants(void **info, char **R2)
 {
-	register char *temp;				/* r2 register contents								*/
+	register char *temp;
 
 	asm {
 		mr      temp,r2
@@ -39,25 +39,15 @@ extern void __init_cpp_exceptions(void)
 	void *info;
 	 
 	if (fragmentID == -2) {
-	/* use suspend with some OSes */
+	
 #ifdef TERMINATE_WITH_SUSPEND
 		set_terminate(suspend);
 #endif
 
-		/* the variable _eti_init_info is a table with a row for each code segment
-		 * that contains functions that have exception info.  _eti_init_info holds
-		 * exception info for only one process.  register r2 and the (possible
-		 * runtime/linktime delta are constant for each process.
-		 */
 		__exception_info_constants(&info, &R2);
-
-		/*
-		 *	initialize exception tables
-		 */
 		fragmentID = __register_fragment((struct __eti_init_info *)info, R2);
 	}
 }
-
 extern void __fini_cpp_exceptions(void)
 {
 	if (fragmentID != -2) {
