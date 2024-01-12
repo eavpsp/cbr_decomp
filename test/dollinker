@@ -1,0 +1,22 @@
+
+SECTIONS
+{
+    . = 0x803f0280;
+    .text : 
+    {
+        *(.text)
+    }
+	.rodata :
+	{
+		*(.rodata*)
+	}
+	.data :
+	{
+		*(.data)
+	}
+	. += 0x08;
+	.sdata :
+	{
+		*(.sdata)
+	}
+}

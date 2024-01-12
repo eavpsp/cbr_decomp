@@ -1,0 +1,68 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+                0x00000000803f0280                . = 0x803f0280
+
+.text           0x00000000803f0280      0x134
+ *(.text)
+ .text          0x00000000803f0280      0x134 ConstructorHelper.o
+                0x00000000803f0280                SetDebugText
+                0x00000000803f02dc                SetDebugFloat
+                0x00000000803f0350                TRK_memcpy
+                0x00000000803f0378                OnLoad
+
+.glink          0x00000000803f03b4        0x0
+ .glink         0x00000000803f03b4        0x0 ConstructorHelper.o
+
+.rodata
+ *(.rodata*)
+
+.eh_frame       0x00000000803f03b4       0x80
+ .eh_frame      0x00000000803f03b4       0x80 ConstructorHelper.o
+
+.eh_frame       0x00000000803f0434        0x0
+ .eh_frame      0x00000000803f0434        0x0 ConstructorHelper.o
+
+.sdata2         0x00000000803f0434        0x0
+ .sdata2        0x00000000803f0434        0x0 ConstructorHelper.o
+
+.rela.dyn       0x00000000803f0434        0x0
+ .rela.iplt     0x00000000803f0434        0x0 ConstructorHelper.o
+
+.bss            0x00000000803f0434        0x0
+ .bss           0x00000000803f0434        0x0 ConstructorHelper.o
+
+.sbss           0x00000000803f0434        0x1
+ .sbss          0x00000000803f0434        0x1 ConstructorHelper.o
+                0x00000000803f0434                started
+
+.iplt           0x00000000803f0440        0x0
+ .iplt          0x00000000803f0440        0x0 ConstructorHelper.o
+
+.data           0x00000000803f0435        0x0
+ *(.data)
+ .data          0x00000000803f0435        0x0 ConstructorHelper.o
+
+.branch_lt      0x00000000803f0438        0x0
+ .branch_lt     0x00000000803f0438        0x0 ConstructorHelper.o
+                0x00000000803f0440                . = (. + 0x8)
+
+.sdata          0x00000000803f043d        0x0
+ *(.sdata)
+ .sdata         0x00000000803f043d        0x0 ConstructorHelper.o
+                0x0000000080149754                OnActivate = 0x80149754
+                0x0000000080158f54                strlen = 0x80158f54
+                0x0000000080158e9c                strcpy = 0x80158e9c
+                0x00000000801d5f80                malloc = 0x801d5f80
+                0x00000000801569e0                vprintf = 0x801569e0
+LOAD ConstructorHelper.o
+OUTPUT(obj_ConstructorHelper.o elf32-powerpc)
+
+.comment        0x0000000000000000       0x23
+ .comment       0x0000000000000000       0x23 ConstructorHelper.o
+                                         0x24 (size before relaxing)

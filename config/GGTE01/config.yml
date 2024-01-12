@@ -1,9 +1,0 @@
-# See config.example.yml for documentation.
-name: Start
-object: orig/GGTE01/sys/main.dol
-symbols: config/GGTE01/symbols.txt
-splits: config/GGTE01/splits.txt
-#ldscript_template: config/GGTE01/ldscript.lcf
-mw_comment_version: 8
-
-
