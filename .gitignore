@@ -10,3 +10,4 @@ orig/*/*
 !orig/*/.gitkeep
 /*.txt
 ctx.c
+README.example.md

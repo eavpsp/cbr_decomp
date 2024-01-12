@@ -1,5 +1,7 @@
-# CBR_Decomp ![alt text](https://img.shields.io/badge/Code-2%25-blue) ![alt text](https://img.shields.io/badge/Symbols_Defined-60%25-blue) ![alt text](https://img.shields.io/badge/Data-5%25-blue)
 Chibi-Robo: PIA disassembly/decompilation to C++/C
+
+[![Build Status]][actions] ![Progress] ![DOL Progress] ![RELs Progress] [![Discord Badge]][discord]
+=============
 
 ---
 Goal
@@ -14,9 +16,7 @@ It builds an NON matching dol file.
 
 If your goal is to compile a complete matching rom fork this from the initial upload.
 
-Chibi Robo- Plug Into Adventure 
-[![Build Status]][actions] ![Progress] ![DOL Progress] ![RELs Progress] [![Discord Badge]][discord]
-=============
+
 
 <!--
 Replace with your repository's URL.
