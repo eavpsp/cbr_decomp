@@ -19,6 +19,7 @@ Dolphin/TRK_MINNOW_DOLPHIN/mem_TRK.c:
 
 Runtime.PPCEABI.H/global_destructor_chain.c:
 	.text       start:0x80150E18 end:0x80150E60
+	.text       start:0x80150E60 end:0x80150E78
 	.dtors      start:0x801FD6C8 end:0x801FD6CC
 	.sbss       start:0x8065B390 end:0x8065B394
 
