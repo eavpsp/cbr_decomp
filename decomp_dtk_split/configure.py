@@ -206,7 +206,7 @@ def Rel(lib_name, objects):
 
 
 Matching = True
-NonMatching = True
+NonMatching = False
 
 config.warn_missing_config = True
 config.warn_missing_source = False
@@ -217,8 +217,8 @@ config.libs = [
         "cflags": cflags_runtime,
         "host": False,
         "objects": [
-            Object(NonMatching, "Runtime.PPCEABI.H/__init_cpp_exceptions.cpp"),
-            Object(NonMatching, "Runtime.PPCEABI.H/global_destructor_chain.c"),
+            Object(Matching, "Runtime.PPCEABI.H/__init_cpp_exceptions.cpp"),
+            Object(Matching, "Runtime.PPCEABI.H/global_destructor_chain.c"),
            
         ],
     },
@@ -228,11 +228,11 @@ config.libs = [
         "cflags": cflags_runtime,
         "host": False,
         "objects": [
-            Object(NonMatching, "Dolphin/TRK_MINNOW_DOLPHIN/mem_TRK.c"),
+            Object(Matching, "Dolphin/TRK_MINNOW_DOLPHIN/mem_TRK.c"),
             #Object(NonMatching, "Dolphin/TRK_MINNOW_DOLPHIN/_exception.s"),
-            Object(NonMatching, "Dolphin/Runtime/__mem.c"),
-            Object(NonMatching, "Dolphin/os/__start.c"),
-            Object(NonMatching, "Dolphin/os/__ppc_eabi_init.cpp"),
+            Object(Matching, "Dolphin/Runtime/__mem.c"),
+            Object(Matching, "Dolphin/os/__start.c"),
+            Object(Matching, "Dolphin/os/__ppc_eabi_init.cpp"),
             
         ],
     },
