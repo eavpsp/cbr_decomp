@@ -132,15 +132,14 @@ Select an object from the left sidebar to begin diffing. Changes to the project 
 Test Folder:
 ---
 
-Contains tools used in the Super Mario Sunshine C Kit
-Used to inject code into CBR for debugging and testing
+Contains tools to inject code into Chibi-Robo via Gecko Codes for debugging and testing
 
 Includes header files and functions that can be changed! 
 happy modding :)
 
 Usage:
 buildCBR.bat nameOfScript.c
-After compiling and linking, the gecko code with be added to your clipboard. 
+After compiling and linking, the gecko code will be added to your clipboard. 
 Paste the code into dolphin!
 
 

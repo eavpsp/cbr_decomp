@@ -1,0 +1,5 @@
+OnActivate = 0x80149754;
+strlen = 0x80158f54;
+strcpy = 0x80158e9c;
+malloc = 0x801d5f80;
+vprintf = 0x801569e0;
