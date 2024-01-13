@@ -39,6 +39,21 @@ Supported versions:
 
 - `GGTE01`: Rev 0 (USA)
 
+---
+Goal
+---
+ The goal of this project is to get a PC, Switch, PS4, and PS Vita port of Chibi-Robo PIA.
+ As you all know, Nintendo has probably buried this game, but developers like myself will make sure that Chibi is rebooted. Thanks again for stopping by.
+
+This is currently a solo project. I work a lot and barely have time to code or be with my cats. Please feel free to support this project:
+https://www.buymeacoffee.com/itsemistro
+
+It builds an NON matching dol file.
+
+If your goal is to compile a complete matching rom fork this from the initial upload.
+
+
+
 Dependencies
 ============
 
