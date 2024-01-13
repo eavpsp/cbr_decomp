@@ -11,10 +11,10 @@
 #
 # Append --help to see available options.
 ###
-import os
+
 import sys
 import argparse
-import subprocess
+
 
 from pathlib import Path
 from tools.project import (
@@ -217,8 +217,8 @@ config.libs = [
         "cflags": cflags_runtime,
         "host": False,
         "objects": [
-            Object(Matching, "Runtime.PPCEABI.H/__init_cpp_exceptions.cpp"),
-            Object(Matching, "Runtime.PPCEABI.H/global_destructor_chain.c"),
+            Object(NonMatching, "Runtime.PPCEABI.H/__init_cpp_exceptions.cpp"),
+            Object(NonMatching, "Runtime.PPCEABI.H/global_destructor_chain.c"),
            
         ],
     },
@@ -228,11 +228,10 @@ config.libs = [
         "cflags": cflags_runtime,
         "host": False,
         "objects": [
-            Object(Matching, "Dolphin/TRK_MINNOW_DOLPHIN/mem_TRK.c"),
-            #Object(NonMatching, "Dolphin/TRK_MINNOW_DOLPHIN/_exception.s"),
-            Object(Matching, "Dolphin/Runtime/__mem.c"),
-            Object(Matching, "Dolphin/os/__start.c"),
-            Object(Matching, "Dolphin/os/__ppc_eabi_init.cpp"),
+             Object(NonMatching, "Dolphin/TRK_MINNOW_DOLPHIN/mem_TRK.c"),
+             Object(NonMatching, "Dolphin/Runtime/__mem.c"),
+             Object(NonMatching, "Dolphin/os/__start.c"),
+             Object(NonMatching, "Dolphin/os/__ppc_eabi_init.cpp"),
             
         ],
     },

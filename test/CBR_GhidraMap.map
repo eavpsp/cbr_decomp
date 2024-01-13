@@ -81,8 +81,10 @@
   8000542c 0000c0 8000542c  4 __init_data 	Global
   800054ec 000024 800054ec  4 __init_hardware 	Global
   80005510 000034 80005510  4 __flush_cache 	Global
+  80005544 000001 80005544  8 rom_copy_info 	Global
   8000554c 000001 8000554c  8 INT_8000554c 	Global
   80005558 000001 80005558  8 INT_80005558 	Global
+  800055c8 000001 800055c8  8 bss_init_info 	Global
   800055cc 000001 800055cc  8 INT_800055cc 	Global
   800055d4 000001 800055d4  8 INT_800055d4 	Global
   80007880 0006bc 80007880  4 CGameScene__dt 	Global
@@ -146,7 +148,7 @@
   8000c450 0006fc 8000c450  4 RenderScene 	Global
   8000cb4c 000074 8000cb4c  4 CalculateDesireChance 	Global
   8000cbc0 000008 8000cbc0  4 J3DAnmCluster::getWeight(unsigned 	short)
-  8000cbc8 00002c 8000cbc8  4 AddToLinkedListIfNotPresent 	Global
+  8000cbc8 00002c 8000cbc8  4 HSD_InitShadow 	Global
   8000cbf4 0001a8 8000cbf4  4 ProcessObjectWithBoxLengths 	Global
   8000cd9c 000004 8000cd9c  4 DBClose 	NdevExi2A
   8000cda0 00028c 8000cda0  4 UpdateWorld 	Global
@@ -215,7 +217,7 @@
   80015634 000004 80015634  4 DBClose 	NdevExi2A
   80015638 000008 80015638  4 gdev_cc_shutdown 	TRK_Hollywood_Revolution
   80015640 000004 80015640  4 DBClose 	NdevExi2A
-  80015644 0001c8 80015644  4 systemStart 	Global
+  80015644 0001c8 80015644  4 main 	Global
   800157f4 000001 800157f4  8 nintendoInputLoop 	Global
   8001580c 000050 8001580c  4 OSReport 	Global
   8001585c 00001c 8001585c  4 SetObjectPositions 	Global
@@ -418,7 +420,7 @@
   8001cea0 00005c 8001cea0  4 FormationOffensive::__dt(void) 	Global
   8001cefc 0000d4 8001cefc  4 InitializeMainLightObject 	Global
   8001cfd0 0001d0 8001cfd0  4 InitializeLights 	Global
-  8001d1a0 000030 8001d1a0  4 zz_8001d1a0_ 	Global
+  8001d1a0 000030 8001d1a0  4 MoveLight 	Global
   8001d1d0 0000cc 8001d1d0  4 InitializeDataForObject 	Global
   8001d29c 000034 8001d29c  4 zz_8001d29c_ 	Global
   8001d2d0 0000f4 8001d2d0  4 ProcessSceneObject 	Global
@@ -1163,7 +1165,7 @@
   800a3d34 000254 800a3d34  4 zz_800a3d34_ 	Global
   800a3f88 0005ec 800a3f88  4 zz_800a3f88_ 	Global
   800a4574 000044 800a4574  4 GetViewportAspectRatio_ 	Global
-  800a45b8 0000c0 800a45b8  4 zz_800a45b8_ 	Global
+  800a45b8 0000c0 800a45b8  4 HSD_AddShadowObjects 	Global
   800a4678 0003e8 800a4678  4 zz_800a4678_ 	Global
   800a4a60 000a9c 800a4a60  4 zz_800a4a60_ 	Global
   800a54fc 000020 800a54fc  4 cPlayer::PostPhysicsUpdate(void) 	Global
@@ -2025,7 +2027,7 @@
   80133e84 000038 80133e84  4 __arraydtor$381 	Global
   80133ebc 000084 80133ebc  4 SetXObjSpider 	Global
   80133f40 000038 80133f40  4 __arraydtor$381 	Global
-  80133f78 000088 80133f78  4 SetXObjArmy 	Global
+  80133f78 000088 80133f78  4 XObjArmy__ct 	Global
   80134000 000014 80134000  4 zz_80134000_ 	Global
   80134014 000038 80134014  4 __arraydtor$381 	Global
   8013404c 000058 8013404c  4 InitActorDeca 	Global
@@ -2552,12 +2554,12 @@
   8015bf98 000214 8015bf98  4 __kernel_tan 	Global
   8015c1ac 000218 8015c1ac  4 atan 	Global
   8015c3c4 000028 8015c3c4  4 copysign 	Global
-  8015c3ec 0000d4 8015c3ec  4 compute_cos_or_sin_value 	Global
+  8015c3ec 0000d4 8015c3ec  4 cosf 	Global
   8015c4c0 000148 8015c4c0  4 floor 	Global
   8015c608 00008c 8015c608  4 frexp 	Global
   8015c694 0001c4 8015c694  4 ldexp 	Global
   8015c858 0000fc 8015c858  4 modf 	Global
-  8015c954 0000d8 8015c954  4 sin 	Global
+  8015c954 0000d8 8015c954  4 sinf 	Global
   8015ca2c 000078 8015ca2c  4 tan 	Global
   8015caa4 000020 8015caa4  4 cPlayer::PostPhysicsUpdate(void) 	Global
   8015cac4 000020 8015cac4  4 cPlayer::PostPhysicsUpdate(void) 	Global
@@ -2696,11 +2698,11 @@
   80162898 00006c 80162898  4 OSCreateHeap 	Global
   80162904 000024 80162904  4 zz_80162904_ 	Global
   80162928 000360 80162928  4 zz_80162928_ 	Global
-  80162c88 000008 80162c88  4 IPCGetBufferLo 	ipc
-  80162c90 000008 80162c90  4 IPCGetBufferLo 	ipc
+  80162c88 000008 80162c88  4 OSGetArenaHi 	Global
+  80162c90 000008 80162c90  4 OSGetArenaLo 	Global
   80162c98 000008 80162c98  4 IPCSetBufferLo 	ipc
   80162ca0 000008 80162ca0  4 IPCSetBufferLo 	ipc
-  80162ca8 00002c 80162ca8  4 GenerateNewToken 	Global
+  80162ca8 00002c 80162ca8  4 OSAllocFromArenaLo 	Global
   80162cd4 0001bc 80162cd4  4 __OSInitAudioSystem 	Global
   80162e90 0000d8 80162e90  4 __OSStopAudioSystem 	Global
   80162f68 000014 80162f68  4 DCEnable 	Global
@@ -2784,7 +2786,7 @@
   801680a8 000060 801680a8  4 zz_801680a8_ 	Global
   80168108 0000c8 80168108  4 enqueue_thread_safe 	Global
   801681d0 0000dc 801681d0  4 zz_801681d0_ 	Global
-  801682ac 00000c 801682ac  4 OSGetCurrentContext 	Global
+  801682ac 00000c 801682ac  4 OSGetPhysicalMemSize 	Global
   801682b8 00003c 801682b8  4 OnReset 	Global
   801682f4 00006c 801682f4  4 MEMIntrruptHandler 	Global
   80168360 000080 80168360  4 zz_80168360_ 	Global
@@ -2829,7 +2831,7 @@
   80169c48 0000cc 80169c48  4 zz_80169c48_ 	Global
   80169d14 000070 80169d14  4 zz_80169d14_ 	Global
   80169d84 000028 80169d84  4 zz_80169d84_ 	Global
-  80169dac 00001c 80169dac  4 zz_80169dac_ 	Global
+  80169dac 00001c 80169dac  4 SystemCallVector 	Global
   80169dcc 000064 80169dcc  4 __OSInitSystemCall 	Global
   80169e30 000004 80169e30  4 DBClose 	NdevExi2A
   80169e34 000158 80169e34  4 __OSThreadInit 	Global
@@ -2837,15 +2839,15 @@
   80169f9c 00000c 80169f9c  4 OSGetCurrentContext 	Global
   80169fa8 000034 80169fa8  4 zz_80169fa8_ 	Global
   80169fdc 000040 80169fdc  4 OSDisableScheduler 	Global
-  8016a01c 000040 8016a01c  4 OSDisableScheduler 	Global
+  8016a01c 000040 8016a01c  4 OSEnableScheduler 	Global
   8016a05c 000068 8016a05c  4 UnsetRun 	Global
   8016a0c4 00003c 8016a0c4  4 __OSGetEffectivePriority 	Global
   8016a100 0001c0 8016a100  4 SetEffectivePriority 	Global
   8016a2c0 000228 8016a2c0  4 SelectThread 	Global
   8016a4e8 000030 8016a4e8  4 __OSReschedule 	Global
   8016a518 00003c 8016a518  4 OSYieldThread 	Global
-  8016a554 0001e8 8016a554  4 initialize_instance 	Global
-  8016a73c 0000e4 8016a73c  4 zz_8016a73c_ 	Global
+  8016a554 0001e8 8016a554  4 OSCreateThread 	Global
+  8016a73c 0000e4 8016a73c  4 OSExitThread 	Global
   8016a820 0001bc 8016a820  4 OSCancelThread 	Global
   8016a9dc 000288 8016a9dc  4 OSResumeThread 	Global
   8016ac64 000170 8016ac64  4 OSSuspendThread 	Global
@@ -2876,7 +2878,7 @@
   8016be10 000028 8016be10  4 PSMTXScale 	Global
   8016be38 0000a4 8016be38  4 calculateTransformationMatrix 	Global
   8016bedc 000070 8016bedc  4 transformMatrix 	Global
-  8016bf4c 00018c 8016bf4c  4 compute_transformation_matrix 	Global
+  8016bf4c 00018c 8016bf4c  4 C_MTXLookAt 	Global
   8016c0d8 000094 8016c0d8  4 generateOrthographicProjectionMatrix 	Global
   8016c16c 0000cc 8016c16c  4 generatePerspectiveMatrix 	Global
   8016c238 000088 8016c238  4 computeOrthographicMatrix 	Global
@@ -2889,7 +2891,7 @@
   8016c5f8 000024 8016c5f8  4 PSVECAdd 	mtx
   8016c61c 000024 8016c61c  4 PSVECSubtract 	mtx
   8016c640 00001c 8016c640  4 PSQUATScale 	Global
-  8016c65c 000044 8016c65c  4 normalize_vector3d 	Global
+  8016c65c 000044 8016c65c  4 PSVECNormalize 	Global
   8016c6a0 000018 8016c6a0  4 calc_vector_magnitude_squared 	Global
   8016c6b8 000044 8016c6b8  4 computeVectorLength 	Global
   8016c6fc 000020 8016c6fc  4 PSQUATDotProduct 	Global
@@ -3356,8 +3358,8 @@
   80188abc 00001c 80188abc  4 GXInitLightAttn 	Global
   80188ad8 000190 80188ad8  4 applyTransformationToVector 	Global
   80188c68 0000d0 80188c68  4 GXInitLightDistAttn 	Global
-  80188d38 000010 80188d38  4 nlVector3::Set(float, 	float,
-  80188d48 00001c 80188d48  4 GXInitLightDir 	gx
+  80188d38 000010 80188d38  4 GXInitLightPos 	Global
+  80188d48 00001c 80188d48  4 GXInitLightDir 	Global
   80188d64 00000c 80188d64  4 GXInitLightColor 	Global
   80188d70 00007c 80188d70  4 GXLoadLightObjImm 	Global
   80188dec 0000b4 80188dec  4 updateDataBasedOnParamValue 	Global
@@ -3680,8 +3682,8 @@
   801a30f4 0000e4 801a30f4  4 initializeObjectData_ 	Global
   801a31d8 000008 801a31d8  4 getFloatValueFromArray 	Global
   801a31e0 00008c 801a31e0  4 processQueueWithMaskAndData 	Global
-  801a326c 0001a8 801a326c  4 ConfigureTevStagesForTexture 	Global
-  801a3414 000058 801a3414  4 initializeTevStagesForTextureConfig 	Global
+  801a326c 0001a8 801a326c  4 XCobjInit 	Global
+  801a3414 000058 801a3414  4 XCObjInfoInit 	Global
   801a346c 0001fc 801a346c  4 UpdateObjectPosition 	Global
   801a3668 000080 801a3668  4 clearBitInShortValueInAllMasks 	Global
   801a36e8 000080 801a36e8  4 setBitInShortValueForAllInMask 	Global
@@ -3771,19 +3773,19 @@
   801a9e7c 000058 801a9e7c  4 stopAudioAndResetDvdDataAndInitDvdIfNeeded 	Global
   801a9ed4 00005c 801a9ed4  4 initializeDataAndStoreResult 	Global
   801a9f30 00004c 801a9f30  4 InitializeTHPParams 	Global
-  801a9f7c 000060 801a9f7c  4 execute_registered_callbacks 	Global
+  801a9f7c 000060 801a9f7c  4 HSD_StateInvalidate 	Global
   801a9fdc 000058 801a9fdc  4 Reset_0x65b8b8 	Global
   801aa034 000020 801aa034  4 cPlayer::PostPhysicsUpdate(void) 	Global
   801aa054 00001c 801aa054  4 Reset_0x65b8c4 	Global
-  801aa070 000048 801aa070  4 updateColor_801aa070_ 	Global
-  801aa0b8 000048 801aa0b8  4 set_color_update 	Global
+  801aa070 000048 801aa070  4 HSD_StateSetAlphaUpdate 	Global
+  801aa0b8 000048 801aa0b8  4 HSD_StateSetColorUpdate 	Global
   801aa100 000064 801aa100  4 SetLineWidthWithParams 	Global
-  801aa164 000090 801aa164  4 SetZBufferProperties 	Global
-  801aa1f4 00003c 801aa1f4  4 updateCullMode 	Global
+  801aa164 000090 801aa164  4 HSD_StateSetZMode 	Global
+  801aa1f4 00003c 801aa1f4  4 HSD_StateSetCullMode 	Global
   801aa230 000064 801aa230  4 SetLineWidthIfNeeded 	Global
-  801aa294 000010 801aa294  4 updateDoubleValue 	Global
-  801aa2a4 000074 801aa2a4  4 updateTripleValues 	Global
-  801aa318 000090 801aa318  4 ConfigureTevStagesAndUpdateGraphics 	Global
+  801aa294 000010 801aa294  4 HSD_SetMaterialShininess 	Global
+  801aa2a4 000074 801aa2a4  4 HSD_SetMaterialColor 	Global
+  801aa318 000090 801aa318  4 HSD_SetupRenderModeWithCustomPE 	Global
   801aa3a8 0004e0 801aa3a8  4 updateGraphicsSettings 	Global
   801aa888 000234 801aa888  4 applyRenderSettings 	Global
   801aaabc 000210 801aaabc  4 TransformVectorWithMatrixAndQuaternion 	Global
@@ -3791,7 +3793,7 @@
   801aad48 00020c 801aad48  4 createTransformMatrix 	Global
   801aaf54 0001cc 801aaf54  4 updateProjectionMatrixForShadows 	Global
   801ab120 000094 801ab120  4 removeElementFromList 	Global
-  801ab1b4 0000ac 801ab1b4  4 AddNodeToLinkedListWithValueIfNotPresent 	Global
+  801ab1b4 0000ac 801ab1b4  4 HSD_ShadowAddObject 	Global
   801ab260 0001c0 801ab260  4 updateNodeSurface 	Global
   801ab420 00029c 801ab420  4 updateTextureMatrixForShadows 	Global
   801ab6bc 0002a0 801ab6bc  4 renderSceneWithCameraAndTexture 	Global
@@ -3799,57 +3801,59 @@
   801abab4 000070 801abab4  4 configureDisplayAndTextureForCopying 	Global
   801abb24 000128 801abb24  4 zz_801abb24_ 	Global
   801abc4c 00010c 801abc4c  4 CreateNewObjectInLinkedList 	Global
-  801abd58 000030 801abd58  4 initMem_a4c0 	Global
-  801abd88 000098 801abd88  4 zz_801abd88_ 	Global
-  801abe20 0000ac 801abe20  4 zz_801abe20_ 	Global
-  801abecc 00012c 801abecc  4 zz_801abecc_ 	Global
-  801abff8 0002e8 801abff8  4 zz_801abff8_ 	Global
-  801ac2e0 000294 801ac2e0  4 zz_801ac2e0_ 	Global
-  801ac574 000378 801ac574  4 zz_801ac574_ 	Global
-  801ac8ec 000278 801ac8ec  4 zz_801ac8ec_ 	Global
-  801acb64 000018 801acb64  4 zz_801acb64_ 	Global
-  801acb7c 000720 801acb7c  4 zz_801acb7c_ 	Global
-  801ad29c 00031c 801ad29c  4 unkGXFunc 	Global
-  801ad5b8 000400 801ad5b8  4 zz_801ad5b8_ 	Global
-  801ad9b8 00038c 801ad9b8  4 zz_801ad9b8_ 	Global
-  801add44 00038c 801add44  4 zz_801add44_ 	Global
+  801abd58 000030 801abd58  4 HSD_ShadowInitAllocData 	Global
+  801abd88 000098 801abd88  4 PObjInfoInit 	Global
+  801abe20 0000ac 801abe20  4 PObjAmnesia 	Global
+  801abecc 00012c 801abecc  4 PObjRelease 	Global
+  801abff8 0002e8 801abff8  4 HSD_PObjDisp 	Global
+  801ac2e0 000294 801ac2e0  4 PObjSetupMtx 	Global
+  801ac574 000378 801ac574  4 SetupEnvelopeModelMtx 	Global
+  801ac8ec 000278 801ac8ec  4 SetupSharedVtxModelMtx 	Global
+  801acb64 000018 801acb64  4 HSD_PObjClearMtxMark 	Global
+  801acb7c 000720 801acb7c  4 drawShapeAnim 	Global
+  801ad29c 00031c 801ad29c  4 interpretShapeAnimDisplayList 	Global
+  801ad5b8 000400 801ad5b8  4 get_shape_nbt_xyz 	Global
+  801ad9b8 00038c 801ad9b8  4 get_shape_normal_xyz 	Global
+  801add44 00038c 801add44  4 get_shape_vertex_xyz 	Global
   801ae0d0 00002c 801ae0d0  4 glplatAbortFrame(void) 	Global
   801ae0fc 00028c 801ae0fc  4 zz_801ae0fc_ 	Global
-  801ae388 0001cc 801ae388  4 process_parameters 	Global
-  801ae554 000074 801ae554  4 zz_801ae554_ 	Global
-  801ae5c8 0000c4 801ae5c8  4 zz_801ae5c8_ 	Global
-  801ae68c 0002c4 801ae68c  4 zz_801ae68c_ 	Global
+  801ae388 0001cc 801ae388  4 HSD_JObjResolveRefs 	Global
+  801ae554 000074 801ae554  4 HSD_PObjRemoveAll 	Global
+  801ae5c8 0000c4 801ae5c8  4 HSD_PobjLoadDesc 	Global
+  801ae68c 0002c4 801ae68c  4 PObjLoad 	Global
   801ae950 00005c 801ae950  4 zz_801ae950_ 	Global
-  801ae9ac 00004c 801ae9ac  4 zz_801ae9ac_ 	Global
+  801ae9ac 00004c 801ae9ac  4 PobjUpdateFunc 	Global
   801ae9f8 000074 801ae9f8  4 zz_801ae9f8_ 	Global
-  801aea6c 000090 801aea6c  4 CopyObjectData_0xc 	Global
+  801aea6c 000090 801aea6c  4 HSD_PObjAddAnimAll 	Global
   801aeafc 000074 801aeafc  4 zz_801aeafc_ 	Global
   801aeb70 000018 801aeb70  4 clearBitInShortValue 	Global
   801aeb88 000018 801aeb88  4 setBitInShortValue 	Global
-  801aeba0 0000a4 801aeba0  4 initSystemHandlerPointers 	Global
-  801aec44 000060 801aec44  4 ClearSystemPointers 	Global
-  801aeca4 0000bc 801aeca4  4 CleanUpAndFreeResources 	Global
-  801aed60 000058 801aed60  4 InitializeAndConfigureSystem 	Global
+  801aeba0 0000a4 801aeba0  4 TObjInfoInit 	Global
+  801aec44 000060 801aec44  4 TObjAmnesia 	Global
+  801aeca4 0000bc 801aeca4  4 TObjRelease 	Global
+  801aed60 000058 801aed60  4 TObjInit 	Global
+  801aed60 000058 801aed60  4 TObjInit 	TObjInit
   801aedb8 000024 801aedb8  4 cFielder::EndAction(void) 	Global
   801aeddc 000058 801aeddc  4 allocateMemoryForObject 	Global
+  801aeddc 000058 801aeddc  4 HSD_ImageDescAlloc 	allocateMemoryForObject
   801aee34 000034 801aee34  4 zz_801aee34_ 	Global
-  801aee68 00005c 801aee68  4 AllocateAndInitializeObjectWithClassType 	Global
+  801aee68 00005c 801aee68  4 HSD_TObjAlloc 	Global
   801aeec4 000018 801aeec4  4 nlDLRingGetStart<11cBaseCamera>(cBaseCamera 	*)
-  801aeedc 000074 801aeedc  4 cleanUpObjectList 	Global
+  801aeedc 000074 801aeedc  4 HSD_TObjRemoveAll 	Global
   801aef50 0000bc 801aef50  4 zz_801aef50_ 	Global
-  801af00c 000348 801af00c  4 processTextures 	Global
-  801af354 000560 801af354  4 ProcessTextureMap 	Global
-  801af8b4 000660 801af8b4  4 textureCombinerHandler 	Global
-  801aff14 0008c0 801aff14  4 textureExpressionHandler 	Global
-  801b07d4 000120 801b07d4  4 configureTevStagesForNode 	Global
-  801b08f4 0002f4 801b08f4  4 apply_texture_coordinate_gen 	Global
-  801b0be8 0002e8 801b0be8  4 apply_texture_matrix 	Global
-  801b0ed0 0001d4 801b0ed0  4 initTextureMtx 	Global
-  801b10a4 00003c 801b10a4  4 zz_801b10a4_ 	Global
-  801b10e0 0000c4 801b10e0  4 allocate_and_initialize_hash_table 	Global
-  801b11a4 000258 801b11a4  4 initObject 	Global
+  801af00c 000348 801af00c  4 HSD_TObjSetup 	Global
+  801af354 000560 801af354  4 HSD_TObjAssignResources 	Global
+  801af8b4 000660 801af8b4  4 TObjMakeTEXP 	Global
+  801aff14 0008c0 801aff14  4 MakeColorGenTExp 	Global
+  801b07d4 000120 801b07d4  4 HSD_TObjSetupVolatileTev 	Global
+  801b08f4 0002f4 801b08f4  4 HSD_TObjSetupTextureCoordGen 	Global
+  801b0be8 0002e8 801b0be8  4 TObjSetupMtx 	Global
+  801b0ed0 0001d4 801b0ed0  4 MakeTextureMtx 	Global
+  801b10a4 00003c 801b10a4  4 _HSD_TObjGetCurrentByType 	Global
+  801b10e0 0000c4 801b10e0  4 HSD_TObjLoadDesc 	Global
+  801b11a4 000258 801b11a4  4 TObjLoad 	Global
   801b13fc 00005c 801b13fc  4 zz_801b13fc_ 	Global
-  801b1458 0005cc 801b1458  4 initImageTable 	Global
+  801b1458 0005cc 801b1458  4 TObjUpdateFunc 	Global
   801b1a24 000074 801b1a24  4 zz_801b1a24_ 	Global
   801b1a98 0001a4 801b1a98  4 zz_801b1a98_ 	Global
   801b1c3c 000060 801b1c3c  4 zz_801b1c3c_ 	Global
@@ -3890,28 +3894,28 @@
   801b7310 000164 801b7310  4 UpdateGXLOD 	Global
   801b7474 0003fc 801b7474  4 initializeGXGraphics 	Global
   801b7870 000118 801b7870  4 ResetGXData 	Global
-  801b7988 000008 801b7988  4 IPCSetBufferLo 	ipc
+  801b7988 000008 801b7988  4 HSD_DObjSetCurrent 	Global
   801b7990 000020 801b7990  4 updateFlagState 	Global
-  801b79b0 000098 801b79b0  4 zz_801b79b0_ 	Global
-  801b7a48 0000b0 801b7a48  4 CopyObjectDataBetweenObjects 	Global
+  801b79b0 000098 801b79b0  4 HSD_DObjAddAnimAll 	Global
+  801b7a48 0000b0 801b7a48  4 HSD_DObjAddAnimAll 	Global
   801b7af8 000080 801b7af8  4 zz_801b7af8_ 	Global
   801b7b78 00006c 801b7b78  4 zz_801b7b78_ 	Global
-  801b7be4 000110 801b7be4  4 zz_801b7be4_ 	Global
-  801b7cf4 000098 801b7cf4  4 zz_801b7cf4_ 	Global
-  801b7d8c 000074 801b7d8c  4 zz_801b7d8c_ 	Global
-  801b7e00 00005c 801b7e00  4 zz_801b7e00_ 	Global
-  801b7e5c 00006c 801b7e5c  4 process_parameters_in_lists 	Global
+  801b7be4 000110 801b7be4  4 DObjLoad 	Global
+  801b7cf4 000098 801b7cf4  4 HSD_DObjLoadDesc 	Global
+  801b7d8c 000074 801b7d8c  4 HSD_DObjRemoveAll 	Global
+  801b7e00 00005c 801b7e00  4 HSD_DObjAlloc 	Global
+  801b7e5c 00006c 801b7e5c  4 HSD_DObjResolveRefsAll 	Global
   801b7ec8 000088 801b7ec8  4 zz_801b7ec8_ 	Global
-  801b7f50 0000c0 801b7f50  4 zz_801b7f50_ 	Global
-  801b8010 00005c 801b8010  4 zz_801b8010_ 	Global
-  801b806c 000048 801b806c  4 zz_801b806c_ 	Global
-  801b80b4 000080 801b80b4  4 zz_801b80b4_ 	Global
-  801b8134 00005c 801b8134  4 initMemChunk_adc0_adec_ae18 	Global
+  801b7f50 0000c0 801b7f50  4 HSD_DobjDisp 	Global
+  801b8010 00005c 801b8010  4 DObjRelease 	Global
+  801b806c 000048 801b806c  4 DObjAnimate 	Global
+  801b80b4 000080 801b80b4  4 DObjInfoInit 	Global
+  801b8134 00005c 801b8134  4 HSD_RenderInitAllocData 	Global
   801b8190 0003a4 801b8190  4 updateDataBasedOnData 	Global
   801b8534 0000f8 801b8534  4 resetLightingParams 	Global
   801b862c 000040 801b862c  4 setNumTextureGenerators 	Global
   801b866c 00007c 801b866c  4 processAndUpdateParams 	Global
-  801b86e8 000030 801b86e8  4 updateMaxState 	Global
+  801b86e8 000030 801b86e8  4 HSD_StateRegisterTexGen 	Global
   801b8718 000030 801b8718  4 setNumberOfTextureGenerators 	Global
   801b8748 00000c 801b8748  4 FEAudio::ResetRandomVoiceToggleSFX(void) 	Global
   801b8754 000008 801b8754  4 IPCGetBufferLo 	ipc
@@ -3923,7 +3927,7 @@
   801b8a9c 0000d0 801b8a9c  4 MapParamToValue 	Global
   801b8b6c 0000d0 801b8b6c  4 map_input_to_output 	Global
   801b8c3c 0000c0 801b8c3c  4 setDisplayParamsForAll 	Global
-  801b8cfc 0000c8 801b8cfc  4 getNextState 	Global
+  801b8cfc 0000c8 801b8cfc  4 HSD_TexCoordID2Num 	Global
   801b8dc4 000058 801b8dc4  4 zz_801b8dc4_ 	Global
   801b8e1c 00000c 801b8e1c  4 FEAudio::ResetRandomVoiceToggleSFX(void) 	Global
   801b8e28 000020 801b8e28  4 zz_801b8e28_ 	Global
@@ -3933,51 +3937,51 @@
   801b8e74 000018 801b8e74  4 setFlagOnObject 	Global
   801b8e8c 000018 801b8e8c  4 clearNodeFlag 	Global
   801b8ea4 000060 801b8ea4  4 zz_801b8ea4_ 	Global
-  801b8f04 000068 801b8f04  4 CopyObjectData_8 	Global
+  801b8f04 000068 801b8f04  4 HSD_MObjAddAnim 	Global
   801b8f6c 000064 801b8f6c  4 zz_801b8f6c_ 	Global
-  801b8fd0 00049c 801b8fd0  4 mapTevRegistersToValue 	Global
+  801b8fd0 00049c 801b8fd0  4 MObjUpdateFunc 	Global
   801b946c 000048 801b946c  4 zz_801b946c_ 	Global
-  801b94b4 0000a0 801b94b4  4 init_model_instance 	Global
+  801b94b4 0000a0 801b94b4  4 MObjLoad 	Global
   801b9554 000058 801b9554  4 set_global_class_descendant 	Global
   801b95ac 000018 801b95ac  4 getGlobalClass 	Global
-  801b95c4 0000a0 801b95c4  4 zz_801b95c4_ 	Global
-  801b9664 0009cc 801b9664  4 EvaluateTexture 	Global
+  801b95c4 0000a0 801b95c4  4 HSD_MObjLoadDesc 	Global
+  801b9664 0009cc 801b9664  4 MObjMakeTExp 	Global
   801ba030 000120 801ba030  4 processDataForQueue 	Global
-  801ba150 000078 801ba150  4 configureTEVStagesForNodeWithData 	Global
-  801ba1c8 000144 801ba1c8  4 ProcessGraphicsAndTextureUpdates 	Global
-  801ba30c 000024 801ba30c  4 LessonTickerDoneCB(void) 	Global
-  801ba330 00007c 801ba330  4 InitializeToonObject 	Global
+  801ba150 000078 801ba150  4 MObjSetupTev 	Global
+  801ba1c8 000144 801ba1c8  4 HSD_MobjSetup 	Global
+  801ba30c 000024 801ba30c  4 HSD_MObjUnset 	Global
+  801ba330 00007c 801ba330  4 MObjSetupTev 	Global
   801ba3ac 000030 801ba3ac  4 set_values_at_offset_c 	Global
   801ba3dc 000030 801ba3dc  4 set_memory_values_at_offset_c 	Global
   801ba40c 000020 801ba40c  4 setTranslationX 	Global
   801ba42c 000018 801ba42c  4 nlDLRingGetStart<11cBaseCamera>(cBaseCamera 	*)
-  801ba444 000050 801ba444  4 zz_801ba444_ 	Global
+  801ba444 000050 801ba444  4 HSD_MObjRemove 	Global
   801ba494 00005c 801ba494  4 zz_801ba494_ 	Global
-  801ba4f0 000060 801ba4f0  4 allocateTevColorParamsMemory 	Global
+  801ba4f0 000060 801ba4f0  4 HSD_MaterialAlloc 	Global
   801ba550 000064 801ba550  4 zz_801ba550_ 	Global
   801ba5b4 000064 801ba5b4  4 removeNodeFromList 	Global
-  801ba618 00009c 801ba618  4 releaseObject 	Global
-  801ba6b4 000064 801ba6b4  4 removeObjectFromList 	Global
-  801ba718 0000b0 801ba718  4 initialize_global_class 	Global
-  801ba7c8 000030 801ba7c8  4 initMem_8064ae48 	Global
+  801ba618 00009c 801ba618  4 MObjRelease 	Global
+  801ba6b4 000064 801ba6b4  4 MObjAmnesia 	Global
+  801ba718 0000b0 801ba718  4 MObjInfoInit 	Global
+  801ba7c8 000030 801ba7c8  4 HSD_AObjInitAllocData 	Global
   801ba7f8 000018 801ba7f8  4 zz_801ba7f8_ 	Global
   801ba810 00001c 801ba810  4 zz_801ba810_ 	Global
   801ba82c 000010 801ba82c  4 LooseBallAnims::Destroy(void) 	Global
   801ba83c 00005c 801ba83c  4 zz_801ba83c_ 	Global
   801ba898 000040 801ba898  4 zz_801ba898_ 	Global
   801ba8d8 0001b8 801ba8d8  4 zz_801ba8d8_ 	Global
-  801baa90 000128 801baa90  4 ProcessAndCopyData 	Global
-  801babb8 000070 801babb8  4 cleanUpObject 	Global
-  801bac28 00006c 801bac28  4 GetNextNodeFromLinkedListAndInitialize 	Global
-  801bac94 000034 801bac94  4 updateListNodeWithValue 	Global
+  801baa90 000128 801baa90  4 HSD_AObjLoadDesc 	Global
+  801babb8 000070 801babb8  4 HSD_AObjRemove 	Global
+  801bac28 00006c 801bac28  4 HSD_AObjAlloc 	Global
+  801bac94 000034 801bac94  4 HSD_AObjFree 	Global
   801bacc8 0006e0 801bacc8  4 executeCallback 	Global
   801bb3a8 0006ec 801bb3a8  4 executeFunctionBasedOnParam4 	Global
   801bba94 0005a0 801bba94  4 processElements 	Global
   801bc034 000358 801bc034  4 processData 	Global
   801bc38c 000c84 801bc38c  4 ProcessObjectWithArgument 	Global
   801bd010 000010 801bd010  4 zz_801bd010_ 	Global
-  801bd020 000010 801bd020  4 SetFloatValueInStruct 	Global
-  801bd030 000010 801bd030  4 UpdateObject_0xc 	Global
+  801bd020 000010 801bd020  4 HSD_AObjSetRewindFrame 	Global
+  801bd030 000010 801bd030  4 HSD_AObjSetEndFrame 	Global
   801bd040 000018 801bd040  4 SetFlags_801bd040 	Global
   801bd058 000008 801bd058  4 IPCGetBufferLo 	ipc
   801bd060 000008 801bd060  4 IPCGetBufferLo 	ipc
@@ -3986,36 +3990,36 @@
   801bd078 000008 801bd078  4 IPCGetBufferLo 	ipc
   801bd080 000048 801bd080  4 getEnumValueForIntInputIndex 	Global
   801bd0c8 00002c 801bd0c8  4 getArrayElementAtIndex 	Global
-  801bd0f4 00024c 801bd0f4  4 zz_801bd0f4_ 	Global
+  801bd0f4 00024c 801bd0f4  4 LObjUpdateFunc 	Global
   801bd340 000058 801bd340  4 zz_801bd340_ 	Global
   801bd398 000060 801bd398  4 zz_801bd398_ 	Global
-  801bd3f8 000124 801bd3f8  4 calculateTransformedVector 	Global
+  801bd3f8 000124 801bd3f8  4 HSD_LObjGetLightVector 	Global
   801bd51c 000164 801bd51c  4 updateLightSource 	Global
-  801bd680 000278 801bd680  4 zz_801bd680_ 	Global
+  801bd680 000278 801bd680  4 HSD_LObjSetupSpecularInit 	Global
   801bd8f8 000bbc 801bd8f8  4 initializeLightSources 	Global
-  801be4b4 000340 801be4b4  4 release_object_reference 	Global
-  801be7f4 000034 801be7f4  4 findObjectByMask 	Global
+  801be4b4 000340 801be4b4  4 HSD_LObjAddCurrent 	Global
+  801be7f4 000034 801be7f4  4 HSD_LObjGetCurrentByType 	Global
   801be828 0000ec 801be828  4 getEnumValueForIntInput 	Global
-  801be914 000070 801be914  4 getFlagFromValue 	Global
+  801be914 000070 801be914  4 HSD_Index2LightID 	Global
   801be984 00000c 801be984  4 GXInitLightColor 	Global
   801be990 00000c 801be990  4 JStudio_JStage::TAdaptor_light::TVVOutput_direction_::operator()(float, 	JStudio::TAdaptor
   801be99c 000014 801be99c  4 SetObjectTransformRotation_801be99c 	Global
   801be9b0 000018 801be9b0  4 SetPositionAndData_801be9b0 	Global
   801be9c8 000088 801be9c8  4 setTripleInObject 	Global
   801bea50 000040 801bea50  4 isTransformedVectorValid 	Global
-  801bea90 000088 801bea90  4 zz_801bea90_ 	Global
+  801bea90 000088 801bea90  4 HSD_LObjSetPosition 	Global
   801beb18 000040 801beb18  4 getTransformedVectorStatus 	Global
   801beb58 000018 801beb58  4 zz_801beb58_ 	Global
   801beb70 000018 801beb70  4 zz_801beb70_ 	Global
-  801beb88 000414 801beb88  4 zz_801beb88_ 	Global
+  801beb88 000414 801beb88  4 LObjLoad 	Global
   801bef9c 0000f0 801bef9c  4 zz_801bef9c_ 	Global
-  801bf08c 000094 801bf08c  4 zz_801bf08c_ 	Global
-  801bf120 000164 801bf120  4 zz_801bf120_ 	Global
-  801bf284 000060 801bf284  4 zz_801bf284_ 	Global
-  801bf2e4 000080 801bf2e4  4 zz_801bf2e4_ 	Global
+  801bf08c 000094 801bf08c  4 HSD_LObjAddAnim 	Global
+  801bf120 000164 801bf120  4 LObjRelease 	Global
+  801bf284 000060 801bf284  4 LObjAmnesia 	Global
+  801bf2e4 000080 801bf2e4  4 LObjInfoInit 	Global
   801bf364 000070 801bf364  4 SetReferenceDimensions 	Global
   801bf3d4 00007c 801bf3d4  4 zz_801bf3d4_ 	Global
-  801bf450 000144 801bf450  4 zz_801bf450_ 	Global
+  801bf450 000144 801bf450  4 CObjUpdateFunc 	Global
   801bf594 000050 801bf594  4 zz_801bf594_ 	Global
   801bf5e4 00005c 801bf5e4  4 zz_801bf5e4_ 	Global
   801bf640 000264 801bf640  4 SetupScissorAndViewport 	Global
@@ -4023,26 +4027,26 @@
   801bfb70 0000cc 801bfb70  4 zz_801bfb70_ 	Global
   801bfc3c 000504 801bfc3c  4 configureRenderPipeline 	Global
   801c0140 000024 801c0140  4 homebutton::MotorCallback(OSAlarm 	*,
-  801c0164 000040 801c0164  4 zz_801c0164_ 	Global
-  801c01a4 000040 801c01a4  4 zz_801c01a4_ 	Global
-  801c01e4 00006c 801c01e4  4 getTransformedVectorDataFromStructure 	Global
-  801c0250 00006c 801c0250  4 setTripleInStructureWithAssertionCheck 	Global
-  801c02bc 00006c 801c02bc  4 getTransformedVectorDataFromMatrix 	Global
-  801c0328 00006c 801c0328  4 setDoubleInStructure 	Global
+  801c0164 000040 801c0164  4 HSD_CObjSetInterest 	Global
+  801c01a4 000040 801c01a4  4 HSD_CObjGetEyePosition 	Global
+  801c01e4 00006c 801c01e4  4 HSD_CObjGetInterest 	Global
+  801c0250 00006c 801c0250  4 HSD_CObjSetInterest 	Global
+  801c02bc 00006c 801c02bc  4 HSD_CObjGetEyePosition 	Global
+  801c0328 00006c 801c0328  4 HSD_CObjSetEyePosition 	Global
   801c0394 000104 801c0394  4 computeDistanceBetweenCameraAndInterest 	Global
   801c0498 0001e8 801c0498  4 zz_801c0498_ 	Global
   801c0680 0002e4 801c0680  4 getNormalizedTanQuaternionRotation 	Global
   801c0964 000068 801c0964  4 getNormalizedTanQuaternionRotationOrVectorData 	Global
-  801c09cc 0002fc 801c09cc  4 zz_801c09cc_ 	Global
-  801c0cc8 000010 801c0cc8  4 zz_801c0cc8_ 	Global
+  801c09cc 0002fc 801c09cc  4 HSD_CObjSetUpVector 	Global
+  801c0cc8 000010 801c0cc8  4 HSD_CObjSetMtxDirty 	Global
   801c0cd8 00004c 801c0cd8  4 isValidBuffer 	Global
   801c0d24 000034 801c0d24  4 cCharacter::IsPlayingEffect( 	(EffectsGroup
-  801c0d58 000064 801c0d58  4 invertMatrix 	Global
+  801c0d58 000064 801c0d58  4 HSD_CObjGetInvViewingMtxPtrDirect 	Global
   801c0dbc 000030 801c0dbc  4 zz_801c0dbc_ 	Global
   801c0dec 000218 801c0dec  4 zz_801c0dec_ 	Global
-  801c1004 000428 801c1004  4 zz_801c1004_ 	Global
+  801c1004 000428 801c1004  4 HSD_CObjSetRoll 	Global
   801c142c 000024 801c142c  4 zz_801c142c_ 	Global
-  801c1450 000020 801c1450  4 updateLeftCoordinate 	Global
+  801c1450 000020 801c1450  4 HSD_CObjSetFov 	Global
   801c1470 000020 801c1470  4 updateOrthographicProjectionHeight 	Global
   801c1490 00002c 801c1490  4 SetCharSpaceForText 	Global
   801c14bc 000008 801c14bc  4 nw4hbm::ut::TextWriterBase<w>::SetCharSpace(float) 	homebuttonLib
@@ -4053,9 +4057,9 @@
   801c152c 00002c 801c152c  4 SetTextWriterCharSpace 	Global
   801c1558 000008 801c1558  4 nw4hbm::ut::TextWriterBase<w>::SetCharSpace(float) 	homebuttonLib
   801c1560 000018 801c1560  4 getCameraFovy 	Global
-  801c1578 000010 801c1578  4 set_object_scale 	Global
+  801c1578 000010 801c1578  4 HSD_CObjSetNear 	Global
   801c1588 000018 801c1588  4 zz_801c1588_ 	Global
-  801c15a0 000010 801c15a0  4 setObjectOpacity_801c15a0 	Global
+  801c15a0 000010 801c15a0  4 HSD_CObjSetFar 	Global
   801c15b0 00001c 801c15b0  4 zz_801c15b0_ 	Global
   801c15cc 00001c 801c15cc  4 setQuadUVData 	Global
   801c15e8 00008c 801c15e8  4 decode_val_to_float 	Global
@@ -4068,43 +4072,43 @@
   801c172c 000008 801c172c  4 CBGetBytesAvailableForRead 	TRK_Hollywood_Revolution
   801c1734 000018 801c1734  4 setBitsInObjectFlag 	Global
   801c174c 000018 801c174c  4 ClearBitInWord 	Global
-  801c1764 000008 801c1764  4 IPCGetBufferLo 	ipc
+  801c1764 000008 801c1764  4 HSD_CObjGetCurrent 	Global
   801c176c 00005c 801c176c  4 AllocateAndInitializeObjectWithClass 	Global
-  801c17c8 00022c 801c17c8  4 zz_801c17c8_ 	Global
+  801c17c8 00022c 801c17c8  4 CObjLoad 	Global
   801c19f4 000034 801c19f4  4 zz_801c19f4_ 	Global
   801c1a28 0000c4 801c1a28  4 zz_801c1a28_ 	Global
-  801c1aec 000074 801c1aec  4 zz_801c1aec_ 	Global
-  801c1b60 000184 801c1b60  4 zz_801c1b60_ 	Global
-  801c1ce4 000060 801c1ce4  4 zz_801c1ce4_ 	Global
-  801c1d44 00008c 801c1d44  4 initSysDolphinClass 	Global
-  801c1dd0 000030 801c1dd0  4 initMem_8064aea0 	Global
-  801c1e00 000028 801c1e00  4 zz_801c1e00_ 	Global
-  801c1e28 000124 801c1e28  4 updateLinkedList 	Global
+  801c1aec 000074 801c1aec  4 CObjInit 	Global
+  801c1b60 000184 801c1b60  4 CObjRelease 	Global
+  801c1ce4 000060 801c1ce4  4 CObjAmnesia 	Global
+  801c1d44 00008c 801c1d44  4 CObjInfoInit 	Global
+  801c1dd0 000030 801c1dd0  4 HSD_FObjInitAllocData 	Global
+  801c1e00 000028 801c1e00  4 HSD_FObjRemove 	Global
+  801c1e28 000124 801c1e28  4 HSD_FObjRemoveAll 	Global
   801c1f4c 0000a4 801c1f4c  4 zz_801c1f4c_ 	Global
   801c1ff0 000098 801c1ff0  4 zz_801c1ff0_ 	Global
   801c2088 0010d0 801c2088  4 zz_801c2088_ 	Global
   801c3158 0006d4 801c3158  4 zz_801c3158_ 	Global
   801c382c 000070 801c382c  4 zz_801c382c_ 	Global
-  801c389c 000228 801c389c  4 allocate_node_and_copy_data 	Global
+  801c389c 000228 801c389c  4 HSD_FObjLoadDesc 	Global
   801c3ac4 00005c 801c3ac4  4 allocate_node_from_linked_list 	Global
-  801c3b20 00002c 801c3b20  4 updateListNode 	Global
+  801c3b20 00002c 801c3b20  4 HSD_FObjFree 	Global
   801c3b4c 00012c 801c3b4c  4 UpdateObjectFlags 	Global
   801c3c78 000058 801c3c78  4 IsValidAndEnabled 	Global
   801c3cd0 000070 801c3cd0  4 ProcessTreeIfValidNode 	Global
   801c3d40 000344 801c3d40  4 ProcessChildObjects 	Global
   801c4084 000090 801c4084  4 RenderChildObjects 	Global
-  801c4114 0002d0 801c4114  4 processNode 	Global
-  801c43e4 00007c 801c43e4  4 zz_801c43e4_ 	Global
-  801c4460 0002a4 801c4460  4 zz_801c4460_ 	Global
+  801c4114 0002d0 801c4114  4 HSD_JObjMakeMatrix 	Global
+  801c43e4 00007c 801c43e4  4 HSD_JObjAddAnim 	Global
+  801c4460 0002a4 801c4460  4 HSD_JObjAddAnimAll 	Global
   801c4704 000024 801c4704  4 cFielder::EndAction(void) 	Global
   801c4728 000088 801c4728  4 zz_801c4728_ 	Global
   801c47b0 0002c8 801c47b0  4 zz_801c47b0_ 	Global
   801c4a78 000024 801c4a78  4 cFielder::EndAction(void) 	Global
   801c4a9c 000074 801c4a9c  4 zz_801c4a9c_ 	Global
   801c4b10 000058 801c4b10  4 RemoveFirstElementWithCondition 	Global
-  801c4b68 000140 801c4b68  4 zz_801c4b68_ 	Global
+  801c4b68 000140 801c4b68  4 HSD_JObjAddAnim 	Global
   801c4ca8 0003dc 801c4ca8  4 zz_801c4ca8_ 	Global
-  801c5084 000944 801c5084  4 zz_801c5084_ 	Global
+  801c5084 000944 801c5084  4 JObjUpdateFunc 	Global
   801c59c8 000164 801c59c8  4 zz_801c59c8_ 	Global
   801c5b2c 000348 801c5b2c  4 zz_801c5b2c_ 	Global
   801c5e74 00003c 801c5e74  4 zz_801c5e74_ 	Global
@@ -4112,46 +4116,46 @@
   801c5fe0 000544 801c5fe0  4 processNodeRenderProperties 	Global
   801c6524 000008 801c6524  4 J3DTexGenBlock4::getNBTScale(void) 	J3DGraphBase
   801c652c 000070 801c652c  4 processWorldStateForNode 	Global
-  801c659c 0001fc 801c659c  4 zz_801c659c_ 	Global
-  801c6798 0000a8 801c6798  4 InitializeObjectWithKey 	Global
-  801c6840 0000f8 801c6840  4 UpdateProcessParameters 	Global
-  801c6938 0002d4 801c6938  4 UpdateProcessParametersForAllObjects 	Global
-  801c6c0c 000054 801c6c0c  4 updateObjectReferenceCount 	Global
-  801c6c60 00002c 801c6c60  4 GetValueForKey 	Global
-  801c6c8c 00004c 801c6c8c  4 IncrementReferenceCount 	Global
-  801c6cd8 000148 801c6cd8  4 decrementReferenceCount 	Global
-  801c6e20 0000a8 801c6e20  4 processLeadingZeroCount 	Global
-  801c6ec8 00014c 801c6ec8  4 zz_801c6ec8_ 	Global
+  801c659c 0001fc 801c659c  4 JObjLoad 	Global
+  801c6798 0000a8 801c6798  4 HSD_JObjLoadJoint 	Global
+  801c6840 0000f8 801c6840  4 HSD_JObjResolveRefs 	Global
+  801c6938 0002d4 801c6938  4 HSD_JObjResolveRefsAll 	Global
+  801c6c0c 000054 801c6c0c  4 HSD_LObjAddCurrent 	Global
+  801c6c60 00002c 801c6c60  4 HSD_IDGetDataFromTable 	Global
+  801c6c8c 00004c 801c6c8c  4 HSD_LObjAddCurrent 	Global
+  801c6cd8 000148 801c6cd8  4 HSD_JObjUnref 	Global
+  801c6e20 0000a8 801c6e20  4 HSD_JObjUnrefThis 	Global
+  801c6ec8 00014c 801c6ec8  4 HSD_JObjAddChild 	Global
   801c7014 00002c 801c7014  4 getValueIfBitSetInMask 	Global
   801c7040 000018 801c7040  4 GetValueAtOffset 	Global
-  801c7058 00009c 801c7058  4 setObjectFlagAndProcessTree 	Global
+  801c7058 00009c 801c7058  4 HSD_JObjSetFlags 	Global
   801c70f4 0002d8 801c70f4  4 ProcessTreeWithFlag 	Global
-  801c73cc 00009c 801c73cc  4 clearObjectFlags 	Global
+  801c73cc 00009c 801c73cc  4 HSD_JObjClearFlags 	Global
   801c7468 0002dc 801c7468  4 ClearObjectFlagsRecursively 	Global
   801c7744 0000ac 801c7744  4 UpdateTreeNodeState 	Global
-  801c77f0 00005c 801c77f0  4 allocateAndInitializeObject 	Global
-  801c784c 000190 801c784c  4 zz_801c784c_ 	Global
-  801c79dc 000008 801c79dc  4 IPCGetBufferLo 	ipc
+  801c77f0 00005c 801c77f0  4 HSD_JObjAlloc 	Global
+  801c784c 000190 801c784c  4 HSD_JObjSetCurrent 	Global
+  801c79dc 000008 801c79dc  4 SetupRigidModelMtx 	Global
   801c79e4 0007f0 801c79e4  4 ProcessUnreachableBlocks 	Global
   801c81d4 00055c 801c81d4  4 ProcessChunk 	Global
-  801c8730 000278 801c8730  4 ProcessWorldState 	Global
-  801c89a8 000334 801c89a8  4 HSD_JObjSetMtxDirtySub(); 	Global
+  801c8730 000278 801c8730  4 HSD_JObjSetupMatrixSub 	Global
+  801c89a8 000334 801c89a8  4 HSD_JObjSetMtxDirtySub 	Global
   801c8cdc 000008 801c8cdc  4 IPCSetBufferLo 	ipc
   801c8ce4 000008 801c8ce4  4 IPCSetBufferLo 	ipc
   801c8cec 000008 801c8cec  4 IPCSetBufferLo 	ipc
-  801c8cf4 000064 801c8cf4  4 ProcessNodeAndGetResult 	Global
-  801c8d58 0004d4 801c8d58  4 zz_801c8d58_ 	Global
-  801c922c 000098 801c922c  4 zz_801c922c_ 	Global
-  801c92c4 000064 801c92c4  4 zz_801c92c4_ 	Global
-  801c9328 0000bc 801c9328  4 initFuncPointers 	Global
-  801c93e4 000030 801c93e4  4 initMem_aed0 	Global
+  801c8cf4 000064 801c8cf4  4 JObjInit 	Global
+  801c8d58 0004d4 801c8d58  4 JObjReleaseChild 	Global
+  801c922c 000098 801c922c  4 JObjRelease 	Global
+  801c92c4 000064 801c92c4  4 JObjAmnesia 	Global
+  801c9328 0000bc 801c9328  4 JObjInfoInit 	Global
+  801c93e4 000030 801c93e4  4 HSD_ZListInitAllocData 	Global
   801c9414 0002dc 801c9414  4 zz_801c9414_ 	Global
   801c96f0 000344 801c96f0  4 zz_801c96f0_ 	Global
   801c9a34 000398 801c9a34  4 zz_801c9a34_ 	Global
   801c9dcc 0001e8 801c9dcc  4 zz_801c9dcc_ 	Global
-  801c9fb4 000100 801c9fb4  4 ImageBilloardFX 	Global
+  801c9fb4 000100 801c9fb4  4 _HSD_mkEnvelopeModelNodeMtx 	Global
   801ca0b4 00010c 801ca0b4  4 zz_801ca0b4_ 	Global
-  801ca1c0 0000d0 801ca1c0  4 zz_801ca1c0_ 	Global
+  801ca1c0 0000d0 801ca1c0  4 HSD_JObjDispSub 	Global
   801ca290 000208 801ca290  4 setRenderProperties 	Global
   801ca498 00016c 801ca498  4 mergeSort 	Global
   801ca604 000050 801ca604  4 MergeSortData 	Global
@@ -4160,12 +4164,12 @@
   801ca7bc 00000c 801ca7bc  4 AXFXSetHooks 	axfx
   801ca7c8 0000ac 801ca7c8  4 processRenderProperties_ 	Global
   801ca874 000008 801ca874  4 IPCSetBufferLo 	ipc
-  801ca87c 00013c 801ca87c  4 InitializeSystem 	Global
+  801ca87c 00013c 801ca87c  4 HSD_InitComponent 	Global
   801ca9b8 000004 801ca9b8  4 DBClose 	NdevExi2A
   801ca9bc 000134 801ca9bc  4 InitializeXFB 	Global
-  801caaf0 000050 801caaf0  4 InitializeGXFifo 	Global
-  801cab40 0000ac 801cab40  4 InitLighting 	Global
-  801cabec 0001a4 801cabec  4 set_data_params 	Global
+  801caaf0 000050 801caaf0  4 HSD_AllocateFIFO 	Global
+  801cab40 0000ac 801cab40  4 HSD_GXInit 	Global
+  801cabec 0001a4 801cabec  4 HSD_OSInit 	Global
   801cad90 000060 801cad90  4 AllocateMemoryFromHeap 	Global
   801cadf0 000034 801cadf0  4 cCharacter::IsPlayingEffect( 	(EffectsGroup
   801cae24 000024 801cae24  4 homebutton::MotorCallback(OSAlarm 	*,
@@ -4175,9 +4179,9 @@
   801caf18 000008 801caf18  4 IPCGetBufferLo 	ipc
   801caf20 0000a0 801caf20  4 setGXState 	Global
   801cafc0 000004 801cafc0  4 DBClose 	NdevExi2A
-  801cafc4 000010 801cafc4  4 SetInt_0x8065ba40 	Global
+  801cafc4 000010 801cafc4  4 _HSD_NeedCacheInvalidate 	Global
   801cafd4 00005c 801cafd4  4 InitGXHandler 	Global
-  801cb030 000044 801cb030  4 initAllMemChunks 	Global
+  801cb030 000044 801cb030  4 HSD_ObjInit 	Global
   801cb074 0002b8 801cb074  4 SetHSDInitParameter 	Global
   801cb32c 000054 801cb32c  4 SetGlobalVariable_801cb32c 	Global
   801cb380 000054 801cb380  4 ResetInterrupts 	Global
@@ -4185,8 +4189,8 @@
   801cb644 00020c 801cb644  4 HandleDisplaySwitch 	Global
   801cb850 000044 801cb850  4 initializeDisplaySettings 	Global
   801cb894 000010 801cb894  4 THPSimpleGetCurrentFrame 	Global
-  801cb8a4 000258 801cb8a4  4 processCopyDisplayData 	Global
-  801cbafc 000208 801cbafc  4 zz_801cbafc_ 	Global
+  801cb8a4 000258 801cb8a4  4 HSD_VICopyEFB2XFBPtr 	Global
+  801cbafc 000208 801cbafc  4 HSD_VISetXFBDrawDone 	Global
   801cbd04 0000d4 801cbd04  4 zz_801cbd04_ 	Global
   801cbdd8 000088 801cbdd8  4 setGlobalVariablesFromArray 	Global
   801cbe60 000018 801cbe60  4 setParamToGlobalVar 	Global
@@ -4209,185 +4213,185 @@
   801cdc34 000080 801cdc34  4 clearAllResourceReferences_801cdc34_ 	Global
   801cdcb4 0000f8 801cdcb4  4 zz_801cdcb4_ 	Global
   801cddac 000190 801cddac  4 zz_801cddac_ 	Global
-  801cdf3c 000128 801cdf3c  4 PadMotorController 	Global
-  801ce064 0001d4 801ce064  4 zz_801ce064_ 	Global
-  801ce238 000060 801ce238  4 zz_801ce238_ 	Global
-  801ce298 000490 801ce298  4 zz_801ce298_ 	Global
+  801cdf3c 000128 801cdf3c  4 HSD_PadRumbleInterpret 	Global
+  801ce064 0001d4 801ce064  4 HSD_PadRumbleInit 	Global
+  801ce238 000060 801ce238  4 splGetHelmite 	Global
+  801ce298 000490 801ce298  4 splGetSplinePoint 	Global
   801ce728 000308 801ce728  4 zz_801ce728_ 	Global
-  801cea30 000200 801cea30  4 zz_801cea30_ 	Global
-  801cec30 000048 801cec30  4 cXyz::normalize(void) 	SComponent
-  801cec78 000430 801cec78  4 zz_801cec78_ 	Global
+  801cea30 000200 801cea30  4 splArcLengthGetParameter 	Global
+  801cec30 000048 801cec30  4 splArcLengthPoint 	Global
+  801cec78 000430 801cec78  4 HSD_MtxInverseConcat 	Global
   801cf0a8 000320 801cf0a8  4 computeNormalVector 	Global
   801cf3c8 000338 801cf3c8  4 create_basis_matrix 	Global
-  801cf700 00001c 801cf700  4 dGeomBoxGetLengths 	Global
+  801cf700 00001c 801cf700  4 HSD_MtxGetTranslate 	Global
   801cf71c 0004d8 801cf71c  4 normalizeMatrixColumns 	Global
-  801cfbf4 00013c 801cfbf4  4 ComputeRotationMatrix 	Global
-  801cfd30 0002d8 801cfd30  4 computeFloats 	Global
+  801cfbf4 00013c 801cfbf4  4 HSD_MkRotationMtx 	Global
+  801cfd30 0002d8 801cfd30  4 HSD_MtxSRT 	Global
   801d0008 0001ac 801d0008  4 applyTransformationMatrixWithScalingAndRotation 	Global
-  801d01b4 0000c4 801d01b4  4 zz_801d01b4_ 	Global
+  801d01b4 0000c4 801d01b4  4 HSD_MtxScaledAdd 	Global
   801d0278 0000e0 801d0278  4 computeOrthogonalVectors 	Global
-  801d0358 00004c 801d0358  4 getNextNodeFromList 	Global
-  801d03a4 000034 801d03a4  4 updateListNode 	Global
-  801d03d8 00004c 801d03d8  4 getNextNodeFromList 	Global
-  801d0424 000034 801d0424  4 DoListNodeUpdate 	Global
-  801d0458 000030 801d0458  4 initMem_8064c7a8 	Global
-  801d0488 000030 801d0488  4 initMem_8064c7d4 	Global
-  801d04b8 00006c 801d04b8  4 multiplyByteArraysAndDivideBy255 	Global
-  801d0524 0000c0 801d0524  4 CountSetBitsInUInt 	Global
-  801d05e4 0000a0 801d05e4  4 zz_801d05e4_ 	Global
-  801d0684 00001c 801d0684  4 setGlobalVars4_801d0684_ 	Global
+  801d0358 00004c 801d0358  4 HSD_VecAlloc 	Global
+  801d03a4 000034 801d03a4  4 HSD_VecFree 	Global
+  801d03d8 00004c 801d03d8  4 HSD_MtxAlloc 	Global
+  801d0424 000034 801d0424  4 HSD_MtxFree 	Global
+  801d0458 000030 801d0458  4 HSD_VecInitAllocData 	Global
+  801d0488 000030 801d0488  4 HSD_MtxInitAllocData 	Global
+  801d04b8 00006c 801d04b8  4 HSD_MulColor 	Global
+  801d0524 0000c0 801d0524  4 HSD_GetNbBits 	Global
+  801d05e4 0000a0 801d05e4  4 HSD_Index2PosNrmMtx 	Global
+  801d0684 00001c 801d0684  4 HSD_ObjSetHeap 	Global
   801d06a0 000030 801d06a0  4 setGlobalData 	Global
   801d06d0 000034 801d06d0  4 calculateTotalSize 	Global
   801d0704 000038 801d0704  4 UnreserveEXIPortIfNeeded 	Global
   801d073c 00002c 801d073c  4 sum_element_products 	Global
   801d0768 00002c 801d0768  4 calculateTotalPartTwo 	Global
-  801d0794 000250 801d0794  4 AllocateAndInitializeLinkedList 	Global
-  801d09e4 000150 801d09e4  4 get_next_node_from_linked_list 	Global
-  801d0b34 000028 801d0b34  4 update_list_node 	Global
-  801d0b5c 000124 801d0b5c  4 InitializeMemoryChunk 	Global
-  801d0c80 000044 801d0c80  4 initMem_8064c800_8064c82c 	Global
-  801d0cc4 000058 801d0cc4  4 FindChunkInList 	Global
+  801d0794 000250 801d0794  4 HSD_ObjAllocAddFree 	Global
+  801d09e4 000150 801d09e4  4 HSD_ObjAlloc 	Global
+  801d0b34 000028 801d0b34  4 HSD_ObjFree 	Global
+  801d0b5c 000124 801d0b5c  4 HSD_ObjAllocInit 	Global
+  801d0c80 000044 801d0c80  4 HSD_RObjInitAllocData 	Global
+  801d0cc4 000058 801d0cc4  4 HSD_RObjGetByType 	Global
   801d0d1c 000044 801d0d1c  4 zz_801d0d1c_ 	Global
   801d0d60 000068 801d0d60  4 zz_801d0d60_ 	Global
-  801d0dc8 000084 801d0dc8  4 zz_801d0dc8_ 	Global
+  801d0dc8 000084 801d0dc8  4 HSD_RObjAddAnimAll 	Global
   801d0e4c 000084 801d0e4c  4 zz_801d0e4c_ 	Global
   801d0ed0 00006c 801d0ed0  4 zz_801d0ed0_ 	Global
-  801d0f3c 000090 801d0f3c  4 ProcessAndCopyDataBetweenLinkedLists 	Global
+  801d0f3c 000090 801d0f3c  4 HSD_RObjAddAnimAll 	Global
   801d0fcc 0001b4 801d0fcc  4 CalculateAveragedValues 	Global
   801d1180 0005e8 801d1180  4 ProcessWorldStateList 	Global
   801d1768 000208 801d1768  4 processNodeComparison 	Global
   801d1970 000484 801d1970  4 processObjects 	Global
-  801d1df4 000114 801d1df4  4 UpdateReferenceCounts 	Global
-  801d1f08 000474 801d1f08  4 zz_801d1f08_ 	Global
-  801d237c 00009c 801d237c  4 updateNode_801d237c_ 	Global
-  801d2418 00005c 801d2418  4 zz_801d2418_ 	Global
+  801d1df4 000114 801d1df4  4 HSD_RObjResolveRefsAll 	Global
+  801d1f08 000474 801d1f08  4 HSD_RObjLoadDesc 	Global
+  801d237c 00009c 801d237c  4 HSD_RObjRemoveAll 	Global
+  801d2418 00005c 801d2418  4 HSD_RObjAlloc 	Global
   801d2474 00002c 801d2474  4 updateNode 	Global
   801d24a0 00049c 801d24a0  4 zz_801d24a0_ 	Global
   801d293c 000008 801d293c  4 J3DAnmCluster::getWeight(unsigned 	short)
   801d2944 000070 801d2944  4 nodeListUpdate 	Global
-  801d29b4 0000f4 801d29b4  4 zz_801d29b4_ 	Global
-  801d2aa8 0000f8 801d2aa8  4 zz_801d2aa8_ 	Global
+  801d29b4 0000f4 801d29b4  4 expLoadDesc 	Global
+  801d2aa8 0000f8 801d2aa8  4 bcexpLoadDesc 	Global
   801d2ba0 0000e8 801d2ba0  4 updateObjectReferenceCount 	Global
-  801d2c88 000030 801d2c88  4 initMem_8064c858 	Global
+  801d2c88 000030 801d2c88  4 HSD_IDInitAllocData 	Global
   801d2cb8 000030 801d2cb8  4 clear_tracker_data 	Global
-  801d2ce8 0000ec 801d2ce8  4 zz_801d2ce8_ 	Global
+  801d2ce8 0000ec 801d2ce8  4 HSD_IDInsertToTable 	Global
   801d2dd4 0000ac 801d2dd4  4 zz_801d2dd4_ 	Global
-  801d2e80 000088 801d2e80  4 GetHashMapValueForKey 	Global
+  801d2e80 000088 801d2e80  4 HSD_IDGetDataFromTable 	Global
   801d2f08 00004c 801d2f08  4 zz_801d2f08_ 	Global
-  801d2f54 000068 801d2f54  4 zz_801d2f54_ 	Global
-  801d2fbc 000144 801d2fbc  4 zz_801d2fbc_ 	Global
+  801d2f54 000068 801d2f54  4 HSD_WObjAddAnim 	Global
+  801d2fbc 000144 801d2fbc  4 WObjUpdateFunc 	Global
   801d3100 000048 801d3100  4 zz_801d3100_ 	Global
-  801d3148 000068 801d3148  4 zz_801d3148_ 	Global
-  801d31b0 000074 801d31b0  4 zz_801d31b0_ 	Global
-  801d3224 000098 801d3224  4 zz_801d3224_ 	Global
-  801d32bc 000048 801d32bc  4 setTripleInStructure 	Global
-  801d3304 0000d4 801d3304  4 zz_801d3304_ 	Global
-  801d33d8 0000d4 801d33d8  4 zz_801d33d8_ 	Global
-  801d34ac 0000d4 801d34ac  4 zz_801d34ac_ 	Global
-  801d3580 0000e8 801d3580  4 getTransformedVectorData 	Global
-  801d3668 00005c 801d3668  4 allocateAndInitializeObject 	Global
-  801d36c4 000054 801d36c4  4 nodeSet_801d36c4_ 	Global
-  801d3718 000048 801d3718  4 CheckNullParam 	Global
-  801d3760 000080 801d3760  4 InitClassWobj 	Global
-  801d37e0 0002bc 801d37e0  4 HandleGameFog 	Global
+  801d3148 000068 801d3148  4 WObjLoad 	Global
+  801d31b0 000074 801d31b0  4 HSD_WObjInit 	Global
+  801d3224 000098 801d3224  4 HSD_WObjLoadDesc 	Global
+  801d32bc 000048 801d32bc  4 HSD_WObjSetPosition 	Global
+  801d3304 0000d4 801d3304  4 HSD_WObjSetPositionX 	Global
+  801d33d8 0000d4 801d33d8  4 HSD_WObjSetPositionY 	Global
+  801d34ac 0000d4 801d34ac  4 HSD_WObjSetPositionZ 	Global
+  801d3580 0000e8 801d3580  4 HSD_WObjGetPosition 	Global
+  801d3668 00005c 801d3668  4 HSD_WObjAlloc 	Global
+  801d36c4 000054 801d36c4  4 WObjRelease 	Global
+  801d3718 000048 801d3718  4 WObjAmnesia 	Global
+  801d3760 000080 801d3760  4 WObjInfoInit 	Global
+  801d37e0 0002bc 801d37e0  4 HSD_FogSet 	Global
   801d3a9c 000018 801d3a9c  4 zz_801d3a9c_ 	Global
   801d3ab4 00005c 801d3ab4  4 zz_801d3ab4_ 	Global
-  801d3b10 000044 801d3b10  4 InitMemChunks_8064cal8_8064ca44 	Global
+  801d3b10 000044 801d3b10  4 HSd_ListInitAllocData 	Global
   801d3b54 00005c 801d3b54  4 zz_801d3b54_ 	Global
   801d3bb0 000080 801d3bb0  4 GetNextNodeAndPopulateData 	Global
-  801d3c30 000080 801d3c30  4 addNodeToLinkedListWithValue 	Global
+  801d3c30 000080 801d3c30  4 HSD_SListPrepend 	Global
   801d3cb0 000070 801d3cb0  4 SwapPointers 	Global
-  801d3d20 000050 801d3d20  4 setValueInStructure 	Global
-  801d3d70 000050 801d3d70  4 remove_list_node 	Global
+  801d3d20 000050 801d3d20  4 HSD_SListPrependList 	Global
+  801d3d70 000050 801d3d70  4 HSD_LObjDeleteCurrent 	Global
   801d3dc0 000044 801d3dc0  4 initSysDolphClass 	Global
   801d3e04 000148 801d3e04  4 rotateVector3D 	Global
   801d3f4c 0002ac 801d3f4c  4 UpdateMatrix 	Global
-  801d41f8 000074 801d41f8  4 InitializeMemoryControlBlock 	Global
-  801d426c 00002c 801d426c  4 InitializeModule 	Global
-  801d4298 000030 801d4298  4 UnreserveEXI2Port 	Global
+  801d41f8 000074 801d41f8  4 HSD_unk 	Global
+  801d426c 00002c 801d426c  4 HSD_Alloc 	Global
+  801d4298 000030 801d4298  4 HSD_GetHeap 	Global
   801d42c8 000030 801d42c8  4 salMallocPhysical 	Global
-  801d42f8 000030 801d42f8  4 salMallocPhysical 	Global
-  801d4328 000038 801d4328  4 invokeFunctionWithData_801d4328 	Global
+  801d42f8 000030 801d42f8  4 HSD_Free 	Global
+  801d4328 000038 801d4328  4 HSD_Alloc 	Global
   801d4360 00016c 801d4360  4 parseArchiveHeader 	Global
   801d44cc 000038 801d44cc  4 GetStringAtIndex 	Global
   801d4504 0000a4 801d4504  4 GetStringMatchIndex 	Global
   801d45a8 000030 801d45a8  4 GenerateRandomNumber 	Global
-  801d45d8 000058 801d45d8  4 ComputeSmoothedValue 	Global
+  801d45d8 000058 801d45d8  4 HSD_Randf 	Global
   801d4630 00003c 801d4630  4 randomNumberGenerator 	Global
   801d466c 0015c8 801d466c  4 PerformListOperation 	Global
-  801d5c34 0000e8 801d5c34  4 initialize_class_object 	Global
-  801d5d1c 000264 801d5d1c  4 InitializeArrayElementIfNeeded 	Global
-  801d5f80 0001c8 801d5f80  4 allocate_memory 	Global
-  801d6148 000058 801d6148  4 add_to_freelist 	Global
+  801d5c34 0000e8 801d5c34  4 hsdInitCalssInfo 	Global
+  801d5d1c 000264 801d5d1c  4 GetMemoryEntry 	Global
+  801d5f80 0001c8 801d5f80  4 hsdAllocMemPiece 	Global
+  801d6148 000058 801d6148  4 hsdFreeMemPiece 	Global
   801d61a0 000058 801d61a0  4 allocateMemoryForObject 	Global
   801d61f8 000008 801d61f8  4 gdev_cc_shutdown 	TRK_Hollywood_Revolution
   801d6200 000004 801d6200  4 DBClose 	NdevExi2A
   801d6204 00006c 801d6204  4 addElementToArray 	Global
   801d6270 00002c 801d6270  4 reset_undefined_pointers 	Global
   801d629c 00009c 801d629c  4 initializeGlobalData 	Global
-  801d6338 0000c8 801d6338  4 AllocateAndInitializeObject 	Global
+  801d6338 0000c8 801d6338  4 hsdNew 	Global
   801d6400 0000a0 801d6400  4 AreCodePointersInSameChain 	Global
-  801d64a0 000040 801d64a0  4 GetValueFromHashTableByKey 	Global
-  801d64e0 000100 801d64e0  4 GetValueFromHashTable 	Global
-  801d65e0 00003c 801d65e0  4 GetValueFromPointer 	Global
-  801d661c 000088 801d661c  4 HandleSpecialCases 	Global
-  801d66a4 00057c 801d66a4  4 decrementValueBasedOnType 	Global
-  801d6c20 000320 801d6c20  4 remove_matching_entries_from_list 	Global
-  801d6f40 0000c0 801d6f40  4 InitializeTextureEvaluator 	Global
-  801d7000 000120 801d7000  4 handleExpression 	Global
-  801d7120 0000e8 801d7120  4 ConfigureTextureEvaluatorState 	Global
-  801d7208 0000e8 801d7208  4 ConfigureTextureEvaluatorParam 	Global
-  801d72f0 0005b8 801d72f0  4 ConfigureTextureEvaluator 	Global
-  801d78a8 000108 801d78a8  4 configureTextureEvaluatorParams 	Global
+  801d64a0 000040 801d64a0  4 hsdSearchClassInfo 	Global
+  801d64e0 000100 801d64e0  4 HSD_HashSearch 	Global
+  801d65e0 00003c 801d65e0  4 HSD_TExpGetType 	Global
+  801d661c 000088 801d661c  4 HSD_TExpRef 	Global
+  801d66a4 00057c 801d66a4  4 HSD_TExpUnref 	Global
+  801d6c20 000320 801d6c20  4 HSD_TExpFreeList 	Global
+  801d6f40 0000c0 801d6f40  4 HSD_TExpTev 	Global
+  801d7000 000120 801d7000  4 HSD_TExpCnst 	Global
+  801d7120 0000e8 801d7120  4 HSD_TExpColorOp 	Global
+  801d7208 0000e8 801d7208  4 HSD_TExpAlphaOp 	Global
+  801d72f0 0005b8 801d72f0  4 HSD_TExpColorInSub 	Global
+  801d78a8 000108 801d78a8  4 HSD_TExpColorIn 	Global
   801d79b0 0003f8 801d79b0  4 UpdateTevStages 	Global
-  801d7da8 000108 801d7da8  4 UpdateTevRegisters 	Global
-  801d7eb0 0000c4 801d7eb0  4 SetTextureExpressionData 	Global
-  801d7f74 000178 801d7f74  4 updateParamValues 	Global
-  801d80ec 00022c 801d80ec  4 processInputData 	Global
-  801d8318 000164 801d8318  4 update_parameters 	Global
-  801d847c 0006cc 801d847c  4 ProcessAndUpdateData 	Global
-  801d8b48 000400 801d8b48  4 mapTExpData 	Global
-  801d8f48 0004fc 801d8f48  4 UpdateColorRegistersAndVRAMValues 	Global
-  801d9444 00006c 801d9444  4 ConfigureTEVStagesForVRAMAndRegisters 	Global
-  801d94b0 0002a8 801d94b0  4 processAndUpdateDataForQueue 	Global
-  801d9758 000040 801d9758  4 freeListChain 	Global
-  801d9798 0001b0 801d9798  4 UpdateLocalValues 	Global
-  801d9948 000238 801d9948  4 GeneratePossibleMoves 	Global
-  801d9b80 000438 801d9b80  4 update_node_distances 	Global
-  801d9fb8 0004b0 801d9fb8  4 CreateDependencyArray 	Global
-  801da468 000368 801da468  4 mergeDependencies 	Global
-  801da7d0 000498 801da7d0  4 processQueueItem 	Global
-  801dac68 000840 801dac68  4 processDataInBuffer 	Global
-  801db4a8 0017c8 801db4a8  4 checkForMatch 	Global
-  801dcc70 0002b4 801dcc70  4 EvaluateConditions 	Global
-  801dcf24 000090 801dcf24  4 processQueueData 	Global
-  801dcfb4 0001fc 801dcfb4  4 updateValueBasedOnConditions 	Global
-  801dd1b0 000098 801dd1b0  4 InitializeGlobalData 	Global
-  801dd248 00005c 801dd248  4 HandleAssertionFailure 	Global
-  801dd2a4 000098 801dd2a4  4 HandleOSPanicWithReport 	Global
-  801dd33c 000140 801dd33c  4 initParticleDataBank_ 	Global
-  801dd47c 000374 801dd47c  4 update_data_pointers 	Global
-  801dd7f0 00015c 801dd7f0  4 InitializeParticleData 	Global
-  801dd94c 000164 801dd94c  4 initializeGlobalVariables_801dd94c 	Global
-  801ddab0 00013c 801ddab0  4 clearGlobalData_801ddab0 	Global
-  801ddbec 0002f8 801ddbec  4 CreateAndInitializeObject 	Global
-  801ddee4 0000f8 801ddee4  4 ProcessObjectTransformation 	Global
-  801ddfdc 000064 801ddfdc  4 createObject 	Global
-  801de040 0000fc 801de040  4 removeParticles 	Global
-  801de13c 0000f8 801de13c  4 removeObjectReference 	Global
-  801de234 0000dc 801de234  4 updateReferenceCount 	Global
-  801de310 000068 801de310  4 decrementReferenceCountForArray 	Global
-  801de378 00005c 801de378  4 removeResourceReference_801de378_ 	Global
-  801de3d4 000114 801de3d4  4 removeExpiredParticles 	Global
+  801d7da8 000108 801d7da8  4 HSD_TExpAlphaIn 	Global
+  801d7eb0 0000c4 801d7eb0  4 HSD_TExpOrder 	Global
+  801d7f74 000178 801d7f74  4 AssignColorReg 	Global
+  801d80ec 00022c 801d80ec  4 AssignColorKonst 	Global
+  801d8318 000164 801d8318  4 AssignAlphaReg 	Global
+  801d847c 0006cc 801d847c  4 TExpAssignReg 	Global
+  801d8b48 000400 801d8b48  4 TExp2TevDesc 	Global
+  801d8f48 0004fc 801d8f48  4 HSD_TExpSetReg 	Global
+  801d9444 00006c 801d9444  4 HSD_TExpSetupTev 	Global
+  801d94b0 0002a8 801d94b0  4 HSD_TExpCompile 	Global
+  801d9758 000040 801d9758  4 HSD_TExpFreeTevDesc 	Global
+  801d9798 0001b0 801d9798  4 assign_reg 	Global
+  801d9948 000238 801d9948  4 order_dag 	Global
+  801d9b80 000438 801d9b80  4 CalcDistance 	Global
+  801d9fb8 0004b0 801d9fb8  4 HSD_TExpMakeDag 	Global
+  801da468 000368 801da468  4 make_full_dependancy_mtx 	Global
+  801da7d0 000498 801da7d0  4 SimplifySrc 	Global
+  801dac68 000840 801dac68  4 SimplifyThis 	Global
+  801db4a8 0017c8 801db4a8  4 SimplifyByMerge 	Global
+  801dcc70 0002b4 801dcc70  4 CalcTevRange 	Global
+  801dcf24 000090 801dcf24  4 HSD_TExpSimplify 	Global
+  801dcfb4 0001fc 801dcfb4  4 HSD_TExpSimplify2 	Global
+  801dd1b0 000098 801dd1b0  4 HSD_SaveContext 	Global
+  801dd248 00005c 801dd248  4 __assert 	Global
+  801dd2a4 000098 801dd2a4  4 HSD_Panic 	Global
+  801dd33c 000140 801dd33c  4 psInitDataBankLoad 	Global
+  801dd47c 000374 801dd47c  4 psInitDataBankLocate 	Global
+  801dd7f0 00015c 801dd7f0  4 psInitDataBank 	Global
+  801dd94c 000164 801dd94c  4 psInitParticle 	Global
+  801ddab0 00013c 801ddab0  4 psRemoveParticle 	Global
+  801ddbec 0002f8 801ddbec  4 psGenerateParticle0 	Global
+  801ddee4 0000f8 801ddee4  4 psGenerateParticleID0 	Global
+  801ddfdc 000064 801ddfdc  4 psGenerateParticle 	Global
+  801de040 0000fc 801de040  4 psKillAllParticle 	Global
+  801de13c 0000f8 801de13c  4 psSetPointJObj 	Global
+  801de234 0000dc 801de234  4 psSetPointJObjNodup 	Global
+  801de310 000068 801de310  4 psClearPointJObj 	Global
+  801de378 00005c 801de378  4 psDeletePntJObjwithParticle 	Global
+  801de3d4 000114 801de3d4  4 psKillGeneratorChild 	Global
   801de4e8 000008 801de4e8  4 GXInitTexObjUserData 	gx
-  801de4f0 000170 801de4f0  4 updateObjectProperties 	Global
+  801de4f0 000170 801de4f0  4 genPosUpdate 	Global
   801de660 000038 801de660  4 swapAndReturnNext 	Global
   801de698 000030 801de698  4 read_ushort_from_byte_stream 	Global
-  801de6c8 00031c 801de6c8  4 Update3DCoordinates 	Global
-  801de9e4 0002f8 801de9e4  4 rotate_3d_vector 	Global
+  801de6c8 00031c 801de6c8  4 modifyDir 	Global
+  801de9e4 0002f8 801de9e4  4 modifyDir 	Global
   801decdc 0002a8 801decdc  4 updateDistanceBetweenObjects 	Global
-  801def84 000144 801def84  4 updatePositionFromObject 	Global
-  801df0c8 002f30 801df0c8  4 ProcessGameBillboardFX 	Global
+  801def84 000144 801def84  4 applyForceJObj 	Global
+  801df0c8 002f30 801df0c8  4 psInterpretParticle0 	Global
   801e1ff8 0000b0 801e1ff8  4 updateWorldPosition 	Global
   801e20a8 0000b0 801e20a8  4 updateObjectYCoordinate 	Global
   801e2158 0000b0 801e2158  4 updateObjectRotation_ 	Global
@@ -4397,13 +4401,13 @@
   801e22f0 000064 801e22f0  4 AddReferenceToObject 	Global
   801e2354 000008 801e2354  4 CBGetBytesAvailableForRead 	TRK_Hollywood_Revolution
   801e235c 0000d8 801e235c  4 ProcessParticleSystemTransformations 	Global
-  801e2434 000028 801e2434  4 IncrementAndReturnCounter 	Global
+  801e2434 000028 801e2434  4 psGetNewIDNum 	Global
   801e245c 000098 801e245c  4 initializeElementArrayMemoryPool 	Global
   801e24f4 000058 801e24f4  4 CleanUpParticlesAndObjects 	Global
   801e254c 0001bc 801e254c  4 removeElementFromLinkedList 	Global
-  801e2708 0001f0 801e2708  4 updateAndRemoveParticles 	Global
+  801e2708 0001f0 801e2708  4 psKillAllGenerator 	Global
   801e28f8 0002dc 801e28f8  4 ProcessTransformationAndWorldState 	Global
-  801e2bd4 00140c 801e2bd4  4 InstantiateObject 	Global
+  801e2bd4 00140c 801e2bd4  4 generateParticle 	Global
   801e3fe0 0003a0 801e3fe0  4 ProcessParticles 	Global
   801e4380 0000ac 801e4380  4 CreateObjectAndUpdateReferenceCount 	Global
   801e442c 00082c 801e442c  4 CreateObject 	Global
@@ -4415,17 +4419,17 @@
   801e5614 00009c 801e5614  4 allocateMemoryInPool 	Global
   801e56b0 000048 801e56b0  4 FreePhysicalMemory 	Global
   801e56f8 000098 801e56f8  4 allocateSoundStream 	Global
-  801e5790 00003c 801e5790  4 increment_reference_count 	Global
+  801e5790 00003c 801e5790  4 psAttachParticleAppSRT 	Global
   801e57cc 00003c 801e57cc  4 incrementReferenceCountForResource 	Global
   801e5808 00006c 801e5808  4 AcquireResourceForHandle 	Global
   801e5874 00006c 801e5874  4 incrementReferenceCountForResource 	Global
-  801e58e0 0000a0 801e58e0  4 releaseResourceForHandle 	Global
+  801e58e0 0000a0 801e58e0  4 psRemoveParticleAppSRT 	Global
   801e5980 0000b8 801e5980  4 decrementReferenceCountForResource 	Global
-  801e5a38 00010c 801e5a38  4 initializeMemoryPool_801e5a38 	Global
-  801e5b44 0000a8 801e5b44  4 clearMallocedMemory_801e5b44 	Global
-  801e5bec 00008c 801e5bec  4 move_to_linked_list_head 	Global
-  801e5c78 0000dc 801e5c78  4 removeParticle 	Global
-  801e5d54 00006c 801e5d54  4 getParticleSystemList 	Global
+  801e5a38 00010c 801e5a38  4 _psLinkInit 	Global
+  801e5b44 0000a8 801e5b44  4 _psListClear 	Global
+  801e5bec 00008c 801e5bec  4 _psListNew 	Global
+  801e5c78 0000dc 801e5c78  4 _psListDelete 	Global
+  801e5d54 00006c 801e5d54  4 _psListGetFirst 	Global
   801e5dc0 000338 801e5dc0  4 manage_linked_lists 	Global
   801e60f8 000060 801e60f8  4 allocateMemoryForAudioEffect 	Global
   801e6158 000004 801e6158  4 DBClose 	NdevExi2A
@@ -4531,7 +4535,7 @@
   801f253c 0003c0 801f253c  4 RemoveStreamTask 	Global
   801f28fc 000014 801f28fc  4 PlatAudio::IsEntireSampleFileInMem(void) 	Global
   801f2910 000098 801f2910  4 UpdateTaskParameters 	Global
-  801f29a8 000468 801f29a8  4 AudioHandler 	Global
+  801f29a8 000468 801f29a8  4 HSD_AudioInit 	Global
   801f2e10 0000ec 801f2e10  4 InitializeSaveDataSystem 	Global
   801f2efc 00010c 801f2efc  4 checkExiDeviceStatus_ 	Global
   801f3008 00003c 801f3008  4 getValueAtArrayIndex 	Global
@@ -4610,6 +4614,7 @@
   801fd1e4 0003b0 801fd1e4  4 MixAndProcessAudio 	Global
   801fd594 000090 801fd594  4 __THPAudioGetNewSample 	Global
   801fd624 00003c 801fd624  4 __THPAudioInitialize 	Global
+  801fd664 000048 801fd664  4 initGameClasses 	Global
   801fd728 000004 801fd728  4 INT_801fd728 	Global
   801fd72c 000004 801fd72c  4 INT_801fd72c 	Global
   801fd730 000004 801fd730  4 INT_801fd730 	Global
@@ -10047,8 +10052,8 @@
   8020f888 000001 8020f888  1 s_pobj->u.jobj_8020f888 	Global
   8020f8bc 000001 8020f8bc  1 s_shape_set_8020f8bc 	Global
   8020f8c8 000001 8020f8c8  1 s_pobj:_unexected_type._8020f8c8 	Global
-  8020f8e0 000001 8020f8e0  8 s_sysdolphin_base_library_8020f8e0 	Global
-  8020f8f8 000001 8020f8f8  1 s_hsd_tobj_8020f8f8 	Global
+  8020f8e0 000001 8020f8e0  8 @sysdolphin 	Global
+  8020f8f8 000001 8020f8f8  1 @hsd_tobj 	Global
   8020f904 000001 8020f904  8 s_texmtx_index_exceed_hardware_lim_8020f904 	Global
   8020f930 000001 8020f930  8 s_imagedesc_8020f930 	Global
   8020f93c 000001 8020f93c  8 s_imagedesc->image_ptr_8020f93c 	Global
@@ -11789,7 +11794,8 @@
   802587d8 000028 802587d8  1 CTpl_802587d8 	Global
   80258800 000001 80258800  1 s_ReadAsync_80258800 	Global
   8025880c 000001 8025880c  8 s_ReadCheck_8025880c 	Global
-  8025885c 000004 8025885c  4 INT_8025885c 	Global
+  80258818 000054 80258818  4 xcObj 	Global
+  8025885c 000001 8025885c  8 xcObj[17] 	Global
   8025888c 000090 8025888c  1 CXobjIntp_8025888c 	Global
   8025891c 000090 8025891c  1 CXObj_8025891c 	Global
   802589ac 00001c 802589ac  1 CJArchive_802589ac 	Global
@@ -11805,32 +11811,26 @@
   80258ac8 000004 80258ac8  4 INT_80258ac8 	Global
   80258b24 000004 80258b24  4 INT_80258b24 	Global
   80258b54 000004 80258b54  4 INT_80258b54 	Global
-  80258b68 000004 80258b68  4 INT_80258b68 	Global
+  80258b68 000004 80258b68  4 invalidate_funcs$448 	Global
   80258b70 000004 80258b70  4 INT_80258b70 	Global
   80258bb8 000001 80258bb8  1 BYTE_80258bb8 	Global
   80258bb9 000001 80258bb9  1 BYTE_80258bb9 	Global
   80258bba 000001 80258bba  1 BYTE_80258bba 	Global
-  80258c9c 000004 80258c9c  4 INT_80258c9c 	Global
-  80258cb8 000004 80258cb8  4 INT_80258cb8 	Global
-  80258cc0 000004 80258cc0  4 INT_80258cc0 	Global
-  80258cc4 000004 80258cc4  4 INT_80258cc4 	Global
-  80258cc8 000004 80258cc8  4 INT_80258cc8 	Global
-  80258ccc 000004 80258ccc  4 INT_80258ccc 	Global
-  80258cd0 000004 80258cd0  4 INT_80258cd0 	Global
+  80258c88 00004c 80258c88  4 hsdPObj 	Global
+  80258c9c 000001 80258c9c  8 hsdPObj[5] 	Global
+  80258cb8 000001 80258cb8  8 hsdPObj[12] 	Global
+  80258cc0 000001 80258cc0  8 hsdPObj[14] 	Global
+  80258cc4 000001 80258cc4  8 hsdPObj[15] 	Global
+  80258cc8 000001 80258cc8  8 hsdPObj[16] 	Global
+  80258ccc 000001 80258ccc  8 hsdPObj[17] 	Global
+  80258cd0 000001 80258cd0  8 hsdPObj[18] 	Global
   80258cd4 000004 80258cd4  4 switchdataD_80258cd4 	switchD_801ad338
-  80258d6c 000004 80258d6c  4 initSystemPTr 	Global
-  80258d70 000004 80258d70  4 CleanResourcesPtr 	Global
-  80258d78 000004 80258d78  4 ClearPtrsPtr 	Global
-  80258d80 000004 80258d80  4 initObjectPtr 	Global
-  80258d84 000004 80258d84  4 textureCombinerHandlerPtr 	Global
-  80258dbc 000004 80258dbc  4 INT_80258dbc 	Global
-  80258de4 000004 80258de4  4 INT_80258de4 	Global
-  80258de8 000004 80258de8  4 INT_80258de8 	Global
-  80258dec 000004 80258dec  4 INT_80258dec 	Global
-  80258e58 000004 80258e58  4 INT_80258e58 	Global
-  80258e5c 000004 80258e5c  4 INT_80258e5c 	Global
-  80258e60 000004 80258e60  4 INT_80258e60 	Global
-  80258e68 000004 80258e68  4 INT_80258e68 	Global
+  80258d40 000004 80258d40  4 hsdTObj 	Global
+  80258d6c 000001 80258d6c  8 initSystemPTr 	Global
+  80258d70 000001 80258d70  8 CleanResourcesPtr 	Global
+  80258d78 000001 80258d78  8 ClearPtrsPtr 	Global
+  80258d80 000001 80258d80  8 initObjectPtr 	Global
+  80258d84 000001 80258d84  8 textureCombinerHandlerPtr 	Global
   80258e84 000001 80258e84  1 BYTE_80258e84 	Global
   80258e8c 000004 80258e8c  4 INT_80258e8c 	Global
   80258ec4 000004 80258ec4  4 INT_80258ec4 	Global
@@ -11848,14 +11848,15 @@
   80259044 000004 80259044  4 switchdataD_80259044 	switchD_801b0a80
   80259064 000004 80259064  4 switchdataD_80259064 	switchD_801b1494
   802590e0 000001 802590e0  8 s__802590e0 	Global
-  80259214 000004 80259214  4 INT_80259214 	Global
-  80259230 000004 80259230  4 INT_80259230 	Global
-  80259238 000004 80259238  4 INT_80259238 	Global
-  8025923c 000004 8025923c  4 INT_8025923c 	Global
-  80259240 000004 80259240  4 INT_80259240 	Global
-  80259248 000001 80259248  1 s_mobj_has_unexpected_blending_fla_80259248 	Global
-  802592fc 000001 802592fc  1 s_sysdolphin_base_library_802592fc 	Global
-  80259314 000001 80259314  1 s_hsd_dobj_80259314 	Global
+  80259200 000120 80259200  4 hsdDObj 	Global
+  80259214 000001 80259214  8 hsdDObj[5] 	Global
+  80259230 000001 80259230  8 hsdDObj[12] 	Global
+  80259238 000001 80259238  8 hsdDObj[14] 	Global
+  8025923c 000001 8025923c  8 hsdDObj[15] 	Global
+  80259240 000001 80259240  8 hsdDObj[16] 	Global
+  80259248 000001 80259248  8 hsdDObj[18] 	Global
+  802592fc 000001 802592fc  8 hsdDObj[63] 	Global
+  80259314 000001 80259314  8 hsdDObj[69] 	Global
   80259320 000004 80259320  4 INT_80259320 	Global
   80259324 000004 80259324  4 INT_80259324 	Global
   80259328 000004 80259328  4 INT_80259328 	Global
@@ -11864,15 +11865,16 @@
   8025934c 000004 8025934c  4 INT_8025934c 	Global
   80259410 000004 80259410  4 switchdataD_80259410 	switchD_801b8ac4
   80259450 000004 80259450  4 switchdataD_80259450 	switchD_801b8b94
-  80259564 000004 80259564  4 INT_80259564 	Global
-  80259580 000004 80259580  4 INT_80259580 	Global
-  80259588 000004 80259588  4 INT_80259588 	Global
-  8025958c 000004 8025958c  4 INT_8025958c 	Global
-  80259590 000004 80259590  4 INT_80259590 	Global
-  80259594 000004 80259594  4 INT_80259594 	Global
-  80259598 000004 80259598  4 INT_80259598 	Global
-  8025959c 000004 8025959c  4 INT_8025959c 	Global
-  802595a0 000004 802595a0  4 INT_802595a0 	Global
+  80259550 000054 80259550  4 hsdMObj 	Global
+  80259564 000001 80259564  8 hsdMObj[5] 	Global
+  80259580 000001 80259580  8 hsdMObj[12] 	Global
+  80259588 000001 80259588  8 hsdMObj[14] 	Global
+  8025958c 000001 8025958c  8 hsdMObj[15] 	Global
+  80259590 000001 80259590  8 hsdMObj[16] 	Global
+  80259594 000001 80259594  8 hsdMObj[17] 	Global
+  80259598 000001 80259598  8 hsdMObj[18] 	Global
+  8025959c 000001 8025959c  8 hsdMObj[19] 	Global
+  802595a0 000001 802595a0  8 hsdMObj[20] 	Global
   802595a4 000004 802595a4  4 switchdataD_802595a4 	switchD_801b8ff8
   802595dc 000001 802595dc  1 s_hsdIsDescendantOf(info,_&hsdMObj_802595dc 	Global
   80259600 000001 80259600  1 s_mobj->tevdesc_80259600 	Global
@@ -11910,11 +11912,12 @@
   80259b80 000004 80259b80  4 switchdataD_80259b80 	switchD_801bc528
   80259bb0 000004 80259bb0  4 switchdataD_80259bb0 	switchD_801bc4b4
   80259be4 000004 80259be4  4 switchdataD_80259be4 	switchD_801bc434
-  80259c2c 000004 80259c2c  4 INT_80259c2c 	Global
-  80259c48 000004 80259c48  4 INT_80259c48 	Global
-  80259c50 000004 80259c50  4 INT_80259c50 	Global
-  80259c54 000004 80259c54  4 INT_80259c54 	Global
-  80259c58 000004 80259c58  4 INT_80259c58 	Global
+  80259c18 000044 80259c18  4 hsdLobj 	Global
+  80259c2c 000001 80259c2c  8 hsdLobj[5] 	Global
+  80259c48 000001 80259c48  8 hsdLobj[12] 	Global
+  80259c50 000001 80259c50  8 hsdLobj[14] 	Global
+  80259c54 000001 80259c54  8 hsdLobj[15] 	Global
+  80259c58 000001 80259c58  8 hsdLobj[16] 	Global
   80259c5c 000004 80259c5c  4 switchdataD_80259c5c 	switchD_801bd120
   80259c94 000001 80259c94  1 s_object.h_80259c94 	Global
   80259ca0 000001 80259ca0  1 s_HSD_OBJ(o)->ref_count_!=_HSD_OBJ_80259ca0 	Global
@@ -11924,32 +11927,37 @@
   80259d30 000001 80259d30  1 s_unexpected_lightdesc_flags_(%x)_80259d30 	Global
   80259d54 000001 80259d54  1 s_sysdolphin_base_library_80259d54 	Global
   80259d6c 000001 80259d6c  1 s_hsd_lobj_80259d6c 	Global
-  80259d8c 000004 80259d8c  4 INT_80259d8c 	Global
-  80259da4 000004 80259da4  4 INT_80259da4 	Global
-  80259da8 000004 80259da8  4 INT_80259da8 	Global
-  80259db0 000004 80259db0  4 INT_80259db0 	Global
-  80259db4 000004 80259db4  4 INT_80259db4 	Global
-  80259db8 000004 80259db8  4 INT_80259db8 	Global
+  80259d78 000044 80259d78  4 hsdCObj 	Global
+  80259d8c 000001 80259d8c  8 hsdCObj[5] 	Global
+  80259da4 000001 80259da4  8 hsdCObj[11] 	Global
+  80259da8 000001 80259da8  8 hsdCObj[12] 	Global
+  80259db0 000001 80259db0  8 hsdCObj[14] 	Global
+  80259db4 000001 80259db4  8 hsdCObj[15] 	Global
+  80259db8 000001 80259db8  8 hsdCObj[16] 	Global
   80259dbc 000001 80259dbc  1 s_ref_width_>_0_80259dbc 	Global
   80259dcc 000001 80259dcc  1 s_ref_height_>_0_80259dcc 	Global
   80259ddc 000004 80259ddc  4 switchdataD_80259ddc 	switchD_801bf48c
   80259e10 000001 80259e10  1 s_unkown_type_of_render_pass._80259e10 	Global
   80259e30 000001 80259e30  1 s_cobj->eyepos_80259e30 	Global
   80259e40 000001 80259e40  1 s_cobj->interest_80259e40 	Global
+  80259e50 000001 80259e50  1 orig 	Global
+  80259e5c 000001 80259e5c  1 uy 	Global
   80259e68 000001 80259e68  1 s_illegal_up_vector._80259e68 	Global
   80259eac 000001 80259eac  1 s_sysdolphin_base_library_80259eac 	Global
   80259ec4 000001 80259ec4  1 s_hsd_cobj_80259ec4 	Global
   80259ed0 000001 80259ed0  8 s_st_==_FOBJ_LOAD_WAIT_80259ed0 	Global
   80259ee8 000001 80259ee8  8 s_st_==_FOBJ_LOAD_DATA0_||_st_==_F_80259ee8 	Global
-  80259f44 000004 80259f44  4 ProcessNodeAndGetResultPtr 	Global
-  80259f48 000004 80259f48  4 INT_80259f48 	Global
-  80259f50 000004 80259f50  4 INT_80259f50 	Global
-  80259f54 000004 80259f54  4 INT_80259f54 	Global
-  80259f58 000004 80259f58  4 ProcessNodePtr 	Global
-  80259f5c 000004 80259f5c  4 INT_80259f5c 	Global
-  80259f60 000004 80259f60  4 INT_80259f60 	Global
-  80259f64 000004 80259f64  4 INT_80259f64 	Global
-  80259f68 000004 80259f68  4 INT_80259f68 	Global
+  80259f18 000054 80259f18  4 hsdJObj 	Global
+  80259f2c 000001 80259f2c  8 hsdJObj[5] 	Global
+  80259f44 000001 80259f44  8 ProcessNodeAndGetResultPtr 	Global
+  80259f48 000001 80259f48  8 hsdJObj[12] 	Global
+  80259f50 000001 80259f50  8 hsdJObj[14] 	Global
+  80259f54 000001 80259f54  8 hsdJObj[15] 	Global
+  80259f58 000001 80259f58  8 ProcessNodePtr 	Global
+  80259f5c 000001 80259f5c  8 hsdJObj[17] 	Global
+  80259f60 000001 80259f60  8 hsdJObj[18] 	Global
+  80259f64 000001 80259f64  8 hsdJObj[19] 	Global
+  80259f68 000001 80259f68  8 hsdJObj[20] 	Global
   80259f6c 000001 80259f6c  1 s_jobj->parent_80259f6c 	Global
   80259f7c 000001 80259f7c  1 s_jobj->aobj_80259f7c 	Global
   80259f88 000001 80259f88  1 s_jp->u.spline_80259f88 	Global
@@ -12006,7 +12014,7 @@
   8025a62c 000004 8025a62c  4 INT_8025a62c 	Global
   8025a630 000004 8025a630  4 INT_8025a630 	Global
   8025a668 000004 8025a668  4 switchdataD_8025a668 	switchD_801d060c
-  8025a690 000004 8025a690  4 INT_8025a690 	Global
+  8025a690 000004 8025a690  4 obj_heap 	Global
   8025a694 000004 8025a694  4 INT_8025a694 	Global
   8025a698 000004 8025a698  4 INT_8025a698 	Global
   8025a69c 000004 8025a69c  4 INT_8025a69c 	Global
@@ -12022,24 +12030,31 @@
   8025a768 000001 8025a768  1 s_unexpected_type_of_robj._8025a768 	Global
   8025a79c 000001 8025a79c  1 s_Number_of_argment_of_expression_e_8025a79c 	Global
   8025a808 000001 8025a808  1 s_rvalue->jobj_8025a808 	Global
-  8025a854 000004 8025a854  4 INT_8025a854 	Global
+  8025a840 000044 8025a840  4 hsdWObj 	Global
+  8025a854 000001 8025a854  8 hsdWObj[5] 	Global
+  8025a870 000001 8025a870  8 hsdWObj[12] 	Global
+  8025a878 000001 8025a878  8 hsdWObj[14] 	Global
+  8025a87c 000001 8025a87c  8 hsdWObj[15] 	Global
+  8025a880 000001 8025a880  8 hsdWObj[16] 	Global
   8025a884 000001 8025a884  1 s_wobj->aobj_8025a884 	Global
   8025a890 000001 8025a890  1 s_jp->u.spline_8025a890 	Global
   8025a8c4 000001 8025a8c4  1 s_sysdolphin_base_library_8025a8c4 	Global
   8025a8dc 000001 8025a8dc  1 s_had_wobj_8025a8dc 	Global
   8025a8e8 000001 8025a8e8  8 s_You_must_specify_CObj_first._8025a8e8 	Global
   8025a914 000004 8025a914  4 INT_8025a914 	Global
-  8025a9d4 000001 8025a9d4  1 s_sysdolphin_base_library_8025a9d4 	Global
-  8025a9f0 000001 8025a9f0  8 s_memory.c_8025a9f0 	Global
-  8025a9fc 000001 8025a9fc  8 s_size_==_sizeof(__mem_cb)_8025a9fc 	Global
-  8025aa18 000001 8025aa18  8 s_HSD_ArchiveParse:_byte-order_mis_8025aa18 	Global
-  8025aa60 000001 8025aa60  8 s_bytecode.c_8025aa60 	Global
-  8025aa6c 000001 8025aa6c  1 s_operand_<_nb_args_8025aa6c 	Global
-  8025aa80 000001 8025aa80  1 s_specified_stack_doesn't_exist_(%_8025aa80 	Global
+  8025a998 0000f0 8025a998  4 hsdObj 	Global
+  8025a9d4 000001 8025a9d4  8 hsdObj[15] 	Global
+  8025a9f0 000001 8025a9f0  8 hsdObj[22] 	Global
+  8025a9fc 000001 8025a9fc  8 hsdObj[25] 	Global
+  8025aa18 000001 8025aa18  8 hsdObj[32] 	Global
+  8025aa60 000001 8025aa60  8 hsdObj[50] 	Global
+  8025aa6c 000001 8025aa6c  8 hsdObj[53] 	Global
+  8025aa80 000001 8025aa80  8 hsdObj[58] 	Global
   8025aaa8 000001 8025aaa8  1 s_not_yet_implemented._8025aaa8 	Global
   8025aac0 000001 8025aac0  1 s_unexpected_byte_code._8025aac0 	Global
   8025aad8 000001 8025aad8  1 s_stack->next_8025aad8 	Global
   8025aae4 000001 8025aae4  1 s_unexpected_opcode_0x%x._8025aae4 	Global
+  8025ab00 000004 8025ab00  4 hsdClass 	Global
   8025ab04 000004 8025ab04  4 sysDolphinEnabled 	Global
   8025ab08 000004 8025ab08  4 sysDolphinBaseLibrary 	Global
   8025ab0c 000004 8025ab0c  4 INT_8025ab0c 	Global
@@ -14800,7 +14815,7 @@
   8064a4b0 000004 8064a4b0  4 INT_8064a4b0 	Global
   8064a4b4 000001 8064a4b4  1 BYTE_8064a4b4 	Global
   8064a4b8 000004 8064a4b8  4 INT_8064a4b8 	Global
-  8064a4f0 000004 8064a4f0  4 INT_8064a4f0 	Global
+  8064a4f0 000004 8064a4f0  4 mtx_mark 	Global
   8064a4f4 000004 8064a4f4  4 INT_8064a4f4 	Global
   8064a4f8 000004 8064a4f8  4 INT_8064a4f8 	Global
   8064a4fc 000004 8064a4fc  4 INT_8064a4fc 	Global
@@ -14899,8 +14914,8 @@
   8064a75c 000004 8064a75c  4 INT_8064a75c 	Global
   8064a760 000004 8064a760  4 INT_8064a760 	Global
   8064a764 000004 8064a764  4 INT_8064a764 	Global
-  8064ae48 000001 8064ae48  1 nodeAddr 	Global
-  8064ae78 000004 8064ae78  4 INT_8064ae78 	Global
+  8064ae48 000001 8064ae48  1 alloc_data 	Global
+  8064ae78 000004 8064ae78  4 active_lights 	Global
   8064ae7c 000004 8064ae7c  4 INT_8064ae7c 	Global
   8064ae80 000004 8064ae80  4 INT_8064ae80 	Global
   8064ae84 000004 8064ae84  4 INT_8064ae84 	Global
@@ -14909,11 +14924,11 @@
   8064ae90 000004 8064ae90  4 INT_8064ae90 	Global
   8064ae94 000004 8064ae94  4 INT_8064ae94 	Global
   8064ae98 000004 8064ae98  4 INT_8064ae98 	Global
-  8064aea0 000001 8064aea0  1 listNodePtr 	Global
-  8064af00 000004 8064af00  4 INT_8064af00 	Global
+  8064aea0 000001 8064aea0  1 alloc_data 	Global
+  8064af00 000004 8064af00  4 FrameBuffer 	Global
   8064af04 000004 8064af04  4 INT_8064af04 	Global
   8064af08 000004 8064af08  4 INT_8064af08 	Global
-  8064af0c 000004 8064af0c  4 INT_8064af0c 	Global
+  8064af0c 000004 8064af0c  4 memReport 	Global
   8064af10 000004 8064af10  4 INT_8064af10 	Global
   8064af14 000004 8064af14  4 INT_8064af14 	Global
   8064af18 000004 8064af18  4 INT_8064af18 	Global
@@ -14926,6 +14941,7 @@
   8064af30 000002 8064af30  2 SHORT_8064af30 	Global
   8064af34 000004 8064af34  4 INT_8064af34 	Global
   8064af38 000001 8064af38  1 BYTE_8064af38 	Global
+  8064af39 000001 8064af39  1 BYTE_8064af39 	Global
   8064af3c 000004 8064af3c  4 INT_8064af3c 	Global
   8064af40 000004 8064af40  4 INT_8064af40 	Global
   8064af44 000004 8064af44  4 INT_8064af44 	Global
@@ -15077,9 +15093,9 @@
   8064c734 000004 8064c734  4 INT_8064c734 	Global
   8064c738 000004 8064c738  4 INT_8064c738 	Global
   8064c73c 000004 8064c73c  4 INT_8064c73c 	Global
-  8064c778 000004 8064c778  4 INT_8064c778 	Global
-  8064c779 000001 8064c779  8 INT_8064c778+1 	Global
-  8064c77a 000001 8064c77a  8 INT_8064c778+2 	Global
+  8064c778 000004 8064c778  4 HSD_PadRumbleStatus 	Global
+  8064c779 000001 8064c779  8 HSD_PadRumbleStatus+1 	Global
+  8064c77a 000001 8064c77a  8 HSD_PadRumbleStatus+2 	Global
   8064c77c 000004 8064c77c  4 INT_8064c77c 	Global
   8064c780 000004 8064c780  4 INT_8064c780 	Global
   8064c784 000004 8064c784  4 INT_8064c784 	Global
@@ -15093,10 +15109,14 @@
   8064c79c 000004 8064c79c  4 INT_8064c79c 	Global
   8064c7a0 000004 8064c7a0  4 INT_8064c7a0 	Global
   8064c7a4 000004 8064c7a4  4 INT_8064c7a4 	Global
+  8064c7a8 000001 8064c7a8  1 vec_alloc_data 	Global
+  8064c7d4 000001 8064c7d4  1 mtx_alloc_data 	Global
   8064c800 000001 8064c800  1 nodePtr 	Global
   8064c82c 000001 8064c82c  1 nodeListPtr 	Global
   8064c858 000001 8064c858  1 memChunkPtr 	Global
-  8064c884 000194 8064c884  1 somePtrStruct_8064c884 	Global
+  8064c884 000194 8064c884  1 default_table 	Global
+  8064ca18 000001 8064ca18  1 s_alloc_data 	Global
+  8064ca44 000001 8064ca44  1 d_alloc_data 	Global
   8064ca70 000004 8064ca70  4 INT_8064ca70 	Global
   8064ca74 000004 8064ca74  4 INT_8064ca74 	Global
   8064ca78 000004 8064ca78  4 INT_8064ca78 	Global
@@ -15149,7 +15169,7 @@
   8064cc40 000004 8064cc40  4 INT_8064cc40 	Global
   8064cc44 000004 8064cc44  4 INT_8064cc44 	Global
   8064cc48 000004 8064cc48  4 INT_8064cc48 	Global
-  8064cd50 000004 8064cd50  4 INT_8064cd50 	Global
+  8064cd50 000004 8064cd50  4 ptclref 	Global
   8064cd54 000004 8064cd54  4 INT_8064cd54 	Global
   8064cd58 000004 8064cd58  4 INT_8064cd58 	Global
   8064cd5c 000004 8064cd5c  4 INT_8064cd5c 	Global
@@ -15165,7 +15185,7 @@
   8064cd84 000004 8064cd84  4 INT_8064cd84 	Global
   8064cd88 000004 8064cd88  4 INT_8064cd88 	Global
   8064cd8c 000004 8064cd8c  4 INT_8064cd8c 	Global
-  8064ce50 000004 8064ce50  4 INT_8064ce50 	Global
+  8064ce50 000004 8064ce50  4 psNumTexGroup 	Global
   8064ce54 000004 8064ce54  4 INT_8064ce54 	Global
   8064ce58 000004 8064ce58  4 INT_8064ce58 	Global
   8064ce5c 000004 8064ce5c  4 INT_8064ce5c 	Global
@@ -15181,7 +15201,7 @@
   8064ce84 000004 8064ce84  4 INT_8064ce84 	Global
   8064ce88 000004 8064ce88  4 INT_8064ce88 	Global
   8064ce8c 000004 8064ce8c  4 INT_8064ce8c 	Global
-  8064cf50 000004 8064cf50  4 INT_8064cf50 	Global
+  8064cf50 000004 8064cf50  4 psTexGroupArray 	Global
   8064cf54 000004 8064cf54  4 INT_8064cf54 	Global
   8064cf58 000004 8064cf58  4 INT_8064cf58 	Global
   8064cf5c 000004 8064cf5c  4 INT_8064cf5c 	Global
@@ -15197,7 +15217,7 @@
   8064cf84 000004 8064cf84  4 INT_8064cf84 	Global
   8064cf88 000004 8064cf88  4 INT_8064cf88 	Global
   8064cf8c 000004 8064cf8c  4 INT_8064cf8c 	Global
-  8064d050 000004 8064d050  4 INT_8064d050 	Global
+  8064d050 000004 8064d050  4 psFormGroupArray 	Global
   8064d054 000004 8064d054  4 INT_8064d054 	Global
   8064d058 000004 8064d058  4 INT_8064d058 	Global
   8064d05c 000004 8064d05c  4 INT_8064d05c 	Global
@@ -15213,7 +15233,7 @@
   8064d084 000004 8064d084  4 INT_8064d084 	Global
   8064d088 000004 8064d088  4 INT_8064d088 	Global
   8064d08c 000004 8064d08c  4 INT_8064d08c 	Global
-  8064d150 000004 8064d150  4 INT_8064d150 	Global
+  8064d150 000004 8064d150  4 psNumCmdList 	Global
   8064d154 000004 8064d154  4 INT_8064d154 	Global
   8064d158 000004 8064d158  4 INT_8064d158 	Global
   8064d15c 000004 8064d15c  4 INT_8064d15c 	Global
@@ -15229,7 +15249,7 @@
   8064d184 000004 8064d184  4 INT_8064d184 	Global
   8064d188 000004 8064d188  4 INT_8064d188 	Global
   8064d18c 000004 8064d18c  4 INT_8064d18c 	Global
-  8064d250 000004 8064d250  4 INT_8064d250 	Global
+  8064d250 000004 8064d250  4 psCmdListArray 	Global
   8064d254 000004 8064d254  4 INT_8064d254 	Global
   8064d258 000004 8064d258  4 INT_8064d258 	Global
   8064d25c 000004 8064d25c  4 INT_8064d25c 	Global
@@ -15245,7 +15265,7 @@
   8064d284 000004 8064d284  4 INT_8064d284 	Global
   8064d288 000004 8064d288  4 INT_8064d288 	Global
   8064d28c 000004 8064d28c  4 INT_8064d28c 	Global
-  8064d350 000004 8064d350  4 INT_8064d350 	Global
+  8064d350 000004 8064d350  4 psPointJObj 	Global
   8064d354 000004 8064d354  4 INT_8064d354 	Global
   8064d358 000004 8064d358  4 INT_8064d358 	Global
   8064d35c 000004 8064d35c  4 INT_8064d35c 	Global
@@ -15669,7 +15689,7 @@
   8065aa80 000001 8065aa80  8 s_Reset2_8065aa80 	Global
   8065aa90 000001 8065aa90  1 s_Update_8065aa90 	Global
   8065ab38 000001 8065ab38  1 s_Update_8065ab38 	Global
-  8065ab50 000004 8065ab50  4 INT_8065ab50 	Global
+  8065ab50 000004 8065ab50  4 fragmentID 	Global
   8065ab70 000004 8065ab70  4 UINT_8065ab70 	Global
   8065ab80 000004 8065ab80  4 MaxIntVal 	Global
   8065ab84 000004 8065ab84  4 INT_8065ab84 	Global
@@ -15678,7 +15698,7 @@
   8065aba0 000004 8065aba0  4 INT_8065aba0 	Global
   8065abac 000001 8065abac  1 s_%08x_8065abac 	Global
   8065abb8 000004 8065abb8  4 INT_8065abb8 	Global
-  8065abc0 000004 8065abc0  4 INT_8065abc0 	Global
+  8065abc0 000004 8065abc0  4 __OSArenaLo 	Global
   8065abc8 000004 8065abc8  4 INT_8065abc8 	Global
   8065abe0 000002 8065abe0  2 SHORT_8065abe0 	Global
   8065abf0 000004 8065abf0  4 INT_8065abf0 	Global
@@ -15748,6 +15768,7 @@
   8065af0c 000001 8065af0c  1 s_x_8065af0c 	Global
   8065af10 000001 8065af10  1 s_jobj.h_8065af10 	Global
   8065af18 000004 8065af18  4 INT_8065af18 	Global
+  8065af1c 000004 8065af1c  4 rmode 	Global
   8065af20 000004 8065af20  4 INT_8065af20 	Global
   8065af24 000004 8065af24  4 INT_8065af24 	Global
   8065af28 000004 8065af28  4 INT_8065af28 	Global
@@ -15977,7 +15998,7 @@
   8065b378 000004 8065b378  4 INT_8065b378 	Global
   8065b380 000004 8065b380  4 INT_8065b380 	Global
   8065b388 000004 8065b388  4 INT_8065b388 	Global
-  8065b390 000004 8065b390  4 RegisterBuffer 	Global
+  8065b390 000004 8065b390  4 __global_destructor_chain 	Global
   8065b398 000004 8065b398  4 INT_8065b398 	Global
   8065b39c 000004 8065b39c  4 INT_8065b39c 	Global
   8065b3a0 000004 8065b3a0  4 INT_8065b3a0 	Global
@@ -16043,7 +16064,7 @@
   8065b4d0 000004 8065b4d0  4 INT_8065b4d0 	Global
   8065b4d4 000004 8065b4d4  4 INT_8065b4d4 	Global
   8065b4d8 000004 8065b4d8  4 INT_8065b4d8 	Global
-  8065b4dc 000004 8065b4dc  4 INT_8065b4dc 	Global
+  8065b4dc 000004 8065b4dc  4 RunQueueHint 	Global
   8065b4e0 000004 8065b4e0  4 INT_8065b4e0 	Global
   8065b4e8 000001 8065b4e8  1 BYTE_8065b4e8 	Global
   8065b4f0 000004 8065b4f0  4 INT_8065b4f0 	Global
@@ -16269,14 +16290,15 @@
   8065b8c4 000001 8065b8c4  1 BYTE_8065b8c4 	Global
   8065b8c8 000004 8065b8c8  4 INT_8065b8c8 	Global
   8065b8cc 000001 8065b8cc  1 BYTE_8065b8cc 	Global
-  8065b8d0 000004 8065b8d0  4 INT_8065b8d0 	Global
-  8065b8d4 000004 8065b8d4  4 INT_8065b8d4 	Global
-  8065b8d8 000004 8065b8d8  4 INT_8065b8d8 	Global
-  8065b8dc 000004 8065b8dc  4 INT_8065b8dc 	Global
-  8065b8e0 000004 8065b8e0  4 INT_8065b8e0 	Global
-  8065b8e4 000004 8065b8e4  4 INT_8065b8e4 	Global
-  8065b8e8 000004 8065b8e8  4 INT_8065b8e8 	Global
-  8065b8f0 000004 8065b8f0  4 INT_8065b8f0 	Global
+  8065b8d0 000004 8065b8d0  4 default_class 	Global
+  8065b8d4 000004 8065b8d4  4 vertex_buffer 	Global
+  8065b8d8 000004 8065b8d8  4 normal_buffer 	Global
+  8065b8dc 000004 8065b8dc  4 vertex_buffer_size 	Global
+  8065b8e0 000004 8065b8e0  4 normal_buffer_size 	Global
+  8065b8e4 000004 8065b8e4  4 prev_vtxdesclist_array 	Global
+  8065b8e8 000004 8065b8e8  4 prev_vtxdesc 	Global
+  8065b8f0 000004 8065b8f0  4 default_class 	Global
+  8065b8f4 000004 8065b8f4  4 tobj_head 	Global
   8065b8f8 000004 8065b8f8  4 INT_8065b8f8 	Global
   8065b8fc 000004 8065b8fc  4 INT_8065b8fc 	Global
   8065b900 000004 8065b900  4 INT_8065b900 	Global
@@ -16288,6 +16310,9 @@
   8065b906 000001 8065b906  8 INT_8065b904+2 	Global
   8065b907 000001 8065b907  8 INT_8065b904+3 	Global
   8065b908 000001 8065b908  1 BYTE_8065b908 	Global
+  8065b909 000001 8065b909  1 BYTE_8065b909 	Global
+  8065b90a 000001 8065b90a  1 BYTE_8065b90a 	Global
+  8065b90b 000001 8065b90b  1 BYTE_8065b90b 	Global
   8065b90c 000004 8065b90c  4 INT_8065b90c 	Global
   8065b90d 000001 8065b90d  8 INT_8065b90c+1 	Global
   8065b90e 000001 8065b90e  8 INT_8065b90c+2 	Global
@@ -16319,35 +16344,35 @@
   8065b968 000004 8065b968  4 INT_8065b968 	Global
   8065b970 000004 8065b970  4 INT_8065b970 	Global
   8065b974 000004 8065b974  4 INT_8065b974 	Global
-  8065b978 000004 8065b978  4 INT_8065b978 	Global
+  8065b978 000004 8065b978  4 num_tex_gens 	Global
   8065b97c 000004 8065b97c  4 INT_8065b97c 	Global
   8065b980 000004 8065b980  4 INT_8065b980 	Global
   8065b984 000004 8065b984  4 INT_8065b984 	Global
   8065b988 000004 8065b988  4 INT_8065b988 	Global
   8065b98c 000004 8065b98c  4 INT_8065b98c 	Global
   8065b990 000004 8065b990  4 INT_8065b990 	Global
-  8065b998 000004 8065b998  4 INT_8065b998 	Global
+  8065b998 000004 8065b998  4 default_class 	Global
   8065b99c 000004 8065b99c  4 INT_8065b99c 	Global
-  8065b9a0 000004 8065b9a0  4 INT_8065b9a0 	Global
-  8065b9a4 000004 8065b9a4  4 INT_8065b9a4 	Global
+  8065b9a0 000004 8065b9a0  4 tobj_toon 	Global
+  8065b9a4 000004 8065b9a4  4 tobj_shadows 	Global
   8065b9a8 000004 8065b9a8  4 INT_8065b9a8 	Global
   8065b9ac 000004 8065b9ac  4 INT_8065b9ac 	Global
   8065b9b0 000004 8065b9b0  4 INT_8065b9b0 	Global
-  8065b9b8 000004 8065b9b8  4 INT_8065b9b8 	Global
-  8065b9bc 000004 8065b9bc  4 INT_8065b9bc 	Global
-  8065b9c0 000004 8065b9c0  4 INT_8065b9c0 	Global
+  8065b9b8 000004 8065b9b8  4 default_class 	Global
+  8065b9bc 000004 8065b9bc  4 current_lights 	Global
+  8065b9c0 000004 8065b9c0  4 nb_active_lights 	Global
   8065b9c4 000004 8065b9c4  4 INT_8065b9c4 	Global
   8065b9c8 000004 8065b9c8  4 INT_8065b9c8 	Global
   8065b9cc 000004 8065b9cc  4 INT_8065b9cc 	Global
   8065b9d0 000004 8065b9d0  4 INT_8065b9d0 	Global
-  8065b9d8 000004 8065b9d8  4 INT_8065b9d8 	Global
-  8065b9dc 000004 8065b9dc  4 INT_8065b9dc 	Global
+  8065b9d8 000004 8065b9d8  4 default_class 	Global
+  8065b9dc 000004 8065b9dc  4 current 	Global
   8065b9e0 000004 8065b9e0  4 INT_8065b9e0 	Global
   8065b9e4 000004 8065b9e4  4 INT_8065b9e4 	Global
   8065b9e8 000004 8065b9e8  4 INT_8065b9e8 	Global
   8065b9ec 000004 8065b9ec  4 INT_8065b9ec 	Global
   8065b9f0 000004 8065b9f0  4 INT_8065b9f0 	Global
-  8065b9f4 000004 8065b9f4  4 INT_8065b9f4 	Global
+  8065b9f4 000004 8065b9f4  4 current_jobj 	Global
   8065b9f8 000004 8065b9f8  4 INT_8065b9f8 	Global
   8065b9fc 000004 8065b9fc  4 INT_8065b9fc 	Global
   8065ba00 000004 8065ba00  4 INT_8065ba00 	Global
@@ -16362,7 +16387,7 @@
   8065ba24 000004 8065ba24  4 INT_8065ba24 	Global
   8065ba28 000004 8065ba28  4 INT_8065ba28 	Global
   8065ba2c 000004 8065ba2c  4 INT_8065ba2c 	Global
-  8065ba30 000004 8065ba30  4 INT_8065ba30 	Global
+  8065ba30 000004 8065ba30  4 init_done 	Global
   8065ba34 000004 8065ba34  4 INT_8065ba34 	Global
   8065ba38 000004 8065ba38  4 INT_8065ba38 	Global
   8065ba3c 000004 8065ba3c  4 INT_8065ba3c 	Global
@@ -16372,18 +16397,18 @@
   8065ba4c 000004 8065ba4c  4 INT_8065ba4c 	Global
   8065ba58 000004 8065ba58  4 INT_8065ba58 	Global
   8065ba5c 000004 8065ba5c  4 INT_8065ba5c 	Global
-  8065ba60 000004 8065ba60  4 INT_8065ba60 	Global
+  8065ba60 000004 8065ba60  4 default_class 	Global
   8065ba68 000004 8065ba68  4 INT_8065ba68 	Global
   8065ba6c 000004 8065ba6c  4 INT_8065ba6c 	Global
   8065ba70 000004 8065ba70  4 INT_8065ba70 	Global
   8065ba78 000004 8065ba78  4 INT_8065ba78 	Global
-  8065ba80 000004 8065ba80  4 INT_8065ba80 	Global
+  8065ba80 000004 8065ba80  4 psCallback 	Global
   8065ba84 000002 8065ba84  2 SHORT_8065ba84 	Global
   8065ba86 000002 8065ba86  2 SHORT_8065ba86 	Global
-  8065ba88 000002 8065ba88  2 SHORT_8065ba88 	Global
+  8065ba88 000002 8065ba88  2 numPeakParticles 	Global
   8065ba8a 000002 8065ba8a  2 SHORT_8065ba8a 	Global
   8065ba8c 000002 8065ba8c  2 SHORT_8065ba8c 	Global
-  8065ba8e 000002 8065ba8e  2 SHORT_8065ba8e 	Global
+  8065ba8e 000002 8065ba8e  2 numActiveParticles 	Global
   8065ba90 000004 8065ba90  4 INT_8065ba90 	Global
   8065ba91 000001 8065ba91  8 INT_8065ba90+1 	Global
   8065ba92 000001 8065ba92  8 INT_8065ba90+2 	Global
@@ -16392,7 +16417,7 @@
   8065ba9c 000004 8065ba9c  4 INT_8065ba9c 	Global
   8065baa0 000004 8065baa0  4 INT_8065baa0 	Global
   8065baa4 000004 8065baa4  4 INT_8065baa4 	Global
-  8065baa8 000004 8065baa8  4 INT_8065baa8 	Global
+  8065baa8 000004 8065baa8  4 psCamera 	Global
   8065baac 000004 8065baac  4 INT_8065baac 	Global
   8065bab0 000004 8065bab0  4 INT_8065bab0 	Global
   8065bab8 000004 8065bab8  4 INT_8065bab8 	Global
@@ -19158,6 +19183,8 @@
   8065f730 000008 8065f730  8 DOUBLE_8065f730 	Global
   8065f738 000001 8065f738  1 s_%s%s_8065f738 	Global
   8065f744 000004 8065f744  4 FLOAT_8065f744 	Global
+  8065f748 000001 8065f748  1 s_x_cobj_8065f748 	Global
+  8065f750 000001 8065f750  1 s_%s(%d)_8065f750 	Global
   8065f758 000008 8065f758  8 DOUBLE_8065f758 	Global
   8065f760 000008 8065f760  8 DOUBLE_8065f760 	Global
   8065f768 000004 8065f768  4 FLOAT_8065f768 	Global
@@ -19166,8 +19193,11 @@
   8065f780 000008 8065f780  8 DOUBLE_8065f780 	Global
   8065f788 000004 8065f788  4 FLOAT_8065f788 	Global
   8065f78c 000004 8065f78c  4 FLOAT_8065f78c 	Global
+  8065f790 000001 8065f790  1 s_jobj.h_8065f790 	Global
+  8065f798 000001 8065f798  1 s_jobj_8065f798 	Global
   8065f7a0 000004 8065f7a0  4 FLOAT_8065f7a0 	Global
   8065f7a4 000004 8065f7a4  4 FLOAT_8065f7a4 	Global
+  8065f7a8 000001 8065f7a8  1 s_(Tri)_8065f7a8 	Global
   8065f7b0 000004 8065f7b0  4 FLOAT_8065f7b0 	Global
   8065f7b8 000004 8065f7b8  4 INT_8065f7b8 	Global
   8065f7bc 000004 8065f7bc  4 INT_8065f7bc 	Global
