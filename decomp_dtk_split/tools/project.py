@@ -809,6 +809,19 @@ def generate_build_ninja(config, build_config):
         rule="move_dol",
     )
     n.newline()
+    n.comment("Extract Bin")
+    n.rule(
+        name="extract_bin",
+        command=f"cmd /c tools\extract\Extractor_u8.exe orig\GGTE01\qp.bin",
+        description="Extract Bin $in",
+        
+    )
+    n.build(
+    
+        outputs="extract",
+        rule="extract_bin",
+    )
+    n.newline()
 
     ###
     # Regenerate on change
