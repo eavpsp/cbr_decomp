@@ -1,4 +1,4 @@
-#include "<PowerPC_EABI_Support/MetroTRK/custconn/CircleBuffer.h>"
+#include <PowerPC_EABI_Support/MetroTRK/custconn/CircleBuffer.h>
 
 
 //.global CBGetBytesAvailableForRead
