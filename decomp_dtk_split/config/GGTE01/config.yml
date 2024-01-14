@@ -65,3 +65,7 @@ modules:
 - object: orig/GGTE01/RELS/rel/stage18.rel
   symbols: config/GGTE01/stages/stage18/symbols.txt
   splits: config/GGTE01/stages/stage18/splits.txt
+
+- object: orig/GGTE01/RELS/rel/stage20.rel
+  symbols: config/GGTE01/stages/stage20/symbols.txt
+  splits: config/GGTE01/stages/stage20/splits.txt
