@@ -1,5 +1,5 @@
 @echo off
-set "sourceFile=Z:\RE\GIT\cbr_decomp_dtk\build\GGTE01\Start.dol"
+set "sourceFile=build\GGTE01\Start.dol"
 set "destinationFolder=Z:\RE\ISO\cbr_dump_re\root\&&systemdata"
 
 echo Copying %sourceFile% to %destinationFolder%...
