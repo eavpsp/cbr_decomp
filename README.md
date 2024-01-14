@@ -1,4 +1,4 @@
-# CBR_Decomp ![alt text](https://img.shields.io/badge/Code-2%25-blue) ![alt text](https://img.shields.io/badge/Symbols_Defined-60%25-blue) ![alt text](https://img.shields.io/badge/Data-5%25-blue)
+# CBR_Decomp ![alt text](https://img.shields.io/badge/Code-0.08%25-blue) ![alt text](https://img.shields.io/badge/Symbols_Defined-73%25-blue) ![alt text](https://img.shields.io/badge/Data-0.00%25-blue)
 Chibi-Robo: PIA disassembly/decompilation to C++/C
 
 ---
