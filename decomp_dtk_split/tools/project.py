@@ -49,7 +49,7 @@ class ProjectConfig:
         self.build_rels = True  # Build REL files
         self.config_path = None  # Path to config.yml
         self.debug = False  # Build with debug info
-        self.generate_map = False  # Generate map file(s)
+        self.generate_map = True  # Generate map file(s)
         self.ldflags = None  # Linker flags
         self.libs = None  # List of libraries
         self.linker_version = None  # mwld version
@@ -57,7 +57,7 @@ class ProjectConfig:
         self.warn_missing_config = False  # Warn on missing unit configuration
         self.warn_missing_source = False  # Warn on missing source file
         self.rel_strip_partial = True  # Generate PLFs with -strip_partial
-        self.rel_empty_file = None  # Path to empty.c for generating empty RELs
+        self.rel_empty_file = Path("src")  # Path to empty.c for generating empty RELs
 
         # Progress output and progress.json config
         self.progress_all = True  # Include combined "all" category

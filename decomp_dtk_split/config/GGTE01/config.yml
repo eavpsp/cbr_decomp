@@ -5,3 +5,63 @@ symbols: config/GGTE01/symbols.txt
 splits: config/GGTE01/splits.txt
 mw_comment_version: 8
 
+modules:
+- object: orig/GGTE01/RELS/rel/ahk.rel
+  symbols: config/GGTE01/ahk/symbols.txt
+  splits: config/GGTE01/ahk/splits.txt
+
+- object: orig/GGTE01/RELS/rel/hori.rel
+  symbols: config/GGTE01/hori/symbols.txt
+  splits: config/GGTE01/hori/splits.txt
+
+- object: orig/GGTE01/RELS/rel/shun.rel
+  symbols: config/GGTE01/shun/symbols.txt
+  splits: config/GGTE01/shun/splits.txt
+  
+- object: orig/GGTE01/RELS/rel/stage01.rel
+  symbols: config/GGTE01/stages/stage01/symbols.txt
+  splits: config/GGTE01/stages/stage01/splits.txt
+
+- object: orig/GGTE01/RELS/rel/stage02.rel
+  symbols: config/GGTE01/stages/stage02/symbols.txt
+  splits: config/GGTE01/stages/stage02/splits.txt
+
+- object: orig/GGTE01/RELS/rel/stage03.rel
+  symbols: config/GGTE01/stages/stage03/symbols.txt
+  splits: config/GGTE01/stages/stage03/splits.txt
+
+- object: orig/GGTE01/RELS/rel/stage04.rel
+  symbols: config/GGTE01/stages/stage04/symbols.txt
+  splits: config/GGTE01/stages/stage04/splits.txt
+
+- object: orig/GGTE01/RELS/rel/stage06.rel
+  symbols: config/GGTE01/stages/stage06/symbols.txt
+  splits: config/GGTE01/stages/stage06/splits.txt
+
+- object: orig/GGTE01/RELS/rel/stage07.rel
+  symbols: config/GGTE01/stages/stage07/symbols.txt
+  splits: config/GGTE01/stages/stage07/splits.txt
+
+- object: orig/GGTE01/RELS/rel/stage08.rel
+  symbols: config/GGTE01/stages/stage08/symbols.txt
+  splits: config/GGTE01/stages/stage08/splits.txt
+
+- object: orig/GGTE01/RELS/rel/stage09.rel
+  symbols: config/GGTE01/stages/stage09/symbols.txt
+  splits: config/GGTE01/stages/stage09/splits.txt
+
+- object: orig/GGTE01/RELS/rel/stage11.rel
+  symbols: config/GGTE01/stages/stage11/symbols.txt
+  splits: config/GGTE01/stages/stage11/splits.txt
+
+- object: orig/GGTE01/RELS/rel/stage16.rel
+  symbols: config/GGTE01/stages/stage16/symbols.txt
+  splits: config/GGTE01/stages/stage16/splits.txt
+
+- object: orig/GGTE01/RELS/rel/stage17.rel
+  symbols: config/GGTE01/stages/stage17/symbols.txt
+  splits: config/GGTE01/stages/stage17/splits.txt
+
+- object: orig/GGTE01/RELS/rel/stage18.rel
+  symbols: config/GGTE01/stages/stage18/symbols.txt
+  splits: config/GGTE01/stages/stage18/splits.txt
