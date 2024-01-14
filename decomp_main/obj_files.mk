@@ -4,8 +4,8 @@ INIT_O_FILES :=                                     \
     $(OBJ_DIR)/src/TRK/initTRK.o \
     $(OBJ_DIR)/src/TRK/mem/TRK_memfuncs.o \
     $(OBJ_DIR)/src/Dolphin/pad/initPad.o \
-    $(OBJ_DIR)/src/Dolphin/runtime/_startGame.o \
-    $(OBJ_DIR)/src/Dolphin/runtime/__ppc_eabi_init.o \
+    $(OBJ_DIR)/src/Dolphin/os/_startGame.o \
+    $(OBJ_DIR)/src/Dolphin/os/__ppc_eabi_init.o \
     
 
 EXTAB_O_FILES :=                                    \
