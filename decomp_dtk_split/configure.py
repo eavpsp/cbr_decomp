@@ -206,7 +206,7 @@ def Rel(lib_name, objects):
 
 
 Matching = True
-NonMatching = True
+NonMatching = False
 
 config.warn_missing_config = True
 config.warn_missing_source = False
