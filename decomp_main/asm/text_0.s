@@ -1,7 +1,7 @@
 .include "macros.s"
 
 
-.section .text, "ax"  # 0x80007880 - 0x801FD660 ; 0x001F5DE0
+.section .text, "ax"  # 0x8000FACC - 
 
 .global zz_8000facc_
 zz_8000facc_:
