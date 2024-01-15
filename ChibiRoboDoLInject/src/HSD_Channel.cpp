@@ -1,7 +1,25 @@
 #include <HSD_Channel.h>
-const char* hsdChanClassName = "_HSD_Chan"; // 0x801fdd84 --> 0x801ffda3 MATCH
-const char* hsdChanClassObject[2] = {reinterpret_cast<const char*>(&hsdChanClassName)};//8065a000
-const char* hsdChanCompObject[3] = {reinterpret_cast<const char*>(&hsdChanClassObject)};//80210110
+const char* HSD_CGsClassName = "CGsChannel"; // 801fdd78
+const char* HSD_ChanClassName = "_HSD_Chan"; // 0x801fdd84
+const char* HSD_ChanClassObject[2] = 
+{
+	reinterpret_cast<const char*>(&HSD_ChanClassName)
+};//8065a000
+const char* HSD_ChanCompObject[3] = 
+{
+	reinterpret_cast<const char*>(&HSD_ChanClassObject)
+};//80210110
+const char* HSD_CGsChanClassObject[2] = 
+{
+	reinterpret_cast<const char*>(&HSD_CGsClassName), 
+	reinterpret_cast<const char*>(&HSD_ChanCompObject)
+};//8065a008
+const char* HSD_CGsChannel[3] = 
+{
+	reinterpret_cast<const char*>(&HSD_CGsClassName),
+	reinterpret_cast<const char*>(0x00000000), 
+	reinterpret_cast<const char*>(0x8000838C)
+};//8021011c  TODO: add destructor
 //const char* cgsClass = "CGsChannel"; // 0x801fdd78 -> 98
 //const char* hsdChanClassName = "_HSD_Chan"; // 0x801fdd84 --> 0x801ffda3
 //const char* HSD_Channel::classNamePtr[2] = {reinterpret_cast<const char*>(&hsdChanClassName)};

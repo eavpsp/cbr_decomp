@@ -14,9 +14,12 @@ Sections:
 	.sbss2      type:bss
 
 sysdolph/HSD_Channel.cpp:
+	.rodata     start:0x801FDD78 end:0x801FDD84
 	.rodata     start:0x801FDD84 end:0x801FDD90
 	.data       start:0x80210110 end:0x8021011C
+	.data       start:0x8021011C end:0x80210128
 	.sdata      start:0x8065A000 end:0x8065A008
+	.sdata      start:0x8065A008 end:0x8065A010
 
 Dolphin/TRK_MINNOW_DOLPHIN/mem_TRK.c:
 	.init       start:0x80003100 end:0x80003154
