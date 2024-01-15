@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "*.c": "c",
+        "string": "cpp",
+        "xstring": "cpp",
+        "iostream": "cpp",
+        "memory": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
+}

@@ -153,6 +153,7 @@ cflags_base = [
 	"-multibyte", # For Wii compilers, replace with `-enc SJIS`
     "-i include",
     "-i ext/inc",
+    "-i ext/inc/stl",
     f"-i build/{config.version}/include",
     f"-DVERSION={version_num}",
 ]
@@ -233,6 +234,16 @@ config.libs = [
              Object(NonMatching, "Dolphin/os/__start.c"),
              Object(NonMatching, "Dolphin/os/__ppc_eabi_init.cpp"),
             
+        ],
+    },
+     {
+        "lib": "SysDolphin",
+        "mw_version": config.linker_version,
+        "cflags": cflags_runtime,
+        "host": False,
+        "objects": [
+             Object(Matching, "sysdolph/HSD_Channel.cpp"),
+
         ],
     },
 ]

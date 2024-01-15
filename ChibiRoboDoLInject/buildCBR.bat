@@ -1,5 +1,5 @@
 C:\devkitPro\devkitPPC\bin\powerpc-eabi-gcc.exe -mrvl -mcpu=801 %1 -S -o %~n1.s -O4 -std=c99 -w -Iinc -IPowerPC_EABI_Support/MSL_C/MSL_Common -Iext/inc/ -Iext/inc/stl
-C:\devkitPro\devkitPPC\bin\powerpc-eabi-gcc.exe -mrvl -mcpu=801 %1 -c -o %~n1.o -O4 -std=c99 -w -Iinc -IPowerPC_EABI_Support/MSL_C/MSL_Common  -Iext/inc -Iext/inc/stl
+C:\devkitPro\devkitPPC\bin\powerpc-eabi-gcc.exe -mrvl -mcpu=801 %1 -c -o %~n1.o -O4 -std=c99 -w -Iinc -IPowerPC_EABI_Support/MSL_C/MSL_Common  -Iext/inc -Iext/inc/stl 
 if ERRORLEVEL 1 pause
 if ERRORLEVEL 1 exit
 C:\devkitPro\devkitPPC\bin\powerpc-eabi-ld.exe -Os -T dollinker -T cbrFuncs -o obj_%~n1.o %~n1.o -Map %~n1.map 

@@ -822,6 +822,7 @@ def generate_build_ninja(config, build_config):
         rule="extract_bin",
     )
     n.newline()
+   
 
     ###
     # Regenerate on change
