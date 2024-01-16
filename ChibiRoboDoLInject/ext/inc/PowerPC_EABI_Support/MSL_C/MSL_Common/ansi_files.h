@@ -1,8 +1,8 @@
 #ifndef _MSL_COMMON_ANSI_FILES_H
 #define _MSL_COMMON_ANSI_FILES_H
 
-#include <types.h>
-#include <stddef.h>
+#include "types.h"
+
 typedef u32 __file_handle;
 typedef u32 fpos_t;
 typedef struct _IO_FILE _IO_FILE, *P_IO_FILE;

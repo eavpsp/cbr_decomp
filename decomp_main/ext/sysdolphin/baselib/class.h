@@ -1,7 +1,7 @@
 #ifndef _class_h_
 #define _class_h_
 
-#include <platform.h>
+#include <types.h>
 #include <baselib/forward.h>
 
 #include <baselib/debug.h>

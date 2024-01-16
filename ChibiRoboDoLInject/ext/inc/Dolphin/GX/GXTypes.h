@@ -17,6 +17,8 @@ extern "C" {
 #define GX_BITFIELD_TRUNC(field, pos, size, value) (__rlwimi((field), (value), 0, (pos), (pos) + (size)-1))
 #define GX_BITGET(field, pos, size)                ((field) >> (31 - (pos) - (size) + 1) & ((1 << (size)) - 1))
 ////////////////////////////////////////////
+#define GX_FIFO_OBJSIZE 128
+
 
 ////////////////// COLORS //////////////////
 // Generic 8-bit-component colors.

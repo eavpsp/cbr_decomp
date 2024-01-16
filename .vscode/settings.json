@@ -5,7 +5,9 @@
         "xstring": "cpp",
         "iostream": "cpp",
         "memory": "cpp",
-        "__start.h": "c"
+        "__start.h": "c",
+        "types.h": "c",
+        "math.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

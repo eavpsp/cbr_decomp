@@ -1,19 +1,15 @@
-#include <math.h>
-#include <placeholder.h>
-#include <dolphin/gx/GXTransform.h>
+#include <types.h>
+#include <dolphin/GX/GXTransform.h>
 #include <dolphin/mtx/mtxvec.h>
 #include <dolphin/mtx/vec.h>
-#include <dolphin/vi/vi.h>
-#include <baselib/cobj.h>
-#include <baselib/displayfunc.h>
-#include <baselib/initialize.h>
-#include <baselib/mtx.h>
-#include <baselib/video.h>
-#include <MSL/trigf.h>
-#include <Runtime/runtime.h>
+#include <cobj.h>
+#include <displayfunc.h>
+#include <initialize.h>
+#include <mtx.h>
+#include <video.h>
+#include <PowerPC_EABI_Support\MSL_C\PPC_EABI\math_ppc.h>
+#include <PowerPC_EABI_Support\Runtime\runtime.h>
 
-/// @todo doesn't seem like this file should be in melee/
-#include <melee/lb/lbrefract.h>
 
 static HSD_ClassInfo* default_class;
 static HSD_CObj* current;
@@ -2782,7 +2778,7 @@ lbl_8036A540:
 
 static int CObjLoad(HSD_CObj* cobj, HSD_CObjDesc* cobjdesc)
 {
-    NOT_IMPLEMENTED;
+    //NOT_IMPLEMENTED;
 }
 #endif
 

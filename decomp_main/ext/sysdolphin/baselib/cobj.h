@@ -1,11 +1,11 @@
 #ifndef _cobj_h_
 #define _cobj_h_
 
-#include <placeholder.h>
+#include <types.h>
 #include <dolphin/mtx/types.h>
-#include <baselib/aobj.h>
-#include <baselib/object.h>
-#include <baselib/wobj.h>
+#include <aobj.h>
+#include <object.h>
+#include <wobj.h>
 
 #define PROJ_PERSPECTIVE 1
 #define PROJ_FRUSTUM 2

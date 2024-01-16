@@ -1,7 +1,7 @@
 #ifndef SYSDOLPHIN_BASELIB_FORWARD_H
 #define SYSDOLPHIN_BASELIB_FORWARD_H
 
-#include <platform.h>
+#include "types.h"
 
 typedef struct HSD_AObj HSD_AObj;
 typedef struct HSD_AObjDesc HSD_AObjDesc;
@@ -91,7 +91,7 @@ typedef union HSD_Rumble HSD_Rumble;
 typedef union HSD_TExp HSD_TExp;
 
 typedef void (*GObj_RenderFunc)(HSD_GObj* gobj, int code);
-typedef void (*HSD_ObjUpdateFunc)(void* obj, enum_t type, HSD_ObjData* fval);
+typedef void (*HSD_ObjUpdateFunc)(void* obj, enum type, HSD_ObjData* fval);
 typedef void (*HSD_DevComCallback)(int, int, int, bool cancelflag);
 typedef void (*HSD_GObjEvent)(HSD_GObj* gobj);
 typedef void (*HSD_UserDataEvent)(void* user_data);

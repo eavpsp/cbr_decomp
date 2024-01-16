@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.c": "c",
+        "forward.h": "c",
+        "gxtypes.h": "c"
+    }
+}

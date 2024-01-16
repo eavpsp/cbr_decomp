@@ -1,12 +1,14 @@
 #ifndef SYSDOLPHIN_BASELIB_DEBUG_H
 #define SYSDOLPHIN_BASELIB_DEBUG_H
 
-#include <platform.h>
+#include <types.h>
 
-ATTRIBUTE_NORETURN void __assert(char*, u32, char*);
+//ATTRIBUTE_NORETURN 
+void __assert(char*, u32, char*);
 
 void HSD_Debug_803881E4(void);
-ATTRIBUTE_NORETURN void HSD_Panic(char*, u32, char*);
+//ATTRIBUTE_NORETURN
+ void HSD_Panic(char*, u32, char*);
 
 /// @todo Take @c file as another arg, ignore it if @c !MUST_MATCH.
 /// @todo Add another variant that takes a string for @c cond.

@@ -19,9 +19,10 @@ typedef f32 Mtx44[4][4];
 typedef f32 (*MtxP)[4];
 typedef f32 PSQuaternion[4];
 
-typedef struct Quaternion {
+/*typedef struct Quaternion {
 	f32 x, y, z, w;
 } Quaternion;
+*/
 
 ////////////////////////////////////////////
 

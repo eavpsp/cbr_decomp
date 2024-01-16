@@ -1,7 +1,7 @@
 #ifndef _id_h_
 #define _id_h_
 
-#include <platform.h>
+#include <types.h>
 
 #include <baselib/objalloc.h>
 

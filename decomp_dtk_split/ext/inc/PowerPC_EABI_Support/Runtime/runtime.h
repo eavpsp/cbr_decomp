@@ -1,7 +1,7 @@
 #ifndef _DOLPHIN_RUNTIME_H
 #define _DOLPHIN_RUNTIME_H
 
-#include "types.h"
+#include <types.h>
 
 #ifdef __cplusplus
 extern "C" {

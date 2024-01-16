@@ -1,7 +1,7 @@
 #ifndef _jobj_h_
 #define _jobj_h_
 
-#include <platform.h>
+#include <types.h>
 #include <baselib/forward.h>
 
 #include <dolphin/mtx.h>
@@ -473,7 +473,7 @@ void HSD_JObjReqAnimAllByFlags(HSD_JObj* jobj, u32 flags, f32 frame);
 void HSD_JObjReqAnim(HSD_JObj* jobj, f32 frame);
 void JObjSortAnim(HSD_AObj* aobj);
 void JObjResetRST(HSD_JObj* jobj, HSD_Joint* joint);
-void JObjUpdateFunc(void* obj, enum_t type, HSD_ObjData* val);
+void JObjUpdateFunc(void* obj, enum type, HSD_ObjData* val);
 void HSD_JObjAnim(HSD_JObj* jobj);
 void JObjAnimAll(HSD_JObj* jobj);
 s32 JObjLoad(HSD_JObj* jobj, HSD_Joint* joint, HSD_JObj* parent);

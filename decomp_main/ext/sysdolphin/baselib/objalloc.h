@@ -1,7 +1,7 @@
 #ifndef _objalloc_h_
 #define _objalloc_h_
 
-#include <platform.h>
+#include <types.h>
 
 #include <common_structs.h>
 #include <baselib/debug.h>

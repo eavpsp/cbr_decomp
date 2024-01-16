@@ -1,7 +1,7 @@
 #ifndef _hsd_tobj_h_
 #define _hsd_tobj_h_
 
-#include <platform.h>
+#include <types.h>
 #include <baselib/forward.h>
 
 #include <dolphin/mtx/types.h>

@@ -1,6 +1,6 @@
 #ifndef _STDLIB_H
 #define _STDLIB_H
-#include <stddef.h>
+
 #include "types.h"
 #ifdef __cplusplus
 extern "C" {

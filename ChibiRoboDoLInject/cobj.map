@@ -1,0 +1,570 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+                0x00000000803f0280                . = 0x803f0280
+
+.text           0x00000000803f0280        0x0
+ *(.text)
+ .text          0x00000000803f0280        0x0 cobj.o
+
+.text.CObjLoad  0x00000000803f0280        0x4
+ .text.CObjLoad
+                0x00000000803f0280        0x4 cobj.o
+
+.text.CObjAmnesia
+                0x00000000803f0284       0x64
+ .text.CObjAmnesia
+                0x00000000803f0284       0x64 cobj.o
+
+.text.CObjInfoInit
+                0x00000000803f02e8       0x84
+ .text.CObjInfoInit
+                0x00000000803f02e8       0x84 cobj.o
+
+.text.CObjRelease
+                0x00000000803f036c      0x11c
+ .text.CObjRelease
+                0x00000000803f036c      0x11c cobj.o
+
+.text.CObjInit  0x00000000803f0488       0x6c
+ .text.CObjInit
+                0x00000000803f0488       0x6c cobj.o
+
+.text.HSD_CObjSetupViewingMtx.part.0
+                0x00000000803f04f4       0xd4
+ .text.HSD_CObjSetupViewingMtx.part.0
+                0x00000000803f04f4       0xd4 cobj.o
+
+.text.CObjUpdateFunc
+                0x00000000803f05c8      0x170
+ .text.CObjUpdateFunc
+                0x00000000803f05c8      0x170 cobj.o
+
+.text.HSD_CObjEraseScreen
+                0x00000000803f0738      0x1ac
+ .text.HSD_CObjEraseScreen
+                0x00000000803f0738      0x1ac cobj.o
+                0x00000000803f0738                HSD_CObjEraseScreen
+
+.text.HSD_CObjRemoveAnimByFlags
+                0x00000000803f08e4       0x54
+ .text.HSD_CObjRemoveAnimByFlags
+                0x00000000803f08e4       0x54 cobj.o
+                0x00000000803f08e4                HSD_CObjRemoveAnimByFlags
+
+.text.HSD_CObjRemoveAnim
+                0x00000000803f0938       0x54
+ .text.HSD_CObjRemoveAnim
+                0x00000000803f0938       0x54 cobj.o
+                0x00000000803f0938                HSD_CObjRemoveAnim
+
+.text.HSD_CObjAddAnim
+                0x00000000803f098c       0x80
+ .text.HSD_CObjAddAnim
+                0x00000000803f098c       0x80 cobj.o
+                0x00000000803f098c                HSD_CObjAddAnim
+
+.text.HSD_CObjAnim
+                0x00000000803f0a0c       0x58
+ .text.HSD_CObjAnim
+                0x00000000803f0a0c       0x58 cobj.o
+                0x00000000803f0a0c                HSD_CObjAnim
+
+.text.HSD_CObjReqAnim
+                0x00000000803f0a64       0x60
+ .text.HSD_CObjReqAnim
+                0x00000000803f0a64       0x60 cobj.o
+                0x00000000803f0a64                HSD_CObjReqAnim
+
+.text.makeProjectionMtx
+                0x00000000803f0ac4      0x190
+ .text.makeProjectionMtx
+                0x00000000803f0ac4      0x190 cobj.o
+                0x00000000803f0ac4                makeProjectionMtx
+
+.text.setupNormalCamera
+                0x00000000803f0c54      0x208
+ .text.setupNormalCamera
+                0x00000000803f0c54      0x208 cobj.o
+                0x00000000803f0c54                setupNormalCamera
+
+.text.HSD_CObjSetupViewingMtx
+                0x00000000803f0e5c       0x4c
+ .text.HSD_CObjSetupViewingMtx
+                0x00000000803f0e5c       0x4c cobj.o
+                0x00000000803f0e5c                HSD_CObjSetupViewingMtx
+
+.text.HSD_CObjSetCurrent
+                0x00000000803f0ea8      0x1f4
+ .text.HSD_CObjSetCurrent
+                0x00000000803f0ea8      0x1f4 cobj.o
+                0x00000000803f0ea8                HSD_CObjSetCurrent
+
+.text.HSD_CObjEndCurrent
+                0x00000000803f109c       0x20
+ .text.HSD_CObjEndCurrent
+                0x00000000803f109c       0x20 cobj.o
+                0x00000000803f109c                HSD_CObjEndCurrent
+
+.text.HSD_CObjGetInterestWObj
+                0x00000000803f10bc       0x58
+ .text.HSD_CObjGetInterestWObj
+                0x00000000803f10bc       0x58 cobj.o
+                0x00000000803f10bc                HSD_CObjGetInterestWObj
+
+.text.HSD_CObjGetEyePositionWObj
+                0x00000000803f1114       0x58
+ .text.HSD_CObjGetEyePositionWObj
+                0x00000000803f1114       0x58 cobj.o
+                0x00000000803f1114                HSD_CObjGetEyePositionWObj
+
+.text.HSD_CObjGetInterest
+                0x00000000803f116c       0x98
+ .text.HSD_CObjGetInterest
+                0x00000000803f116c       0x98 cobj.o
+                0x00000000803f116c                HSD_CObjGetInterest
+
+.text.HSD_CObjSetInterest
+                0x00000000803f1204       0x98
+ .text.HSD_CObjSetInterest
+                0x00000000803f1204       0x98 cobj.o
+                0x00000000803f1204                HSD_CObjSetInterest
+
+.text.HSD_CObjGetEyePosition
+                0x00000000803f129c       0x98
+ .text.HSD_CObjGetEyePosition
+                0x00000000803f129c       0x98 cobj.o
+                0x00000000803f129c                HSD_CObjGetEyePosition
+
+.text.HSD_CObjSetEyePosition
+                0x00000000803f1334       0x98
+ .text.HSD_CObjSetEyePosition
+                0x00000000803f1334       0x98 cobj.o
+                0x00000000803f1334                HSD_CObjSetEyePosition
+
+.text.HSD_CObjGetEyeVector
+                0x00000000803f13cc      0x114
+ .text.HSD_CObjGetEyeVector
+                0x00000000803f13cc      0x114 cobj.o
+                0x00000000803f13cc                HSD_CObjGetEyeVector
+
+.text.HSD_CObjGetEyeDistance
+                0x00000000803f14e0       0xc8
+ .text.HSD_CObjGetEyeDistance
+                0x00000000803f14e0       0xc8 cobj.o
+                0x00000000803f14e0                HSD_CObjGetEyeDistance
+
+.text.vec_normalize_check
+                0x00000000803f15a8       0xd4
+ .text.vec_normalize_check
+                0x00000000803f15a8       0xd4 cobj.o
+                0x00000000803f15a8                vec_normalize_check
+
+.text.roll2upvec
+                0x00000000803f167c      0x26c
+ .text.roll2upvec
+                0x00000000803f167c      0x26c cobj.o
+                0x00000000803f167c                roll2upvec
+
+.text.HSD_CObjSetMtxDirty
+                0x00000000803f18e8       0x10
+ .text.HSD_CObjSetMtxDirty
+                0x00000000803f18e8       0x10 cobj.o
+                0x00000000803f18e8                HSD_CObjSetMtxDirty
+
+.text.HSD_CObjMtxIsDirty
+                0x00000000803f18f8       0x54
+ .text.HSD_CObjMtxIsDirty
+                0x00000000803f18f8       0x54 cobj.o
+                0x00000000803f18f8                HSD_CObjMtxIsDirty
+
+.text.HSD_CObjGetViewingMtx
+                0x00000000803f194c       0x84
+ .text.HSD_CObjGetViewingMtx
+                0x00000000803f194c       0x84 cobj.o
+                0x00000000803f194c                HSD_CObjGetViewingMtx
+
+.text.HSD_CObjGetInvViewingMtxPtrDirect
+                0x00000000803f19d0       0x78
+ .text.HSD_CObjGetInvViewingMtxPtrDirect
+                0x00000000803f19d0       0x78 cobj.o
+                0x00000000803f19d0                HSD_CObjGetInvViewingMtxPtrDirect
+
+.text.HSD_CObjGetViewingMtxPtr
+                0x00000000803f1a48       0x7c
+ .text.HSD_CObjGetViewingMtxPtr
+                0x00000000803f1a48       0x7c cobj.o
+                0x00000000803f1a48                HSD_CObjGetViewingMtxPtr
+
+.text.HSD_CObjGetInvViewingMtxPtr
+                0x00000000803f1ac4       0xd8
+ .text.HSD_CObjGetInvViewingMtxPtr
+                0x00000000803f1ac4       0xd8 cobj.o
+                0x00000000803f1ac4                HSD_CObjGetInvViewingMtxPtr
+
+.text.HSD_CObjGetFov
+                0x00000000803f1b9c       0x28
+ .text.HSD_CObjGetFov
+                0x00000000803f1b9c       0x28 cobj.o
+                0x00000000803f1b9c                HSD_CObjGetFov
+
+.text.HSD_CObjSetFov
+                0x00000000803f1bc4       0x1c
+ .text.HSD_CObjSetFov
+                0x00000000803f1bc4       0x1c cobj.o
+                0x00000000803f1bc4                HSD_CObjSetFov
+
+.text.HSD_CObjGetAspect
+                0x00000000803f1be0       0x28
+ .text.HSD_CObjGetAspect
+                0x00000000803f1be0       0x28 cobj.o
+                0x00000000803f1be0                HSD_CObjGetAspect
+
+.text.HSD_CObjSetAspect
+                0x00000000803f1c08       0x1c
+ .text.HSD_CObjSetAspect
+                0x00000000803f1c08       0x1c cobj.o
+                0x00000000803f1c08                HSD_CObjSetAspect
+
+.text.HSD_CObjGetTop
+                0x00000000803f1c24       0x94
+ .text.HSD_CObjGetTop
+                0x00000000803f1c24       0x94 cobj.o
+                0x00000000803f1c24                HSD_CObjGetTop
+
+.text.HSD_CObjSetTop
+                0x00000000803f1cb8       0x24
+ .text.HSD_CObjSetTop
+                0x00000000803f1cb8       0x24 cobj.o
+                0x00000000803f1cb8                HSD_CObjSetTop
+
+.text.HSD_CObjGetBottom
+                0x00000000803f1cdc       0x98
+ .text.HSD_CObjGetBottom
+                0x00000000803f1cdc       0x98 cobj.o
+                0x00000000803f1cdc                HSD_CObjGetBottom
+
+.text.HSD_CObjSetBottom
+                0x00000000803f1d74       0x24
+ .text.HSD_CObjSetBottom
+                0x00000000803f1d74       0x24 cobj.o
+                0x00000000803f1d74                HSD_CObjSetBottom
+
+.text.HSD_CObjGetLeft
+                0x00000000803f1d98       0xa0
+ .text.HSD_CObjGetLeft
+                0x00000000803f1d98       0xa0 cobj.o
+                0x00000000803f1d98                HSD_CObjGetLeft
+
+.text.HSD_CObjSetLeft
+                0x00000000803f1e38       0x24
+ .text.HSD_CObjSetLeft
+                0x00000000803f1e38       0x24 cobj.o
+                0x00000000803f1e38                HSD_CObjSetLeft
+
+.text.HSD_CObjGetRight
+                0x00000000803f1e5c       0x98
+ .text.HSD_CObjGetRight
+                0x00000000803f1e5c       0x98 cobj.o
+                0x00000000803f1e5c                HSD_CObjGetRight
+
+.text.HSD_CObjSetRight
+                0x00000000803f1ef4       0x24
+ .text.HSD_CObjSetRight
+                0x00000000803f1ef4       0x24 cobj.o
+                0x00000000803f1ef4                HSD_CObjSetRight
+
+.text.HSD_CObjGetNear
+                0x00000000803f1f18       0x1c
+ .text.HSD_CObjGetNear
+                0x00000000803f1f18       0x1c cobj.o
+                0x00000000803f1f18                HSD_CObjGetNear
+
+.text.HSD_CObjSetNear
+                0x00000000803f1f34       0x10
+ .text.HSD_CObjSetNear
+                0x00000000803f1f34       0x10 cobj.o
+                0x00000000803f1f34                HSD_CObjSetNear
+
+.text.HSD_CObjGetFar
+                0x00000000803f1f44       0x1c
+ .text.HSD_CObjGetFar
+                0x00000000803f1f44       0x1c cobj.o
+                0x00000000803f1f44                HSD_CObjGetFar
+
+.text.HSD_CObjSetFar
+                0x00000000803f1f60       0x10
+ .text.HSD_CObjSetFar
+                0x00000000803f1f60       0x10 cobj.o
+                0x00000000803f1f60                HSD_CObjSetFar
+
+.text.HSD_CObjGetScissor
+                0x00000000803f1f70       0x1c
+ .text.HSD_CObjGetScissor
+                0x00000000803f1f70       0x1c cobj.o
+                0x00000000803f1f70                HSD_CObjGetScissor
+
+.text.HSD_CObjSetScissor
+                0x00000000803f1f8c       0x1c
+ .text.HSD_CObjSetScissor
+                0x00000000803f1f8c       0x1c cobj.o
+                0x00000000803f1f8c                HSD_CObjSetScissor
+
+.text.HSD_CObjSetScissorx4
+                0x00000000803f1fa8       0x1c
+ .text.HSD_CObjSetScissorx4
+                0x00000000803f1fa8       0x1c cobj.o
+                0x00000000803f1fa8                HSD_CObjSetScissorx4
+
+.text.HSD_CObjGetViewportf
+                0x00000000803f1fc4       0x2c
+ .text.HSD_CObjGetViewportf
+                0x00000000803f1fc4       0x2c cobj.o
+                0x00000000803f1fc4                HSD_CObjGetViewportf
+
+.text.HSD_CObjSetViewport
+                0x00000000803f1ff0       0x68
+ .text.HSD_CObjSetViewport
+                0x00000000803f1ff0       0x68 cobj.o
+                0x00000000803f1ff0                HSD_CObjSetViewport
+
+.text.HSD_CObjSetViewportf
+                0x00000000803f2058       0x2c
+ .text.HSD_CObjSetViewportf
+                0x00000000803f2058       0x2c cobj.o
+                0x00000000803f2058                HSD_CObjSetViewportf
+
+.text.HSD_CObjSetViewportfx4
+                0x00000000803f2084       0x1c
+ .text.HSD_CObjSetViewportfx4
+                0x00000000803f2084       0x1c cobj.o
+                0x00000000803f2084                HSD_CObjSetViewportfx4
+
+.text.HSD_CObjGetProjectionType
+                0x00000000803f20a0       0x18
+ .text.HSD_CObjGetProjectionType
+                0x00000000803f20a0       0x18 cobj.o
+                0x00000000803f20a0                HSD_CObjGetProjectionType
+
+.text.HSD_CObjSetProjectionType
+                0x00000000803f20b8       0x10
+ .text.HSD_CObjSetProjectionType
+                0x00000000803f20b8       0x10 cobj.o
+                0x00000000803f20b8                HSD_CObjSetProjectionType
+
+.text.HSD_CObjSetPerspective
+                0x00000000803f20c8       0x1c
+ .text.HSD_CObjSetPerspective
+                0x00000000803f20c8       0x1c cobj.o
+                0x00000000803f20c8                HSD_CObjSetPerspective
+
+.text.HSD_CObjSetFrustum
+                0x00000000803f20e4       0x24
+ .text.HSD_CObjSetFrustum
+                0x00000000803f20e4       0x24 cobj.o
+                0x00000000803f20e4                HSD_CObjSetFrustum
+
+.text.HSD_CObjSetOrtho
+                0x00000000803f2108       0x24
+ .text.HSD_CObjSetOrtho
+                0x00000000803f2108       0x24 cobj.o
+                0x00000000803f2108                HSD_CObjSetOrtho
+
+.text.HSD_CObjGetPerspective
+                0x00000000803f212c       0x38
+ .text.HSD_CObjGetPerspective
+                0x00000000803f212c       0x38 cobj.o
+                0x00000000803f212c                HSD_CObjGetPerspective
+
+.text.HSD_CObjGetOrtho
+                0x00000000803f2164       0x58
+ .text.HSD_CObjGetOrtho
+                0x00000000803f2164       0x58 cobj.o
+                0x00000000803f2164                HSD_CObjGetOrtho
+
+.text.HSD_CObjGetFlags
+                0x00000000803f21bc        0x8
+ .text.HSD_CObjGetFlags
+                0x00000000803f21bc        0x8 cobj.o
+                0x00000000803f21bc                HSD_CObjGetFlags
+
+.text.HSD_CObjSetFlags
+                0x00000000803f21c4       0x18
+ .text.HSD_CObjSetFlags
+                0x00000000803f21c4       0x18 cobj.o
+                0x00000000803f21c4                HSD_CObjSetFlags
+
+.text.HSD_CObjClearFlags
+                0x00000000803f21dc       0x18
+ .text.HSD_CObjClearFlags
+                0x00000000803f21dc       0x18 cobj.o
+                0x00000000803f21dc                HSD_CObjClearFlags
+
+.text.HSD_CObjGetCurrent
+                0x00000000803f21f4        0xc
+ .text.HSD_CObjGetCurrent
+                0x00000000803f21f4        0xc cobj.o
+                0x00000000803f21f4                HSD_CObjGetCurrent
+
+.text.HSD_CObjAlloc
+                0x00000000803f2200       0x88
+ .text.HSD_CObjAlloc
+                0x00000000803f2200       0x88 cobj.o
+                0x00000000803f2200                HSD_CObjAlloc
+
+.text.HSD_CObjInit
+                0x00000000803f2288        0x4
+ .text.HSD_CObjInit
+                0x00000000803f2288        0x4 cobj.o
+                0x00000000803f2288                HSD_CObjInit
+
+.text.HSD_CObjLoadDesc
+                0x00000000803f228c       0xf4
+ .text.HSD_CObjLoadDesc
+                0x00000000803f228c       0xf4 cobj.o
+                0x00000000803f228c                HSD_CObjLoadDesc
+
+.glink          0x00000000803f2380        0x0
+ .glink         0x00000000803f2380        0x0 cobj.o
+
+.rodata         0x00000000803f2380       0x77
+ *(.rodata*)
+ .rodata.CObjInfoInit.str1.4
+                0x00000000803f2380       0x24 cobj.o
+ .rodata.CObjUpdateFunc
+                0x00000000803f23a4       0x34 cobj.o
+ .rodata.HSD_CObjGetEyeDistance.str1.4
+                0x00000000803f23d8       0x1f cobj.o
+
+.eh_frame       0x00000000803f23f8      0xb2c
+ .eh_frame      0x00000000803f23f8      0xb2c cobj.o
+
+.eh_frame       0x00000000803f2f24        0x0
+ .eh_frame      0x00000000803f2f24        0x0 cobj.o
+
+.sdata2         0x00000000803f2f24        0x0
+ .sdata2        0x00000000803f2f24        0x0 cobj.o
+
+.rela.dyn       0x00000000803f2f24        0x0
+ .rela.iplt     0x00000000803f2f24        0x0 cobj.o
+ .rela.text.CObjInfoInit
+                0x00000000803f2f24        0x0 cobj.o
+ .rela.text.setupNormalCamera
+                0x00000000803f2f24        0x0 cobj.o
+ .rela.text.HSD_CObjSetCurrent
+                0x00000000803f2f24        0x0 cobj.o
+ .rela.text.HSD_CObjGetEyeVector
+                0x00000000803f2f24        0x0 cobj.o
+ .rela.text.HSD_CObjGetEyeDistance
+                0x00000000803f2f24        0x0 cobj.o
+ .rela.text.vec_normalize_check
+                0x00000000803f2f24        0x0 cobj.o
+ .rela.text.roll2upvec
+                0x00000000803f2f24        0x0 cobj.o
+ .rela.text.HSD_CObjGetFov
+                0x00000000803f2f24        0x0 cobj.o
+ .rela.text.HSD_CObjGetAspect
+                0x00000000803f2f24        0x0 cobj.o
+ .rela.text.HSD_CObjGetTop
+                0x00000000803f2f24        0x0 cobj.o
+ .rela.text.HSD_CObjGetBottom
+                0x00000000803f2f24        0x0 cobj.o
+ .rela.text.HSD_CObjGetLeft
+                0x00000000803f2f24        0x0 cobj.o
+ .rela.text.HSD_CObjGetRight
+                0x00000000803f2f24        0x0 cobj.o
+ .rela.text.HSD_CObjGetNear
+                0x00000000803f2f24        0x0 cobj.o
+ .rela.text.HSD_CObjGetFar
+                0x00000000803f2f24        0x0 cobj.o
+
+.data           0x00000000803f2f24        0x0
+ *(.data)
+ .data          0x00000000803f2f24        0x0 cobj.o
+
+.sdata.HSD_CObj_804DE474
+                0x00000000803f2f24        0x4
+ .sdata.HSD_CObj_804DE474
+                0x00000000803f2f24        0x4 cobj.o
+                0x00000000803f2f24                HSD_CObj_804DE474
+
+.sdata.HSD_CObj_804D5D48
+                0x00000000803f2f28        0x8
+ .sdata.HSD_CObj_804D5D48
+                0x00000000803f2f28        0x8 cobj.o
+                0x00000000803f2f28                HSD_CObj_804D5D48
+
+.data.HSD_CObj_80406294
+                0x00000000803f2f30       0x1d
+ .data.HSD_CObj_80406294
+                0x00000000803f2f30       0x1d cobj.o
+
+.data.HSD_CObj_804D5D40
+                0x00000000803f2f50        0x7
+ .data.HSD_CObj_804D5D40
+                0x00000000803f2f50        0x7 cobj.o
+
+.data.hsdCObj   0x00000000803f2f58       0x40
+ .data.hsdCObj  0x00000000803f2f58       0x40 cobj.o
+                0x00000000803f2f58                hsdCObj
+
+.branch_lt      0x00000000803f2f98        0x0
+ .branch_lt     0x00000000803f2f98        0x0 cobj.o
+                0x00000000803f2fa0                . = (. + 0x8)
+
+.sdata          0x00000000803f2fa0        0x0
+ *(.sdata)
+ .sdata         0x00000000803f2fa0        0x0 cobj.o
+                0x0000000080149754                OnActivate = 0x80149754
+                0x0000000080158f54                strlen = 0x80158f54
+                0x0000000080158e9c                strcpy = 0x80158e9c
+                0x00000000801d5f80                malloc = 0x801d5f80
+                0x00000000801569e0                vprintf = 0x801569e0
+LOAD cobj.o
+OUTPUT(obj_cobj.o elf32-powerpc)
+
+.bss            0x00000000803f2fa0        0x0
+ .bss           0x00000000803f2fa0        0x0 cobj.o
+
+.bss.current    0x00000000803f2fa0        0x4
+ .bss.current   0x00000000803f2fa0        0x4 cobj.o
+
+.bss.default_class
+                0x00000000803f2fa4        0x4
+ .bss.default_class
+                0x00000000803f2fa4        0x4 cobj.o
+
+.sbss.__OSDeviceCode
+                0x00000000803f2fa8        0x2
+ .sbss.__OSDeviceCode
+                0x00000000803f2fa8        0x2 cobj.o
+                0x00000000803f2fa8                __OSDeviceCode
+
+.sbss.__OSCoreClock
+                0x00000000803f2fac        0x4
+ .sbss.__OSCoreClock
+                0x00000000803f2fac        0x4 cobj.o
+                0x00000000803f2fac                __OSCoreClock
+
+.sbss.__OSBusClock
+                0x00000000803f2fb0        0x4
+ .sbss.__OSBusClock
+                0x00000000803f2fb0        0x4 cobj.o
+                0x00000000803f2fb0                __OSBusClock
+
+.iplt           0x00000000803f2fc0        0x0
+ .iplt          0x00000000803f2fc0        0x0 cobj.o
+
+.comment        0x0000000000000000       0x23
+ .comment       0x0000000000000000       0x23 cobj.o
+                                         0x24 (size before relaxing)
+
+.gnu.attributes
+                0x0000000000000000       0x10
+ .gnu.attributes
+                0x0000000000000000       0x10 cobj.o

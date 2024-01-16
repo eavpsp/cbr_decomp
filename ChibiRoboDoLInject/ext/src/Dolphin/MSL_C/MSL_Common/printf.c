@@ -9,7 +9,6 @@
 #include "string.h"
 #include "stdio.h"
 #include "stdlib.h"
-#include "stddef.h"
 
 #define TARGET_FLOAT_BITS           64
 #define TARGET_FLOAT_BYTES          (TARGET_FLOAT_BITS / 8)

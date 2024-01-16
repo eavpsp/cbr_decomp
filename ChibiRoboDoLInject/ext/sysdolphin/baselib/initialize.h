@@ -1,9 +1,9 @@
 #ifndef _initialize_h_
 #define _initialize_h_
 
-#include <platform.h>
+#include <types.h>
 
-#include <dolphin/gx/types.h>
+#include <Dolphin/GX/GXTypes.h>
 #include <dolphin/os/OSAlloc.h>
 #include <baselib/video.h>
 
@@ -27,6 +27,9 @@ typedef enum _HSD_InitParam {
     HSD_INIT_AUDIO_HEAP_SIZE,
     HSD_INIT_RENDER_MODE_OBJ
 } HSD_InitParam;
+struct GXFifoObj {
+    u8 pad[GX_FIFO_OBJSIZE];
+}typedef GXFifoObj;
 
 void HSD_InitComponent(void);
 void HSD_GXSetFifoObj(GXFifoObj* fifo);

@@ -1,7 +1,7 @@
 #ifndef _aobj_h_
 #define _aobj_h_
 
-#include <platform.h>
+#include <types.h>
 #include <baselib/forward.h>
 
 #include <baselib/fobj.h>
