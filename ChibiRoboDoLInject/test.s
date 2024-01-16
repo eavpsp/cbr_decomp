@@ -1,51 +1,48 @@
 	.file	"test.cpp"
 	.machine "821"
 	.section	".text"
-	.section	.text._ZN8HSD_Chan7HSD_DelEv,"axG",@progbits,_ZN8HSD_Chan7HSD_DelEv,comdat
+	.section	.text._Z4Testv,"ax",@progbits
 	.align 2
-	.weak	_ZN8HSD_Chan7HSD_DelEv
-	.type	_ZN8HSD_Chan7HSD_DelEv, @function
-_ZN8HSD_Chan7HSD_DelEv:
+	.globl _Z4Testv
+	.type	_Z4Testv, @function
+_Z4Testv:
 .LFB0:
 	.cfi_startproc
 	blr
 	.cfi_endproc
 .LFE0:
-	.size	_ZN8HSD_Chan7HSD_DelEv, .-_ZN8HSD_Chan7HSD_DelEv
-	.weak	_ZTS8HSD_Chan
-	.section	.rodata._ZTS8HSD_Chan,"aG",@progbits,_ZTS8HSD_Chan,comdat
+	.size	_Z4Testv, .-_Z4Testv
+	.globl _ZN15CSound_Instance12instanceInfoE
+	.section	.data._ZN15CSound_Instance12instanceInfoE,"aw"
 	.align 2
-	.type	_ZTS8HSD_Chan, @object
-	.size	_ZTS8HSD_Chan, 10
-_ZTS8HSD_Chan:
-	.string	"8HSD_Chan"
-	.weak	_ZTI8HSD_Chan
-	.section	.rodata._ZTI8HSD_Chan,"aG",@progbits,_ZTI8HSD_Chan,comdat
-	.align 2
-	.type	_ZTI8HSD_Chan, @object
-	.size	_ZTI8HSD_Chan, 24
-_ZTI8HSD_Chan:
-	.long	_ZTVN10__cxxabiv121__vmi_class_type_infoE+8
-	.long	_ZTS8HSD_Chan
+	.type	_ZN15CSound_Instance12instanceInfoE, @object
+	.size	_ZN15CSound_Instance12instanceInfoE, 12
+_ZN15CSound_Instance12instanceInfoE:
+	.long	_ZN10CSoundBase9classInfoE
 	.long	0
-	.long	1
-	.long	_ZTI8HSD_BASE
-	.long	0
-	.weak	_ZTV8HSD_Chan
-	.section	.rodata._ZTV8HSD_Chan,"aG",@progbits,_ZTV8HSD_Chan,comdat
+	.long	_Z4Testv
+	.globl _ZN10XSoundBase9classInfoE
+	.section	.rodata.str1.4,"aMS",@progbits,1
 	.align 2
-	.type	_ZTV8HSD_Chan, @object
-	.size	_ZTV8HSD_Chan, 16
-_ZTV8HSD_Chan:
-	.long	0
-	.long	_ZTI8HSD_Chan
-	.long	_ZN8HSD_BASE8HSD_InitEv
-	.long	_ZN8HSD_Chan7HSD_DelEv
-	.globl ChanTest
-	.section	.sdata.ChanTest,"aw"
+.LC0:
+	.string	"XSound"
+	.section	.sdata._ZN10XSoundBase9classInfoE,"aw"
 	.align 2
-	.type	ChanTest, @object
-	.size	ChanTest, 4
-ChanTest:
-	.long	_ZTV8HSD_Chan+8
+	.type	_ZN10XSoundBase9classInfoE, @object
+	.size	_ZN10XSoundBase9classInfoE, 8
+_ZN10XSoundBase9classInfoE:
+	.long	.LC0
+	.long	_ZN10CSoundBase9classInfoE
+	.globl _ZN10CSoundBase9classInfoE
+	.section	.rodata.str1.4
+	.align 2
+.LC1:
+	.string	"CSound"
+	.section	.sdata._ZN10CSoundBase9classInfoE,"aw"
+	.align 2
+	.type	_ZN10CSoundBase9classInfoE, @object
+	.size	_ZN10CSoundBase9classInfoE, 8
+_ZN10CSoundBase9classInfoE:
+	.long	.LC1
+	.long	0
 	.ident	"GCC: (devkitPPC release 41) 12.1.0"

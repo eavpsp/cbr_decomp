@@ -1,26 +1,74 @@
-class Instance
-{
+//Game.cpp
+/*
+CTexObj
+CStatus
+Logo
+XOBJS
+CStack
+CEvt
+CSound
+XSound
+CCard
+*/
+class CBASE;
 
+struct CBase_info
+{
+    char* base;
+    CBASE* parent;
 };
-class HSD_BASE 
+struct CBaseInstance_info
+{
+    CBase_info baseInfo;
+    char*  instanceDestructor;
+   // ~CBaseInstance_info();
+};
+class CBASE 
+{ };
+class CSound_Instance
+{
+    static CBaseInstance_info instanceInfo;
+};
+
+class CSoundBase : public CBASE
 {
     public:
-    virtual void HSD_Init();
-    virtual void HSD_Del();
+    static CBase_info classInfo;
 };
-
-
-//Class conversion - TODO
-class HSD_Chan : HSD_BASE
+class XSoundBase : public CBASE
 {
-    //parent typeinfo ref
-    //space 4 byte
-    //destructor
     public:
-    void HSD_Del() override
-    {
+    static CBase_info classInfo;
 
-    };
 };
 
-const HSD_Chan ChanTest;
+CBase_info CSoundBase::classInfo = 
+{
+    "CSound", 
+    nullptr
+};
+CBase_info XSoundBase::classInfo = 
+{
+    "XSound", 
+    reinterpret_cast<CBASE*>(&CSoundBase::classInfo),
+};
+void Test(){
+
+}
+
+CBaseInstance_info CSound_Instance::instanceInfo = 
+{
+    reinterpret_cast<char*>(&CSoundBase::classInfo),
+    nullptr,
+    reinterpret_cast<char*>(&Test),
+
+};
+
+
+
+//store class name pointer
+//CBASE* CSoundBase::parentClassPtr = reinterpret_cast<CBASE*>(0x00000000);//set parent class name pointer
+
+//ptr to classType
+//Container that stores pointer to classType(2) 2nd usually null(Base Class)
+//Class that stores base class as parent (3) 2nd usually null(Child Class)

@@ -1,11 +1,4 @@
 
-Discarded input sections
-
- .group         0x0000000000000000        0x8 test.o
- .group         0x0000000000000000        0x8 test.o
- .group         0x0000000000000000        0xc test.o
- .group         0x0000000000000000        0xc test.o
-
 Memory Configuration
 
 Name             Origin             Length             Attributes
@@ -19,63 +12,60 @@ Linker script and memory map
  *(.text)
  .text          0x00000000803f0280        0x0 test.o
 
-.text._ZN8HSD_Chan7HSD_DelEv
-                0x00000000803f0280        0x4
- .text._ZN8HSD_Chan7HSD_DelEv
+.text._Z4Testv  0x00000000803f0280        0x4
+ .text._Z4Testv
                 0x00000000803f0280        0x4 test.o
-                0x00000000803f0280                HSD_Chan::HSD_Del()
+                0x00000000803f0280                Test()
 
 .glink          0x00000000803f0284        0x0
  .glink         0x00000000803f0284        0x0 test.o
 
-.rodata         0x00000000803f0284       0x34
+.rodata         0x00000000803f0284        0xf
  *(.rodata*)
- .rodata._ZTS8HSD_Chan
-                0x00000000803f0284        0xa test.o
-                0x00000000803f0284                typeinfo name for HSD_Chan
- *fill*         0x00000000803f028e        0x2 
- .rodata._ZTI8HSD_Chan
-                0x00000000803f0290       0x18 test.o
-                0x00000000803f0290                typeinfo for HSD_Chan
- .rodata._ZTV8HSD_Chan
-                0x00000000803f02a8       0x10 test.o
-                0x00000000803f02a8                vtable for HSD_Chan
+ .rodata.str1.4
+                0x00000000803f0284        0xf test.o
 
-.eh_frame       0x00000000803f02b8       0x28
- .eh_frame      0x00000000803f02b8       0x28 test.o
+.eh_frame       0x00000000803f0294       0x28
+ .eh_frame      0x00000000803f0294       0x28 test.o
 
-.eh_frame       0x00000000803f02e0        0x0
- .eh_frame      0x00000000803f02e0        0x0 test.o
+.eh_frame       0x00000000803f02bc        0x0
+ .eh_frame      0x00000000803f02bc        0x0 test.o
 
-.sdata2         0x00000000803f02e0        0x0
- .sdata2        0x00000000803f02e0        0x0 test.o
+.sdata2         0x00000000803f02bc        0x0
+ .sdata2        0x00000000803f02bc        0x0 test.o
 
-.rela.dyn       0x00000000803f02e0        0x0
- .rela.iplt     0x00000000803f02e0        0x0 test.o
- .rela.rodata._ZTI8HSD_Chan
-                0x00000000803f02e0        0x0 test.o
- .rela.rodata._ZTV8HSD_Chan
-                0x00000000803f02e0        0x0 test.o
- .rela.sdata.ChanTest
-                0x00000000803f02e0        0x0 test.o
+.rela.dyn       0x00000000803f02bc        0x0
+ .rela.iplt     0x00000000803f02bc        0x0 test.o
 
-.data           0x00000000803f02e0        0x0
+.data           0x00000000803f02bc        0x0
  *(.data)
- .data          0x00000000803f02e0        0x0 test.o
+ .data          0x00000000803f02bc        0x0 test.o
 
-.sdata.ChanTest
-                0x00000000803f02e0        0x4
- .sdata.ChanTest
-                0x00000000803f02e0        0x4 test.o
-                0x00000000803f02e0                ChanTest
+.data._ZN15CSound_Instance12instanceInfoE
+                0x00000000803f02bc        0xc
+ .data._ZN15CSound_Instance12instanceInfoE
+                0x00000000803f02bc        0xc test.o
+                0x00000000803f02bc                CSound_Instance::instanceInfo
 
-.branch_lt      0x00000000803f02e4        0x0
- .branch_lt     0x00000000803f02e4        0x0 test.o
-                0x00000000803f02ec                . = (. + 0x8)
+.sdata._ZN10XSoundBase9classInfoE
+                0x00000000803f02c8        0x8
+ .sdata._ZN10XSoundBase9classInfoE
+                0x00000000803f02c8        0x8 test.o
+                0x00000000803f02c8                XSoundBase::classInfo
 
-.sdata          0x00000000803f02ec        0x0
+.sdata._ZN10CSoundBase9classInfoE
+                0x00000000803f02d0        0x8
+ .sdata._ZN10CSoundBase9classInfoE
+                0x00000000803f02d0        0x8 test.o
+                0x00000000803f02d0                CSoundBase::classInfo
+
+.branch_lt      0x00000000803f02d8        0x0
+ .branch_lt     0x00000000803f02d8        0x0 test.o
+                0x00000000803f02e0                . = (. + 0x8)
+
+.sdata          0x00000000803f02e0        0x0
  *(.sdata)
- .sdata         0x00000000803f02ec        0x0 test.o
+ .sdata         0x00000000803f02e0        0x0 test.o
                 0x0000000080149754                OnActivate = 0x80149754
                 0x0000000080158f54                strlen = 0x80158f54
                 0x0000000080158e9c                strcpy = 0x80158e9c
@@ -84,11 +74,11 @@ Linker script and memory map
 LOAD test.o
 OUTPUT(obj_test.o elf32-powerpc)
 
-.bss            0x00000000803f02ec        0x0
- .bss           0x00000000803f02ec        0x0 test.o
+.bss            0x00000000803f02e0        0x0
+ .bss           0x00000000803f02e0        0x0 test.o
 
-.iplt           0x00000000803f02f0        0x0
- .iplt          0x00000000803f02f0        0x0 test.o
+.iplt           0x00000000803f02e0        0x0
+ .iplt          0x00000000803f02e0        0x0 test.o
 
 .comment        0x0000000000000000       0x23
  .comment       0x0000000000000000       0x23 test.o
