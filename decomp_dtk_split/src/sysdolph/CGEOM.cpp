@@ -16,7 +16,7 @@ const char* HSD_CGsClassObject[3] =
 	reinterpret_cast<const char*>(&HSD_CGsClass),
 	reinterpret_cast<const char*>(0x00000000), 
 	reinterpret_cast<const char*>(&CGS_Destructor) //Desctructor
-};//8021026c needs new pos
+};//8021026c needs new pos conflicts with other var buffers
 
 sysdolph/CGEOM.cpp:
 	.data       start:0x8021026C end:0x80210278

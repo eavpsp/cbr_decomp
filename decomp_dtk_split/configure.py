@@ -229,10 +229,10 @@ config.libs = [
         "cflags": cflags_runtime,
         "host": False,
         "objects": [
-             Object(NonMatching, "Dolphin/TRK_MINNOW_DOLPHIN/mem_TRK.c"),
-             Object(NonMatching, "Dolphin/Runtime/__mem.c"),
-             Object(NonMatching, "Dolphin/os/__start.c"),
-             Object(NonMatching, "Dolphin/os/__ppc_eabi_init.cpp"),
+            Object(NonMatching, "Dolphin/TRK_MINNOW_DOLPHIN/mem_TRK.c"),
+            Object(NonMatching, "Dolphin/Runtime/__mem.c"),
+            Object(NonMatching, "Dolphin/os/__start.c"),
+            Object(NonMatching, "Dolphin/os/__ppc_eabi_init.cpp"),
             
         ],
     },
@@ -242,8 +242,8 @@ config.libs = [
         "cflags": cflags_runtime,
         "host": False,
         "objects": [
-            # Object(Matching, "sysdolph/HSD_Channel.cpp"),
-             Object(Matching, "sysdolph/CGEOM.cpp"),
+            Object(Matching, "sysdolph/HSD_Channel.cpp"),
+            Object(Matching, "sysdolph/CGEOM.cpp"),
 
         ],
     },
