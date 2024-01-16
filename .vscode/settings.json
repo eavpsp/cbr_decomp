@@ -4,7 +4,8 @@
         "string": "cpp",
         "xstring": "cpp",
         "iostream": "cpp",
-        "memory": "cpp"
+        "memory": "cpp",
+        "__start.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

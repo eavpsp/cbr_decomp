@@ -1,4 +1,4 @@
-#include <sysdolph/HSD_Channel.h>
+#include <sysdolph/HSD.h>
 /*Matches*/
 const char* HSD_CGsChannel::HSD_CGsChannelClassName = "CGsChannel"; // 801FDD78
 const char* HSD_Chan::HSD_ChanClassName = "_HSD_Chan"; // 801FDD84

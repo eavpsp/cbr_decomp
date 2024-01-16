@@ -17,8 +17,7 @@ class HSD_CGsChannel
     static const char* HSD_CGsChanClassObject[2];
     static const char* HSD_CGsChannel[3];
 };
-
-
-extern "C" void CGSChan_Destructor();
+//extern "C" void delete(void *param_1);// add to HSD_CGsChannel class
+extern "C" void CGSChan_Destructor();// add to HSD_CGsChannel class
 
 #endif

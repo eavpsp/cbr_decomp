@@ -13,7 +13,7 @@ Sections:
 	.sdata2     type:rodata
 	.sbss2      type:bss
 
-sysdolph/HSD_Channel.cpp:
+sysdolph/HSD.cpp:
 	.rodata     start:0x801FDD78 end:0x801FDD84
 	.rodata     start:0x801FDD84 end:0x801FDD90
 	.data       start:0x80210110 end:0x8021011C
@@ -22,6 +22,7 @@ sysdolph/HSD_Channel.cpp:
 	.sdata      start:0x8065A008 end:0x8065A010
 
 sysdolph/CGEOM.cpp:
+	.rodata     start:0x801FDDB8 end:0x801FDDCC
 	.sdata      start:0x8065A090 end:0x8065A098
 	.sdata2     start:0x8065BF28 end:0x8065BF2C
 
@@ -40,7 +41,7 @@ Runtime.PPCEABI.H/__init_cpp_exceptions.cpp:
 	.dtors      start:0x801FD6C0 end:0x801FD6C8
 	.sdata      start:0x8065AB50 end:0x8065AB54
 
-Dolphin/TRK_MINNOW_DOLPHIN/_exception.s:
+Dolphin/TRK_MINNOW_DOLPHIN/_exception.o:
 	.init       start:0x80003154 end:0x800050B4
 
 Dolphin/Runtime/__mem.c:

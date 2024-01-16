@@ -1,7 +1,7 @@
-#include "Dolphin/__start.h"
+#include <Dolphin/__start.h>
 
 #pragma section code_type ".init"
-
+//800051ec
 void __check_pad3(void)
 {
 	if ((Pad3Button & 0x0eef) == 0x0eef) {
@@ -11,11 +11,11 @@ void __check_pad3(void)
 
 	return;
 }
-
+//8000522c
 void __set_debug_bba(void) { Debug_BBA = 1;  }
-
+//80005238
 u8 __get_debug_bba(void) { return Debug_BBA; }
-
+//80005240
 WEAKFUNC ASM void __start(void)
 {
 #ifdef __MWERKS__ // clang-format off
@@ -131,7 +131,7 @@ _goto_skip_init_bba:
 	b exit
 #endif // clang-format on
 }
-
+//8000539c
 ASM static void __init_registers(void)
 {
 #ifdef __MWERKS__ // clang-format off
@@ -192,7 +192,7 @@ inline static void __init_bss_section(void* dst, u32 size)
 		memset(dst, 0, size);
 	}
 }
-
+//8000542c
 void __init_data(void)
 {
 	__rom_copy_info* dci;
@@ -214,3 +214,4 @@ void __init_data(void)
 		bii++;
 	}
 }
+//end 80005450
