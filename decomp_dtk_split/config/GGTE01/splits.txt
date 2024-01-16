@@ -21,6 +21,10 @@ sysdolph/HSD_Channel.cpp:
 	.sdata      start:0x8065A000 end:0x8065A008
 	.sdata      start:0x8065A008 end:0x8065A010
 
+sysdolph/CGEOM.cpp:
+	.sdata      start:0x8065A090 end:0x8065A098
+	.sdata2     start:0x8065BF28 end:0x8065BF2C
+
 Dolphin/TRK_MINNOW_DOLPHIN/mem_TRK.c:
 	.init       start:0x80003100 end:0x80003154
 	.text       start:0x8014D55C end:0x8014D614
