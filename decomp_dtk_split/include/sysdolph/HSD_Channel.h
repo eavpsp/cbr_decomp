@@ -7,13 +7,18 @@ class HSD_Chan
 {
     public:
     static const char* HSD_ChanClassName;
-    
+    static const char* HSD_ChanClassObject[2];
+    static const char* HSD_ChanCompObject[3];
 };
-extern const char* HSD_CGsChannelClassName;
-extern const char* HSD_ChanClassObject[2];
-extern const char* HSD_ChanCompObject[3];
-extern const char* HSD_CGsChanClassObject[2];
-extern const char* HSD_CGsChannel[3];
+class HSD_CGsChannel
+{
+    public:
+    static const char* HSD_CGsChannelClassName;
+    static const char* HSD_CGsChanClassObject[2];
+    static const char* HSD_CGsChannel[3];
+};
+
+
 extern "C" void CGSChan_Destructor();
 
 #endif

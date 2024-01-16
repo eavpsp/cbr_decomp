@@ -1,31 +1,31 @@
 #include <sysdolph/HSD_Channel.h>
 /*Matches*/
-const char* HSD_CGsChannelClassName = "CGsChannel"; // 801FDD78
+const char* HSD_CGsChannel::HSD_CGsChannelClassName = "CGsChannel"; // 801FDD78
 const char* HSD_Chan::HSD_ChanClassName = "_HSD_Chan"; // 801FDD84
-const char* HSD_ChanClassObject[2] = 
+const char* HSD_Chan::HSD_ChanClassObject[2] = 
 {
 	reinterpret_cast<const char*>(&HSD_Chan::HSD_ChanClassName),
 	reinterpret_cast<const char*>(0x00000000) 
 };//8065A000
-const char* HSD_ChanCompObject[3] = 
+const char* HSD_Chan::HSD_ChanCompObject[3] = 
 {
-	reinterpret_cast<const char*>(&HSD_ChanClassObject),
+	reinterpret_cast<const char*>(&HSD_Chan::HSD_ChanClassObject),
 	reinterpret_cast<const char*>(0x00000000), 
 	reinterpret_cast<const char*>(0x00000000) 
 };//80210110
-const char* HSD_CGsChanClassObject[2] = 
+const char* HSD_CGsChannel::HSD_CGsChanClassObject[2] = 
 {
-	reinterpret_cast<const char*>(&HSD_CGsChannelClassName), 
-	reinterpret_cast<const char*>(&HSD_ChanCompObject)
+	reinterpret_cast<const char*>(&HSD_CGsChannel::HSD_CGsChannelClassName), 
+	reinterpret_cast<const char*>(&HSD_Chan::HSD_ChanCompObject)
 };//8065A008
 
-const char* HSD_CGsChannel[3] = 
+const char* HSD_CGsChannel::HSD_CGsChannel[3] = 
 {
-	reinterpret_cast<const char*>(&HSD_CGsChanClassObject),
+	reinterpret_cast<const char*>(&HSD_CGsChannel::HSD_CGsChanClassObject),
 	reinterpret_cast<const char*>(0x00000000), 
 	reinterpret_cast<const char*>(&CGSChan_Destructor)
 };//8021011C  TODO: add destructor 
-const char* test;
+
 //8000838c - CGS_Destructor
 
 
