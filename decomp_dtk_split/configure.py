@@ -182,14 +182,14 @@ cflags_rel = [
     "-sdata2 0",
 ]
 
-config.linker_version = "GC/3.0a5.2"
+config.linker_version = "GC/1.3.2"
 
 
 # Helper function for Dolphin libraries
 def DolphinLib(lib_name, objects):
     return {
         "lib": lib_name,
-        "mw_version": "GC/3.0a5.2",
+        "mw_version": "GC/1.3.2",
         "cflags": cflags_base,
         "host": False,
         "objects": objects,
@@ -200,7 +200,7 @@ def DolphinLib(lib_name, objects):
 def Rel(lib_name, objects):
     return {
         "lib": lib_name,
-        "mw_version": "GC/3.0a5.2",
+        "mw_version": "GC/1.3.2",
         "cflags": cflags_rel,
         "host": True,
         "objects": objects,
@@ -233,7 +233,6 @@ config.libs = [
             Object(Matching, "Dolphin/TRK_MINNOW_DOLPHIN/mem_TRK.c"),
             Object(Matching, "Dolphin/TRK_MINNOW_DOLPHIN/_exception.o"),
             Object(Matching, "Dolphin/Runtime/__mem.c"),
-            Object(Matching, "test.cpp"),
             Object(NonMatching, "Dolphin/os/__start.c"),
             Object(NonMatching, "Dolphin/os/__ppc_eabi_init.cpp"),
             
@@ -255,7 +254,8 @@ config.libs = [
         "cflags": cflags_runtime,
         "host": False,
         "objects": [
-            Object(Matching, "game.cpp"),
+            Object(NonMatching, "game/game.cpp"),
+            Object(Matching, "test.cpp"),
             
 
         ],
