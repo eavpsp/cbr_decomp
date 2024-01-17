@@ -1,4 +1,14 @@
 
+Discarded input sections
+
+ .group         0x0000000000000000        0x8 test.o
+ .group         0x0000000000000000       0x10 test.o
+ .group         0x0000000000000000        0x8 test.o
+ .group         0x0000000000000000        0xc test.o
+ .group         0x0000000000000000        0x8 test.o
+ .group         0x0000000000000000        0xc test.o
+ .group         0x0000000000000000        0xc test.o
+
 Memory Configuration
 
 Name             Origin             Length             Attributes
@@ -12,60 +22,97 @@ Linker script and memory map
  *(.text)
  .text          0x00000000803f0280        0x0 test.o
 
-.text._Z4Testv  0x00000000803f0280        0x4
- .text._Z4Testv
+.text._ZNK10ChildClass10StartClassEv
+                0x00000000803f0280        0x4
+ .text._ZNK10ChildClass10StartClassEv
                 0x00000000803f0280        0x4 test.o
-                0x00000000803f0280                Test()
+                0x00000000803f0280                ChildClass::StartClass() const
 
-.glink          0x00000000803f0284        0x0
- .glink         0x00000000803f0284        0x0 test.o
+.text._ZN10ChildClassD2Ev
+                0x00000000803f0284        0x4
+ .text._ZN10ChildClassD2Ev
+                0x00000000803f0284        0x4 test.o
+                0x00000000803f0284                ChildClass::~ChildClass()
+                0x00000000803f0284                ChildClass::~ChildClass()
 
-.rodata         0x00000000803f0284        0xf
+.text._ZN10ChildClassD0Ev
+                0x00000000803f0288        0x8
+ .text._ZN10ChildClassD0Ev
+                0x00000000803f0288        0x8 test.o
+                0x00000000803f0288                ChildClass::~ChildClass()
+
+.text.startup._GLOBAL__sub_I_classData
+                0x00000000803f0290       0xa0
+ .text.startup._GLOBAL__sub_I_classData
+                0x00000000803f0290       0xa0 test.o
+
+.glink          0x00000000803f0330        0x0
+ .glink         0x00000000803f0330        0x0 test.o
+
+.rodata         0x00000000803f0330       0x3c
  *(.rodata*)
- .rodata.str1.4
-                0x00000000803f0284        0xf test.o
+ .rodata._ZTS9MainClass
+                0x00000000803f0330        0xb test.o
+                0x00000000803f0330                typeinfo name for MainClass
+ *fill*         0x00000000803f033b        0x1 
+ .rodata._ZTS10ChildClass
+                0x00000000803f033c        0xd test.o
+                0x00000000803f033c                typeinfo name for ChildClass
+ *fill*         0x00000000803f0349        0x3 
+ .rodata._ZTI10ChildClass
+                0x00000000803f034c        0xc test.o
+                0x00000000803f034c                typeinfo for ChildClass
+ .rodata._ZTV10ChildClass
+                0x00000000803f0358       0x14 test.o
+                0x00000000803f0358                vtable for ChildClass
 
-.eh_frame       0x00000000803f0294       0x28
- .eh_frame      0x00000000803f0294       0x28 test.o
+.gcc_except_table._GLOBAL__sub_I_classData
+                0x00000000803f036c       0x12
+ .gcc_except_table._GLOBAL__sub_I_classData
+                0x00000000803f036c       0x12 test.o
 
-.eh_frame       0x00000000803f02bc        0x0
- .eh_frame      0x00000000803f02bc        0x0 test.o
+.eh_frame       0x00000000803f0380       0xa0
+ .eh_frame      0x00000000803f0380       0xa0 test.o
 
-.sdata2         0x00000000803f02bc        0x0
- .sdata2        0x00000000803f02bc        0x0 test.o
+.eh_frame       0x00000000803f0420        0x0
+ .eh_frame      0x00000000803f0420        0x0 test.o
 
-.rela.dyn       0x00000000803f02bc        0x0
- .rela.iplt     0x00000000803f02bc        0x0 test.o
+.sdata2         0x00000000803f0420        0x0
+ .sdata2        0x00000000803f0420        0x0 test.o
 
-.data           0x00000000803f02bc        0x0
+.rela.dyn       0x00000000803f0420        0x0
+ .rela.iplt     0x00000000803f0420        0x0 test.o
+ .rela.text.startup._GLOBAL__sub_I_classData
+                0x00000000803f0420        0x0 test.o
+ .rela.sdata._ZTI9MainClass
+                0x00000000803f0420        0x0 test.o
+ .rela.rodata._ZTI10ChildClass
+                0x00000000803f0420        0x0 test.o
+ .rela.rodata._ZTV10ChildClass
+                0x00000000803f0420        0x0 test.o
+ .rela.eh_frame
+                0x00000000803f0420        0x0 test.o
+
+.data           0x00000000803f0420        0x0
  *(.data)
- .data          0x00000000803f02bc        0x0 test.o
+ .data          0x00000000803f0420        0x0 test.o
 
-.data._ZN15CSound_Instance12instanceInfoE
-                0x00000000803f02bc        0xc
- .data._ZN15CSound_Instance12instanceInfoE
-                0x00000000803f02bc        0xc test.o
-                0x00000000803f02bc                CSound_Instance::instanceInfo
+.ctors          0x00000000803f0420        0x4
+ .ctors         0x00000000803f0420        0x4 test.o
 
-.sdata._ZN10XSoundBase9classInfoE
-                0x00000000803f02c8        0x8
- .sdata._ZN10XSoundBase9classInfoE
-                0x00000000803f02c8        0x8 test.o
-                0x00000000803f02c8                XSoundBase::classInfo
+.sdata._ZTI9MainClass
+                0x00000000803f0424        0x8
+ .sdata._ZTI9MainClass
+                0x00000000803f0424        0x8 test.o
+                0x00000000803f0424                typeinfo for MainClass
 
-.sdata._ZN10CSoundBase9classInfoE
-                0x00000000803f02d0        0x8
- .sdata._ZN10CSoundBase9classInfoE
-                0x00000000803f02d0        0x8 test.o
-                0x00000000803f02d0                CSoundBase::classInfo
+.branch_lt      0x00000000803f042c        0x0
+ .branch_lt     0x00000000803f042c        0x0 test.o
+                0x00000000803f0434                . = (. + 0x8)
 
-.branch_lt      0x00000000803f02d8        0x0
- .branch_lt     0x00000000803f02d8        0x0 test.o
-                0x00000000803f02e0                . = (. + 0x8)
-
-.sdata          0x00000000803f02e0        0x0
+.sdata          0x00000000803f0434        0x0
  *(.sdata)
- .sdata         0x00000000803f02e0        0x0 test.o
+ .sdata         0x00000000803f0434        0x0 test.o
                 0x0000000080149754                OnActivate = 0x80149754
                 0x0000000080158f54                strlen = 0x80158f54
                 0x0000000080158e9c                strcpy = 0x80158e9c
@@ -74,11 +121,21 @@ Linker script and memory map
 LOAD test.o
 OUTPUT(obj_test.o elf32-powerpc)
 
-.bss            0x00000000803f02e0        0x0
- .bss           0x00000000803f02e0        0x0 test.o
+.bss            0x00000000803f0434        0x0
+ .bss           0x00000000803f0434        0x0 test.o
 
-.iplt           0x00000000803f02e0        0x0
- .iplt          0x00000000803f02e0        0x0 test.o
+.sbss.obj       0x00000000803f0434        0x4
+ .sbss.obj      0x00000000803f0434        0x4 test.o
+                0x00000000803f0434                obj
+
+.sbss.classData
+                0x00000000803f0438        0x8
+ .sbss.classData
+                0x00000000803f0438        0x8 test.o
+                0x00000000803f0438                classData
+
+.iplt           0x00000000803f0440        0x0
+ .iplt          0x00000000803f0440        0x0 test.o
 
 .comment        0x0000000000000000       0x23
  .comment       0x0000000000000000       0x23 test.o
