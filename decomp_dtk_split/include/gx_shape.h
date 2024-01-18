@@ -6,6 +6,8 @@ typedef int undefined;
 struct CPrimitive //0x164 cur:0x0
 {
     public:
+    char primData[0x164];
+    CPrimitive();
     virtual ~CPrimitive();
     //unk func
     virtual void fn_8019E2A8 (undefined param_1,undefined param_2,undefined param_3,undefined param_4,
@@ -24,11 +26,7 @@ struct CTriangle : public CPrimitive{};
 struct CLine : public CPrimitive{};
 struct CCircle : public CPrimitive{};
 struct CTile : public CPrimitive{};
-struct CGs
-{
-    public:
-    virtual ~CGs();
-};
+
 
 
 #endif

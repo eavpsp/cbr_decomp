@@ -5,6 +5,13 @@
 
 // r2 is  8051E360
 // r13 is 8051C680
+#ifndef UNK_PARAMS
+#ifdef M2CTX
+#define UNK_PARAMS
+#else
+#define UNK_PARAMS void
+#endif
+#endif
 
 typedef int BOOL;
 typedef unsigned int uint;

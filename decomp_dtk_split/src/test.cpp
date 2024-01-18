@@ -30,11 +30,11 @@ class ChildClass : public MainClass
    
 };
 */
-
+const CPadEx* CurrentPad;
 struct Test
 {
     public:
-    Game_GX cgsp;
+    CGs cgsp;
     Test() : cgsp(){};
     ~Test();
 };
@@ -46,9 +46,9 @@ struct TestContainer
     ~TestContainer();
 };
 Test* obj = new Test();
+CCamera* cam = new CCamera();
+CPadEx* pad = new CPadEx();
 Test TestContainer::test;
-const CTexObj* texObj = new CTexObj();
-CPadOne* pad = new CPadOne();
 void main()
 {
 

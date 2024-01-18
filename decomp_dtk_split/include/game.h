@@ -2,14 +2,33 @@
 #define game
 #include<game_gx.h>
 #include<PowerPC_EABI_Support/Runtime/MWCPlusLib.h>
+#include<evt.h>
+#include<cobj.h>
+#include <xobjs.h>
+struct CCamera : HSD_CObj //400 matches
+{
+    //0x88 136
+    char pad[20];
+    CVec vec1; //A0 160
+    CVec vec2; //b0 176
+    CVec vec3; //c0 192
+    CVec vec4; //d0 208
+    char buff[68];
+    CVec vec5; //0x124 292
+    char buff2[92];
+    //400 0x190
+    CCamera(){};
+    virtual ~CCamera(){};
+};
+
 struct Controller
 {
     //Controller Inputs
-    char controlInputs[76];//<- turn this into struct
+    int controlInputs[19];//<- turn this into struct
     //controls enabled
-    int padEnabled;
+    int controllerEnabled;
 };
-struct CPadOne //0x50
+struct CPadOne //0x50 match
 {
     public:
     Controller controller;
@@ -20,7 +39,16 @@ struct CPadOne //0x50
     virtual void ResetPad();
     virtual void ReadPad();
 };
-
+struct CPadEx;
+extern const CPadEx* CurrentPad;
+struct CPadEx //0x204 match
+{
+    int inputValueMask;
+    char unk_inputs[0xb0];
+    CPadOne gamePads[4];
+    CPadEx(): gamePads() { CurrentPad = this;};
+    virtual ~CPadEx(){};
+};
 struct StageData
 {
     int stageIndex;
@@ -34,20 +62,18 @@ struct StageData
 };
 
 extern StageData stageData;//8020fbc0
-struct CBase//Inherited by CGAME
+struct CBase//Inherited by CGAME //0x3334 TODO
 {
     public:
     //vars
-    Game_GX gx;
+    CGs gx;
     CFont baseFont;
-   
-    //CPAD
-    //CSTATUS
-    int val2;
-    int val3;
+    CPadEx gamePadManager;
+    CStatus status;
     //SceneCam 2
-    //SceneLights 6
-    //CStopWatch 3
+    CCamera sceneCams[2];
+    //SceneLights 6 TODO
+    //CStopWatch 3 TODO
     CBase();
     virtual ~CBase();
     //16 v funcs funcs

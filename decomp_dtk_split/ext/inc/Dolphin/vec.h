@@ -7,7 +7,7 @@
 extern "C" {
 #endif // ifdef __cplusplus
 
-typedef struct Vec {
+typedef struct Vec { //0xc
 	f32 x;
 	f32 y;
 	f32 z;
