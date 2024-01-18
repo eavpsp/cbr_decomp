@@ -127,7 +127,7 @@ HSD_LObj* HSD_LObjGetActiveByID(GXLightID id);
 HSD_LObj* HSD_LObjGetActiveByIndex(s32 idx);
 void HSD_LObjClearActive(void);
 
-void LObjUpdateFunc(void* obj, enum_t type, HSD_ObjData* val);
+void LObjUpdateFunc(void* obj, int type, HSD_ObjData* val);
 
 void HSD_LObjAddAnim(HSD_LObj* lobj, HSD_LightAnim* lanim);
 void HSD_LObjAddAnimAll(HSD_LObj* lobj, HSD_LightAnim* lanim);
@@ -181,7 +181,7 @@ HSD_LObj* HSD_LObjLoadDesc(HSD_LightDesc* ldesc);
 static inline HSD_LObj* HSD_LObjGetNext(HSD_LObj* lobj)
 {
     if (lobj == NULL) {
-        return NULL;
+        return 0;
     } else {
         return lobj->next;
     }

@@ -1,12 +1,13 @@
 #ifndef game_gx
 #define game_gx
 #include <Dolphin/gx.h>
-//graphics.h Class Data //0x8001b9b8
 #include <tev.h>
 #include <mobj.h>
 #include <gx_shape.h>
 #include <types.h>
+//shadow
 
+//color
 
 struct CGScreen : GXRenderModeObj //0x40
 {
@@ -32,7 +33,7 @@ struct CGsTevStage : HSD_TevDesc //match 0x94
     CGsTevStage(){};
     virtual ~CGsTevStage(){};
 };
-//cfont
+
 
 struct CGsChannel : HSD_Chan //match 0x34
 {

@@ -22,7 +22,7 @@ struct TestContainer
     ~TestContainer();
 };
 Test* obj = new Test();
-CCamera* cam = new CCamera();
+CCamera* gameCam = new CCamera();
 CPadEx* pad = new CPadEx();
 Test TestContainer::test;
 void main()
