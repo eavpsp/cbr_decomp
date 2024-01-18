@@ -13,8 +13,6 @@ Sections:
 	.sdata2     type:rodata
 	.sbss2      type:bss
 
-test.cpp:
-	.sdata2     start:0x8065FD38 end:0x8065FD40
 
 Dolphin/TRK_MINNOW_DOLPHIN/mem_TRK.c:
 	.init       start:0x80003100 end:0x80003154
