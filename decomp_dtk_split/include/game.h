@@ -1,3 +1,12 @@
+//Game.cpp
+/*
+    Logo
+    XOBJS
+    CStack
+    CSound
+    XSound
+    CCard
+*/
 #ifndef game
 #define game
 #include<game_gx.h>

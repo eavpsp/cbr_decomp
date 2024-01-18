@@ -8,7 +8,7 @@
 #include <types.h>
 
 
-struct CGScreen : public GXRenderModeObj //0x40
+struct CGScreen : GXRenderModeObj //0x40
 {
     public:
     int color;
@@ -17,7 +17,7 @@ struct CGScreen : public GXRenderModeObj //0x40
 }; //Done
 
 
-struct CGsRenderMode : public HSD_PEDesc //0x30 crude match
+struct CGsRenderMode : HSD_PEDesc //0x30 crude match
 {
     public:
     char buf[36]; //unk 4 xint
@@ -25,7 +25,7 @@ struct CGsRenderMode : public HSD_PEDesc //0x30 crude match
 };
 
 
-struct CGsTevStage : public HSD_TevDesc //match 0x94
+struct CGsTevStage : HSD_TevDesc //match 0x94
 {
     public:
     char buf[32];
@@ -34,7 +34,7 @@ struct CGsTevStage : public HSD_TevDesc //match 0x94
 };
 //cfont
 
-struct CGsChannel : public HSD_Chan //match 0x34
+struct CGsChannel : HSD_Chan //match 0x34
 {
     public:
     int buf;
@@ -43,7 +43,7 @@ struct CGsChannel : public HSD_Chan //match 0x34
 
 };
 
-struct CTexObj : public GXTexObj //match 0xfc
+struct CTexObj : GXTexObj //match 0xfc
 {
     CTexObj(){ };
     virtual ~CTexObj(){};

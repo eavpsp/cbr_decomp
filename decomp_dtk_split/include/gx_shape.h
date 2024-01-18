@@ -6,7 +6,7 @@ typedef int undefined;
 struct CPrimitive //0x164 cur:0x0
 {
     public:
-    char primData[0x164];
+    char primData[0x164];// Needs an update
     CPrimitive();
     virtual ~CPrimitive();
     //unk func

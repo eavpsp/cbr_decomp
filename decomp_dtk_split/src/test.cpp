@@ -1,35 +1,11 @@
-//Game.cpp
 /*
-CTexObj
-CStatus
-Logo
-XOBJS
-CStack
-CEvt
-CSound
-XSound
-CCard
-*/
-#include <game.h>
-/*
-class MainClass
-{
-    public:
-    virtual ~MainClass(){};
+ test.cpp:
+	.sdata2     start:0x8065FD38 end:0x8065FD40
 
-    virtual int StartClass() const {
-        return (int)this;
-    };
-    
-    MainClass();
-};
-class ChildClass : public MainClass
-{
-    public:
-    CBase obj;
-   
-};
-*/
+ */
+#include <game.h>
+
+
 const CPadEx* CurrentPad;
 struct Test
 {
@@ -56,8 +32,3 @@ void main()
     TestContainer test;
 
 };
-/*
- test.cpp:
-	.sdata2     start:0x8065FD38 end:0x8065FD40
-
- */
