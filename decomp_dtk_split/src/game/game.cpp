@@ -17,6 +17,7 @@ game/game.cpp:
 */
 #include <game.h>
 
+
 StageData stageData;
 //Externs
 extern "C" char* strtok(char* charEval,char* seperator);

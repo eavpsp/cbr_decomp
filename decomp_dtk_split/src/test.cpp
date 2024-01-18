@@ -38,12 +38,22 @@ struct Test
     Test() : cgsp(){};
     ~Test();
 };
-
+struct TestContainer
+{
+    public:
+    static Test test;
+    TestContainer();
+    ~TestContainer();
+};
 Test* obj = new Test();
-
+Test TestContainer::test;
+const CTexObj* texObj = new CTexObj();
+CPadOne* pad = new CPadOne();
 void main()
 {
+
     Test obj;
+    TestContainer test;
 
 };
 /*

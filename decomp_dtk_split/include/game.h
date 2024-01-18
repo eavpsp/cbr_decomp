@@ -2,6 +2,25 @@
 #define game
 #include<game_gx.h>
 #include<PowerPC_EABI_Support/Runtime/MWCPlusLib.h>
+struct Controller
+{
+    //Controller Inputs
+    char controlInputs[76];//<- turn this into struct
+    //controls enabled
+    int padEnabled;
+};
+struct CPadOne //0x50
+{
+    public:
+    Controller controller;
+    //virtual funcs x3
+    CPadOne() :controller(){};
+    virtual ~CPadOne();
+    virtual void DisablePad();
+    virtual void ResetPad();
+    virtual void ReadPad();
+};
+
 struct StageData
 {
     int stageIndex;
@@ -21,8 +40,7 @@ struct CBase//Inherited by CGAME
     //vars
     Game_GX gx;
     CFont baseFont;
-    CTexObj texObj;
-    int val;
+   
     //CPAD
     //CSTATUS
     int val2;
