@@ -1,11 +1,11 @@
 #ifndef SYSDOLPHIN_BASELIB_S
 #define SYSDOLPHIN_BASELIB_S
 
-#include <platform.h>
-#include <dolphin/gx/forward.h>
+#include "types.h"
+//#include <Dolphin/GX/forward.h>
 #include <baselib/forward.h>
 
-#include <dolphin/gx/types.h>
+#include <Dolphin/GX/GXTypes.h>
 
 #define HSD_STATE_ALL -1
 #define HSD_STATE_NONE 0
@@ -18,6 +18,7 @@
 #define HSD_STATE_RENDER_MODE 0x40
 
 typedef struct HSD_Chan {
+    public:
     struct HSD_Chan* next;
     u32 chan;
     u32 flags;

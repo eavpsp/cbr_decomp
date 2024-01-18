@@ -155,6 +155,7 @@ cflags_base = [
     "-i ext/inc",
     "-i ext/inc/stl",
     "-i ext/sysdolphin/baselib",
+    "-i ext/sysdolphin",
     f"-i build/{config.version}/include",
     f"-DVERSION={version_num}",
 ]

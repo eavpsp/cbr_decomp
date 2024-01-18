@@ -1,3 +1,9 @@
+/*
+game/game.cpp:
+	.text       start:0x80013580 end:0x8001364C
+	.sdata2     start:0x8065BE64 end:0x8065BE78
+
+*/
 /***
  * Types: 
  * 
@@ -13,8 +19,8 @@
 
 StageData stageData;
 //Externs
-extern "C" char* get_next_word(char* exception,char* seperator);
-extern "C" char*  strcmp(char *__s1,char *__s2);
+extern "C" char* strtok(char* charEval,char* seperator);
+extern "C" char* strcmp(char *__s1,char *__s2);
 extern "C" int find_stage_index(char *param_1);
 
 void CBase::ParseStageData(int len, char* text)//Match 0x80013580
@@ -22,16 +28,16 @@ void CBase::ParseStageData(int len, char* text)//Match 0x80013580
   char* currentChar = (text + 4);
   for (int i = 1; i < len; i++) {
     if (*currentChar == '/') {
-      char* charRead = get_next_word(currentChar + 1,":");
+      char* charRead = strtok(currentChar + 1,":");
       char* wordFound = strcmp(charRead,"stage");
       if (wordFound == 0) {
-        wordFound = get_next_word(0," ");
+        wordFound = strtok(0," ");
         stageData.stageIndex = find_stage_index(wordFound);
       }
       else {
         wordFound = strcmp(charRead,"slot");
         if (wordFound == 0) {
-          charRead = get_next_word(0," ");
+          charRead = strtok(0," ");
           stageData.currentStage = *charRead - 65;
         }
       }
@@ -40,3 +46,4 @@ void CBase::ParseStageData(int len, char* text)//Match 0x80013580
   }
   return;
 }
+

@@ -59,8 +59,10 @@ typedef u32 HSD_Pad;
 #define MPCOLL_FLAGS_B24 (1 << 24)
 #define MPCOLL_FLAGS_B25 (1 << 25)
 
+#pragma pack(push, 1)
+
 typedef union _UnkFlagStruct {
-    u8 u8;
+    u8 ui8;
     struct {
         u8 b0 : 1;
         u8 b1 : 1;
@@ -73,6 +75,7 @@ typedef union _UnkFlagStruct {
     } bits;
 } UnkFlagStruct;
 
+#pragma pack(pop)
 typedef struct _ReflectDesc {
     u32 x0_bone_id;
     s32 x4_max_damage;

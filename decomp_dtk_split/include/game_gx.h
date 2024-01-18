@@ -1,60 +1,48 @@
 #ifndef game_gx
 #define game_gx
-
+#include <Dolphin/gx.h>
 //graphics.h Class Data //0x8001b9b8
-class _GXRenderModeObj
+#include <tev.h>
+#include <mobj.h>
+#include <gx_shape.h>
+#include <types.h>
+
+
+struct CGScreen : public GXRenderModeObj
 {
     public:
-    virtual ~_GXRenderModeObj(){};
-};
+    int color;
+    CGScreen() : color(0xffffffff){};
+    virtual ~CGScreen();
+}; //Done
 
-class CGScreen : public _GXRenderModeObj {}; //Done
 
-class _HSD_PEDesc
+struct CGsRenderMode : public HSD_PEDesc 
 {
     public:
-    virtual ~_HSD_PEDesc(){};
+    virtual ~CGsRenderMode();
 };
 
-class CGsRenderMode : public _HSD_PEDesc {};
 
-class _HSD_TevDesc 
-{
-    public:
-    virtual ~_HSD_TevDesc();
-};
-
-class CGsTevStage : public _HSD_TevDesc
+struct CGsTevStage : public HSD_TevDesc
 {
     public:
     CGsTevStage(){};
 };
 //cfont
-class _HSD_Chan
-{
-    public:
-    virtual ~_HSD_Chan(){};
-};
 
-class CGsChannel : public _HSD_Chan 
+struct CGsChannel : public HSD_Chan 
 {
     public:
     CGsChannel(){};
 };
 
-class _GXTexObj
-{
-    public:
-    virtual ~_GXTexObj(){};
-};
-class CTexObj : public _GXTexObj 
+struct CTexObj : GXTexObj 
 {
     public:
     CTexObj(){};
+    virtual ~CTexObj(){};
 };
-class CFont : CTexObj 
-{
-    public:
-    ~CFont();
-};
+struct CFont : public CTexObj 
+{};
 #endif

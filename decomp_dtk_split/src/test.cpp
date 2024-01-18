@@ -31,16 +31,21 @@ class ChildClass : public MainClass
 };
 */
 
-class Test
+struct Test
 {
     public:
-    static CGs cgs;
-    virtual ~Test();
+    Game_GX cgsp;
+    Test() : cgsp(){};
+    ~Test();
 };
 
-CGs* obj = new CGs(); 
-CGs Test::cgs;
+Test* obj = new Test();
 
+void main()
+{
+    Test obj;
+
+};
 /*
  test.cpp:
 	.sdata2     start:0x8065FD38 end:0x8065FD40

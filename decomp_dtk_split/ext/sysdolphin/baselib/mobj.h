@@ -85,6 +85,7 @@ struct HSD_Material {
 };
 
 struct HSD_PEDesc {
+    public:
     u8 flags;
     u8 ref0;
     u8 ref1;

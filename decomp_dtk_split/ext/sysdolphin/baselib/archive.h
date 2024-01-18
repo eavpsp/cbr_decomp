@@ -1,7 +1,7 @@
 #ifndef _archive_h_
 #define _archive_h_
 
-#include <platform.h>
+#include <types.h>
 #include <baselib/forward.h>
 
 #define HSD_ARCHIVE_DONT_FREE 1

@@ -25,7 +25,7 @@ void _HSD_IDForgetMemory(void* low, void* high);
 
 static inline void* HSD_IDGetData(u32 id, s32* success)
 {
-    return HSD_IDGetDataFromTable(NULL, id, success);
+    return HSD_IDGetDataFromTable(0, id, success);
 }
 
 #endif

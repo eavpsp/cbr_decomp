@@ -3,7 +3,7 @@
 //base class
 #include<game_gx.h>
 typedef int undefined;
-class CPrimitive
+struct CPrimitive
 {
     public:
     virtual ~CPrimitive();
@@ -12,45 +12,50 @@ class CPrimitive
                  undefined param_5,undefined param_6,undefined param_7,undefined param_8,int param_9
                  );
 };
-class CCylinder : public CPrimitive{};
-class CSprite : public CPrimitive{};
-class CTorus : public CPrimitive{};
-class CSphere : public CPrimitive{};
-class CIcosahedron : public CPrimitive{};
-class CDodeca : public CPrimitive{};
-class COctahedron : public CPrimitive{};
-class CCube : public CPrimitive{};
-class CTriangle : public CPrimitive{};
-class CLine : public CPrimitive{};
-class CCircle : public CPrimitive{};
-class CTile : public CPrimitive{};
-class CGs
+struct CCylinder : public CPrimitive{};
+struct CSprite : public CPrimitive{};
+struct CTorus : public CPrimitive{};
+struct CSphere : public CPrimitive{};
+struct CIcosahedron : public CPrimitive{};
+struct CDodeca : public CPrimitive{};
+struct COctahedron : public CPrimitive{};
+struct CCube : public CPrimitive{};
+struct CTriangle : public CPrimitive{};
+struct CLine : public CPrimitive{};
+struct CCircle : public CPrimitive{};
+struct CTile : public CPrimitive{};
+struct CGs
 {
     public:
-    CGScreen* cgScreen;
-    int* unk_color;
-    CGsRenderMode* renderMode;
-    CGsTevStage* tevStages[2];
-    CGsChannel* cgChannels[4];
-    CFont* font;
-    CTexObj* texObj;
-    int* val;
-    CTexObj* texObj2;
-    CSprite* sprite;
-    CLine* line;
-    CTriangle* tri;
-    CCircle* cir;
-    CTile* tile;
-    CSprite* sprite2;
-    CCube* cube;
-    COctahedron* oct;
-    CDodeca* dode;
+    virtual ~CGs();
+};
+struct Game_GX
+{
+    public:
+    CGs cgsMain;
+    CGScreen cgScreen;
+    CGsRenderMode renderMode;
+    CGsTevStage tevStages[2];
+    CGsChannel cgChannels[4];
+    CFont font;
+    CTexObj texObj;
+    int val;
+    CTexObj texObj2;
+    CSprite sprite;
+    CLine line;
+    CTriangle tri;
+    CCircle cir;
+    CTile tile;
+    CSprite sprite2;
+    CCube cube;
+    COctahedron oct;
+    CDodeca dode;
     CIcosahedron iso;
     CSphere sphere;
     CCylinder cyl;
     CTorus torus;
-    CGs();
-    virtual ~CGs();
+    Game_GX() :cgsMain(), cgScreen(), renderMode(), tevStages(), val(0){};
+    ~Game_GX();
 };
 /*
 func dec
@@ -94,12 +99,6 @@ void CPrimitive::fn_8019E2A8(undefined param_1,undefined param_2,undefined param
   return;
 }
 
-
-
 */
-/*
-//shapes.h
-//Line  sprite tri tile cube octah dodeca icoosa sphere cylin torus
-//extern CGScreen* cgScreenInstance; 
-*/
+
 #endif
