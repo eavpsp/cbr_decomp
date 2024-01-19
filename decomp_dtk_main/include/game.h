@@ -1,12 +1,4 @@
 //Game.cpp
-/*
-    Logo
-    XOBJS
-    CStack
-    CSound
-    XSound
-    CCard
-*/
 #ifndef game
 #define game
 #include<cam.h>
@@ -79,6 +71,14 @@ struct CGame : public CBase
     CFileArchive archive;
     CTpl textureFile;
     CScrnFade screenFade;
+    CScrnWipeCircle screenWipe_circle;
+    CScrnWipeTex screenWipe_tex;
+    CScrnWipeCustom screenWipe_custom;
+    CScrnWipeTile screenWipe_tile_0;
+    CScrnWipeTile screenWipe_tile_1;
+    CScrnRoboeyes roboEyes;
+    CFbOutline outline;
+    CFbBlur blurFx;
     /**
     cfile arch : cfile
         //char * 0x128

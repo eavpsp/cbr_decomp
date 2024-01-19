@@ -34,7 +34,7 @@ struct CShadow //match
     CShadow(): val(0), val2(0){};
     virtual ~CShadow(){};
 };
-struct LightComponents
+struct LightComponents//variable position issue
 {
     CVec vec1;//0xe4 match
     CVec vec2;//0xf4

@@ -176,6 +176,29 @@ struct CFbBlur//0x40
     CFbBlur();
     virtual ~CFbBlur();
 };
+struct CFbTexEff
+{
+    CTexObj texObj;
+    CFbTexEff(){};
+};
+
+struct FbSubwin : CFbTexEff
+{
+    FbSubwin(){};
+    virtual ~ FbSubwin(){};
+};
+struct Logo //0x200
+{
+    char pad[272];
+    CTpl logoTexture; //0xec
+    Logo(){};
+    virtual ~Logo(){};
+};
+struct TitleObject //0x3c48
+{
+   
+};
+//@8001b408
 
 //cfbtexeff
 //logo

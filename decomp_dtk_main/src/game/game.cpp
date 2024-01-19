@@ -4,17 +4,6 @@ game/game.cpp:
 	.sdata2     start:0x8065BE64 end:0x8065BE78
 
 */
-/***
- * Types: 
- * 
- * CGame
- * CMovie
- * MemCard
- * CCard
- * XSound
- * CFile
- * CSound
-*/
 #include <game.h>
 
 
@@ -51,6 +40,7 @@ void CBase::ParseStageData(int len, char* text)//Match 0x80013580
 
 //Start
 const CGame MainGame;
+const CPadEx* CurrentPad;
 const int unk_val;
 //extern const ARCacheInfo cacheInfo
 const int unk_val_2;
