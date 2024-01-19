@@ -62,7 +62,7 @@ struct CBase//Inherited by CGAME //0x3334 TODO
     CPadEx gamePadManager;
     CStatus status;
     CCamera sceneCams[2];
-    //SceneLights 6 TODO
+    CLight sceneLights[6];
     //CStopWatch 3 TODO
     CBase();
     virtual ~CBase();
