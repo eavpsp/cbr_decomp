@@ -5,5 +5,5 @@
  */
 #include <game.h>
 
-CLight* light = new CLight();
-CVec* vec = new CVec();
+//CLight* light = new CLight();
+CBase* vec = new CBase();
