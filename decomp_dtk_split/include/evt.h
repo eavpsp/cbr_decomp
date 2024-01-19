@@ -6,11 +6,11 @@ struct CStatus //0x8
     int flag;
     int currentStatus;
     CStatus() : flag(0), currentStatus(0){};
-    virtual ~CStatus();
+    virtual ~CStatus(){};
 };
 struct CStopWatch : OSStopwatch //0x38
 {
-    
-    virtual ~CStopWatch();
+    CStopWatch(){};
+    virtual ~CStopWatch(){};
 };
 #endif
