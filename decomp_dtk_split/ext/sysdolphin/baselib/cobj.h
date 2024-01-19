@@ -10,7 +10,13 @@
 #define PROJ_PERSPECTIVE 1
 #define PROJ_FRUSTUM 2
 #define PROJ_ORTHO 3
-
+#ifndef UNK_PARAMS
+#ifdef M2CTX
+#define UNK_PARAMS
+#else
+#define UNK_PARAMS void
+#endif
+#endif
 struct HSD_CObj {
     HSD_Obj parent;
     u32 flags; // 0x08
@@ -126,7 +132,7 @@ HSD_WObj* HSD_CObjGetEyePositionWObj(HSD_CObj* cobj);
 HSD_WObj* HSD_CObjGetInterestWObj(HSD_CObj* cobj);
 void HSD_CObjSetInterest(HSD_CObj* cobj, Vec3*);
 void HSD_CObjSetEyePosition(HSD_CObj* cobj, Vec3*);
-bool HSD_CObjSetCurrent(HSD_CObj*);
+BOOL HSD_CObjSetCurrent(HSD_CObj*);
 void HSD_CObjEndCurrent(void);
 void HSD_CObjSetViewportfx4(HSD_CObj*, f32, f32, f32, f32);
 void HSD_CObjGetEyePosition(HSD_CObj* cobj, Vec3* cam_pos);
@@ -148,7 +154,7 @@ f32 HSD_CObjGetEyeDistance(HSD_CObj* cobj);
 void HSD_CObjSetUpVector(UNK_PARAMS);
 void HSD_CObjGetLeftVector(UNK_PARAMS);
 void HSD_CObjSetMtxDirty(HSD_CObj* cobj);
-bool HSD_CObjMtxIsDirty(HSD_CObj*);
+BOOL HSD_CObjMtxIsDirty(HSD_CObj*);
 void HSD_CObjGetViewingMtx(HSD_CObj* cobj, Mtx mtx);
 MtxPtr HSD_CObjGetInvViewingMtxPtrDirect(HSD_CObj* cobj);
 MtxPtr HSD_CObjGetViewingMtxPtr(HSD_CObj* cobj);

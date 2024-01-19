@@ -3,8 +3,9 @@
 #include<cobj.h>
 #include<baselib/lobj.h>
 #include<xobjs.h>
+#include<game_gx.h>
 
-struct CCamera : HSD_CObj //400 matches
+struct CCamera : HSD_CObj //400 match
 {
     //0x88 136
     char pad[20];
@@ -19,14 +20,39 @@ struct CCamera : HSD_CObj //400 matches
     CCamera(){};
     virtual ~CCamera(){};
 };
-struct CLight : HSD_LObj //0x354 TODO
-{
-    //CVEC 8
-    //INT 2
-    //COLOR 2
-    //SHADOW
-    //7 v functs
 
+//shadow 0x1f4 or 500
+// - cam 
+
+struct CShadow //match
+{
+    int val; //
+    int val2;
+    char pad0[82];
+    CCamera mainCam;
+    int val3;
+    CShadow(): val(0), val2(0){};
+    virtual ~CShadow(){};
+};
+struct LightComponents
+{
+    CVec vec1;//0xe4 match
+    CVec vec2;//0xf4
+    CVec vec3;//0x104
+    //random 32 byte jump
+    CColor color;//0x10c cur 0x118
+    CColor color2;//0x114 cur 0x120
+};
+struct CLight : HSD_LObj //0x354 TODO Close Match Light Comps random jump
+{
+    //0x94 148
+    char pad0[16]; //match
+    LightComponents comps;
+    char pad[56];
+    CShadow shadow;//0x350 match
+    //7 v functs
+    CLight(){};
+    virtual ~CLight(){};
 };
 
 #endif

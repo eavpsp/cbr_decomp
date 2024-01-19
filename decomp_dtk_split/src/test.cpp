@@ -5,30 +5,5 @@
  */
 #include <game.h>
 
-
-const CPadEx* CurrentPad;
-struct Test
-{
-    public:
-    CGs cgsp;
-    Test() : cgsp(){};
-    ~Test();
-};
-struct TestContainer
-{
-    public:
-    static Test test;
-    TestContainer();
-    ~TestContainer();
-};
-Test* obj = new Test();
-CCamera* gameCam = new CCamera();
-CPadEx* pad = new CPadEx();
-Test TestContainer::test;
-void main()
-{
-
-    Test obj;
-    TestContainer test;
-
-};
+CLight* light = new CLight();
+CVec* vec = new CVec();

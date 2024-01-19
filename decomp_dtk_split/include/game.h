@@ -13,9 +13,6 @@
 #include<game_gx.h>
 #include<evt.h>
 
-
-
-
 struct Controller
 {
     //Controller Inputs
@@ -25,7 +22,7 @@ struct Controller
 };
 struct CPadOne //0x50 match
 {
-    public:
+
     Controller controller;
     //virtual funcs x3
     CPadOne() :controller(){};
@@ -59,7 +56,6 @@ struct StageData
 extern StageData stageData;//8020fbc0
 struct CBase//Inherited by CGAME //0x3334 TODO
 {
-    public:
     //vars
     CGs gx;
     CFont baseFont;

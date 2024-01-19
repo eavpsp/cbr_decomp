@@ -1,12 +1,11 @@
 #ifndef _TYPES_H
 #define _TYPES_H
-#include <stdbool.h>
-#include <stddef.h>
+
 //PIKIMIN: CLONED FROM REPO
 
 // r2 is  8051E360
 // r13 is 8051C680
-typedef enum enum_t;
+typedef int enum_t;
 typedef int BOOL;
 typedef unsigned int uint;
 
@@ -35,7 +34,7 @@ typedef volatile f32 vf32;
 typedef volatile f64 vf64;
 typedef volatile f128 vf128;
 
-//typedef u32 size_t;
+typedef u32 size_t;
 typedef u32 unknown;
 
 #ifndef __cplusplus

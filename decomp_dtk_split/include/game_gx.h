@@ -5,22 +5,28 @@
 #include <mobj.h>
 #include <gx_shape.h>
 #include <types.h>
-//shadow
 
-//color
+//color 0x4 + ptr 0x8
+struct CColor : GXColor
+{
+    
+    virtual ~CColor(){};
+};
+//screen color 0x30
+
 
 struct CGScreen : GXRenderModeObj //0x40
 {
-    public:
-    int color;
-    CGScreen() : color(0xffffffff){};
+    
+    int flag;
+    CGScreen() : flag(0xffffffff){};
     virtual ~CGScreen(){};
 }; //Done
 
 
 struct CGsRenderMode : HSD_PEDesc //0x30 crude match
 {
-    public:
+   
     char buf[36]; //unk 4 xint
     virtual ~CGsRenderMode(){};
 };
