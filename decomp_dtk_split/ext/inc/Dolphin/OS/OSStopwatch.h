@@ -1,7 +1,7 @@
 #ifndef RVL_SDK_OS_STOPWATCH_H
 #define RVL_SDK_OS_STOPWATCH_H
 #include "types.h"
-#include "Dolphin/OS/OSTime.h"
+#include "Dolphin/OS/OSUtil.h"
 #ifdef __cplusplus
 extern "C" {
 #endif

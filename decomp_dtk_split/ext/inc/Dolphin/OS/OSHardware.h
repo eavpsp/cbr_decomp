@@ -1,6 +1,6 @@
 #ifndef DOLPHIN_OS_HARDWARE_H
 #define DOLPHIN_OS_HARDWARE_H
-#include "dolphin/os/OSAddress.h"
+#include "dolphin/os/OSUtil.h"
 #include "dolphin/os/OSThread.h"
 #include "types.h"
 #ifdef __cplusplus
