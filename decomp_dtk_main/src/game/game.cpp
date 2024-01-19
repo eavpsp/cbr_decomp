@@ -48,3 +48,9 @@ void CBase::ParseStageData(int len, char* text)//Match 0x80013580
   return;
 }
 
+
+//Start
+const CGame MainGame;
+const int unk_val;
+//extern const ARCacheInfo cacheInfo
+const int unk_val_2;

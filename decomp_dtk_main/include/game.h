@@ -10,6 +10,7 @@
 #ifndef game
 #define game
 #include<cam.h>
+#include<cfile.h>
 #include<game_gx.h>
 #include<evt.h>
 
@@ -67,7 +68,7 @@ struct CBase//Inherited by CGAME //0x3334 Match
     CCamera sceneCams[2];
     CLight sceneLights[6];
     CStopWatch stopWatches[3];
-    char pad2[24];
+    char pad2[28];
     CBase() : gx(), gamePadManager(){};
     virtual ~CBase(){};
     //16 v funcs funcs
@@ -75,6 +76,9 @@ struct CBase//Inherited by CGAME //0x3334 Match
 };
 struct CGame : public CBase
 {
+    CFileArchive archive;
+    CTpl textureFile;
+    CScrnFade screenFade;
     /**
     cfile arch : cfile
         //char * 0x128
@@ -92,7 +96,6 @@ struct CGame : public CBase
         0x4 byte obj//3420
         0x4 byte obj //340c
 
-    ctexobj
     cscreenfade : CScrnColor
         - 
 
@@ -118,7 +121,11 @@ struct CGame : public CBase
 
     */
 };
-
+//Game.cpp vars
+extern const CGame MainGame;
+extern const int unk_val;
+//extern const ARCacheInfo cacheInfo
+extern const int unk_val_2;
 
 
 #endif

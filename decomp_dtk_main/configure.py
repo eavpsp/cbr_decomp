@@ -255,7 +255,7 @@ config.libs = [
         "cflags": cflags_runtime,
         "host": False,
         "objects": [
-            Object(NonMatching, "game/game.cpp"),
+            Object(Matching, "game/game.cpp"),
             Object(Matching, "test.cpp"),
             
 

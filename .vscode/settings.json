@@ -7,7 +7,8 @@
         "memory": "cpp",
         "__start.h": "c",
         "types.h": "c",
-        "math.h": "c"
+        "math.h": "c",
+        "xutility": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

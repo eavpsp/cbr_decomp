@@ -13,8 +13,79 @@ struct CColor : GXColor
     virtual ~CColor(){};
 };
 //screen color 0x30
+struct CScrnColor 
+{
+    float val0;
+    float val1;
+    float val2;
+    float val3;
+    float val4;
+    float val5;
+    float val6;
+    float val7;
+    float val8;
+    float val9;
+    float val10;
+    float val11;
+    CScrnColor(){
+        val0 = 0;
+        val1 = 0;
+        val2 = 0;
+        val3 = 0;
+        val4 = 0;
+        val5 = 0;
+        val6 = 0;
+        val7 = 0;
+        val8 = 0;
+        val9 = 0;
+        val10 = 0;
+        val11 = 0;
+    };
+    virtual ~CScrnColor();
+};
 
-
+struct CScrnWipe : CScrnColor
+{
+    //3 v funcs
+    CScrnWipe(){};
+    virtual ~CScrnWipe();
+};
+struct CScrnFade : CScrnColor
+{
+    //3 v funcs
+    CScrnFade(){};
+    virtual ~CScrnFade();
+};
+struct CScrnWipeTex: CScrnWipe
+{
+    //3 v funcs
+    CScrnWipeTex(){};
+    virtual ~CScrnWipeTex();
+};
+struct CScrnWipeCircle: CScrnWipe
+{
+    //3 v funcs
+    CScrnWipeCircle(){};
+    virtual ~CScrnWipeCircle();
+};
+struct CScrnWipeTile: CScrnWipe
+{
+    //3 v funcs
+    CScrnWipeTile(){};
+    virtual ~CScrnWipeTile();
+};
+struct CScrnRoboeyes: CScrnWipe
+{
+    //3 v funcs
+    CScrnRoboeyes(){};
+    virtual ~CScrnRoboeyes();
+};
+struct CScrnWipeCustom : CScrnWipe
+{
+    //3 v funcs
+    CScrnWipeCustom(){};
+    virtual ~CScrnWipeCustom();
+};
 struct CGScreen : GXRenderModeObj //0x40
 {
     
@@ -92,4 +163,37 @@ struct CGs //0x8001b9b8 //0x17b0 match
     virtual ~CGs(){};
 };
 
+struct CFbOutline//0x60
+{
+    char pad[0x60];
+    CFbOutline();
+    virtual ~CFbOutline();
+};
+
+struct CFbBlur//0x40
+{
+    char pad[0x40];
+    CFbBlur();
+    virtual ~CFbBlur();
+};
+
+//cfbtexeff
+//logo
+//infoscreen
+//cparticle
+//cgenerator
+//cscrnquake
+//xobjs
+//cobj archive
+//cevt
+//cevet data
+//cstack
+//cmsg
+//cmotioncontrolcamera
+//ccameramemento
+//Csound
+//xsound
+//memcard
+//ccard
+//cmovie
 #endif
