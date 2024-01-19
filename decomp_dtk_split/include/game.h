@@ -54,18 +54,22 @@ struct StageData
 };
 
 extern StageData stageData;//8020fbc0
-struct CBase//Inherited by CGAME //0x3334 TODO
+struct CBase//Inherited by CGAME //0x3334 Match
 {
     //vars
     CGs gx;
+    char pad0[12];
     CFont baseFont;
     CPadEx gamePadManager;
+    char pad1[8];
     CStatus status;
+    int val;
     CCamera sceneCams[2];
     CLight sceneLights[6];
     CStopWatch stopWatches[3];
-    CBase();
-    virtual ~CBase();
+    char pad2[24];
+    CBase() : gx(), gamePadManager(){};
+    virtual ~CBase(){};
     //16 v funcs funcs
     virtual void ParseStageData(int len, char* text);
 };

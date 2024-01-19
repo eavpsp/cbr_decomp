@@ -4,6 +4,6 @@
 
  */
 #include <game.h>
-
+const CPadEx* CurrentPad;
 //CLight* light = new CLight();
 CBase* vec = new CBase();
