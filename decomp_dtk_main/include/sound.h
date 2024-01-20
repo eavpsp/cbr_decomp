@@ -3,14 +3,14 @@
 #include <cfile.h>
 struct CSound
 {
-    CSound();
+    CSound(){};
     virtual ~CSound(){};
 };
 struct XSound:  CSound
 {
     CFile soundFile;
-    XSound();
-    virtual ~XSound();
+    XSound(){};
+    virtual ~XSound(){};
 };
 
 

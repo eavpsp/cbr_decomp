@@ -5,8 +5,8 @@
 struct CMsgData//0x898
 {
     char pad[0x898];
-    CMsgData();
-    virtual ~CMsgData();
+    CMsgData(){};
+    virtual ~CMsgData(){};
 };
 struct CMsgFont//0x43d1c
 {
@@ -19,8 +19,8 @@ struct CMsg //0x44618
 {
     CMsgData msgData;
     CMsgFont msgFont;
-    CMsg();
-    virtual ~CMsg();
+    CMsg(){};
+    virtual ~CMsg(){};
 };
 
 #endif
