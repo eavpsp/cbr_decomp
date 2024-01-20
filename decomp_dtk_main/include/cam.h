@@ -34,20 +34,16 @@ struct CShadow //match
     CShadow(): val(0), val2(0){};
     virtual ~CShadow(){};
 };
-struct LightComponents//variable position issue
+struct CLight : HSD_LObj //0x354 TODO Close Match Light Comps random jump
 {
+    //0x94 148
+    char pad0[16]; //match
     CVec vec1;//0xe4 match
     CVec vec2;//0xf4
     CVec vec3;//0x104
     //random 32 byte jump
     CColor color;//0x10c cur 0x118
     CColor color2;//0x114 cur 0x120
-};
-struct CLight : HSD_LObj //0x354 TODO Close Match Light Comps random jump
-{
-    //0x94 148
-    char pad0[16]; //match
-    LightComponents comps;
     char pad[56];
     CShadow shadow;//0x350 match
     //7 v functs

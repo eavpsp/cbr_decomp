@@ -41,6 +41,6 @@ void CBase::ParseStageData(int len, char* text)//Match 0x80013580
 //Start
 const CGame MainGame;
 const CPadEx* CurrentPad;
-const int unk_val;
+static int unk_val;
 //extern const ARCacheInfo cacheInfo
-const int unk_val_2;
+static int unk_val_2;

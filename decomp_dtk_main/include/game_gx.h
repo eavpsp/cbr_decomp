@@ -6,6 +6,7 @@
 #include <gx_shape.h>
 #include <types.h>
 
+
 //color 0x4 + ptr 0x8
 struct CColor : GXColor
 {
@@ -187,13 +188,7 @@ struct FbSubwin : CFbTexEff
     FbSubwin(){};
     virtual ~ FbSubwin(){};
 };
-struct Logo //0x200
-{
-    char pad[272];
-    CTpl logoTexture; //0xec
-    Logo(){};
-    virtual ~Logo(){};
-};
+
 struct TitleObject //0x3c48
 {
    

@@ -123,9 +123,9 @@ struct CGame : public CBase
 };
 //Game.cpp vars
 extern const CGame MainGame;
-extern const int unk_val;
+extern int unk_val;
 //extern const ARCacheInfo cacheInfo
-extern const int unk_val_2;
+extern int unk_val_2;
 
 
 #endif
