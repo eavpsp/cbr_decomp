@@ -40,17 +40,7 @@ struct CPadEx //0x204 match
     CPadEx(): gamePads() { CurrentPad = this;};
     virtual ~CPadEx(){};
 };
-struct StageData
-{
-    int stageIndex;
-    char currentStage;
-    int unk;
-    int unk2;
-    int unk3;
-    int unk4;
-    int unk5;
-    int unk6;
-};
+
 struct TitleObject //0x3c48
 {
     Cursor menuCursor;

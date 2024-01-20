@@ -135,32 +135,7 @@ struct CTex : CTexObj //0xfc
     CSprite sprite;
 };
 
-struct CGs //0x8001b9b8 //0x17b0 match
-{
-    public:
-    char pad[0xA0];
-    CGScreen cgScreen;
-    CGsRenderMode renderMode;
-    CGsTevStage tevStages[2];
-    CGsChannel cgChannels[4];
-    CFont font;
-    CTexObj texObj2;
-    CSprite sprite;
-    CLine line;
-    CTriangle tri;
-    CCircle cir;
-    CTile tile;
-    CSprite sprite2;
-    CCube cube;
-    COctahedron oct;
-    CDodeca dode;
-    CIcosahedron iso;
-    CSphere sphere;
-    CCylinder cyl;
-    CTorus torus;
-    CGs() :cgScreen(), renderMode(), tevStages(), texObj2(){};
-    virtual ~CGs(){};
-};
+
 
 struct CFbOutline//0x60
 {

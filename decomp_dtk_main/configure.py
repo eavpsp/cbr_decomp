@@ -140,6 +140,7 @@ cflags_base = [
     "-enum int",
     "-fp hardware",
     "-Cpp_exceptions off",
+    "-use_lmw_stmw on",
     # "-W all",
     "-O4,p",
     "-inline auto",
@@ -148,6 +149,7 @@ cflags_base = [
     "-maxerrors 1",
     "-nosyspath",
     "-RTTI on",
+    "-char signed",
     "-fp_contract on",
     "-str reuse",
 	"-multibyte", # For Wii compilers, replace with `-enc SJIS`

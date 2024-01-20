@@ -4,45 +4,51 @@ game/game.cpp:
 	.sdata2     start:0x8065BE64 end:0x8065BE78
 
 */
-#include <game.h>
+#include<globals.h>
+//#include <game.h>
 
 
-StageData stageData;
-//Externs
+
+StageData stageData; //8020fbc0
+
 extern "C" char* strtok(char* charEval,char* seperator);
 extern "C" char* strcmp(char *__s1,char *__s2);
 extern "C" int find_stage_index(char *param_1);
-
-void CBase::ParseStageData(int param, int len, char* text)//WIP Crashes currently 0x80013580
+char* stage = "stage";
+char* sep = ":";
+char* slot = "slot";
+void ParseStageData(int param, int len, int text)//Match 0x80013580
 {
-  char* currentChar = (text + 4);
+  char** currentChar = reinterpret_cast<char**>(text + 4);
   for (int i = 1; i < len; i++) {
-    if (*currentChar == '/') {
-      char* charRead = strtok(currentChar + 1,":");
-      char* wordFound = strcmp(charRead,"stage");
-      if (wordFound == 0) {
-        wordFound = strtok(0," ");
-        stageData.stageIndex = find_stage_index(wordFound);
-      }
-      else {
-        wordFound = strcmp(charRead,"slot");
-        if (wordFound == 0) {
-          charRead = strtok(0," ");
-          stageData.currentStage = *charRead - 65;
+    switch (**currentChar) {
+      case '/':
+      {
+        char* charRead = strtok(*currentChar + 1,sep);//8065be64
+        if (strcmp(charRead,stage) == 0) {//8065be68
+          stageData.stageData_00 = find_stage_index(strtok(0,space));
+        }
+        else if (strcmp(charRead,slot) == 0) {//8065be70
+          charRead = strtok(0,space);//8065bd74
+          stageData.member_04 = charRead[0] - 'A';
         }
       }
+
+      break;
     }
+
     currentChar++;
   }
   return;
 }
 
 
-//Start
+//Start - Still baking in the oven
+/*
 const CGame MainGame;
-const CPadEx* CurrentPad;
-const ARCacheInfo* ARCacheInfoData = new ARCacheInfo();
+const CPadEx *CurrentPad;
+const ARCacheInfo *ARCacheInfoData = new ARCacheInfo();
 const FBMirrorEx FBMirrors[5];//array size too small 0x2f4 cur 0x2b0
 const ARPreCache* ARPreCacheData = new ARPreCache();
 const CThread* CGameThread = new CThread();
-
+*/

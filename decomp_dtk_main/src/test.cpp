@@ -7,37 +7,39 @@
  */
 struct StageData
 {
-    char* stageData[8];
+    int stageData_00;
+    int member_04;
+    int _08[6];
 };
-StageData stageData;
+StageData stageData; //8020fbc0
 
 extern "C" char* strtok(char* charEval,char* seperator);
 extern "C" char* strcmp(char *__s1,char *__s2);
 extern "C" int find_stage_index(char *param_1);
-extern char* lbl_8065BE68;
-extern char* lbl_8065BE64;
-extern char* lbl_8065BD74;
-extern char* lbl_8065BE70;
-extern StageData lbl_8020FBC0;
-void ParseStageData(int param1, int len, char* text)//Match 0x80013580
+char* stage = "stage";
+char* sep = ":";
+char* slot = "slot";
+extern char* space;
+void ParseStageData(int param, int len, int text)//Match 0x80013580
 {
-  char* currentChar = (text + 4);
+  char** currentChar = reinterpret_cast<char**>(text + 4);
   for (int i = 1; i < len; i++) {
-    if (*currentChar == '/') {
-      char* charRead = strtok(currentChar + 1,lbl_8065BE64);
-      char* wordFound = strcmp(charRead,lbl_8065BE68);
-      if (wordFound == 0) {
-        wordFound = strtok(0,lbl_8065BD74);
-        lbl_8020FBC0.stageData[0] = (char*)find_stage_index(wordFound);
-      }
-      else {
-        wordFound = strcmp(charRead,lbl_8065BE70);
-        if (wordFound == 0) {
-          charRead = strtok(0,lbl_8065BD74);
-          lbl_8020FBC0.stageData[1] = charRead - 65;
+    switch (**currentChar) {
+      case '/':
+      {
+        char* charRead = strtok(*currentChar + 1,sep);//8065be64
+        if (strcmp(charRead,stage) == 0) {//8065be68
+          stageData.stageData_00 = find_stage_index(strtok(0,space));
+        }
+        else if (strcmp(charRead,slot) == 0) {//8065be70
+          charRead = strtok(0,space);//8065bd74
+          stageData.member_04 = charRead[0] - 'A';
         }
       }
+
+      break;
     }
+
     currentChar++;
   }
   return;
