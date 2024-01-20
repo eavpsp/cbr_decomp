@@ -6,8 +6,9 @@
 
  */
 #include <game.h>
-#include <cfile.h>
+
 
 
 CJObj* obj = new CJObj();
 CTpl* objTPL = new CTpl();
+CEvt* objEvt = new CEvt();

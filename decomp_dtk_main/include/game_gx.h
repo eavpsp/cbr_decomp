@@ -191,27 +191,14 @@ struct FbSubwin : CFbTexEff
 
 struct TitleObject //0x3c48
 {
-   
+    Cursor menuCursor;
+    XObjDemo demoObj;
+    CTpl textureFile;
+    CTexObj texObjects[6];
+    TitleObject():texObjects(){};
+    virtual ~ TitleObject(){};
 };
 //@8001b408
 
-//cfbtexeff
-//logo
-//infoscreen
-//cparticle
-//cgenerator
-//cscrnquake
-//xobjs
-//cobj archive
-//cevt
-//cevet data
-//cstack
-//cmsg
-//cmotioncontrolcamera
-//ccameramemento
-//Csound
-//xsound
-//memcard
-//ccard
-//cmovie
+
 #endif

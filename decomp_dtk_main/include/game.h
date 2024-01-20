@@ -79,48 +79,38 @@ struct CGame : public CBase
     CScrnRoboeyes roboEyes;
     CFbOutline outline;
     CFbBlur blurFx;
-    /**
-    cfile arch : cfile
-        //char * 0x128
-        obj*
-        0x10 byte obj //3410
-        0x12 byte obj //33fc
-        0x4 byte obj //3408
-        0x4 byte obj//3420
-        0x4 byte obj //340c
+    FbSubwin subwin;
+    CStatus status;
+    CCamera camera;
+    CScrnColor screenColorA;
+    CTexObj textObj;
+    CScrnColor screenColorB;
+    CScrnColor screenColorC;
+    Logo logo;
+    CTpl logoFIle;
+    //InfoScrn
+    CScrnFade screenFade;
+    CScrnWipe wipe;
+    //CParticle
+    CFile files[6];
+    //CGenerator
+    //CScrnQuake
+    //
 
-    ctpl : cfile
-        0x10 byte obj //3410
-        0x12 byte obj //33fc
-        0x4 byte obj //3408
-        0x4 byte obj//3420
-        0x4 byte obj //340c
-
-    cscreenfade : CScrnColor
-        - 
-
-    CScrnWipeCircle
-    CScrnWipeTex_802113c8
-    CTexObj
-    CScrnWipeCustom
-    CScrnWipeTile
-    CScrnWipeTile
-    CSCrnRoboeyes
-    CFBOutline
-    CFBblur
-    FBSubwin
-    ctexobj
-    cstatus
-        -int val
-    ccamera
-    cvec
-    cvec
-    cvec
-    cvec
-    cvec
-
-    */
 };
+//infoscreen
+//cparticle
+//cgenerator
+//cscrnquake
+//cobj archive
+//cmsg
+//cmotioncontrolcamera
+//ccameramemento
+//Csound
+//xsound
+//memcard
+//ccard
+//cmovie
 //Game.cpp vars
 extern const CGame MainGame;
 extern int unk_val;
