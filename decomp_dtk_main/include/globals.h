@@ -1,6 +1,6 @@
 #ifndef game_globals
 #define game_globals
-extern char* space;
+extern char* space;//8065bd74
 struct StageData
 {
     int stageData_00;

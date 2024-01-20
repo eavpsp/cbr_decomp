@@ -1,6 +1,7 @@
 //Game.cpp
 #ifndef game
 #define game
+#include<globals.h>
 #include<cam.h>
 #include<cmotioncontrolcamera.h>
 #include<cfile.h>
@@ -11,6 +12,7 @@
 #include<sound.h>
 #include<movie.h>
 #include<cfont.h>
+
 struct Controller
 {
     //Controller Inputs
