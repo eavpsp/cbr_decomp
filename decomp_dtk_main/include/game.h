@@ -23,7 +23,7 @@ struct CPadOne //0x50 match
     Controller controller;
     //virtual funcs x3
     CPadOne() :controller(){};
-    virtual ~CPadOne();
+    virtual ~CPadOne(){};
     virtual void DisablePad();
     virtual void ResetPad();
     virtual void ReadPad();
@@ -123,24 +123,27 @@ struct CGame : public CBase
     XOBJS xobjData;
     CObjArchive CobjArchives[0x400];
     CEvt eventInfo;
-    CMsg cMsg[2];
+    CMsg cMsg[2];//should b 0x44620 cur 0x3d498
     CMotionControlCamera cmotionControlCam;
     XSound soundData;
     MemCard memCard;
     CMovie movieData;
+    CGame(){};
+    virtual ~CGame(){};
+
 };
 struct CThread//800
 {
     char pad[800];
-    CThread();
-    virtual ~CThread();
+    CThread(){};
+    virtual ~CThread(){};
 };
 //Game.cpp vars
 extern StageData stageData;//8020fbc0
-extern const ARCacheInfo ARCacheInfoData;
+extern const ARCacheInfo* ARCacheInfoData;
 extern const FBMirrorEx FBMirrors[5];
-extern const ARPreCache ARPreCacheData;
-extern const CThread CGameThread;
+extern const ARPreCache* ARPreCacheData;
+extern const CThread* CGameThread;
 extern const CGame MainGame;
 
 #endif

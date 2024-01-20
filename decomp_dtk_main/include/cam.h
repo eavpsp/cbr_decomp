@@ -59,10 +59,12 @@ struct XObjDemo : XObj ,GXTexObj ,GXColor //0x34
 };
 struct FBMirror: CFbTexEff
 {
+    //0xfc
    //funcs
 };
 struct FBMirrorEx : FBMirror//0x120
 {
+    char pad[24];
     CCamera camera;
     FBMirrorEx(){};
     virtual ~FBMirrorEx(){};

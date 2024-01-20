@@ -24,8 +24,8 @@ struct ARPreCache//0x1e4
 {
     CFile filea;
     CFile fileb;
-    ARPreCache();
-    virtual ~ARPreCache();
+    ARPreCache(){};
+    virtual ~ARPreCache(){};
 };
 struct ARCacheInfo//0x4008
 {
@@ -65,7 +65,7 @@ struct CAnmQueue//0x84
 struct CTpl : CFile
 {
     CTexObj textureObj;
-    CTpl() {};
+    CTpl(){};
     virtual ~CTpl(){};
 };
 struct Logo //0x200

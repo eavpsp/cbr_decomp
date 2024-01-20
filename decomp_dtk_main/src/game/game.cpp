@@ -13,7 +13,7 @@ extern "C" char* strtok(char* charEval,char* seperator);
 extern "C" char* strcmp(char *__s1,char *__s2);
 extern "C" int find_stage_index(char *param_1);
 
-void CBase::ParseStageData(int len, char* text)//Match 0x80013580
+void CBase::ParseStageData(int param, int len, char* text)//WIP Crashes currently 0x80013580
 {
   char* currentChar = (text + 4);
   for (int i = 1; i < len; i++) {
@@ -41,8 +41,8 @@ void CBase::ParseStageData(int len, char* text)//Match 0x80013580
 //Start
 const CGame MainGame;
 const CPadEx* CurrentPad;
-const ARCacheInfo ARCacheInfoData;
-const FBMirrorEx FBMirrors[5];//array size too small 0x2f4 cur 0x298
-const ARPreCache ARPreCacheData;
-const CThread CGameThread;
+const ARCacheInfo* ARCacheInfoData = new ARCacheInfo();
+const FBMirrorEx FBMirrors[5];//array size too small 0x2f4 cur 0x2b0
+const ARPreCache* ARPreCacheData = new ARPreCache();
+const CThread* CGameThread = new CThread();
 

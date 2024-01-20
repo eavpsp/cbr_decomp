@@ -14,6 +14,9 @@ struct CColor : GXColor
     virtual ~CColor(){};
 };
 //screen color 0x30
+//0x80210360 lbl_80210360
+//.data       start:0x80210360 end:0x8021036C
+//__vt__10CScrnColor CScrnColor::__vt
 struct CScrnColor 
 {
     float val0;
@@ -42,50 +45,50 @@ struct CScrnColor
         val10 = 0;
         val11 = 0;
     };
-    virtual ~CScrnColor();
+    virtual ~CScrnColor(){};
 };
 
 struct CScrnWipe : CScrnColor
 {
     //3 v funcs
     CScrnWipe(){};
-    virtual ~CScrnWipe();
+    virtual ~CScrnWipe(){};
 };
 struct CScrnFade : CScrnColor
 {
     //3 v funcs
     CScrnFade(){};
-    virtual ~CScrnFade();
+    virtual ~CScrnFade(){};
 };
 struct CScrnWipeTex: CScrnWipe
 {
     //3 v funcs
     CScrnWipeTex(){};
-    virtual ~CScrnWipeTex();
+    virtual ~CScrnWipeTex(){};
 };
 struct CScrnWipeCircle: CScrnWipe
 {
     //3 v funcs
     CScrnWipeCircle(){};
-    virtual ~CScrnWipeCircle();
+    virtual ~CScrnWipeCircle(){};
 };
 struct CScrnWipeTile: CScrnWipe
 {
     //3 v funcs
     CScrnWipeTile(){};
-    virtual ~CScrnWipeTile();
+    virtual ~CScrnWipeTile(){};
 };
 struct CScrnRoboeyes: CScrnWipe
 {
     //3 v funcs
     CScrnRoboeyes(){};
-    virtual ~CScrnRoboeyes();
+    virtual ~CScrnRoboeyes(){};
 };
 struct CScrnWipeCustom : CScrnWipe
 {
     //3 v funcs
     CScrnWipeCustom(){};
-    virtual ~CScrnWipeCustom();
+    virtual ~CScrnWipeCustom(){};
 };
 struct CGScreen : GXRenderModeObj //0x40
 {
@@ -171,17 +174,17 @@ struct CGs //0x8001b9b8 //0x17b0 match
 struct CFbOutline//0x60
 {
     char pad[0x60];
-    CFbOutline();
-    virtual ~CFbOutline();
+    CFbOutline(){};
+    virtual ~CFbOutline(){};
 };
 
 struct CFbBlur//0x40
 {
     char pad[0x40];
-    CFbBlur();
-    virtual ~CFbBlur();
+    CFbBlur(){};
+    virtual ~CFbBlur(){};
 };
-struct CFbTexEff
+struct CFbTexEff //0xfc
 {
     CTexObj texObj;
     CFbTexEff(){};
