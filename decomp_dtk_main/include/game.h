@@ -10,7 +10,7 @@
 #include<msg.h>
 #include<sound.h>
 #include<movie.h>
-#include<font.h>
+#include<cfont.h>
 struct Controller
 {
     //Controller Inputs
@@ -75,6 +75,32 @@ struct MemCard//0x16a20
     virtual ~MemCard(){};
 
 };
+struct CGs //0x8001b9b8 //0x17b0 match
+{
+    public:
+    char pad[0xA0];
+    CGScreen cgScreen;
+    CGsRenderMode renderMode;
+    CGsTevStage tevStages[2];
+    CGsChannel cgChannels[4];
+    CFont font;
+    CTexObj texObj2;
+    CSprite sprite;
+    CLine line;
+    CTriangle tri;
+    CCircle cir;
+    CTile tile;
+    CSprite sprite2;
+    CCube cube;
+    COctahedron oct;
+    CDodeca dode;
+    CIcosahedron iso;
+    CSphere sphere;
+    CCylinder cyl;
+    CTorus torus;
+    CGs() :cgScreen(), renderMode(), tevStages(), texObj2(){};
+    virtual ~CGs(){};
+};
 struct CBase//Inherited by CGAME //0x3334 Match
 {
     //vars
@@ -92,9 +118,9 @@ struct CBase//Inherited by CGAME //0x3334 Match
     CBase() : gx(), gamePadManager(){};
     virtual ~CBase(){};
     //16 v funcs funcs
-    virtual void ParseStageData(int len, char* text);
+    virtual void ParseStageData(int param, int len, char* text);
 };
-struct CGame : public CBase
+struct CGame : CBase
 {
     CFileArchive archive;
     CTpl textureFile;
@@ -131,6 +157,8 @@ struct CGame : public CBase
     CMovie movieData;
     CGame(){};
     virtual ~CGame(){};
+    void ParseStageData(int param, int len, int text);
+
 
 };
 struct CThread//800
