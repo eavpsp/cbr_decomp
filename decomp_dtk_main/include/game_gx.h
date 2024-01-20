@@ -134,16 +134,7 @@ struct CTex : CTexObj //0xfc
 {
     CSprite sprite;
 };
-struct CFont //match 0x13c
-{
-   
-    char buf[58];
-    CTexObj texture;
-    CFont() :  texture() {
-        buf[36] = 0;
-    };
-    virtual ~CFont(){};
-};
+
 struct CGs //0x8001b9b8 //0x17b0 match
 {
     public:

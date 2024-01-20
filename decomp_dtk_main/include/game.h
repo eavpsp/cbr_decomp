@@ -10,6 +10,7 @@
 #include<msg.h>
 #include<sound.h>
 #include<movie.h>
+#include<font.h>
 struct Controller
 {
     //Controller Inputs
