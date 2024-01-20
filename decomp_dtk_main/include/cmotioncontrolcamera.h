@@ -1,6 +1,7 @@
 #ifndef cmotioncontrolcamera
 #define cmotioncontrolcamera
 #include<xobjs.h>
+#include<cam.h>
 struct CScrnQuake //0x34
 {
     CVec vecs[3];

@@ -28,6 +28,9 @@ struct CPadOne //0x50 match
     virtual void ResetPad();
     virtual void ReadPad();
 };
+struct CPadEx;
+extern const CPadEx* CurrentPad;
+
 struct CPadEx //0x204 match
 {
     int inputValueMask;
@@ -130,10 +133,9 @@ struct CThread//800
 {
     char pad[800];
     CThread();
-    virutal ~CThread();
+    virtual ~CThread();
 };
 //Game.cpp vars
-extern const CPadEx* CurrentPad;
 extern StageData stageData;//8020fbc0
 extern const ARCacheInfo CacheInfo;
 extern const FBMirrorEx FBMirrors[5];

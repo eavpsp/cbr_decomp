@@ -41,11 +41,4 @@ void CBase::ParseStageData(int len, char* text)//Match 0x80013580
 //Start
 const CGame MainGame;
 const CPadEx* CurrentPad;
-const ARCacheInfo cacheInfo
-const CPadEx* CurrentPad;
-const StageData stageData;//8020fbc0
-const ARCacheInfo CacheInfo;
-const FBMirrorEx FBMirrors[5];
-const ARPreCache ARPreCacheData;
-const CThread CGameThread;
-const CGame MainGame;
+extern const ARCacheInfo cacheInfo;

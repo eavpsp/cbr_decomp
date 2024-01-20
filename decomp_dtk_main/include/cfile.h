@@ -4,12 +4,7 @@
 #include<game_gx.h>
 #include <Dolphin/dvd.h>
 
-struct ARCacheInfo//0x4008
-{
-    char pad[0x4008];
-    ARCacheInfo();
-    virutal ~ARCacheInfo();
-};
+
 struct FileData
 {
     char fileName[256];
@@ -24,12 +19,19 @@ struct CFile : DVDFileInfo //0xe8 match
     CFile(){};
     virtual ~CFile(){};
 };
+
 struct ARPreCache//0x1e4
 {
     CFile filea;
     CFile fileb;
     ARPreCache();
     virtual ~ARPreCache();
+};
+struct ARCacheInfo//0x4008
+{
+    char pad[0x4008];
+    ARCacheInfo(){};
+    virtual ~ARCacheInfo(){};
 };
 struct CObjArchive : HSD_Archive
 {

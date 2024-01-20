@@ -61,7 +61,7 @@ struct FBMirror: CFbTexEff
 {
    //funcs
 };
-struct FBMirrorEx ://0x120
+struct FBMirrorEx : FBMirror//0x120
 {
     CCamera camera;
     FBMirrorEx(){};

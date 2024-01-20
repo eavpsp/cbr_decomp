@@ -197,7 +197,7 @@ struct InfoScrn //0x1d8
     CScrnFade fader;
     CScrnWipe wipe;
 };
-struct
+
 //@8001b408
 
 
