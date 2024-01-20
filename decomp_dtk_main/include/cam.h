@@ -50,5 +50,21 @@ struct CLight : HSD_LObj //0x354 TODO Close Match Light Comps random jump
     CLight(){};
     virtual ~CLight(){};
 };
-
+struct XObjDemo : XObj ,GXTexObj ,GXColor //0x34
+{
+    CCamera camera;
+    CLight lights[8];
+    XObjDemo() :lights(){};
+    virtual ~XObjDemo(){};
+};
+struct FBMirror: CFbTexEff
+{
+   //funcs
+};
+struct FBMirrorEx ://0x120
+{
+    CCamera camera;
+    FBMirrorEx(){};
+    virtual ~FBMirrorEx(){};
+};
 #endif

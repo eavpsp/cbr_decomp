@@ -1,14 +1,17 @@
 #ifndef _SOUND_
 #define _SOUND_
-//wip
-class CSound
+#include <cfile.h>
+struct CSound
 {
-    public:
-    virtual ~CSound();
+    CSound();
+    virtual ~CSound(){};
 };
-
-class XSound: public CSound
-{};
+struct XSound:  CSound
+{
+    CFile soundFile;
+    XSound();
+    virtual ~XSound();
+};
 
 
 

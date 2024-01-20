@@ -1,7 +1,10 @@
 #ifndef xobjs
 #define xobjs
 #include<Dolphin/vec.h>
+#include<cam.h>
+
 #include<cfile.h>
+#include<evt.h>
 struct CVec : public Vec //0xc
 {
    
@@ -63,11 +66,13 @@ struct Cursor :  XObj //0x34
     Cursor(){};
     virtual ~Cursor(){};
 };
-struct XObjDemo : XObj : GXTexObj : GXColor //0x34
+
+
+
+struct XOBJS
 {
-    CCamera camera;
-    CLight lights[8];
-    XObjDemo() :lights(){};
-    virtual ~XObjDemo(){};
+    char pad[0x11d8];
+    XOBJS(){};
+    virtual ~XOBJS(){};
 };
 #endif

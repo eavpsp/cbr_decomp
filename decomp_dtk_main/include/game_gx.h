@@ -127,6 +127,10 @@ struct CTexObj : GXTexObj //match 0xfc
     CTexObj(){ };
     virtual ~CTexObj(){};
 };
+struct CTex : CTexObj //0xfc
+{
+    CSprite sprite;
+};
 struct CFont //match 0x13c
 {
    
@@ -188,16 +192,12 @@ struct FbSubwin : CFbTexEff
     FbSubwin(){};
     virtual ~ FbSubwin(){};
 };
-
-struct TitleObject //0x3c48
+struct InfoScrn //0x1d8
 {
-    Cursor menuCursor;
-    XObjDemo demoObj;
-    CTpl textureFile;
-    CTexObj texObjects[6];
-    TitleObject():texObjects(){};
-    virtual ~ TitleObject(){};
+    CScrnFade fader;
+    CScrnWipe wipe;
 };
+struct
 //@8001b408
 
 

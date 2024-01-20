@@ -2,10 +2,14 @@
 #ifndef game
 #define game
 #include<cam.h>
+#include<cmotioncontrolcamera.h>
 #include<cfile.h>
+#include<cparticle.h>
 #include<game_gx.h>
 #include<evt.h>
-
+#include<msg.h>
+#include<sound.h>
+#include<movie.h>
 struct Controller
 {
     //Controller Inputs
@@ -24,8 +28,6 @@ struct CPadOne //0x50 match
     virtual void ResetPad();
     virtual void ReadPad();
 };
-struct CPadEx;
-extern const CPadEx* CurrentPad;
 struct CPadEx //0x204 match
 {
     int inputValueMask;
@@ -45,8 +47,30 @@ struct StageData
     int unk5;
     int unk6;
 };
+struct TitleObject //0x3c48
+{
+    Cursor menuCursor;
+    XObjDemo demoObj;
+    CTpl textureFile;
+    CTexObj texObjects[6];
+    TitleObject():texObjects(){};
+    virtual ~ TitleObject(){};
+};
+struct CCard//0xa020
+{
+    char pad[0xa020];
+    CCard(){};
+    virtual ~CCard(){};
 
-extern StageData stageData;//8020fbc0
+};
+struct MemCard//0x16a20
+{
+    CCard cardData;
+    char pad[0xC9E0];
+    MemCard(){};
+    virtual ~MemCard(){};
+
+};
 struct CBase//Inherited by CGAME //0x3334 Match
 {
     //vars
@@ -88,34 +112,33 @@ struct CGame : public CBase
     CScrnColor screenColorC;
     Logo logo;
     CTpl logoFIle;
-    //InfoScrn
-    CScrnFade screenFade;
+    InfoScrn infoScreen;
+    CScrnFade screenFade1;
     CScrnWipe wipe;
-    //CParticle
-    CFile files[6];
-    //CGenerator
-    //CScrnQuake
-    //
-
+    CParticle particle;
+    CScrnQuake screenQuake;
+    XOBJS xobjData;
+    CObjArchive CobjArchives[0x400];
+    CEvt eventInfo;
+    CMsg cMsg[2];
+    CMotionControlCamera cmotionControlCam;
+    XSound soundData;
+    MemCard memCard;
+    CMovie movieData;
 };
-//infoscreen
-//cparticle
-//cgenerator
-//cscrnquake
-//cobj archive
-//cmsg
-//cmotioncontrolcamera
-//ccameramemento
-//Csound
-//xsound
-//memcard
-//ccard
-//cmovie
+struct CThread//800
+{
+    char pad[800];
+    CThread();
+    virutal ~CThread();
+};
 //Game.cpp vars
+extern const CPadEx* CurrentPad;
+extern StageData stageData;//8020fbc0
+extern const ARCacheInfo CacheInfo;
+extern const FBMirrorEx FBMirrors[5];
+extern const ARPreCache ARPreCacheData;
+extern const CThread CGameThread;
 extern const CGame MainGame;
-extern int unk_val;
-//extern const ARCacheInfo cacheInfo
-extern int unk_val_2;
-
 
 #endif
