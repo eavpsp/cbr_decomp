@@ -1,7 +1,6 @@
 #ifndef cmotioncontrolcamera
 #define cmotioncontrolcamera
-#include<xobjs.h>
-#include<cam.h>
+#include<ccameraactionarea.h>
 struct CScrnQuake //0x34
 {
     CVec vecs[3];
@@ -31,5 +30,11 @@ struct CMotionControlCamera //500
     CCamera camera;
     CMotionControlCamera(){};
     virtual ~CMotionControlCamera(){};
+};
+
+struct CCameraActions //0x1e70
+{   
+    
+
 };
 #endif

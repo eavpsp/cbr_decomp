@@ -4,8 +4,8 @@
  test.cpp:
 	.sdata2     start:0x8065FD38 end:0x8065FD40
 
- */
-struct StageData
+
+    struct StageData
 {
     int stageData_00;
     int member_04;
@@ -44,3 +44,6 @@ void ParseStageData(int param, int len, int text)//Match 0x80013580
   }
   return;
 }
+
+ */
+#include <cmotioncontrolcamera.h>

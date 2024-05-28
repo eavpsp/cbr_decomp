@@ -18,7 +18,7 @@ struct Controller
     //Controller Inputs
     int controlInputs[19];//<- turn this into struct
     //controls enabled
-    int controllerEnabled;
+    int controllerPortNumber;
 };
 struct CPadOne //0x50 match
 {
@@ -110,7 +110,7 @@ struct CBase//Inherited by CGAME //0x3334 Match
     CBase() : gx(), gamePadManager(){};
     virtual ~CBase(){};
     //16 v funcs funcs
-    virtual void ParseStageData(int param, int len, char* text);
+    virtual void ParseStageData(CGame* cgame, int len, char* text);
 };
 struct CGame : CBase
 {
@@ -149,7 +149,7 @@ struct CGame : CBase
     CMovie movieData;
     CGame(){};
     virtual ~CGame(){};
-    void ParseStageData(int param, int len, int text);
+    void ParseStageData(CGame* cgame, int len, char* text);
 
 
 };

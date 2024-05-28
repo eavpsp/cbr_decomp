@@ -9,5 +9,5 @@ C:\devkitPro\devkitPPC\bin\powerpc-eabi-objdump.exe obj_%~n1.o --full-content
 if ERRORLEVEL 1 pause
 if ERRORLEVEL 1 exit
 C:\devkitPro\devkitPPC\bin\powerpc-eabi-objcopy.exe obj_%~n1.o %~n1.bin -O binary -R .eh_frame -R .comment -R .sdata -R .gnu.attributes -g -S
-Bin2Gecko_2.exe %~n1.bin -m %~n1.map -r TRK_memcpy:0x80003130
+Bin2Gecko_2.exe %~n1.bin -m %~n1.map -c OnLoad:0x8000EE84
 pause

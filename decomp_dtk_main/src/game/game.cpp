@@ -27,7 +27,7 @@ extern "C" char* strtok(char* charEval,char* seperator);
 extern "C" char* strcmp(char *__s1,char *__s2);
 extern "C" int find_stage_index(char *param_1);
 struct CGame;
-void ParseStageData(CGame* param, int len, char* text)//Match 0x80013580
+void ParseStageData(CGame* CurrentCGame, int len, char* text)//Match 0x80013580
 {
   char** currentChar = reinterpret_cast<char**>(text + 4);
   for (int i = 1; i < len; i++) {
@@ -53,3 +53,28 @@ void ParseStageData(CGame* param, int len, char* text)//Match 0x80013580
 }
 
 
+/*
+void CGame::ParseStageData(CGame* CurrentCGame, int len, char* text)//Match 0x80013580
+{
+  char** currentChar = reinterpret_cast<char**>(text + 4);
+  for (int i = 1; i < len; i++) {
+    switch (**currentChar) {
+      case '/':
+      {
+        char* charRead = strtok(*currentChar + 1,sep);
+        if (strcmp(charRead,stage) == 0) {
+          stageData.stageData_00 = find_stage_index(strtok(0,space));
+        }
+        else if (strcmp(charRead,slot) == 0) {
+          charRead = strtok(0,space);
+          stageData.member_04 = charRead[0] - 'A';
+        }
+      }
+
+      break;
+    }
+
+    currentChar++;
+  }
+  return;
+}*/
