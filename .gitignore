@@ -1,3 +1,6 @@
 decomp_dtk_split/asm_active/game_ct.s
 decomp_dtk_split/asm_active/game_dt.s
 decomp_dtk_split/asm_active/0x80019480 - 0x80031004.s
+/.vs/cbr_decomp
+/.vs/ProjectSettings.json
+/.vs/slnx.sqlite
