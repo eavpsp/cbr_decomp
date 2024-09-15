@@ -44,9 +44,11 @@ struct CCameraActions //0x1e70  @ 0x80019e5c WIP
     CInterpolationLinear linearInterp;
     CInterpolationEaseInOut easeInOut;
     CInterpolationEaseOut easeOut;
-    char unk[16];
     CInterpolationEaseOutDivide easeOutDivide;
     char unk2[44];
     CCameraActionChase chaseCamera;
+    CCameraActionEvt eventCamera;
+    CCameraActions() {};
+    virtual ~CCameraActions() {};
 };
 #endif

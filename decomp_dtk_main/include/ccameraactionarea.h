@@ -14,20 +14,14 @@ struct CInterfaceCameraAction
 struct CCameraActionChase : CInterfaceCameraAction
 {
     char unk[12];
-
     CVec vec_a;
     CVec vec_b;
+    int unk_val;
     CCameraActionChase() {};
     virtual ~CCameraActionChase() {};
 };
 //CCameraActionEvt <-- TODO
-struct CCameraActionEvt : CInterfaceCameraAction
-{
-    CStatus status;
 
-    CCameraActionEvt() {};
-    virtual ~CCameraActionEvt() {};
-};
 struct CCameraActionDefault : CInterfaceCameraAction
 {
    
@@ -64,7 +58,6 @@ struct CVectorEaseInOutInterpolation : CInterfaceVectorInterpolation
 struct CVectorEaseOutInterpolation : CInterfaceVectorInterpolation
 {
     CInterpolationEaseOut easeOut[3];
-    char buffer[48];
     CVectorEaseOutInterpolation() {};
     virtual ~CVectorEaseOutInterpolation() {};
 };
@@ -80,5 +73,45 @@ struct CVectorLinearInterpolation : CInterfaceVectorInterpolation
     CInterpolationLinear linearInerpolation[3];
     CVectorLinearInterpolation() {};
     virtual ~CVectorLinearInterpolation() {};
+};
+struct CVectorNoneInterpolation : CInterfaceVectorInterpolation
+{
+    CInterpolationNone linearInerpolation[3];
+    CVectorNoneInterpolation() {};
+    virtual ~CVectorNoneInterpolation() {};
+};
+struct CCameraActionEvt : CInterfaceCameraAction
+{
+    char unk[20];
+    CStatus status;
+    int unk_val;
+    CVectorLinearInterpolation linIntp;
+    CVectorEaseInOutInterpolation easeIOIntp;
+    CVectorEaseOutInterpolation easeOIntp;
+    CVectorNoneInterpolation noneIntp;
+    char unk2[16];
+    CVectorLinearInterpolation linIntp2;
+    CVectorEaseInOutInterpolation easeIOIntp2;
+    CVectorEaseOutInterpolation easeOIntp2;
+    CVectorNoneInterpolation noneIntp2;
+    char unk3[16];
+    CInterpolationLinear linear;
+    CInterpolationEaseInOut easeIO;
+    CInterpolationEaseOut easeO;
+    CInterpolationNone noneInterp;
+    char unk4[16];
+    CInterpolationLinear linear2;
+    CInterpolationEaseInOut easeIO2;
+    CInterpolationEaseOut easeO2;
+    CInterpolationNone noneInterp2;
+    char unk5[16];
+    CVectorLinearInterpolation linearIntVec;
+    CVectorEaseInOutInterpolation easeIOVec;
+    CVectorEaseOutInterpolation easeOutVec;
+    CVectorNoneInterpolation noneVec;
+    char unk6[16];
+
+    CCameraActionEvt() {};
+    virtual ~CCameraActionEvt() {};
 };
 #endif
