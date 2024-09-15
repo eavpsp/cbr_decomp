@@ -4,6 +4,7 @@
 #include<baselib/lobj.h>
 #include<xobjs.h>
 #include<game_gx.h>
+#include<evt.h>
 
 struct CCamera : HSD_CObj //400 match
 {

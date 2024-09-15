@@ -10,13 +10,20 @@ struct CInterfaceCameraAction
     CInterfaceCameraAction() {};
     virtual ~CInterfaceCameraAction() {};
 };
-struct CCameraActionChase: CInterfaceCameraAction
+struct CCameraActionChase : CInterfaceCameraAction
 {
     CVec vec_a, vec_b;
-    //CCameraActionEvt <-- TODO
-    CCameraActionDefault() {};
-    virtual ~CCameraActionDefault() {};
-}
+    CCameraActionChase() {};
+    virtual ~CCameraActionChase() {};
+};
+//CCameraActionEvt <-- TODO
+struct CCameraActionEvt : CInterfaceCameraAction
+{
+    CStatus status;
+
+    CCameraActionEvt() {};
+    virtual ~CCameraActionEvt() {};
+};
 struct CCameraActionDefault : CInterfaceCameraAction
 {
     CCameraActionDefault() {};
@@ -55,7 +62,7 @@ struct CVectorEaseOutDivideInterpolation : CInterfaceVectorInterpolation
     CInterpolationEaseOutDivide easeOut[3];
     CVectorEaseOutDivideInterpolation() {};
     virtual ~CVectorEaseOutDivideInterpolation() {};
-}
+};
 struct CVectorLinearInterpolation : CInterfaceVectorInterpolation
 {
     CInterpolationLinear linearInerpolation[3];
