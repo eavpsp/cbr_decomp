@@ -4,7 +4,7 @@
 
 struct CInterfaceInterpolation
 {
-
+    
     CInterfaceInterpolation() {};
     virtual void GetCharSpace();
     virtual ~CInterfaceInterpolation() {};
@@ -14,6 +14,7 @@ struct CInterfaceInterpolation
 
 struct CInterpolationEaseInOut : CInterfaceInterpolation
 {
+    char buffer[24];
     CInterpolationEaseInOut() {};
     virtual void zz_80135398_();
     virtual void zz_80135280_();
@@ -22,6 +23,8 @@ struct CInterpolationEaseInOut : CInterfaceInterpolation
 };
 struct CInterpolationEaseOutDivide : CInterfaceInterpolation
 {
+    char buffer[12];
+
     CInterpolationEaseOutDivide() {};
     /*  8022e510 80 13 52 20     addr       zz_80135220_
         8022e514 80 13 51 20     addr       zz_80135120_
@@ -31,6 +34,8 @@ struct CInterpolationEaseOutDivide : CInterfaceInterpolation
 };
 struct CInterpolationEaseOut : CInterfaceInterpolation
 {
+    char buffer[12];
+
     CInterpolationEaseOut() {};
     /*  8022e510 80 13 52 20     addr       zz_80135220_
         8022e514 80 13 51 20     addr       zz_80135120_
@@ -40,6 +45,8 @@ struct CInterpolationEaseOut : CInterfaceInterpolation
 };
 struct CInterpolationLinear : CInterfaceInterpolation
 {
+    char buffer[12];
+
     CInterpolationLinear() {};
      /* 8020fef8 80 00 98 58     addr       FormationOffensive::__dt(void)
         8020fefc 80 01 5f d4     addr       UpdateRayIntersection

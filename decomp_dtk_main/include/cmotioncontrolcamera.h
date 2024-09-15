@@ -32,7 +32,7 @@ struct CMotionControlCamera //500
     virtual ~CMotionControlCamera(){};
 };
 
-struct CCameraActions //0x1e70  @ 0x80019e5c
+struct CCameraActions //0x1e70  @ 0x80019e5c WIP
 {   
     CCameraActionDefault defaultCamAction;
     CCameraActionArea actionArea;
@@ -44,7 +44,9 @@ struct CCameraActions //0x1e70  @ 0x80019e5c
     CInterpolationLinear linearInterp;
     CInterpolationEaseInOut easeInOut;
     CInterpolationEaseOut easeOut;
+    char unk[16];
     CInterpolationEaseOutDivide easeOutDivide;
+    char unk2[44];
     CCameraActionChase chaseCamera;
 };
 #endif
