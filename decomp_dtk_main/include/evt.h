@@ -3,9 +3,9 @@
 #include <Dolphin/OS/OSStopwatch.h>
 struct CStatus //0x8
 {
-    int flag;
+    char flag[4];
     int currentStatus;
-    CStatus() : flag(0), currentStatus(0){};
+    CStatus() : currentStatus(0){};
     virtual ~CStatus(){};
 };
 struct CoordInfo

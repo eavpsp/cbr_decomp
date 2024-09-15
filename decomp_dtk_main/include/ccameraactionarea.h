@@ -20,8 +20,25 @@ struct CCameraActionChase : CInterfaceCameraAction
     CCameraActionChase() {};
     virtual ~CCameraActionChase() {};
 };
-//CCameraActionEvt <-- TODO
-
+struct CCameraActionScroll2 : CInterfaceCameraAction
+{
+    char unk[106];
+    CCameraActionScroll2() {};
+    virtual ~CCameraActionScroll2() {};
+};
+struct CCameraActionEye : CInterfaceCameraAction
+{
+    CObjVec vec;
+    CVec x;
+    CCameraActionEye() {};
+    virtual ~CCameraActionEye() {};
+};
+struct CCameraActionAnim: CInterfaceCameraAction
+{
+    char unk[12];
+    CCameraActionAnim() {};
+    virtual ~CCameraActionAnim() {};
+};
 struct CCameraActionDefault : CInterfaceCameraAction
 {
    
@@ -110,7 +127,6 @@ struct CCameraActionEvt : CInterfaceCameraAction
     CVectorEaseOutInterpolation easeOutVec;
     CVectorNoneInterpolation noneVec;
     char unk6[16];
-
     CCameraActionEvt() {};
     virtual ~CCameraActionEvt() {};
 };

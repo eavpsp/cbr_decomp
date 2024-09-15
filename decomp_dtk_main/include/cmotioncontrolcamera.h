@@ -48,6 +48,10 @@ struct CCameraActions //0x1e70  @ 0x80019e5c WIP
     char unk2[44];
     CCameraActionChase chaseCamera;
     CCameraActionEvt eventCamera;
+    CCameraActionScroll2 scrollCamera;
+    CCameraActionEye camEye;
+    CCameraActionAnim camAnim;
+    //CCameraActions TODO
     CCameraActions() {};
     virtual ~CCameraActions() {};
 };

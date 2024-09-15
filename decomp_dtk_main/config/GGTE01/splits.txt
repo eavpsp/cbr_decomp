@@ -21,6 +21,8 @@ game/game.cpp:
 	.data       start:0x8020FBC0 end:0x8020FBE0
 	.sdata2     start:0x8065BE64 end:0x8065BE78
 
+test.cpp:
+	.sdata2     start:0x8065FD38 end:0x8065FD40
 
 Dolphin/TRK_MINNOW_DOLPHIN/mem_TRK.c:
 	.init       start:0x80003100 end:0x80003154
