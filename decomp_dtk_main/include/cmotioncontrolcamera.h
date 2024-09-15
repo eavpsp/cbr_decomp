@@ -32,9 +32,19 @@ struct CMotionControlCamera //500
     virtual ~CMotionControlCamera(){};
 };
 
-struct CCameraActions //0x1e70
+struct CCameraActions //0x1e70  @ 0x80019e5c
 {   
-    
-
+    CCameraActionDefault defaultCamAction;
+    CCameraActionArea actionArea;
+    CVectorEaseInOutInterpolation easeInOutInterpolator;
+    CVectorLinearInterpolation linearInterpolator;
+    CVectorEaseInOutInterpolation easeInOutInterpolator2;
+    CVectorEaseOutInterpolation easeOutInterpolator;
+    CVectorEaseOutDivideInterpolation easeOutDivideInterpolator;
+    CInterpolationLinear linearInterp;
+    CInterpolationEaseInOut easeInOut;
+    CInterpolationEaseOut easeOut;
+    CInterpolationEaseOutDivide easeOutDivide;
+    CCameraActionChase chaseCamera;
 };
 #endif
