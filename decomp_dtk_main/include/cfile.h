@@ -64,14 +64,16 @@ struct CAnmQueue//0x84
 
 struct CTpl : CFile
 {
+    int unkval;
     CTexObj textureObj;
     CTpl(){};
     virtual ~CTpl(){};
 };
-struct Logo //0x200
+struct Logo //516
 {
-    char pad[272];
     CTpl logoTexture; //0xec
+    char unk[16];
+
     Logo(){};
     virtual ~Logo(){};
 };

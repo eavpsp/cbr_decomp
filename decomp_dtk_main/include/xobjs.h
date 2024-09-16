@@ -31,28 +31,31 @@ struct CJObj
     virtual ~CJObj(){};
 };
 
-struct CXObj :CJObj 
+struct CXObj : CJObj 
 {
-    CObjVec vecA;
-    CObjVec vecB;
-    CObjVec vecC;
     CJArchive archive;
+    CObjVec objVecA, objVecB, objVecC;
+
     //33 v funcs
     CXObj(){};
     virtual ~CXObj(){};
 };
 struct CXObjIntp : CXObj
 {
+    CJObj obj;
     CXObjIntp(){};
     virtual ~CXObjIntp(){};
 };
 
-struct XObj : CXObjIntp
+struct XObj : CXObjIntp //WIP
 {
     CStatus status;
     CoordInfo coordInfo;
+    //AttrInfo
     CVec vecA;
+    //gap here
     CVec vecB;
+    //gap here
     CEvt objEvt;
     CAnmQueue animQueue;
     CJArchive archive;

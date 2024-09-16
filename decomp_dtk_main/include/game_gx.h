@@ -119,7 +119,7 @@ struct CGsChannel : HSD_Chan
 
 };
 
-struct CTexObj : GXTexObj 
+struct CTexObj : GXTexObj //252
 {
     char unk[216];
     CTexObj(){ };

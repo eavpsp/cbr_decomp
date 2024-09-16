@@ -8,20 +8,20 @@
 
 struct CCamera : HSD_CObj 
 {
-    char pad[20];
+    char pad[8];
     CVec vec1;
     CVec vec2;
     CVec vec3;
     CVec vec4;
     char buff[68];
     CVec vec5;
-    char buff2[88];
+    char buff2[104];
     CCamera(){};
     virtual ~CCamera(){};
 };
 
 
-struct CShadow //match
+struct CShadow //500
 {
     int val; 
     int val2;
@@ -31,15 +31,15 @@ struct CShadow //match
     CShadow(): val(0), val2(0){};
     virtual ~CShadow(){};
 };
-struct CLight : HSD_LObj //0x354 
+struct CLight : HSD_LObj //856
 {
-    char pad0[16]; 
+    int unkval;
     CVec vec1;
     CVec vec2;
     CVec vec3;
     CColor color;
     CColor color2;
-    char pad[56];
+    char unk[68];
     CShadow shadow;
     //7 v functs
     CLight(){};

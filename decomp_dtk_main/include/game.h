@@ -20,11 +20,10 @@ struct Controller
     //controls enabled
     int controllerPortNumber;
 };
-struct CPadOne //0x50 match
+struct CPadOne //84
 {
 
     Controller controller;
-    //virtual funcs x3
     CPadOne() :controller(){};
     virtual ~CPadOne(){};
     virtual void DisablePad();
@@ -34,10 +33,9 @@ struct CPadOne //0x50 match
 struct CPadEx;
 extern const CPadEx* CurrentPad;
 
-struct CPadEx //0x204 match
+struct CPadEx //516
 {
-    int inputValueMask;
-    char unk_inputs[0xb0];
+    char unk0[0xb0];
     CPadOne gamePads[4];
     CPadEx(): gamePads() { CurrentPad = this;};
     virtual ~CPadEx(){};
@@ -110,44 +108,60 @@ struct CGs //6064 Match
     CGs() :cgScreen(), renderMode(), tevStages(), texObj2(){};
     virtual ~CGs(){};
 };
-struct CBase //13108 missing 132 bytes
+struct CBase // Done
 {
     CGs gx;
-    char pad0[12];
+    char unk0[20];
     CFont baseFont;
     CPadEx gamePadManager;
-    char pad1[8];
+    char unk1[16];
     CStatus status;
-    int val;
+    int unkval;
     CCamera sceneCams[2];
     CLight sceneLights[6];
     CStopWatch stopWatches[3];
-    char pad2[28];
-    CBase() : gx(), gamePadManager(){};
+    char unk2[28];
+    CBase() : gamePadManager() {};
     virtual ~CBase(){};
     //16 v funcs funcs
    // virtual void ParseStageData(CGame* cgame, int len, char* text);
 };
-struct CGame : CBase //Needs a lot of work
+struct CGame : CBase //WIP
 {
     CFileArchive archive;
+    char unk0[2132];
     CTpl textureFile;
+    char unk1[4];
     CScrnFade screenFade;
     CScrnWipeCircle screenWipe_circle;
+    char unk2[48];
     CScrnWipeTex screenWipe_tex;
+    char unk3[52];
+    CTexObj texObj;
     CScrnWipeCustom screenWipe_custom;
+    char unk4[48];
     CScrnWipeTile screenWipe_tile_0;
+    char unk5[48];
     CScrnWipeTile screenWipe_tile_1;
+    char unk6[48];
     CScrnRoboeyes roboEyes;
+    char unk7[60];
     CFbOutline outline;
+    int unkval0;
     CFbBlur blurFx;
+    char unk8[34];
     FbSubwin subwin;
+    int unkval1;
     CStatus status;
+    char unk9[20];
     CCamera camera;
+    int unkval2;
     CScrnColor screenColorA;
+    int unkval3;
     CTexObj textObj;
     CScrnColor screenColorB;
     CScrnColor screenColorC;
+    char unk[8];
     Logo logo;
     CTpl logoFIle;
     InfoScrn infoScreen;

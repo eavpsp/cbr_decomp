@@ -6,7 +6,7 @@ struct CFont
     char buf[54];
     CTexObj texture;
     CFont() :  texture() {
-        buf[36] = 0;
+        buf[28] = 0;
     };
     virtual ~CFont(){};
 };
