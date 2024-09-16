@@ -68,35 +68,50 @@ struct MemCard
     virtual ~MemCard(){};
 
 };
-struct CGs
+struct CGs //6064 Match
 {
-    public:
-    char pad[156];
+    int unkval;
     CGScreen cgScreen;
+    char unk0[12];
     CGsRenderMode renderMode;
     CGsTevStage tevStages[2];
     CGsChannel cgChannels[4];
+    char unk1[24];
     CFont font;
+    int unkval1;
     CTexObj texObj2;
+    int unkval2;
     CSprite sprite;
+    char unk2[36];
     CLine line;
+    char unk3[8];
     CTriangle tri;
+    char unk4[8];
     CCircle cir;
+    char unk5[24];
     CTile tile;
+    char unk6[32];
     CSprite sprite2;
+    char unk7[36];
     CCube cube;
+    int unkval3;
     COctahedron oct;
+    int unkval4;
     CDodeca dode;
+    int unkval5;
     CIcosahedron iso;
+    int unkval6;
     CSphere sphere;
+    int unkval7;
     CCylinder cyl;
+    int unkval8;
     CTorus torus;
+    char unk8[16];
     CGs() :cgScreen(), renderMode(), tevStages(), texObj2(){};
     virtual ~CGs(){};
 };
-struct CBase 
+struct CBase //13108 missing 132 bytes
 {
-    //vars
     CGs gx;
     char pad0[12];
     CFont baseFont;
@@ -111,7 +126,7 @@ struct CBase
     CBase() : gx(), gamePadManager(){};
     virtual ~CBase(){};
     //16 v funcs funcs
-    virtual void ParseStageData(CGame* cgame, int len, char* text);
+   // virtual void ParseStageData(CGame* cgame, int len, char* text);
 };
 struct CGame : CBase //Needs a lot of work
 {
@@ -150,7 +165,7 @@ struct CGame : CBase //Needs a lot of work
     CMovie movieData;
     CGame(){};
     virtual ~CGame(){};
-    void ParseStageData(CGame* cgame, int len, char* text);
+   // void ParseStageData(CGame* cgame, int len, char* text);
 
 
 };

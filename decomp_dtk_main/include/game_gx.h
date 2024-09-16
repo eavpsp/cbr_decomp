@@ -90,7 +90,6 @@ struct CScrnWipeCustom : CScrnWipe
 };
 struct CGScreen : GXRenderModeObj 
 {
-    
     CGScreen() {};
     virtual ~CGScreen(){};
 }; 
@@ -105,8 +104,8 @@ struct CGsRenderMode : HSD_PEDesc
 
 struct CGsTevStage : HSD_TevDesc
 {
-    public:
-    char buf[28];
+ 
+    char buf[32];
     CGsTevStage(){};
     virtual ~CGsTevStage(){};
 };
@@ -114,14 +113,15 @@ struct CGsTevStage : HSD_TevDesc
 
 struct CGsChannel : HSD_Chan 
 {
-
+    int unk;
     CGsChannel(){};
     virtual ~CGsChannel(){};
 
 };
 
-struct CTexObj : GXTexObj
+struct CTexObj : GXTexObj 
 {
+    char unk[216];
     CTexObj(){ };
     virtual ~CTexObj(){};
 };

@@ -46,8 +46,8 @@ void ParseStageData(int param, int len, int text)//Match 0x80013580
 }
 
  */
-#include <cmotioncontrolcamera.h>
+#include <game.h>
 
 
-CCameraActions newCamActions;
+CBase newBase;
 //8001a11c
