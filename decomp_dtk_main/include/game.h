@@ -112,7 +112,7 @@ struct CBase//Inherited by CGAME //0x3334 Match
     //16 v funcs funcs
     virtual void ParseStageData(CGame* cgame, int len, char* text);
 };
-struct CGame : CBase
+struct CGame : CBase //Needs a lot of work
 {
     CFileArchive archive;
     CTpl textureFile;
