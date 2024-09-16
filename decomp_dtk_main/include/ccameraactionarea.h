@@ -35,7 +35,7 @@ struct CCameraActionEye : CInterfaceCameraAction
 };
 struct CCameraActionAnim: CInterfaceCameraAction
 {
-    char unk[12];
+    char unk[8];
     CCameraActionAnim() {};
     virtual ~CCameraActionAnim() {};
 };
@@ -81,7 +81,6 @@ struct CVectorEaseOutInterpolation : CInterfaceVectorInterpolation
 struct CVectorEaseOutDivideInterpolation : CInterfaceVectorInterpolation
 {
     CInterpolationEaseOutDivide easeOut[3];
-    char buffer[24];
     CVectorEaseOutDivideInterpolation() {};
     virtual ~CVectorEaseOutDivideInterpolation() {};
 };
@@ -126,8 +125,42 @@ struct CCameraActionEvt : CInterfaceCameraAction
     CVectorEaseInOutInterpolation easeIOVec;
     CVectorEaseOutInterpolation easeOutVec;
     CVectorNoneInterpolation noneVec;
-    char unk6[16];
+    char unk6[20];
     CCameraActionEvt() {};
     virtual ~CCameraActionEvt() {};
+};
+struct CCameraActionMap : CCameraActionAreaExM
+{
+    CCameraActionMap() {};
+    virtual ~CCameraActionMap() {};
+};
+struct CCameraActionsSetup //Match
+{
+    CCameraActionMap actionMap;
+    char unk[8];
+    CVec x;
+    char unk2[8];
+    CVec y, z;
+    char unk3[12];
+    CObjVec vec;
+    char unk4[12];
+    CInterpolationEaseOutDivide easeOutDivide;
+    CVec unkVec;
+    char unk5[3280];
+    CVectorEaseInOutInterpolation easeIOVec;
+    CInterpolationEaseInOut easeIO1;
+    int unkVal;
+    CInterpolationEaseInOut easeIO2;
+    char unk6[24];
+    CInterpolationEaseOutDivide easeODivide;
+    int unkval2;
+    CInterpolationEaseInOut easeIO3;
+    char unk7[148];
+    CVectorEaseOutDivideInterpolation easeODivideVec;
+    char unk8[8];
+    CVec a, b, c, d, e, f;
+    char unk9[528];
+    CStatus statusA, statusB;
+
 };
 #endif

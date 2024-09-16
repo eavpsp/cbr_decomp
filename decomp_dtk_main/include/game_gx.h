@@ -6,8 +6,6 @@
 #include <gx_shape.h>
 #include <types.h>
 
-
-//color 0x4 + ptr 0x8
 struct CColor : GXColor
 {
     
@@ -90,70 +88,70 @@ struct CScrnWipeCustom : CScrnWipe
     CScrnWipeCustom(){};
     virtual ~CScrnWipeCustom(){};
 };
-struct CGScreen : GXRenderModeObj //0x40
+struct CGScreen : GXRenderModeObj 
 {
     
-    int flag;
-    CGScreen() : flag(0xffffffff){};
+    CGScreen() {};
     virtual ~CGScreen(){};
-}; //Done
+}; 
 
 
-struct CGsRenderMode : HSD_PEDesc //0x30 crude match
-{
+struct CGsRenderMode : HSD_PEDesc 
    
-    char buf[36]; //unk 4 xint
+    char buf[32]; 
     virtual ~CGsRenderMode(){};
 };
 
 
-struct CGsTevStage : HSD_TevDesc //match 0x94
+struct CGsTevStage : HSD_TevDesc
 {
     public:
-    char buf[32];
+    char buf[28];
     CGsTevStage(){};
     virtual ~CGsTevStage(){};
 };
 
 
-struct CGsChannel : HSD_Chan //match 0x34
+struct CGsChannel : HSD_Chan 
 {
-    public:
-    int buf;
+
     CGsChannel(){};
     virtual ~CGsChannel(){};
 
 };
 
-struct CTexObj : GXTexObj //match 0xfc
+struct CTexObj : GXTexObj
 {
     CTexObj(){ };
     virtual ~CTexObj(){};
 };
-struct CTex : CTexObj //0xfc
+struct CTex : CTexObj 
 {
     CSprite sprite;
+    CTex() { };
+    virtual ~CTex() {};
 };
 
 
 
-struct CFbOutline//0x60
+struct CFbOutline
 {
-    char pad[0x60];
+    char pad[92];
     CFbOutline(){};
     virtual ~CFbOutline(){};
 };
 
-struct CFbBlur//0x40
+struct CFbBlur
 {
-    char pad[0x40];
+    char pad[60];
     CFbBlur(){};
     virtual ~CFbBlur(){};
 };
-struct CFbTexEff //0xfc
+struct CFbTexEff
 {
     CTexObj texObj;
-    CFbTexEff(){};
+    CFbTexEff() {};
+    virtual ~CFbTexEff(){};
 };
 
 struct FbSubwin : CFbTexEff
@@ -161,13 +159,14 @@ struct FbSubwin : CFbTexEff
     FbSubwin(){};
     virtual ~ FbSubwin(){};
 };
-struct InfoScrn //0x1d8
+struct InfoScrn
 {
     CScrnFade fader;
     CScrnWipe wipe;
+    char unk[368];
 };
 
-//@8001b408
+
 
 
 #endif

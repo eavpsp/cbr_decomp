@@ -8,7 +8,7 @@ struct CInterfaceInterpolation
     CInterfaceInterpolation() {};
     virtual void GetCharSpace();
     virtual ~CInterfaceInterpolation() {};
-
+    
 
 };
 

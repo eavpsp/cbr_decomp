@@ -41,6 +41,7 @@ struct CCameraActions //0x1e70  @ 0x80019e5c WIP
     CVectorEaseInOutInterpolation easeInOutInterpolator2;
     CVectorEaseOutInterpolation easeOutInterpolator;
     CVectorEaseOutDivideInterpolation easeOutDivideInterpolator;
+    char buffer[24];
     CInterpolationLinear linearInterp;
     CInterpolationEaseInOut easeInOut;
     CInterpolationEaseOut easeOut;
@@ -51,7 +52,7 @@ struct CCameraActions //0x1e70  @ 0x80019e5c WIP
     CCameraActionScroll2 scrollCamera;
     CCameraActionEye camEye;
     CCameraActionAnim camAnim;
-    //CCameraActions TODO
+    CCameraActionsSetup camActionMap;
     CCameraActions() {};
     virtual ~CCameraActions() {};
 };

@@ -21,6 +21,9 @@ game/game.cpp:
 	.data       start:0x8020FBC0 end:0x8020FBE0
 	.sdata2     start:0x8065BE64 end:0x8065BE78
 
+test.cpp:
+	.sdata2     start:0x8065FD38 end:0x8065FD40
+
 Dolphin/TRK_MINNOW_DOLPHIN/mem_TRK.c:
 	.init       start:0x80003100 end:0x80003154
 	.text       start:0x8014D55C end:0x8014D614
@@ -37,14 +40,12 @@ Runtime.PPCEABI.H/__init_cpp_exceptions.cpp:
 	.sdata      start:0x8065AB50 end:0x8065AB54
 
 Dolphin/TRK_MINNOW_DOLPHIN/_exception.c:
-	.init       start:0x80003154 end:0x800050B4
-
-Dolphin/Runtime/__mem.c:
-	.init       start:0x800050B4 end:0x800051EC
-
-Dolphin/os/__start.c:
+	.init       start:0x80003154 end:0x800050B
+	
+	start:0x800050B4 end:0x800051EC
+	Dolphin/os/__start.c:
 	.init       start:0x800051EC end:0x800054EC
 
 Dolphin/os/__ppc_eabi_init.cpp:
 	.init       start:0x800054EC end:0x80005544
-	.text       start:0x8016B7CC end:0x8016B860
+	.text       start:0x8016B7CC end:0x8016B8

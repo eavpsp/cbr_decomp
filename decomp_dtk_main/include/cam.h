@@ -16,7 +16,7 @@ struct CCamera : HSD_CObj //400 match
     CVec vec4; //d0 208
     char buff[68];
     CVec vec5; //0x124 292
-    char buff2[92];
+    char buff2[88];
     //400 0x190
     CCamera(){};
     virtual ~CCamera(){};

@@ -20,9 +20,9 @@ struct CObjVec : CVec
     virtual ~CObjVec(){};
 };
 
-struct CJObj //0x34 cur 0x40 12bytes too big may need packing
+struct CJObj 
 {   
-    char pad[16];
+  
     CVec vecA;
     CVec vecB;
     CVec vecC;
@@ -31,7 +31,7 @@ struct CJObj //0x34 cur 0x40 12bytes too big may need packing
     virtual ~CJObj(){};
 };
 
-struct CXObj :CJObj //0x34
+struct CXObj :CJObj 
 {
     CObjVec vecA;
     CObjVec vecB;
@@ -41,13 +41,13 @@ struct CXObj :CJObj //0x34
     CXObj(){};
     virtual ~CXObj(){};
 };
-struct CXObjIntp : CXObj //0x34
+struct CXObjIntp : CXObj
 {
     CXObjIntp(){};
     virtual ~CXObjIntp(){};
 };
 
-struct XObj : CXObjIntp//0x34
+struct XObj : CXObjIntp
 {
     CStatus status;
     CoordInfo coordInfo;
@@ -61,7 +61,7 @@ struct XObj : CXObjIntp//0x34
     XObj(){};
     virtual ~XObj(){};
 };
-struct Cursor :  XObj //0x34
+struct Cursor :  XObj 
 {
     Cursor(){};
     virtual ~Cursor(){};

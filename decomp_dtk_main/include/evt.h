@@ -1,9 +1,8 @@
 #ifndef evt
 #define evt
 #include <Dolphin/OS/OSStopwatch.h>
-struct CStatus //0x8
+struct CStatus 
 {
-    char flag[4];
     int currentStatus;
     CStatus() : currentStatus(0){};
     virtual ~CStatus(){};
@@ -14,24 +13,24 @@ struct CoordInfo
     CoordInfo(){};
     virtual ~CoordInfo(){};
 };
-struct CStopWatch : OSStopwatch //0x38
+struct CStopWatch : OSStopwatch 
 {
     CStopWatch(){};
     virtual ~CStopWatch(){};
 };
 struct CStack//0xc
 {
-    char pad[0xc];
+    char pad[12];
     CStack(){};
     virtual ~CStack(){};
 };
-struct CEventData //0x8
+struct CEventData
 {
-    char eventData[0x8];
+    int eventData;
     CEventData(){};
     virtual ~CEventData(){};
 };
-struct CEvt//0x64 match
+struct CEvt
 {
     int evtFlag;
     CEventData eventData;
@@ -39,7 +38,7 @@ struct CEvt//0x64 match
     CStack stackOne;
     CStack stackTwo;
     CStack stackThree;
-    char pad1[16];
+    char pad1[12];
     CEvt(){};
     virtual ~CEvt(){};
 

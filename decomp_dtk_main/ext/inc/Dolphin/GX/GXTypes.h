@@ -42,7 +42,7 @@ typedef struct _GXColorS10 {
 // Generic struct for texture objects.
 typedef struct _GXTexObj {
 		//118 58 +252 310
-	u8 pad[0xfc]; // _00 Updated to match
+	u8 pad[248]; // _00 Updated to match
 } GXTexObj;       // size 0x20
 
 // Internal struct for texture objects.

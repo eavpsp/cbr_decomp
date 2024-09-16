@@ -43,34 +43,35 @@ struct CPadEx //0x204 match
     virtual ~CPadEx(){};
 };
 
-struct TitleObject //0x3c48
+struct TitleObject
 {
     Cursor menuCursor;
     XObjDemo demoObj;
     CTpl textureFile;
     CTexObj texObjects[6];
+    char unk[4136];
     TitleObject():texObjects(){};
     virtual ~ TitleObject(){};
 };
-struct CCard//0xa020
+struct CCard
 {
-    char pad[0xa020];
+    char cardBuffer[40988];
     CCard(){};
     virtual ~CCard(){};
 
 };
-struct MemCard//0x16a20
+struct MemCard
 {
     CCard cardData;
-    char pad[0xC9E0];
+    char memBuffer[51704];
     MemCard(){};
     virtual ~MemCard(){};
 
 };
-struct CGs //0x8001b9b8 //0x17b0 match
+struct CGs
 {
     public:
-    char pad[0xA0];
+    char pad[156];
     CGScreen cgScreen;
     CGsRenderMode renderMode;
     CGsTevStage tevStages[2];
@@ -93,7 +94,7 @@ struct CGs //0x8001b9b8 //0x17b0 match
     CGs() :cgScreen(), renderMode(), tevStages(), texObj2(){};
     virtual ~CGs(){};
 };
-struct CBase//Inherited by CGAME //0x3334 Match
+struct CBase __attribute__((packed))//Inherited by CGAME //0x3334 Match 13108
 {
     //vars
     CGs gx;
@@ -142,7 +143,7 @@ struct CGame : CBase //Needs a lot of work
     XOBJS xobjData;
     CObjArchive CobjArchives[0x400];
     CEvt eventInfo;
-    CMsg cMsg[2];//should b 0x44620 cur 0x3d498
+    CMsg cMsg[2];
     CMotionControlCamera cmotionControlCam;
     XSound soundData;
     MemCard memCard;
@@ -153,9 +154,9 @@ struct CGame : CBase //Needs a lot of work
 
 
 };
-struct CThread//800
+struct CThread
 {
-    char pad[800];
+    char pad[796];
     CThread(){};
     virtual ~CThread(){};
 };

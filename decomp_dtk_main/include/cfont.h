@@ -1,10 +1,9 @@
 #ifndef cfont
 #define cfont
 #include<game_gx.h>
-struct CFont //match 0x13c
+struct CFont 
 {
-   
-    char buf[58];
+    char buf[54];
     CTexObj texture;
     CFont() :  texture() {
         buf[36] = 0;

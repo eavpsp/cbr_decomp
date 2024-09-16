@@ -1,9 +1,9 @@
 #ifndef movie
 #define movie
 
-struct CMovie //0xb4
+struct CMovie
 {
-    char pad[0xb4];
+    char unk[176];
     CMovie(){};
     virtual ~CMovie(){};
 };

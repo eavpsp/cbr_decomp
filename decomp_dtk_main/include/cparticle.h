@@ -3,14 +3,15 @@
 #include<cfile.h>
 struct CGenerator
 {
-    char pad[8];
+    char pad[4];
     CGenerator(){};
     virtual ~CGenerator(){};
 };
-struct CParticle //0x544
+struct CParticle
 {
     CGenerator generator[0x20];
     CFile files[4];
+    char unk[128];
     CParticle(): generator(), files(){};
     virtual ~CParticle(){};
 };
