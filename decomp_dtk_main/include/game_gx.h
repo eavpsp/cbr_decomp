@@ -97,7 +97,7 @@ struct CGScreen : GXRenderModeObj
 
 
 struct CGsRenderMode : HSD_PEDesc 
-   
+{
     char buf[32]; 
     virtual ~CGsRenderMode(){};
 };

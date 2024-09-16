@@ -41,7 +41,6 @@ struct CCameraActionAnim: CInterfaceCameraAction
 };
 struct CCameraActionDefault : CInterfaceCameraAction
 {
-   
 
     CCameraActionDefault() {};
     virtual ~CCameraActionDefault() {};
@@ -134,7 +133,12 @@ struct CCameraActionMap : CCameraActionAreaExM
     CCameraActionMap() {};
     virtual ~CCameraActionMap() {};
 };
-struct CCameraActionsSetup //Match
+struct CCameraActionLadr : CInterfaceCameraAction
+{
+    CCameraActionLadr() {};
+    virtual ~CCameraActionLadr() {};
+};
+struct CCameraActionsSetup 
 {
     CCameraActionMap actionMap;
     char unk[8];
@@ -161,6 +165,7 @@ struct CCameraActionsSetup //Match
     CVec a, b, c, d, e, f;
     char unk9[528];
     CStatus statusA, statusB;
+    int val;
 
 };
 #endif

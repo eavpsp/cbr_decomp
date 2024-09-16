@@ -13,6 +13,7 @@ struct CCameraMemento
     CVec vec_a;
     CVec vec_b;
     CVec vec_c;
+    char unk[12];
     CCameraMemento(){};
     virtual ~CCameraMemento(){};
     
@@ -53,6 +54,7 @@ struct CCameraActions //0x1e70  @ 0x80019e5c WIP
     CCameraActionEye camEye;
     CCameraActionAnim camAnim;
     CCameraActionsSetup camActionMap;
+    CCameraActionLadr actionLadr;
     CCameraActions() {};
     virtual ~CCameraActions() {};
 };

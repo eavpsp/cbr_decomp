@@ -50,3 +50,4 @@ void ParseStageData(int param, int len, int text)//Match 0x80013580
 
 
 CCameraActions newCamActions;
+//8001a11c
