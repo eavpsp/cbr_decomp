@@ -9,53 +9,53 @@ struct FileData
 {
     char fileName[256];
 };
-struct CFile : DVDFileInfo //0xe8 match
+struct CFile : DVDFileInfo //232
 {
-    //0x3c - DVDFileInfo 60
-    //
-    //0xAC
     FileData* filedata;
-    char pad[0xAC];
+    char unk0[162];
     CFile(){};
     virtual ~CFile(){};
 };
 
-struct ARPreCache//0x1e4
+struct ARPreCache//484
 {
     CFile filea;
     CFile fileb;
+    char unk0[12];
     ARPreCache(){};
     virtual ~ARPreCache(){};
 };
-struct ARCacheInfo//0x4008
+struct ARCacheInfo//16392
 {
-    char pad[0x4008];
+    char unk0[0x4008];
     ARCacheInfo(){};
     virtual ~ARCacheInfo(){};
 };
 struct CObjArchive : HSD_Archive
 {
-    //0x40
     CFile archive;
+    int unkval;
+    CObjArchive() {};
+    virtual ~CObjArchive() {};
 };
-struct CFileArchive : CFile
+struct CFileArchive : CFile //232
 {
     CFileArchive(){};
     virtual ~CFileArchive(){};
 };
-struct CJArchive //0x7c
+struct CJArchive //124
 {
     //4 v funcs
     char pad[0x7C];
     CJArchive(){};
     virtual ~CJArchive(){};
 };
-struct CJAnim : CJArchive //0x7c
+struct CJAnim : CJArchive //124
 {
     CJAnim(){};
     virtual ~CJAnim(){};
 };
-struct CAnmQueue//0x84
+struct CAnmQueue//132
 {
     char pad[0x84];
     CAnmQueue(){};
@@ -64,16 +64,16 @@ struct CAnmQueue//0x84
 
 struct CTpl : CFile
 {
-    int unkval;
+    int unkcval0;
     CTexObj textureObj;
     CTpl(){};
     virtual ~CTpl(){};
 };
 struct Logo //516
 {
-    CTpl logoTexture; //0xec
-    char unk[16];
-
+    char unk0[12];
+    CTpl logoTexture; 
+    char unk1[16];
     Logo(){};
     virtual ~Logo(){};
 };

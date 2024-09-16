@@ -128,10 +128,11 @@ struct CBase // Done
 };
 struct CGame : CBase //WIP
 {
+    int unkval111, unkval11;
     CFileArchive archive;
-    char unk0[2132];
+    char unk0[2140];
     CTpl textureFile;
-    char unk1[4];
+    int unkInt;
     CScrnFade screenFade;
     CScrnWipeCircle screenWipe_circle;
     char unk2[48];
@@ -161,9 +162,9 @@ struct CGame : CBase //WIP
     CTexObj textObj;
     CScrnColor screenColorB;
     CScrnColor screenColorC;
-    char unk[8];
+    int unkINt1;
     Logo logo;
-    CTpl logoFIle;
+    /*
     InfoScrn infoScreen;
     CScrnFade screenFade1;
     CScrnWipe wipe;
@@ -176,7 +177,7 @@ struct CGame : CBase //WIP
     CMotionControlCamera cmotionControlCam;
     XSound soundData;
     MemCard memCard;
-    CMovie movieData;
+    CMovie movieData;*/
     CGame(){};
     virtual ~CGame(){};
    // void ParseStageData(CGame* cgame, int len, char* text);
