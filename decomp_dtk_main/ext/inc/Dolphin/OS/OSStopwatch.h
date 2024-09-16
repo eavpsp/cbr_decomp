@@ -8,14 +8,12 @@ extern "C" {
 
 typedef struct OSStopwatch {
 	char* name;
-	u32 unk4; //padding
 	s64 total;
 	u32 hits;
 	s64 min;
 	s64 max;
 	s64 last;
 	BOOL running;
-	u32 unk34; //padding
 } OSStopwatch;
 
 void OSInitStopwatch(OSStopwatch* sw, char* name);

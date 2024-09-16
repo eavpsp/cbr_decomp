@@ -17,7 +17,9 @@ const ARPreCache* ARPreCacheData = new ARPreCache();
 const CThread* CGameThread = new CThread();
 */
 
-
+/// <summary>
+/// To be added to the actual CGame Struct , put here as raw replacements
+/// </summary>
 char* stage = "stage";//8065be68
 char* sep = ":";//8065be64
 char* slot = "slot";//8065be70

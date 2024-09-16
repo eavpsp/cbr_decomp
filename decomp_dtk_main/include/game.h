@@ -94,7 +94,7 @@ struct CGs
     CGs() :cgScreen(), renderMode(), tevStages(), texObj2(){};
     virtual ~CGs(){};
 };
-struct CBase __attribute__((packed))//Inherited by CGAME //0x3334 Match 13108
+struct CBase 
 {
     //vars
     CGs gx;

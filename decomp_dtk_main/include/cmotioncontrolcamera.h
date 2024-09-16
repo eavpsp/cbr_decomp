@@ -33,7 +33,7 @@ struct CMotionControlCamera //500
     virtual ~CMotionControlCamera(){};
 };
 
-struct CCameraActions //0x1e70  @ 0x80019e5c WIP
+struct CCameraActions //7792 Done
 {   
     CCameraActionDefault defaultCamAction;
     CCameraActionArea actionArea;
@@ -42,12 +42,12 @@ struct CCameraActions //0x1e70  @ 0x80019e5c WIP
     CVectorEaseInOutInterpolation easeInOutInterpolator2;
     CVectorEaseOutInterpolation easeOutInterpolator;
     CVectorEaseOutDivideInterpolation easeOutDivideInterpolator;
-    char buffer[24];
+    char unk0[24];
     CInterpolationLinear linearInterp;
     CInterpolationEaseInOut easeInOut;
     CInterpolationEaseOut easeOut;
     CInterpolationEaseOutDivide easeOutDivide;
-    char unk2[44];
+    char unk1[44];
     CCameraActionChase chaseCamera;
     CCameraActionEvt eventCamera;
     CCameraActionScroll2 scrollCamera;
@@ -55,6 +55,20 @@ struct CCameraActions //0x1e70  @ 0x80019e5c WIP
     CCameraActionAnim camAnim;
     CCameraActionsSetup camActionMap;
     CCameraActionLadr actionLadr;
+    CCameraActionReset camActionReset;
+    CVectorLinearInterpolation linIntp;
+    CVectorEaseInOutInterpolation easeIOIntp;
+    CVectorEaseOutInterpolation easeOIntp;
+    CVectorNoneInterpolation noIntp;
+    char unk2[16];
+    CInterpolationLinear linear;
+    CInterpolationEaseInOut easeIO;
+    CInterpolationEaseOut easeOutIntp;
+    CInterpolationNone noneIntp;
+    char unk3[16];
+    CCameraActionScroll camScroll;
+    CInterpolationEaseOutDivide easeOutDivideIntp;
+    char unk[52];
     CCameraActions() {};
     virtual ~CCameraActions() {};
 };
