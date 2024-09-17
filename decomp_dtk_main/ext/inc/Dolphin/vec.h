@@ -11,8 +11,9 @@ typedef struct Vec { //0xc
 	f32 x;
 	f32 y;
 	f32 z;
-} Vec;
+	Vec() : x(0.0f), y(0.0f), z(0.0f) {}
 
+} Vec;
 void PSVECAdd(const Vec*, const Vec*, Vec*);
 void PSVECSubtract(const Vec*, const Vec*, Vec*);
 void PSVECNormalize(const Vec*, Vec*);

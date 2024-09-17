@@ -13,6 +13,12 @@ struct CoordInfo
     CoordInfo(){};
     virtual ~CoordInfo(){};
 };
+struct AttrInfo
+{
+    int info, unk0, unk1;
+    AttrInfo() {};
+    virtual ~AttrInfo() {};
+};
 struct CStopWatch : OSStopwatch 
 {
     CStopWatch(){};
@@ -32,7 +38,6 @@ struct CEventData
 };
 struct CEvt
 {
-    int evtFlag;
     CEventData eventData;
     char pad[20];
     CStack stackOne;

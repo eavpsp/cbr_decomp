@@ -8,7 +8,7 @@
 struct CVec : public Vec //0xc
 {
    
-    CVec(){};
+    CVec() {};
     virtual ~CVec(){};
 };
 
@@ -20,45 +20,48 @@ struct CObjVec : CVec
     virtual ~CObjVec(){};
 };
 
-struct CJObj 
+struct CJObj  //Done
 {   
-  
+    int unkval;
     CVec vecA;
     CVec vecB;
     CVec vecC;
-
     CJObj(){};
     virtual ~CJObj(){};
 };
 
-struct CXObj : CJObj 
+struct CXObj : CJObj //Done
 {
     CJArchive archive;
     CObjVec objVecA, objVecB, objVecC;
-
+    CVec vec;
     //33 v funcs
     CXObj(){};
     virtual ~CXObj(){};
 };
-struct CXObjIntp : CXObj
+struct CXObjIntp : CXObj //done
 {
+    char unk[144];
     CJObj obj;
     CXObjIntp(){};
     virtual ~CXObjIntp(){};
 };
 
-struct XObj : CXObjIntp //WIP
+struct XObj : CXObjIntp //Done
 {
+    char unk0[12];
     CStatus status;
     CoordInfo coordInfo;
-    //AttrInfo
+    AttrInfo attrInfo;
+    char unk1[24];
     CVec vecA;
-    //gap here
+    char unk2[1312];
     CVec vecB;
-    //gap here
+    char unk3[8];
     CEvt objEvt;
+    char unk4[8];
     CAnmQueue animQueue;
-    CJArchive archive;
+    char unk5[100];
     CJAnim anim;
 
     XObj(){};
@@ -69,9 +72,26 @@ struct Cursor :  XObj
     Cursor(){};
     virtual ~Cursor(){};
 };
-
-
-
+struct MenuCursor : Cursor
+{
+    MenuCursor() {};
+    virtual ~MenuCursor() {};
+};
+struct MenuEx
+{
+    char unk0[40];
+    MenuCursor menuCursor;
+    char unk1[16];
+    MenuEx() {};
+    ~MenuEx() {};
+};
+struct MenuExSetup
+{
+    char unk0[4];
+    MenuEx menu;
+    MenuExSetup() {};
+    ~MenuExSetup() {};
+};
 struct XOBJS
 {
     char pad[0x11d8];

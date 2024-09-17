@@ -41,14 +41,18 @@ struct CPadEx //516
     virtual ~CPadEx(){};
 };
 
-struct TitleObject
+struct TitleObject //15436 Done
 {
+    char unk0[40];
     Cursor menuCursor;
+    char unk1[12];
     XObjDemo demoObj;
+    char unk2[40];
     CTpl textureFile;
+    int unkval;
     CTexObj texObjects[6];
-    char unk[4136];
-    TitleObject():texObjects(){};
+    char unk3[1208];
+    TitleObject(){};
     virtual ~ TitleObject(){};
 };
 struct CCard
@@ -162,12 +166,13 @@ struct CGame : CBase //WIP
     CTexObj textObj;
     CScrnColor screenColorB;
     CScrnColor screenColorC;
-    int unkINt1;
+    int unkval4;
     Logo logo;
-    /*
+    TitleObject titleObject;
+    int unkval5;
+    MenuExSetup menu0;
     InfoScrn infoScreen;
-    CScrnFade screenFade1;
-    CScrnWipe wipe;
+    //gap here
     CParticle particle;
     CScrnQuake screenQuake;
     XOBJS xobjData;
@@ -175,9 +180,10 @@ struct CGame : CBase //WIP
     CEvt eventInfo;
     CMsg cMsg[2];
     CMotionControlCamera cmotionControlCam;
+    CCameraActions camActions;
     XSound soundData;
     MemCard memCard;
-    CMovie movieData;*/
+    CMovie movieData;
     CGame(){};
     virtual ~CGame(){};
    // void ParseStageData(CGame* cgame, int len, char* text);

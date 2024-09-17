@@ -164,6 +164,8 @@ struct InfoScrn
     CScrnFade fader;
     CScrnWipe wipe;
     char unk[368];
+    InfoScrn() {};
+    virtual ~InfoScrn() {};
 };
 
 

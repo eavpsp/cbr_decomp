@@ -45,21 +45,21 @@ struct CLight : HSD_LObj //856
     CLight(){};
     virtual ~CLight(){};
 };
-struct XObjDemo : XObj ,GXTexObj ,GXColor //0x34
+struct XObjDemo : XObj //Done
 {
+    char unk0[12];
     CCamera camera;
+    char unk1[8];
     CLight lights[8];
-    XObjDemo() :lights(){};
+    XObjDemo() {};
     virtual ~XObjDemo(){};
 };
 struct FBMirror: CFbTexEff
 {
-    //0xfc
-   //funcs
 };
 struct FBMirrorEx : FBMirror//0x120
 {
-    char pad[24];
+    char unk[24];
     CCamera camera;
     FBMirrorEx(){};
     virtual ~FBMirrorEx(){};
