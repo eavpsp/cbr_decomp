@@ -9,10 +9,10 @@ struct FileData
 {
     char fileName[256];
 };
-struct CFile : DVDFileInfo //232
+struct CFile : DVDFileInfo //236
 {
     FileData* filedata;
-    char unk0[162];
+    char unk0[166];
     CFile(){};
     virtual ~CFile(){};
 };

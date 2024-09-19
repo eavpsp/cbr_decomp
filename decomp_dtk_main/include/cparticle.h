@@ -3,7 +3,7 @@
 #include<cfile.h>
 struct CGenerator
 {
-    char pad[4];
+    char pad[8];
     CGenerator(){};
     virtual ~CGenerator(){};
 };
@@ -11,7 +11,7 @@ struct CParticle
 {
     CGenerator generator[0x20];
     CFile files[4];
-    char unk[128];
+    char unk[124];
     CParticle(): generator(), files(){};
     virtual ~CParticle(){};
 };

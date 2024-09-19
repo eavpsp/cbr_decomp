@@ -16,11 +16,11 @@ struct CMsgFont
     CTexObj bg;
     char unk[28976];
 };
-struct CMsg 
+struct CMsg //280096 307392
 {
     CMsgData msgData;
     CMsgFont msgFont;
-    char unk[29070];
+    char unk[1776];
     CMsg(){};
     virtual ~CMsg(){};
 };

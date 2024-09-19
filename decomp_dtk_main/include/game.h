@@ -132,9 +132,9 @@ struct CBase // Done
 };
 struct CGame : CBase //WIP
 {
-    int unkval111, unkval11;
+    int unkval11;
     CFileArchive archive;
-    char unk0[2140];
+    char unk0[2136];
     CTpl textureFile;
     int unkInt;
     CScrnFade screenFade;
@@ -166,13 +166,11 @@ struct CGame : CBase //WIP
     CTexObj textObj;
     CScrnColor screenColorB;
     CScrnColor screenColorC;
-    int unkval4;
     Logo logo;
     TitleObject titleObject;
     int unkval5;
     MenuExSetup menu0;
-    InfoScrn infoScreen;
-    //gap here
+    InfoScrn infoScreen; //@ 8f6c needs to be 8f68
     CParticle particle;
     CScrnQuake screenQuake;
     XOBJS xobjData;
