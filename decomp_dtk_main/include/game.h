@@ -170,21 +170,26 @@ struct CGame : CBase //WIP
     TitleObject titleObject;
     int unkval5;
     MenuExSetup menu0;
-    InfoScrn infoScreen; //@ 8f6c needs to be 8f68
+    InfoScrn infoScreen; 
     CParticle particle;
+    int unkval6;
     CScrnQuake screenQuake;
     XOBJS xobjData;
+    char unk10[18444];
     CObjArchive CobjArchives[0x400];
+    char unk11[12];
     CEvt eventInfo;
+    int unkval7;
     CMsg cMsg[2];
+    char unk12[516];
     CMotionControlCamera cmotionControlCam;
     CCameraActions camActions;
-    XSound soundData;
-    MemCard memCard;
-    CMovie movieData;
+    //XSound soundData;
+    //MemCard memCard;
+    //CMovie movieData;
     CGame(){};
     virtual ~CGame(){};
-   // void ParseStageData(CGame* cgame, int len, char* text);
+   //void ParseStageData(CGame* cgame, int len, char* text);
 
 
 };

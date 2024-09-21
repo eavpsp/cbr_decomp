@@ -9,9 +9,10 @@ struct CGenerator
 };
 struct CParticle
 {
-    CGenerator generator[0x20];
+    int unkval;
     CFile files[4];
-    char unk[124];
+    char unk[16];
+    CGenerator generator[0x20];
     CParticle(): generator(), files(){};
     virtual ~CParticle(){};
 };

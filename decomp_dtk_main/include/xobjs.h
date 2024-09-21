@@ -94,7 +94,7 @@ struct MenuExSetup
 };
 struct XOBJS
 {
-    char pad[0x11d8];
+    char unk[4568];
     XOBJS(){};
     virtual ~XOBJS(){};
 };
