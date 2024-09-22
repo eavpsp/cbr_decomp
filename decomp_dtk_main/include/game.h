@@ -131,7 +131,7 @@ struct CBase // Done
     //16 v funcs funcs
    // virtual void ParseStageData(CGame* cgame, int len, char* text);
 };
-struct CGame : CBase //WIP 
+struct CGame : CBase //WIP A6C30 end: 0x80303030 683056
 {
     int unkval11;
     CFileArchive archive;
@@ -209,6 +209,5 @@ extern const ARCacheInfo* ARCacheInfoData;
 extern const FBMirrorEx FBMirrors[5];
 extern const ARPreCache* ARPreCacheData;
 extern const CThread* CGameThread;
-extern const CGame MainGame;
 
 #endif

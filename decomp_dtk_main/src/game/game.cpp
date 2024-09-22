@@ -9,12 +9,12 @@ game/game.cpp:
 #include<Dolphin/os.h>
 #include <game.h>
 //Start - Still baking in the oven
-const CGame MainGame;
-//const CPadEx *CurrentPad;
-//const ARCacheInfo *ARCacheInfoData = new ARCacheInfo();
-//const ARPreCache* ARPreCacheData = new ARPreCache();
-//const CThread* CGameThread = new CThread();
-
+//Need to overwrite old data with new ones
+CGame MainGame;
+ARCacheInfo arcacheInfo;
+ARPreCache arPreCache;
+CThread cThread;
+CFile* gameFile;
 
 /// <summary>
 /// To be added to the actual CGame Struct , put here as raw replacements
