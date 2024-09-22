@@ -258,6 +258,8 @@ config.libs = [
         "host": False,
         "objects": [
             Object(Matching, "game/game.cpp"),
+            Object(Matching, "game/game_gx.cpp"),
+            Object(Matching, "game/unk_functions.cpp"),
             Object(Matching, "test.cpp"),
             
 

@@ -13,14 +13,13 @@ struct CCameraMemento
     CVec vec_a;
     CVec vec_b;
     CVec vec_c;
-    char unk[12];
     CCameraMemento(){};
     virtual ~CCameraMemento(){};
     
 };
 struct CMotionControlCamera //500
 {
-    CCameraMemento camMemento;
+    CCamera camera;
     CVec vec_a;
     CVec vec_b;
     CVec vec_c;
@@ -28,7 +27,8 @@ struct CMotionControlCamera //500
     CVec vec_d;
     CVec vec_e;
     CVec vec_f;
-    CCamera camera;
+    CCameraMemento memento;
+
     CMotionControlCamera(){};
     virtual ~CMotionControlCamera(){};
 };

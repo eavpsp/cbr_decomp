@@ -21,6 +21,9 @@ game/game.cpp:
 	.data       start:0x8020FBC0 end:0x8020FBE0
 	.sdata2     start:0x8065BE64 end:0x8065BE78
 
+game/game_gx.cpp:
+	.text       start:0x800930E4 end:0x80093114
+
 Dolphin/TRK_MINNOW_DOLPHIN/mem_TRK.c:
 	.init       start:0x80003100 end:0x80003154
 	.text       start:0x8014D55C end:0x8014D614
@@ -48,3 +51,10 @@ Dolphin/os/__start.c:
 Dolphin/os/__ppc_eabi_init.cpp:
 	.init       start:0x800054EC end:0x80005544
 	.text       start:0x8016B7CC end:0x8016B860
+
+game/unk_functions.cpp:
+	.text       start:0x801A4ED8 end:0x801A4EE8
+	.text       start:0x801A4EE8 end:0x801A4EF8
+	.text       start:0x801A4EF8 end:0x801A4F08
+	.text       start:0x801A4F08 end:0x801A4F18
+	.text       start:0x801A4F18 end:0x801A4F28
