@@ -8,6 +8,7 @@ struct CSound
 };
 struct XSound:  CSound
 {
+    int unk;
     CFile soundFile;
     XSound(){};
     virtual ~XSound(){};

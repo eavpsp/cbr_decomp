@@ -27,6 +27,7 @@ struct CMotionControlCamera //500
     CVec vec_d;
     CVec vec_e;
     CVec vec_f;
+    int unkval;
     CCameraMemento memento;
 
     CMotionControlCamera(){};
@@ -68,7 +69,7 @@ struct CCameraActions //7792 Done
     char unk3[16];
     CCameraActionScroll camScroll;
     CInterpolationEaseOutDivide easeOutDivideIntp;
-    char unk[52];
+    char unk4[56];
     CCameraActions() {};
     virtual ~CCameraActions() {};
 };

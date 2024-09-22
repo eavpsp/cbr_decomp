@@ -64,8 +64,9 @@ struct CCard
 };
 struct MemCard
 {
+    char unk[28];
     CCard cardData;
-    char memBuffer[51704];
+    char memBuffer[51676];
     MemCard(){};
     virtual ~MemCard(){};
 
@@ -130,7 +131,7 @@ struct CBase // Done
     //16 v funcs funcs
    // virtual void ParseStageData(CGame* cgame, int len, char* text);
 };
-struct CGame : CBase //WIP
+struct CGame : CBase //WIP 
 {
     int unkval11;
     CFileArchive archive;
@@ -181,12 +182,15 @@ struct CGame : CBase //WIP
     CEvt eventInfo;
     int unkval7;
     CMsg cMsg[2];
-    char unk12[516];
     CMotionControlCamera cmotionControlCam;
+    char unk12[76];
     CCameraActions camActions;
-    //XSound soundData;
-    //MemCard memCard;
-    //CMovie movieData;
+    int unkval8;
+    XSound soundData;
+    char unk13[1264];
+    MemCard memCard;
+    char unk[1412];
+    CMovie movieData;
     CGame(){};
     virtual ~CGame(){};
    //void ParseStageData(CGame* cgame, int len, char* text);

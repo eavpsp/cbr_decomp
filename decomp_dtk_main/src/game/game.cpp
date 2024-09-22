@@ -6,6 +6,7 @@ game/game.cpp:
 
 */
 #include<globals.h>
+#include<Dolphin/os.h>
 //#include <game.h>
 //Start - Still baking in the oven
 /*

@@ -5,6 +5,8 @@
 /// </summary>
 int zz_801a4ee8_(int param_1, char* param_2)
 {
+	
+
 	return param_1 + (uint)*param_2 * 3;
 }
 /// <summary>
