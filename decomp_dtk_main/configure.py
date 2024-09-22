@@ -261,6 +261,8 @@ config.libs = [
             Object(Matching, "game/game_gx.cpp"),
             Object(Matching, "game/unk_functions.cpp"),
             Object(Matching, "test.cpp"),
+            Object(Matching, "JSystem/JKernel/JKRHeap.cpp"),
+            
             
 
         ],

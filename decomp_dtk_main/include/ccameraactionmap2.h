@@ -6,7 +6,6 @@ struct CInterfaceInterpolation
 {
     
     CInterfaceInterpolation() {};
-    virtual void GetCharSpace();
     virtual ~CInterfaceInterpolation() {};
     
 
@@ -16,9 +15,6 @@ struct CInterpolationEaseInOut : CInterfaceInterpolation
 {
     char buffer[24];
     CInterpolationEaseInOut() {};
-    virtual void zz_80135398_();
-    virtual void zz_80135280_();
-    virtual void zz_80135314_();
     virtual ~CInterpolationEaseInOut() {};
 };
 struct CInterpolationEaseOutDivide : CInterfaceInterpolation
@@ -68,10 +64,6 @@ struct CInterpolationLinear : CInterfaceInterpolation
         8020ff00 80 01 60 b8     addr       CalculateTimeStepForTriangleIntersection
         8020ff04 80 01 6e a0     addr       NSNMessengerScene::SceneCreated(void) 
     */
-
-    virtual void UpdateRayIntersection();
-    virtual void CalculateTimeStepForTriangleIntersection();
-    virtual void SceneCreated();
 
     virtual ~CInterpolationLinear() {};
 };

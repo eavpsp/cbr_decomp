@@ -7,16 +7,14 @@ game/game.cpp:
 */
 #include<globals.h>
 #include<Dolphin/os.h>
-//#include <game.h>
+#include <game.h>
 //Start - Still baking in the oven
-/*
 const CGame MainGame;
-const CPadEx *CurrentPad;
-const ARCacheInfo *ARCacheInfoData = new ARCacheInfo();
-const FBMirrorEx FBMirrors[5];//array size too small 0x2f4 cur 0x2b0
-const ARPreCache* ARPreCacheData = new ARPreCache();
-const CThread* CGameThread = new CThread();
-*/
+//const CPadEx *CurrentPad;
+//const ARCacheInfo *ARCacheInfoData = new ARCacheInfo();
+//const ARPreCache* ARPreCacheData = new ARPreCache();
+//const CThread* CGameThread = new CThread();
+
 
 /// <summary>
 /// To be added to the actual CGame Struct , put here as raw replacements
@@ -29,7 +27,7 @@ StageData stageData; //8020fbc0
 extern "C" char* strtok(char* charEval,char* seperator);
 extern "C" char* strcmp(char *__s1,char *__s2);
 extern "C" int find_stage_index(char *param_1);
-struct CGame;
+
 void ParseStageData(CGame* CurrentCGame, int len, char* text)//Match 0x80013580
 {
   char** currentChar = reinterpret_cast<char**>(text + 4);
