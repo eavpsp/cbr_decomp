@@ -1,13 +1,10 @@
 #ifndef xobjs
 #define xobjs
 #include<Dolphin/vec.h>
-#include<cam.h>
-
 #include<cfile.h>
 #include<evt.h>
 struct CVec : public Vec //0xc
 {
-   
     CVec() {};
     virtual ~CVec(){};
 };
@@ -29,13 +26,17 @@ struct CJObj  //Done
     CJObj(){};
     virtual ~CJObj(){};
 };
-
+struct hsdJObj {
+    char unk[984];
+};
 struct CXObj : CJObj //Done
 {
     CJArchive archive;
     CObjVec objVecA, objVecB, objVecC;
     CVec vec;
     //33 v funcs
+    //80025aa4
+    virtual void JumpHandler(double param_1, hsdJObj* param_2, int param_3);
     CXObj(){};
     virtual ~CXObj(){};
 };

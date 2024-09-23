@@ -259,8 +259,9 @@ config.libs = [
         "host": False,
         "objects": [
             Object(Matching, "game/game.cpp"),
+            Object(Matching, "game/gameobjects/xobj.cpp"),
             Object(Matching, "game/graphics/game_gx.cpp"),
-            Object(Matching, "game/camera/cameraaction.cpp"),
+            Object(Matching, "game/gameobjects/cameraaction.cpp"),
             Object(Matching, "game/unk_unused/unk_functions.cpp"),
             Object(Matching, "test.cpp"),
             

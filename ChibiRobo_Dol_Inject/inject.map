@@ -1,0 +1,69 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+                0x00000000803f0280                . = 0x803f0280
+
+.text           0x00000000803f0280       0xfc
+ *(.text)
+ .text          0x00000000803f0280       0xfc inject.o
+                0x00000000803f0280                SetDebugText
+                0x00000000803f02dc                SetDebugFloat
+                0x00000000803f0350                GetJump
+
+.glink          0x00000000803f037c        0x0
+ .glink         0x00000000803f037c        0x0 inject.o
+
+.rodata
+ *(.rodata*)
+
+.eh_frame       0x00000000803f037c       0x64
+ .eh_frame      0x00000000803f037c       0x64 inject.o
+
+.eh_frame       0x00000000803f03e0        0x0
+ .eh_frame      0x00000000803f03e0        0x0 inject.o
+
+.sdata2         0x00000000803f03e0        0x0
+ .sdata2        0x00000000803f03e0        0x0 inject.o
+
+.rela.dyn       0x00000000803f03e0        0x0
+ .rela.iplt     0x00000000803f03e0        0x0 inject.o
+
+.bss            0x00000000803f03e0        0x0
+ .bss           0x00000000803f03e0        0x0 inject.o
+
+.iplt           0x00000000803f03e0        0x0
+ .iplt          0x00000000803f03e0        0x0 inject.o
+
+.data           0x00000000803f03e0        0x0
+ *(.data)
+ .data          0x00000000803f03e0        0x0 inject.o
+
+.branch_lt      0x00000000803f03e0        0x0
+ .branch_lt     0x00000000803f03e0        0x0 inject.o
+                0x00000000803f03e8                . = (. + 0x8)
+
+.sdata          0x00000000803f03e8        0x0
+ *(.sdata)
+ .sdata         0x00000000803f03e8        0x0 inject.o
+                0x0000000080149754                OnActivate = 0x80149754
+                0x0000000080158f54                strlen = 0x80158f54
+                0x0000000080158e9c                strcpy = 0x80158e9c
+                0x00000000801d5f80                malloc = 0x801d5f80
+                0x00000000801569e0                vprintf = 0x801569e0
+                0x0000000080025aa4                JumpHandler = 0x80025aa4
+LOAD inject.o
+OUTPUT(obj_inject.o elf32-powerpc)
+
+.comment        0x0000000000000000       0x23
+ .comment       0x0000000000000000       0x23 inject.o
+                                         0x24 (size before relaxing)
+
+.gnu.attributes
+                0x0000000000000000       0x10
+ .gnu.attributes
+                0x0000000000000000       0x10 inject.o

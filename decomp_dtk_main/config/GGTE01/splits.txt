@@ -21,6 +21,9 @@ game/game.cpp:
 	.data       start:0x8020FBC0 end:0x8020FBE0
 	.sdata2     start:0x8065BE64 end:0x8065BE78
 
+game/gameobjects/xobj.cpp:
+	.text       start:0x80025AA4 end:0x80025B7C
+
 game/graphics/game_gx.cpp:
 	.text       start:0x800930E4 end:0x80093114
 

@@ -2,6 +2,11 @@
     "files.associations": {
         "*.c": "c",
         "forward.h": "c",
-        "gxtypes.h": "c"
+        "gxtypes.h": "c",
+        "debug.h": "c",
+        "printf.h": "c",
+        "types.h": "c",
+        "functionhelper.h": "c",
+        "os.h": "c"
     }
 }

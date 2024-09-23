@@ -6,7 +6,7 @@
 
 // r2 is  8051E360
 // r13 is 8051C680
-typedef enum enum_t;
+//typedef enum enum_t;
 typedef int BOOL;
 typedef unsigned int uint;
 
