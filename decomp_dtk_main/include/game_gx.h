@@ -156,6 +156,19 @@ struct CFbTexEff
 
 struct FbSubwin : CFbTexEff
 {
+    /*
+           8021041c 80 01 49 78     addr      initializeImageMemory_  field2_0x8
+           80210420 80 01 49 64     addr      KnotTableBlendEntry::_  field3_0xc
+           80210424 80 01 46 d0     addr      copyTextureAndUpdateGr  field4_0x10
+           80210428 80 01 48 c0     addr      update_float_value_bas  field5_0x14
+           8021042c 80 01 37 c0     addr      renderSceneWithMultipl  field6_0x18
+           virtual void fn_80014978(int param_1);
+        virtual void fn_80014964(int param_1);
+        virtual void fn_800146D0(int *param_1);
+        virtual void fn_800148C0(int param_1, int param_2);
+        virtual void fn_800137C0(int *param_1);
+    */
+    
     FbSubwin(){};
     virtual ~ FbSubwin(){};
 };

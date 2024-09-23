@@ -71,7 +71,7 @@ struct CTpl : CFile
 };
 struct Logo //516
 {
-    char unk0[12];
+    int unk0[3];
     CTpl logoTexture; 
     char unk1[16];
     Logo(){};

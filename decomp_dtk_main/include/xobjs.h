@@ -98,4 +98,9 @@ struct XOBJS
     XOBJS(){};
     virtual ~XOBJS(){};
 };
+struct XObjLeticker : XObj
+{
+    XObjLeticker() {};
+    virtual ~XObjLeticker() {};
+};
 #endif

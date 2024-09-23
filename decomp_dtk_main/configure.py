@@ -247,6 +247,7 @@ config.libs = [
         "cflags": cflags_runtime,
         "host": False,
         "objects": [
+            Object(Matching, "THP/THPAudio.cpp"),
             
 
         ],
@@ -258,10 +259,10 @@ config.libs = [
         "host": False,
         "objects": [
             Object(Matching, "game/game.cpp"),
-            Object(Matching, "game/game_gx.cpp"),
-            Object(Matching, "game/unk_functions.cpp"),
+            Object(Matching, "game/graphics/game_gx.cpp"),
+            Object(Matching, "game/camera/cameraaction.cpp"),
+            Object(Matching, "game/unk_unused/unk_functions.cpp"),
             Object(Matching, "test.cpp"),
-            Object(Matching, "JSystem/JKernel/JKRHeap.cpp"),
             
             
 

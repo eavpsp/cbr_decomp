@@ -8,7 +8,7 @@
 
 struct CCamera : HSD_CObj 
 {
-    char pad[8];
+    int pad[2];
     CVec vec1;
     CVec vec2;
     CVec vec3;

@@ -67,4 +67,6 @@ struct CInterpolationLinear : CInterfaceInterpolation
 
     virtual ~CInterpolationLinear() {};
 };
+
+
 #endif

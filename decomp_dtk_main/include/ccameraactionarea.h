@@ -148,8 +148,13 @@ struct CCameraActionMap : CCameraActionAreaExM
 struct CCameraActionLadr : CInterfaceCameraAction
 {
     int unk;
-    CCameraActionLadr() {};
+    CCameraActionLadr() : unk(0){};
     virtual ~CCameraActionLadr() {};
+};
+struct CCameraActionLeticker : CCameraActionLadr
+{
+    CCameraActionLeticker() {};
+    virtual ~CCameraActionLeticker() {};
 };
 struct CCameraActionsSetup 
 {

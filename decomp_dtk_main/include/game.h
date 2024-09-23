@@ -43,7 +43,7 @@ struct CPadEx //516
 
 struct TitleObject //15436 Done
 {
-    char unk0[40];
+    int unk0[10];
     Cursor menuCursor;
     char unk1[12];
     XObjDemo demoObj;
@@ -191,9 +191,11 @@ struct CGame : CBase //WIP A6C30 end: 0x80303030 683056
     MemCard memCard;
     char unk[1412];
     CMovie movieData;
+    virtual void ParseStageData(int len, char* text);//80 01 35 80
+    virtual int CheckTitleLogo();
+    virtual f32* GetMotionCamera();//80 00 a5 20
     CGame(){};
     virtual ~CGame(){};
-   //void ParseStageData(CGame* cgame, int len, char* text);
 
 
 };
@@ -209,5 +211,8 @@ extern const ARCacheInfo* ARCacheInfoData;
 extern const FBMirrorEx FBMirrors[5];
 extern const ARPreCache* ARPreCacheData;
 extern const CThread* CGameThread;
+
+//Game.cpp Functions
+
 
 #endif

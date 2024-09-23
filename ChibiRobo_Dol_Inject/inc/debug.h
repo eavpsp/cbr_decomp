@@ -7,6 +7,7 @@
 #include <stdbool.h>
 #include <types.h>
 #include <PowerPC_EABI_Support/MSL_C/MSL_Common/printf.h>
+#include <Dolphin/os.h>
 
 typedef struct
 {
