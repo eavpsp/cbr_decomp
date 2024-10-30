@@ -21,41 +21,43 @@ Linker script and memory map
 .rodata
  *(.rodata*)
 
-.eh_frame       0x00000000803f037c       0x64
- .eh_frame      0x00000000803f037c       0x64 inject.o
+.eh_frame       0x00000000803f037c       0x6c
+ .eh_frame      0x00000000803f037c       0x6c inject.o
 
-.eh_frame       0x00000000803f03e0        0x0
- .eh_frame      0x00000000803f03e0        0x0 inject.o
+.eh_frame       0x00000000803f03e8        0x0
+ .eh_frame      0x00000000803f03e8        0x0 inject.o
 
-.sdata2         0x00000000803f03e0        0x0
- .sdata2        0x00000000803f03e0        0x0 inject.o
+.sdata2         0x00000000803f03e8        0x0
+ .sdata2        0x00000000803f03e8        0x0 inject.o
 
-.rela.dyn       0x00000000803f03e0        0x0
- .rela.iplt     0x00000000803f03e0        0x0 inject.o
+.rela.dyn       0x00000000803f03e8        0x0
+ .rela.iplt     0x00000000803f03e8        0x0 inject.o
 
-.bss            0x00000000803f03e0        0x0
- .bss           0x00000000803f03e0        0x0 inject.o
+.bss            0x00000000803f03e8        0x0
+ .bss           0x00000000803f03e8        0x0 inject.o
 
-.iplt           0x00000000803f03e0        0x0
- .iplt          0x00000000803f03e0        0x0 inject.o
+.iplt           0x00000000803f03f0        0x0
+ .iplt          0x00000000803f03f0        0x0 inject.o
 
-.data           0x00000000803f03e0        0x0
+.data           0x00000000803f03e8        0x0
  *(.data)
- .data          0x00000000803f03e0        0x0 inject.o
+ .data          0x00000000803f03e8        0x0 inject.o
 
-.branch_lt      0x00000000803f03e0        0x0
- .branch_lt     0x00000000803f03e0        0x0 inject.o
-                0x00000000803f03e8                . = (. + 0x8)
+.branch_lt      0x00000000803f03e8        0x0
+ .branch_lt     0x00000000803f03e8        0x0 inject.o
+                0x00000000803f03f0                . = (. + 0x8)
 
-.sdata          0x00000000803f03e8        0x0
+.sdata          0x00000000803f03f0        0x0
  *(.sdata)
- .sdata         0x00000000803f03e8        0x0 inject.o
+ .sdata         0x00000000803f03f0        0x0 inject.o
                 0x0000000080149754                OnActivate = 0x80149754
                 0x0000000080158f54                strlen = 0x80158f54
                 0x0000000080158e9c                strcpy = 0x80158e9c
                 0x00000000801d5f80                malloc = 0x801d5f80
                 0x00000000801569e0                vprintf = 0x801569e0
                 0x0000000080025aa4                JumpHandler = 0x80025aa4
+                0x00000000801dd248                __assert = 0x801dd248
+                0x00000000801c89a8                HSD_JObjSetMtxDirtySub = 0x801c89a8
 LOAD inject.o
 OUTPUT(obj_inject.o elf32-powerpc)
 

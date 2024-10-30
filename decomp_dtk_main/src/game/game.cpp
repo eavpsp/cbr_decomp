@@ -12,6 +12,11 @@ game/game.cpp:
     .data       start:0x8020FBC0 end:0x8020FBE0
     .bss        start:0x8025C400 end:0x80303030
     .sdata2     start:0x8065BE64 end:0x8065BE78
+
+    game/game.cpp:
+    .text       start:0x80013580 end:0x8001364C
+    .data       start:0x8020FBC0 end:0x8020FBE0
+    .sdata2     start:0x8065BE64 end:0x8065BE78
 */
 #include<globals.h>
 #include<Dolphin/os.h>

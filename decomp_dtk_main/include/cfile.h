@@ -1,5 +1,5 @@
-#ifndef cfile
-#define cfile
+#ifndef cfile_h
+#define cfile_h
 #include<archive.h>
 #include<game_gx.h>
 #include <Dolphin/dvd.h>
@@ -13,6 +13,14 @@ struct CFile : DVDFileInfo //236
 {
     FileData* filedata;
     char unk0[166];
+    //8019fce4
+    virtual void fn_8019FCE4();
+    //8019fca0
+    //8019f91c
+    //8019f848
+    //8019f878
+    //8019f804
+    //8019f6ec
     CFile(){};
     virtual ~CFile(){};
 };
@@ -21,7 +29,7 @@ struct ARPreCache//484
 {
     CFile filea;
     CFile fileb;
-    char unk0[12];
+    char unk0[8];
     ARPreCache(){};
     virtual ~ARPreCache(){};
 };

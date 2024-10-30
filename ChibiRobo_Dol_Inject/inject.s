@@ -89,17 +89,19 @@ SetDebugFloat:
 GetJump:
 .LFB2:
 	.cfi_startproc
-	stwu 1,-16(1)
-	.cfi_def_cfa_offset 16
-	fctiwz 1,1
-	addi 9,1,8
-	stfiwx 1,0,9
-	lwz 9,8(1)
-	stb 9,52(3)
+	stwu 1,-8(1)
+	.cfi_def_cfa_offset 8
+	mflr 0
+	stw 0,12(1)
+	.cfi_offset 65, 4
 	lis 9,0x8031
 	ori 9,9,0x7800
-	stw 4,0(9)
-	addi 1,1,16
+	stw 3,0(9)
+	bl JumpHandler
+	lwz 0,12(1)
+	mtlr 0
+	.cfi_restore 65
+	addi 1,1,8
 	.cfi_def_cfa_offset 0
 	blr
 	.cfi_endproc

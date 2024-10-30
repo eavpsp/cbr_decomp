@@ -26,8 +26,9 @@ struct CJObj  //Done
     CJObj(){};
     virtual ~CJObj(){};
 };
-struct hsdJObj {
-    char unk[984];
+struct hsdJObj
+{
+    int unk[246];
 };
 struct CXObj : CJObj //Done
 {

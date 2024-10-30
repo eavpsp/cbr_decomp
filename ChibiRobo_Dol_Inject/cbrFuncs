@@ -4,4 +4,5 @@ strcpy = 0x80158e9c;
 malloc = 0x801d5f80;
 vprintf = 0x801569e0;
 JumpHandler = 0x80025aa4;
-
+__assert = 0x801dd248;
+HSD_JObjSetMtxDirtySub = 0x801c89a8;

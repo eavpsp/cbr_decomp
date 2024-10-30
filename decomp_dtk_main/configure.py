@@ -259,6 +259,7 @@ config.libs = [
         "host": False,
         "objects": [
             Object(Matching, "game/game.cpp"),
+            Object(Matching, "game/system/cfile.cpp"),
             Object(Matching, "game/gameobjects/xobj.cpp"),
             Object(Matching, "game/graphics/game_gx.cpp"),
             Object(Matching, "game/gameobjects/cameraaction.cpp"),
