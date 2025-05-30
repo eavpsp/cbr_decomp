@@ -1,5 +1,5 @@
 Chibi-Robo: PIA disassembly/decompilation to C++/C
-[![Discord Badge]][discord] ![alt text](https://img.shields.io/badge/Code-0.05%25-blue) ![alt text](https://img.shields.io/badge/Data-00.01%25-blue)
+[![Discord Badge]][discord] ![alt text](https://img.shields.io/badge/Code-0.04%25-blue) ![alt text](https://img.shields.io/badge/Data-00.01%25-blue)
 =============
 
 <!--
@@ -48,9 +48,8 @@ Goal
 This is currently a solo project. I work a lot and barely have time to code or be with my cats. Please feel free to support this project:
 https://www.buymeacoffee.com/itsemistro
 
-It builds an NON matching dol file.
+It builds an Matching dol file.
 
-If your goal is to compile a complete matching rom fork this from the initial upload.
 
 
 
@@ -101,7 +100,7 @@ Building
 ![](assets/dolphin-extract.png)
   - To save space, the only necessary files are the following. Any others can be deleted.
     - `sys/main.dol`
-    - `files/rels/*.rel`
+    - `files/rels/*.rel` *Rels must be extracted from QP.bin using [U8 Extractor](https://github.com/eavpsp/U8-ARC-Extractor-C-) and put into the orig/GGTE01/RELS/rel directory*
 - Configure:
   ```
   python configure.py
