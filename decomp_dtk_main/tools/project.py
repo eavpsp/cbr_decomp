@@ -27,7 +27,6 @@ if sys.platform == "cygwin":
         f"\n(Current path: {sys.executable})"
     )
 
-
 class ProjectConfig:
     def __init__(self):
         # Paths
@@ -108,6 +107,7 @@ class Object:
             "mw_version": None,
             "shiftjis": True,
             "source": name,
+            "asm": False,
         }
         self.options.update(options)
 
@@ -322,6 +322,14 @@ def generate_build_ninja(config, build_config):
     mwcc_cmd = f"{wrapper_cmd}{mwcc} $cflags -MMD -c $in -o $basedir"
     mwcc_implicit = [compilers_implicit or mwcc, wrapper_implicit]
 
+    # ASM
+    mwasm = compilers / f"binutils/powerpc-eabi-as{EXE}"
+    mwasm_cmd = (
+        f"{CHAIN}{mwasm} $cflags -o $out $in -MD $out.d"
+        + f" && {dtk} elf fixup $out $out"
+    )
+    mwasm_implicit = [compilers_implicit or mwcc, wrapper_implicit]
+
     # MWCC with UTF-8 to Shift JIS wrapper
     mwcc_sjis_cmd = f"{wrapper_cmd}{sjiswrap} {mwcc} $cflags -MMD -c $in -o $basedir"
     mwcc_sjis_implicit = [*mwcc_implicit, sjiswrap]
@@ -376,7 +384,15 @@ def generate_build_ninja(config, build_config):
         deps="gcc",
     )
     n.newline()
-
+    n.comment("MWASM build")
+    n.rule(
+        name="mwasm",
+        command=mwasm_cmd,
+        description="MWASM $out",
+        depfile="$out.d",
+        deps="gcc",
+    )
+    n.newline()
     n.comment("MWCC build (with UTF-8 to Shift JIS wrapper)")
     n.rule(
         name="mwcc_sjis",
@@ -554,7 +570,7 @@ def generate_build_ninja(config, build_config):
                 n.comment(f"{obj_name}: {lib_name} (linked {completed})")
                 n.build(
                     outputs=path(src_obj_path),
-                    rule="mwcc_sjis" if options["shiftjis"] else "mwcc",
+                    rule="mwasm" if options.get("asm", True) else "mwcc_sjis" if options.get("shiftjis", False) else "mwcc",
                     inputs=path(unit_src_path),
                     variables={
                         "mw_version": path(Path(mw_version)),
@@ -812,7 +828,7 @@ def generate_build_ninja(config, build_config):
     n.comment("Extract Bin")
     n.rule(
         name="extract_bin",
-        command=f"cmd /c tools\extract\Extractor_u8.exe orig\GGTE01\qp.bin",
+        command=r"cmd /c tools\extract\Extractor_u8.exe orig\GGTE01\qp.bin",
         description="Extract Bin $in",
         
     )

@@ -1,11 +1,11 @@
 #ifndef game_globals
 #define game_globals
-extern char* space;//8065bd74
-struct StageData
+struct StageData //Struct works but cannot initialize it?
 {
     int stageData_00;
     int member_04;
-    int _08[6];
+    char _08[8];
 };
+
 
 #endif

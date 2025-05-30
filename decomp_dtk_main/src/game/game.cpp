@@ -1,26 +1,8 @@
-/*
-game/game.cpp:
-	.text       start:0x80013580 end:0x8001364C
-	.data       start:0x8020FBC0 end:0x8020FBE0
-	.sdata2     start:0x8065BE64 end:0x8065BE78
 
-
-
-game/game.cpp:
-    .text       start:0x80013580 end:0x8001364C
-    .rodata     start:0x8020C99C end:0x8020C9B0
-    .data       start:0x8020FBC0 end:0x8020FBE0
-    .bss        start:0x8025C400 end:0x80303030
-    .sdata2     start:0x8065BE64 end:0x8065BE78
-
-    game/game.cpp:
-    .text       start:0x80013580 end:0x8001364C
-    .data       start:0x8020FBC0 end:0x8020FBE0
-    .sdata2     start:0x8065BE64 end:0x8065BE78
-*/
 #include<globals.h>
 #include<Dolphin/os.h>
 #include <game.h>
+
 //Start - Still baking in the oven
 //Need to overwrite old data with new ones
 //CGame MainGame;
@@ -29,19 +11,20 @@ game/game.cpp:
 //CThread cThread;
 //CFile* gameFile;
 
-/// <summary>
-/// To be added to the actual CGame Struct , put here as raw replacements
-/// </summary>
-char* stage = "stage";//8065be68
-char* sep = ":";//8065be64
-char* slot = "slot";//8065be70
-StageData stageData; //8020fbc0
+
+//Working
+char stage[8] = "stage";
+char sep[4] = ":";
+char slot[8] = "slot";
 
 extern "C" char* strtok(char* charEval,char* seperator);
 extern "C" char* strcmp(char *__s1,char *__s2);
 extern "C" int find_stage_index(char *param_1);
 
-void CGame::ParseStageData(int len, char* text)//Match 0x80013580
+extern "C" char space[4];//defined in globals
+
+
+void CGame::ParseStageData(int len, char* text)//Match 0x80013580 Working
 {
   char** currentChar = reinterpret_cast<char**>(text + 4);
   for (int i = 1; i < len; i++) {
@@ -65,6 +48,7 @@ void CGame::ParseStageData(int len, char* text)//Match 0x80013580
   }
   return;
 }
+/*
 //8000A4B8
 int CGame::CheckTitleLogo()
 {
@@ -101,3 +85,4 @@ f32* CGame::GetMotionCamera() //(0xe5d38)
 {
     return &this->cmotionControlCam.camera.viewport.right;
 }
+    */

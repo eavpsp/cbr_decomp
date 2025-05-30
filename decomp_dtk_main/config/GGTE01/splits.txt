@@ -16,12 +16,19 @@ Sections:
 game/globals.cpp:
 	.sdata2     start:0x8065BD74 end:0x8065BD78
 
+game/game.cpp:
+	.text       start:0x80013580 end:0x8001364C
+	.data       start:0x8020FBC0 end:0x8020FBE0
+
 game/graphics/game_gx.cpp:
 	.text       start:0x800930E4 end:0x80093114
 
-Dolphin/TRK_MINNOW_DOLPHIN/mem_TRK.c:
+TRK_MINNOW_DOLPHIN/mem_TRK.c:
 	.init       start:0x80003100 end:0x80003154
 	.text       start:0x8014D55C end:0x8014D614
+
+TRK_MINNOW_DOLPHIN/__exception.o:
+	.init       start:0x80003154 end:0x80005088
 
 Runtime.PPCEABI.H/global_destructor_chain.c:
 	.text       start:0x80150E18 end:0x80150E78
@@ -34,12 +41,16 @@ Runtime.PPCEABI.H/__init_cpp_exceptions.cpp:
 	.dtors      start:0x801FD6C0 end:0x801FD6C8
 	.sdata      start:0x8065AB50 end:0x8065AB54
 
+game/unk_unused/unk_functions.cpp:
+	.text       start:0x801A4ED8 end:0x801A4EE8
+	.text       start:0x801A4EE8 end:0x801A4EF8
+	.text       start:0x801A4EF8 end:0x801A4F08
+	.text       start:0x801A4F08 end:0x801A4F18
+	.text       start:0x801A4F18 end:0x801A4F28
+
 THP/THPAudio.cpp:
 	.text       start:0x801B66EC end:0x801B6714
 	.bss        start:0x8064A5E0 end:0x8064A780
-
-Dolphin/TRK_MINNOW_DOLPHIN/_exception.c:
-	.init       start:0x80003154 end:0x800050B4
 
 Dolphin/Runtime/__mem.c:
 	.init       start:0x800050B4 end:0x800051EC

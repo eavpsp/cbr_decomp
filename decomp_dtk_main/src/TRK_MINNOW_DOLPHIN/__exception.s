@@ -1,5 +1,5 @@
 .include "macros.inc"
-.file "_exception.s"
+.file "__exception.s"
 
 # 0x80003154 - 0x800050B4
 .section .init, "ax"
@@ -72,7 +72,7 @@
 /* 80003248 00000248  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8000324C 0000024C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 80003250 00000250  00 00 00 00 */	.4byte 0x00000000 /* invalid */
-/* 80003254 00000254  48 00 1E 34 */	b fn_80005088
+/* 80003254 00000254  48 00 1E 34 */	b __TRK_reset
 /* 80003258 00000258  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8000325C 0000025C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 80003260 00000260  00 00 00 00 */	.4byte 0x00000000 /* invalid */
@@ -2010,7 +2010,6 @@
 /* 80005080 00002080  38 60 1F 00 */	li r3, 0x1f00
 /* 80005084 00002084  4C 00 00 64 */	rfi
 .endfn pad_00_80003154_init
-
 .fn __TRK_reset, global
 .sym gTRKInterruptVectorTableEnd, global
 /* 80005088 00002088  94 21 FF F0 */	stwu r1, -0x10(r1)

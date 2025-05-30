@@ -207,6 +207,7 @@ struct CThread
 };
 //Game.cpp vars
 extern StageData stageData;//8020fbc0
+//8020fbc0
 extern const ARCacheInfo* ARCacheInfoData;
 extern const FBMirrorEx FBMirrors[5];
 extern const ARPreCache* ARPreCacheData;

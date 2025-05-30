@@ -122,9 +122,18 @@ config.compilers_tag = "20231018"
 config.dtk_tag = "v0.6.2"
 config.sjiswrap_tag = "v1.1.1"
 config.wibo_tag = "0.6.9"
+config.asflags = [
+    "-mgekko",
+    "--strip-local-absolute",
+    "-I include",
+    f"-I build/{config.version}/include",
+    f"--defsym version={version_num}",
+]
+
 
 # Project
 config.config_path = Path("config") / config.version / "config.yml"
+config.check_sha_path = Path("config") / config.version / "build.sha1"
 config.ldflags = [
     "-fp hardware",
     "-nodefaults",
@@ -159,6 +168,7 @@ cflags_base = [
     "-i ext/sysdolphin/baselib",
     "-i ext/sysdolphin",
     f"-i build/{config.version}/include",
+    "-multibyte",
     f"-DVERSION={version_num}",
 ]
 
@@ -177,6 +187,27 @@ cflags_runtime = [
     "-common off",
 	"-inline auto",
 ]
+# Metrowerks library flags
+cflags_trk = [
+    *cflags_base,
+    "-use_lmw_stmw on",
+    "-str reuse,readonly",
+    "-common off",
+    "-sdata 0",
+    "-sdata2 0",
+    "-inline auto,deferred",
+    "-enum min",
+    "-sdatathreshold 0"
+]
+# Metrowerks library asm flags
+cflags_asm = [
+    "-mgekko",
+    "--strip-local-absolute",
+    "-I include",
+    f"-I build/{config.version}/include",
+    f"--defsym version={version_num}",
+]
+
 
 # REL flags
 cflags_rel = [
@@ -233,14 +264,24 @@ config.libs = [
         "cflags": cflags_runtime,
         "host": False,
         "objects": [
-            Object(Matching, "Dolphin/TRK_MINNOW_DOLPHIN/mem_TRK.c"),
-            Object(Matching, "Dolphin/TRK_MINNOW_DOLPHIN/_exception.o"),
             Object(Matching, "Dolphin/Runtime/__mem.c"),
             Object(Matching, "Dolphin/os/__start.c"),
             Object(Matching, "Dolphin/os/__ppc_eabi_init.cpp"),
             
         ],
     },
+       {
+        "lib": "TRK_MINNOW_DOLPHIN",
+        "mw_version": "GC/1.3",
+        "cflags": cflags_trk,
+        "host": False,
+        "objects": [
+            Object(Matching, "TRK_MINNOW_DOLPHIN/mem_TRK.c"),
+            Object(Matching, "TRK_MINNOW_DOLPHIN/__exception.o"),
+            
+        ],
+    },
+     
      {
         "lib": "SysDolphin",
         "mw_version": config.linker_version,
@@ -258,14 +299,10 @@ config.libs = [
         "cflags": cflags_runtime,
         "host": False,
         "objects": [
-            Object(Matching, "game/game.cpp"),
-            Object(Matching, "game/system/cfile.cpp"),
-            Object(Matching, "game/gameobjects/xobj.cpp"),
             Object(Matching, "game/graphics/game_gx.cpp"),
-            Object(Matching, "game/gameobjects/cameraaction.cpp"),
+            Object(Matching, "game/globals.cpp"),
+            Object(Matching, "game/game.cpp"),
             Object(Matching, "game/unk_unused/unk_functions.cpp"),
-            Object(Matching, "test.cpp"),
-            
             
 
         ],
