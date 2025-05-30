@@ -5,7 +5,7 @@
 
 //Start - Still baking in the oven
 //Need to overwrite old data with new ones
-//CGame MainGame;
+//CGame MainGame;//.bss:0x8025C400
 //ARCacheInfo arcacheInfo;
 //ARPreCache arPreCache;
 //CThread cThread;
@@ -22,7 +22,7 @@ extern "C" char* strcmp(char *__s1,char *__s2);
 extern "C" int find_stage_index(char *param_1);
 
 extern "C" char space[4];//defined in globals
-
+char MainGame[0xA6C30]; //.bss:0x8025C400 size:0xA6C30 Crude Match
 
 void CGame::ParseStageData(int len, char* text)//Match 0x80013580 Working
 {
@@ -80,9 +80,10 @@ int CGame::CheckTitleLogo()
  
     return ((int)(-uVar2 | uVar2) >> 0x1f) + 2;
 }
+
 //8000A520
 f32* CGame::GetMotionCamera() //(0xe5d38)
 {
     return &this->cmotionControlCam.camera.viewport.right;
 }
-    */
+*/

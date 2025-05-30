@@ -18,6 +18,7 @@ game/globals.cpp:
 
 game/game.cpp:
 	.text       start:0x80013580 end:0x8001364C
+	.bss        start:0x8025C400 end:0x80303030
 	.sdata2     start:0x8065BE64 end:0x8065BE78
 
 game/graphics/game_gx.cpp:
@@ -42,11 +43,7 @@ Runtime.PPCEABI.H/__init_cpp_exceptions.cpp:
 	.sdata      start:0x8065AB50 end:0x8065AB54
 
 game/unk_unused/unk_functions.cpp:
-	.text       start:0x801A4ED8 end:0x801A4EE8
-	.text       start:0x801A4EE8 end:0x801A4EF8
-	.text       start:0x801A4EF8 end:0x801A4F08
-	.text       start:0x801A4F08 end:0x801A4F18
-	.text       start:0x801A4F18 end:0x801A4F28
+	.text       start:0x801A4ED8 end:0x801A4F28
 
 THP/THPAudio.cpp:
 	.text       start:0x801B66EC end:0x801B6714
