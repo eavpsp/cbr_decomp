@@ -276,6 +276,8 @@ config.libs = [
         "objects": [
             Object(Matching, "TRK_MINNOW_DOLPHIN/mem_TRK.c"),
             Object(Matching, "TRK_MINNOW_DOLPHIN/__exception.o"),
+            Object(Matching, "TRK_MINNOW_DOLPHIN/dolphin_trk.c"),
+            
             
         ],
     },
