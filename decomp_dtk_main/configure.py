@@ -163,10 +163,8 @@ cflags_base = [
     "-str reuse",
 	"-multibyte", # For Wii compilers, replace with `-enc SJIS`
     "-i include",
-    "-i ext/inc",
-    "-i ext/inc/stl",
-    "-i ext/sysdolphin/baselib",
-    "-i ext/sysdolphin",
+    "-i src/sysdolphin/baselib",
+    "-i src/sysdolphin",
     f"-i build/{config.version}/include",
     "-multibyte",
     f"-DVERSION={version_num}",
