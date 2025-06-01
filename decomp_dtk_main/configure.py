@@ -270,7 +270,7 @@ config.libs = [
     },
        {
         "lib": "TRK_MINNOW_DOLPHIN",
-        "mw_version": "GC/1.3",
+        "mw_version": config.linker_version,
         "cflags": cflags_trk,
         "host": False,
         "objects": [
