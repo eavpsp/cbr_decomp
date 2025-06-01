@@ -101,6 +101,7 @@ Building
   - To save space, the only necessary files are the following. Any others can be deleted.
     - `sys/main.dol`
     - `files/rels/*.rel` *Rels must be extracted from QP.bin using [U8 Extractor](https://github.com/eavpsp/U8-ARC-Extractor-C-) and put into the orig/GGTE01/RELS/rel directory*
+    - Make sure to copy the built __exception.o object from src to the equivalent build directory.
 - Configure:
   ```
   python configure.py
