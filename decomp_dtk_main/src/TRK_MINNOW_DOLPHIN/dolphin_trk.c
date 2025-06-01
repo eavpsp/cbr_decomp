@@ -90,9 +90,11 @@ initCommTableSuccess:
 	b TRK_main //Jump to TRK_main
 #endif // clang-format on
 }
+//TODO -> InitMetroTRK_BBA 0x8014F5C8
 /*
+//0x8014FB4C
 void EnableMetroTRKInterrupts(void) { EnableEXI2Interrupts(); }
-
+//0x8014FAF4
 u32 TRKTargetTranslate(u32 param_0)
 {
 	if (param_0 >= lc_base) {
@@ -113,7 +115,7 @@ void TRK_copy_vector(u32 offset)
 	TRK_memcpy(destPtr, gTRKInterruptVectorTable + offset, 0x100);
 	TRK_flush_cache(destPtr, 0x100);
 }
-
+// /0x8014F9C8
 void __TRK_copy_vectors(void)
 {
 	int i;
@@ -127,7 +129,7 @@ void __TRK_copy_vectors(void)
 		}
 	}
 }
-
+//0x8014F97C
 DSError TRKInitializeTarget()
 {
 	gTRKState.isStopped = TRUE;

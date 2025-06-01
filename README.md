@@ -1,5 +1,5 @@
 Chibi-Robo: PIA disassembly/decompilation to C++/C
-[![Discord Badge]][discord] ![alt text](https://img.shields.io/badge/Code-0.42%25-blue) ![alt text](https://img.shields.io/badge/Data-14.83%25-blue)
+[![Discord Badge]][discord] ![alt text](https://img.shields.io/badge/Code-0.48%25-blue) ![alt text](https://img.shields.io/badge/Data-14.83%25-blue)
 =============
 
 <!--
