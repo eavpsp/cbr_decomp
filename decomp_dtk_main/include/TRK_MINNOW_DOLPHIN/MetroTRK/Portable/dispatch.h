@@ -1,7 +1,7 @@
 #ifndef METROTRK_PORTABLE_DISPATCH_H
 #define METROTRK_PORTABLE_DISPATCH_H
 
-#include "dolphin/types.h"
+#include "types.h"
 #include "PowerPC_EABI_Support/MetroTRK/trk.h"
 
 #ifdef __cplusplus

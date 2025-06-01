@@ -2,7 +2,7 @@
 #define METROTRK_PORTABLE_MSGBUF_H
 
 #include "PowerPC_EABI_Support/MetroTRK/trk.h"
-#include "stddef.h"
+//#include "stddef.h"
 
 #ifdef __cplusplus
 extern "C" {

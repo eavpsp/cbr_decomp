@@ -24,12 +24,20 @@ game/game.cpp:
 game/graphics/game_gx.cpp:
 	.text       start:0x800930E4 end:0x80093114
 
+TRK_MINNOW_DOLPHIN/nubinit.c:
+	.text       start:0x8014AE1C end:0x8014AFB4
+	.bss        start:0x805C6BE0 end:0x805C6BE8
+
 TRK_MINNOW_DOLPHIN/mem_TRK.c:
 	.init       start:0x80003100 end:0x80003154
 	.text       start:0x8014D55C end:0x8014D614
 
 TRK_MINNOW_DOLPHIN/dolphin_trk.c:
 	.text       start:0x8014F530 end:0x8014F5C8
+
+TRK_MINNOW_DOLPHIN/main_TRK.c:
+	.text       start:0x8014FB6C end:0x8014FBC4
+	.bss        start:0x805C8B40 end:0x805C8B48
 
 TRK_MINNOW_DOLPHIN/__exception.o:
 	.init       start:0x80003154 end:0x80005088

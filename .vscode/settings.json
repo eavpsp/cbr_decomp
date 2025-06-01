@@ -8,7 +8,13 @@
         "__start.h": "c",
         "types.h": "c",
         "math.h": "c",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "nubinit.h": "c",
+        "main_trk.h": "c",
+        "usr_put.h": "c",
+        "targimpl.h": "c",
+        "dolphin_trk.h": "c",
+        "dolphin_trk_glue.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

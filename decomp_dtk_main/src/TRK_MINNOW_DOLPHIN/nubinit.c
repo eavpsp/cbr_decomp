@@ -8,11 +8,11 @@
 #include "TRK_MINNOW_DOLPHIN/Os/dolphin/dolphin_trk_glue.h"
 #include "TRK_MINNOW_DOLPHIN/Os/dolphin/usr_put.h"
 #include "TRK_MINNOW_DOLPHIN/ppc/Generic/targimpl.h"
-
+//.bss:0x805C6BE0
 BOOL gTRKBigEndian;
 
 BOOL TRKInitializeEndian(void);
-
+//.text:0x8014AE68
 DSError TRKInitializeNub(void)
 {
 	DSError ret;
@@ -45,13 +45,14 @@ DSError TRKInitializeNub(void)
 
 	return ret;
 }
+//.text:0x8014AE44
 
 DSError TRKTerminateNub(void)
 {
 	TRKTerminateSerialHandler();
 	return DS_NoError;
 }
-
+//.text:0x8014AE1C
 void TRKNubWelcome(void)
 {
 	TRK_board_display("MetroTRK for GAMECUBE v0.10");
