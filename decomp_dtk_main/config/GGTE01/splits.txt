@@ -16,17 +16,415 @@ Sections:
 game/globals.cpp:
 	.sdata2     start:0x8065BD74 end:0x8065BD78
 
+game/system/incrementinteger.cpp:
+	.text       start:0x80012A7C end:0x80012A8C
+
 game/game.cpp:
 	.text       start:0x80013580 end:0x8001364C
 	.bss        start:0x8025C400 end:0x80303030
 	.sdata2     start:0x8065BE64 end:0x8065BE78
 
+game/system/cgamesfx.cpp:
+	.text       start:0x8001DC10 end:0x8001DC20
+
+game/system/audiostate.cpp:
+	.text       start:0x8001E00C end:0x8001E044
+
+game/system/stringregistry.cpp:
+	.text       start:0x8001E044 end:0x8001E11C
+	.rodata     start:0x801FED84 end:0x801FEDD0
+
+game/system/vecscale.cpp:
+	.text       start:0x8002442C end:0x800244A0
+
+game/gameobjects/xobj.cpp:
+	.text       start:0x80025AA4 end:0x80025B7C
+
+game/system/flagutil.cpp:
+	.text       start:0x800313A4 end:0x800313D8
+
+game/system/isbitset.cpp:
+	.text       start:0x80051C60 end:0x80051CBC
+
+game/system/normalizedposition.cpp:
+	.text       start:0x800621E0 end:0x80062390
+
+game/system/floatcompare.cpp:
+	.text       start:0x800665E0 end:0x800665FC
+
+game/system/valonoff.cpp:
+	.text       start:0x80068B48 end:0x80068B98
+
+game/system/initcameraparams.cpp:
+	.text       start:0x8006D5A4 end:0x8006D824
+
+game/system/resetglobals.cpp:
+	.text       start:0x8006D824 end:0x8006D850
+
+game/system/resetcameradata.cpp:
+	.text       start:0x8006D850 end:0x8006DAF4
+
+game/system/getplayerprompt.cpp:
+	.text       start:0x8006DBF0 end:0x8006DC18
+
+game/system/getvalfromptr.cpp:
+	.text       start:0x8006DFC4 end:0x8006E034
+
+game/system/resourceptr1.cpp:
+	.text       start:0x8006E034 end:0x8006E0A4
+
+game/system/resourceu16a.cpp:
+	.text       start:0x8006E0A4 end:0x8006E0EC
+
+game/system/resourceptr2.cpp:
+	.text       start:0x8006E0EC end:0x8006E240
+
+game/system/resourceu8extra.cpp:
+	.text       start:0x8006E240 end:0x8006E28C
+
+game/system/resourceu16b.cpp:
+	.text       start:0x8006E28C end:0x8006E3AC
+
+game/system/resourcebitfield.cpp:
+	.text       start:0x8006E3AC end:0x8006E49C
+
+game/system/resourceptr3.cpp:
+	.text       start:0x8006E49C end:0x8006E580
+
+game/system/resourcerange.cpp:
+	.text       start:0x8006E580 end:0x8006E7BC
+
+game/system/checkmainflags.cpp:
+	.text       start:0x8006E7BC end:0x8006E7FC
+
+game/system/resourcevalues.cpp:
+	.text       start:0x8006E7FC end:0x8006EC50
+
+game/system/initdevicedata.cpp:
+	.text       start:0x8006EC50 end:0x8006ED90
+
+game/system/deviceindextables.cpp:
+	.text       start:0x8006ED90 end:0x8006EE24
+
+game/system/handlemoduleloading.cpp:
+	.text       start:0x8006EE24 end:0x8006F338
+
+game/system/getresultfromglobal.cpp:
+	.text       start:0x8006F338 end:0x8006F390
+
+game/system/getshortfields.cpp:
+	.text       start:0x8006F390 end:0x8006F3BC
+
+game/system/dataarambaseaddr.cpp:
+	.text       start:0x8006F4B8 end:0x8006F4C8
+
+game/system/printmoduleinfo.cpp:
+	.text       start:0x8006F4C8 end:0x8006F544
+
+game/system/closeanddatacleanup.cpp:
+	.text       start:0x8006F544 end:0x8006F5D4
+
+game/system/startloadmoduleexec.cpp:
+	.text       start:0x8006F5D4 end:0x8006F600
+
+game/system/getmaskedstagevalue.cpp:
+	.text       start:0x8006F600 end:0x8006F654
+
+game/system/findstageindex.cpp:
+	.text       start:0x8006F654 end:0x8006F73C
+
+game/system/getstageoffsetext4.cpp:
+	.text       start:0x8006F73C end:0x8006F80C
+
+game/system/stagelookup.cpp:
+	.text       start:0x8006F80C end:0x8006F924
+
+game/system/getstagecount.cpp:
+	.text       start:0x8006F924 end:0x8006F94C
+
+game/system/registershortcut.cpp:
+	.text       start:0x8006FCAC end:0x8006FD8C
+
+game/system/initparams.cpp:
+	.text       start:0x80072214 end:0x80072224
+
+game/system/ringbufferupdate.cpp:
+	.text       start:0x8007BE0C end:0x8007BE54
+
+game/system/gdevccshutdown.cpp:
+	.text       start:0x8007F038 end:0x8007F040
+
+game/system/initcameramemento.cpp:
+	.text       start:0x8007FE14 end:0x8007FE38
+
+game/system/getvalueataddr.cpp:
+	.text       start:0x80087A40 end:0x80087A4C
+
+game/system/disableobjfunc.cpp:
+	.text       start:0x80088848 end:0x800888A0
+
+game/system/carddeletehandler.cpp:
+	.text       start:0x80088B18 end:0x80088BF8
+
+game/system/cardwrappers.cpp:
+	.text       start:0x80088E48 end:0x80088E78
+
+game/system/initcardhandler.cpp:
+	.text       start:0x80088E78 end:0x80088F20
+
+game/system/cardwrappers2.cpp:
+	.text       start:0x80089258 end:0x80089288
+
+game/system/initializecard.cpp:
+	.text       start:0x80089288 end:0x8008933C
+
+game/system/initializecarddata.cpp:
+	.text       start:0x80089860 end:0x80089890
+
+game/system/initializecard2.cpp:
+	.text       start:0x80089890 end:0x8008997C
+
+game/system/loadcardhandler.cpp:
+	.text       start:0x80089C5C end:0x80089D3C
+
+game/system/cardhandlerthread.cpp:
+	.text       start:0x8008A1C0 end:0x8008A2A0
+
+game/system/gdevccshutdown2.cpp:
+	.text       start:0x8008A2A0 end:0x8008A2A8
+
+game/system/gdevccshutdown3.cpp:
+	.text       start:0x8008A818 end:0x8008A820
+
+game/system/project3d.cpp:
+	.text       start:0x8008B5D4 end:0x8008B6A0
+
+game/system/vecelemmul.cpp:
+	.text       start:0x8008C1F4 end:0x8008C274
+
+game/system/findlargestvalue.cpp:
+	.text       start:0x8008C7CC end:0x8008C8A4
+
+game/system/clearinterrupts.cpp:
+	.text       start:0x8008DEC0 end:0x8008DF34
+
+game/system/cleanupobject.cpp:
+	.text       start:0x800911C0 end:0x800912B4
+
+game/system/processtreenode.cpp:
+	.text       start:0x800912B4 end:0x8009136C
+
+game/system/processtranslationx.cpp:
+	.text       start:0x8009136C end:0x8009146C
+
+game/system/renderchildupdatestate.cpp:
+	.text       start:0x8009146C end:0x800914CC
+
+game/system/translatexdeps.cpp:
+	.text       start:0x800914CC end:0x80091540
+
+game/system/processobjectsintree.cpp:
+	.text       start:0x80091540 end:0x8009172C
+
+game/system/updatechildobjtree.cpp:
+	.text       start:0x8009172C end:0x80091784
+
+game/system/renderdepthfx.cpp:
+	.text       start:0x80091C44 end:0x80091C80
+
+game/system/initgraphicsettings.cpp:
+	.text       start:0x800928E8 end:0x800929C4
+
 game/graphics/game_gx.cpp:
 	.text       start:0x800930E4 end:0x80093114
+
+game/system/updateobjectsinlinkedlistwithmask.cpp:
+	.text       start:0x800970E4 end:0x800971C4
+
+game/system/getdat.cpp:
+	.text       start:0x8009AFD4 end:0x8009AFEC
+
+game/system/setelementinarray.cpp:
+	.text       start:0x8009C2C8 end:0x8009C398
+
+game/system/updatejunktypeavailabilityflags.cpp:
+	.text       start:0x8009C398 end:0x8009C8E0
+
+game/system/configureeffectbuffer.cpp:
+	.text       start:0x8009CED4 end:0x8009CF34
+
+game/system/handletextobjects.cpp:
+	.text       start:0x8009FCC4 end:0x8009FDE4
+
+game/system/isprocessconditionmet.cpp:
+	.text       start:0x8009FDE4 end:0x8009FEDC
+
+game/system/iswithinrange.cpp:
+	.text       start:0x8009FEDC end:0x8009FF40
+
+game/system/leadingzeros.cpp:
+	.text       start:0x800A2C34 end:0x800A2C98
+
+game/system/copyvector3.cpp:
+	.text       start:0x800A2C98 end:0x800A2CC8
+
+game/system/getcameravaluesearch.cpp:
+	.text       start:0x800A2CE4 end:0x800A2E2C
+
+game/system/getcameravalue.cpp:
+	.text       start:0x800A2E2C end:0x800A2E88
+
+game/system/getviewportaspect.cpp:
+	.text       start:0x800A4574 end:0x800A45B8
+
+game/system/hsdaddshadowobjects.cpp:
+	.text       start:0x800A45B8 end:0x800A4678
+
+game/system/checkstatus.cpp:
+	.text       start:0x800A84D0 end:0x800A85DC
+
+game/system/getvalflag.cpp:
+	.text       start:0x800A8640 end:0x800A867C
+
+game/system/normalizedbytevalues.cpp:
+	.text       start:0x800B1B24 end:0x800B1C5C
+
+game/system/calcdistancefromorigin.cpp:
+	.text       start:0x800B1C5C end:0x800B1D50
+
+game/system/miscsmallaccessors1.cpp:
+	.text       start:0x800B1D50 end:0x800B1E0C
+
+game/system/checkplayerdistfromground.cpp:
+	.text       start:0x800B1E0C end:0x800B1EC0
+
+game/system/computewrappeddistance.cpp:
+	.text       start:0x800B1EC0 end:0x800B2004
+
+game/system/miscsmallaccessors2.cpp:
+	.text       start:0x800B2004 end:0x800B2108
+
+game/system/miscsmallaccessors3.cpp:
+	.text       start:0x800B2108 end:0x800B247C
+
+game/system/miscsmallaccessors4.cpp:
+	.text       start:0x800B247C end:0x800B27E0
+
+game/system/miscsmallaccessors5.cpp:
+	.text       start:0x800B27E0 end:0x800B2ABC
+
+game/system/findmatchingbucket.cpp:
+	.text       start:0x800B2ABC end:0x800B2BB0
+
+game/system/setobjectflagsandtimer.cpp:
+	.text       start:0x800B2BB0 end:0x800B2BD0
+
+game/system/resetjobjmatrixdirty.cpp:
+	.text       start:0x800B2BD0 end:0x800B2CFC
+
+game/system/miscsmallaccessors6.cpp:
+	.text       start:0x800B2CFC end:0x800B30C8
+
+game/system/miscsmallaccessors7.cpp:
+	.text       start:0x800B30C8 end:0x800B31B8
+
+game/system/handlemodelloadinganimating.cpp:
+	.text       start:0x800B31B8 end:0x800B35CC
+
+game/system/handlefielderdesirestate.cpp:
+	.text       start:0x800B35CC end:0x800B4F28
+
+game/system/getboxlengths.cpp:
+	.text       start:0x800B4F28 end:0x800B501C
+
+game/system/processdatawithinit.cpp:
+	.text       start:0x800B501C end:0x800B51FC
+
+game/system/initparticleemission.cpp:
+	.text       start:0x800B51FC end:0x800B53A0
+
+game/system/updateaudiostreamstate.cpp:
+	.text       start:0x800B53A0 end:0x800B558C
+
+game/system/childobjdispatch1.cpp:
+	.text       start:0x800B5808 end:0x800B5974
+
+game/system/childobjdispatch2.cpp:
+	.text       start:0x800B5974 end:0x800B5AB8
+
+game/system/childobjdispatch3.cpp:
+	.text       start:0x800B5AB8 end:0x800B5B7C
+
+game/system/findandregisterfreeslot.cpp:
+	.text       start:0x800B5B7C end:0x800B5C3C
+
+game/system/updateratelimitedvalue.cpp:
+	.text       start:0x800B5C3C end:0x800B5E1C
+
+game/system/initparam1.cpp:
+	.text       start:0x800B5E1C end:0x800B5E34
+
+game/system/addpsvectorwithscalar.cpp:
+	.text       start:0x800B7898 end:0x800B78FC
+
+game/system/processfielderdesire.cpp:
+	.text       start:0x800B78FC end:0x800B7B5C
+
+game/system/resetfielderframestate.cpp:
+	.text       start:0x800B7B5C end:0x800B7D54
+
+game/system/updatefielderchildsearch.cpp:
+	.text       start:0x800B7D54 end:0x800B8850
+
+game/system/updatefielderchildsearch2.cpp:
+	.text       start:0x800B8850 end:0x800B8EC4
+
+game/system/processchibimodeldata.cpp:
+	.text       start:0x800B8EC4 end:0x800B9134
+
+game/system/handlefielderdesire.cpp:
+	.text       start:0x800B9134 end:0x800B9758
+
+game/system/loadfielderdatafile.cpp:
+	.text       start:0x800B9758 end:0x800B97FC
+
+game/system/resetprojectilescale.cpp:
+	.text       start:0x800BAD80 end:0x800BAE70
+
+game/system/handlefielderstatetransition.cpp:
+	.text       start:0x800BAE70 end:0x800BB3D0
+
+game/system/updatefielderweightvec.cpp:
+	.text       start:0x800BB3D0 end:0x800BB708
+
+game/system/clearprojectilefields.cpp:
+	.text       start:0x800BB708 end:0x800BB77C
+
+game/system/initfielderobject.cpp:
+	.text       start:0x800BB77C end:0x800BBD7C
+
+game/system/setobjstateandnotify.cpp:
+	.text       start:0x800BBD7C end:0x800BBDAC
+
+game/system/initfielderdevicestate.cpp:
+	.text       start:0x800BBDAC end:0x800BC0E4
+
+game/system/initfielderdevicetables.cpp:
+	.text       start:0x800BC0E4 end:0x800BC480
+
+game/system/projectiledestructor.cpp:
+	.text       start:0x800BC480 end:0x800BC4DC
+
+game/gameobjects/cameraaction.cpp:
+	.text       start:0x800E68D8 end:0x800E6950
+	.ctors      start:0x801FD684 end:0x801FD688
 
 TRK_MINNOW_DOLPHIN/nubinit.c:
 	.text       start:0x8014AE1C end:0x8014AFB4
 	.bss        start:0x805C6BE0 end:0x805C6BE8
+
+TRK_MINNOW_DOLPHIN/flush_cache.c:
+	.text       start:0x8014D524 end:0x8014D55C
 
 TRK_MINNOW_DOLPHIN/mem_TRK.c:
 	.init       start:0x80003100 end:0x80003154
@@ -39,8 +437,14 @@ TRK_MINNOW_DOLPHIN/main_TRK.c:
 	.text       start:0x8014FB6C end:0x8014FBC4
 	.bss        start:0x805C8B40 end:0x805C8B48
 
+TRK_MINNOW_DOLPHIN/targcont.c:
+	.text       start:0x8015011C end:0x80150150
+
 TRK_MINNOW_DOLPHIN/__exception.o:
 	.init       start:0x80003154 end:0x80005088
+
+Dolphin/Runtime/__va_arg.c:
+	.text       start:0x80150D50 end:0x80150E18
 
 Runtime.PPCEABI.H/global_destructor_chain.c:
 	.text       start:0x80150E18 end:0x80150E78
@@ -53,15 +457,105 @@ Runtime.PPCEABI.H/__init_cpp_exceptions.cpp:
 	.dtors      start:0x801FD6C0 end:0x801FD6C8
 	.sdata      start:0x8065AB50 end:0x8065AB54
 
+Dolphin/Runtime/__mem.c:
+	.init       start:0x800050B4 end:0x800051EC
+
+Dolphin/os/__start.c:
+	.init       start:0x80005240 end:0x800054EC
+
+Dolphin/MSL_C/MSL_Common/ansi_files.c:
+	.text       start:0x80153750 end:0x80153868
+
+Dolphin/MSL_C/MSL_Common/buffer_io.c:
+	.text       start:0x801557BC end:0x801558B4
+
+Dolphin/MSL_C/MSL_Common/ctype.c:
+	.text       start:0x801558C0 end:0x801558E4
+
+Dolphin/MSL_C/MSL_Common/file_io.c:
+	.text       start:0x80155C6C end:0x80155F60
+
+Dolphin/MSL_C/MSL_Common/mem.c:
+	.text       start:0x80156438 end:0x801565A8
+
+Dolphin/MSL_C/MSL_Common/mem_funcs.c:
+	.text       start:0x801565A8 end:0x80156878
+
+Dolphin/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_fmod.c:
+	.text       start:0x80159E28 end:0x8015A164
+
+Dolphin/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_rem_pio2.c:
+	.text       start:0x8015AC10 end:0x8015AFB0
+
+Dolphin/MSL_C/MSL_Common_Embedded/Math/Double_precision/k_cos.c:
+	.text       start:0x8015AFB0 end:0x8015B0A4
+
+Dolphin/MSL_C/MSL_Common_Embedded/Math/Double_precision/k_rem_pio2.c:
+	.text       start:0x8015B0A4 end:0x8015BEF8
+
+Dolphin/MSL_C/MSL_Common_Embedded/Math/Double_precision/k_sin.c:
+	.text       start:0x8015BEF8 end:0x8015BF98
+
+Dolphin/MSL_C/MSL_Common_Embedded/Math/Double_precision/k_tan.c:
+	.text       start:0x8015BF98 end:0x8015C1AC
+
+Dolphin/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_atan.c:
+	.text       start:0x8015C1AC end:0x8015C3C4
+
+Dolphin/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_copysign.c:
+	.text       start:0x8015C3C4 end:0x8015C3EC
+
+Dolphin/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_floor.c:
+	.text       start:0x8015C4C0 end:0x8015C608
+
+Dolphin/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_frexp.c:
+	.text       start:0x8015C608 end:0x8015C694
+
+Dolphin/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_ldexp.c:
+	.text       start:0x8015C694 end:0x8015C858
+
+Dolphin/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_modf.c:
+	.text       start:0x8015C858 end:0x8015C954
+
+Dolphin/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_tan.c:
+	.text       start:0x8015CA2C end:0x8015CAA4
+
+Dolphin/si/SISamplingRate.c:
+	.text       start:0x80161048 end:0x80161150
+
+Dolphin/os/OSAudioSystem.c:
+	.text       start:0x80162CD4 end:0x80162F68
+
+Dolphin/os/OSLink.c:
+	.text       start:0x80168090 end:0x801680A8
+
+Dolphin/os/OSSync.c:
+	.text       start:0x80169DAC end:0x80169E30
+
+game/system/checkstatefield.cpp:
+	.text       start:0x80169FA8 end:0x80169FDC
+
+Dolphin/dvd/dvdqueue.c:
+	.text       start:0x801703E4 end:0x801705DC
+
+Dolphin/dvd/dvderror.c:
+	.text       start:0x801705DC end:0x80170774
+
+Dolphin/dvd/dvdFatal.c:
+	.text       start:0x80170968 end:0x80170998
+
+Dolphin/card/CARDOpen.c:
+	.text       start:0x80182C44 end:0x80183228
+
+game/system/cfile.cpp:
+	extab       start:0x80005F60 end:0x80005F68
+	extabindex  start:0x80006E3C end:0x80006E48
+	.text       start:0x8019FCE4 end:0x8019FD08
+	.sdata      start:0x8065ABB8 end:0x8065ABC0
+
 game/unk_unused/unk_functions.cpp:
 	.text       start:0x801A4ED8 end:0x801A4F28
 
 THP/THPAudio.cpp:
 	.text       start:0x801B66EC end:0x801B6714
 	.bss        start:0x8064A5E0 end:0x8064A780
-
-Dolphin/Runtime/__mem.c:
-	.init       start:0x800050B4 end:0x800051EC
-
-Dolphin/os/__start.c:
-	.init       start:0x80005240 end:0x800054EC

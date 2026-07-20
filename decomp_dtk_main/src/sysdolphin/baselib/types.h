@@ -38,7 +38,7 @@ typedef u32 size_t;
 typedef u32 unknown;
 
 #ifndef __cplusplus
-//typedef u16 wchar_t;
+typedef u16 wchar_t;
 #endif
 
 // Basic defines to allow newer-like C++ code to be written

@@ -729,6 +729,7 @@ def generate_build_ninja(config, build_config):
         )
         n.build(
             outputs=path(ok_path),
+            inputs=path([config.check_sha_path]),
             rule="check",
             implicit=path([dtk, *map(lambda step: step.output(), link_steps)]),
         )

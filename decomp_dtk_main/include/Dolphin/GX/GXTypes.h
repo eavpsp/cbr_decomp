@@ -130,7 +130,9 @@ typedef struct _GXVtxAttrFmtList {
 ///////////// OTHER RENDERING //////////////
 // Struct for rendering modes.
 typedef struct _GXRenderModeObj {
+#ifdef __cplusplus
 	public:
+#endif
 	VITVMode viTVmode;        // _00
 	u16 fbWidth;              // _04, frame buffer width (same for emb. and ext.)
 	u16 efbHeight;            // _06, embedded frame buffer height
