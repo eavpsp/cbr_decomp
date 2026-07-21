@@ -306,6 +306,8 @@ config.libs = [
             Object(Matching, "game/globals.cpp"),
             Object(Matching, "game/game.cpp"),
             Object(Matching, "game/unk_unused/unk_functions.cpp"),
+            Object(Matching, "game/system/cfile.cpp"),
+            
             
 
         ],

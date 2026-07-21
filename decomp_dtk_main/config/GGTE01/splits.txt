@@ -53,6 +53,12 @@ Runtime.PPCEABI.H/__init_cpp_exceptions.cpp:
 	.dtors      start:0x801FD6C0 end:0x801FD6C8
 	.sdata      start:0x8065AB50 end:0x8065AB54
 
+game/system/cfile.cpp:
+	extab       start:0x80005F60 end:0x80005F68
+	extabindex  start:0x80006E3C end:0x80006E48
+	.text       start:0x8019FCE4 end:0x8019FD08
+	.sdata      start:0x8065ABB8 end:0x8065ABC0
+
 game/unk_unused/unk_functions.cpp:
 	.text       start:0x801A4ED8 end:0x801A4F28
 
