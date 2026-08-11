@@ -94,7 +94,7 @@ Building
 
 - Clone the repository:
   ```
-  git clone https://github.com/my/repo.git
+  git clone https://github.com/eavpsp/cbr_decomp.git
   ```
 - Using [Dolphin Emulator](https://dolphin-emu.org/), extract your game to `orig/GAMEID`.
 ![](assets/dolphin-extract.png)
