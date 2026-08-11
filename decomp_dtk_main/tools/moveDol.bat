@@ -1,6 +1,6 @@
 @echo off
 set "sourceFile=build\GGTE01\Start.dol"
-set "destinationFolder=D:\RE\ISO\cbr_dump_re\root\&&systemdata"
+set "destinationFolder=Z:\RE\ISO\cbr_dump_re\root\&&systemdata"
 
 echo Copying %sourceFile% to %destinationFolder%...
 
