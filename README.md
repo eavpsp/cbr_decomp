@@ -101,12 +101,21 @@ sudo xattr -rd com.apple.quarantine '/Applications/Wine Crossover.app'
   ```
   git clone https://github.com/eavpsp/cbr_decomp.git
   ```
-- Using [Dolphin Emulator](https://dolphin-emu.org/), extract your game to `orig/GAMEID`.
-  ![](assets/dolphin-extract.png)
-  - To save space, the only necessary files are the following. Any others can be deleted.
-    - `sys/main.dol`
-    - `files/rels/*.rel` _Rels must be extracted from QP.bin using [U8 Extractor](https://github.com/eavpsp/U8-ARC-Extractor-C-) and put into the orig/GGTE01/RELS/rel directory_
-    - Make sure to copy the built \_\_exception.o object from src to the equivalent build directory.
+- Set up `orig/GAMEID` from your own copy of the game. Either:
+  - **From a disc image (one command, recommended).** From the `decomp_dtk_main` folder, run:
+    ```
+    python tools/setup_orig.py path/to/game.iso
+    ```
+    It reads a plain 1:1 GameCube image (`.iso`/`.gcm`) or a disc already extracted with Dolphin (a folder with `sys/main.dol` and `files/qp.bin`),
+    checks the game ID and the `main.dol` SHA-1, and writes `orig/GGTE01/sys/main.dol` and every module from `qp.bin` to `orig/GGTE01/RELS/rel/`.
+    RVZ, GCZ, WIA, WBFS, CISO and NKit images are refused: convert them to ISO first with Dolphin (right-click the game > Convert File...).
+    Existing files are kept unless you pass `--force`; see `python tools/setup_orig.py --help` for the other options.
+  - **Manually (alternative).** Using [Dolphin Emulator](https://dolphin-emu.org/), extract your game to `orig/GAMEID`.
+    ![](assets/dolphin-extract.png)
+    - To save space, the only necessary files are the following. Any others can be deleted.
+      - `sys/main.dol`
+      - `files/rels/*.rel` _Rels must be extracted from QP.bin using [U8 Extractor](https://github.com/eavpsp/U8-ARC-Extractor-C-) and put into the orig/GGTE01/RELS/rel directory_
+  - Make sure to copy the built \_\_exception.o object from src to the equivalent build directory.
 - Configure:
   ```
   python configure.py
