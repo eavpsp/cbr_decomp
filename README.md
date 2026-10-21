@@ -163,6 +163,42 @@ pass `--m2c path/to/m2c` (the clone folder or its `m2c.py`), set the `M2C` envir
 m2c only parses C, so the context of a C++ unit is often refused; the tool then falls back to the default headers, then to no context,
 and says so in the header of the draft.
 
+# Reverse-engineering with REA (optional)
+
+[REA](https://github.com/morluto/rea) (Reverse Engineer Anything, npm package `rea-agents`, MIT) drives Ghidra and returns evidence records.
+Next to `decomp_func.py` and m2c, it adds Ghidra's decompiled pseudo-C of a function, its cross-references, its call graph and the strings
+it uses, from the command line or over MCP (for an agent such as Claude Code). `tools/rea_ghidra.py` runs it on the ELF written by dtk.
+
+**Requirements.** REA only analyses a PowerPC ELF on Linux or macOS (REA docs: "PowerPC ELF through Ghidra", `docs/ghidra-ppc.md`;
+on Windows it only takes PE and raw 6502 files, `docs/windows-ghidra-p0.md`). So either:
+- [Docker](https://docs.docker.com/get-started/get-docker/) (any OS): the image `tools/rea/Dockerfile` holds JDK 21, Node.js and REA, all versions pinned;
+- or, on Linux/macOS, a local REA (`npm install -g rea-agents`, Node.js 22.19 or newer, JDK 21; see REA's `docs/installation.md`) and `--native`.
+
+In both cases you need your own [Ghidra](https://github.com/NationalSecurityAgency/ghidra/releases) 12.1.x (mounted read-only in the container).
+The [GameCubeLoader](https://github.com/Cuyler36/Ghidra-GameCube-Loader) extension, installed in `Ghidra/Extensions`, is recommended:
+it provides the `PowerPC:BE:32:Gekko_Broadway` language, which decodes paired-single instructions. The tool passes it to REA
+(`REA_GHIDRA_LANGUAGE_ID`) when it finds it, else it warns and REA uses its default PowerPC language.
+
+**Commands** (from `decomp_dtk_main`, after `python configure.py` and `ninja`; `--ghidra` can be replaced by `GHIDRA_INSTALL_DIR`):
+```
+python tools/rea_ghidra.py image
+python tools/rea_ghidra.py run --ghidra path/to/ghidra -- analyze {elf} --provider ghidra --json
+python tools/rea_ghidra.py run --ghidra path/to/ghidra -- function {elf} ParseStageData__5CGameFiPc --provider ghidra --json
+python tools/rea_ghidra.py mcp-config --ghidra path/to/ghidra
+```
+- `run -- ARGS` runs any REA command (`rea --help`); `{elf}` is replaced by the path of the prepared ELF.
+- `mcp` starts REA's MCP server over stdio (REA docs: `docs/mcp-contracts.md`); `mcp-config` prints a ready `mcpServers` entry for `.mcp.json`.
+  Inside the container the ELF is `/work/GGTE01.elf`: open it with the `open_binary` tool (`provider_id: "ghidra"`).
+- `prepare` (run by the other commands) writes the copy described below; see `python tools/rea_ghidra.py --help`.
+
+**Limits.**
+- REA refuses dtk's ELF as is: its `e_flags` holds `EF_PPC_EMB` (PowerPC embedded), which REA's PowerPC ELF path rejects. The tool analyses a copy,
+  `build/GGTE01/rea/GGTE01.elf`, with that flag cleared; the build keeps the original.
+- Small-data accesses through r2/r13 show up as `unaff_r2 + offset`: the ELF path sets no register value.
+- Every CLI call imports the ELF again (about 2 minutes). Use `mcp` to keep one Ghidra session open: only the first request pays the import.
+- The DOL itself is not accepted by REA.
+- REA's output is derived from the game, like the assembly: keep it out of Git (for example under `build/`).
+
 ---
 
 ## Test Folder:
