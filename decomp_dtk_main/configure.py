@@ -251,8 +251,8 @@ config.libs = [
         "cflags": cflags_runtime,
         "host": False,
         "objects": [
-            Object(Matching, "Runtime.PPCEABI.H/__init_cpp_exceptions.cpp"),
-            Object(Matching, "Runtime.PPCEABI.H/global_destructor_chain.c"),
+            Object(NonMatching, "Runtime.PPCEABI.H/__init_cpp_exceptions.cpp"),
+            Object(NonMatching, "Runtime.PPCEABI.H/global_destructor_chain.c"),
            
         ],
     },
@@ -262,8 +262,8 @@ config.libs = [
         "cflags": cflags_runtime,
         "host": False,
         "objects": [
-            Object(Matching, "Dolphin/Runtime/__mem.c"),
-            Object(Matching, "Dolphin/os/__start.c"),
+            Object(NonMatching, "Dolphin/Runtime/__mem.c"),
+            Object(NonMatching, "Dolphin/os/__start.c"),
             Object(Matching, "Dolphin/os/__ppc_eabi_init.cpp"),
             
         ],
@@ -275,10 +275,10 @@ config.libs = [
         "host": False,
         "objects": [
             Object(Matching, "TRK_MINNOW_DOLPHIN/mem_TRK.c"),
-            Object(Matching, "TRK_MINNOW_DOLPHIN/__exception.o"),
-            Object(Matching, "TRK_MINNOW_DOLPHIN/dolphin_trk.c"),
-            Object(Matching, "TRK_MINNOW_DOLPHIN/main_TRK.c"),
-            Object(Matching, "TRK_MINNOW_DOLPHIN/nubinit.c"),
+            Object(NonMatching, "TRK_MINNOW_DOLPHIN/__exception.s"),
+            Object(NonMatching, "TRK_MINNOW_DOLPHIN/dolphin_trk.c"),
+            Object(NonMatching, "TRK_MINNOW_DOLPHIN/main_TRK.c"),
+            Object(NonMatching, "TRK_MINNOW_DOLPHIN/nubinit.c"),
             
             
             
@@ -303,10 +303,10 @@ config.libs = [
         "host": False,
         "objects": [
             Object(Matching, "game/graphics/game_gx.cpp"),
-            Object(Matching, "game/globals.cpp"),
-            Object(Matching, "game/game.cpp"),
-            Object(Matching, "game/unk_unused/unk_functions.cpp"),
-            Object(Matching, "game/system/cfile.cpp"),
+            Object(NonMatching, "game/globals.cpp"),
+            Object(NonMatching, "game/game.cpp"),
+            Object(NonMatching, "game/unk_unused/unk_functions.cpp"),
+            Object(NonMatching, "game/system/cfile.cpp"),
             
             
 
