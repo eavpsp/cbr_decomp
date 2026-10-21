@@ -17,6 +17,8 @@
 #   python3 tools/pick_funcs.py --module stage01        # a REL module instead
 #   python3 tools/pick_funcs.py --with-modules          # count REL -> DOL calls too
 #
+# Other tools can import this file and call load_graph() (see tools/decomp_func.py).
+#
 # Score (0-100, higher = better target), for each function:
 #   S = 1 / (1 + instructions / 32)        small is easy (32 instructions -> 0.5)
 #   K = 1 if leaf, else the share of its distinct callees that are "known"
@@ -553,6 +555,67 @@ def summary(funcs: List[Func], stats: Stats, args, elapsed: float, warnings) -> 
     print(f"Time:             {elapsed:.2f} s")
 
 
+def load_graph(version: str = "GGTE01", module: Optional[str] = None,
+               with_modules: bool = False) -> Tuple[List[Func], Stats, List[str]]:
+    """Loads symbols, units and the call graph.
+
+    Returns (functions of the DOL, or of `module` when given; stats; warnings).
+    Also used by other tools (e.g. tools/decomp_func.py)."""
+    cfg_dir = os.path.join(root_dir, "config", version)
+    dol_rel, modules = parse_config_yml(os.path.join(cfg_dir, "config.yml"))
+    conf = parse_configure(os.path.join(root_dir, "configure.py"))
+    stats = Stats()
+    warnings: List[str] = []
+
+    dol_funcs = parse_symbols(os.path.join(cfg_dir, "symbols.txt"), "main")
+    assign_units(dol_funcs, parse_splits(os.path.join(cfg_dir, "splits.txt")), conf)
+    dol_path = os.path.join(root_dir, dol_rel or f"orig/{version}/sys/main.dol")
+    if not os.path.exists(dol_path):
+        sys.exit(f"DOL not found: {dol_path} (see the README for orig/ setup)")
+
+    mods_by_name = {m["name"]: m for m in modules}
+    if module and module not in mods_by_name:
+        sys.exit(f"Unknown module {module}; known: {', '.join(sorted(mods_by_name))}")
+
+    want_rels = with_modules or module
+    rel_funcs: Dict[str, List[Func]] = {}
+    rel_ids: Dict[int, str] = {}
+    if want_rels:
+        for m in modules:
+            fs = parse_symbols(os.path.join(root_dir, m["symbols"]), m["name"])
+            assign_units(fs, parse_splits(os.path.join(root_dir, m.get("splits", ""))), conf)
+            rel_funcs[m["name"]] = fs
+            rp = os.path.join(root_dir, m["object"])
+            if os.path.exists(rp):
+                with open(rp, "rb") as f:
+                    rel_ids[struct.unpack(">I", f.read(4))[0]] = m["name"]
+            else:
+                warnings.append(f"{m['name']}: {m['object']} not found")
+
+    dol_stats = stats if not module else Stats()
+    scan_dol(dol_path, dol_funcs, dol_stats)
+    dol_idx = Index(dol_funcs)
+
+    if want_rels:
+        rel_idx = {n: Index([f for f in fs if f.section == ".text"])
+                   for n, fs in rel_funcs.items()}
+
+        def mod_lookup(mid: int, _sec: int, off: int) -> Optional[Func]:
+            n = rel_ids.get(mid)
+            return rel_idx[n].containing(off) if n in rel_idx else None
+
+        names = [module] if module else [m["name"] for m in modules]
+        for n in names:
+            m = mods_by_name[n]
+            rp = os.path.join(root_dir, m["object"])
+            if os.path.exists(rp):
+                scan_rel(n, rp, rel_funcs[n], dol_idx, mod_lookup,
+                         stats, warnings)
+
+    funcs = rel_funcs[module] if module else dol_funcs
+    return funcs, stats, warnings
+
+
 def main() -> None:
     p = argparse.ArgumentParser(
         description="List easy functions to decompile next (call graph from the DOL/RELs).",
@@ -584,58 +647,7 @@ def main() -> None:
     args = p.parse_args()
 
     t0 = time.time()
-    cfg_dir = os.path.join(root_dir, "config", args.version)
-    dol_rel, modules = parse_config_yml(os.path.join(cfg_dir, "config.yml"))
-    conf = parse_configure(os.path.join(root_dir, "configure.py"))
-    stats = Stats()
-    warnings: List[str] = []
-
-    dol_funcs = parse_symbols(os.path.join(cfg_dir, "symbols.txt"), "main")
-    assign_units(dol_funcs, parse_splits(os.path.join(cfg_dir, "splits.txt")), conf)
-    dol_path = os.path.join(root_dir, dol_rel or f"orig/{args.version}/sys/main.dol")
-    if not os.path.exists(dol_path):
-        sys.exit(f"DOL not found: {dol_path} (see the README for orig/ setup)")
-
-    mods_by_name = {m["name"]: m for m in modules}
-    if args.module and args.module not in mods_by_name:
-        sys.exit(f"Unknown module {args.module}; known: {', '.join(sorted(mods_by_name))}")
-
-    want_rels = args.with_modules or args.module
-    rel_funcs: Dict[str, List[Func]] = {}
-    rel_ids: Dict[int, str] = {}
-    if want_rels:
-        for m in modules:
-            fs = parse_symbols(os.path.join(root_dir, m["symbols"]), m["name"])
-            assign_units(fs, parse_splits(os.path.join(root_dir, m.get("splits", ""))), conf)
-            rel_funcs[m["name"]] = fs
-            rp = os.path.join(root_dir, m["object"])
-            if os.path.exists(rp):
-                with open(rp, "rb") as f:
-                    rel_ids[struct.unpack(">I", f.read(4))[0]] = m["name"]
-            else:
-                warnings.append(f"{m['name']}: {m['object']} not found")
-
-    dol_stats = stats if not args.module else Stats()
-    scan_dol(dol_path, dol_funcs, dol_stats)
-    dol_idx = Index(dol_funcs)
-
-    if want_rels:
-        rel_idx = {n: Index([f for f in fs if f.section == ".text"])
-                   for n, fs in rel_funcs.items()}
-
-        def mod_lookup(mid: int, _sec: int, off: int) -> Optional[Func]:
-            n = rel_ids.get(mid)
-            return rel_idx[n].containing(off) if n in rel_idx else None
-
-        names = [args.module] if args.module else [m["name"] for m in modules]
-        for n in names:
-            m = mods_by_name[n]
-            rp = os.path.join(root_dir, m["object"])
-            if os.path.exists(rp):
-                scan_rel(n, rp, rel_funcs[n], dol_idx, mod_lookup,
-                         stats, warnings)
-
-    funcs = rel_funcs[args.module] if args.module else dol_funcs
+    funcs, stats, warnings = load_graph(args.version, args.module, args.with_modules)
     out_fmt = "json" if args.json else "csv" if args.csv else "text"
 
     if args.summary:
