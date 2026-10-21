@@ -140,6 +140,29 @@ Select an object from the left sidebar to begin diffing. Changes to the project 
 
 ![](assets/objdiff.png)
 
+# Decompiling a function
+
+All commands run from the `decomp_dtk_main` folder, after a successful `python configure.py` and `ninja`.
+
+1. **Pick a target.** `python tools/pick_funcs.py` lists functions that are not in a Matching unit yet, small and well-connected ones first
+   (see `--help`: `--max-size 0x80`, `--unnamed`, `--leaf`, `--module stage01`, `--callers NAME`, `--callees NAME`...).
+2. **Get a first C draft.** `python tools/decomp_func.py <name or 0xADDR>` takes the function from the assembly written by dtk
+   (`build/GGTE01/asm`, or `build/GGTE01/<module>/asm` with `--module`), adds the data it reads (jump tables, constants, strings),
+   builds a context from the unit's source file (`--unit src/...`, or a default set of SDK headers) and runs m2c on it.
+   - `--out FILE` writes the draft to a file, `--calls` lists callers and callees, `--list-unit UNIT` drafts every function of a unit,
+     of an asm file (`auto_03_8001364C_text`) or of an address range (`0x80013580-0x80013700`). Arguments after `--` go to m2c
+     (e.g. `-- --valid-syntax --stack-structs`).
+   - The draft is a starting point: it is neither compiled nor matched. Like the assembly, it is derived from the game, so keep it out of Git
+     (the extracted assembly and the context are kept in `build/GGTE01/m2c/`, which is ignored).
+3. **Make it match.** Write the code in the unit's source file under `src/`, rebuild with `ninja`, and compare it with [objdiff](#diffing),
+   or for every unit at once with `python tools/check_units.py` (a unit marked Matching that does not match is an error).
+   Mark the unit `Matching` in `configure.py` once it matches.
+
+**m2c is optional** and not included (GPL-3.0). Install or clone [m2c](https://github.com/matt-kempster/m2c) yourself, then either
+pass `--m2c path/to/m2c` (the clone folder or its `m2c.py`), set the `M2C` environment variable, or make the `m2c` Python module importable.
+m2c only parses C, so the context of a C++ unit is often refused; the tool then falls back to the default headers, then to no context,
+and says so in the header of the draft.
+
 ---
 
 ## Test Folder:
